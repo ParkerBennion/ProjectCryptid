@@ -8,3 +8,5 @@ To track what is being caught in lfs run " $ git lfs ls-files " in hte git bash 
 
 
 F:/Cryptid/ProjectCryptid (on parkers machene)
+
+I AM A NASY CONFLICT
