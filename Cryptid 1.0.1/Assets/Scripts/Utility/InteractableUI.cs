@@ -22,9 +22,9 @@ public class InteractableUI : MonoBehaviour
     {
         StartTracking();
     }
-
-    
-
+    /// <summary>
+    /// Turns the UI on and begins the tracking Coroutine
+    /// </summary>
     public void StartTracking()
     {
         if(!tracking)
@@ -33,13 +33,20 @@ public class InteractableUI : MonoBehaviour
             StartCoroutine(DisplayPopup(targetObjectTest));
         }
     }
-
+    /// <summary>
+    /// Turn off the UI, ending the coroutine
+    /// </summary>
     public void StopTracking()
     {
         tracking = false;
-        print("Hiding");
+        print("Hiding UI");
         gameObject.SetActive(false);
     }
+    /// <summary>
+    /// The routine runs every frame so long as the boolean tells it to be active. It tracks the target obj on screen space and ensures the UI stays over it
+    /// </summary>
+    /// <param name="targetObj"></param>
+    /// <returns></returns>
     private IEnumerator DisplayPopup(GameObject targetObj)
     {
         tracking = true;
