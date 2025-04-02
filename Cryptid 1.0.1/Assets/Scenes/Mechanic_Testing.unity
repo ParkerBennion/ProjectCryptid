@@ -1166,6 +1166,22 @@ PrefabInstance:
       propertyPath: playerSpeed
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 3494001154833995361, guid: 42a42adffa27bdc48ab73cef4f59ec74, type: 3}
+      propertyPath: heavyWindupStart
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 3494001154833995361, guid: 42a42adffa27bdc48ab73cef4f59ec74, type: 3}
+      propertyPath: heavyWindupCharged
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3494001154833995361, guid: 42a42adffa27bdc48ab73cef4f59ec74, type: 3}
+      propertyPath: heavyWindupChargeTime
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3494001154833995361, guid: 42a42adffa27bdc48ab73cef4f59ec74, type: 3}
+      propertyPath: heavyWindupStartDelay
+      value: 0.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
