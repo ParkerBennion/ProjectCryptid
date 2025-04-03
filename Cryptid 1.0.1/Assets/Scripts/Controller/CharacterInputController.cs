@@ -11,9 +11,13 @@ public class CharacterInputController : MonoBehaviour
     
     private Vector2 moveAxis;
     private Vector3 moveVector, lookVector;
+    
     public bool attackCharged, activelyCharging;
+    public float playerSpeed,  heavyWindupStartDelay, heavyWindupChargeTime;
 
-    public float playerSpeed, heavyWindupStartDelay, heavyWindupChargeTime;
+    [Range(0, 1)] 
+    public float chargeMovementMultiplier;
+    private float activePlayerRunSpeed;
 
     private Coroutine chargingAttack;
 
@@ -30,6 +34,7 @@ public class CharacterInputController : MonoBehaviour
         chargeTimeWFS = new WaitForSeconds(heavyWindupChargeTime);
         attackCharged = false;
         activelyCharging = false;
+        activePlayerRunSpeed = playerSpeed;
         inputs = new PlayerInputs();
         
         inputs.PlayerMobile.Attack.started += ctx => StartAttack();
@@ -46,7 +51,7 @@ public class CharacterInputController : MonoBehaviour
         moveVector.x = moveAxis.x; //Assigns the input values to a Vector3D
         moveVector.y = 0;
         moveVector.z = moveAxis.y;
-        transform.Translate(moveVector * (playerSpeed * Time.deltaTime), Space.World);
+        transform.Translate(moveVector * (activePlayerRunSpeed * Time.deltaTime), Space.World);
         if (moveAxis!=Vector2.zero)//Updates the players rotation if they are moving, and does nothing if the player is not moving
             transform.rotation = Quaternion.LookRotation(moveVector);
     }
@@ -108,6 +113,7 @@ public class CharacterInputController : MonoBehaviour
         
         attackCharged = false;
         activelyCharging = false;
+        activePlayerRunSpeed = playerSpeed;
     }
     
 /// <summary>
@@ -119,6 +125,7 @@ public class CharacterInputController : MonoBehaviour
         yield return chargeStartDelayWFS;
         print("Charging Heavy attack");
         activelyCharging = true;
+        activePlayerRunSpeed *= chargeMovementMultiplier;
         yield return chargeTimeWFS;
         print("Heavy attack is Charged");
         activelyCharging = false;
