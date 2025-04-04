@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.Events;
@@ -14,6 +15,9 @@ public class ChupacabraAI : MonoBehaviour
     private static readonly int Speed = Animator.StringToHash("Speed");
     private Coroutine activeRoutine;
     private WaitForEndOfFrame WFF;
+    [Header("Attack Stats")]
+    public float meleeRange, basicMeleeDamage;
+    private bool isChasing;
 
     private void Awake()
     {
@@ -26,11 +30,6 @@ public class ChupacabraAI : MonoBehaviour
         activeRoutine = StartCoroutine(PatrolRoutine());
     }
 
-    public void SimpleAttack()
-    {
-        print("ATTACK AREA AROUND ");
-    }
-
     private void Update()
     {
         animator.SetFloat(Speed, agent.velocity.magnitude);
@@ -41,11 +40,8 @@ public class ChupacabraAI : MonoBehaviour
         engageTarget = target;
         StopCoroutine(activeRoutine);
         agent.transform.LookAt(engageTarget.transform.position);
-        agent.isStopped = true;
+        agent.SetDestination(transform.position);
         animator.SetTrigger("Alerted");
-        
-
-
     }
 
     public void StartChasing()
@@ -73,11 +69,28 @@ public class ChupacabraAI : MonoBehaviour
     private IEnumerator ChaseRoutine()
     {
         agent.speed = 5.5f;
-        agent.isStopped = false;
         while (true)
         {
+            if (Vector3.Distance(gameObject.transform.position, engageTarget.transform.position) < meleeRange)
+            {
+                agent.SetDestination(transform.position);
+                animator.SetTrigger("Attack");
+                yield break;
+            }
             agent.SetDestination(engageTarget.transform.position);
             yield return WFF;
+        }
+    }
+
+    public void AttackCheck()
+    {
+        Vector3 attackPosition = new Vector3(0, 0, 1.5f);
+        attackPosition = gameObject.transform.TransformPoint(attackPosition);
+        Collider[] cols = Physics.OverlapSphere(attackPosition, 1);
+        foreach (Collider thisCol in cols)
+        {
+            if (thisCol.TryGetComponent(out IDamageable target))
+                target.DealDamage(basicMeleeDamage);
         }
     }
 
