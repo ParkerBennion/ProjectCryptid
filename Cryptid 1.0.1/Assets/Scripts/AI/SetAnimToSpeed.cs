@@ -8,6 +8,12 @@ public class SetAnimToSpeed : MonoBehaviour
     private NavMeshAgent agent;
     private static readonly int Speed = Animator.StringToHash("Speed");
 
+    private void Awake()
+    {
+        animator = GetComponent<Animator>();
+        agent = GetComponent<NavMeshAgent>();
+    }
+
     private void Update()
     {
         animator.SetFloat(Speed, agent.velocity.magnitude);
