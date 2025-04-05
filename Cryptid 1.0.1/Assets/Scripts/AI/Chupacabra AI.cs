@@ -84,7 +84,7 @@ public class ChupacabraAI : MonoBehaviour
     public void AttackCheck()
     {
         Vector3 attackPosition = new Vector3(0, 0, 1.5f);
-        attackPosition = gameObject.transform.TransformPoint(attackPosition);
+        attackPosition = gameObject.transform.TransformPoint(new Vector3(0, 0, 1.5f));
         Collider[] cols = Physics.OverlapSphere(attackPosition, 1);
         foreach (Collider thisCol in cols)
         {
