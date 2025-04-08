@@ -2,16 +2,29 @@ using UnityEngine;
 
 public class SimpleAttack : MonoBehaviour
 {
-    public void Attack(float damage)
+    /// <summary>
+    /// Searches the area in front of the object for damageable entities and calls the DealDamage function for specified damage amount
+    /// </summary>
+    /// <param name="damage">Damage amount to deal</param>
+    /// <param name="radius">Radius of the attack from it's center</param>
+    /// <param name="attackCenter">The local position to the gameobject to perform the attack</param>
+    public void Attack(float damage, float radius, Vector3 attackCenter)// this needs to be updated to avoid things attacking other things of the same type
     {
-        Vector3 attackPosition = new Vector3(0, 0, 1.5f);
-        attackPosition = gameObject.transform.TransformPoint(new Vector3(0, 0, 1.5f));
-        GameObject visSphere = GameObject.CreatePrimitive(PrimitiveType.Sphere);
-        Collider[] cols = Physics.OverlapSphere(attackPosition, 3f);
+        Collider[] cols = Physics.OverlapSphere(attackCenter, radius);
         foreach (Collider thisCol in cols)
         {
             if (thisCol.TryGetComponent(out IDamageable target))
                 target.DealDamage(damage);
         }
+    }
+    /// <summary>
+    /// Checks if the player is within the specified range of this object
+    /// </summary>
+    /// <param name="attackRange">The range threshold to return True</param>
+    /// <param name="target">The target object to measure distance from</param>
+    /// <returns>True if within the specified range, False if too far away</returns>
+    public bool AttackRangeCheck(float attackRange, GameObject target)
+    {
+        return Vector3.Distance(gameObject.transform.position, target.transform.position) <= attackRange;
     }
 }
