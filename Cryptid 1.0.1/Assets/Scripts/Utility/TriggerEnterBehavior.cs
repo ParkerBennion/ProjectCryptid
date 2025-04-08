@@ -7,7 +7,7 @@ public class TriggerEnterBehavior : MonoBehaviour
     public UnityEvent enterEvent, exitEvent;
     public bool requireTag;
     public string tagName;
-
+    
     private void OnTriggerEnter(Collider other)
     {
         if(requireTag && !other.CompareTag(tagName))
