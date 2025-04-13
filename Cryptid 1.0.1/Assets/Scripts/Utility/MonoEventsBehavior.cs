@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.Events;
 public class MonoEventsBehavior : MonoBehaviour
 {
+    //This script is for testing, and creates an invokable event for various conditions or monobehavior events
     public UnityEvent  awakeEvent, startEvent, enableEvent, collisionEvent, triggerEnterEvent, tapEvent, destroyEvent, disableEvent, quitEvent;
    
     void Start()

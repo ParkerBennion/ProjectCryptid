@@ -3,22 +3,43 @@ using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour, IDamageable
 {
-    public float playerCurrentHealth, playerMaxHealth;
+    public float entityCurrentHealth, playerMaxHealth;
 
     private void Awake()
     {
-        playerCurrentHealth = playerMaxHealth;
+        entityCurrentHealth = playerMaxHealth;
     }
-
+    
+/// <summary>
+/// Deducts the health of the entity by the given amount
+/// </summary>
+/// <param name="damage">The amount of health to deduct</param>
     public void DealDamage(float damage)
     {
         changeHealth(damage*-1);
+        if(entityCurrentHealth<=0)//if the entity runs out of health, do not proceed and instead execute the death function
+        {
+            Death();
+            return;
+        }
         //damage animation
         print("OUCH");
     }
 
-    public void changeHealth(float changeAmount)
+/// <summary>
+/// Updates the health value of the entity
+/// </summary>
+/// <param name="changeAmount">The amount by which to change the health. Positive values increase the health, negative values decrease the health</param>
+public void changeHealth(float changeAmount)
     {
-        playerCurrentHealth += changeAmount;
+        entityCurrentHealth += changeAmount;
+    }
+
+/// <summary>
+/// Perform actions when the entity dies
+/// </summary>
+    private void Death()
+    {
+        Debug.Log(gameObject+"_died");
     }
 }
