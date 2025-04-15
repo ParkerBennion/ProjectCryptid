@@ -53,7 +53,7 @@ public class PlayerProfileLoader : MonoBehaviour
         {
             Debug.Log("Loading profile: " + selectedProfile.playerName);
 
-            playerDataManager.playerData = selectedProfile;
+            playerDataManager.SetActiveProfile(selectedProfile);
             playerDataManager.LoadData();
 
             if (profileUIUpdater != null)

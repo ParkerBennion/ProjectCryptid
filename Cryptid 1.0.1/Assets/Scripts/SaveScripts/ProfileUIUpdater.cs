@@ -19,7 +19,7 @@ public class ProfileUIUpdater : MonoBehaviour
     {
         if (playerData == null) return;
 
-        playerNameText.text = "Player: " + playerData.playerName;
+        playerNameText.text = "File: " + playerData.playerName;
         coinsText.text = "Coins: " + playerData.coins.ToString();
         levelText.text = "Level: " + playerData.playerLevel.ToString();
     }
