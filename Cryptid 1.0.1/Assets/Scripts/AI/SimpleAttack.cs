@@ -10,12 +10,15 @@ public class SimpleAttack : MonoBehaviour
     /// <param name="attackCenter">The local position to the gameobject to perform the attack</param>
     public void Attack(float damage, float radius, Vector3 attackCenter)// this needs to be updated to avoid things attacking other things of the same type
     {
+        attackCenter = gameObject.transform.TransformPoint(attackCenter);
         Collider[] cols = Physics.OverlapSphere(attackCenter, radius);
         foreach (Collider thisCol in cols)
         {
+            print(thisCol);
             if (thisCol.TryGetComponent(out IDamageable target))
                 target.DealDamage(damage);
         }
+        
     }
     /// <summary>
     /// Checks if the player is within the specified range of this object
@@ -27,4 +30,5 @@ public class SimpleAttack : MonoBehaviour
     {
         return Vector3.Distance(gameObject.transform.position, target.transform.position) <= attackRange;
     }
+    
 }
