@@ -1,7 +1,24 @@
+using System;
 using UnityEngine;
 
 public class SimpleAttack : MonoBehaviour
 {
+    public string[] layerList;
+    private LayerMask validLayers;
+
+
+    private void Awake()
+    {
+        if (layerList.Length == 0)
+        {
+            validLayers = ~0;
+        }
+        else
+        {
+            validLayers=LayerMask.GetMask(layerList);
+        }
+    }
+
     /// <summary>
     /// Searches the area in front of the object for damageable entities and calls the DealDamage function for specified damage amount
     /// </summary>
@@ -10,12 +27,14 @@ public class SimpleAttack : MonoBehaviour
     /// <param name="attackCenter">The local position to the gameobject to perform the attack</param>
     public void Attack(float damage, float radius, Vector3 attackCenter)// this needs to be updated to avoid things attacking other things of the same type
     {
-        Collider[] cols = Physics.OverlapSphere(attackCenter, radius);
+        attackCenter = gameObject.transform.TransformPoint(attackCenter);
+        Collider[] cols = Physics.OverlapSphere(attackCenter, radius, validLayers);
         foreach (Collider thisCol in cols)
         {
             if (thisCol.TryGetComponent(out IDamageable target))
                 target.DealDamage(damage);
         }
+        
     }
     /// <summary>
     /// Checks if the player is within the specified range of this object
@@ -27,4 +46,5 @@ public class SimpleAttack : MonoBehaviour
     {
         return Vector3.Distance(gameObject.transform.position, target.transform.position) <= attackRange;
     }
+    
 }
