@@ -1,13 +1,15 @@
 using System;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class EntityHealth : MonoBehaviour, IDamageable
 {
-    public float entityCurrentHealth, playerMaxHealth;
+    public float entityCurrentHealth, MaxHealth;
+    public UnityEvent deathEvent;
 
     private void Awake()
     {
-        entityCurrentHealth = playerMaxHealth;
+        entityCurrentHealth = MaxHealth;
     }
     
 /// <summary>
@@ -41,5 +43,6 @@ public void changeHealth(float changeAmount)
     private void Death()
     {
         Debug.Log(gameObject+"_died");
+        deathEvent?.Invoke();
     }
 }
