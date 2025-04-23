@@ -18,5 +18,10 @@ public class DataBlockSO : ScriptableObject
     public float musicVolume;
     public string language;
 
-    // You can add/remove any fields above as your save data needs grow
+    // You can add/remove any fields above.
+
+    public void ChangeCoins(int amount)
+    {
+        coins += amount;
+    }
 }

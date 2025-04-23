@@ -3,24 +3,29 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.VFX;
+
 public class CharacterInputController : MonoBehaviour
 {
     private PlayerInputs inputs;
     private Rigidbody rb;
+    [SerializeField] private VisualEffect heavyFrameFX;
+    private PlayerAttack attack;
     
     private Vector2 moveAxis;
     private Vector3 moveVector, lookVector;
     
     public bool attackCharged, activelyCharging;
-    public float playerSpeed,  heavyWindupStartDelay, heavyWindupChargeTime;
+    public float playerSpeed,  heavyWindupStartDelay, heavyWindupChargeTime, perfectHeavyFrameTime;
 
     [Range(0, 1)] 
     public float chargeMovementMultiplier;
     private float activePlayerRunSpeed;
 
     private Coroutine chargingAttack;
+    private bool perfectAttack;
 
-    private WaitForSeconds chargeStartDelayWFS, chargeTimeWFS;
+    private WaitForSeconds chargeStartDelayWFS, chargeTimeWFS, frameWFS;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     
     private void OnEnable() // Enables controls when the object is enabled
@@ -31,11 +36,16 @@ public class CharacterInputController : MonoBehaviour
     {
         chargeStartDelayWFS = new WaitForSeconds(heavyWindupStartDelay);
         chargeTimeWFS = new WaitForSeconds(heavyWindupChargeTime);
+        frameWFS = new WaitForSeconds(perfectHeavyFrameTime);
         attackCharged = false;
         activelyCharging = false;
         activePlayerRunSpeed = playerSpeed;
         inputs = new PlayerInputs();
+        perfectAttack = false;
+        attack = GetComponent<PlayerAttack>();
         
+        heavyFrameFX.SetFloat("FrameTime", perfectHeavyFrameTime);
+
         inputs.PlayerMobile.Attack.started += ctx => StartAttack();
         inputs.PlayerMobile.Attack.canceled += ctx => ReleaseAttack();
         
@@ -67,22 +77,6 @@ public class CharacterInputController : MonoBehaviour
     }
 
 /// <summary>
-/// NEEDS WORK Performs a light attack
-/// </summary>
-    private void PerformLightAttack()
-    {
-        print("lightAttack");
-    }
-
-/// <summary>
-/// NEEDS WORK Performs a fully charged heavy attack
-/// </summary>
-    private void PerformHeavyAttack()
-    {
-        print("HEAVY ATTACK");
-    }
- 
-/// <summary>
 /// Starts the coroutine tracking the attack state (Read the coroutine for details)
 /// </summary>
     private void StartAttack()
@@ -98,16 +92,16 @@ public class CharacterInputController : MonoBehaviour
         StopCoroutine(chargingAttack);
         if (!activelyCharging && !attackCharged)
         {
-            PerformLightAttack();
+            attack.LightAttack();
         }
         else if (activelyCharging)
         {
             print("Heavy Charge Interrupted => ");
-            PerformLightAttack();
+            attack.LightAttack();
         }
         else if (attackCharged)
         {
-            PerformHeavyAttack();
+            attack.HeavyAttack(perfectAttack);
         }
         
         attackCharged = false;
@@ -127,8 +121,17 @@ public class CharacterInputController : MonoBehaviour
         activePlayerRunSpeed *= chargeMovementMultiplier;
         yield return chargeTimeWFS;
         print("Heavy attack is Charged");
+        StartCoroutine(PerfectHeavyAttackFrame());
         activelyCharging = false;
         attackCharged = true;
+    }
+
+    private IEnumerator PerfectHeavyAttackFrame()
+    {
+        heavyFrameFX.Play();
+        perfectAttack = true;
+        yield return frameWFS;
+        perfectAttack = false;
     }
     
     
