@@ -1,0 +1,6 @@
+1. Create Render texture
+2. Make a layer you will put all these objects on.
+3. add a camera, light, and a raw image to your Hierachy.
+4. assign the image to your reder texture.
+5. copy the camera settings from this scene.
+6. place objects in front of camera
