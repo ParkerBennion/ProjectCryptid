@@ -9,14 +9,11 @@ EditorBuildSettings:
     path: Assets/Scenes/Build Test Scene.unity
     guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 1
-    path: Assets/Scenes/Mechanic_Testing.unity
-    guid: d91f5cb326df7184aab95d363f1c1693
+    path: Assets/Scenes/Final Build Scenes/Intro (CabinScene).unity
+    guid: cd0ad1ff99fd4174c918608fda7e5621
   - enabled: 1
-    path: Assets/Scenes/Tool Scenes/Save Sample Scene.unity
-    guid: 3080338c9152650418583a3a54155bfe
-  - enabled: 1
-    path: Assets/Scenes/Tool Scenes/Pick up Wood Test.unity
-    guid: 23a9fa69ce7082749aac1848a810a265
+    path: Assets/Scenes/Final Build Scenes/GamePlayScene.unity
+    guid: fbd2522f1dda05d498d0716c5922a567
   m_configObjects:
     com.unity.adaptiveperformance.google.android.provider_settings: {fileID: 11400000, guid: 9a6c39ce5f729e14b8c669184f6ee8f9, type: 2}
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 52150fefc2ec0874c9cb877b5fed5d5b, type: 2}
