@@ -19,6 +19,7 @@ public class HarvestableTree : MonoBehaviour, IDamageable
 
     public void DealDamage(float damage)
     {
+        print("WHACK");
         if (currentHits >= maxHits || treeCollider == null)
             return;
 
