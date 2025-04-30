@@ -1,6 +1,6 @@
 //Maya ASCII 2025ff03 scene
 //Name: Caleb Rig.ma
-//Last modified: Wed, Apr 30, 2025 03:47:08 PM
+//Last modified: Wed, Apr 30, 2025 03:47:56 PM
 //Codeset: 1252
 requires maya "2025ff03";
 requires -nodeType "ikSpringSolver" "ikSpringSolver" "1.0";
@@ -15,12 +15,12 @@ fileInfo "product" "Maya 2025";
 fileInfo "version" "2025";
 fileInfo "cutIdentifier" "202409190603-cbdc5a7e54";
 fileInfo "osv" "Windows 10 Home v2009 (Build: 19045)";
-fileInfo "UUID" "47EB8CC2-4FF1-FB5E-92DD-548881FABBB9";
+fileInfo "UUID" "59FDE4FF-4024-4D3B-6F00-478118C689EA";
 createNode transform -s -n "persp";
 	rename -uid "6446DB30-408D-469B-D7DD-DDB9510CE429";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 2.6158186858081569 1.4726597242633066 3.0204948892156982 ;
-	setAttr ".r" -type "double3" 341.24580337724529 -1040.9999999999677 1.023152290305335e-15 ;
+	setAttr ".t" -type "double3" -6.6789010199985457 2.3599078327546841 1.9743789457699752 ;
+	setAttr ".r" -type "double3" 352.64580337722253 -1154.5999999998505 4.4913595545272228e-15 ;
 	setAttr ".rp" -type "double3" 1.4210854715202004e-16 2.8421709430404008e-16 5.6843418860808016e-16 ;
 	setAttr ".rpt" -type "double3" 2.4494189462551111e-16 -1.1642035423460816e-16 -6.8083313639322207e-17 ;
 createNode camera -s -n "perspShape" -p "persp";
@@ -31,7 +31,7 @@ createNode camera -s -n "perspShape" -p "persp";
 	setAttr ".ncp" 0.001;
 	setAttr ".fcp" 100;
 	setAttr ".fd" 0.05;
-	setAttr ".coi" 4.1149143814470053;
+	setAttr ".coi" 7.1354601661705379;
 	setAttr ".ow" 0.1;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
