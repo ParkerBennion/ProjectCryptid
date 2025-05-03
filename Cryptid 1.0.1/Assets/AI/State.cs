@@ -10,7 +10,7 @@ public abstract class State : MonoBehaviour
     protected Animator animator;
     protected ChupacabraManager manager;
     protected NavMeshAgent navAgent;
-    public abstract State LogicUpdate();
+    public abstract void LogicUpdate();
 
     protected virtual void Awake()
     {

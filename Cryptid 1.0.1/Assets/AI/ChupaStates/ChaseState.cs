@@ -2,13 +2,13 @@ using UnityEngine;
 
 public class ChaseState : State
 {
-    public override State LogicUpdate()
+    public override void LogicUpdate()
     {
-        return this;
     }
 
     public override void onEnter()
     {
         base.onEnter();
+        print("Entering Chase State");
     }
 }

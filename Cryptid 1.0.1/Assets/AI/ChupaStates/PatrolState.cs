@@ -14,12 +14,10 @@ public class PatrolState : State
     private Coroutine patrolRoutine;
     [SerializeField] private float patrolRadius;
     [SerializeField] private float maxPatrolTime;
-    public override State LogicUpdate()
+    public override void LogicUpdate()
     {
         if (canSeePlayer)
-            return chaseState;
-        else
-            return this;
+            stateMachine.SwitchToNextState(chaseState);
     }
 
     public override void onEnter()

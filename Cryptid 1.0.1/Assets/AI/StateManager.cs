@@ -21,7 +21,7 @@ public class StateManager : MonoBehaviour
         currentState.onEnter();
     }
 
-    private void SwitchToNextState(State nextState)
+    public void SwitchToNextState(State nextState)
     {
         currentState.onExit();
         currentState = nextState;
