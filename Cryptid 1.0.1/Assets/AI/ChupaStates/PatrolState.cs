@@ -3,7 +3,8 @@ using Unity.VisualScripting;
 using UnityEngine;
 
 public class PatrolState : State
-{
+{   
+    protected ChupacabraManager manager;
     public ChaseState chaseState;
     public bool canSeePlayer;
     private Vector3 destinationPoint;
@@ -22,8 +23,8 @@ public class PatrolState : State
 
     public override void onEnter()
     {
-        print("Entering Patrol State");
         base.onEnter();
+        print("Entering Patrol State");
         isPatrolling = true;
         patrolRoutine = StartCoroutine(PatrolAroundArea());
     }
@@ -34,6 +35,7 @@ public class PatrolState : State
         patrolSpeed = 3f;
         waitAtPointWFS = new WaitForSeconds(maxPatrolTime);
         WFF = new WaitForEndOfFrame();
+        manager = stateMachine.GetComponent<ChupacabraManager>();
     }
     private IEnumerator PatrolAroundArea()
     {
@@ -57,6 +59,14 @@ public class PatrolState : State
     private Vector3 findNearbyPatrolPoint(Vector3 origin)
     {
         return origin + new Vector3(Random.Range(-patrolRadius, patrolRadius), 0, Random.Range(-patrolRadius, patrolRadius));
+    }
+    public void EngagePlayer()
+    {
+        if(!canSeePlayer)
+        {
+            animator.SetTrigger("Alerted");
+            canSeePlayer = true;
+        }
     }
 
     public override void onExit()

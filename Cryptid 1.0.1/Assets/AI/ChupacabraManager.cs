@@ -8,6 +8,10 @@ public class ChupacabraManager : MonoBehaviour
 {
     private Animator animator;
     private NavMeshAgent navAgent;
+    private StateMachine stateMachine;
+    private State flinchState;
+    [SerializeField] private float pounceCD;
+    public GameObject target;
     [SerializeField] private float patrolWaitTime, maxPatrolTime, patrolRadius;
 
     private void Awake()
@@ -23,5 +27,15 @@ public class ChupacabraManager : MonoBehaviour
     private void Update()
     {
         animator.SetFloat("Speed", navAgent.velocity.magnitude);
+    }
+
+    public void SetTarget(GameObject obj)
+    {
+        target = obj;
+    }
+
+    public void TakeDamage()
+    {
+        
     }
 }

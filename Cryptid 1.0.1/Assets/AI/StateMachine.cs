@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-public class StateManager : MonoBehaviour
+public class StateMachine : MonoBehaviour
 
 {
     public State currentState;
@@ -26,6 +26,11 @@ public class StateManager : MonoBehaviour
         currentState.onExit();
         currentState = nextState;
         currentState.onEnter();
+    }
+
+    public void NotifyFinishedAnimation()
+    {
+        currentState.onAnimationFinish();
     }
     
 }

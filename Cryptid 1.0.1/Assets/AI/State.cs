@@ -6,15 +6,13 @@ public abstract class State : MonoBehaviour
 {
     
     
-    public StateManager stateMachine;
+    public StateMachine stateMachine;
     protected Animator animator;
-    protected ChupacabraManager manager;
     protected NavMeshAgent navAgent;
     public abstract void LogicUpdate();
 
     protected virtual void Awake()
     {
-        manager = stateMachine.GetComponent<ChupacabraManager>();
         animator = stateMachine.GetComponent<Animator>();
         navAgent = stateMachine.GetComponent<NavMeshAgent>();
     }
@@ -25,6 +23,11 @@ public abstract class State : MonoBehaviour
     }
 
     public virtual void onExit()
+    {
+        
+    }
+
+    public virtual void onAnimationFinish()
     {
         
     }
