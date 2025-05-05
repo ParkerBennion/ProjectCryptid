@@ -8,9 +8,9 @@ public class ChupacabraBaseState : State
     {
     }
 
-    public override void onEnter()
+    public override void OnEnterState()
     {
-        base.onEnter();
+        base.OnEnterState();
         manager = stateMachine.GetComponent<ChupacabraManager>();
     }
 }

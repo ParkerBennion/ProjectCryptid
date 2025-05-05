@@ -21,9 +21,9 @@ public class PatrolState : State
             stateMachine.SwitchToNextState(chaseState);
     }
 
-    public override void onEnter()
+    public override void OnEnterState()
     {
-        base.onEnter();
+        base.OnEnterState();
         print("Entering Patrol State");
         isPatrolling = true;
         patrolRoutine = StartCoroutine(PatrolAroundArea());
@@ -65,13 +65,18 @@ public class PatrolState : State
         if(!canSeePlayer)
         {
             animator.SetTrigger("Alerted");
-            canSeePlayer = true;
         }
     }
 
-    public override void onExit()
+    public override void onAnimationFinish()
     {
-        base.onExit();
+        base.onAnimationFinish();
+        canSeePlayer = true;
+    }
+
+    public override void OnExitState()
+    {
+        base.OnExitState();
         StopCoroutine(patrolRoutine);
         isPatrolling = false;
     }

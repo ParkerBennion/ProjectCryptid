@@ -10,14 +10,16 @@ public class ChupacabraManager : MonoBehaviour
     private NavMeshAgent navAgent;
     private StateMachine stateMachine;
     private State flinchState;
+    public bool canPounce;
     [SerializeField] private float pounceCD;
-    public GameObject target;
+    public GameObject playerTarget;
     [SerializeField] private float patrolWaitTime, maxPatrolTime, patrolRadius;
 
     private void Awake()
     {
         navAgent = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();
+        canPounce = true;
     }
 
     private void Start()
@@ -31,7 +33,7 @@ public class ChupacabraManager : MonoBehaviour
 
     public void SetTarget(GameObject obj)
     {
-        target = obj;
+        playerTarget = obj;
     }
 
     public void TakeDamage()

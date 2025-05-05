@@ -8,9 +8,9 @@ public class ChupaAttackState : ChupacabraBaseState
         
     }
 
-    public override void onEnter()
+    public override void OnEnterState()
     {
-        base.onEnter();
+        base.OnEnterState();
         print("Entering Melee Attack State");
         animator.SetTrigger("Melee Attack");//this plays the animation, which will notify the state machine when it is finished
     }

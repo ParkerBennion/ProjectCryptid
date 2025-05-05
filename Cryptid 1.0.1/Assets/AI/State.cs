@@ -17,12 +17,12 @@ public abstract class State : MonoBehaviour
         navAgent = stateMachine.GetComponent<NavMeshAgent>();
     }
 
-    public virtual void onEnter()
+    public virtual void OnEnterState()
     {
         
     }
 
-    public virtual void onExit()
+    public virtual void OnExitState()
     {
         
     }

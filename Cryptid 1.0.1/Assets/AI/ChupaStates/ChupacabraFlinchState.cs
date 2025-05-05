@@ -8,11 +8,11 @@ public class ChupacabraFlinchState : State
         
     }
 
-    public override void onEnter()
+    public override void OnEnterState()
     {
         animator.SetTrigger("Flinch");
         navAgent.isStopped = true;
-        base.onEnter();
+        base.OnEnterState();
     }
 
     public override void onAnimationFinish()

@@ -18,14 +18,14 @@ public class StateMachine : MonoBehaviour
 
     private void InitializeStateMachine()
     {
-        currentState.onEnter();
+        currentState.OnEnterState();
     }
 
     public void SwitchToNextState(State nextState)
     {
-        currentState.onExit();
+        currentState.OnExitState();
         currentState = nextState;
-        currentState.onEnter();
+        currentState.OnEnterState();
     }
 
     public void NotifyFinishedAnimation()
