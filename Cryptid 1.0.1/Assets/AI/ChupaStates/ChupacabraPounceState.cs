@@ -41,6 +41,7 @@ public class ChupacabraPounceState : State
 
     private IEnumerator WindUp()//need to update this so that the chupcabra keeps facing the player while charging up
     {
+        StartCoroutine(pounceCD());
         navAgent.enabled = false;
         manager.gameObject.transform.LookAt(target.transform);
         animator.SetTrigger("PounceWindup");
@@ -54,7 +55,6 @@ public class ChupacabraPounceState : State
         float elapsedTime = 0;
         float t = 0;
         float arcHeight;
-        StartCoroutine(pounceCD());
         startPosition = manager.transform.position;
         jumpDestinationPos = target.transform.position;
         animator.SetTrigger("PounceJump");
