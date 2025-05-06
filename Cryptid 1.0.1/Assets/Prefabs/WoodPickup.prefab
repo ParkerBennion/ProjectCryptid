@@ -237,3 +237,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinValue: 1
+  updateDisplayAction: {fileID: 11400000, guid: a7489fb67a5207048a90be0ecce927ec, type: 2}
