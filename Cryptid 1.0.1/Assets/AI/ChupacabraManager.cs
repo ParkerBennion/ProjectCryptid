@@ -22,10 +22,6 @@ public class ChupacabraManager : MonoBehaviour
         canPounce = true;
     }
 
-    private void Start()
-    {
-    }
-
     private void Update()
     {
         animator.SetFloat("Speed", navAgent.velocity.magnitude);
@@ -33,7 +29,7 @@ public class ChupacabraManager : MonoBehaviour
 
     public void SetTarget(GameObject obj)
     {
-        playerTarget = obj;
+        playerTarget = obj.gameObject;
     }
 
     public void TakeDamage()

@@ -23,7 +23,6 @@ public class PatrolState : State
 
     public override void OnEnterState()
     {
-        base.OnEnterState();
         print("Entering Patrol State");
         isPatrolling = true;
         patrolRoutine = StartCoroutine(PatrolAroundArea());
@@ -64,19 +63,20 @@ public class PatrolState : State
     {
         if(!canSeePlayer)
         {
+            navAgent.isStopped = true;
             animator.SetTrigger("Alerted");
         }
     }
 
-    public override void onAnimationFinish()
+    public override void OnAnimationFinish()
     {
-        base.onAnimationFinish();
+        base.OnAnimationFinish();
+        navAgent.isStopped = false;
         canSeePlayer = true;
     }
 
     public override void OnExitState()
     {
-        base.OnExitState();
         StopCoroutine(patrolRoutine);
         isPatrolling = false;
     }

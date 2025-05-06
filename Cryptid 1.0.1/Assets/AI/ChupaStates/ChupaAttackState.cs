@@ -1,8 +1,8 @@
 using UnityEngine;
 
-public class ChupaAttackState : ChupacabraBaseState
+public class ChupaAttackState : State
 {
-    public State ChaseState;
+    public State chaseState;
     public override void LogicUpdate()
     {
         
@@ -10,14 +10,18 @@ public class ChupaAttackState : ChupacabraBaseState
 
     public override void OnEnterState()
     {
-        base.OnEnterState();
         print("Entering Melee Attack State");
         animator.SetTrigger("Melee Attack");//this plays the animation, which will notify the state machine when it is finished
     }
 
-    public override void onAnimationFinish()
+    public override void OnExitState()
     {
-        stateMachine.SwitchToNextState(ChaseState);
+        
+    }
+
+    public override void OnAnimationFinish()
+    {
+        stateMachine.SwitchToNextState(chaseState);
     }
 
     

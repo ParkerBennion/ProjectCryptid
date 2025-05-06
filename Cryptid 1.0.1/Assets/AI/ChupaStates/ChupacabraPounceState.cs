@@ -1,36 +1,37 @@
 using System.Collections;
+using Unity.Mathematics;
 using UnityEngine;
 
 public class ChupacabraPounceState : State
 {
-    [SerializeField] private float windUpTime, pounceAirTime, pounceHeight, pounceCooldown;
+    [SerializeField] private float windUpTime, timeAfterLockToLaunch, pounceAirTime, pounceHeight, pounceCooldown;
+    [SerializeField] private Vector3 hitboxHalfExtents;
     private Coroutine currentRoutine;
     private ChupacabraManager manager;
     private GameObject target;
-    private WaitForSeconds windupTimeWFS, skillCDWFS;
+    private WaitForSeconds skillCDWFS, timeBeforeLaunchWFS;
     private WaitForEndOfFrame WFF;
     private Vector3 startPosition, jumpDestinationPos, currentArcPos;
-    public State ChaseState, LeechState;
+    public State FumbleState, LeechState;
     protected override void Awake()
     {
         base.Awake();
         manager = stateMachine.GetComponent<ChupacabraManager>();
-        windupTimeWFS = new WaitForSeconds(windUpTime);
         WFF = new WaitForEndOfFrame();
         skillCDWFS = new WaitForSeconds(pounceCooldown);
+        timeBeforeLaunchWFS = new WaitForSeconds(timeAfterLockToLaunch);
+        hitboxHalfExtents = new Vector3(1, .5f, 1.5f);
     }
 
     public override void OnEnterState()
     {
         print("Entering Pounce State");
         target = manager.playerTarget;
-        base.OnEnterState();
         currentRoutine = StartCoroutine(WindUp());
     }
 
     public override void OnExitState()
     {
-        base.OnExitState();
         StopCoroutine(currentRoutine);
     }
 
@@ -41,11 +42,18 @@ public class ChupacabraPounceState : State
 
     private IEnumerator WindUp()//need to update this so that the chupcabra keeps facing the player while charging up
     {
-        StartCoroutine(pounceCD());
+        float elapsedTime =0;
+        StartCoroutine(PounceCD());
         navAgent.enabled = false;
-        manager.gameObject.transform.LookAt(target.transform);
         animator.SetTrigger("PounceWindup");
-        yield return windupTimeWFS;//also need to update this so the chupacabra sets it's destination a little bit before it jumps
+        while (elapsedTime < windUpTime)
+        {
+            manager.gameObject.transform.LookAt(target.transform);
+            elapsedTime += Time.deltaTime;
+            yield return WFF;
+        }
+        jumpDestinationPos = target.transform.position;
+        yield return timeBeforeLaunchWFS;//also need to update this so the chupacabra sets it's destination a little bit before it jumps
         currentRoutine = StartCoroutine(JumpAndPounce());
     }
 
@@ -54,9 +62,7 @@ public class ChupacabraPounceState : State
         
         float elapsedTime = 0;
         float t = 0;
-        float arcHeight;
         startPosition = manager.transform.position;
-        jumpDestinationPos = target.transform.position;
         animator.SetTrigger("PounceJump");
         while (elapsedTime < pounceAirTime)
         {
@@ -68,15 +74,31 @@ public class ChupacabraPounceState : State
             yield return WFF;
         }
         //check if hit
-        stateMachine.SwitchToNextState(ChaseState);
+        PounceHitCheck();
     }
 
-    private IEnumerator pounceCD()
+    private IEnumerator PounceCD()
     {
         manager.canPounce = false;
         print("pounce is going on cooldown");
         yield return skillCDWFS;
         manager.canPounce = true;
+    }
+
+    private void PounceHitCheck()
+    {
+        Vector3 attackCenter = gameObject.transform.TransformPoint(0f,.5f, 1f);
+        Collider[] cols = Physics.OverlapBox(attackCenter, hitboxHalfExtents, quaternion.identity);
+        foreach (Collider thisCol in cols)
+        {
+            if (thisCol.gameObject.CompareTag("Player"))
+            {
+                stateMachine.SwitchToNextState(LeechState);
+                return;
+            }
+        }
+        stateMachine.SwitchToNextState(FumbleState);
+        //fumble and return to chasing
     }
     
 }

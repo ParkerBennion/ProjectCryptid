@@ -30,7 +30,7 @@ public class StateMachine : MonoBehaviour
 
     public void NotifyFinishedAnimation()
     {
-        currentState.onAnimationFinish();
+        currentState.OnAnimationFinish();
     }
     
 }

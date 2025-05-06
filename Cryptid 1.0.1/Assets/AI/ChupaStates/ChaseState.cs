@@ -30,7 +30,7 @@ public class ChaseState : State
 
     public override void OnEnterState()
     {
-        base.OnEnterState();
+        GroundChupa();
         playerTarget = manager.playerTarget;
         navAgent.enabled = true;
         navAgent.speed = 6;
@@ -39,6 +39,16 @@ public class ChaseState : State
 
     public override void OnExitState()
     {
-        base.OnExitState();
+        
+    }
+
+    private void GroundChupa()
+    {
+        RaycastHit hit;
+        if (Physics.Raycast(transform.position, Vector3.down, out hit, 10))
+        {
+            manager.transform.position = hit.point;
+        }
+        
     }
 }

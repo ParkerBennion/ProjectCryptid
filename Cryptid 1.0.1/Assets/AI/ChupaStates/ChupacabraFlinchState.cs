@@ -12,12 +12,16 @@ public class ChupacabraFlinchState : State
     {
         animator.SetTrigger("Flinch");
         navAgent.isStopped = true;
-        base.OnEnterState();
     }
 
-    public override void onAnimationFinish()
+    public override void OnExitState()
     {
-        base.onAnimationFinish();
+        
+    }
+
+    public override void OnAnimationFinish()
+    {
+        base.OnAnimationFinish();
         stateMachine.SwitchToNextState(ChaseState);
         navAgent.isStopped = false;
     }
