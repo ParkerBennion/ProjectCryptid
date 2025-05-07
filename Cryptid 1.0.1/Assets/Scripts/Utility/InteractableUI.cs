@@ -7,15 +7,18 @@ using UnityEngine.UI;
 public class InteractableUI : MonoBehaviour
 {
     private WaitForEndOfFrame waitForFrame;
-    private Image thisPopupImage;
+    private Button thisPopupButton;
+    private RectTransform buttonTransform;
     public bool tracking;
     public GameObject targetObjectTest;
     public GameObject mainCam;
 
     private void Awake()
     {
-        thisPopupImage = GetComponent<Image>();
+        thisPopupButton = GetComponent<Button>();
+        buttonTransform = thisPopupButton.GetComponent<RectTransform>();
         tracking = false;
+        mainCam = Camera.main.gameObject;
     }
 
     private void OnEnable()
@@ -29,7 +32,7 @@ public class InteractableUI : MonoBehaviour
     {
         if(!tracking)
         {
-            thisPopupImage.enabled = true;
+            thisPopupButton.enabled = true;
             StartCoroutine(DisplayPopup(targetObjectTest));
         }
     }
@@ -52,7 +55,7 @@ public class InteractableUI : MonoBehaviour
         tracking = true;
         while (tracking)
         {
-            thisPopupImage.rectTransform.position = Camera.main.WorldToScreenPoint(targetObj.transform.position);
+            buttonTransform.anchoredPosition = Camera.main.WorldToScreenPoint(targetObj.transform.position);
             yield return waitForFrame;
         }
     }
