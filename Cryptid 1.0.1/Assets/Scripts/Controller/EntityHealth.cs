@@ -5,7 +5,7 @@ using UnityEngine.Events;
 public class EntityHealth : MonoBehaviour, IDamageable
 {
     public float entityCurrentHealth, MaxHealth;
-    public UnityEvent deathEvent;
+    public UnityEvent damageEvent, deathEvent;
 
     private void Awake()
     {
@@ -24,6 +24,7 @@ public class EntityHealth : MonoBehaviour, IDamageable
             Death();
             return;
         }
+        damageEvent.Invoke();
         //damage animation
         print("OUCH");
     }
