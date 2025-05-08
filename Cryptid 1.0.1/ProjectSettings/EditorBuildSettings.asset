@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Final Build Scenes/Intro (CabinScene).unity
     guid: cd0ad1ff99fd4174c918608fda7e5621
   - enabled: 1
-    path: Assets/Scenes/Final Build Scenes/GamePlayScene.unity
+    path: Assets/Scenes/Final Build Scenes/Scene_Forest.unity
     guid: fbd2522f1dda05d498d0716c5922a567
   m_configObjects:
     com.unity.adaptiveperformance.google.android.provider_settings: {fileID: 11400000, guid: 9a6c39ce5f729e14b8c669184f6ee8f9, type: 2}
