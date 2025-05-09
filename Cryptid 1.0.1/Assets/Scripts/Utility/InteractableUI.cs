@@ -18,7 +18,7 @@ public class InteractableUI : MonoBehaviour
         thisPopupButton = GetComponent<Button>();
         buttonTransform = thisPopupButton.GetComponent<RectTransform>();
         tracking = false;
-        mainCam = Camera.main.gameObject;
+        if (Camera.main != null) mainCam = Camera.main.gameObject;
     }
 
     private void OnEnable()
@@ -32,7 +32,6 @@ public class InteractableUI : MonoBehaviour
     {
         if(!tracking)
         {
-            thisPopupButton.enabled = true;
             StartCoroutine(DisplayPopup(targetObjectTest));
         }
     }
@@ -43,7 +42,7 @@ public class InteractableUI : MonoBehaviour
     {
         tracking = false;
         print("Hiding UI");
-        gameObject.SetActive(false);
+        transform.parent.gameObject.SetActive(false);
     }
     /// <summary>
     /// The routine runs every frame so long as the boolean tells it to be active. It tracks the target obj on screen space and ensures the UI stays over it

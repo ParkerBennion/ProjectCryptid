@@ -33,6 +33,7 @@ public class ChaseState : State
         GroundChupa();
         playerTarget = manager.playerTarget;
         navAgent.enabled = true;
+        navAgent.isStopped = false;
         navAgent.speed = 6;
         print("Entering Chase State");
     }
