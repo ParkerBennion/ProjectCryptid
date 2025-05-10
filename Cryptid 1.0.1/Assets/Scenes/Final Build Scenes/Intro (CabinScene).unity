@@ -5118,6 +5118,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3926268769760934930, guid: d68cb708b6679c24e881a84aaeffdbe7, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 7153337571432539973, guid: d68cb708b6679c24e881a84aaeffdbe7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7874000401692529561, guid: d68cb708b6679c24e881a84aaeffdbe7, type: 3}
       propertyPath: m_Name
       value: Cryptozoology book
