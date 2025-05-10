@@ -46,8 +46,8 @@ public class CharacterInputController : MonoBehaviour
         
         heavyFrameFX.SetFloat("FrameTime", perfectHeavyFrameTime);
 
-        inputs.PlayerMobile.Attack.started += ctx => StartAttack();
-        inputs.PlayerMobile.Attack.canceled += ctx => ReleaseAttack();
+        inputs.PlayerMobile.Attack.started += StartAttackCallback;
+        inputs.PlayerMobile.Attack.canceled += ReleaseAttackCallback;
         
         inputs.PlayerMobile.Move.performed += ctx => moveAxis = ctx.ReadValue<Vector2>();
         inputs.PlayerMobile.Move.canceled += ctx => moveAxis = Vector2.zero;
@@ -64,6 +64,17 @@ public class CharacterInputController : MonoBehaviour
         if (moveAxis!=Vector2.zero)//Updates the players rotation if they are moving, and does nothing if the player is not moving
             transform.rotation = Quaternion.LookRotation(moveVector);
     }
+    
+    private void StartAttackCallback(InputAction.CallbackContext ctx)
+    {
+        StartAttack();
+    }
+
+    private void ReleaseAttackCallback(InputAction.CallbackContext ctx)
+    {
+        ReleaseAttack();
+    }
+    
 /// <summary>
 /// Either enables or disables the controls
 /// </summary>
@@ -89,7 +100,8 @@ public class CharacterInputController : MonoBehaviour
 /// </summary>
     private void ReleaseAttack()
     {
-        StopCoroutine(chargingAttack);
+        if(chargingAttack!=null)
+            StopCoroutine(chargingAttack);
         if (!activelyCharging && !attackCharged)
         {
             attack.LightAttack();
@@ -133,6 +145,15 @@ public class CharacterInputController : MonoBehaviour
         yield return frameWFS;
         perfectAttack = false;
     }
-    
-    
+
+    private void OnDestroy()
+    {
+        
+    }
+    private void OnDisable()
+    {
+        SetControlsEnabled(false); // disables input map
+        inputs.PlayerMobile.Attack.started -= StartAttackCallback;
+        inputs.PlayerMobile.Attack.canceled -= ReleaseAttackCallback;
+    }
 }
