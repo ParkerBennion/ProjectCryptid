@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
-public class PatrolState : State
+public class ChupacabraPatrolState : State
 {   
     protected ChupacabraManager manager;
     public ChaseState chaseState;
@@ -14,6 +14,10 @@ public class PatrolState : State
     private Coroutine patrolRoutine;
     [SerializeField] private float patrolRadius;
     [SerializeField] private float maxPatrolTime;
+    
+    /// <summary>
+    /// Checks if the player has been detected or not
+    /// </summary>
     public override void LogicUpdate()
     {
         if (canSeePlayer)
@@ -22,19 +26,23 @@ public class PatrolState : State
 
     public override void OnEnterState()
     {
-        print("Entering Patrol State");
         isPatrolling = true;
         patrolRoutine = StartCoroutine(PatrolAroundArea());
+        patrolSpeed = 3f;
     }
 
     protected override void Awake()
     {
         base.Awake();
-        patrolSpeed = 3f;
+        manager = stateMachine.GetComponent<ChupacabraManager>();
         waitAtPointWFS = new WaitForSeconds(maxPatrolTime);
         WFF = new WaitForEndOfFrame();
-        manager = stateMachine.GetComponent<ChupacabraManager>();
     }
+    /// <summary>
+    /// Picks a random area within PATROLRADIUS of the starting point and travels to that point until it either reaches
+    /// it or (MAXPATROLTIME) seconds have passed, in which it will wait another(MAXPATROLTIME) seconds before repeating the whole process
+    /// </summary>
+    /// <returns></returns>
     private IEnumerator PatrolAroundArea()
     {
         Vector3 startPoint = transform.position;
@@ -49,11 +57,14 @@ public class PatrolState : State
             {
                 yield return WFF;
             }
-            print("Reached patrol point");
             yield return waitAtPointWFS;
         }
     }
-    
+    /// <summary>
+    /// Picks a patrol point within the set radius of the origin on the XZ plane
+    /// </summary>
+    /// <param name="origin"></param>
+    /// <returns></returns>
     private Vector3 findNearbyPatrolPoint(Vector3 origin)
     {
         return origin + new Vector3(Random.Range(-patrolRadius, patrolRadius), 0, Random.Range(-patrolRadius, patrolRadius));
@@ -65,6 +76,11 @@ public class PatrolState : State
             navAgent.isStopped = true;
             animator.SetTrigger("Alerted");
         }
+    }
+
+    public void DisengagePlayer()
+    {
+        canSeePlayer = false;
     }
 
     public override void OnAnimationFinish()

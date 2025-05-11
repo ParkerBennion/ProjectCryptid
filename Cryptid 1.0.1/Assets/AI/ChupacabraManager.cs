@@ -1,24 +1,24 @@
 using System;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.Events;
 using UnityHFSM;
 
 [RequireComponent(typeof(Animator), typeof(NavMeshAgent))]
-public class ChupacabraManager : MonoBehaviour
+public class ChupacabraManager : CryptidManager
 {
     private Animator animator;
     private NavMeshAgent navAgent;
     private StateMachine stateMachine;
-    private State flinchState;
+    public State fleeState;
     public bool canPounce;
-    [SerializeField] private float pounceCD;
     public GameObject playerTarget;
-    [SerializeField] private float patrolWaitTime, maxPatrolTime, patrolRadius;
 
     private void Awake()
     {
         navAgent = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();
+        stateMachine = GetComponent<StateMachine>();
         canPounce = true;
     }
 
@@ -32,8 +32,22 @@ public class ChupacabraManager : MonoBehaviour
         playerTarget = obj.gameObject;
     }
 
-    public void TakeDamage()
+    public override void Disengage()
     {
-        
+        print(fleeState.gameObject);
+        print(stateMachine);
+        stateMachine.SwitchToNextState(fleeState);
+    }
+
+    public override void Despawn()
+    {
+        //despawn
+        Destroy(gameObject);
+    }
+
+    public override void Die()
+    {
+        //die
+        Destroy(gameObject);
     }
 }
