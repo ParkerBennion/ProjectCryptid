@@ -1,6 +1,8 @@
 using UnityEngine;
-
-public class ChupaAttackState : State
+/// <summary>
+/// This state performs a simple melee attack and then continues chasing
+/// </summary>
+public class ChupacabraAttackState : State
 {
     public State chaseState;
     public override void LogicUpdate()
@@ -24,5 +26,4 @@ public class ChupaAttackState : State
         stateMachine.SwitchToNextState(chaseState);
     }
 
-    
 }

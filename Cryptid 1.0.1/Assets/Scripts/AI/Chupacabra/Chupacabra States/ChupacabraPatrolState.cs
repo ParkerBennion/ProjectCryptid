@@ -4,13 +4,13 @@ using UnityEngine;
 public class ChupacabraPatrolState : State
 {   
     protected ChupacabraManager manager;
-    public ChaseState chaseState;
+    public ChupacabraChaseState chupacabraChaseState;
     public bool canSeePlayer;
     private Vector3 destinationPoint;
     private WaitForSeconds waitAtPointWFS;
     private WaitForEndOfFrame WFF;
     private bool isPatrolling;
-    private float patrolSpeed;
+    [SerializeField]private float patrolSpeed;
     private Coroutine patrolRoutine;
     [SerializeField] private float patrolRadius;
     [SerializeField] private float maxPatrolTime;
@@ -21,7 +21,7 @@ public class ChupacabraPatrolState : State
     public override void LogicUpdate()
     {
         if (canSeePlayer)
-            stateMachine.SwitchToNextState(chaseState);
+            stateMachine.SwitchToNextState(chupacabraChaseState);
     }
 
     public override void OnEnterState()

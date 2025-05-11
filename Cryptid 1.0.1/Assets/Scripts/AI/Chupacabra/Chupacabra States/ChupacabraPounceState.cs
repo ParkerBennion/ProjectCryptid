@@ -25,7 +25,6 @@ public class ChupacabraPounceState : State
 
     public override void OnEnterState()
     {
-        print("Entering Pounce State");
         target = manager.playerTarget;
         currentRoutine = StartCoroutine(WindUp());
     }
@@ -33,17 +32,22 @@ public class ChupacabraPounceState : State
     public override void OnExitState()
     {
         StopCoroutine(currentRoutine);
+        StartCoroutine(PounceCD());
     }
 
     public override void LogicUpdate()
     {
         
     }
-
+    /// <summary>
+    /// Begins the windup of a pounce attack. Here the chupacabra will wait (WINDUPTIME) seconds and then lock the
+    /// position of the player in, and then wait another (TIMEAFTERLOCKTOLAUNCH) seconds before jumping, allowing the
+    /// player some time to move out of the way
+    /// </summary>
+    /// <returns></returns>
     private IEnumerator WindUp()//need to update this so that the chupcabra keeps facing the player while charging up
     {
         float elapsedTime =0;
-        StartCoroutine(PounceCD());
         navAgent.enabled = false;
         animator.SetTrigger("PounceWindup");
         while (elapsedTime < windUpTime)
@@ -56,7 +60,11 @@ public class ChupacabraPounceState : State
         yield return timeBeforeLaunchWFS;//also need to update this so the chupacabra sets it's destination a little bit before it jumps
         currentRoutine = StartCoroutine(JumpAndPounce());
     }
-
+    /// <summary>
+    /// Disables all other movement options such as navagent and locks the chupacabra into a trajectory path towards the
+    /// position locked in during the windup
+    /// </summary>
+    /// <returns></returns>
     private IEnumerator JumpAndPounce()
     {
         
@@ -76,15 +84,20 @@ public class ChupacabraPounceState : State
         //check if hit
         PounceHitCheck();
     }
-
+    /// <summary>
+    /// puts the pounce ability on CD for (POUNCECOOLDOWN) seconds, barring it's use until it is off cooldown
+    /// </summary>
+    /// <returns></returns>
     private IEnumerator PounceCD()
     {
         manager.canPounce = false;
-        print("pounce is going on cooldown");
         yield return skillCDWFS;
         manager.canPounce = true;
     }
-
+    /// <summary>
+    /// Checks if the player is within the specified hitbox. If so, then attaches itself to the player and goes to leech
+    /// state. If not, (will) play an animation and return to chasing the player
+    /// </summary>
     private void PounceHitCheck()
     {
         Vector3 attackCenter = gameObject.transform.TransformPoint(0f,.5f, 1f);

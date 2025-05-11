@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class ChaseState : State
+public class ChupacabraChaseState : State
 {
     
     protected ChupacabraManager manager;
@@ -13,16 +13,20 @@ public class ChaseState : State
         base.Awake();
         manager = stateMachine.GetComponent<ChupacabraManager>();
     }
+    /// <summary>
+    /// Checks first if the player is in melee range->attack, if not then checks if they are within pouncing range->Pounce,
+    /// if not continue to chase the player
+    /// </summary>
     public override void LogicUpdate()
     {
         distanceFromTarget = Vector3.Distance(manager.transform.position, playerTarget.transform.position);
-        if (distanceFromTarget < pounceDistance && manager.canPounce)
-        {
-            stateMachine.SwitchToNextState(PounceState);
-        }
-        else if (distanceFromTarget < meleeDistance)
+        if (distanceFromTarget < meleeDistance)
         {
             stateMachine.SwitchToNextState(AttackState);
+        }
+        else if (distanceFromTarget < pounceDistance && manager.canPounce)
+        {
+            stateMachine.SwitchToNextState(PounceState);
         }
         else 
             navAgent.SetDestination(playerTarget.transform.position);
@@ -35,7 +39,6 @@ public class ChaseState : State
         navAgent.enabled = true;
         navAgent.isStopped = false;
         navAgent.speed = 6;
-        print("Entering Chase State");
     }
 
     public override void OnExitState()
@@ -43,6 +46,9 @@ public class ChaseState : State
         
     }
 
+    /// <summary>
+    /// before chasing, ensures that the chupacabra is placed on the navmesh
+    /// </summary>
     private void GroundChupa()
     {
         RaycastHit hit;
@@ -50,6 +56,5 @@ public class ChaseState : State
         {
             manager.transform.position = hit.point;
         }
-        
     }
 }

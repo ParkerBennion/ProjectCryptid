@@ -81,7 +81,7 @@ GameObject:
   - component: {fileID: 6194787966205764159}
   - component: {fileID: 421450241640349338}
   m_Layer: 7
-  m_Name: LeechState
+  m_Name: Leech
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -120,6 +120,8 @@ MonoBehaviour:
   tappableButton: {fileID: 8609040895842431942}
   requiredTaps: 3
   currentTaps: 0
+  damageIntervalTime: 0
+  damagePerInterval: 0
 --- !u!1 &1466659242830891337
 GameObject:
   m_ObjectHideFlags: 0
@@ -416,7 +418,7 @@ GameObject:
   - component: {fileID: 1283273168553539820}
   - component: {fileID: 5729968972149388393}
   m_Layer: 7
-  m_Name: PounceState
+  m_Name: Pounce
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -582,7 +584,7 @@ NavMeshAgent:
   m_Speed: 3.5
   m_Acceleration: 8
   avoidancePriority: 50
-  m_AngularSpeed: 120
+  m_AngularSpeed: 720
   m_StoppingDistance: 0
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
@@ -792,7 +794,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5185975952383982720}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
@@ -879,7 +881,7 @@ GameObject:
   - component: {fileID: 4453894373315448288}
   - component: {fileID: 761088540955871117}
   m_Layer: 7
-  m_Name: DisengageState
+  m_Name: Disengage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -915,6 +917,21 @@ MonoBehaviour:
   stateMachine: {fileID: 5636798512514614687}
   despawnRange: 50
   patrolState: {fileID: 8827765422006068648}
+  disengageEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8827765422006068648}
+        m_TargetAssemblyTypeName: PatrolState, Assembly-CSharp
+        m_MethodName: DisengagePlayer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &7722541831688117658
 GameObject:
   m_ObjectHideFlags: 0
@@ -1105,8 +1122,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stateMachine: {fileID: 5636798512514614687}
-  chaseState: {fileID: 2047149379273544929}
+  chupacabraChaseState: {fileID: 2047149379273544929}
   canSeePlayer: 0
+  patrolSpeed: 3.5
   patrolRadius: 5
   maxPatrolTime: 5
 --- !u!1001 &1180178700956565679

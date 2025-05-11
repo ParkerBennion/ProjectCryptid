@@ -43,7 +43,6 @@ public void changeHealth(float changeAmount)
 /// </summary>
     private void Death()
     {
-        Debug.Log(gameObject+"_died");
         deathEvent?.Invoke();
     }
 }
