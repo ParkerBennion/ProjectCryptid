@@ -7,15 +7,18 @@ using UnityEngine.UI;
 public class InteractableUI : MonoBehaviour
 {
     private WaitForEndOfFrame waitForFrame;
-    private Image thisPopupImage;
+    private Button thisPopupButton;
+    private RectTransform buttonTransform;
     public bool tracking;
     public GameObject targetObjectTest;
     public GameObject mainCam;
 
     private void Awake()
     {
-        thisPopupImage = GetComponent<Image>();
+        thisPopupButton = GetComponent<Button>();
+        buttonTransform = thisPopupButton.GetComponent<RectTransform>();
         tracking = false;
+        if (Camera.main != null) mainCam = Camera.main.gameObject;
     }
 
     private void OnEnable()
@@ -29,7 +32,6 @@ public class InteractableUI : MonoBehaviour
     {
         if(!tracking)
         {
-            thisPopupImage.enabled = true;
             StartCoroutine(DisplayPopup(targetObjectTest));
         }
     }
@@ -40,7 +42,7 @@ public class InteractableUI : MonoBehaviour
     {
         tracking = false;
         print("Hiding UI");
-        gameObject.SetActive(false);
+        transform.parent.gameObject.SetActive(false);
     }
     /// <summary>
     /// The routine runs every frame so long as the boolean tells it to be active. It tracks the target obj on screen space and ensures the UI stays over it
@@ -52,7 +54,7 @@ public class InteractableUI : MonoBehaviour
         tracking = true;
         while (tracking)
         {
-            thisPopupImage.rectTransform.position = Camera.main.WorldToScreenPoint(targetObj.transform.position);
+            buttonTransform.anchoredPosition = Camera.main.WorldToScreenPoint(targetObj.transform.position);
             yield return waitForFrame;
         }
     }

@@ -7,9 +7,9 @@ public class GameAction : ScriptableObject
     /// Invoking raise will execute all the events added by any gameActionResponses tied to this Scriptable Object Gameaction
     /// </summary>
     public UnityAction raise;
-
+    
     public void RaiseAction()
     {
-        raise.Invoke();
+        raise?.Invoke();
     }
 }
