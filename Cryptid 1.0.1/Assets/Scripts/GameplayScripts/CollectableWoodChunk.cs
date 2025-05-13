@@ -3,9 +3,9 @@ using UnityEngine;
 public class CollectibleWoodChunk : MonoBehaviour
 {
     [Tooltip("How many coins this chunk gives")]
-    public int coinValue = 1;
+    public int logValue = 1;
 
-    [Tooltip("GameAction to trigger when coins are updated")]
+    [Tooltip("GameAction to trigger when logs are updated")]
     public GameAction updateDisplayAction; // Reference to the GameAction
 
     public void CollectChunk()
@@ -13,8 +13,8 @@ public class CollectibleWoodChunk : MonoBehaviour
         // Get the current player data
         if (PlayerDataManager.Instance != null && PlayerDataManager.Instance.playerData != null)
         {
-            PlayerDataManager.Instance.playerData.coins += coinValue;
-            Debug.Log($"Collected wood chunk. Added {coinValue} coins. Total: {PlayerDataManager.Instance.playerData.coins}");
+            PlayerDataManager.Instance.playerData.logs += logValue;
+            Debug.Log($"Collected wood chunk. Added {logValue} logs. Total: {PlayerDataManager.Instance.playerData.logs}");
 
             if (updateDisplayAction != null)
             {
@@ -27,7 +27,7 @@ public class CollectibleWoodChunk : MonoBehaviour
         }
         else
         {
-            Debug.LogWarning("No active player data found to update coins!");
+            Debug.LogWarning("No active player data found to update logs!");
         }
 
         Destroy(gameObject);

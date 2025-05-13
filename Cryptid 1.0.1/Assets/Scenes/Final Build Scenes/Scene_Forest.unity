@@ -1373,25 +1373,9 @@ MonoBehaviour:
   m_Mesh: {fileID: 914740026}
   m_VersionIndex: 5213
   m_IsSelectable: 1
-  m_SelectedFaces: 0c000000
-  m_SelectedEdges:
-  - a: 50
-    b: 51
-  - a: 51
-    b: 44
-  - a: 49
-    b: 50
-  - a: 44
-    b: 45
-  - a: 48
-    b: 49
-  - a: 45
-    b: 46
-  - a: 46
-    b: 47
-  - a: 47
-    b: 48
-  m_SelectedVertices: 32000000330000002c000000310000002d000000300000002e0000002f000000
+  m_SelectedFaces: 
+  m_SelectedEdges: []
+  m_SelectedVertices: 
 --- !u!4 &138109106
 Transform:
   m_ObjectHideFlags: 0
@@ -1634,10 +1618,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 502192857124035765, guid: f4d98c96c6bfc4041a617bf0a4c893cd, type: 3}
-      propertyPath: updateDisplayAction
-      value: 
-      objectReference: {fileID: 11400000, guid: a7489fb67a5207048a90be0ecce927ec, type: 2}
     - target: {fileID: 848299105102634803, guid: f4d98c96c6bfc4041a617bf0a4c893cd, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -1717,10 +1697,6 @@ PrefabInstance:
     - target: {fileID: 848299105102634803, guid: f4d98c96c6bfc4041a617bf0a4c893cd, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1333900544375929633, guid: f4d98c96c6bfc4041a617bf0a4c893cd, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -1479
       objectReference: {fileID: 0}
     - target: {fileID: 5130815005333572820, guid: f4d98c96c6bfc4041a617bf0a4c893cd, type: 3}
       propertyPath: m_Name
