@@ -2339,11 +2339,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1642039911162146809, guid: 42a42adffa27bdc48ab73cef4f59ec74, type: 3}
   m_PrefabInstance: {fileID: 8118430631407503611}
   m_PrefabAsset: {fileID: 0}
---- !u!95 &2110132023 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 8063892309578278695, guid: 42a42adffa27bdc48ab73cef4f59ec74, type: 3}
-  m_PrefabInstance: {fileID: 8118430631407503611}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2110662419
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2772,22 +2767,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3494001154833995361, guid: 42a42adffa27bdc48ab73cef4f59ec74, type: 3}
-      propertyPath: animator
-      value: 
-      objectReference: {fileID: 2110132023}
-    - target: {fileID: 4478642146089535661, guid: 42a42adffa27bdc48ab73cef4f59ec74, type: 3}
-      propertyPath: MaxHealth
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 4616537664830774553, guid: 42a42adffa27bdc48ab73cef4f59ec74, type: 3}
-      propertyPath: lightDamage
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8063892309578278695, guid: 42a42adffa27bdc48ab73cef4f59ec74, type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 9c53302dcbf1d0943a8fddb27f88d25e, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
