@@ -3,25 +3,34 @@ using UnityEngine;
 
 public class DataBlockSO : ScriptableObject
 {
+    public GameAction onValueChanged;
+
     [Header("Basic Info")]
     public string playerName;
-    public int playerLevel;
-    public float playerHealth;
     public bool hasCompletedTutorial;
 
     [Header("Stats")]
-    public int coins;
+    public int logs;
+    public float playerHealth;
     public float speedMultiplier;
+    public bool vulnerable;
 
     [Header("Settings")]
     public bool musicOn;
+    public bool soundOn;
     public float musicVolume;
     public string language;
 
     // You can add/remove any fields above.
 
-    public void ChangeCoins(int amount)
+    public void NotifyChanged()
     {
-        coins += amount;
+        onValueChanged?.RaiseAction();
+    }
+
+    public void ChangeLogs(int amount)
+    {
+        logs += amount;
+        NotifyChanged();
     }
 }
