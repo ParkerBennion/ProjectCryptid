@@ -4,8 +4,7 @@ using TMPro;
 public class ProfileUIUpdater : MonoBehaviour
 {
     public TMP_Text playerNameText;
-    public TMP_Text coinsText;
-    public TMP_Text levelText;
+    public TMP_Text LogsText;
 
     private DataBlockSO playerData;
 
@@ -20,7 +19,6 @@ public class ProfileUIUpdater : MonoBehaviour
         if (playerData == null) return;
 
         playerNameText.text = "File: " + playerData.playerName;
-        coinsText.text = "Coins: " + playerData.coins.ToString();
-        levelText.text = "Level: " + playerData.playerLevel.ToString();
+        LogsText.text = "Logs: " + playerData.logs.ToString();
     }
 }
