@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.VFX;
@@ -16,7 +17,7 @@ public class CharacterInputController : MonoBehaviour
     private Vector3 moveVector, lookVector;
     
     public bool attackCharged, activelyCharging;
-    public float playerSpeed,  heavyWindupStartDelay, heavyWindupChargeTime, perfectHeavyFrameTime;
+    [SerializeField] private float playerSpeed,  heavyWindupStartDelay, heavyWindupChargeTime, perfectHeavyFrameTime;
 
     [Range(0, 1)] 
     public float chargeMovementMultiplier;
@@ -25,6 +26,10 @@ public class CharacterInputController : MonoBehaviour
     private Coroutine chargingAttack;
     private bool perfectAttack;
 
+    [SerializeField]private Animator animator;
+    
+    private static readonly int animSpeed = Animator.StringToHash("Speed");
+    
     private WaitForSeconds chargeStartDelayWFS, chargeTimeWFS, frameWFS;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     
@@ -63,6 +68,7 @@ public class CharacterInputController : MonoBehaviour
         transform.Translate(moveVector * (activePlayerRunSpeed * Time.deltaTime), Space.World);
         if (moveAxis!=Vector2.zero)//Updates the players rotation if they are moving, and does nothing if the player is not moving
             transform.rotation = Quaternion.LookRotation(moveVector);
+        animator.SetFloat(animSpeed, moveVector.magnitude*activePlayerRunSpeed);
     }
     
     private void StartAttackCallback(InputAction.CallbackContext ctx)
@@ -105,6 +111,7 @@ public class CharacterInputController : MonoBehaviour
         if (!activelyCharging && !attackCharged)
         {
             attack.LightAttack();
+            animator.SetTrigger("LightAttack");
         }
         else if (activelyCharging)
         {
@@ -117,6 +124,7 @@ public class CharacterInputController : MonoBehaviour
         }
         
         attackCharged = false;
+        animator.SetBool("HeavyCharged", false);
         activelyCharging = false;
         activePlayerRunSpeed = playerSpeed;
     }
@@ -136,6 +144,7 @@ public class CharacterInputController : MonoBehaviour
         StartCoroutine(PerfectHeavyAttackFrame());
         activelyCharging = false;
         attackCharged = true;
+        animator.SetBool("HeavyCharged", true);
     }
 
     private IEnumerator PerfectHeavyAttackFrame()
