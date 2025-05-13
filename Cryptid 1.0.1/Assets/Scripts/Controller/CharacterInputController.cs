@@ -35,7 +35,7 @@ public class CharacterInputController : MonoBehaviour
     
     private void OnEnable() // Enables controls when the object is enabled
     {
-        SetControlsEnabled(true);
+        EnableControls();
     }
     private void Awake()
     {
@@ -85,12 +85,14 @@ public class CharacterInputController : MonoBehaviour
 /// Either enables or disables the controls
 /// </summary>
 /// <param name="state"></param>
-    public void SetControlsEnabled(bool state)
+    public void EnableControls()
     {
-        if (state)
-            inputs.PlayerMobile.Enable();
-        else 
-            inputs.PlayerMobile.Disable();
+        inputs.PlayerMobile.Enable();
+    }
+
+    public void DisableControls()
+    {
+        inputs.PlayerMobile.Disable();
     }
 
 /// <summary>
@@ -116,15 +118,16 @@ public class CharacterInputController : MonoBehaviour
         else if (activelyCharging)
         {
             print("Heavy Charge Interrupted => ");
+            animator.SetTrigger("HeavyRelease");
             attack.LightAttack();
         }
         else if (attackCharged)
         {
             attack.HeavyAttack(perfectAttack);
+            animator.SetTrigger("HeavyRelease");
         }
         
         attackCharged = false;
-        animator.SetBool("HeavyCharged", false);
         activelyCharging = false;
         activePlayerRunSpeed = playerSpeed;
     }
@@ -136,8 +139,10 @@ public class CharacterInputController : MonoBehaviour
     private IEnumerator ChargingRoutine()
     {
         yield return chargeStartDelayWFS;
+        animator.SetBool("HeavyCharged", false);
         print("Charging Heavy attack");
         activelyCharging = true;
+        animator.SetTrigger("HeavyWindup");
         activePlayerRunSpeed *= chargeMovementMultiplier;
         yield return chargeTimeWFS;
         print("Heavy attack is Charged");
@@ -161,7 +166,7 @@ public class CharacterInputController : MonoBehaviour
     }
     private void OnDisable()
     {
-        SetControlsEnabled(false); // disables input map
+        DisableControls(); // disables input map
         inputs.PlayerMobile.Attack.started -= StartAttackCallback;
         inputs.PlayerMobile.Attack.canceled -= ReleaseAttackCallback;
     }
