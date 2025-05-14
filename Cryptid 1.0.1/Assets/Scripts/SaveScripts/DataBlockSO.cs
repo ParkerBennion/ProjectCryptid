@@ -10,16 +10,16 @@ public class DataBlockSO : ScriptableObject
     public bool hasCompletedTutorial;
 
     [Header("Stats")]
-    public int logs;
+    public int logs = 0;
     public float playerHealth;
-    public float speedMultiplier;
+    public float speedMultiplier = 1f;
     public bool vulnerable;
 
     [Header("Settings")]
     public bool musicOn;
     public bool soundOn;
     public float musicVolume;
-    public string language;
+    public string language = "English";
 
     // You can add/remove any fields above.
 
