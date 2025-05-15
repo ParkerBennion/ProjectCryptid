@@ -64,6 +64,7 @@ public class CheaterUI : MonoBehaviour
             var minus = row.transform.Find("Minus")?.GetComponent<Button>();
             var toggle = row.transform.Find("Toggle")?.GetComponent<Toggle>();
 
+
             if (label == null || valueText == null)
             {
                 Debug.LogError("Missing 'Label' or 'Value' component on rowPrefab.");
@@ -72,7 +73,7 @@ public class CheaterUI : MonoBehaviour
 
             label.text = field.Name;
             object value = field.GetValue(playerData);
-            valueText.text = value.ToString();
+            valueText.text = value != null ? value.ToString() : "null";
 
             FieldUI fieldUI = new FieldUI
             {
@@ -156,14 +157,33 @@ public class CheaterUI : MonoBehaviour
     {
         foreach (var ui in fieldUIs)
         {
+            if (ui.valueText == null || ui.field == null)
+            {
+                Debug.LogWarning($"Missing valueText or field reference for a fieldUI.");
+                continue;
+            }
+
             object value = ui.field.GetValue(playerData);
 
             if (ui.toggle != null && ui.field.FieldType == typeof(bool))
+            {
                 ui.toggle.isOn = (bool)value;
+            }
 
-            ui.valueText.text = ui.field.FieldType == typeof(float)
-                ? ((float)value).ToString("F2")
-                : value.ToString();
+            if (value == null)
+            {
+                ui.valueText.text = "null";
+            }
+            else if (ui.field.FieldType == typeof(float))
+            {
+                ui.valueText.text = ((float)value).ToString("F2");
+            }
+            else
+            {
+                ui.valueText.text = value.ToString();
+            }
         }
     }
+    // if you delete all save files this may return an error.
+
 }
