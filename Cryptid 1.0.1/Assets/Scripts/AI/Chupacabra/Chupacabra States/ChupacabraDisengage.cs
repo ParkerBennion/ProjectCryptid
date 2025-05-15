@@ -28,7 +28,6 @@ public class ChupacabraDisengage : State
 
     public override void OnEnterState()
     {
-        GroundChupa();
         disengageEvent?.Invoke();
         fleeRoutine = StartCoroutine(Flee());
         navAgent.speed = 8;
@@ -41,6 +40,8 @@ public class ChupacabraDisengage : State
     /// <returns></returns>
     private IEnumerator Flee()
     {
+        manager.GroundChupa();
+        navAgent.enabled = true;
         navAgent.SetDestination(homePoint);
         animator.Play("ChupaIdleChase");
         bool isfleeing = true;

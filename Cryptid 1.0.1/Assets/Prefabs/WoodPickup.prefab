@@ -116,14 +116,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7835740818892888821}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.063225895, y: 0, z: 0, w: 0.99799925}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.18, y: 0.24657534, z: 0.24657534}
+  m_LocalScale: {x: 0.5, y: 0.68493146, z: 0.68493146}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 6707448041816813035}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: -7.25, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &4026852240086307069
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -196,10 +196,10 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5000001
+  m_Radius: 0.5
   m_Height: 2.11
   m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &3026072289952355850
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -208,7 +208,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7835740818892888821}
   serializedVersion: 4
-  m_Mass: 3.08
+  m_Mass: 10
   m_Drag: 0.15
   m_AngularDrag: 0.38
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -239,5 +239,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c23e99d87e9a8945968984d19272094, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinValue: 1
+  logValue: 1
   updateDisplayAction: {fileID: 11400000, guid: a7489fb67a5207048a90be0ecce927ec, type: 2}
