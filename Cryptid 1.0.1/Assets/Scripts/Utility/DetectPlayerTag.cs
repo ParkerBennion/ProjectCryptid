@@ -13,7 +13,7 @@ public class DetectPlayerTag : MonoBehaviour
 /// <param name="other"></param>
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Player"))
+        if (other.gameObject.CompareTag("PlayerCharacter"))
         {
             detectEvent.Invoke();
             playerParameterEvent.Invoke(other.gameObject);
@@ -25,7 +25,7 @@ public class DetectPlayerTag : MonoBehaviour
 /// <param name="other"></param>
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.CompareTag("Player"))
+        if (other.gameObject.CompareTag("PlayerCharacter"))
         {
             unDetectEvent.Invoke();
         }

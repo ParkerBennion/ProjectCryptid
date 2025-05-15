@@ -5,7 +5,7 @@ using UnityEngine;
 public class ChupacabraPounceState : State
 {
     [SerializeField] private float windUpTime, timeAfterLockToLaunch, pounceAirTime, pounceHeight, pounceCooldown;
-    [SerializeField] private Vector3 hitboxHalfExtents;
+    private Vector3 hitboxHalfExtents;
     private Coroutine currentRoutine;
     private ChupacabraManager manager;
     private GameObject target;
@@ -100,17 +100,28 @@ public class ChupacabraPounceState : State
     /// </summary>
     private void PounceHitCheck()
     {
+        Debug.Log("Hitbox "+hitboxHalfExtents);
+        bool foundPlayer=false;
+        Debug.Log("FOUND PLAYER?");
         Vector3 attackCenter = gameObject.transform.TransformPoint(0f,.5f, 1f);
-        Collider[] cols = Physics.OverlapBox(attackCenter, hitboxHalfExtents, quaternion.identity);
+        Collider[] cols = Physics.OverlapBox(attackCenter, hitboxHalfExtents, quaternion.identity, LayerMask.GetMask("PlayerLayer"));
         foreach (Collider thisCol in cols)
         {
-            if (thisCol.gameObject.CompareTag("Player"))
+            print("Checking collider "+thisCol.gameObject.gameObject.name);
+            if (thisCol.gameObject.gameObject.CompareTag("PlayerCharacter"))
             {
-                stateMachine.SwitchToNextState(LeechState);
-                return;
+                foundPlayer = true;
             }
         }
-        stateMachine.SwitchToNextState(FumbleState);
+        Debug.Log("PLAYER FOUND IS "+foundPlayer);
+        if (foundPlayer)
+        {
+            stateMachine.SwitchToNextState(LeechState);
+        }
+        else
+        {
+            stateMachine.SwitchToNextState(FumbleState);
+        }
         //fumble and return to chasing
     }
     

@@ -126,8 +126,8 @@ GameObject:
   - component: {fileID: 7815587946520828593}
   - component: {fileID: 508374833058718248}
   m_Layer: 3
-  m_Name: PlayerChar
-  m_TagString: Player
+  m_Name: PlayerCharCaleb
+  m_TagString: PlayerCharacter
   m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -171,6 +171,7 @@ MonoBehaviour:
   heavyWindupChargeTime: 1.5
   perfectHeavyFrameTime: 0.5
   chargeMovementMultiplier: 0.5
+  animator: {fileID: 8063892309578278695}
 --- !u!114 &4478642146089535661
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -185,6 +186,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   entityCurrentHealth: 0
   MaxHealth: 100
+  damageEvent:
+    m_PersistentCalls:
+      m_Calls: []
   deathEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -201,7 +205,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   visualizeHitbox: {fileID: 6246669221546711009}
-  lightDamage: 5
+  lightDamage: 4
   heavyDamage: 10
   attackRadius: 1.5
   heavySwingRange: 3
@@ -646,6 +650,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CalebRig
       objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: ece4eccb5c1a32144934f4dbef3b1526, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 9c53302dcbf1d0943a8fddb27f88d25e, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 5177392578346165731, guid: ece4eccb5c1a32144934f4dbef3b1526, type: 3}
@@ -655,5 +663,10 @@ PrefabInstance:
 --- !u!4 &4109710033390353757 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: ece4eccb5c1a32144934f4dbef3b1526, type: 3}
+  m_PrefabInstance: {fileID: 4504205446208969398}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &8063892309578278695 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: ece4eccb5c1a32144934f4dbef3b1526, type: 3}
   m_PrefabInstance: {fileID: 4504205446208969398}
   m_PrefabAsset: {fileID: 0}

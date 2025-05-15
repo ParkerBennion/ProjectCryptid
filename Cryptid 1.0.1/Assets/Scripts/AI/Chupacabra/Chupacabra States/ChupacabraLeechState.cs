@@ -14,6 +14,7 @@ public class ChupacabraLeechState : State
     [SerializeField]private Canvas tappableButton;
     private InteractableUI tapUI;
     private WaitForSeconds wfs;
+    private EntityHealth chupaHealth;
     [SerializeField] private float requiredTaps, currentTaps, damageIntervalTime, damagePerInterval;
     protected override void Awake()
     {
@@ -21,6 +22,7 @@ public class ChupacabraLeechState : State
         manager = stateMachine.GetComponent<ChupacabraManager>();
         tapUI = tappableButton.gameObject.GetComponentInChildren<InteractableUI>();
         wfs = new WaitForSeconds(damageIntervalTime);
+        chupaHealth = manager.GetComponent<EntityHealth>();
     }
 
     public override void LogicUpdate()
@@ -30,6 +32,7 @@ public class ChupacabraLeechState : State
 
     public override void OnEnterState()
     {
+        chupaHealth.invulnerable = true;
         animator.SetTrigger("PounceHit");
         currentTaps = 0;
         playerTarget = manager.playerTarget;
@@ -45,6 +48,8 @@ public class ChupacabraLeechState : State
 
     public override void OnExitState()
     {
+        chupaHealth.invulnerable = false;
+        manager.GroundChupa();
         manager.transform.LookAt(playerTarget.transform);
         StopCoroutine(damageRoutine);
     }

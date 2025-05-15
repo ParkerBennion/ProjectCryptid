@@ -49,4 +49,12 @@ public class ChupacabraManager : CryptidManager
         //die
         Destroy(gameObject);
     }
+    public void GroundChupa()
+    {
+        RaycastHit hit;
+        if (Physics.Raycast(transform.position, Vector3.down, out hit, 10, 11))
+        {
+            transform.position = hit.point;
+        }
+    }
 }

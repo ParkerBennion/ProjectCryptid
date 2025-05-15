@@ -36,9 +36,10 @@ public class HarvestableTree : MonoBehaviour, IDamageable
     {
         if (woodChunkPrefab == null || treeCollider == null)
             return;
-
-        Vector3 spawnPos = GetRandomXZEdgePosition(treeCollider.bounds);
-        Instantiate(woodChunkPrefab, spawnPos, Quaternion.identity);
+        GameObject woodPiece = Instantiate(woodChunkPrefab, GetRandomXZEdgePosition(treeCollider.bounds), Quaternion.identity);
+        Vector3 launchDirection = woodPiece.transform.position - gameObject.transform.position;
+        launchDirection.y += 2;
+        woodPiece.GetComponent<Rigidbody>().AddForce(launchDirection*1000f);
     }
 
     private Vector3 GetRandomXZEdgePosition(Bounds bounds)
