@@ -1,6 +1,6 @@
 //Maya ASCII 2025ff03 scene
 //Name: Caleb_Attack_Animation.ma
-//Last modified: Fri, May 16, 2025 05:48:26 PM
+//Last modified: Sat, May 17, 2025 03:41:53 PM
 //Codeset: 1252
 file -rdi 1 -ns "Caleb_Rig" -rfn "Caleb_RigRN" -op "v=0;" -typ "mayaAscii" "E:/CryptidMobile/ProjectCryptid/CryptidMobile_MayaProject//scenes/Caleb/Caleb Rig.ma";
 file -r -ns "Caleb_Rig" -dr 1 -rfn "Caleb_RigRN" -op "v=0;" -typ "mayaAscii" "E:/CryptidMobile/ProjectCryptid/CryptidMobile_MayaProject//scenes/Caleb/Caleb Rig.ma";
@@ -16,19 +16,19 @@ fileInfo "product" "Maya 2025";
 fileInfo "version" "2025";
 fileInfo "cutIdentifier" "202409190603-cbdc5a7e54";
 fileInfo "osv" "Windows 10 Home v2009 (Build: 19045)";
-fileInfo "UUID" "533F2783-4D08-B159-EC1E-AEAD20DB9D4D";
+fileInfo "UUID" "68AD96EA-4248-CC51-CD9B-B6989956A874";
 createNode transform -s -n "persp";
 	rename -uid "CBF88C2F-4AA7-20B4-1B3E-B9981C21D59C";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 11.982483800622484 5.9153052641318258 7.5526867655622594 ;
-	setAttr ".r" -type "double3" -18.338352742447849 63.799999999988998 3.6019394322304904e-15 ;
+	setAttr ".t" -type "double3" 27.52373997326044 4.7849651317179012 -10.952299727299135 ;
+	setAttr ".r" -type "double3" -5.7383527422025837 -247.39999999998614 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "BDE4A5E7-4F26-2D45-107D-84BDA17E4896";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
 	setAttr ".ncp" 0.001;
 	setAttr ".fcp" 100;
-	setAttr ".coi" 13.724421082100962;
+	setAttr ".coi" 29.564162393223302;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -120,7 +120,7 @@ createNode parentConstraint -n "pCylinder1_parentConstraint1" -p "pCylinder1";
 	setAttr ".tg[0].tot" -type "double3" 0.24321049541395176 -0.35457625655804798 -0.076904931260394285 ;
 	setAttr ".tg[0].tor" -type "double3" -1.8753975252878247e-13 7.897044424363459e-14 
 		7.3947592483207298 ;
-	setAttr ".lr" -type "double3" 52.393744291632913 26.716832493169523 -190.95723702085169 ;
+	setAttr ".lr" -type "double3" 63.023065624339445 -6.281479610731032 -528.61198774792422 ;
 	setAttr ".rst" -type "double3" 0.74332560389638214 1.1279485276002785 0.27890503535308692 ;
 	setAttr ".rsrr" -type "double3" -90.000000000528971 -0.60842035948753359 -57.061679641586224 ;
 	setAttr -k on ".w0";
@@ -143,13 +143,16 @@ createNode scaleConstraint -n "pCylinder1_scaleConstraint1" -p "pCylinder1";
 	setAttr -k on ".w0";
 createNode transform -n "Placeholder";
 	rename -uid "5E15F230-4228-721F-A52B-F78771F14DA9";
+	setAttr ".t" -type "double3" -0.7483504134232789 1.7241525661564172 1.1985812507498044 ;
+	setAttr ".r" -type "double3" 115.51019116141906 -210.40996326503321 -176.68130494354048 ;
+	setAttr ".s" -type "double3" 0.99999999999999967 1 1 ;
 createNode locator -n "PlaceholderShape" -p "Placeholder";
 	rename -uid "33115D4F-4B77-E6B9-A9F3-F786B7D31A57";
 	setAttr -k off ".v";
 	setAttr ".ove" yes;
 	setAttr ".ovc" 9;
 createNode fosterParent -n "Caleb_RigRNfosterParent1";
-	rename -uid "2EF85F4B-4D09-3342-E7BF-628556554230";
+	rename -uid "91C013CB-49D2-1795-702D-9C97E1D426BC";
 createNode scaleConstraint -n "L_Arm_IK_Ctrl_scaleConstraint1" -p "Caleb_RigRNfosterParent1";
 	rename -uid "3F033BBF-4179-8270-8536-9FA498636169";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "R_Arm_IK_CtrlW0" -dv 1 -min 0 -at "double";
@@ -185,32 +188,32 @@ createNode parentConstraint -n "L_Arm_IK_Ctrl_parentConstraint1" -p "Caleb_RigRN
 	setAttr ".tg[0].tot" -type "double3" -0.076226815063751716 -0.73785583333292726 
 		0.33311136459476137 ;
 	setAttr ".tg[0].tor" -type "double3" -16.14037432180638 21.730234877998161 173.91644817027807 ;
-	setAttr ".lr" -type "double3" -65.086078320708182 33.424035530268604 -212.03610066933359 ;
+	setAttr ".lr" -type "double3" -67.434784452335094 55.228656348291722 -222.1359760762507 ;
 	setAttr ".rst" -type "double3" -1.1407793085065117 -0.33428513639267743 -0.69462965179181668 ;
 	setAttr ".rsrr" -type "double3" -67.442255404132084 31.72172573495418 -210.92937236927079 ;
 	setAttr -k on ".w0";
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "9428665D-44DE-75D6-CAED-B2A86830C6F6";
+	rename -uid "08951254-4A29-777A-2061-668B83C3C125";
 	setAttr -s 12 ".lnk";
 	setAttr -s 12 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "4D62A084-4AA6-C25E-BDB1-2DA4709A6E21";
+	rename -uid "1BAA4E7E-4BDA-7865-1F23-AE9468103EF2";
 	setAttr ".bsdt[0].bscd" -type "Int32Array" 1 0 ;
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "BE7182DB-4770-5811-1124-60BF1B9ED13C";
+	rename -uid "F98358BF-494E-8C8A-5111-568932610CC4";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "9E8BC5F6-4A80-5AC6-12C6-A9B8A39002FD";
+	rename -uid "1957966F-441C-CB3F-940D-1991CD6530E2";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "655782FC-4D9C-94BF-844B-21ACCFC148D1";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "99C0BCD8-41C1-2492-4457-52ACD294B30F";
+	rename -uid "CDCCC78C-4A90-41F3-F572-00AB22B8C545";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "4CB84E30-419C-903E-2F8B-62B4A258F5C3";
 	setAttr ".g" yes;
 createNode reference -n "Caleb_RigRN";
 	rename -uid "843DCECE-4899-8EE7-2849-23B07BE53F9F";
-	setAttr -s 481 ".phl";
+	setAttr -s 482 ".phl";
 	setAttr ".phl[1]" 0;
 	setAttr ".phl[2]" 0;
 	setAttr ".phl[3]" 0;
@@ -692,10 +695,11 @@ createNode reference -n "Caleb_RigRN";
 	setAttr ".phl[479]" 0;
 	setAttr ".phl[480]" 0;
 	setAttr ".phl[481]" 0;
+	setAttr ".phl[482]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"Caleb_RigRN"
 		"Caleb_RigRN" 0
-		"Caleb_RigRN" 545
+		"Caleb_RigRN" 544
 		0 "|Caleb_RigRNfosterParent1|L_Arm_IK_Ctrl_parentConstraint1" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:L_Arm_Ctrls|Caleb_Rig:L_Arm_IK_Ctrls|Caleb_Rig:L_Arm_IK_Ctrl_Grp|Caleb_Rig:L_Arm_IK_Ctrl" 
 		"-s -r "
 		0 "|Caleb_RigRNfosterParent1|L_Arm_IK_Ctrl_scaleConstraint1" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:L_Arm_Ctrls|Caleb_Rig:L_Arm_IK_Ctrls|Caleb_Rig:L_Arm_IK_Ctrl_Grp|Caleb_Rig:L_Arm_IK_Ctrl" 
@@ -762,7 +766,7 @@ createNode reference -n "Caleb_RigRN";
 		2 "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:R_Arm_Ctrls|Caleb_Rig:R_Arm_IK_Ctrls|Caleb_Rig:R_Arm_IK_Ctrl_Grp|Caleb_Rig:R_Arm_IK_Ctrl" 
 		"rotatePivotTranslate" " -type \"double3\" 0 0 0"
 		2 "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:R_Arm_Ctrls|Caleb_Rig:R_Arm_IK_Ctrls|Caleb_Rig:R_Arm_IK_Ctrl_Grp|Caleb_Rig:R_Arm_IK_Ctrl" 
-		"Local_Space" " -k 1 2"
+		"Local_Space" " -k 1"
 		2 "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:R_Arm_Ctrls|Caleb_Rig:R_Finger_Ctrls|Caleb_Rig:R_Thumb_Jnt2_Ctrl_Grp|Caleb_Rig:R_Thumb_Jnt2_Ctrl" 
 		"rotatePivotTranslate" " -type \"double3\" 0 0 0"
 		2 "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:R_Arm_Ctrls|Caleb_Rig:R_Finger_Ctrls|Caleb_Rig:R_Thumb_Jnt1_Ctrl_Grp|Caleb_Rig:R_Thumb_Jnt1_Ctrl" 
@@ -783,8 +787,6 @@ createNode reference -n "Caleb_RigRN";
 		"rotatePivotTranslate" " -type \"double3\" 0 0 0"
 		2 "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:L_Leg_IK_Ctrls|Caleb_Rig:L_Leg_IK_PV_Ctrl_Grp|Caleb_Rig:L_Leg_IK_PV_Ctrl" 
 		"Local_Space" " -k 1 4"
-		2 "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:L_Leg_IK_Ctrls|Caleb_Rig:L_Leg_IK_Ctrl_Grp|Caleb_Rig:L_Leg_IK_Ctrl" 
-		"Local_Space" " -k 1"
 		2 "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:L_Leg_IK_Ctrls|Caleb_Rig:L_Leg_IK_Ctrl_Grp|Caleb_Rig:L_Leg_IK_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Heel_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Heel_Ctrl_OFFSET|Caleb_Rig:L_Heel_Walk_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Heel_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Toe_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Toe_Ctrl_OFFSET|Caleb_Rig:L_Toe_Walk_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Toe_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Ball_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Ball_Ctrl_OFFSET|Caleb_Rig:L_Ball_Walk_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Ball_Ctrl|Caleb_Rig:L_Leg_IK_Handle" 
 		"visibility" " 0"
 		2 "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:R_Leg_IK_Ctrls|Caleb_Rig:R_Leg_IK_PV_Ctrl_Grp|Caleb_Rig:R_Leg_IK_PV_Ctrl" 
@@ -793,8 +795,6 @@ createNode reference -n "Caleb_RigRN";
 		"scale" " -type \"double3\" 1 0.99999999999999967 1"
 		2 "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:R_Leg_IK_Ctrls|Caleb_Rig:R_Leg_IK_Ctrl_Grp|Caleb_Rig:R_Leg_IK_Ctrl" 
 		"rotatePivotTranslate" " -type \"double3\" 0 0 0"
-		2 "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:R_Leg_IK_Ctrls|Caleb_Rig:R_Leg_IK_Ctrl_Grp|Caleb_Rig:R_Leg_IK_Ctrl" 
-		"Local_Space" " -k 1"
 		2 "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:R_Leg_IK_Ctrls|Caleb_Rig:R_Leg_IK_Ctrl_Grp|Caleb_Rig:R_Leg_IK_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl" 
 		"rotatePivotTranslate" " -type \"double3\" 0 0 0"
 		2 "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:R_Leg_IK_Ctrls|Caleb_Rig:R_Leg_IK_Ctrl_Grp|Caleb_Rig:R_Leg_IK_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Heel_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Heel_Ctrl_OFFSET|Caleb_Rig:R_Heel_Walk_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Heel_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Toe_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Toe_Ctrl_OFFSET|Caleb_Rig:R_Toe_Walk_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Toe_Ctrl" 
@@ -809,8 +809,6 @@ createNode reference -n "Caleb_RigRN";
 		"visibility" " 0"
 		2 "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Head_Ctrls|Caleb_Rig:Hat_Jnt_Ctrl_Grp|Caleb_Rig:Hat_Jnt_Ctrl" 
 		"rotatePivotTranslate" " -type \"double3\" 0 0 0"
-		2 "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Head_Ctrls|Caleb_Rig:Eye_Master_Ctrl_Grp|Caleb_Rig:Eye_Master_Ctrl" 
-		"Local_Space" " -k 1"
 		2 "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Head_Ctrls|Caleb_Rig:Hair_Ctrls|Caleb_Rig:Hair_Front_Bounce_CONTROL_Jnt_Ctrl_Grp|Caleb_Rig:Hair_Front_Bounce_CONTROL_Jnt_Ctrl" 
 		"SimulationActive" " -k 1 0"
 		2 "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Head_Ctrls|Caleb_Rig:Hair_Ctrls|Caleb_Rig:Hair_Front_Bounce_CONTROL_Jnt_Ctrl_Grp|Caleb_Rig:Hair_Front_Bounce_CONTROL_Jnt_Ctrl" 
@@ -818,9 +816,10 @@ createNode reference -n "Caleb_RigRN";
 		2 "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Auxillary|Caleb_Rig:Backpack_1_Jnt_Ctrl_Grp|Caleb_Rig:Backpack_1_Jnt_Ctrl" 
 		"rotatePivotTranslate" " -type \"double3\" 0 0 0"
 		2 "|Caleb_Rig:CALEB|Caleb_Rig:Deformers|Caleb_Rig:IK_Handles|Caleb_Rig:Spine_IK_Handle" 
-		"translate" " -type \"double3\" -0.11041781457348999 1.7078112136470589 -0.033739621094522512"
+		"translate" " -type \"double3\" 0.12510341307344769 1.74415836003220104 -0.038402832589957463"
 		
 		2 "Caleb_Rig:Geometry_Layer" "displayType" " 2"
+		2 "Caleb_Rig:Geometry_Layer" "visibility" " 1"
 		2 "Caleb_Rig:Joint_Layer" "visibility" " 0"
 		2 "Caleb_Rig:Controls_Layer" "visibility" " 1"
 		2 "Caleb_Rig:Deformer_Layer" "visibility" " 0"
@@ -1184,605 +1183,607 @@ createNode reference -n "Caleb_RigRN";
 		"Caleb_RigRN.placeHolderList[179]" ""
 		5 3 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:R_Arm_Ctrls|Caleb_Rig:R_Arm_IK_Ctrls|Caleb_Rig:R_Arm_IK_Ctrl_Grp|Caleb_Rig:R_Arm_IK_Ctrl.parentMatrix" 
 		"Caleb_RigRN.placeHolderList[180]" ""
-		5 3 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:R_Arm_Ctrls|Caleb_Rig:R_Arm_IK_Ctrls|Caleb_Rig:R_Arm_IK_Ctrl_Grp|Caleb_Rig:R_Arm_IK_Ctrl.message" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:R_Arm_Ctrls|Caleb_Rig:R_Arm_IK_Ctrls|Caleb_Rig:R_Arm_IK_Ctrl_Grp|Caleb_Rig:R_Arm_IK_Ctrl.Local_Space" 
 		"Caleb_RigRN.placeHolderList[181]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:R_Arm_Ctrls|Caleb_Rig:R_Arm_IK_Ctrls|Caleb_Rig:R_Arm_IK_Base_Ctrl_Grp|Caleb_Rig:R_Arm_IK_Base_Ctrl.translateX" 
+		5 3 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:R_Arm_Ctrls|Caleb_Rig:R_Arm_IK_Ctrls|Caleb_Rig:R_Arm_IK_Ctrl_Grp|Caleb_Rig:R_Arm_IK_Ctrl.message" 
 		"Caleb_RigRN.placeHolderList[182]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:R_Arm_Ctrls|Caleb_Rig:R_Arm_IK_Ctrls|Caleb_Rig:R_Arm_IK_Base_Ctrl_Grp|Caleb_Rig:R_Arm_IK_Base_Ctrl.translateY" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:R_Arm_Ctrls|Caleb_Rig:R_Arm_IK_Ctrls|Caleb_Rig:R_Arm_IK_Base_Ctrl_Grp|Caleb_Rig:R_Arm_IK_Base_Ctrl.translateX" 
 		"Caleb_RigRN.placeHolderList[183]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:R_Arm_Ctrls|Caleb_Rig:R_Arm_IK_Ctrls|Caleb_Rig:R_Arm_IK_Base_Ctrl_Grp|Caleb_Rig:R_Arm_IK_Base_Ctrl.translateZ" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:R_Arm_Ctrls|Caleb_Rig:R_Arm_IK_Ctrls|Caleb_Rig:R_Arm_IK_Base_Ctrl_Grp|Caleb_Rig:R_Arm_IK_Base_Ctrl.translateY" 
 		"Caleb_RigRN.placeHolderList[184]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:R_Arm_Ctrls|Caleb_Rig:R_Arm_IK_Ctrls|Caleb_Rig:R_Arm_IK_Base_Ctrl_Grp|Caleb_Rig:R_Arm_IK_Base_Ctrl.rotateX" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:R_Arm_Ctrls|Caleb_Rig:R_Arm_IK_Ctrls|Caleb_Rig:R_Arm_IK_Base_Ctrl_Grp|Caleb_Rig:R_Arm_IK_Base_Ctrl.translateZ" 
 		"Caleb_RigRN.placeHolderList[185]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:R_Arm_Ctrls|Caleb_Rig:R_Arm_IK_Ctrls|Caleb_Rig:R_Arm_IK_Base_Ctrl_Grp|Caleb_Rig:R_Arm_IK_Base_Ctrl.rotateY" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:R_Arm_Ctrls|Caleb_Rig:R_Arm_IK_Ctrls|Caleb_Rig:R_Arm_IK_Base_Ctrl_Grp|Caleb_Rig:R_Arm_IK_Base_Ctrl.rotateX" 
 		"Caleb_RigRN.placeHolderList[186]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:R_Arm_Ctrls|Caleb_Rig:R_Arm_IK_Ctrls|Caleb_Rig:R_Arm_IK_Base_Ctrl_Grp|Caleb_Rig:R_Arm_IK_Base_Ctrl.rotateZ" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:R_Arm_Ctrls|Caleb_Rig:R_Arm_IK_Ctrls|Caleb_Rig:R_Arm_IK_Base_Ctrl_Grp|Caleb_Rig:R_Arm_IK_Base_Ctrl.rotateY" 
 		"Caleb_RigRN.placeHolderList[187]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:R_Arm_Ctrls|Caleb_Rig:R_Finger_Ctrls|Caleb_Rig:R_Thumb_Jnt2_Ctrl_Grp|Caleb_Rig:R_Thumb_Jnt2_Ctrl.translateX" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:R_Arm_Ctrls|Caleb_Rig:R_Arm_IK_Ctrls|Caleb_Rig:R_Arm_IK_Base_Ctrl_Grp|Caleb_Rig:R_Arm_IK_Base_Ctrl.rotateZ" 
 		"Caleb_RigRN.placeHolderList[188]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:R_Arm_Ctrls|Caleb_Rig:R_Finger_Ctrls|Caleb_Rig:R_Thumb_Jnt2_Ctrl_Grp|Caleb_Rig:R_Thumb_Jnt2_Ctrl.translateY" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:R_Arm_Ctrls|Caleb_Rig:R_Finger_Ctrls|Caleb_Rig:R_Thumb_Jnt2_Ctrl_Grp|Caleb_Rig:R_Thumb_Jnt2_Ctrl.translateX" 
 		"Caleb_RigRN.placeHolderList[189]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:R_Arm_Ctrls|Caleb_Rig:R_Finger_Ctrls|Caleb_Rig:R_Thumb_Jnt2_Ctrl_Grp|Caleb_Rig:R_Thumb_Jnt2_Ctrl.translateZ" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:R_Arm_Ctrls|Caleb_Rig:R_Finger_Ctrls|Caleb_Rig:R_Thumb_Jnt2_Ctrl_Grp|Caleb_Rig:R_Thumb_Jnt2_Ctrl.translateY" 
 		"Caleb_RigRN.placeHolderList[190]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:R_Arm_Ctrls|Caleb_Rig:R_Finger_Ctrls|Caleb_Rig:R_Thumb_Jnt2_Ctrl_Grp|Caleb_Rig:R_Thumb_Jnt2_Ctrl.rotateX" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:R_Arm_Ctrls|Caleb_Rig:R_Finger_Ctrls|Caleb_Rig:R_Thumb_Jnt2_Ctrl_Grp|Caleb_Rig:R_Thumb_Jnt2_Ctrl.translateZ" 
 		"Caleb_RigRN.placeHolderList[191]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:R_Arm_Ctrls|Caleb_Rig:R_Finger_Ctrls|Caleb_Rig:R_Thumb_Jnt2_Ctrl_Grp|Caleb_Rig:R_Thumb_Jnt2_Ctrl.rotateY" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:R_Arm_Ctrls|Caleb_Rig:R_Finger_Ctrls|Caleb_Rig:R_Thumb_Jnt2_Ctrl_Grp|Caleb_Rig:R_Thumb_Jnt2_Ctrl.rotateX" 
 		"Caleb_RigRN.placeHolderList[192]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:R_Arm_Ctrls|Caleb_Rig:R_Finger_Ctrls|Caleb_Rig:R_Thumb_Jnt2_Ctrl_Grp|Caleb_Rig:R_Thumb_Jnt2_Ctrl.rotateZ" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:R_Arm_Ctrls|Caleb_Rig:R_Finger_Ctrls|Caleb_Rig:R_Thumb_Jnt2_Ctrl_Grp|Caleb_Rig:R_Thumb_Jnt2_Ctrl.rotateY" 
 		"Caleb_RigRN.placeHolderList[193]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:R_Arm_Ctrls|Caleb_Rig:R_Finger_Ctrls|Caleb_Rig:R_Thumb_Jnt1_Ctrl_Grp|Caleb_Rig:R_Thumb_Jnt1_Ctrl.translateX" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:R_Arm_Ctrls|Caleb_Rig:R_Finger_Ctrls|Caleb_Rig:R_Thumb_Jnt2_Ctrl_Grp|Caleb_Rig:R_Thumb_Jnt2_Ctrl.rotateZ" 
 		"Caleb_RigRN.placeHolderList[194]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:R_Arm_Ctrls|Caleb_Rig:R_Finger_Ctrls|Caleb_Rig:R_Thumb_Jnt1_Ctrl_Grp|Caleb_Rig:R_Thumb_Jnt1_Ctrl.translateY" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:R_Arm_Ctrls|Caleb_Rig:R_Finger_Ctrls|Caleb_Rig:R_Thumb_Jnt1_Ctrl_Grp|Caleb_Rig:R_Thumb_Jnt1_Ctrl.translateX" 
 		"Caleb_RigRN.placeHolderList[195]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:R_Arm_Ctrls|Caleb_Rig:R_Finger_Ctrls|Caleb_Rig:R_Thumb_Jnt1_Ctrl_Grp|Caleb_Rig:R_Thumb_Jnt1_Ctrl.translateZ" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:R_Arm_Ctrls|Caleb_Rig:R_Finger_Ctrls|Caleb_Rig:R_Thumb_Jnt1_Ctrl_Grp|Caleb_Rig:R_Thumb_Jnt1_Ctrl.translateY" 
 		"Caleb_RigRN.placeHolderList[196]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:R_Arm_Ctrls|Caleb_Rig:R_Finger_Ctrls|Caleb_Rig:R_Thumb_Jnt1_Ctrl_Grp|Caleb_Rig:R_Thumb_Jnt1_Ctrl.rotateX" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:R_Arm_Ctrls|Caleb_Rig:R_Finger_Ctrls|Caleb_Rig:R_Thumb_Jnt1_Ctrl_Grp|Caleb_Rig:R_Thumb_Jnt1_Ctrl.translateZ" 
 		"Caleb_RigRN.placeHolderList[197]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:R_Arm_Ctrls|Caleb_Rig:R_Finger_Ctrls|Caleb_Rig:R_Thumb_Jnt1_Ctrl_Grp|Caleb_Rig:R_Thumb_Jnt1_Ctrl.rotateY" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:R_Arm_Ctrls|Caleb_Rig:R_Finger_Ctrls|Caleb_Rig:R_Thumb_Jnt1_Ctrl_Grp|Caleb_Rig:R_Thumb_Jnt1_Ctrl.rotateX" 
 		"Caleb_RigRN.placeHolderList[198]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:R_Arm_Ctrls|Caleb_Rig:R_Finger_Ctrls|Caleb_Rig:R_Thumb_Jnt1_Ctrl_Grp|Caleb_Rig:R_Thumb_Jnt1_Ctrl.rotateZ" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:R_Arm_Ctrls|Caleb_Rig:R_Finger_Ctrls|Caleb_Rig:R_Thumb_Jnt1_Ctrl_Grp|Caleb_Rig:R_Thumb_Jnt1_Ctrl.rotateY" 
 		"Caleb_RigRN.placeHolderList[199]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:R_Arm_Ctrls|Caleb_Rig:R_Finger_Ctrls|Caleb_Rig:R_Finger_3_Jnt_Ctrl_Grp1|Caleb_Rig:R_Finger_3_Jnt_Ctrl.translateX" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:R_Arm_Ctrls|Caleb_Rig:R_Finger_Ctrls|Caleb_Rig:R_Thumb_Jnt1_Ctrl_Grp|Caleb_Rig:R_Thumb_Jnt1_Ctrl.rotateZ" 
 		"Caleb_RigRN.placeHolderList[200]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:R_Arm_Ctrls|Caleb_Rig:R_Finger_Ctrls|Caleb_Rig:R_Finger_3_Jnt_Ctrl_Grp1|Caleb_Rig:R_Finger_3_Jnt_Ctrl.translateY" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:R_Arm_Ctrls|Caleb_Rig:R_Finger_Ctrls|Caleb_Rig:R_Finger_3_Jnt_Ctrl_Grp1|Caleb_Rig:R_Finger_3_Jnt_Ctrl.translateX" 
 		"Caleb_RigRN.placeHolderList[201]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:R_Arm_Ctrls|Caleb_Rig:R_Finger_Ctrls|Caleb_Rig:R_Finger_3_Jnt_Ctrl_Grp1|Caleb_Rig:R_Finger_3_Jnt_Ctrl.translateZ" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:R_Arm_Ctrls|Caleb_Rig:R_Finger_Ctrls|Caleb_Rig:R_Finger_3_Jnt_Ctrl_Grp1|Caleb_Rig:R_Finger_3_Jnt_Ctrl.translateY" 
 		"Caleb_RigRN.placeHolderList[202]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:R_Arm_Ctrls|Caleb_Rig:R_Finger_Ctrls|Caleb_Rig:R_Finger_3_Jnt_Ctrl_Grp1|Caleb_Rig:R_Finger_3_Jnt_Ctrl.rotateX" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:R_Arm_Ctrls|Caleb_Rig:R_Finger_Ctrls|Caleb_Rig:R_Finger_3_Jnt_Ctrl_Grp1|Caleb_Rig:R_Finger_3_Jnt_Ctrl.translateZ" 
 		"Caleb_RigRN.placeHolderList[203]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:R_Arm_Ctrls|Caleb_Rig:R_Finger_Ctrls|Caleb_Rig:R_Finger_3_Jnt_Ctrl_Grp1|Caleb_Rig:R_Finger_3_Jnt_Ctrl.rotateY" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:R_Arm_Ctrls|Caleb_Rig:R_Finger_Ctrls|Caleb_Rig:R_Finger_3_Jnt_Ctrl_Grp1|Caleb_Rig:R_Finger_3_Jnt_Ctrl.rotateX" 
 		"Caleb_RigRN.placeHolderList[204]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:R_Arm_Ctrls|Caleb_Rig:R_Finger_Ctrls|Caleb_Rig:R_Finger_3_Jnt_Ctrl_Grp1|Caleb_Rig:R_Finger_3_Jnt_Ctrl.rotateZ" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:R_Arm_Ctrls|Caleb_Rig:R_Finger_Ctrls|Caleb_Rig:R_Finger_3_Jnt_Ctrl_Grp1|Caleb_Rig:R_Finger_3_Jnt_Ctrl.rotateY" 
 		"Caleb_RigRN.placeHolderList[205]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:R_Arm_Ctrls|Caleb_Rig:R_Finger_Ctrls|Caleb_Rig:R_Finger_2_Jnt_Ctrl_Grp1|Caleb_Rig:R_Finger_2_Jnt_Ctrl.translateX" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:R_Arm_Ctrls|Caleb_Rig:R_Finger_Ctrls|Caleb_Rig:R_Finger_3_Jnt_Ctrl_Grp1|Caleb_Rig:R_Finger_3_Jnt_Ctrl.rotateZ" 
 		"Caleb_RigRN.placeHolderList[206]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:R_Arm_Ctrls|Caleb_Rig:R_Finger_Ctrls|Caleb_Rig:R_Finger_2_Jnt_Ctrl_Grp1|Caleb_Rig:R_Finger_2_Jnt_Ctrl.translateY" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:R_Arm_Ctrls|Caleb_Rig:R_Finger_Ctrls|Caleb_Rig:R_Finger_2_Jnt_Ctrl_Grp1|Caleb_Rig:R_Finger_2_Jnt_Ctrl.translateX" 
 		"Caleb_RigRN.placeHolderList[207]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:R_Arm_Ctrls|Caleb_Rig:R_Finger_Ctrls|Caleb_Rig:R_Finger_2_Jnt_Ctrl_Grp1|Caleb_Rig:R_Finger_2_Jnt_Ctrl.translateZ" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:R_Arm_Ctrls|Caleb_Rig:R_Finger_Ctrls|Caleb_Rig:R_Finger_2_Jnt_Ctrl_Grp1|Caleb_Rig:R_Finger_2_Jnt_Ctrl.translateY" 
 		"Caleb_RigRN.placeHolderList[208]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:R_Arm_Ctrls|Caleb_Rig:R_Finger_Ctrls|Caleb_Rig:R_Finger_2_Jnt_Ctrl_Grp1|Caleb_Rig:R_Finger_2_Jnt_Ctrl.rotateX" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:R_Arm_Ctrls|Caleb_Rig:R_Finger_Ctrls|Caleb_Rig:R_Finger_2_Jnt_Ctrl_Grp1|Caleb_Rig:R_Finger_2_Jnt_Ctrl.translateZ" 
 		"Caleb_RigRN.placeHolderList[209]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:R_Arm_Ctrls|Caleb_Rig:R_Finger_Ctrls|Caleb_Rig:R_Finger_2_Jnt_Ctrl_Grp1|Caleb_Rig:R_Finger_2_Jnt_Ctrl.rotateY" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:R_Arm_Ctrls|Caleb_Rig:R_Finger_Ctrls|Caleb_Rig:R_Finger_2_Jnt_Ctrl_Grp1|Caleb_Rig:R_Finger_2_Jnt_Ctrl.rotateX" 
 		"Caleb_RigRN.placeHolderList[210]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:R_Arm_Ctrls|Caleb_Rig:R_Finger_Ctrls|Caleb_Rig:R_Finger_2_Jnt_Ctrl_Grp1|Caleb_Rig:R_Finger_2_Jnt_Ctrl.rotateZ" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:R_Arm_Ctrls|Caleb_Rig:R_Finger_Ctrls|Caleb_Rig:R_Finger_2_Jnt_Ctrl_Grp1|Caleb_Rig:R_Finger_2_Jnt_Ctrl.rotateY" 
 		"Caleb_RigRN.placeHolderList[211]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:R_Arm_Ctrls|Caleb_Rig:R_Finger_Ctrls|Caleb_Rig:R_Finger_1_Jnt1_Ctrl_Grp1|Caleb_Rig:R_Finger_1_Jnt1_Ctrl.translateX" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:R_Arm_Ctrls|Caleb_Rig:R_Finger_Ctrls|Caleb_Rig:R_Finger_2_Jnt_Ctrl_Grp1|Caleb_Rig:R_Finger_2_Jnt_Ctrl.rotateZ" 
 		"Caleb_RigRN.placeHolderList[212]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:R_Arm_Ctrls|Caleb_Rig:R_Finger_Ctrls|Caleb_Rig:R_Finger_1_Jnt1_Ctrl_Grp1|Caleb_Rig:R_Finger_1_Jnt1_Ctrl.translateY" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:R_Arm_Ctrls|Caleb_Rig:R_Finger_Ctrls|Caleb_Rig:R_Finger_1_Jnt1_Ctrl_Grp1|Caleb_Rig:R_Finger_1_Jnt1_Ctrl.translateX" 
 		"Caleb_RigRN.placeHolderList[213]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:R_Arm_Ctrls|Caleb_Rig:R_Finger_Ctrls|Caleb_Rig:R_Finger_1_Jnt1_Ctrl_Grp1|Caleb_Rig:R_Finger_1_Jnt1_Ctrl.translateZ" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:R_Arm_Ctrls|Caleb_Rig:R_Finger_Ctrls|Caleb_Rig:R_Finger_1_Jnt1_Ctrl_Grp1|Caleb_Rig:R_Finger_1_Jnt1_Ctrl.translateY" 
 		"Caleb_RigRN.placeHolderList[214]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:R_Arm_Ctrls|Caleb_Rig:R_Finger_Ctrls|Caleb_Rig:R_Finger_1_Jnt1_Ctrl_Grp1|Caleb_Rig:R_Finger_1_Jnt1_Ctrl.rotateX" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:R_Arm_Ctrls|Caleb_Rig:R_Finger_Ctrls|Caleb_Rig:R_Finger_1_Jnt1_Ctrl_Grp1|Caleb_Rig:R_Finger_1_Jnt1_Ctrl.translateZ" 
 		"Caleb_RigRN.placeHolderList[215]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:R_Arm_Ctrls|Caleb_Rig:R_Finger_Ctrls|Caleb_Rig:R_Finger_1_Jnt1_Ctrl_Grp1|Caleb_Rig:R_Finger_1_Jnt1_Ctrl.rotateY" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:R_Arm_Ctrls|Caleb_Rig:R_Finger_Ctrls|Caleb_Rig:R_Finger_1_Jnt1_Ctrl_Grp1|Caleb_Rig:R_Finger_1_Jnt1_Ctrl.rotateX" 
 		"Caleb_RigRN.placeHolderList[216]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:R_Arm_Ctrls|Caleb_Rig:R_Finger_Ctrls|Caleb_Rig:R_Finger_1_Jnt1_Ctrl_Grp1|Caleb_Rig:R_Finger_1_Jnt1_Ctrl.rotateZ" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:R_Arm_Ctrls|Caleb_Rig:R_Finger_Ctrls|Caleb_Rig:R_Finger_1_Jnt1_Ctrl_Grp1|Caleb_Rig:R_Finger_1_Jnt1_Ctrl.rotateY" 
 		"Caleb_RigRN.placeHolderList[217]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:R_Arm_Ctrls|Caleb_Rig:R_Finger_Ctrls|Caleb_Rig:R_Fist_3_Jnt_Ctrl_Grp1|Caleb_Rig:R_Fist_3_Jnt_Ctrl.translateX" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:R_Arm_Ctrls|Caleb_Rig:R_Finger_Ctrls|Caleb_Rig:R_Finger_1_Jnt1_Ctrl_Grp1|Caleb_Rig:R_Finger_1_Jnt1_Ctrl.rotateZ" 
 		"Caleb_RigRN.placeHolderList[218]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:R_Arm_Ctrls|Caleb_Rig:R_Finger_Ctrls|Caleb_Rig:R_Fist_3_Jnt_Ctrl_Grp1|Caleb_Rig:R_Fist_3_Jnt_Ctrl.translateY" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:R_Arm_Ctrls|Caleb_Rig:R_Finger_Ctrls|Caleb_Rig:R_Fist_3_Jnt_Ctrl_Grp1|Caleb_Rig:R_Fist_3_Jnt_Ctrl.translateX" 
 		"Caleb_RigRN.placeHolderList[219]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:R_Arm_Ctrls|Caleb_Rig:R_Finger_Ctrls|Caleb_Rig:R_Fist_3_Jnt_Ctrl_Grp1|Caleb_Rig:R_Fist_3_Jnt_Ctrl.translateZ" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:R_Arm_Ctrls|Caleb_Rig:R_Finger_Ctrls|Caleb_Rig:R_Fist_3_Jnt_Ctrl_Grp1|Caleb_Rig:R_Fist_3_Jnt_Ctrl.translateY" 
 		"Caleb_RigRN.placeHolderList[220]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:R_Arm_Ctrls|Caleb_Rig:R_Finger_Ctrls|Caleb_Rig:R_Fist_3_Jnt_Ctrl_Grp1|Caleb_Rig:R_Fist_3_Jnt_Ctrl.rotateX" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:R_Arm_Ctrls|Caleb_Rig:R_Finger_Ctrls|Caleb_Rig:R_Fist_3_Jnt_Ctrl_Grp1|Caleb_Rig:R_Fist_3_Jnt_Ctrl.translateZ" 
 		"Caleb_RigRN.placeHolderList[221]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:R_Arm_Ctrls|Caleb_Rig:R_Finger_Ctrls|Caleb_Rig:R_Fist_3_Jnt_Ctrl_Grp1|Caleb_Rig:R_Fist_3_Jnt_Ctrl.rotateY" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:R_Arm_Ctrls|Caleb_Rig:R_Finger_Ctrls|Caleb_Rig:R_Fist_3_Jnt_Ctrl_Grp1|Caleb_Rig:R_Fist_3_Jnt_Ctrl.rotateX" 
 		"Caleb_RigRN.placeHolderList[222]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:R_Arm_Ctrls|Caleb_Rig:R_Finger_Ctrls|Caleb_Rig:R_Fist_3_Jnt_Ctrl_Grp1|Caleb_Rig:R_Fist_3_Jnt_Ctrl.rotateZ" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:R_Arm_Ctrls|Caleb_Rig:R_Finger_Ctrls|Caleb_Rig:R_Fist_3_Jnt_Ctrl_Grp1|Caleb_Rig:R_Fist_3_Jnt_Ctrl.rotateY" 
 		"Caleb_RigRN.placeHolderList[223]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:R_Arm_Ctrls|Caleb_Rig:R_Finger_Ctrls|Caleb_Rig:R_Fist_2_Jnt_Ctrl_Grp1|Caleb_Rig:R_Fist_2_Jnt_Ctrl.translateX" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:R_Arm_Ctrls|Caleb_Rig:R_Finger_Ctrls|Caleb_Rig:R_Fist_3_Jnt_Ctrl_Grp1|Caleb_Rig:R_Fist_3_Jnt_Ctrl.rotateZ" 
 		"Caleb_RigRN.placeHolderList[224]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:R_Arm_Ctrls|Caleb_Rig:R_Finger_Ctrls|Caleb_Rig:R_Fist_2_Jnt_Ctrl_Grp1|Caleb_Rig:R_Fist_2_Jnt_Ctrl.translateY" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:R_Arm_Ctrls|Caleb_Rig:R_Finger_Ctrls|Caleb_Rig:R_Fist_2_Jnt_Ctrl_Grp1|Caleb_Rig:R_Fist_2_Jnt_Ctrl.translateX" 
 		"Caleb_RigRN.placeHolderList[225]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:R_Arm_Ctrls|Caleb_Rig:R_Finger_Ctrls|Caleb_Rig:R_Fist_2_Jnt_Ctrl_Grp1|Caleb_Rig:R_Fist_2_Jnt_Ctrl.translateZ" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:R_Arm_Ctrls|Caleb_Rig:R_Finger_Ctrls|Caleb_Rig:R_Fist_2_Jnt_Ctrl_Grp1|Caleb_Rig:R_Fist_2_Jnt_Ctrl.translateY" 
 		"Caleb_RigRN.placeHolderList[226]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:R_Arm_Ctrls|Caleb_Rig:R_Finger_Ctrls|Caleb_Rig:R_Fist_2_Jnt_Ctrl_Grp1|Caleb_Rig:R_Fist_2_Jnt_Ctrl.rotateX" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:R_Arm_Ctrls|Caleb_Rig:R_Finger_Ctrls|Caleb_Rig:R_Fist_2_Jnt_Ctrl_Grp1|Caleb_Rig:R_Fist_2_Jnt_Ctrl.translateZ" 
 		"Caleb_RigRN.placeHolderList[227]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:R_Arm_Ctrls|Caleb_Rig:R_Finger_Ctrls|Caleb_Rig:R_Fist_2_Jnt_Ctrl_Grp1|Caleb_Rig:R_Fist_2_Jnt_Ctrl.rotateY" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:R_Arm_Ctrls|Caleb_Rig:R_Finger_Ctrls|Caleb_Rig:R_Fist_2_Jnt_Ctrl_Grp1|Caleb_Rig:R_Fist_2_Jnt_Ctrl.rotateX" 
 		"Caleb_RigRN.placeHolderList[228]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:R_Arm_Ctrls|Caleb_Rig:R_Finger_Ctrls|Caleb_Rig:R_Fist_2_Jnt_Ctrl_Grp1|Caleb_Rig:R_Fist_2_Jnt_Ctrl.rotateZ" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:R_Arm_Ctrls|Caleb_Rig:R_Finger_Ctrls|Caleb_Rig:R_Fist_2_Jnt_Ctrl_Grp1|Caleb_Rig:R_Fist_2_Jnt_Ctrl.rotateY" 
 		"Caleb_RigRN.placeHolderList[229]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:R_Arm_Ctrls|Caleb_Rig:R_Finger_Ctrls|Caleb_Rig:R_Fist_1_Jnt_Ctrl_Grp1|Caleb_Rig:R_Fist_1_Jnt_Ctrl.translateX" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:R_Arm_Ctrls|Caleb_Rig:R_Finger_Ctrls|Caleb_Rig:R_Fist_2_Jnt_Ctrl_Grp1|Caleb_Rig:R_Fist_2_Jnt_Ctrl.rotateZ" 
 		"Caleb_RigRN.placeHolderList[230]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:R_Arm_Ctrls|Caleb_Rig:R_Finger_Ctrls|Caleb_Rig:R_Fist_1_Jnt_Ctrl_Grp1|Caleb_Rig:R_Fist_1_Jnt_Ctrl.translateY" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:R_Arm_Ctrls|Caleb_Rig:R_Finger_Ctrls|Caleb_Rig:R_Fist_1_Jnt_Ctrl_Grp1|Caleb_Rig:R_Fist_1_Jnt_Ctrl.translateX" 
 		"Caleb_RigRN.placeHolderList[231]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:R_Arm_Ctrls|Caleb_Rig:R_Finger_Ctrls|Caleb_Rig:R_Fist_1_Jnt_Ctrl_Grp1|Caleb_Rig:R_Fist_1_Jnt_Ctrl.translateZ" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:R_Arm_Ctrls|Caleb_Rig:R_Finger_Ctrls|Caleb_Rig:R_Fist_1_Jnt_Ctrl_Grp1|Caleb_Rig:R_Fist_1_Jnt_Ctrl.translateY" 
 		"Caleb_RigRN.placeHolderList[232]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:R_Arm_Ctrls|Caleb_Rig:R_Finger_Ctrls|Caleb_Rig:R_Fist_1_Jnt_Ctrl_Grp1|Caleb_Rig:R_Fist_1_Jnt_Ctrl.rotateX" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:R_Arm_Ctrls|Caleb_Rig:R_Finger_Ctrls|Caleb_Rig:R_Fist_1_Jnt_Ctrl_Grp1|Caleb_Rig:R_Fist_1_Jnt_Ctrl.translateZ" 
 		"Caleb_RigRN.placeHolderList[233]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:R_Arm_Ctrls|Caleb_Rig:R_Finger_Ctrls|Caleb_Rig:R_Fist_1_Jnt_Ctrl_Grp1|Caleb_Rig:R_Fist_1_Jnt_Ctrl.rotateY" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:R_Arm_Ctrls|Caleb_Rig:R_Finger_Ctrls|Caleb_Rig:R_Fist_1_Jnt_Ctrl_Grp1|Caleb_Rig:R_Fist_1_Jnt_Ctrl.rotateX" 
 		"Caleb_RigRN.placeHolderList[234]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:R_Arm_Ctrls|Caleb_Rig:R_Finger_Ctrls|Caleb_Rig:R_Fist_1_Jnt_Ctrl_Grp1|Caleb_Rig:R_Fist_1_Jnt_Ctrl.rotateZ" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:R_Arm_Ctrls|Caleb_Rig:R_Finger_Ctrls|Caleb_Rig:R_Fist_1_Jnt_Ctrl_Grp1|Caleb_Rig:R_Fist_1_Jnt_Ctrl.rotateY" 
 		"Caleb_RigRN.placeHolderList[235]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:CoG_Jnt_Ctrl_Grp|Caleb_Rig:CoG_Jnt_Ctrl.translateX" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:R_Arm_Ctrls|Caleb_Rig:R_Finger_Ctrls|Caleb_Rig:R_Fist_1_Jnt_Ctrl_Grp1|Caleb_Rig:R_Fist_1_Jnt_Ctrl.rotateZ" 
 		"Caleb_RigRN.placeHolderList[236]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:CoG_Jnt_Ctrl_Grp|Caleb_Rig:CoG_Jnt_Ctrl.translateY" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:CoG_Jnt_Ctrl_Grp|Caleb_Rig:CoG_Jnt_Ctrl.translateX" 
 		"Caleb_RigRN.placeHolderList[237]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:CoG_Jnt_Ctrl_Grp|Caleb_Rig:CoG_Jnt_Ctrl.translateZ" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:CoG_Jnt_Ctrl_Grp|Caleb_Rig:CoG_Jnt_Ctrl.translateY" 
 		"Caleb_RigRN.placeHolderList[238]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:CoG_Jnt_Ctrl_Grp|Caleb_Rig:CoG_Jnt_Ctrl.rotateX" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:CoG_Jnt_Ctrl_Grp|Caleb_Rig:CoG_Jnt_Ctrl.translateZ" 
 		"Caleb_RigRN.placeHolderList[239]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:CoG_Jnt_Ctrl_Grp|Caleb_Rig:CoG_Jnt_Ctrl.rotateY" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:CoG_Jnt_Ctrl_Grp|Caleb_Rig:CoG_Jnt_Ctrl.rotateX" 
 		"Caleb_RigRN.placeHolderList[240]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:CoG_Jnt_Ctrl_Grp|Caleb_Rig:CoG_Jnt_Ctrl.rotateZ" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:CoG_Jnt_Ctrl_Grp|Caleb_Rig:CoG_Jnt_Ctrl.rotateY" 
 		"Caleb_RigRN.placeHolderList[241]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Pelvis_Ctrl_Grp|Caleb_Rig:Pelvis_Ctrl.translateX" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:CoG_Jnt_Ctrl_Grp|Caleb_Rig:CoG_Jnt_Ctrl.rotateZ" 
 		"Caleb_RigRN.placeHolderList[242]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Pelvis_Ctrl_Grp|Caleb_Rig:Pelvis_Ctrl.translateY" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Pelvis_Ctrl_Grp|Caleb_Rig:Pelvis_Ctrl.translateX" 
 		"Caleb_RigRN.placeHolderList[243]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Pelvis_Ctrl_Grp|Caleb_Rig:Pelvis_Ctrl.translateZ" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Pelvis_Ctrl_Grp|Caleb_Rig:Pelvis_Ctrl.translateY" 
 		"Caleb_RigRN.placeHolderList[244]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Pelvis_Ctrl_Grp|Caleb_Rig:Pelvis_Ctrl.rotateX" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Pelvis_Ctrl_Grp|Caleb_Rig:Pelvis_Ctrl.translateZ" 
 		"Caleb_RigRN.placeHolderList[245]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Pelvis_Ctrl_Grp|Caleb_Rig:Pelvis_Ctrl.rotateY" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Pelvis_Ctrl_Grp|Caleb_Rig:Pelvis_Ctrl.rotateX" 
 		"Caleb_RigRN.placeHolderList[246]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Pelvis_Ctrl_Grp|Caleb_Rig:Pelvis_Ctrl.rotateZ" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Pelvis_Ctrl_Grp|Caleb_Rig:Pelvis_Ctrl.rotateY" 
 		"Caleb_RigRN.placeHolderList[247]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:L_Leg_IK_Ctrls|Caleb_Rig:L_Leg_IK_PV_Ctrl_Grp|Caleb_Rig:L_Leg_IK_PV_Ctrl.translateX" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Pelvis_Ctrl_Grp|Caleb_Rig:Pelvis_Ctrl.rotateZ" 
 		"Caleb_RigRN.placeHolderList[248]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:L_Leg_IK_Ctrls|Caleb_Rig:L_Leg_IK_PV_Ctrl_Grp|Caleb_Rig:L_Leg_IK_PV_Ctrl.translateY" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:L_Leg_IK_Ctrls|Caleb_Rig:L_Leg_IK_PV_Ctrl_Grp|Caleb_Rig:L_Leg_IK_PV_Ctrl.translateX" 
 		"Caleb_RigRN.placeHolderList[249]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:L_Leg_IK_Ctrls|Caleb_Rig:L_Leg_IK_PV_Ctrl_Grp|Caleb_Rig:L_Leg_IK_PV_Ctrl.translateZ" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:L_Leg_IK_Ctrls|Caleb_Rig:L_Leg_IK_PV_Ctrl_Grp|Caleb_Rig:L_Leg_IK_PV_Ctrl.translateY" 
 		"Caleb_RigRN.placeHolderList[250]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:L_Leg_IK_Ctrls|Caleb_Rig:L_Leg_IK_PV_Ctrl_Grp|Caleb_Rig:L_Leg_IK_PV_Ctrl.rotateX" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:L_Leg_IK_Ctrls|Caleb_Rig:L_Leg_IK_PV_Ctrl_Grp|Caleb_Rig:L_Leg_IK_PV_Ctrl.translateZ" 
 		"Caleb_RigRN.placeHolderList[251]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:L_Leg_IK_Ctrls|Caleb_Rig:L_Leg_IK_PV_Ctrl_Grp|Caleb_Rig:L_Leg_IK_PV_Ctrl.rotateY" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:L_Leg_IK_Ctrls|Caleb_Rig:L_Leg_IK_PV_Ctrl_Grp|Caleb_Rig:L_Leg_IK_PV_Ctrl.rotateX" 
 		"Caleb_RigRN.placeHolderList[252]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:L_Leg_IK_Ctrls|Caleb_Rig:L_Leg_IK_PV_Ctrl_Grp|Caleb_Rig:L_Leg_IK_PV_Ctrl.rotateZ" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:L_Leg_IK_Ctrls|Caleb_Rig:L_Leg_IK_PV_Ctrl_Grp|Caleb_Rig:L_Leg_IK_PV_Ctrl.rotateY" 
 		"Caleb_RigRN.placeHolderList[253]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:L_Leg_IK_Ctrls|Caleb_Rig:L_Leg_IK_Base_Ctrl_Grp|Caleb_Rig:L_Leg_IK_Base_Ctrl.translateX" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:L_Leg_IK_Ctrls|Caleb_Rig:L_Leg_IK_PV_Ctrl_Grp|Caleb_Rig:L_Leg_IK_PV_Ctrl.rotateZ" 
 		"Caleb_RigRN.placeHolderList[254]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:L_Leg_IK_Ctrls|Caleb_Rig:L_Leg_IK_Base_Ctrl_Grp|Caleb_Rig:L_Leg_IK_Base_Ctrl.translateY" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:L_Leg_IK_Ctrls|Caleb_Rig:L_Leg_IK_Base_Ctrl_Grp|Caleb_Rig:L_Leg_IK_Base_Ctrl.translateX" 
 		"Caleb_RigRN.placeHolderList[255]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:L_Leg_IK_Ctrls|Caleb_Rig:L_Leg_IK_Base_Ctrl_Grp|Caleb_Rig:L_Leg_IK_Base_Ctrl.translateZ" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:L_Leg_IK_Ctrls|Caleb_Rig:L_Leg_IK_Base_Ctrl_Grp|Caleb_Rig:L_Leg_IK_Base_Ctrl.translateY" 
 		"Caleb_RigRN.placeHolderList[256]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:L_Leg_IK_Ctrls|Caleb_Rig:L_Leg_IK_Base_Ctrl_Grp|Caleb_Rig:L_Leg_IK_Base_Ctrl.rotateX" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:L_Leg_IK_Ctrls|Caleb_Rig:L_Leg_IK_Base_Ctrl_Grp|Caleb_Rig:L_Leg_IK_Base_Ctrl.translateZ" 
 		"Caleb_RigRN.placeHolderList[257]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:L_Leg_IK_Ctrls|Caleb_Rig:L_Leg_IK_Base_Ctrl_Grp|Caleb_Rig:L_Leg_IK_Base_Ctrl.rotateY" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:L_Leg_IK_Ctrls|Caleb_Rig:L_Leg_IK_Base_Ctrl_Grp|Caleb_Rig:L_Leg_IK_Base_Ctrl.rotateX" 
 		"Caleb_RigRN.placeHolderList[258]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:L_Leg_IK_Ctrls|Caleb_Rig:L_Leg_IK_Base_Ctrl_Grp|Caleb_Rig:L_Leg_IK_Base_Ctrl.rotateZ" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:L_Leg_IK_Ctrls|Caleb_Rig:L_Leg_IK_Base_Ctrl_Grp|Caleb_Rig:L_Leg_IK_Base_Ctrl.rotateY" 
 		"Caleb_RigRN.placeHolderList[259]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:L_Leg_IK_Ctrls|Caleb_Rig:L_Leg_IK_Ctrl_Grp|Caleb_Rig:L_Leg_IK_Ctrl.translateX" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:L_Leg_IK_Ctrls|Caleb_Rig:L_Leg_IK_Base_Ctrl_Grp|Caleb_Rig:L_Leg_IK_Base_Ctrl.rotateZ" 
 		"Caleb_RigRN.placeHolderList[260]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:L_Leg_IK_Ctrls|Caleb_Rig:L_Leg_IK_Ctrl_Grp|Caleb_Rig:L_Leg_IK_Ctrl.translateZ" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:L_Leg_IK_Ctrls|Caleb_Rig:L_Leg_IK_Ctrl_Grp|Caleb_Rig:L_Leg_IK_Ctrl.translateX" 
 		"Caleb_RigRN.placeHolderList[261]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:L_Leg_IK_Ctrls|Caleb_Rig:L_Leg_IK_Ctrl_Grp|Caleb_Rig:L_Leg_IK_Ctrl.translateY" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:L_Leg_IK_Ctrls|Caleb_Rig:L_Leg_IK_Ctrl_Grp|Caleb_Rig:L_Leg_IK_Ctrl.translateZ" 
 		"Caleb_RigRN.placeHolderList[262]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:L_Leg_IK_Ctrls|Caleb_Rig:L_Leg_IK_Ctrl_Grp|Caleb_Rig:L_Leg_IK_Ctrl.rotateX" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:L_Leg_IK_Ctrls|Caleb_Rig:L_Leg_IK_Ctrl_Grp|Caleb_Rig:L_Leg_IK_Ctrl.translateY" 
 		"Caleb_RigRN.placeHolderList[263]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:L_Leg_IK_Ctrls|Caleb_Rig:L_Leg_IK_Ctrl_Grp|Caleb_Rig:L_Leg_IK_Ctrl.rotateY" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:L_Leg_IK_Ctrls|Caleb_Rig:L_Leg_IK_Ctrl_Grp|Caleb_Rig:L_Leg_IK_Ctrl.rotateX" 
 		"Caleb_RigRN.placeHolderList[264]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:L_Leg_IK_Ctrls|Caleb_Rig:L_Leg_IK_Ctrl_Grp|Caleb_Rig:L_Leg_IK_Ctrl.rotateZ" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:L_Leg_IK_Ctrls|Caleb_Rig:L_Leg_IK_Ctrl_Grp|Caleb_Rig:L_Leg_IK_Ctrl.rotateY" 
 		"Caleb_RigRN.placeHolderList[265]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:L_Leg_IK_Ctrls|Caleb_Rig:L_Leg_IK_Ctrl_Grp|Caleb_Rig:L_Leg_IK_Ctrl.Local_Space" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:L_Leg_IK_Ctrls|Caleb_Rig:L_Leg_IK_Ctrl_Grp|Caleb_Rig:L_Leg_IK_Ctrl.rotateZ" 
 		"Caleb_RigRN.placeHolderList[266]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:L_Leg_IK_Ctrls|Caleb_Rig:L_Leg_IK_Ctrl_Grp|Caleb_Rig:L_Leg_IK_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl.translateX" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:L_Leg_IK_Ctrls|Caleb_Rig:L_Leg_IK_Ctrl_Grp|Caleb_Rig:L_Leg_IK_Ctrl.Local_Space" 
 		"Caleb_RigRN.placeHolderList[267]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:L_Leg_IK_Ctrls|Caleb_Rig:L_Leg_IK_Ctrl_Grp|Caleb_Rig:L_Leg_IK_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl.translateY" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:L_Leg_IK_Ctrls|Caleb_Rig:L_Leg_IK_Ctrl_Grp|Caleb_Rig:L_Leg_IK_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl.translateX" 
 		"Caleb_RigRN.placeHolderList[268]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:L_Leg_IK_Ctrls|Caleb_Rig:L_Leg_IK_Ctrl_Grp|Caleb_Rig:L_Leg_IK_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl.translateZ" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:L_Leg_IK_Ctrls|Caleb_Rig:L_Leg_IK_Ctrl_Grp|Caleb_Rig:L_Leg_IK_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl.translateY" 
 		"Caleb_RigRN.placeHolderList[269]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:L_Leg_IK_Ctrls|Caleb_Rig:L_Leg_IK_Ctrl_Grp|Caleb_Rig:L_Leg_IK_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl.rotateX" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:L_Leg_IK_Ctrls|Caleb_Rig:L_Leg_IK_Ctrl_Grp|Caleb_Rig:L_Leg_IK_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl.translateZ" 
 		"Caleb_RigRN.placeHolderList[270]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:L_Leg_IK_Ctrls|Caleb_Rig:L_Leg_IK_Ctrl_Grp|Caleb_Rig:L_Leg_IK_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl.rotateY" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:L_Leg_IK_Ctrls|Caleb_Rig:L_Leg_IK_Ctrl_Grp|Caleb_Rig:L_Leg_IK_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl.rotateX" 
 		"Caleb_RigRN.placeHolderList[271]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:L_Leg_IK_Ctrls|Caleb_Rig:L_Leg_IK_Ctrl_Grp|Caleb_Rig:L_Leg_IK_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl.rotateZ" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:L_Leg_IK_Ctrls|Caleb_Rig:L_Leg_IK_Ctrl_Grp|Caleb_Rig:L_Leg_IK_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl.rotateY" 
 		"Caleb_RigRN.placeHolderList[272]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:L_Leg_IK_Ctrls|Caleb_Rig:L_Leg_IK_Ctrl_Grp|Caleb_Rig:L_Leg_IK_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl.translateX" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:L_Leg_IK_Ctrls|Caleb_Rig:L_Leg_IK_Ctrl_Grp|Caleb_Rig:L_Leg_IK_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl.rotateZ" 
 		"Caleb_RigRN.placeHolderList[273]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:L_Leg_IK_Ctrls|Caleb_Rig:L_Leg_IK_Ctrl_Grp|Caleb_Rig:L_Leg_IK_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl.translateY" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:L_Leg_IK_Ctrls|Caleb_Rig:L_Leg_IK_Ctrl_Grp|Caleb_Rig:L_Leg_IK_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl.translateX" 
 		"Caleb_RigRN.placeHolderList[274]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:L_Leg_IK_Ctrls|Caleb_Rig:L_Leg_IK_Ctrl_Grp|Caleb_Rig:L_Leg_IK_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl.translateZ" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:L_Leg_IK_Ctrls|Caleb_Rig:L_Leg_IK_Ctrl_Grp|Caleb_Rig:L_Leg_IK_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl.translateY" 
 		"Caleb_RigRN.placeHolderList[275]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:L_Leg_IK_Ctrls|Caleb_Rig:L_Leg_IK_Ctrl_Grp|Caleb_Rig:L_Leg_IK_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl.rotateX" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:L_Leg_IK_Ctrls|Caleb_Rig:L_Leg_IK_Ctrl_Grp|Caleb_Rig:L_Leg_IK_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl.translateZ" 
 		"Caleb_RigRN.placeHolderList[276]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:L_Leg_IK_Ctrls|Caleb_Rig:L_Leg_IK_Ctrl_Grp|Caleb_Rig:L_Leg_IK_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl.rotateY" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:L_Leg_IK_Ctrls|Caleb_Rig:L_Leg_IK_Ctrl_Grp|Caleb_Rig:L_Leg_IK_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl.rotateX" 
 		"Caleb_RigRN.placeHolderList[277]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:L_Leg_IK_Ctrls|Caleb_Rig:L_Leg_IK_Ctrl_Grp|Caleb_Rig:L_Leg_IK_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl.rotateZ" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:L_Leg_IK_Ctrls|Caleb_Rig:L_Leg_IK_Ctrl_Grp|Caleb_Rig:L_Leg_IK_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl.rotateY" 
 		"Caleb_RigRN.placeHolderList[278]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:L_Leg_IK_Ctrls|Caleb_Rig:L_Leg_IK_Ctrl_Grp|Caleb_Rig:L_Leg_IK_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Heel_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Heel_Ctrl_OFFSET|Caleb_Rig:L_Heel_Walk_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Heel_Ctrl.translateX" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:L_Leg_IK_Ctrls|Caleb_Rig:L_Leg_IK_Ctrl_Grp|Caleb_Rig:L_Leg_IK_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl.rotateZ" 
 		"Caleb_RigRN.placeHolderList[279]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:L_Leg_IK_Ctrls|Caleb_Rig:L_Leg_IK_Ctrl_Grp|Caleb_Rig:L_Leg_IK_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Heel_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Heel_Ctrl_OFFSET|Caleb_Rig:L_Heel_Walk_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Heel_Ctrl.translateY" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:L_Leg_IK_Ctrls|Caleb_Rig:L_Leg_IK_Ctrl_Grp|Caleb_Rig:L_Leg_IK_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Heel_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Heel_Ctrl_OFFSET|Caleb_Rig:L_Heel_Walk_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Heel_Ctrl.translateX" 
 		"Caleb_RigRN.placeHolderList[280]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:L_Leg_IK_Ctrls|Caleb_Rig:L_Leg_IK_Ctrl_Grp|Caleb_Rig:L_Leg_IK_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Heel_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Heel_Ctrl_OFFSET|Caleb_Rig:L_Heel_Walk_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Heel_Ctrl.translateZ" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:L_Leg_IK_Ctrls|Caleb_Rig:L_Leg_IK_Ctrl_Grp|Caleb_Rig:L_Leg_IK_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Heel_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Heel_Ctrl_OFFSET|Caleb_Rig:L_Heel_Walk_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Heel_Ctrl.translateY" 
 		"Caleb_RigRN.placeHolderList[281]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:L_Leg_IK_Ctrls|Caleb_Rig:L_Leg_IK_Ctrl_Grp|Caleb_Rig:L_Leg_IK_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Heel_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Heel_Ctrl_OFFSET|Caleb_Rig:L_Heel_Walk_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Heel_Ctrl.rotateX" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:L_Leg_IK_Ctrls|Caleb_Rig:L_Leg_IK_Ctrl_Grp|Caleb_Rig:L_Leg_IK_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Heel_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Heel_Ctrl_OFFSET|Caleb_Rig:L_Heel_Walk_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Heel_Ctrl.translateZ" 
 		"Caleb_RigRN.placeHolderList[282]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:L_Leg_IK_Ctrls|Caleb_Rig:L_Leg_IK_Ctrl_Grp|Caleb_Rig:L_Leg_IK_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Heel_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Heel_Ctrl_OFFSET|Caleb_Rig:L_Heel_Walk_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Heel_Ctrl.rotateY" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:L_Leg_IK_Ctrls|Caleb_Rig:L_Leg_IK_Ctrl_Grp|Caleb_Rig:L_Leg_IK_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Heel_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Heel_Ctrl_OFFSET|Caleb_Rig:L_Heel_Walk_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Heel_Ctrl.rotateX" 
 		"Caleb_RigRN.placeHolderList[283]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:L_Leg_IK_Ctrls|Caleb_Rig:L_Leg_IK_Ctrl_Grp|Caleb_Rig:L_Leg_IK_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Heel_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Heel_Ctrl_OFFSET|Caleb_Rig:L_Heel_Walk_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Heel_Ctrl.rotateZ" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:L_Leg_IK_Ctrls|Caleb_Rig:L_Leg_IK_Ctrl_Grp|Caleb_Rig:L_Leg_IK_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Heel_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Heel_Ctrl_OFFSET|Caleb_Rig:L_Heel_Walk_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Heel_Ctrl.rotateY" 
 		"Caleb_RigRN.placeHolderList[284]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:L_Leg_IK_Ctrls|Caleb_Rig:L_Leg_IK_Ctrl_Grp|Caleb_Rig:L_Leg_IK_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Heel_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Heel_Ctrl_OFFSET|Caleb_Rig:L_Heel_Walk_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Heel_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Toe_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Toe_Ctrl_OFFSET|Caleb_Rig:L_Toe_Walk_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Toe_Ctrl.translateX" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:L_Leg_IK_Ctrls|Caleb_Rig:L_Leg_IK_Ctrl_Grp|Caleb_Rig:L_Leg_IK_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Heel_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Heel_Ctrl_OFFSET|Caleb_Rig:L_Heel_Walk_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Heel_Ctrl.rotateZ" 
 		"Caleb_RigRN.placeHolderList[285]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:L_Leg_IK_Ctrls|Caleb_Rig:L_Leg_IK_Ctrl_Grp|Caleb_Rig:L_Leg_IK_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Heel_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Heel_Ctrl_OFFSET|Caleb_Rig:L_Heel_Walk_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Heel_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Toe_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Toe_Ctrl_OFFSET|Caleb_Rig:L_Toe_Walk_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Toe_Ctrl.translateY" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:L_Leg_IK_Ctrls|Caleb_Rig:L_Leg_IK_Ctrl_Grp|Caleb_Rig:L_Leg_IK_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Heel_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Heel_Ctrl_OFFSET|Caleb_Rig:L_Heel_Walk_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Heel_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Toe_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Toe_Ctrl_OFFSET|Caleb_Rig:L_Toe_Walk_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Toe_Ctrl.translateX" 
 		"Caleb_RigRN.placeHolderList[286]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:L_Leg_IK_Ctrls|Caleb_Rig:L_Leg_IK_Ctrl_Grp|Caleb_Rig:L_Leg_IK_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Heel_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Heel_Ctrl_OFFSET|Caleb_Rig:L_Heel_Walk_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Heel_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Toe_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Toe_Ctrl_OFFSET|Caleb_Rig:L_Toe_Walk_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Toe_Ctrl.translateZ" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:L_Leg_IK_Ctrls|Caleb_Rig:L_Leg_IK_Ctrl_Grp|Caleb_Rig:L_Leg_IK_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Heel_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Heel_Ctrl_OFFSET|Caleb_Rig:L_Heel_Walk_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Heel_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Toe_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Toe_Ctrl_OFFSET|Caleb_Rig:L_Toe_Walk_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Toe_Ctrl.translateY" 
 		"Caleb_RigRN.placeHolderList[287]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:L_Leg_IK_Ctrls|Caleb_Rig:L_Leg_IK_Ctrl_Grp|Caleb_Rig:L_Leg_IK_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Heel_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Heel_Ctrl_OFFSET|Caleb_Rig:L_Heel_Walk_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Heel_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Toe_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Toe_Ctrl_OFFSET|Caleb_Rig:L_Toe_Walk_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Toe_Ctrl.rotateX" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:L_Leg_IK_Ctrls|Caleb_Rig:L_Leg_IK_Ctrl_Grp|Caleb_Rig:L_Leg_IK_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Heel_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Heel_Ctrl_OFFSET|Caleb_Rig:L_Heel_Walk_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Heel_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Toe_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Toe_Ctrl_OFFSET|Caleb_Rig:L_Toe_Walk_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Toe_Ctrl.translateZ" 
 		"Caleb_RigRN.placeHolderList[288]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:L_Leg_IK_Ctrls|Caleb_Rig:L_Leg_IK_Ctrl_Grp|Caleb_Rig:L_Leg_IK_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Heel_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Heel_Ctrl_OFFSET|Caleb_Rig:L_Heel_Walk_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Heel_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Toe_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Toe_Ctrl_OFFSET|Caleb_Rig:L_Toe_Walk_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Toe_Ctrl.rotateY" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:L_Leg_IK_Ctrls|Caleb_Rig:L_Leg_IK_Ctrl_Grp|Caleb_Rig:L_Leg_IK_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Heel_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Heel_Ctrl_OFFSET|Caleb_Rig:L_Heel_Walk_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Heel_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Toe_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Toe_Ctrl_OFFSET|Caleb_Rig:L_Toe_Walk_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Toe_Ctrl.rotateX" 
 		"Caleb_RigRN.placeHolderList[289]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:L_Leg_IK_Ctrls|Caleb_Rig:L_Leg_IK_Ctrl_Grp|Caleb_Rig:L_Leg_IK_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Heel_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Heel_Ctrl_OFFSET|Caleb_Rig:L_Heel_Walk_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Heel_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Toe_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Toe_Ctrl_OFFSET|Caleb_Rig:L_Toe_Walk_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Toe_Ctrl.rotateZ" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:L_Leg_IK_Ctrls|Caleb_Rig:L_Leg_IK_Ctrl_Grp|Caleb_Rig:L_Leg_IK_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Heel_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Heel_Ctrl_OFFSET|Caleb_Rig:L_Heel_Walk_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Heel_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Toe_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Toe_Ctrl_OFFSET|Caleb_Rig:L_Toe_Walk_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Toe_Ctrl.rotateY" 
 		"Caleb_RigRN.placeHolderList[290]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:L_Leg_IK_Ctrls|Caleb_Rig:L_Leg_IK_Ctrl_Grp|Caleb_Rig:L_Leg_IK_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Heel_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Heel_Ctrl_OFFSET|Caleb_Rig:L_Heel_Walk_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Heel_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Toe_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Toe_Ctrl_OFFSET|Caleb_Rig:L_Toe_Walk_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Toe_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Ball_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Ball_Ctrl_OFFSET|Caleb_Rig:L_Ball_Walk_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Ball_Ctrl.translateX" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:L_Leg_IK_Ctrls|Caleb_Rig:L_Leg_IK_Ctrl_Grp|Caleb_Rig:L_Leg_IK_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Heel_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Heel_Ctrl_OFFSET|Caleb_Rig:L_Heel_Walk_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Heel_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Toe_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Toe_Ctrl_OFFSET|Caleb_Rig:L_Toe_Walk_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Toe_Ctrl.rotateZ" 
 		"Caleb_RigRN.placeHolderList[291]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:L_Leg_IK_Ctrls|Caleb_Rig:L_Leg_IK_Ctrl_Grp|Caleb_Rig:L_Leg_IK_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Heel_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Heel_Ctrl_OFFSET|Caleb_Rig:L_Heel_Walk_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Heel_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Toe_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Toe_Ctrl_OFFSET|Caleb_Rig:L_Toe_Walk_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Toe_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Ball_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Ball_Ctrl_OFFSET|Caleb_Rig:L_Ball_Walk_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Ball_Ctrl.translateY" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:L_Leg_IK_Ctrls|Caleb_Rig:L_Leg_IK_Ctrl_Grp|Caleb_Rig:L_Leg_IK_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Heel_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Heel_Ctrl_OFFSET|Caleb_Rig:L_Heel_Walk_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Heel_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Toe_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Toe_Ctrl_OFFSET|Caleb_Rig:L_Toe_Walk_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Toe_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Ball_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Ball_Ctrl_OFFSET|Caleb_Rig:L_Ball_Walk_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Ball_Ctrl.translateX" 
 		"Caleb_RigRN.placeHolderList[292]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:L_Leg_IK_Ctrls|Caleb_Rig:L_Leg_IK_Ctrl_Grp|Caleb_Rig:L_Leg_IK_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Heel_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Heel_Ctrl_OFFSET|Caleb_Rig:L_Heel_Walk_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Heel_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Toe_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Toe_Ctrl_OFFSET|Caleb_Rig:L_Toe_Walk_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Toe_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Ball_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Ball_Ctrl_OFFSET|Caleb_Rig:L_Ball_Walk_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Ball_Ctrl.translateZ" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:L_Leg_IK_Ctrls|Caleb_Rig:L_Leg_IK_Ctrl_Grp|Caleb_Rig:L_Leg_IK_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Heel_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Heel_Ctrl_OFFSET|Caleb_Rig:L_Heel_Walk_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Heel_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Toe_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Toe_Ctrl_OFFSET|Caleb_Rig:L_Toe_Walk_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Toe_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Ball_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Ball_Ctrl_OFFSET|Caleb_Rig:L_Ball_Walk_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Ball_Ctrl.translateY" 
 		"Caleb_RigRN.placeHolderList[293]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:L_Leg_IK_Ctrls|Caleb_Rig:L_Leg_IK_Ctrl_Grp|Caleb_Rig:L_Leg_IK_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Heel_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Heel_Ctrl_OFFSET|Caleb_Rig:L_Heel_Walk_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Heel_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Toe_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Toe_Ctrl_OFFSET|Caleb_Rig:L_Toe_Walk_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Toe_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Ball_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Ball_Ctrl_OFFSET|Caleb_Rig:L_Ball_Walk_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Ball_Ctrl.rotateX" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:L_Leg_IK_Ctrls|Caleb_Rig:L_Leg_IK_Ctrl_Grp|Caleb_Rig:L_Leg_IK_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Heel_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Heel_Ctrl_OFFSET|Caleb_Rig:L_Heel_Walk_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Heel_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Toe_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Toe_Ctrl_OFFSET|Caleb_Rig:L_Toe_Walk_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Toe_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Ball_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Ball_Ctrl_OFFSET|Caleb_Rig:L_Ball_Walk_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Ball_Ctrl.translateZ" 
 		"Caleb_RigRN.placeHolderList[294]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:L_Leg_IK_Ctrls|Caleb_Rig:L_Leg_IK_Ctrl_Grp|Caleb_Rig:L_Leg_IK_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Heel_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Heel_Ctrl_OFFSET|Caleb_Rig:L_Heel_Walk_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Heel_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Toe_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Toe_Ctrl_OFFSET|Caleb_Rig:L_Toe_Walk_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Toe_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Ball_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Ball_Ctrl_OFFSET|Caleb_Rig:L_Ball_Walk_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Ball_Ctrl.rotateY" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:L_Leg_IK_Ctrls|Caleb_Rig:L_Leg_IK_Ctrl_Grp|Caleb_Rig:L_Leg_IK_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Heel_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Heel_Ctrl_OFFSET|Caleb_Rig:L_Heel_Walk_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Heel_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Toe_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Toe_Ctrl_OFFSET|Caleb_Rig:L_Toe_Walk_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Toe_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Ball_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Ball_Ctrl_OFFSET|Caleb_Rig:L_Ball_Walk_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Ball_Ctrl.rotateX" 
 		"Caleb_RigRN.placeHolderList[295]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:L_Leg_IK_Ctrls|Caleb_Rig:L_Leg_IK_Ctrl_Grp|Caleb_Rig:L_Leg_IK_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Heel_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Heel_Ctrl_OFFSET|Caleb_Rig:L_Heel_Walk_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Heel_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Toe_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Toe_Ctrl_OFFSET|Caleb_Rig:L_Toe_Walk_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Toe_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Ball_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Ball_Ctrl_OFFSET|Caleb_Rig:L_Ball_Walk_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Ball_Ctrl.rotateZ" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:L_Leg_IK_Ctrls|Caleb_Rig:L_Leg_IK_Ctrl_Grp|Caleb_Rig:L_Leg_IK_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Heel_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Heel_Ctrl_OFFSET|Caleb_Rig:L_Heel_Walk_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Heel_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Toe_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Toe_Ctrl_OFFSET|Caleb_Rig:L_Toe_Walk_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Toe_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Ball_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Ball_Ctrl_OFFSET|Caleb_Rig:L_Ball_Walk_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Ball_Ctrl.rotateY" 
 		"Caleb_RigRN.placeHolderList[296]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:L_Leg_IK_Ctrls|Caleb_Rig:L_Leg_IK_Ctrl_Grp|Caleb_Rig:L_Leg_IK_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Heel_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Heel_Ctrl_OFFSET|Caleb_Rig:L_Heel_Walk_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Heel_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Toe_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Toe_Ctrl_OFFSET|Caleb_Rig:L_Toe_Walk_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Toe_Ctrl|Caleb_Rig:L_Foot_Reverse_Toe_Tap_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_ToeTap_Ctrl_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_ToeTap_Ctrl.translateX" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:L_Leg_IK_Ctrls|Caleb_Rig:L_Leg_IK_Ctrl_Grp|Caleb_Rig:L_Leg_IK_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Heel_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Heel_Ctrl_OFFSET|Caleb_Rig:L_Heel_Walk_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Heel_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Toe_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Toe_Ctrl_OFFSET|Caleb_Rig:L_Toe_Walk_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Toe_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Ball_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Ball_Ctrl_OFFSET|Caleb_Rig:L_Ball_Walk_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Ball_Ctrl.rotateZ" 
 		"Caleb_RigRN.placeHolderList[297]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:L_Leg_IK_Ctrls|Caleb_Rig:L_Leg_IK_Ctrl_Grp|Caleb_Rig:L_Leg_IK_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Heel_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Heel_Ctrl_OFFSET|Caleb_Rig:L_Heel_Walk_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Heel_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Toe_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Toe_Ctrl_OFFSET|Caleb_Rig:L_Toe_Walk_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Toe_Ctrl|Caleb_Rig:L_Foot_Reverse_Toe_Tap_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_ToeTap_Ctrl_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_ToeTap_Ctrl.translateY" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:L_Leg_IK_Ctrls|Caleb_Rig:L_Leg_IK_Ctrl_Grp|Caleb_Rig:L_Leg_IK_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Heel_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Heel_Ctrl_OFFSET|Caleb_Rig:L_Heel_Walk_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Heel_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Toe_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Toe_Ctrl_OFFSET|Caleb_Rig:L_Toe_Walk_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Toe_Ctrl|Caleb_Rig:L_Foot_Reverse_Toe_Tap_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_ToeTap_Ctrl_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_ToeTap_Ctrl.translateX" 
 		"Caleb_RigRN.placeHolderList[298]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:L_Leg_IK_Ctrls|Caleb_Rig:L_Leg_IK_Ctrl_Grp|Caleb_Rig:L_Leg_IK_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Heel_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Heel_Ctrl_OFFSET|Caleb_Rig:L_Heel_Walk_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Heel_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Toe_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Toe_Ctrl_OFFSET|Caleb_Rig:L_Toe_Walk_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Toe_Ctrl|Caleb_Rig:L_Foot_Reverse_Toe_Tap_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_ToeTap_Ctrl_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_ToeTap_Ctrl.translateZ" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:L_Leg_IK_Ctrls|Caleb_Rig:L_Leg_IK_Ctrl_Grp|Caleb_Rig:L_Leg_IK_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Heel_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Heel_Ctrl_OFFSET|Caleb_Rig:L_Heel_Walk_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Heel_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Toe_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Toe_Ctrl_OFFSET|Caleb_Rig:L_Toe_Walk_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Toe_Ctrl|Caleb_Rig:L_Foot_Reverse_Toe_Tap_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_ToeTap_Ctrl_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_ToeTap_Ctrl.translateY" 
 		"Caleb_RigRN.placeHolderList[299]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:L_Leg_IK_Ctrls|Caleb_Rig:L_Leg_IK_Ctrl_Grp|Caleb_Rig:L_Leg_IK_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Heel_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Heel_Ctrl_OFFSET|Caleb_Rig:L_Heel_Walk_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Heel_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Toe_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Toe_Ctrl_OFFSET|Caleb_Rig:L_Toe_Walk_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Toe_Ctrl|Caleb_Rig:L_Foot_Reverse_Toe_Tap_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_ToeTap_Ctrl_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_ToeTap_Ctrl.rotateX" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:L_Leg_IK_Ctrls|Caleb_Rig:L_Leg_IK_Ctrl_Grp|Caleb_Rig:L_Leg_IK_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Heel_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Heel_Ctrl_OFFSET|Caleb_Rig:L_Heel_Walk_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Heel_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Toe_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Toe_Ctrl_OFFSET|Caleb_Rig:L_Toe_Walk_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Toe_Ctrl|Caleb_Rig:L_Foot_Reverse_Toe_Tap_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_ToeTap_Ctrl_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_ToeTap_Ctrl.translateZ" 
 		"Caleb_RigRN.placeHolderList[300]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:L_Leg_IK_Ctrls|Caleb_Rig:L_Leg_IK_Ctrl_Grp|Caleb_Rig:L_Leg_IK_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Heel_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Heel_Ctrl_OFFSET|Caleb_Rig:L_Heel_Walk_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Heel_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Toe_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Toe_Ctrl_OFFSET|Caleb_Rig:L_Toe_Walk_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Toe_Ctrl|Caleb_Rig:L_Foot_Reverse_Toe_Tap_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_ToeTap_Ctrl_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_ToeTap_Ctrl.rotateY" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:L_Leg_IK_Ctrls|Caleb_Rig:L_Leg_IK_Ctrl_Grp|Caleb_Rig:L_Leg_IK_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Heel_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Heel_Ctrl_OFFSET|Caleb_Rig:L_Heel_Walk_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Heel_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Toe_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Toe_Ctrl_OFFSET|Caleb_Rig:L_Toe_Walk_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Toe_Ctrl|Caleb_Rig:L_Foot_Reverse_Toe_Tap_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_ToeTap_Ctrl_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_ToeTap_Ctrl.rotateX" 
 		"Caleb_RigRN.placeHolderList[301]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:L_Leg_IK_Ctrls|Caleb_Rig:L_Leg_IK_Ctrl_Grp|Caleb_Rig:L_Leg_IK_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Heel_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Heel_Ctrl_OFFSET|Caleb_Rig:L_Heel_Walk_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Heel_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Toe_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Toe_Ctrl_OFFSET|Caleb_Rig:L_Toe_Walk_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Toe_Ctrl|Caleb_Rig:L_Foot_Reverse_Toe_Tap_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_ToeTap_Ctrl_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_ToeTap_Ctrl.rotateZ" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:L_Leg_IK_Ctrls|Caleb_Rig:L_Leg_IK_Ctrl_Grp|Caleb_Rig:L_Leg_IK_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Heel_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Heel_Ctrl_OFFSET|Caleb_Rig:L_Heel_Walk_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Heel_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Toe_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Toe_Ctrl_OFFSET|Caleb_Rig:L_Toe_Walk_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Toe_Ctrl|Caleb_Rig:L_Foot_Reverse_Toe_Tap_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_ToeTap_Ctrl_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_ToeTap_Ctrl.rotateY" 
 		"Caleb_RigRN.placeHolderList[302]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:R_Leg_IK_Ctrls|Caleb_Rig:R_Leg_IK_PV_Ctrl_Grp|Caleb_Rig:R_Leg_IK_PV_Ctrl.translateX" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:L_Leg_IK_Ctrls|Caleb_Rig:L_Leg_IK_Ctrl_Grp|Caleb_Rig:L_Leg_IK_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Outer_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Inner_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Heel_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Heel_Ctrl_OFFSET|Caleb_Rig:L_Heel_Walk_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Heel_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_Toe_Ctrl_Grp|Caleb_Rig:L_Foot_Reverse_Foot_Toe_Ctrl_OFFSET|Caleb_Rig:L_Toe_Walk_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_Toe_Ctrl|Caleb_Rig:L_Foot_Reverse_Toe_Tap_Ctrl|Caleb_Rig:L_Foot_Reverse_Foot_ToeTap_Ctrl_OFFSET|Caleb_Rig:L_Foot_Reverse_Foot_ToeTap_Ctrl.rotateZ" 
 		"Caleb_RigRN.placeHolderList[303]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:R_Leg_IK_Ctrls|Caleb_Rig:R_Leg_IK_PV_Ctrl_Grp|Caleb_Rig:R_Leg_IK_PV_Ctrl.translateY" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:R_Leg_IK_Ctrls|Caleb_Rig:R_Leg_IK_PV_Ctrl_Grp|Caleb_Rig:R_Leg_IK_PV_Ctrl.translateX" 
 		"Caleb_RigRN.placeHolderList[304]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:R_Leg_IK_Ctrls|Caleb_Rig:R_Leg_IK_PV_Ctrl_Grp|Caleb_Rig:R_Leg_IK_PV_Ctrl.translateZ" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:R_Leg_IK_Ctrls|Caleb_Rig:R_Leg_IK_PV_Ctrl_Grp|Caleb_Rig:R_Leg_IK_PV_Ctrl.translateY" 
 		"Caleb_RigRN.placeHolderList[305]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:R_Leg_IK_Ctrls|Caleb_Rig:R_Leg_IK_PV_Ctrl_Grp|Caleb_Rig:R_Leg_IK_PV_Ctrl.rotateX" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:R_Leg_IK_Ctrls|Caleb_Rig:R_Leg_IK_PV_Ctrl_Grp|Caleb_Rig:R_Leg_IK_PV_Ctrl.translateZ" 
 		"Caleb_RigRN.placeHolderList[306]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:R_Leg_IK_Ctrls|Caleb_Rig:R_Leg_IK_PV_Ctrl_Grp|Caleb_Rig:R_Leg_IK_PV_Ctrl.rotateY" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:R_Leg_IK_Ctrls|Caleb_Rig:R_Leg_IK_PV_Ctrl_Grp|Caleb_Rig:R_Leg_IK_PV_Ctrl.rotateX" 
 		"Caleb_RigRN.placeHolderList[307]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:R_Leg_IK_Ctrls|Caleb_Rig:R_Leg_IK_PV_Ctrl_Grp|Caleb_Rig:R_Leg_IK_PV_Ctrl.rotateZ" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:R_Leg_IK_Ctrls|Caleb_Rig:R_Leg_IK_PV_Ctrl_Grp|Caleb_Rig:R_Leg_IK_PV_Ctrl.rotateY" 
 		"Caleb_RigRN.placeHolderList[308]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:R_Leg_IK_Ctrls|Caleb_Rig:R_Leg_IK_Base_Ctrl_Grp|Caleb_Rig:R_Leg_IK_Base_Ctrl.translateX" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:R_Leg_IK_Ctrls|Caleb_Rig:R_Leg_IK_PV_Ctrl_Grp|Caleb_Rig:R_Leg_IK_PV_Ctrl.rotateZ" 
 		"Caleb_RigRN.placeHolderList[309]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:R_Leg_IK_Ctrls|Caleb_Rig:R_Leg_IK_Base_Ctrl_Grp|Caleb_Rig:R_Leg_IK_Base_Ctrl.translateY" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:R_Leg_IK_Ctrls|Caleb_Rig:R_Leg_IK_Base_Ctrl_Grp|Caleb_Rig:R_Leg_IK_Base_Ctrl.translateX" 
 		"Caleb_RigRN.placeHolderList[310]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:R_Leg_IK_Ctrls|Caleb_Rig:R_Leg_IK_Base_Ctrl_Grp|Caleb_Rig:R_Leg_IK_Base_Ctrl.translateZ" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:R_Leg_IK_Ctrls|Caleb_Rig:R_Leg_IK_Base_Ctrl_Grp|Caleb_Rig:R_Leg_IK_Base_Ctrl.translateY" 
 		"Caleb_RigRN.placeHolderList[311]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:R_Leg_IK_Ctrls|Caleb_Rig:R_Leg_IK_Base_Ctrl_Grp|Caleb_Rig:R_Leg_IK_Base_Ctrl.rotateX" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:R_Leg_IK_Ctrls|Caleb_Rig:R_Leg_IK_Base_Ctrl_Grp|Caleb_Rig:R_Leg_IK_Base_Ctrl.translateZ" 
 		"Caleb_RigRN.placeHolderList[312]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:R_Leg_IK_Ctrls|Caleb_Rig:R_Leg_IK_Base_Ctrl_Grp|Caleb_Rig:R_Leg_IK_Base_Ctrl.rotateY" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:R_Leg_IK_Ctrls|Caleb_Rig:R_Leg_IK_Base_Ctrl_Grp|Caleb_Rig:R_Leg_IK_Base_Ctrl.rotateX" 
 		"Caleb_RigRN.placeHolderList[313]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:R_Leg_IK_Ctrls|Caleb_Rig:R_Leg_IK_Base_Ctrl_Grp|Caleb_Rig:R_Leg_IK_Base_Ctrl.rotateZ" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:R_Leg_IK_Ctrls|Caleb_Rig:R_Leg_IK_Base_Ctrl_Grp|Caleb_Rig:R_Leg_IK_Base_Ctrl.rotateY" 
 		"Caleb_RigRN.placeHolderList[314]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:R_Leg_IK_Ctrls|Caleb_Rig:R_Leg_IK_Ctrl_Grp|Caleb_Rig:R_Leg_IK_Ctrl.translateX" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:R_Leg_IK_Ctrls|Caleb_Rig:R_Leg_IK_Base_Ctrl_Grp|Caleb_Rig:R_Leg_IK_Base_Ctrl.rotateZ" 
 		"Caleb_RigRN.placeHolderList[315]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:R_Leg_IK_Ctrls|Caleb_Rig:R_Leg_IK_Ctrl_Grp|Caleb_Rig:R_Leg_IK_Ctrl.translateY" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:R_Leg_IK_Ctrls|Caleb_Rig:R_Leg_IK_Ctrl_Grp|Caleb_Rig:R_Leg_IK_Ctrl.translateX" 
 		"Caleb_RigRN.placeHolderList[316]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:R_Leg_IK_Ctrls|Caleb_Rig:R_Leg_IK_Ctrl_Grp|Caleb_Rig:R_Leg_IK_Ctrl.translateZ" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:R_Leg_IK_Ctrls|Caleb_Rig:R_Leg_IK_Ctrl_Grp|Caleb_Rig:R_Leg_IK_Ctrl.translateY" 
 		"Caleb_RigRN.placeHolderList[317]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:R_Leg_IK_Ctrls|Caleb_Rig:R_Leg_IK_Ctrl_Grp|Caleb_Rig:R_Leg_IK_Ctrl.rotateX" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:R_Leg_IK_Ctrls|Caleb_Rig:R_Leg_IK_Ctrl_Grp|Caleb_Rig:R_Leg_IK_Ctrl.translateZ" 
 		"Caleb_RigRN.placeHolderList[318]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:R_Leg_IK_Ctrls|Caleb_Rig:R_Leg_IK_Ctrl_Grp|Caleb_Rig:R_Leg_IK_Ctrl.rotateY" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:R_Leg_IK_Ctrls|Caleb_Rig:R_Leg_IK_Ctrl_Grp|Caleb_Rig:R_Leg_IK_Ctrl.rotateX" 
 		"Caleb_RigRN.placeHolderList[319]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:R_Leg_IK_Ctrls|Caleb_Rig:R_Leg_IK_Ctrl_Grp|Caleb_Rig:R_Leg_IK_Ctrl.rotateZ" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:R_Leg_IK_Ctrls|Caleb_Rig:R_Leg_IK_Ctrl_Grp|Caleb_Rig:R_Leg_IK_Ctrl.rotateY" 
 		"Caleb_RigRN.placeHolderList[320]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:R_Leg_IK_Ctrls|Caleb_Rig:R_Leg_IK_Ctrl_Grp|Caleb_Rig:R_Leg_IK_Ctrl.Local_Space" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:R_Leg_IK_Ctrls|Caleb_Rig:R_Leg_IK_Ctrl_Grp|Caleb_Rig:R_Leg_IK_Ctrl.rotateZ" 
 		"Caleb_RigRN.placeHolderList[321]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:R_Leg_IK_Ctrls|Caleb_Rig:R_Leg_IK_Ctrl_Grp|Caleb_Rig:R_Leg_IK_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl.translateX" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:R_Leg_IK_Ctrls|Caleb_Rig:R_Leg_IK_Ctrl_Grp|Caleb_Rig:R_Leg_IK_Ctrl.Local_Space" 
 		"Caleb_RigRN.placeHolderList[322]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:R_Leg_IK_Ctrls|Caleb_Rig:R_Leg_IK_Ctrl_Grp|Caleb_Rig:R_Leg_IK_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl.translateY" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:R_Leg_IK_Ctrls|Caleb_Rig:R_Leg_IK_Ctrl_Grp|Caleb_Rig:R_Leg_IK_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl.translateX" 
 		"Caleb_RigRN.placeHolderList[323]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:R_Leg_IK_Ctrls|Caleb_Rig:R_Leg_IK_Ctrl_Grp|Caleb_Rig:R_Leg_IK_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl.translateZ" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:R_Leg_IK_Ctrls|Caleb_Rig:R_Leg_IK_Ctrl_Grp|Caleb_Rig:R_Leg_IK_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl.translateY" 
 		"Caleb_RigRN.placeHolderList[324]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:R_Leg_IK_Ctrls|Caleb_Rig:R_Leg_IK_Ctrl_Grp|Caleb_Rig:R_Leg_IK_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl.rotateX" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:R_Leg_IK_Ctrls|Caleb_Rig:R_Leg_IK_Ctrl_Grp|Caleb_Rig:R_Leg_IK_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl.translateZ" 
 		"Caleb_RigRN.placeHolderList[325]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:R_Leg_IK_Ctrls|Caleb_Rig:R_Leg_IK_Ctrl_Grp|Caleb_Rig:R_Leg_IK_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl.rotateY" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:R_Leg_IK_Ctrls|Caleb_Rig:R_Leg_IK_Ctrl_Grp|Caleb_Rig:R_Leg_IK_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl.rotateX" 
 		"Caleb_RigRN.placeHolderList[326]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:R_Leg_IK_Ctrls|Caleb_Rig:R_Leg_IK_Ctrl_Grp|Caleb_Rig:R_Leg_IK_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl.rotateZ" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:R_Leg_IK_Ctrls|Caleb_Rig:R_Leg_IK_Ctrl_Grp|Caleb_Rig:R_Leg_IK_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl.rotateY" 
 		"Caleb_RigRN.placeHolderList[327]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:R_Leg_IK_Ctrls|Caleb_Rig:R_Leg_IK_Ctrl_Grp|Caleb_Rig:R_Leg_IK_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl.rotateZ" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:R_Leg_IK_Ctrls|Caleb_Rig:R_Leg_IK_Ctrl_Grp|Caleb_Rig:R_Leg_IK_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl.rotateZ" 
 		"Caleb_RigRN.placeHolderList[328]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:R_Leg_IK_Ctrls|Caleb_Rig:R_Leg_IK_Ctrl_Grp|Caleb_Rig:R_Leg_IK_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl.rotateX" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:R_Leg_IK_Ctrls|Caleb_Rig:R_Leg_IK_Ctrl_Grp|Caleb_Rig:R_Leg_IK_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl.rotateZ" 
 		"Caleb_RigRN.placeHolderList[329]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:R_Leg_IK_Ctrls|Caleb_Rig:R_Leg_IK_Ctrl_Grp|Caleb_Rig:R_Leg_IK_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl.rotateY" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:R_Leg_IK_Ctrls|Caleb_Rig:R_Leg_IK_Ctrl_Grp|Caleb_Rig:R_Leg_IK_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl.rotateX" 
 		"Caleb_RigRN.placeHolderList[330]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:R_Leg_IK_Ctrls|Caleb_Rig:R_Leg_IK_Ctrl_Grp|Caleb_Rig:R_Leg_IK_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl.translateX" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:R_Leg_IK_Ctrls|Caleb_Rig:R_Leg_IK_Ctrl_Grp|Caleb_Rig:R_Leg_IK_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl.rotateY" 
 		"Caleb_RigRN.placeHolderList[331]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:R_Leg_IK_Ctrls|Caleb_Rig:R_Leg_IK_Ctrl_Grp|Caleb_Rig:R_Leg_IK_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl.translateY" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:R_Leg_IK_Ctrls|Caleb_Rig:R_Leg_IK_Ctrl_Grp|Caleb_Rig:R_Leg_IK_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl.translateX" 
 		"Caleb_RigRN.placeHolderList[332]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:R_Leg_IK_Ctrls|Caleb_Rig:R_Leg_IK_Ctrl_Grp|Caleb_Rig:R_Leg_IK_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl.translateZ" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:R_Leg_IK_Ctrls|Caleb_Rig:R_Leg_IK_Ctrl_Grp|Caleb_Rig:R_Leg_IK_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl.translateY" 
 		"Caleb_RigRN.placeHolderList[333]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:R_Leg_IK_Ctrls|Caleb_Rig:R_Leg_IK_Ctrl_Grp|Caleb_Rig:R_Leg_IK_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Heel_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Heel_Ctrl_OFFSET|Caleb_Rig:R_Heel_Walk_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Heel_Ctrl.translateX" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:R_Leg_IK_Ctrls|Caleb_Rig:R_Leg_IK_Ctrl_Grp|Caleb_Rig:R_Leg_IK_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl.translateZ" 
 		"Caleb_RigRN.placeHolderList[334]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:R_Leg_IK_Ctrls|Caleb_Rig:R_Leg_IK_Ctrl_Grp|Caleb_Rig:R_Leg_IK_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Heel_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Heel_Ctrl_OFFSET|Caleb_Rig:R_Heel_Walk_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Heel_Ctrl.translateY" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:R_Leg_IK_Ctrls|Caleb_Rig:R_Leg_IK_Ctrl_Grp|Caleb_Rig:R_Leg_IK_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Heel_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Heel_Ctrl_OFFSET|Caleb_Rig:R_Heel_Walk_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Heel_Ctrl.translateX" 
 		"Caleb_RigRN.placeHolderList[335]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:R_Leg_IK_Ctrls|Caleb_Rig:R_Leg_IK_Ctrl_Grp|Caleb_Rig:R_Leg_IK_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Heel_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Heel_Ctrl_OFFSET|Caleb_Rig:R_Heel_Walk_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Heel_Ctrl.translateZ" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:R_Leg_IK_Ctrls|Caleb_Rig:R_Leg_IK_Ctrl_Grp|Caleb_Rig:R_Leg_IK_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Heel_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Heel_Ctrl_OFFSET|Caleb_Rig:R_Heel_Walk_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Heel_Ctrl.translateY" 
 		"Caleb_RigRN.placeHolderList[336]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:R_Leg_IK_Ctrls|Caleb_Rig:R_Leg_IK_Ctrl_Grp|Caleb_Rig:R_Leg_IK_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Heel_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Heel_Ctrl_OFFSET|Caleb_Rig:R_Heel_Walk_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Heel_Ctrl.rotateX" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:R_Leg_IK_Ctrls|Caleb_Rig:R_Leg_IK_Ctrl_Grp|Caleb_Rig:R_Leg_IK_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Heel_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Heel_Ctrl_OFFSET|Caleb_Rig:R_Heel_Walk_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Heel_Ctrl.translateZ" 
 		"Caleb_RigRN.placeHolderList[337]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:R_Leg_IK_Ctrls|Caleb_Rig:R_Leg_IK_Ctrl_Grp|Caleb_Rig:R_Leg_IK_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Heel_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Heel_Ctrl_OFFSET|Caleb_Rig:R_Heel_Walk_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Heel_Ctrl.rotateY" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:R_Leg_IK_Ctrls|Caleb_Rig:R_Leg_IK_Ctrl_Grp|Caleb_Rig:R_Leg_IK_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Heel_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Heel_Ctrl_OFFSET|Caleb_Rig:R_Heel_Walk_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Heel_Ctrl.rotateX" 
 		"Caleb_RigRN.placeHolderList[338]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:R_Leg_IK_Ctrls|Caleb_Rig:R_Leg_IK_Ctrl_Grp|Caleb_Rig:R_Leg_IK_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Heel_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Heel_Ctrl_OFFSET|Caleb_Rig:R_Heel_Walk_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Heel_Ctrl.rotateZ" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:R_Leg_IK_Ctrls|Caleb_Rig:R_Leg_IK_Ctrl_Grp|Caleb_Rig:R_Leg_IK_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Heel_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Heel_Ctrl_OFFSET|Caleb_Rig:R_Heel_Walk_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Heel_Ctrl.rotateY" 
 		"Caleb_RigRN.placeHolderList[339]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:R_Leg_IK_Ctrls|Caleb_Rig:R_Leg_IK_Ctrl_Grp|Caleb_Rig:R_Leg_IK_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Heel_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Heel_Ctrl_OFFSET|Caleb_Rig:R_Heel_Walk_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Heel_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Toe_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Toe_Ctrl_OFFSET|Caleb_Rig:R_Toe_Walk_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Toe_Ctrl.translateX" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:R_Leg_IK_Ctrls|Caleb_Rig:R_Leg_IK_Ctrl_Grp|Caleb_Rig:R_Leg_IK_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Heel_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Heel_Ctrl_OFFSET|Caleb_Rig:R_Heel_Walk_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Heel_Ctrl.rotateZ" 
 		"Caleb_RigRN.placeHolderList[340]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:R_Leg_IK_Ctrls|Caleb_Rig:R_Leg_IK_Ctrl_Grp|Caleb_Rig:R_Leg_IK_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Heel_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Heel_Ctrl_OFFSET|Caleb_Rig:R_Heel_Walk_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Heel_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Toe_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Toe_Ctrl_OFFSET|Caleb_Rig:R_Toe_Walk_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Toe_Ctrl.translateY" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:R_Leg_IK_Ctrls|Caleb_Rig:R_Leg_IK_Ctrl_Grp|Caleb_Rig:R_Leg_IK_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Heel_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Heel_Ctrl_OFFSET|Caleb_Rig:R_Heel_Walk_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Heel_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Toe_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Toe_Ctrl_OFFSET|Caleb_Rig:R_Toe_Walk_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Toe_Ctrl.translateX" 
 		"Caleb_RigRN.placeHolderList[341]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:R_Leg_IK_Ctrls|Caleb_Rig:R_Leg_IK_Ctrl_Grp|Caleb_Rig:R_Leg_IK_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Heel_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Heel_Ctrl_OFFSET|Caleb_Rig:R_Heel_Walk_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Heel_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Toe_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Toe_Ctrl_OFFSET|Caleb_Rig:R_Toe_Walk_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Toe_Ctrl.translateZ" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:R_Leg_IK_Ctrls|Caleb_Rig:R_Leg_IK_Ctrl_Grp|Caleb_Rig:R_Leg_IK_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Heel_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Heel_Ctrl_OFFSET|Caleb_Rig:R_Heel_Walk_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Heel_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Toe_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Toe_Ctrl_OFFSET|Caleb_Rig:R_Toe_Walk_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Toe_Ctrl.translateY" 
 		"Caleb_RigRN.placeHolderList[342]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:R_Leg_IK_Ctrls|Caleb_Rig:R_Leg_IK_Ctrl_Grp|Caleb_Rig:R_Leg_IK_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Heel_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Heel_Ctrl_OFFSET|Caleb_Rig:R_Heel_Walk_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Heel_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Toe_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Toe_Ctrl_OFFSET|Caleb_Rig:R_Toe_Walk_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Toe_Ctrl.rotateX" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:R_Leg_IK_Ctrls|Caleb_Rig:R_Leg_IK_Ctrl_Grp|Caleb_Rig:R_Leg_IK_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Heel_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Heel_Ctrl_OFFSET|Caleb_Rig:R_Heel_Walk_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Heel_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Toe_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Toe_Ctrl_OFFSET|Caleb_Rig:R_Toe_Walk_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Toe_Ctrl.translateZ" 
 		"Caleb_RigRN.placeHolderList[343]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:R_Leg_IK_Ctrls|Caleb_Rig:R_Leg_IK_Ctrl_Grp|Caleb_Rig:R_Leg_IK_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Heel_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Heel_Ctrl_OFFSET|Caleb_Rig:R_Heel_Walk_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Heel_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Toe_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Toe_Ctrl_OFFSET|Caleb_Rig:R_Toe_Walk_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Toe_Ctrl.rotateY" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:R_Leg_IK_Ctrls|Caleb_Rig:R_Leg_IK_Ctrl_Grp|Caleb_Rig:R_Leg_IK_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Heel_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Heel_Ctrl_OFFSET|Caleb_Rig:R_Heel_Walk_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Heel_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Toe_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Toe_Ctrl_OFFSET|Caleb_Rig:R_Toe_Walk_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Toe_Ctrl.rotateX" 
 		"Caleb_RigRN.placeHolderList[344]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:R_Leg_IK_Ctrls|Caleb_Rig:R_Leg_IK_Ctrl_Grp|Caleb_Rig:R_Leg_IK_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Heel_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Heel_Ctrl_OFFSET|Caleb_Rig:R_Heel_Walk_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Heel_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Toe_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Toe_Ctrl_OFFSET|Caleb_Rig:R_Toe_Walk_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Toe_Ctrl.rotateZ" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:R_Leg_IK_Ctrls|Caleb_Rig:R_Leg_IK_Ctrl_Grp|Caleb_Rig:R_Leg_IK_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Heel_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Heel_Ctrl_OFFSET|Caleb_Rig:R_Heel_Walk_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Heel_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Toe_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Toe_Ctrl_OFFSET|Caleb_Rig:R_Toe_Walk_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Toe_Ctrl.rotateY" 
 		"Caleb_RigRN.placeHolderList[345]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:R_Leg_IK_Ctrls|Caleb_Rig:R_Leg_IK_Ctrl_Grp|Caleb_Rig:R_Leg_IK_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Heel_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Heel_Ctrl_OFFSET|Caleb_Rig:R_Heel_Walk_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Heel_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Toe_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Toe_Ctrl_OFFSET|Caleb_Rig:R_Toe_Walk_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Toe_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Ball_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Ball_Ctrl_OFFSET|Caleb_Rig:R_Ball_Walk_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Ball_Ctrl.translateX" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:R_Leg_IK_Ctrls|Caleb_Rig:R_Leg_IK_Ctrl_Grp|Caleb_Rig:R_Leg_IK_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Heel_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Heel_Ctrl_OFFSET|Caleb_Rig:R_Heel_Walk_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Heel_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Toe_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Toe_Ctrl_OFFSET|Caleb_Rig:R_Toe_Walk_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Toe_Ctrl.rotateZ" 
 		"Caleb_RigRN.placeHolderList[346]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:R_Leg_IK_Ctrls|Caleb_Rig:R_Leg_IK_Ctrl_Grp|Caleb_Rig:R_Leg_IK_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Heel_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Heel_Ctrl_OFFSET|Caleb_Rig:R_Heel_Walk_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Heel_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Toe_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Toe_Ctrl_OFFSET|Caleb_Rig:R_Toe_Walk_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Toe_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Ball_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Ball_Ctrl_OFFSET|Caleb_Rig:R_Ball_Walk_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Ball_Ctrl.translateY" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:R_Leg_IK_Ctrls|Caleb_Rig:R_Leg_IK_Ctrl_Grp|Caleb_Rig:R_Leg_IK_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Heel_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Heel_Ctrl_OFFSET|Caleb_Rig:R_Heel_Walk_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Heel_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Toe_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Toe_Ctrl_OFFSET|Caleb_Rig:R_Toe_Walk_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Toe_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Ball_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Ball_Ctrl_OFFSET|Caleb_Rig:R_Ball_Walk_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Ball_Ctrl.translateX" 
 		"Caleb_RigRN.placeHolderList[347]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:R_Leg_IK_Ctrls|Caleb_Rig:R_Leg_IK_Ctrl_Grp|Caleb_Rig:R_Leg_IK_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Heel_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Heel_Ctrl_OFFSET|Caleb_Rig:R_Heel_Walk_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Heel_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Toe_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Toe_Ctrl_OFFSET|Caleb_Rig:R_Toe_Walk_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Toe_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Ball_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Ball_Ctrl_OFFSET|Caleb_Rig:R_Ball_Walk_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Ball_Ctrl.translateZ" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:R_Leg_IK_Ctrls|Caleb_Rig:R_Leg_IK_Ctrl_Grp|Caleb_Rig:R_Leg_IK_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Heel_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Heel_Ctrl_OFFSET|Caleb_Rig:R_Heel_Walk_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Heel_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Toe_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Toe_Ctrl_OFFSET|Caleb_Rig:R_Toe_Walk_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Toe_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Ball_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Ball_Ctrl_OFFSET|Caleb_Rig:R_Ball_Walk_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Ball_Ctrl.translateY" 
 		"Caleb_RigRN.placeHolderList[348]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:R_Leg_IK_Ctrls|Caleb_Rig:R_Leg_IK_Ctrl_Grp|Caleb_Rig:R_Leg_IK_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Heel_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Heel_Ctrl_OFFSET|Caleb_Rig:R_Heel_Walk_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Heel_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Toe_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Toe_Ctrl_OFFSET|Caleb_Rig:R_Toe_Walk_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Toe_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Ball_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Ball_Ctrl_OFFSET|Caleb_Rig:R_Ball_Walk_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Ball_Ctrl.rotateX" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:R_Leg_IK_Ctrls|Caleb_Rig:R_Leg_IK_Ctrl_Grp|Caleb_Rig:R_Leg_IK_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Heel_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Heel_Ctrl_OFFSET|Caleb_Rig:R_Heel_Walk_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Heel_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Toe_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Toe_Ctrl_OFFSET|Caleb_Rig:R_Toe_Walk_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Toe_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Ball_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Ball_Ctrl_OFFSET|Caleb_Rig:R_Ball_Walk_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Ball_Ctrl.translateZ" 
 		"Caleb_RigRN.placeHolderList[349]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:R_Leg_IK_Ctrls|Caleb_Rig:R_Leg_IK_Ctrl_Grp|Caleb_Rig:R_Leg_IK_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Heel_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Heel_Ctrl_OFFSET|Caleb_Rig:R_Heel_Walk_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Heel_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Toe_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Toe_Ctrl_OFFSET|Caleb_Rig:R_Toe_Walk_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Toe_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Ball_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Ball_Ctrl_OFFSET|Caleb_Rig:R_Ball_Walk_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Ball_Ctrl.rotateY" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:R_Leg_IK_Ctrls|Caleb_Rig:R_Leg_IK_Ctrl_Grp|Caleb_Rig:R_Leg_IK_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Heel_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Heel_Ctrl_OFFSET|Caleb_Rig:R_Heel_Walk_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Heel_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Toe_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Toe_Ctrl_OFFSET|Caleb_Rig:R_Toe_Walk_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Toe_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Ball_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Ball_Ctrl_OFFSET|Caleb_Rig:R_Ball_Walk_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Ball_Ctrl.rotateX" 
 		"Caleb_RigRN.placeHolderList[350]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:R_Leg_IK_Ctrls|Caleb_Rig:R_Leg_IK_Ctrl_Grp|Caleb_Rig:R_Leg_IK_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Heel_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Heel_Ctrl_OFFSET|Caleb_Rig:R_Heel_Walk_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Heel_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Toe_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Toe_Ctrl_OFFSET|Caleb_Rig:R_Toe_Walk_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Toe_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Ball_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Ball_Ctrl_OFFSET|Caleb_Rig:R_Ball_Walk_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Ball_Ctrl.rotateZ" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:R_Leg_IK_Ctrls|Caleb_Rig:R_Leg_IK_Ctrl_Grp|Caleb_Rig:R_Leg_IK_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Heel_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Heel_Ctrl_OFFSET|Caleb_Rig:R_Heel_Walk_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Heel_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Toe_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Toe_Ctrl_OFFSET|Caleb_Rig:R_Toe_Walk_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Toe_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Ball_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Ball_Ctrl_OFFSET|Caleb_Rig:R_Ball_Walk_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Ball_Ctrl.rotateY" 
 		"Caleb_RigRN.placeHolderList[351]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:R_Leg_IK_Ctrls|Caleb_Rig:R_Leg_IK_Ctrl_Grp|Caleb_Rig:R_Leg_IK_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Heel_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Heel_Ctrl_OFFSET|Caleb_Rig:R_Heel_Walk_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Heel_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Toe_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Toe_Ctrl_OFFSET|Caleb_Rig:R_Toe_Walk_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Toe_Ctrl|Caleb_Rig:R_Foot_Reverse_Toe_Tap_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_ToeTap_Ctrl_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_ToeTap_Ctrl.translateX" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:R_Leg_IK_Ctrls|Caleb_Rig:R_Leg_IK_Ctrl_Grp|Caleb_Rig:R_Leg_IK_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Heel_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Heel_Ctrl_OFFSET|Caleb_Rig:R_Heel_Walk_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Heel_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Toe_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Toe_Ctrl_OFFSET|Caleb_Rig:R_Toe_Walk_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Toe_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Ball_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Ball_Ctrl_OFFSET|Caleb_Rig:R_Ball_Walk_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Ball_Ctrl.rotateZ" 
 		"Caleb_RigRN.placeHolderList[352]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:R_Leg_IK_Ctrls|Caleb_Rig:R_Leg_IK_Ctrl_Grp|Caleb_Rig:R_Leg_IK_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Heel_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Heel_Ctrl_OFFSET|Caleb_Rig:R_Heel_Walk_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Heel_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Toe_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Toe_Ctrl_OFFSET|Caleb_Rig:R_Toe_Walk_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Toe_Ctrl|Caleb_Rig:R_Foot_Reverse_Toe_Tap_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_ToeTap_Ctrl_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_ToeTap_Ctrl.translateY" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:R_Leg_IK_Ctrls|Caleb_Rig:R_Leg_IK_Ctrl_Grp|Caleb_Rig:R_Leg_IK_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Heel_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Heel_Ctrl_OFFSET|Caleb_Rig:R_Heel_Walk_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Heel_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Toe_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Toe_Ctrl_OFFSET|Caleb_Rig:R_Toe_Walk_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Toe_Ctrl|Caleb_Rig:R_Foot_Reverse_Toe_Tap_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_ToeTap_Ctrl_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_ToeTap_Ctrl.translateX" 
 		"Caleb_RigRN.placeHolderList[353]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:R_Leg_IK_Ctrls|Caleb_Rig:R_Leg_IK_Ctrl_Grp|Caleb_Rig:R_Leg_IK_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Heel_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Heel_Ctrl_OFFSET|Caleb_Rig:R_Heel_Walk_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Heel_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Toe_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Toe_Ctrl_OFFSET|Caleb_Rig:R_Toe_Walk_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Toe_Ctrl|Caleb_Rig:R_Foot_Reverse_Toe_Tap_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_ToeTap_Ctrl_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_ToeTap_Ctrl.translateZ" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:R_Leg_IK_Ctrls|Caleb_Rig:R_Leg_IK_Ctrl_Grp|Caleb_Rig:R_Leg_IK_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Heel_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Heel_Ctrl_OFFSET|Caleb_Rig:R_Heel_Walk_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Heel_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Toe_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Toe_Ctrl_OFFSET|Caleb_Rig:R_Toe_Walk_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Toe_Ctrl|Caleb_Rig:R_Foot_Reverse_Toe_Tap_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_ToeTap_Ctrl_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_ToeTap_Ctrl.translateY" 
 		"Caleb_RigRN.placeHolderList[354]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:R_Leg_IK_Ctrls|Caleb_Rig:R_Leg_IK_Ctrl_Grp|Caleb_Rig:R_Leg_IK_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Heel_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Heel_Ctrl_OFFSET|Caleb_Rig:R_Heel_Walk_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Heel_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Toe_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Toe_Ctrl_OFFSET|Caleb_Rig:R_Toe_Walk_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Toe_Ctrl|Caleb_Rig:R_Foot_Reverse_Toe_Tap_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_ToeTap_Ctrl_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_ToeTap_Ctrl.rotateX" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:R_Leg_IK_Ctrls|Caleb_Rig:R_Leg_IK_Ctrl_Grp|Caleb_Rig:R_Leg_IK_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Heel_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Heel_Ctrl_OFFSET|Caleb_Rig:R_Heel_Walk_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Heel_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Toe_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Toe_Ctrl_OFFSET|Caleb_Rig:R_Toe_Walk_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Toe_Ctrl|Caleb_Rig:R_Foot_Reverse_Toe_Tap_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_ToeTap_Ctrl_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_ToeTap_Ctrl.translateZ" 
 		"Caleb_RigRN.placeHolderList[355]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:R_Leg_IK_Ctrls|Caleb_Rig:R_Leg_IK_Ctrl_Grp|Caleb_Rig:R_Leg_IK_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Heel_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Heel_Ctrl_OFFSET|Caleb_Rig:R_Heel_Walk_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Heel_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Toe_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Toe_Ctrl_OFFSET|Caleb_Rig:R_Toe_Walk_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Toe_Ctrl|Caleb_Rig:R_Foot_Reverse_Toe_Tap_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_ToeTap_Ctrl_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_ToeTap_Ctrl.rotateY" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:R_Leg_IK_Ctrls|Caleb_Rig:R_Leg_IK_Ctrl_Grp|Caleb_Rig:R_Leg_IK_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Heel_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Heel_Ctrl_OFFSET|Caleb_Rig:R_Heel_Walk_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Heel_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Toe_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Toe_Ctrl_OFFSET|Caleb_Rig:R_Toe_Walk_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Toe_Ctrl|Caleb_Rig:R_Foot_Reverse_Toe_Tap_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_ToeTap_Ctrl_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_ToeTap_Ctrl.rotateX" 
 		"Caleb_RigRN.placeHolderList[356]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:R_Leg_IK_Ctrls|Caleb_Rig:R_Leg_IK_Ctrl_Grp|Caleb_Rig:R_Leg_IK_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Heel_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Heel_Ctrl_OFFSET|Caleb_Rig:R_Heel_Walk_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Heel_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Toe_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Toe_Ctrl_OFFSET|Caleb_Rig:R_Toe_Walk_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Toe_Ctrl|Caleb_Rig:R_Foot_Reverse_Toe_Tap_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_ToeTap_Ctrl_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_ToeTap_Ctrl.rotateZ" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:R_Leg_IK_Ctrls|Caleb_Rig:R_Leg_IK_Ctrl_Grp|Caleb_Rig:R_Leg_IK_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Heel_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Heel_Ctrl_OFFSET|Caleb_Rig:R_Heel_Walk_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Heel_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Toe_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Toe_Ctrl_OFFSET|Caleb_Rig:R_Toe_Walk_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Toe_Ctrl|Caleb_Rig:R_Foot_Reverse_Toe_Tap_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_ToeTap_Ctrl_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_ToeTap_Ctrl.rotateY" 
 		"Caleb_RigRN.placeHolderList[357]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Head_Ctrls|Caleb_Rig:Neck_Ctrl_Grp|Caleb_Rig:Neck_Ctrl.translateX" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:R_Leg_IK_Ctrls|Caleb_Rig:R_Leg_IK_Ctrl_Grp|Caleb_Rig:R_Leg_IK_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Outer_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Inner_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Heel_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Heel_Ctrl_OFFSET|Caleb_Rig:R_Heel_Walk_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Heel_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_Toe_Ctrl_Grp|Caleb_Rig:R_Foot_Reverse_Foot_Toe_Ctrl_OFFSET|Caleb_Rig:R_Toe_Walk_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_Toe_Ctrl|Caleb_Rig:R_Foot_Reverse_Toe_Tap_Ctrl|Caleb_Rig:R_Foot_Reverse_Foot_ToeTap_Ctrl_OFFSET|Caleb_Rig:R_Foot_Reverse_Foot_ToeTap_Ctrl.rotateZ" 
 		"Caleb_RigRN.placeHolderList[358]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Head_Ctrls|Caleb_Rig:Neck_Ctrl_Grp|Caleb_Rig:Neck_Ctrl.translateY" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Head_Ctrls|Caleb_Rig:Neck_Ctrl_Grp|Caleb_Rig:Neck_Ctrl.translateX" 
 		"Caleb_RigRN.placeHolderList[359]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Head_Ctrls|Caleb_Rig:Neck_Ctrl_Grp|Caleb_Rig:Neck_Ctrl.translateZ" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Head_Ctrls|Caleb_Rig:Neck_Ctrl_Grp|Caleb_Rig:Neck_Ctrl.translateY" 
 		"Caleb_RigRN.placeHolderList[360]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Head_Ctrls|Caleb_Rig:Neck_Ctrl_Grp|Caleb_Rig:Neck_Ctrl.rotateX" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Head_Ctrls|Caleb_Rig:Neck_Ctrl_Grp|Caleb_Rig:Neck_Ctrl.translateZ" 
 		"Caleb_RigRN.placeHolderList[361]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Head_Ctrls|Caleb_Rig:Neck_Ctrl_Grp|Caleb_Rig:Neck_Ctrl.rotateY" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Head_Ctrls|Caleb_Rig:Neck_Ctrl_Grp|Caleb_Rig:Neck_Ctrl.rotateX" 
 		"Caleb_RigRN.placeHolderList[362]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Head_Ctrls|Caleb_Rig:Neck_Ctrl_Grp|Caleb_Rig:Neck_Ctrl.rotateZ" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Head_Ctrls|Caleb_Rig:Neck_Ctrl_Grp|Caleb_Rig:Neck_Ctrl.rotateY" 
 		"Caleb_RigRN.placeHolderList[363]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Head_Ctrls|Caleb_Rig:Head_Ctrl_Grp|Caleb_Rig:Head_Ctrl.translateX" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Head_Ctrls|Caleb_Rig:Neck_Ctrl_Grp|Caleb_Rig:Neck_Ctrl.rotateZ" 
 		"Caleb_RigRN.placeHolderList[364]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Head_Ctrls|Caleb_Rig:Head_Ctrl_Grp|Caleb_Rig:Head_Ctrl.translateY" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Head_Ctrls|Caleb_Rig:Head_Ctrl_Grp|Caleb_Rig:Head_Ctrl.translateX" 
 		"Caleb_RigRN.placeHolderList[365]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Head_Ctrls|Caleb_Rig:Head_Ctrl_Grp|Caleb_Rig:Head_Ctrl.translateZ" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Head_Ctrls|Caleb_Rig:Head_Ctrl_Grp|Caleb_Rig:Head_Ctrl.translateY" 
 		"Caleb_RigRN.placeHolderList[366]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Head_Ctrls|Caleb_Rig:Head_Ctrl_Grp|Caleb_Rig:Head_Ctrl.rotateX" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Head_Ctrls|Caleb_Rig:Head_Ctrl_Grp|Caleb_Rig:Head_Ctrl.translateZ" 
 		"Caleb_RigRN.placeHolderList[367]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Head_Ctrls|Caleb_Rig:Head_Ctrl_Grp|Caleb_Rig:Head_Ctrl.rotateY" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Head_Ctrls|Caleb_Rig:Head_Ctrl_Grp|Caleb_Rig:Head_Ctrl.rotateX" 
 		"Caleb_RigRN.placeHolderList[368]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Head_Ctrls|Caleb_Rig:Head_Ctrl_Grp|Caleb_Rig:Head_Ctrl.rotateZ" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Head_Ctrls|Caleb_Rig:Head_Ctrl_Grp|Caleb_Rig:Head_Ctrl.rotateY" 
 		"Caleb_RigRN.placeHolderList[369]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Head_Ctrls|Caleb_Rig:Hat_Jnt_Ctrl_Grp|Caleb_Rig:Hat_Jnt_Ctrl.translateX" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Head_Ctrls|Caleb_Rig:Head_Ctrl_Grp|Caleb_Rig:Head_Ctrl.rotateZ" 
 		"Caleb_RigRN.placeHolderList[370]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Head_Ctrls|Caleb_Rig:Hat_Jnt_Ctrl_Grp|Caleb_Rig:Hat_Jnt_Ctrl.translateY" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Head_Ctrls|Caleb_Rig:Hat_Jnt_Ctrl_Grp|Caleb_Rig:Hat_Jnt_Ctrl.translateX" 
 		"Caleb_RigRN.placeHolderList[371]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Head_Ctrls|Caleb_Rig:Hat_Jnt_Ctrl_Grp|Caleb_Rig:Hat_Jnt_Ctrl.translateZ" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Head_Ctrls|Caleb_Rig:Hat_Jnt_Ctrl_Grp|Caleb_Rig:Hat_Jnt_Ctrl.translateY" 
 		"Caleb_RigRN.placeHolderList[372]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Head_Ctrls|Caleb_Rig:Hat_Jnt_Ctrl_Grp|Caleb_Rig:Hat_Jnt_Ctrl.rotateX" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Head_Ctrls|Caleb_Rig:Hat_Jnt_Ctrl_Grp|Caleb_Rig:Hat_Jnt_Ctrl.translateZ" 
 		"Caleb_RigRN.placeHolderList[373]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Head_Ctrls|Caleb_Rig:Hat_Jnt_Ctrl_Grp|Caleb_Rig:Hat_Jnt_Ctrl.rotateY" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Head_Ctrls|Caleb_Rig:Hat_Jnt_Ctrl_Grp|Caleb_Rig:Hat_Jnt_Ctrl.rotateX" 
 		"Caleb_RigRN.placeHolderList[374]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Head_Ctrls|Caleb_Rig:Hat_Jnt_Ctrl_Grp|Caleb_Rig:Hat_Jnt_Ctrl.rotateZ" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Head_Ctrls|Caleb_Rig:Hat_Jnt_Ctrl_Grp|Caleb_Rig:Hat_Jnt_Ctrl.rotateY" 
 		"Caleb_RigRN.placeHolderList[375]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Head_Ctrls|Caleb_Rig:Nose_Jnt_Ctrl_Grp|Caleb_Rig:Nose_Jnt_Ctrl.translateX" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Head_Ctrls|Caleb_Rig:Hat_Jnt_Ctrl_Grp|Caleb_Rig:Hat_Jnt_Ctrl.rotateZ" 
 		"Caleb_RigRN.placeHolderList[376]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Head_Ctrls|Caleb_Rig:Nose_Jnt_Ctrl_Grp|Caleb_Rig:Nose_Jnt_Ctrl.translateY" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Head_Ctrls|Caleb_Rig:Nose_Jnt_Ctrl_Grp|Caleb_Rig:Nose_Jnt_Ctrl.translateX" 
 		"Caleb_RigRN.placeHolderList[377]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Head_Ctrls|Caleb_Rig:Nose_Jnt_Ctrl_Grp|Caleb_Rig:Nose_Jnt_Ctrl.translateZ" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Head_Ctrls|Caleb_Rig:Nose_Jnt_Ctrl_Grp|Caleb_Rig:Nose_Jnt_Ctrl.translateY" 
 		"Caleb_RigRN.placeHolderList[378]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Head_Ctrls|Caleb_Rig:Nose_Jnt_Ctrl_Grp|Caleb_Rig:Nose_Jnt_Ctrl.rotateX" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Head_Ctrls|Caleb_Rig:Nose_Jnt_Ctrl_Grp|Caleb_Rig:Nose_Jnt_Ctrl.translateZ" 
 		"Caleb_RigRN.placeHolderList[379]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Head_Ctrls|Caleb_Rig:Nose_Jnt_Ctrl_Grp|Caleb_Rig:Nose_Jnt_Ctrl.rotateY" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Head_Ctrls|Caleb_Rig:Nose_Jnt_Ctrl_Grp|Caleb_Rig:Nose_Jnt_Ctrl.rotateX" 
 		"Caleb_RigRN.placeHolderList[380]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Head_Ctrls|Caleb_Rig:Nose_Jnt_Ctrl_Grp|Caleb_Rig:Nose_Jnt_Ctrl.rotateZ" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Head_Ctrls|Caleb_Rig:Nose_Jnt_Ctrl_Grp|Caleb_Rig:Nose_Jnt_Ctrl.rotateY" 
 		"Caleb_RigRN.placeHolderList[381]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Head_Ctrls|Caleb_Rig:Jaw_Ctrl_Grp|Caleb_Rig:Jaw_Ctrl.translateX" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Head_Ctrls|Caleb_Rig:Nose_Jnt_Ctrl_Grp|Caleb_Rig:Nose_Jnt_Ctrl.rotateZ" 
 		"Caleb_RigRN.placeHolderList[382]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Head_Ctrls|Caleb_Rig:Jaw_Ctrl_Grp|Caleb_Rig:Jaw_Ctrl.translateY" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Head_Ctrls|Caleb_Rig:Jaw_Ctrl_Grp|Caleb_Rig:Jaw_Ctrl.translateX" 
 		"Caleb_RigRN.placeHolderList[383]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Head_Ctrls|Caleb_Rig:Jaw_Ctrl_Grp|Caleb_Rig:Jaw_Ctrl.translateZ" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Head_Ctrls|Caleb_Rig:Jaw_Ctrl_Grp|Caleb_Rig:Jaw_Ctrl.translateY" 
 		"Caleb_RigRN.placeHolderList[384]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Head_Ctrls|Caleb_Rig:Jaw_Ctrl_Grp|Caleb_Rig:Jaw_Ctrl.rotateX" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Head_Ctrls|Caleb_Rig:Jaw_Ctrl_Grp|Caleb_Rig:Jaw_Ctrl.translateZ" 
 		"Caleb_RigRN.placeHolderList[385]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Head_Ctrls|Caleb_Rig:Jaw_Ctrl_Grp|Caleb_Rig:Jaw_Ctrl.rotateY" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Head_Ctrls|Caleb_Rig:Jaw_Ctrl_Grp|Caleb_Rig:Jaw_Ctrl.rotateX" 
 		"Caleb_RigRN.placeHolderList[386]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Head_Ctrls|Caleb_Rig:Jaw_Ctrl_Grp|Caleb_Rig:Jaw_Ctrl.rotateZ" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Head_Ctrls|Caleb_Rig:Jaw_Ctrl_Grp|Caleb_Rig:Jaw_Ctrl.rotateY" 
 		"Caleb_RigRN.placeHolderList[387]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Head_Ctrls|Caleb_Rig:L_Eyelid_Ctrl_Grp|Caleb_Rig:L_Eyelid_Ctrl.translateX" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Head_Ctrls|Caleb_Rig:Jaw_Ctrl_Grp|Caleb_Rig:Jaw_Ctrl.rotateZ" 
 		"Caleb_RigRN.placeHolderList[388]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Head_Ctrls|Caleb_Rig:L_Eyelid_Ctrl_Grp|Caleb_Rig:L_Eyelid_Ctrl.translateY" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Head_Ctrls|Caleb_Rig:L_Eyelid_Ctrl_Grp|Caleb_Rig:L_Eyelid_Ctrl.translateX" 
 		"Caleb_RigRN.placeHolderList[389]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Head_Ctrls|Caleb_Rig:L_Eyelid_Ctrl_Grp|Caleb_Rig:L_Eyelid_Ctrl.translateZ" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Head_Ctrls|Caleb_Rig:L_Eyelid_Ctrl_Grp|Caleb_Rig:L_Eyelid_Ctrl.translateY" 
 		"Caleb_RigRN.placeHolderList[390]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Head_Ctrls|Caleb_Rig:L_Eyelid_Ctrl_Grp|Caleb_Rig:L_Eyelid_Ctrl.rotateX" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Head_Ctrls|Caleb_Rig:L_Eyelid_Ctrl_Grp|Caleb_Rig:L_Eyelid_Ctrl.translateZ" 
 		"Caleb_RigRN.placeHolderList[391]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Head_Ctrls|Caleb_Rig:L_Eyelid_Ctrl_Grp|Caleb_Rig:L_Eyelid_Ctrl.rotateY" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Head_Ctrls|Caleb_Rig:L_Eyelid_Ctrl_Grp|Caleb_Rig:L_Eyelid_Ctrl.rotateX" 
 		"Caleb_RigRN.placeHolderList[392]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Head_Ctrls|Caleb_Rig:L_Eyelid_Ctrl_Grp|Caleb_Rig:L_Eyelid_Ctrl.rotateZ" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Head_Ctrls|Caleb_Rig:L_Eyelid_Ctrl_Grp|Caleb_Rig:L_Eyelid_Ctrl.rotateY" 
 		"Caleb_RigRN.placeHolderList[393]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Head_Ctrls|Caleb_Rig:R_Eyelid_Ctrl_Grp|Caleb_Rig:R_Eyelid_Ctrl.translateX" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Head_Ctrls|Caleb_Rig:L_Eyelid_Ctrl_Grp|Caleb_Rig:L_Eyelid_Ctrl.rotateZ" 
 		"Caleb_RigRN.placeHolderList[394]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Head_Ctrls|Caleb_Rig:R_Eyelid_Ctrl_Grp|Caleb_Rig:R_Eyelid_Ctrl.translateY" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Head_Ctrls|Caleb_Rig:R_Eyelid_Ctrl_Grp|Caleb_Rig:R_Eyelid_Ctrl.translateX" 
 		"Caleb_RigRN.placeHolderList[395]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Head_Ctrls|Caleb_Rig:R_Eyelid_Ctrl_Grp|Caleb_Rig:R_Eyelid_Ctrl.translateZ" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Head_Ctrls|Caleb_Rig:R_Eyelid_Ctrl_Grp|Caleb_Rig:R_Eyelid_Ctrl.translateY" 
 		"Caleb_RigRN.placeHolderList[396]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Head_Ctrls|Caleb_Rig:R_Eyelid_Ctrl_Grp|Caleb_Rig:R_Eyelid_Ctrl.rotateX" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Head_Ctrls|Caleb_Rig:R_Eyelid_Ctrl_Grp|Caleb_Rig:R_Eyelid_Ctrl.translateZ" 
 		"Caleb_RigRN.placeHolderList[397]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Head_Ctrls|Caleb_Rig:R_Eyelid_Ctrl_Grp|Caleb_Rig:R_Eyelid_Ctrl.rotateY" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Head_Ctrls|Caleb_Rig:R_Eyelid_Ctrl_Grp|Caleb_Rig:R_Eyelid_Ctrl.rotateX" 
 		"Caleb_RigRN.placeHolderList[398]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Head_Ctrls|Caleb_Rig:R_Eyelid_Ctrl_Grp|Caleb_Rig:R_Eyelid_Ctrl.rotateZ" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Head_Ctrls|Caleb_Rig:R_Eyelid_Ctrl_Grp|Caleb_Rig:R_Eyelid_Ctrl.rotateY" 
 		"Caleb_RigRN.placeHolderList[399]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Head_Ctrls|Caleb_Rig:L_Eye_Jnt_Ctrl_Grp|Caleb_Rig:L_Eye_Jnt_Ctrl.translateX" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Head_Ctrls|Caleb_Rig:R_Eyelid_Ctrl_Grp|Caleb_Rig:R_Eyelid_Ctrl.rotateZ" 
 		"Caleb_RigRN.placeHolderList[400]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Head_Ctrls|Caleb_Rig:L_Eye_Jnt_Ctrl_Grp|Caleb_Rig:L_Eye_Jnt_Ctrl.translateY" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Head_Ctrls|Caleb_Rig:L_Eye_Jnt_Ctrl_Grp|Caleb_Rig:L_Eye_Jnt_Ctrl.translateX" 
 		"Caleb_RigRN.placeHolderList[401]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Head_Ctrls|Caleb_Rig:L_Eye_Jnt_Ctrl_Grp|Caleb_Rig:L_Eye_Jnt_Ctrl.translateZ" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Head_Ctrls|Caleb_Rig:L_Eye_Jnt_Ctrl_Grp|Caleb_Rig:L_Eye_Jnt_Ctrl.translateY" 
 		"Caleb_RigRN.placeHolderList[402]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Head_Ctrls|Caleb_Rig:L_Eye_Jnt_Ctrl_Grp|Caleb_Rig:L_Eye_Jnt_Ctrl.rotateX" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Head_Ctrls|Caleb_Rig:L_Eye_Jnt_Ctrl_Grp|Caleb_Rig:L_Eye_Jnt_Ctrl.translateZ" 
 		"Caleb_RigRN.placeHolderList[403]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Head_Ctrls|Caleb_Rig:L_Eye_Jnt_Ctrl_Grp|Caleb_Rig:L_Eye_Jnt_Ctrl.rotateY" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Head_Ctrls|Caleb_Rig:L_Eye_Jnt_Ctrl_Grp|Caleb_Rig:L_Eye_Jnt_Ctrl.rotateX" 
 		"Caleb_RigRN.placeHolderList[404]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Head_Ctrls|Caleb_Rig:L_Eye_Jnt_Ctrl_Grp|Caleb_Rig:L_Eye_Jnt_Ctrl.rotateZ" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Head_Ctrls|Caleb_Rig:L_Eye_Jnt_Ctrl_Grp|Caleb_Rig:L_Eye_Jnt_Ctrl.rotateY" 
 		"Caleb_RigRN.placeHolderList[405]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Head_Ctrls|Caleb_Rig:R_Eye_Jnt_Ctrl_Grp|Caleb_Rig:R_Eye_Jnt_Ctrl.translateX" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Head_Ctrls|Caleb_Rig:L_Eye_Jnt_Ctrl_Grp|Caleb_Rig:L_Eye_Jnt_Ctrl.rotateZ" 
 		"Caleb_RigRN.placeHolderList[406]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Head_Ctrls|Caleb_Rig:R_Eye_Jnt_Ctrl_Grp|Caleb_Rig:R_Eye_Jnt_Ctrl.translateY" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Head_Ctrls|Caleb_Rig:R_Eye_Jnt_Ctrl_Grp|Caleb_Rig:R_Eye_Jnt_Ctrl.translateX" 
 		"Caleb_RigRN.placeHolderList[407]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Head_Ctrls|Caleb_Rig:R_Eye_Jnt_Ctrl_Grp|Caleb_Rig:R_Eye_Jnt_Ctrl.translateZ" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Head_Ctrls|Caleb_Rig:R_Eye_Jnt_Ctrl_Grp|Caleb_Rig:R_Eye_Jnt_Ctrl.translateY" 
 		"Caleb_RigRN.placeHolderList[408]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Head_Ctrls|Caleb_Rig:R_Eye_Jnt_Ctrl_Grp|Caleb_Rig:R_Eye_Jnt_Ctrl.rotateX" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Head_Ctrls|Caleb_Rig:R_Eye_Jnt_Ctrl_Grp|Caleb_Rig:R_Eye_Jnt_Ctrl.translateZ" 
 		"Caleb_RigRN.placeHolderList[409]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Head_Ctrls|Caleb_Rig:R_Eye_Jnt_Ctrl_Grp|Caleb_Rig:R_Eye_Jnt_Ctrl.rotateY" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Head_Ctrls|Caleb_Rig:R_Eye_Jnt_Ctrl_Grp|Caleb_Rig:R_Eye_Jnt_Ctrl.rotateX" 
 		"Caleb_RigRN.placeHolderList[410]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Head_Ctrls|Caleb_Rig:R_Eye_Jnt_Ctrl_Grp|Caleb_Rig:R_Eye_Jnt_Ctrl.rotateZ" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Head_Ctrls|Caleb_Rig:R_Eye_Jnt_Ctrl_Grp|Caleb_Rig:R_Eye_Jnt_Ctrl.rotateY" 
 		"Caleb_RigRN.placeHolderList[411]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Head_Ctrls|Caleb_Rig:Eye_Master_Ctrl_Grp|Caleb_Rig:Eye_Master_Ctrl.translateX" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Head_Ctrls|Caleb_Rig:R_Eye_Jnt_Ctrl_Grp|Caleb_Rig:R_Eye_Jnt_Ctrl.rotateZ" 
 		"Caleb_RigRN.placeHolderList[412]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Head_Ctrls|Caleb_Rig:Eye_Master_Ctrl_Grp|Caleb_Rig:Eye_Master_Ctrl.translateY" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Head_Ctrls|Caleb_Rig:Eye_Master_Ctrl_Grp|Caleb_Rig:Eye_Master_Ctrl.translateX" 
 		"Caleb_RigRN.placeHolderList[413]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Head_Ctrls|Caleb_Rig:Eye_Master_Ctrl_Grp|Caleb_Rig:Eye_Master_Ctrl.translateZ" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Head_Ctrls|Caleb_Rig:Eye_Master_Ctrl_Grp|Caleb_Rig:Eye_Master_Ctrl.translateY" 
 		"Caleb_RigRN.placeHolderList[414]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Head_Ctrls|Caleb_Rig:Eye_Master_Ctrl_Grp|Caleb_Rig:Eye_Master_Ctrl.rotateX" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Head_Ctrls|Caleb_Rig:Eye_Master_Ctrl_Grp|Caleb_Rig:Eye_Master_Ctrl.translateZ" 
 		"Caleb_RigRN.placeHolderList[415]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Head_Ctrls|Caleb_Rig:Eye_Master_Ctrl_Grp|Caleb_Rig:Eye_Master_Ctrl.rotateY" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Head_Ctrls|Caleb_Rig:Eye_Master_Ctrl_Grp|Caleb_Rig:Eye_Master_Ctrl.rotateX" 
 		"Caleb_RigRN.placeHolderList[416]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Head_Ctrls|Caleb_Rig:Eye_Master_Ctrl_Grp|Caleb_Rig:Eye_Master_Ctrl.rotateZ" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Head_Ctrls|Caleb_Rig:Eye_Master_Ctrl_Grp|Caleb_Rig:Eye_Master_Ctrl.rotateY" 
 		"Caleb_RigRN.placeHolderList[417]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Head_Ctrls|Caleb_Rig:Eye_Master_Ctrl_Grp|Caleb_Rig:Eye_Master_Ctrl.Local_Space" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Head_Ctrls|Caleb_Rig:Eye_Master_Ctrl_Grp|Caleb_Rig:Eye_Master_Ctrl.rotateZ" 
 		"Caleb_RigRN.placeHolderList[418]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Head_Ctrls|Caleb_Rig:Hair_Ctrls|Caleb_Rig:Hair_Front_Bounce_CONTROL_Jnt_Ctrl_Grp|Caleb_Rig:Hair_Front_Bounce_CONTROL_Jnt_Ctrl.translateX" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Head_Ctrls|Caleb_Rig:Eye_Master_Ctrl_Grp|Caleb_Rig:Eye_Master_Ctrl.Local_Space" 
 		"Caleb_RigRN.placeHolderList[419]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Head_Ctrls|Caleb_Rig:Hair_Ctrls|Caleb_Rig:Hair_Front_Bounce_CONTROL_Jnt_Ctrl_Grp|Caleb_Rig:Hair_Front_Bounce_CONTROL_Jnt_Ctrl.translateY" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Head_Ctrls|Caleb_Rig:Hair_Ctrls|Caleb_Rig:Hair_Front_Bounce_CONTROL_Jnt_Ctrl_Grp|Caleb_Rig:Hair_Front_Bounce_CONTROL_Jnt_Ctrl.translateX" 
 		"Caleb_RigRN.placeHolderList[420]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Head_Ctrls|Caleb_Rig:Hair_Ctrls|Caleb_Rig:Hair_Front_Bounce_CONTROL_Jnt_Ctrl_Grp|Caleb_Rig:Hair_Front_Bounce_CONTROL_Jnt_Ctrl.translateZ" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Head_Ctrls|Caleb_Rig:Hair_Ctrls|Caleb_Rig:Hair_Front_Bounce_CONTROL_Jnt_Ctrl_Grp|Caleb_Rig:Hair_Front_Bounce_CONTROL_Jnt_Ctrl.translateY" 
 		"Caleb_RigRN.placeHolderList[421]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Head_Ctrls|Caleb_Rig:Hair_Ctrls|Caleb_Rig:Hair_Front_Bounce_CONTROL_Jnt_Ctrl_Grp|Caleb_Rig:Hair_Front_Bounce_CONTROL_Jnt_Ctrl.rotateX" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Head_Ctrls|Caleb_Rig:Hair_Ctrls|Caleb_Rig:Hair_Front_Bounce_CONTROL_Jnt_Ctrl_Grp|Caleb_Rig:Hair_Front_Bounce_CONTROL_Jnt_Ctrl.translateZ" 
 		"Caleb_RigRN.placeHolderList[422]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Head_Ctrls|Caleb_Rig:Hair_Ctrls|Caleb_Rig:Hair_Front_Bounce_CONTROL_Jnt_Ctrl_Grp|Caleb_Rig:Hair_Front_Bounce_CONTROL_Jnt_Ctrl.rotateY" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Head_Ctrls|Caleb_Rig:Hair_Ctrls|Caleb_Rig:Hair_Front_Bounce_CONTROL_Jnt_Ctrl_Grp|Caleb_Rig:Hair_Front_Bounce_CONTROL_Jnt_Ctrl.rotateX" 
 		"Caleb_RigRN.placeHolderList[423]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Head_Ctrls|Caleb_Rig:Hair_Ctrls|Caleb_Rig:Hair_Front_Bounce_CONTROL_Jnt_Ctrl_Grp|Caleb_Rig:Hair_Front_Bounce_CONTROL_Jnt_Ctrl.rotateZ" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Head_Ctrls|Caleb_Rig:Hair_Ctrls|Caleb_Rig:Hair_Front_Bounce_CONTROL_Jnt_Ctrl_Grp|Caleb_Rig:Hair_Front_Bounce_CONTROL_Jnt_Ctrl.rotateY" 
 		"Caleb_RigRN.placeHolderList[424]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Head_Ctrls|Caleb_Rig:Hair_Ctrls|Caleb_Rig:Hair_Back_Bounce_CONTROL_Jnt_Ctrl_Grp|Caleb_Rig:Hair_Back_Bounce_CONTROL_Jnt_Ctrl.translateX" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Head_Ctrls|Caleb_Rig:Hair_Ctrls|Caleb_Rig:Hair_Front_Bounce_CONTROL_Jnt_Ctrl_Grp|Caleb_Rig:Hair_Front_Bounce_CONTROL_Jnt_Ctrl.rotateZ" 
 		"Caleb_RigRN.placeHolderList[425]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Head_Ctrls|Caleb_Rig:Hair_Ctrls|Caleb_Rig:Hair_Back_Bounce_CONTROL_Jnt_Ctrl_Grp|Caleb_Rig:Hair_Back_Bounce_CONTROL_Jnt_Ctrl.translateY" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Head_Ctrls|Caleb_Rig:Hair_Ctrls|Caleb_Rig:Hair_Back_Bounce_CONTROL_Jnt_Ctrl_Grp|Caleb_Rig:Hair_Back_Bounce_CONTROL_Jnt_Ctrl.translateX" 
 		"Caleb_RigRN.placeHolderList[426]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Head_Ctrls|Caleb_Rig:Hair_Ctrls|Caleb_Rig:Hair_Back_Bounce_CONTROL_Jnt_Ctrl_Grp|Caleb_Rig:Hair_Back_Bounce_CONTROL_Jnt_Ctrl.translateZ" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Head_Ctrls|Caleb_Rig:Hair_Ctrls|Caleb_Rig:Hair_Back_Bounce_CONTROL_Jnt_Ctrl_Grp|Caleb_Rig:Hair_Back_Bounce_CONTROL_Jnt_Ctrl.translateY" 
 		"Caleb_RigRN.placeHolderList[427]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Head_Ctrls|Caleb_Rig:Hair_Ctrls|Caleb_Rig:Hair_Back_Bounce_CONTROL_Jnt_Ctrl_Grp|Caleb_Rig:Hair_Back_Bounce_CONTROL_Jnt_Ctrl.rotateX" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Head_Ctrls|Caleb_Rig:Hair_Ctrls|Caleb_Rig:Hair_Back_Bounce_CONTROL_Jnt_Ctrl_Grp|Caleb_Rig:Hair_Back_Bounce_CONTROL_Jnt_Ctrl.translateZ" 
 		"Caleb_RigRN.placeHolderList[428]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Head_Ctrls|Caleb_Rig:Hair_Ctrls|Caleb_Rig:Hair_Back_Bounce_CONTROL_Jnt_Ctrl_Grp|Caleb_Rig:Hair_Back_Bounce_CONTROL_Jnt_Ctrl.rotateY" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Head_Ctrls|Caleb_Rig:Hair_Ctrls|Caleb_Rig:Hair_Back_Bounce_CONTROL_Jnt_Ctrl_Grp|Caleb_Rig:Hair_Back_Bounce_CONTROL_Jnt_Ctrl.rotateX" 
 		"Caleb_RigRN.placeHolderList[429]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Head_Ctrls|Caleb_Rig:Hair_Ctrls|Caleb_Rig:Hair_Back_Bounce_CONTROL_Jnt_Ctrl_Grp|Caleb_Rig:Hair_Back_Bounce_CONTROL_Jnt_Ctrl.rotateZ" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Head_Ctrls|Caleb_Rig:Hair_Ctrls|Caleb_Rig:Hair_Back_Bounce_CONTROL_Jnt_Ctrl_Grp|Caleb_Rig:Hair_Back_Bounce_CONTROL_Jnt_Ctrl.rotateY" 
 		"Caleb_RigRN.placeHolderList[430]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Auxillary|Caleb_Rig:Neck_Tie_Ctrls|Caleb_Rig:Neck_Tie_Ctrl_2_Jnt_Ctrl_Grp|Caleb_Rig:Neck_Tie_Ctrl_2_Jnt_Ctrl.translateX" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Head_Ctrls|Caleb_Rig:Hair_Ctrls|Caleb_Rig:Hair_Back_Bounce_CONTROL_Jnt_Ctrl_Grp|Caleb_Rig:Hair_Back_Bounce_CONTROL_Jnt_Ctrl.rotateZ" 
 		"Caleb_RigRN.placeHolderList[431]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Auxillary|Caleb_Rig:Neck_Tie_Ctrls|Caleb_Rig:Neck_Tie_Ctrl_2_Jnt_Ctrl_Grp|Caleb_Rig:Neck_Tie_Ctrl_2_Jnt_Ctrl.translateY" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Auxillary|Caleb_Rig:Neck_Tie_Ctrls|Caleb_Rig:Neck_Tie_Ctrl_2_Jnt_Ctrl_Grp|Caleb_Rig:Neck_Tie_Ctrl_2_Jnt_Ctrl.translateX" 
 		"Caleb_RigRN.placeHolderList[432]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Auxillary|Caleb_Rig:Neck_Tie_Ctrls|Caleb_Rig:Neck_Tie_Ctrl_2_Jnt_Ctrl_Grp|Caleb_Rig:Neck_Tie_Ctrl_2_Jnt_Ctrl.translateZ" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Auxillary|Caleb_Rig:Neck_Tie_Ctrls|Caleb_Rig:Neck_Tie_Ctrl_2_Jnt_Ctrl_Grp|Caleb_Rig:Neck_Tie_Ctrl_2_Jnt_Ctrl.translateY" 
 		"Caleb_RigRN.placeHolderList[433]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Auxillary|Caleb_Rig:Neck_Tie_Ctrls|Caleb_Rig:Neck_Tie_Ctrl_2_Jnt_Ctrl_Grp|Caleb_Rig:Neck_Tie_Ctrl_2_Jnt_Ctrl.rotateX" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Auxillary|Caleb_Rig:Neck_Tie_Ctrls|Caleb_Rig:Neck_Tie_Ctrl_2_Jnt_Ctrl_Grp|Caleb_Rig:Neck_Tie_Ctrl_2_Jnt_Ctrl.translateZ" 
 		"Caleb_RigRN.placeHolderList[434]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Auxillary|Caleb_Rig:Neck_Tie_Ctrls|Caleb_Rig:Neck_Tie_Ctrl_2_Jnt_Ctrl_Grp|Caleb_Rig:Neck_Tie_Ctrl_2_Jnt_Ctrl.rotateY" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Auxillary|Caleb_Rig:Neck_Tie_Ctrls|Caleb_Rig:Neck_Tie_Ctrl_2_Jnt_Ctrl_Grp|Caleb_Rig:Neck_Tie_Ctrl_2_Jnt_Ctrl.rotateX" 
 		"Caleb_RigRN.placeHolderList[435]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Auxillary|Caleb_Rig:Neck_Tie_Ctrls|Caleb_Rig:Neck_Tie_Ctrl_2_Jnt_Ctrl_Grp|Caleb_Rig:Neck_Tie_Ctrl_2_Jnt_Ctrl.rotateZ" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Auxillary|Caleb_Rig:Neck_Tie_Ctrls|Caleb_Rig:Neck_Tie_Ctrl_2_Jnt_Ctrl_Grp|Caleb_Rig:Neck_Tie_Ctrl_2_Jnt_Ctrl.rotateY" 
 		"Caleb_RigRN.placeHolderList[436]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Auxillary|Caleb_Rig:Neck_Tie_Ctrls|Caleb_Rig:Neck_Tie_Ctrl_1_Jnt_Ctrl_Grp|Caleb_Rig:Neck_Tie_Ctrl_1_Jnt_Ctrl.translateX" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Auxillary|Caleb_Rig:Neck_Tie_Ctrls|Caleb_Rig:Neck_Tie_Ctrl_2_Jnt_Ctrl_Grp|Caleb_Rig:Neck_Tie_Ctrl_2_Jnt_Ctrl.rotateZ" 
 		"Caleb_RigRN.placeHolderList[437]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Auxillary|Caleb_Rig:Neck_Tie_Ctrls|Caleb_Rig:Neck_Tie_Ctrl_1_Jnt_Ctrl_Grp|Caleb_Rig:Neck_Tie_Ctrl_1_Jnt_Ctrl.translateY" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Auxillary|Caleb_Rig:Neck_Tie_Ctrls|Caleb_Rig:Neck_Tie_Ctrl_1_Jnt_Ctrl_Grp|Caleb_Rig:Neck_Tie_Ctrl_1_Jnt_Ctrl.translateX" 
 		"Caleb_RigRN.placeHolderList[438]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Auxillary|Caleb_Rig:Neck_Tie_Ctrls|Caleb_Rig:Neck_Tie_Ctrl_1_Jnt_Ctrl_Grp|Caleb_Rig:Neck_Tie_Ctrl_1_Jnt_Ctrl.translateZ" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Auxillary|Caleb_Rig:Neck_Tie_Ctrls|Caleb_Rig:Neck_Tie_Ctrl_1_Jnt_Ctrl_Grp|Caleb_Rig:Neck_Tie_Ctrl_1_Jnt_Ctrl.translateY" 
 		"Caleb_RigRN.placeHolderList[439]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Auxillary|Caleb_Rig:Neck_Tie_Ctrls|Caleb_Rig:Neck_Tie_Ctrl_1_Jnt_Ctrl_Grp|Caleb_Rig:Neck_Tie_Ctrl_1_Jnt_Ctrl.rotateX" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Auxillary|Caleb_Rig:Neck_Tie_Ctrls|Caleb_Rig:Neck_Tie_Ctrl_1_Jnt_Ctrl_Grp|Caleb_Rig:Neck_Tie_Ctrl_1_Jnt_Ctrl.translateZ" 
 		"Caleb_RigRN.placeHolderList[440]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Auxillary|Caleb_Rig:Neck_Tie_Ctrls|Caleb_Rig:Neck_Tie_Ctrl_1_Jnt_Ctrl_Grp|Caleb_Rig:Neck_Tie_Ctrl_1_Jnt_Ctrl.rotateY" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Auxillary|Caleb_Rig:Neck_Tie_Ctrls|Caleb_Rig:Neck_Tie_Ctrl_1_Jnt_Ctrl_Grp|Caleb_Rig:Neck_Tie_Ctrl_1_Jnt_Ctrl.rotateX" 
 		"Caleb_RigRN.placeHolderList[441]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Auxillary|Caleb_Rig:Neck_Tie_Ctrls|Caleb_Rig:Neck_Tie_Ctrl_1_Jnt_Ctrl_Grp|Caleb_Rig:Neck_Tie_Ctrl_1_Jnt_Ctrl.rotateZ" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Auxillary|Caleb_Rig:Neck_Tie_Ctrls|Caleb_Rig:Neck_Tie_Ctrl_1_Jnt_Ctrl_Grp|Caleb_Rig:Neck_Tie_Ctrl_1_Jnt_Ctrl.rotateY" 
 		"Caleb_RigRN.placeHolderList[442]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Auxillary|Caleb_Rig:Neck_Tie_Ctrls|Caleb_Rig:Neck_Tie_Ctrl_3_Jnt_Ctrl_Grp|Caleb_Rig:Neck_Tie_Ctrl_3_Jnt_Ctrl.rotateX" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Auxillary|Caleb_Rig:Neck_Tie_Ctrls|Caleb_Rig:Neck_Tie_Ctrl_1_Jnt_Ctrl_Grp|Caleb_Rig:Neck_Tie_Ctrl_1_Jnt_Ctrl.rotateZ" 
 		"Caleb_RigRN.placeHolderList[443]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Auxillary|Caleb_Rig:Neck_Tie_Ctrls|Caleb_Rig:Neck_Tie_Ctrl_3_Jnt_Ctrl_Grp|Caleb_Rig:Neck_Tie_Ctrl_3_Jnt_Ctrl.rotateY" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Auxillary|Caleb_Rig:Neck_Tie_Ctrls|Caleb_Rig:Neck_Tie_Ctrl_3_Jnt_Ctrl_Grp|Caleb_Rig:Neck_Tie_Ctrl_3_Jnt_Ctrl.rotateX" 
 		"Caleb_RigRN.placeHolderList[444]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Auxillary|Caleb_Rig:Neck_Tie_Ctrls|Caleb_Rig:Neck_Tie_Ctrl_3_Jnt_Ctrl_Grp|Caleb_Rig:Neck_Tie_Ctrl_3_Jnt_Ctrl.rotateZ" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Auxillary|Caleb_Rig:Neck_Tie_Ctrls|Caleb_Rig:Neck_Tie_Ctrl_3_Jnt_Ctrl_Grp|Caleb_Rig:Neck_Tie_Ctrl_3_Jnt_Ctrl.rotateY" 
 		"Caleb_RigRN.placeHolderList[445]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Auxillary|Caleb_Rig:Neck_Tie_Ctrls|Caleb_Rig:Neck_Tie_Ctrl_3_Jnt_Ctrl_Grp|Caleb_Rig:Neck_Tie_Ctrl_3_Jnt_Ctrl.translateX" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Auxillary|Caleb_Rig:Neck_Tie_Ctrls|Caleb_Rig:Neck_Tie_Ctrl_3_Jnt_Ctrl_Grp|Caleb_Rig:Neck_Tie_Ctrl_3_Jnt_Ctrl.rotateZ" 
 		"Caleb_RigRN.placeHolderList[446]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Auxillary|Caleb_Rig:Neck_Tie_Ctrls|Caleb_Rig:Neck_Tie_Ctrl_3_Jnt_Ctrl_Grp|Caleb_Rig:Neck_Tie_Ctrl_3_Jnt_Ctrl.translateY" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Auxillary|Caleb_Rig:Neck_Tie_Ctrls|Caleb_Rig:Neck_Tie_Ctrl_3_Jnt_Ctrl_Grp|Caleb_Rig:Neck_Tie_Ctrl_3_Jnt_Ctrl.translateX" 
 		"Caleb_RigRN.placeHolderList[447]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Auxillary|Caleb_Rig:Neck_Tie_Ctrls|Caleb_Rig:Neck_Tie_Ctrl_3_Jnt_Ctrl_Grp|Caleb_Rig:Neck_Tie_Ctrl_3_Jnt_Ctrl.translateZ" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Auxillary|Caleb_Rig:Neck_Tie_Ctrls|Caleb_Rig:Neck_Tie_Ctrl_3_Jnt_Ctrl_Grp|Caleb_Rig:Neck_Tie_Ctrl_3_Jnt_Ctrl.translateY" 
 		"Caleb_RigRN.placeHolderList[448]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Auxillary|Caleb_Rig:Rope_Jnt_Ctrl_Grp|Caleb_Rig:Rope_Jnt_Ctrl.translateX" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Auxillary|Caleb_Rig:Neck_Tie_Ctrls|Caleb_Rig:Neck_Tie_Ctrl_3_Jnt_Ctrl_Grp|Caleb_Rig:Neck_Tie_Ctrl_3_Jnt_Ctrl.translateZ" 
 		"Caleb_RigRN.placeHolderList[449]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Auxillary|Caleb_Rig:Rope_Jnt_Ctrl_Grp|Caleb_Rig:Rope_Jnt_Ctrl.translateY" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Auxillary|Caleb_Rig:Rope_Jnt_Ctrl_Grp|Caleb_Rig:Rope_Jnt_Ctrl.translateX" 
 		"Caleb_RigRN.placeHolderList[450]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Auxillary|Caleb_Rig:Rope_Jnt_Ctrl_Grp|Caleb_Rig:Rope_Jnt_Ctrl.translateZ" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Auxillary|Caleb_Rig:Rope_Jnt_Ctrl_Grp|Caleb_Rig:Rope_Jnt_Ctrl.translateY" 
 		"Caleb_RigRN.placeHolderList[451]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Auxillary|Caleb_Rig:Rope_Jnt_Ctrl_Grp|Caleb_Rig:Rope_Jnt_Ctrl.rotateX" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Auxillary|Caleb_Rig:Rope_Jnt_Ctrl_Grp|Caleb_Rig:Rope_Jnt_Ctrl.translateZ" 
 		"Caleb_RigRN.placeHolderList[452]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Auxillary|Caleb_Rig:Rope_Jnt_Ctrl_Grp|Caleb_Rig:Rope_Jnt_Ctrl.rotateY" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Auxillary|Caleb_Rig:Rope_Jnt_Ctrl_Grp|Caleb_Rig:Rope_Jnt_Ctrl.rotateX" 
 		"Caleb_RigRN.placeHolderList[453]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Auxillary|Caleb_Rig:Rope_Jnt_Ctrl_Grp|Caleb_Rig:Rope_Jnt_Ctrl.rotateZ" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Auxillary|Caleb_Rig:Rope_Jnt_Ctrl_Grp|Caleb_Rig:Rope_Jnt_Ctrl.rotateY" 
 		"Caleb_RigRN.placeHolderList[454]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Auxillary|Caleb_Rig:Backpack_2_Jnt_Ctrl_Grp|Caleb_Rig:Backpack_2_Jnt_Ctrl.translateX" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Auxillary|Caleb_Rig:Rope_Jnt_Ctrl_Grp|Caleb_Rig:Rope_Jnt_Ctrl.rotateZ" 
 		"Caleb_RigRN.placeHolderList[455]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Auxillary|Caleb_Rig:Backpack_2_Jnt_Ctrl_Grp|Caleb_Rig:Backpack_2_Jnt_Ctrl.translateY" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Auxillary|Caleb_Rig:Backpack_2_Jnt_Ctrl_Grp|Caleb_Rig:Backpack_2_Jnt_Ctrl.translateX" 
 		"Caleb_RigRN.placeHolderList[456]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Auxillary|Caleb_Rig:Backpack_2_Jnt_Ctrl_Grp|Caleb_Rig:Backpack_2_Jnt_Ctrl.translateZ" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Auxillary|Caleb_Rig:Backpack_2_Jnt_Ctrl_Grp|Caleb_Rig:Backpack_2_Jnt_Ctrl.translateY" 
 		"Caleb_RigRN.placeHolderList[457]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Auxillary|Caleb_Rig:Backpack_2_Jnt_Ctrl_Grp|Caleb_Rig:Backpack_2_Jnt_Ctrl.rotateX" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Auxillary|Caleb_Rig:Backpack_2_Jnt_Ctrl_Grp|Caleb_Rig:Backpack_2_Jnt_Ctrl.translateZ" 
 		"Caleb_RigRN.placeHolderList[458]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Auxillary|Caleb_Rig:Backpack_2_Jnt_Ctrl_Grp|Caleb_Rig:Backpack_2_Jnt_Ctrl.rotateY" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Auxillary|Caleb_Rig:Backpack_2_Jnt_Ctrl_Grp|Caleb_Rig:Backpack_2_Jnt_Ctrl.rotateX" 
 		"Caleb_RigRN.placeHolderList[459]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Auxillary|Caleb_Rig:Backpack_2_Jnt_Ctrl_Grp|Caleb_Rig:Backpack_2_Jnt_Ctrl.rotateZ" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Auxillary|Caleb_Rig:Backpack_2_Jnt_Ctrl_Grp|Caleb_Rig:Backpack_2_Jnt_Ctrl.rotateY" 
 		"Caleb_RigRN.placeHolderList[460]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Auxillary|Caleb_Rig:Backpack_1_Jnt_Ctrl_Grp|Caleb_Rig:Backpack_1_Jnt_Ctrl.translateY" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Auxillary|Caleb_Rig:Backpack_2_Jnt_Ctrl_Grp|Caleb_Rig:Backpack_2_Jnt_Ctrl.rotateZ" 
 		"Caleb_RigRN.placeHolderList[461]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Auxillary|Caleb_Rig:Backpack_1_Jnt_Ctrl_Grp|Caleb_Rig:Backpack_1_Jnt_Ctrl.translateX" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Auxillary|Caleb_Rig:Backpack_1_Jnt_Ctrl_Grp|Caleb_Rig:Backpack_1_Jnt_Ctrl.translateY" 
 		"Caleb_RigRN.placeHolderList[462]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Auxillary|Caleb_Rig:Backpack_1_Jnt_Ctrl_Grp|Caleb_Rig:Backpack_1_Jnt_Ctrl.translateZ" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Auxillary|Caleb_Rig:Backpack_1_Jnt_Ctrl_Grp|Caleb_Rig:Backpack_1_Jnt_Ctrl.translateX" 
 		"Caleb_RigRN.placeHolderList[463]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Auxillary|Caleb_Rig:Backpack_1_Jnt_Ctrl_Grp|Caleb_Rig:Backpack_1_Jnt_Ctrl.rotateX" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Auxillary|Caleb_Rig:Backpack_1_Jnt_Ctrl_Grp|Caleb_Rig:Backpack_1_Jnt_Ctrl.translateZ" 
 		"Caleb_RigRN.placeHolderList[464]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Auxillary|Caleb_Rig:Backpack_1_Jnt_Ctrl_Grp|Caleb_Rig:Backpack_1_Jnt_Ctrl.rotateY" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Auxillary|Caleb_Rig:Backpack_1_Jnt_Ctrl_Grp|Caleb_Rig:Backpack_1_Jnt_Ctrl.rotateX" 
 		"Caleb_RigRN.placeHolderList[465]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Auxillary|Caleb_Rig:Backpack_1_Jnt_Ctrl_Grp|Caleb_Rig:Backpack_1_Jnt_Ctrl.rotateZ" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Auxillary|Caleb_Rig:Backpack_1_Jnt_Ctrl_Grp|Caleb_Rig:Backpack_1_Jnt_Ctrl.rotateY" 
 		"Caleb_RigRN.placeHolderList[466]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Auxillary|Caleb_Rig:NeckTieRear_Ctrl_Grp|Caleb_Rig:NecktieBack_Backpack_OFFSET|Caleb_Rig:NeckTieRear_Jnt_Ctrl.translateX" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Auxillary|Caleb_Rig:Backpack_1_Jnt_Ctrl_Grp|Caleb_Rig:Backpack_1_Jnt_Ctrl.rotateZ" 
 		"Caleb_RigRN.placeHolderList[467]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Auxillary|Caleb_Rig:NeckTieRear_Ctrl_Grp|Caleb_Rig:NecktieBack_Backpack_OFFSET|Caleb_Rig:NeckTieRear_Jnt_Ctrl.translateY" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Auxillary|Caleb_Rig:NeckTieRear_Ctrl_Grp|Caleb_Rig:NecktieBack_Backpack_OFFSET|Caleb_Rig:NeckTieRear_Jnt_Ctrl.translateX" 
 		"Caleb_RigRN.placeHolderList[468]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Auxillary|Caleb_Rig:NeckTieRear_Ctrl_Grp|Caleb_Rig:NecktieBack_Backpack_OFFSET|Caleb_Rig:NeckTieRear_Jnt_Ctrl.translateZ" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Auxillary|Caleb_Rig:NeckTieRear_Ctrl_Grp|Caleb_Rig:NecktieBack_Backpack_OFFSET|Caleb_Rig:NeckTieRear_Jnt_Ctrl.translateY" 
 		"Caleb_RigRN.placeHolderList[469]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Auxillary|Caleb_Rig:NeckTieRear_Ctrl_Grp|Caleb_Rig:NecktieBack_Backpack_OFFSET|Caleb_Rig:NeckTieRear_Jnt_Ctrl.rotateX" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Auxillary|Caleb_Rig:NeckTieRear_Ctrl_Grp|Caleb_Rig:NecktieBack_Backpack_OFFSET|Caleb_Rig:NeckTieRear_Jnt_Ctrl.translateZ" 
 		"Caleb_RigRN.placeHolderList[470]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Auxillary|Caleb_Rig:NeckTieRear_Ctrl_Grp|Caleb_Rig:NecktieBack_Backpack_OFFSET|Caleb_Rig:NeckTieRear_Jnt_Ctrl.rotateY" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Auxillary|Caleb_Rig:NeckTieRear_Ctrl_Grp|Caleb_Rig:NecktieBack_Backpack_OFFSET|Caleb_Rig:NeckTieRear_Jnt_Ctrl.rotateX" 
 		"Caleb_RigRN.placeHolderList[471]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Auxillary|Caleb_Rig:NeckTieRear_Ctrl_Grp|Caleb_Rig:NecktieBack_Backpack_OFFSET|Caleb_Rig:NeckTieRear_Jnt_Ctrl.rotateZ" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Auxillary|Caleb_Rig:NeckTieRear_Ctrl_Grp|Caleb_Rig:NecktieBack_Backpack_OFFSET|Caleb_Rig:NeckTieRear_Jnt_Ctrl.rotateY" 
 		"Caleb_RigRN.placeHolderList[472]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Auxillary|Caleb_Rig:Axe_Jnt_Ctrl_Grp|Caleb_Rig:Axe_Jnt_Ctrl.translateX" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Auxillary|Caleb_Rig:NeckTieRear_Ctrl_Grp|Caleb_Rig:NecktieBack_Backpack_OFFSET|Caleb_Rig:NeckTieRear_Jnt_Ctrl.rotateZ" 
 		"Caleb_RigRN.placeHolderList[473]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Auxillary|Caleb_Rig:Axe_Jnt_Ctrl_Grp|Caleb_Rig:Axe_Jnt_Ctrl.translateY" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Auxillary|Caleb_Rig:Axe_Jnt_Ctrl_Grp|Caleb_Rig:Axe_Jnt_Ctrl.translateX" 
 		"Caleb_RigRN.placeHolderList[474]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Auxillary|Caleb_Rig:Axe_Jnt_Ctrl_Grp|Caleb_Rig:Axe_Jnt_Ctrl.translateZ" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Auxillary|Caleb_Rig:Axe_Jnt_Ctrl_Grp|Caleb_Rig:Axe_Jnt_Ctrl.translateY" 
 		"Caleb_RigRN.placeHolderList[475]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Auxillary|Caleb_Rig:Axe_Jnt_Ctrl_Grp|Caleb_Rig:Axe_Jnt_Ctrl.rotateX" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Auxillary|Caleb_Rig:Axe_Jnt_Ctrl_Grp|Caleb_Rig:Axe_Jnt_Ctrl.translateZ" 
 		"Caleb_RigRN.placeHolderList[476]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Auxillary|Caleb_Rig:Axe_Jnt_Ctrl_Grp|Caleb_Rig:Axe_Jnt_Ctrl.rotateY" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Auxillary|Caleb_Rig:Axe_Jnt_Ctrl_Grp|Caleb_Rig:Axe_Jnt_Ctrl.rotateX" 
 		"Caleb_RigRN.placeHolderList[477]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Auxillary|Caleb_Rig:Axe_Jnt_Ctrl_Grp|Caleb_Rig:Axe_Jnt_Ctrl.rotateZ" 
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Auxillary|Caleb_Rig:Axe_Jnt_Ctrl_Grp|Caleb_Rig:Axe_Jnt_Ctrl.rotateY" 
 		"Caleb_RigRN.placeHolderList[478]" ""
+		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Auxillary|Caleb_Rig:Axe_Jnt_Ctrl_Grp|Caleb_Rig:Axe_Jnt_Ctrl.rotateZ" 
+		"Caleb_RigRN.placeHolderList[479]" ""
 		5 0 "Caleb_RigRN" "Caleb_Rig:Geometry_Layer.drawInfo" "|Caleb_Rig:Axe_Geometry:Axe.drawOverride" 
-		"Caleb_RigRN.placeHolderList[479]" "Caleb_RigRN.placeHolderList[480]" ""
-		5 3 "Caleb_RigRN" "Caleb_Rig:Geometry_Layer.drawInfo" "Caleb_RigRN.placeHolderList[481]" 
+		"Caleb_RigRN.placeHolderList[480]" "Caleb_RigRN.placeHolderList[481]" ""
+		5 3 "Caleb_RigRN" "Caleb_Rig:Geometry_Layer.drawInfo" "Caleb_RigRN.placeHolderList[482]" 
 		"";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
@@ -1809,14 +1810,14 @@ createNode script -n "uiConfigurationScriptNode";
 		"// Maya Mel UI Configuration File.\n//\n//  This script is machine generated.  Edit at your own risk.\n//\n//\n\nglobal string $gMainPane;\nif (`paneLayout -exists $gMainPane`) {\n\n\tglobal int $gUseScenePanelConfig;\n\tint    $useSceneConfig = $gUseScenePanelConfig;\n\tint    $nodeEditorPanelVisible = stringArrayContains(\"nodeEditorPanel1\", `getPanel -vis`);\n\tint    $nodeEditorWorkspaceControlOpen = (`workspaceControl -exists nodeEditorPanel1Window` && `workspaceControl -q -visible nodeEditorPanel1Window`);\n\tint    $menusOkayInPanels = `optionVar -q allowMenusInPanels`;\n\tint    $nVisPanes = `paneLayout -q -nvp $gMainPane`;\n\tint    $nPanes = 0;\n\tstring $editorName;\n\tstring $panelName;\n\tstring $itemFilterName;\n\tstring $panelConfig;\n\n\t//\n\t//  get current state of the UI\n\t//\n\tsceneUIReplacement -update $gMainPane;\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Top View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Top View\")) -mbv $menusOkayInPanels  $panelName;\n"
 		+ "\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|top\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n"
 		+ "            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n"
-		+ "            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 638\n            -height 438\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n"
+		+ "            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n"
 		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Side View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|side\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n"
 		+ "            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n"
 		+ "            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n"
-		+ "            -shadows 0\n            -captureSequenceNumber -1\n            -width 98\n            -height 0\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n"
+		+ "            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n"
 		+ "            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n"
 		+ "            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n"
-		+ "            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 98\n            -height 0\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n"
+		+ "            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n"
 		+ "            -camera \"|persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 1\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n"
 		+ "            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n"
 		+ "            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 2502\n            -height 727\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n"
@@ -1835,8 +1836,8 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Camera Sequencer\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = sequenceEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayValues 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -initialized 0\n                -manageSequencer 1 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperGraphPanel\" (localizedPanelLabel(\"Hypergraph Hierarchy\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypergraph Hierarchy\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"HyperGraphEd\");\n            hyperGraph -e \n                -graphLayoutStyle \"hierarchicalLayout\" \n                -orientation \"horiz\" \n                -mergeConnections 0\n                -zoom 1\n                -animateTransition 0\n                -showRelationships 1\n"
 		+ "                -showShapes 0\n                -showDeformers 0\n                -showExpressions 0\n                -showConstraints 0\n                -showConnectionFromSelected 0\n                -showConnectionToSelected 0\n                -showConstraintLabels 0\n                -showUnderworld 0\n                -showInvisible 0\n                -transitionFrames 1\n                -opaqueContainers 0\n                -freeform 0\n                -imagePosition 0 0 \n                -imageScale 1\n                -imageEnabled 0\n                -graphType \"DAG\" \n                -heatMapDisplay 0\n                -updateSelection 1\n                -updateNodeAdded 1\n                -useDrawOverrideColor 0\n                -limitGraphTraversal -1\n                -range 0 0 \n                -iconSize \"smallIcons\" \n                -showCachedConnections 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperShadePanel\" (localizedPanelLabel(\"Hypershade\")) `;\n"
 		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypershade\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"visorPanel\" (localizedPanelLabel(\"Visor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Visor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"nodeEditorPanel\" (localizedPanelLabel(\"Node Editor\")) `;\n\tif ($nodeEditorPanelVisible || $nodeEditorWorkspaceControlOpen) {\n\t\tif (\"\" == $panelName) {\n\t\t\tif ($useSceneConfig) {\n\t\t\t\t$panelName = `scriptedPanel -unParent  -type \"nodeEditorPanel\" -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n"
-		+ "                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -connectNodeOnCreation 0\n                -connectOnDrop 0\n                -copyConnectionsOnPaste 0\n                -connectionStyle \"bezier\" \n                -defaultPinnedState 0\n                -additiveGraphingMode 0\n                -connectedGraphingMode 1\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit 1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -crosshairOnEdgeDragging 0\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n"
-		+ "                -showUnitConversions 0\n                -editorMode \"default\" \n                -hasWatchpoint 0\n                $editorName;\n\t\t\t}\n\t\t} else {\n\t\t\t$label = `panel -q -label $panelName`;\n\t\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -connectNodeOnCreation 0\n                -connectOnDrop 0\n                -copyConnectionsOnPaste 0\n                -connectionStyle \"bezier\" \n                -defaultPinnedState 0\n                -additiveGraphingMode 0\n                -connectedGraphingMode 1\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit 1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n"
+		+ "                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -connectNodeOnCreation 0\n                -connectOnDrop 0\n                -copyConnectionsOnPaste 0\n                -connectionStyle \"bezier\" \n                -defaultPinnedState 0\n                -additiveGraphingMode 0\n                -connectedGraphingMode 1\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -crosshairOnEdgeDragging 0\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n"
+		+ "                -showUnitConversions 0\n                -editorMode \"default\" \n                -hasWatchpoint 0\n                $editorName;\n\t\t\t}\n\t\t} else {\n\t\t\t$label = `panel -q -label $panelName`;\n\t\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -connectNodeOnCreation 0\n                -connectOnDrop 0\n                -copyConnectionsOnPaste 0\n                -connectionStyle \"bezier\" \n                -defaultPinnedState 0\n                -additiveGraphingMode 0\n                -connectedGraphingMode 1\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n"
 		+ "                -gridSnap 0\n                -gridVisibility 1\n                -crosshairOnEdgeDragging 0\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                -showUnitConversions 0\n                -editorMode \"default\" \n                -hasWatchpoint 0\n                $editorName;\n\t\t\tif (!$useSceneConfig) {\n\t\t\t\tpanel -e -l $label $panelName;\n\t\t\t}\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"createNodePanel\" (localizedPanelLabel(\"Create Node\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Create Node\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"polyTexturePlacementPanel\" (localizedPanelLabel(\"UV Editor\")) `;\n"
 		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"UV Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"renderWindowPanel\" (localizedPanelLabel(\"Render View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Render View\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"shapePanel\" (localizedPanelLabel(\"Shape Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tshapePanel -edit -l (localizedPanelLabel(\"Shape Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"posePanel\" (localizedPanelLabel(\"Pose Editor\")) `;\n\tif (\"\" != $panelName) {\n"
 		+ "\t\t$label = `panel -q -label $panelName`;\n\t\tposePanel -edit -l (localizedPanelLabel(\"Pose Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynRelEdPanel\" (localizedPanelLabel(\"Dynamic Relationships\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dynamic Relationships\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"relationshipPanel\" (localizedPanelLabel(\"Relationship Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"referenceEditorPanel\" (localizedPanelLabel(\"Reference Editor\")) `;\n"
@@ -2226,108 +2227,111 @@ createNode animCurveTA -n "Spine_1_Jnt_FK_Ctrl_rotateX";
 	rename -uid "0378D141-4E46-7E40-1046-5A934BB34032";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  0 -16.937945476470084 29 -16.937945476470084
-		 30 -16.937945476470084 37 -17.068302954371433 40 -16.937945476470084;
+	setAttr -s 6 ".ktv[0:5]"  0 -16.937945476470084 29 -16.937945476470084
+		 30 -16.937945476470084 37 -17.068302954371433 40 -16.937945476470084 46 35.089383492876692;
 	setAttr ".pre" 3;
 createNode animCurveTA -n "Spine_1_Jnt_FK_Ctrl_rotateY";
 	rename -uid "2EEBDCE6-46C4-71D9-89F6-178EF7D68DC1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  0 -0.78759568454510787 29 -0.78759568454510787
-		 30 -0.78759568454510787 37 7.0247050100953183 40 -0.78759568454510787;
+	setAttr -s 6 ".ktv[0:5]"  0 -0.78759568454510787 29 -0.78759568454510787
+		 30 -0.78759568454510787 37 7.0247050100953183 40 -0.78759568454510787 46 -0.78759568454514328;
 	setAttr ".pre" 3;
 createNode animCurveTA -n "Spine_1_Jnt_FK_Ctrl_rotateZ";
 	rename -uid "73B5183B-4617-863D-1C3A-90A5A7AD1D5E";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  0 -6.5251624367551475 29 -6.5251624367551475
-		 30 -6.5251624367551475 37 -8.9154316539166256 40 -6.5251624367551475;
+	setAttr -s 6 ".ktv[0:5]"  0 -6.5251624367551475 29 -6.5251624367551475
+		 30 -6.5251624367551475 37 -8.9154316539166256 40 -6.5251624367551475 46 -6.5251624367551795;
 	setAttr ".pre" 3;
 createNode animCurveTA -n "Spine_2_Jnt_FK_Ctrl_rotateX";
 	rename -uid "3FDCAEAB-4FE8-4A88-E095-13B9CBCEC479";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  0 -16.937945476470084 29 -16.937945476470084
-		 30 -16.937945476470084 37 -17.068302954371433 40 -16.937945476470084;
+	setAttr -s 6 ".ktv[0:5]"  0 -16.937945476470084 29 -16.937945476470084
+		 30 -16.937945476470084 37 -17.068302954371433 40 -16.937945476470084 46 35.089383492876692;
 	setAttr ".pre" 3;
 createNode animCurveTA -n "Spine_2_Jnt_FK_Ctrl_rotateY";
 	rename -uid "9061BACE-46EE-D0BB-B328-DFA528B39DDD";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  0 -0.78759568454510787 29 -0.78759568454510787
-		 30 -0.78759568454510787 37 7.0247050100953183 40 -0.78759568454510787;
+	setAttr -s 6 ".ktv[0:5]"  0 -0.78759568454510787 29 -0.78759568454510787
+		 30 -0.78759568454510787 37 7.0247050100953183 40 -0.78759568454510787 46 -0.78759568454514328;
 	setAttr ".pre" 3;
 createNode animCurveTA -n "Spine_2_Jnt_FK_Ctrl_rotateZ";
 	rename -uid "A02B9B3D-4D77-40F3-B179-F7ACE1F8AF34";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  0 -6.5251624367551475 29 -6.5251624367551475
-		 30 -6.5251624367551475 37 -8.9154316539166256 40 -6.5251624367551475;
+	setAttr -s 6 ".ktv[0:5]"  0 -6.5251624367551475 29 -6.5251624367551475
+		 30 -6.5251624367551475 37 -8.9154316539166256 40 -6.5251624367551475 46 -6.5251624367551795;
 	setAttr ".pre" 3;
 createNode animCurveTA -n "Neck_Ctrl_rotateX";
 	rename -uid "DB771471-4D48-D8E2-E4DB-D3B93422B364";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 -0.16919559679394755 2 -0.31245902616283155
-		 17 2.635797523349265 29 -0.12195629527128103 30 -0.16919559679394755 40 -15.358358148591954;
-	setAttr -s 6 ".kit[0:5]"  1 18 18 18 18 18;
-	setAttr -s 6 ".kot[0:5]"  1 18 18 18 18 18;
-	setAttr -s 6 ".kix[0:5]"  0.99861876477368228 1 1 0.99725825069919793 
-		0.99725825069919805 1;
-	setAttr -s 6 ".kiy[0:5]"  -0.052541056726002636 0 0 -0.073999874407836369 
-		-0.073999874407836383 0;
-	setAttr -s 6 ".kox[0:5]"  0.99861876456290477 1 1 0.99725825069919805 
-		0.99725825069919793 1;
-	setAttr -s 6 ".koy[0:5]"  -0.052541060732135263 0 0 -0.073999874407836383 
-		-0.073999874407836369 0;
+	setAttr -s 7 ".ktv[0:6]"  0 -0.16919559679394755 2 -0.31245902616283155
+		 17 2.635797523349265 29 -0.12195629527128103 30 -0.16919559679394755 40 -15.358358148591954
+		 46 -9.9030493409288578;
+	setAttr -s 7 ".kit[0:6]"  1 18 18 18 18 18 18;
+	setAttr -s 7 ".kot[0:6]"  1 18 18 18 18 18 18;
+	setAttr -s 7 ".kix[0:6]"  0.99861876477368228 1 1 0.99725825069919793 
+		0.99725825069919805 1 1;
+	setAttr -s 7 ".kiy[0:6]"  -0.052541056726002636 0 0 -0.073999874407836369 
+		-0.073999874407836383 0 0;
+	setAttr -s 7 ".kox[0:6]"  0.99861876456290477 1 1 0.99725825069919805 
+		0.99725825069919793 1 1;
+	setAttr -s 7 ".koy[0:6]"  -0.052541060732135263 0 0 -0.073999874407836383 
+		-0.073999874407836369 0 0;
 	setAttr ".pre" 3;
 createNode animCurveTA -n "Neck_Ctrl_rotateY";
 	rename -uid "8C08DAA3-4032-AB0A-A37A-E0A407AC8C2A";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 26.45742807671499 2 26.475563431462572
-		 17 26.102351100529106 29 26.451448173156106 30 26.45742807671499 40 26.457428076714972;
-	setAttr -s 6 ".kit[0:5]"  1 18 18 18 18 18;
-	setAttr -s 6 ".kot[0:5]"  1 18 18 18 18 18;
-	setAttr -s 6 ".kix[0:5]"  0.99998909669293279 1 1 0.999955886716974 
-		1 1;
-	setAttr -s 6 ".kiy[0:5]"  0.0046697425252915778 0 0 0.00939279617953322 
-		0 0;
-	setAttr -s 6 ".kox[0:5]"  0.99998909676566339 1 1 0.99995588671697411 
-		1 1;
-	setAttr -s 6 ".koy[0:5]"  0.0046697269505456751 0 0 0.0093927961795332218 
-		0 0;
+	setAttr -s 7 ".ktv[0:6]"  0 26.45742807671499 2 26.475563431462572
+		 17 26.102351100529106 29 26.451448173156109 30 26.45742807671499 40 26.457428076714972
+		 46 -48.543632427768536;
+	setAttr -s 7 ".kit[0:6]"  1 18 18 18 18 18 18;
+	setAttr -s 7 ".kot[0:6]"  1 18 18 18 18 18 18;
+	setAttr -s 7 ".kix[0:6]"  0.99998909669293279 1 1 0.999955886716974 
+		1 1 1;
+	setAttr -s 7 ".kiy[0:6]"  0.0046697425252915778 0 0 0.009392796179528224 
+		0 0 0;
+	setAttr -s 7 ".kox[0:6]"  0.99998909676566339 1 1 0.99995588671697411 
+		1 1 1;
+	setAttr -s 7 ".koy[0:6]"  0.0046697269505456751 0 0 0.0093927961795282258 
+		0 0 0;
 	setAttr ".pre" 3;
 createNode animCurveTA -n "Neck_Ctrl_rotateZ";
 	rename -uid "B5B18AC8-40A2-DC35-23A9-F0BD87449F0E";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 -0.49795978587402512 2 -0.70084178396426233
-		 17 3.474321286490309 29 -0.43106201633489105 30 -0.49795978587402512 40 -0.49795978587402512;
+	setAttr -s 7 ".ktv[0:6]"  0 -0.49795978587402512 2 -0.70084178396426233
+		 17 3.474321286490309 29 -0.43106201633489105 30 -0.49795978587402512 40 -0.49795978587402512
+		 46 -7.2098411434636098;
 	setAttr ".pre" 3;
 createNode animCurveTA -n "Head_Ctrl_rotateX";
 	rename -uid "CFE73735-46CB-1C3C-BD54-DAA25F2BCC4C";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 5 ".ktv[0:4]"  0 -3.1066750179926532 13 -1.0972664800509428
-		 29 -3.0788067941783526 30 -3.1066750179926532 37 -3.3773850821971045;
+		 29 -3.0788067941783526 30 -3.1066750179926532 46 8.6476683913835259;
 	setAttr ".pre" 3;
 createNode animCurveTA -n "Head_Ctrl_rotateY";
 	rename -uid "1DA9C5E6-4CEF-65B8-E1ED-36B2EDD928C1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 7 ".ktv[0:6]"  0 26.289568109352441 8 26.475563431462572
-		 23 26.151022535949277 29 26.25326549657051 30 26.289568109352441 37 22.285235225902873
-		 40 21.150688703411038;
+		 23 26.151022535949277 29 26.25326549657051 30 26.289568109352441 40 21.150688703411038
+		 46 -50.578579437060903;
 	setAttr -s 7 ".kit[4:6]"  1 18 18;
 	setAttr -s 7 ".kot[4:6]"  1 18 18;
-	setAttr -s 7 ".kix[4:6]"  0.99979193300733338 0.96565445449703335 
+	setAttr -s 7 ".kix[4:6]"  0.99979193300733338 0.77812334396510863 
 		1;
-	setAttr -s 7 ".kiy[4:6]"  0.020398301239561815 -0.25982970290179874 
+	setAttr -s 7 ".kiy[4:6]"  0.020398301239561815 -0.62811150409505878 
 		0;
-	setAttr -s 7 ".kox[4:6]"  0.99979193309063008 0.96565445449703324 
+	setAttr -s 7 ".kox[4:6]"  0.99979193309063008 0.77812334396510874 
 		1;
-	setAttr -s 7 ".koy[4:6]"  0.020398297156895295 -0.25982970290179874 
+	setAttr -s 7 ".koy[4:6]"  0.020398297156895295 -0.62811150409505878 
 		0;
 	setAttr ".pre" 3;
 createNode animCurveTA -n "Head_Ctrl_rotateZ";
@@ -2335,8 +2339,8 @@ createNode animCurveTA -n "Head_Ctrl_rotateZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 7 ".ktv[0:6]"  0 1.9832437439298178 8 -0.70084178396426233
-		 23 2.0785592811419655 29 2.0785592811419655 30 1.9832437439298178 37 17.30383834278064
-		 40 21.524818487361987;
+		 23 2.0785592811419655 29 2.0785592811419655 30 1.9832437439298178 40 21.524818487361987
+		 46 -4.215794606678446;
 	setAttr ".pre" 3;
 createNode animCurveTA -n "R_Clavicle_Jnt_Ctrl_rotateX";
 	rename -uid "2F1C0778-4A87-A203-F4EF-9AB50717F80C";
@@ -2363,109 +2367,137 @@ createNode animCurveTL -n "R_Arm_IK_Ctrl_translateX";
 	rename -uid "3E9FDECD-4C91-8DEB-C392-738108355F4A";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 7 ".ktv[0:6]"  0 0.78724059796151313 7 0.84095673541448823
+	setAttr -s 10 ".ktv[0:9]"  0 0.78724059796151313 7 0.84095673541448823
 		 22 0.72160718709072857 29 0.77530802189319825 30 0.78724059796151313 34 0.29564727752050934
-		 40 0.27278438586035819;
-	setAttr -s 7 ".kit[0:6]"  1 18 18 18 1 18 18;
-	setAttr -s 7 ".kot[0:6]"  1 18 18 18 1 18 18;
-	setAttr -s 7 ".kix[0:6]"  0.033730409238757843 1 1 0.040596219534467286 
-		0.027995760705662478 0.02914694409407409 1;
-	setAttr -s 7 ".kiy[0:6]"  0.99943096784749763 0 0 0.99917563368984808 
-		0.99960804187567009 -0.99957513757094674 0;
-	setAttr -s 7 ".kox[0:6]"  0.033730408469366729 1 1 0.040596219534467293 
-		0.027995757506105792 0.029146944094074083 1;
-	setAttr -s 7 ".koy[0:6]"  0.99943096787346442 0 0 0.99917563368984796 
-		0.99960804196527908 -0.99957513757094663 0;
+		 40 0.31300203339804472 41 0.11413655766281738 50 0.20348434840022711 60 0.20348434840022711;
+	setAttr -s 10 ".kit[0:9]"  1 18 18 18 1 18 2 18 
+		18 18;
+	setAttr -s 10 ".kot[0:9]"  1 18 18 18 1 18 1 2 
+		2 18;
+	setAttr -s 10 ".ktl[6:9]" no yes yes yes;
+	setAttr -s 10 ".kix[0:9]"  0.033730409238757843 1 1 0.040596219534467286 
+		0.027995760705662478 1 0.11448447269456188 1 1 1;
+	setAttr -s 10 ".kiy[0:9]"  0.99943096784749763 0 0 0.99917563368984808 
+		0.99960804187567009 0 0.99342503769124324 0 0 0;
+	setAttr -s 10 ".kox[0:9]"  0.033730408469366729 1 1 0.040596219534467293 
+		0.027995757506105792 1 0.00015969601489974807 0.033557744585479048 1 1;
+	setAttr -s 10 ".koy[0:9]"  0.99943096787346442 0 0 0.99917563368984796 
+		0.99960804196527908 0 -0.9999999872485914 0.99943678028094196 0 0;
 	setAttr ".pre" 3;
 createNode animCurveTL -n "R_Arm_IK_Ctrl_translateY";
 	rename -uid "7BCE199C-451E-498A-2B2D-E79A822DC0EA";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 7 ".ktv[0:6]"  0 -0.46546916000962307 7 -0.45791680881079799
+	setAttr -s 10 ".ktv[0:9]"  0 -0.46546916000962307 7 -0.45791680881079799
 		 22 -0.47469704929535 29 -0.46689577403787014 30 -0.46546916000962307 34 -0.40776754114384334
-		 40 0.075607495097222185;
-	setAttr -s 7 ".kit[0:6]"  1 18 18 18 1 18 18;
-	setAttr -s 7 ".kot[0:6]"  1 18 18 18 1 18 18;
-	setAttr -s 7 ".kix[0:6]"  0.24968227464386189 1 1 0.27761959566729205 
-		0.24047982206387061 0.0077022321000613132 1;
-	setAttr -s 7 ".kiy[0:6]"  0.96832781728537942 0 0 0.96069108463726738 
-		0.97065413777520637 0.99997033737040253 0;
-	setAttr -s 7 ".kox[0:6]"  0.24968228189250424 1 1 0.27761959566729205 
-		0.24047983418372076 0.0077022321000613124 1;
-	setAttr -s 7 ".koy[0:6]"  0.96832781541632484 0 0 0.96069108463726738 
-		0.97065413477250995 0.99997033737040253 0;
+		 40 0.045543750453691738 41 0.41570892953295724 50 0.27629572369377786 60 0.27629572369377786;
+	setAttr -s 10 ".kit[0:9]"  1 18 18 18 1 18 2 18 
+		18 18;
+	setAttr -s 10 ".kot[0:9]"  1 18 18 18 1 18 2 2 
+		2 18;
+	setAttr -s 10 ".ktl[6:9]" no yes yes yes;
+	setAttr -s 10 ".kix[0:9]"  0.24968227464386189 1 1 0.27761959566729205 
+		0.24047982206387061 0.0077022321000613132 0.0044119362826266486 1 1 1;
+	setAttr -s 10 ".kiy[0:9]"  0.96832781728537942 0 0 0.96069108463726738 
+		0.97065413777520637 0.99997033737040253 0.999990267361757 0 0 0;
+	setAttr -s 10 ".kox[0:9]"  0.24968228189250424 1 1 0.27761959566729205 
+		0.24047983418372076 0.0077022321000613124 0.00090049852612508752 0.021513784416718251 
+		1 1;
+	setAttr -s 10 ".koy[0:9]"  0.96832781541632484 0 0 0.96069108463726738 
+		0.97065413477250995 0.99997033737040253 0.99999959455111997 -0.99976855175589063 
+		0 0;
 	setAttr ".pre" 3;
 createNode animCurveTL -n "R_Arm_IK_Ctrl_translateZ";
 	rename -uid "D9FDC6BD-4914-985B-803B-97A20FBCDF22";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 7 ".ktv[0:6]"  0 0.15041374931186391 7 0.11526994891974741
+	setAttr -s 10 ".ktv[0:9]"  0 0.15041374931186391 7 0.11526994891974741
 		 22 0.19335442971197458 29 0.15745113495532426 30 0.15041374931186391 34 -0.21137078943629703
-		 40 -0.43893335679810203;
-	setAttr -s 7 ".kit[0:6]"  1 18 18 18 1 18 18;
-	setAttr -s 7 ".kot[0:6]"  1 18 18 18 1 18 18;
-	setAttr -s 7 ".kix[0:6]"  0.038850343782159576 1 1 0.06198177096473232 
-		0.04909224846435397 0.0056558859512046335 1;
-	setAttr -s 7 ".kiy[0:6]"  -0.99924504041201412 0 0 -0.99807728161103604 
-		-0.99879424865220079 -0.99998400534913912 0;
-	setAttr -s 7 ".kox[0:6]"  0.038850324509790583 1 1 0.06198177096473232 
-		0.049092234771544278 0.0056558859512046335 1;
-	setAttr -s 7 ".koy[0:6]"  -0.99924504116131796 0 0 -0.99807728161103604 
-		-0.99879424932522298 -0.999984005349139 0;
+		 40 -0.39033870254466407 41 0.5787440982167561 50 0.47234166589996923 60 0.47234166589996923;
+	setAttr -s 10 ".kit[0:9]"  1 18 18 18 1 18 2 18 
+		18 18;
+	setAttr -s 10 ".kot[0:9]"  1 18 18 18 1 18 1 2 
+		2 18;
+	setAttr -s 10 ".ktl[6:9]" no yes yes yes;
+	setAttr -s 10 ".kix[0:9]"  0.038850343782159576 1 1 0.06198177096473232 
+		0.04909224846435397 0.0061641329479497414 0.011174489840910892 1 1 1;
+	setAttr -s 10 ".kiy[0:9]"  -0.99924504041201412 0 0 -0.99807728161103604 
+		-0.99879424865220079 -0.99998100155202951 -0.99993756343923568 0 0 0;
+	setAttr -s 10 ".kox[0:9]"  0.038850324509790583 1 1 0.06198177096473232 
+		0.049092234771544278 0.0061641329479497431 0.0011828835696974379 0.028183644126485927 
+		1 1;
+	setAttr -s 10 ".koy[0:9]"  -0.99924504116131796 0 0 -0.99807728161103604 
+		-0.99879424932522298 -0.99998100155202951 0.99999930039298568 -0.9996027622029422 
+		0 0;
 	setAttr ".pre" 3;
 createNode animCurveTA -n "R_Arm_IK_Ctrl_rotateX";
 	rename -uid "86A6B980-4451-325F-8F86-60B567EA418A";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 7 ".ktv[0:6]"  0 -61.218240535857049 7 -61.798587676740063
+	setAttr -s 10 ".ktv[0:9]"  0 -61.218240535857049 7 -61.798587676740063
 		 22 -60.509139618491105 29 -61.112141637572321 30 -61.218240535857049 34 32.638610941339465
-		 40 60.1224759192609;
-	setAttr -s 7 ".kit[0:6]"  1 18 18 18 1 18 18;
-	setAttr -s 7 ".kot[0:6]"  1 18 18 18 1 18 18;
-	setAttr -s 7 ".kix[0:6]"  0.99856953997103193 1 1 0.99892476726386559 
-		0.99866509698973072 0.15548226266703111 1;
-	setAttr -s 7 ".kiy[0:6]"  -0.05346843781186765 0 0 -0.046360644374641762 
-		-0.051652919128466181 0.98783868419693932 0;
-	setAttr -s 7 ".kox[0:6]"  0.99856953829384665 1 1 0.9989247672638657 
-		0.99866509678937576 0.15548226266703111 1;
-	setAttr -s 7 ".koy[0:6]"  -0.053468469134752145 0 0 -0.046360644374641762 
-		-0.051652923002156556 0.98783868419693932 0;
+		 40 60.1224759192609 41 28.095371765826371 50 34.686657100155351 60 34.686657100155351;
+	setAttr -s 10 ".kit[0:9]"  1 18 18 18 1 18 2 18 
+		18 18;
+	setAttr -s 10 ".kot[0:9]"  1 18 18 18 1 18 1 2 
+		2 18;
+	setAttr -s 10 ".ktl[6:9]" no yes yes yes;
+	setAttr -s 10 ".kix[0:9]"  0.99856953997103193 1 1 0.99892476726386559 
+		0.99866509698973072 0.15548226266703111 0.38483128832997848 1 1 1;
+	setAttr -s 10 ".kiy[0:9]"  -0.05346843781186765 0 0 -0.046360644374641762 
+		-0.051652919128466181 0.98783868419693932 0.92298693355989003 0 0 0;
+	setAttr -s 10 ".kox[0:9]"  0.99856953829384665 1 1 0.9989247672638657 
+		0.99866509678937576 0.15548226266703111 0.57336863159527773 0.9337048863754519 1 
+		1;
+	setAttr -s 10 ".koy[0:9]"  -0.053468469134752145 0 0 -0.046360644374641762 
+		-0.051652923002156556 0.98783868419693932 0.81929751147099106 0.35804355204165378 
+		0 0;
 	setAttr ".pre" 3;
 createNode animCurveTA -n "R_Arm_IK_Ctrl_rotateY";
 	rename -uid "636E7A26-47AC-BA16-3AB2-0C84C77E2EC9";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 7 ".ktv[0:6]"  0 -106.74624060485462 7 -105.65825975421771
+	setAttr -s 10 ".ktv[0:9]"  0 -106.74624060485462 7 -105.65825975421771
 		 22 -108.07559706224902 29 -107.05789852349362 30 -106.74624060485462 34 -127.54172321386663
-		 40 -135.93802305011886;
-	setAttr -s 7 ".kit[0:6]"  1 18 18 18 1 18 18;
-	setAttr -s 7 ".kot[0:6]"  1 18 18 18 1 18 18;
-	setAttr -s 7 ".kix[0:6]"  0.99356943693867628 1 1 0.99623631769795595 
-		0.98518499096722068 0.547483457795785 1;
-	setAttr -s 7 ".kiy[0:6]"  0.11322444074210222 0 0 0.08667871307084217 
-		0.1714949957663999 -0.83681650523873563 0;
-	setAttr -s 7 ".kox[0:6]"  0.99356944012890114 1 1 0.99623631769795606 
-		0.98518498782935704 0.54748345779578511 1;
-	setAttr -s 7 ".koy[0:6]"  0.11322441274717182 0 0 0.08667871307084217 
-		0.17149501379244117 -0.83681650523873574 0;
+		 40 -135.93802305011886 41 -217.16201803588859 50 -212.33697508857858 60 -212.33697508857858;
+	setAttr -s 10 ".kit[0:9]"  1 18 18 18 1 18 2 18 
+		18 18;
+	setAttr -s 10 ".kot[0:9]"  1 18 18 18 1 18 1 2 
+		2 18;
+	setAttr -s 10 ".ktl[6:9]" no yes yes yes;
+	setAttr -s 10 ".kix[0:9]"  0.99356943693867628 1 1 0.99623631769795595 
+		0.98518499096722068 0.547483457795785 0.80664263703334915 1 1 1;
+	setAttr -s 10 ".kiy[0:9]"  0.11322444074210222 0 0 0.08667871307084217 
+		0.1714949957663999 -0.83681650523873563 -0.59103947086458153 0 0 0;
+	setAttr -s 10 ".kox[0:9]"  0.99356944012890114 1 1 0.99623631769795606 
+		0.98518498782935704 0.54748345779578511 0.073941477290458205 0.96278641935423259 
+		1 1;
+	setAttr -s 10 ".koy[0:9]"  0.11322441274717182 0 0 0.08667871307084217 
+		0.17149501379244117 -0.83681650523873574 -0.99726258224005615 0.27026340985611763 
+		0 0;
 	setAttr ".pre" 3;
 createNode animCurveTA -n "R_Arm_IK_Ctrl_rotateZ";
 	rename -uid "FABF573F-4A79-6588-AC8B-1EB32C659300";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 7 ".ktv[0:6]"  0 -78.14445859228185 7 -74.229759076516331
+	setAttr -s 10 ".ktv[0:9]"  0 -78.14445859228185 7 -74.229759076516331
 		 22 -82.92765958060366 29 -79.289464126542867 30 -78.14445859228185 34 -198.38819993205306
-		 40 -216.77907682585186;
-	setAttr -s 7 ".kit[0:6]"  1 18 18 18 1 18 18;
-	setAttr -s 7 ".kot[0:6]"  1 18 18 18 1 18 18;
-	setAttr -s 7 ".kix[0:6]"  0.91664065333193234 1 1 0.95432776668462038 
-		0.84131755469533942 0.2033565179899321 1;
-	setAttr -s 7 ".kiy[0:6]"  0.3997122873507995 0 0 0.29876163363916858 
-		0.54054118451923217 -0.97910475772054673 0;
-	setAttr -s 7 ".kox[0:6]"  0.91664068743459726 1 1 0.95432776668462027 
-		0.84131754807092862 0.2033565179899321 1;
-	setAttr -s 7 ".koy[0:6]"  0.39971220914481603 0 0 0.29876163363916858 
-		0.54054119482970087 -0.97910475772054673 0;
+		 40 -216.77907682585189 41 -244.26517808992571 50 -234.54608650724032 60 -234.54608650724032;
+	setAttr -s 10 ".kit[0:9]"  1 18 18 18 1 18 2 18 
+		18 18;
+	setAttr -s 10 ".kot[0:9]"  1 18 18 18 1 18 1 2 
+		2 18;
+	setAttr -s 10 ".ktl[6:9]" no yes yes yes;
+	setAttr -s 10 ".kix[0:9]"  0.91664065333193234 1 1 0.95432776668462038 
+		0.84131755469533942 0.20335651798993185 0.5288322103148605 1 1 1;
+	setAttr -s 10 ".kiy[0:9]"  0.3997122873507995 0 0 0.29876163363916858 
+		0.54054118451923217 -0.97910475772054673 -0.84872639486085233 0 0 0;
+	setAttr -s 10 ".kox[0:9]"  0.91664068743459726 1 1 0.95432776668462027 
+		0.84131754807092862 0.20335651798993185 0.06326457901424111 0.87048212085572452 1 
+		1;
+	setAttr -s 10 ".koy[0:9]"  0.39971220914481603 0 0 0.29876163363916858 
+		0.54054119482970087 -0.97910475772054673 -0.99799679009611586 0.49220003786115241 
+		0 0;
 	setAttr ".pre" 3;
 createNode animCurveTA -n "CoG_Jnt_Ctrl_rotateX";
 	rename -uid "2FC896BB-499C-978A-A4EB-D7ABC0277FC9";
@@ -2479,6 +2511,10 @@ createNode animCurveTA -n "CoG_Jnt_Ctrl_rotateY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 6 ".ktv[0:5]"  0 0 29 0 30 0 40 360 45 360 60 360;
+	setAttr -s 6 ".kit[3:5]"  2 18 18;
+	setAttr -s 6 ".kot[3:5]"  1 18 18;
+	setAttr -s 6 ".kox[3:5]"  0.98288980002800741 1 1;
+	setAttr -s 6 ".koy[3:5]"  -0.18419457375531911 0 0;
 	setAttr ".pre" 3;
 createNode animCurveTA -n "CoG_Jnt_Ctrl_rotateZ";
 	rename -uid "565A1A10-425A-C960-3D4C-199498FFD862";
@@ -2537,53 +2573,53 @@ createNode animCurveTL -n "R_Leg_IK_Ctrl_translateX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 14 ".ktv[0:13]"  0 -0.20084629594634126 29 -0.20084629594634126
-		 30 -0.20084629594634135 33 -0.0074021455282064341 34 0.32667025628314394 37 -0.40795414283115905
+		 30 -0.20084629594634135 33 -0.20084629594634135 34 -0.053430842777028191 37 -0.40795414283115905
 		 38 -0.33056778094206757 40 0.0022207858304525937 41 0.11324096640848703 44 0.11324096640848706
 		 48 0.1132409664084871 50 0.11324096836872323 51 0.11324096905480589 53 0.11324096640848705;
-	setAttr -s 14 ".kit[2:13]"  1 18 18 18 18 18 18 18 
+	setAttr -s 14 ".kit[2:13]"  1 1 18 18 18 18 18 18 
 		1 18 18 18;
-	setAttr -s 14 ".kot[2:13]"  1 18 18 18 18 18 18 18 
+	setAttr -s 14 ".kot[2:13]"  1 1 18 18 18 18 18 18 
 		1 18 18 18;
-	setAttr -s 14 ".kix[2:13]"  1 0.0025275587441870888 1 1 0.0024379769660537254 
-		0.00225321710640651 1 1 1 0.99999999999649847 1 1;
-	setAttr -s 14 ".kiy[2:13]"  0 0.99999680571829563 0 0 0.99999702812974056 
-		0.99999746150311364 0 0 0 2.646318790757337e-06 0 0;
-	setAttr -s 14 ".kox[2:13]"  1 0.0025275587441870888 1 1 0.0024379769660537254 
-		0.0022532171064065104 1 1 1 0.99999999999649847 1 1;
-	setAttr -s 14 ".koy[2:13]"  0 0.99999680571829563 0 0 0.99999702812974056 
-		0.99999746150311364 0 0 0 2.646318790757337e-06 0 0;
+	setAttr -s 14 ".kix[2:13]"  1 1 1 1 0.0024379769660537254 0.00225321710640651 
+		1 1 1 0.99999999999649847 1 1;
+	setAttr -s 14 ".kiy[2:13]"  0 0 0 0 0.99999702812974056 0.99999746150311364 
+		0 0 0 2.646318790757337e-06 0 0;
+	setAttr -s 14 ".kox[2:13]"  1 1 1 1 0.0024379769660537254 0.0022532171064065104 
+		1 1 1 0.99999999999649847 1 1;
+	setAttr -s 14 ".koy[2:13]"  0 0 0 0 0.99999702812974056 0.99999746150311364 
+		0 0 0 2.646318790757337e-06 0 0;
 	setAttr ".pre" 3;
 createNode animCurveTL -n "R_Leg_IK_Ctrl_translateY";
 	rename -uid "4C467A3C-450C-F0F6-2181-3AB892C09E9F";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 13 ".ktv[0:12]"  0 -7.0622550604817399e-17 29 -7.0622550604817399e-17
-		 30 -3.552713678800501e-17 33 -0.045403469591087361 34 -0.17549419288783569 37 -0.32535044548779757
-		 38 -0.20503755180033303 40 -0.15661008806309862 41 -0.01340974667463605 44 -0.013409746674636125
-		 50 -0.013409746674636232 52 -0.04337869260789548 53 -0.013409746674636087;
-	setAttr -s 13 ".kit[2:12]"  1 18 18 18 18 18 18 18 
+		 30 -3.552713678800501e-17 33 0 34 -0.24577931646612122 37 -0.32535044548779757 38 -0.20503755180033303
+		 40 -0.15661008806309862 41 -0.01340974667463605 44 -0.013409746674636125 50 -0.013409746674636232
+		 52 -0.04337869260789548 53 -0.013409746674636087;
+	setAttr -s 13 ".kit[2:12]"  1 1 18 18 18 18 18 18 
 		1 18 18;
-	setAttr -s 13 ".kot[2:12]"  1 18 18 18 18 18 18 18 
+	setAttr -s 13 ".kot[2:12]"  1 1 18 18 18 18 18 18 
 		1 18 18;
-	setAttr -s 13 ".kix[2:12]"  1 0.0075973730571166206 0.0047627526835561651 
-		1 0.0059261604954402311 0.0052183783220562134 1 1 1 1 1;
-	setAttr -s 13 ".kiy[2:12]"  0 -0.99997113954485262 -0.99998865802911752 
-		0 0.99998244015671711 0.9999863841711486 0 0 0 0 0;
-	setAttr -s 13 ".kox[2:12]"  1 0.0075973730571166189 0.0047627526835561651 
-		1 0.0059261604954402311 0.0052183783220562134 1 1 1 1 1;
-	setAttr -s 13 ".koy[2:12]"  0 -0.99997113954485251 -0.99998865802911752 
-		0 0.99998244015671711 0.9999863841711486 0 0 0 0 0;
+	setAttr -s 13 ".kix[2:12]"  1 1 0.0041890873320093976 1 0.0059261604954402311 
+		0.0052183783220562134 1 1 1 1 1;
+	setAttr -s 13 ".kiy[2:12]"  0 0 -0.99999122573516852 0 0.99998244015671711 
+		0.9999863841711486 0 0 0 0 0;
+	setAttr -s 13 ".kox[2:12]"  1 1 0.0041890873320093976 1 0.0059261604954402311 
+		0.0052183783220562134 1 1 1 1 1;
+	setAttr -s 13 ".koy[2:12]"  0 0 -0.99999122573516841 0 0.99998244015671711 
+		0.9999863841711486 0 0 0 0 0;
 	setAttr ".pre" 3;
 createNode animCurveTL -n "R_Leg_IK_Ctrl_translateZ";
 	rename -uid "1B638307-46E6-2082-0D29-EBA5F7259324";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 11 ".ktv[0:10]"  0 0.070906259450672013 29 0.070906259450672013
-		 30 0.070906259450672027 33 -0.3273900728352851 34 0.65067544144908118 37 -0.36270318741148921
+		 30 0.070906259450672027 33 0.070906259450672027 34 0.44955743168882956 37 -0.36270318741148921
 		 38 -0.3328110444576331 40 -0.2474049217323292 41 -1.6116385501671406 50 -1.612 53 -1.8108166370169463;
-	setAttr -s 11 ".kit[2:10]"  1 18 18 18 18 18 18 1 
+	setAttr -s 11 ".kit[2:10]"  1 1 18 18 18 18 18 1 
 		18;
-	setAttr -s 11 ".kot[2:10]"  1 18 18 18 18 18 18 18 
+	setAttr -s 11 ".kot[2:10]"  1 1 18 18 18 18 18 18 
 		18;
 	setAttr -s 11 ".kix[2:10]"  1 1 1 1 0.0086728311514698217 1 0.94045209492347093 
 		1 1;
@@ -2598,20 +2634,21 @@ createNode animCurveTA -n "Pelvis_Ctrl_rotateX";
 	rename -uid "7CB74154-4F9C-B904-D79B-4AB9E46BC970";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  0 0 29 0 30 0 33 0 40 0;
+	setAttr -s 7 ".ktv[0:6]"  0 0 29 0 30 0 33 0 36 0 40 0 50 0;
 	setAttr ".pre" 3;
 createNode animCurveTA -n "Pelvis_Ctrl_rotateY";
 	rename -uid "62667FB1-4E32-A87F-26DC-2BA5C81BCFC1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  0 -51.828308008951559 29 -51.828308008951559
-		 30 -51.828308008951559 33 -66.151180731902116 40 4.8160651799059453;
+	setAttr -s 7 ".ktv[0:6]"  0 -51.828308008951559 29 -51.828308008951559
+		 30 -51.828308008951559 33 -66.151180731902116 36 47.234440483258133 40 4.8160651799059453
+		 50 36.144609196266188;
 	setAttr ".pre" 3;
 createNode animCurveTA -n "Pelvis_Ctrl_rotateZ";
 	rename -uid "C9214115-4511-E7AD-19C3-FDA7DBBEA210";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  0 0 29 0 30 0 33 0 40 0;
+	setAttr -s 7 ".ktv[0:6]"  0 0 29 0 30 0 33 0 36 0 40 0 50 0;
 	setAttr ".pre" 3;
 createNode animCurveTA -n "L_Leg_IK_Ctrl_rotateX";
 	rename -uid "219ACDFA-42E1-3869-CEBD-D09EFC9A67F4";
@@ -2666,13 +2703,13 @@ createNode animCurveTA -n "R_Leg_IK_Ctrl_rotateY";
 	setAttr ".wgt" no;
 	setAttr -s 9 ".ktv[0:8]"  0 60.106504476160531 29 60.106504476160531
 		 30 60.106504476160531 32 32.952904474610811 33 27.979682225488354 34 100.02202725222031
-		 38 199.64847511493116 40 167.32719950307506 41 167.32719950307501;
+		 38 199.64847511493119 40 167.32719950307506 41 167.32719950307501;
 	setAttr ".pre" 3;
 createNode animCurveTA -n "R_Leg_IK_Ctrl_rotateZ";
 	rename -uid "93AA6657-43BD-E8DF-DB6C-78B75F316F23";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  0 0 29 0 30 2.8347149407189329e-22 32 8.487784573371523e-17
+	setAttr -s 9 ".ktv[0:8]"  0 0 29 0 30 2.8347149407189329e-22 32 8.4877845733715218e-17
 		 33 -5.6571371725972881e-18 34 -71.266554473555132 38 -183.34435731855149 40 -181.21568895683146
 		 41 -181.21568895683146;
 	setAttr ".pre" 3;
@@ -2696,35 +2733,37 @@ createNode animCurveTA -n "Torso_FK_Ctrl_rotateZ";
 	rename -uid "E12A9490-4709-C445-8C19-96AACA736286";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 7 ".ktv[0:6]"  0 -6.692878550698012 2 -6.5251624367551608
-		 17 -9.9766373425912942 29 -6.7481808152861102 30 -6.692878550698012 37 -9.9236207493371129
-		 40 -6.692878550698012;
+	setAttr -s 9 ".ktv[0:8]"  0 -6.692878550698012 2 -6.5251624367551608
+		 17 -9.9766373425912942 29 -6.7481808152861111 30 -6.692878550698012 37 -9.9236207493371129
+		 40 -6.692878550698012 46 -6.6928785506980688 50 -6.6928785506980688;
 	setAttr ".pre" 3;
 createNode animCurveTA -n "Torso_FK_Ctrl_rotateY";
 	rename -uid "D2BCD9A8-4244-E092-CE2F-928E06B7888A";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 7 ".ktv[0:6]"  0 -0.39773037717948501 2 -0.78759568454510753
+	setAttr -s 9 ".ktv[0:8]"  0 -0.39773037717948501 2 -0.78759568454510753
 		 17 7.235547073741345 29 -0.26917722939429273 30 -0.39773037717948501 37 7.1077813315215472
-		 40 -0.39773037717948501;
-	setAttr -s 7 ".kit[0:6]"  1 18 18 18 18 18 18;
-	setAttr -s 7 ".kot[0:6]"  1 18 18 18 18 18 18;
-	setAttr -s 7 ".kix[0:6]"  0.98990488320569325 1 1 0.98021502332286459 
-		1 1 1;
-	setAttr -s 7 ".kiy[0:6]"  -0.14173327839827485 0 0 -0.19793561592638145 
-		0 0 0;
-	setAttr -s 7 ".kox[0:6]"  0.98990488349315608 1 1 0.9802150233228647 
-		1 1 1;
-	setAttr -s 7 ".koy[0:6]"  -0.14173327639055391 0 0 -0.19793561592638148 
-		0 0 0;
+		 40 -0.39773037717948501 46 -0.39773037717948512 50 -0.39773037717948512;
+	setAttr -s 9 ".kit[0:8]"  1 18 18 18 18 18 18 18 
+		18;
+	setAttr -s 9 ".kot[0:8]"  1 18 18 18 18 18 18 18 
+		18;
+	setAttr -s 9 ".kix[0:8]"  0.98990488320569325 1 1 0.98021502332286459 
+		1 1 1 1 1;
+	setAttr -s 9 ".kiy[0:8]"  -0.14173327839827485 0 0 -0.19793561592638145 
+		0 0 0 0 0;
+	setAttr -s 9 ".kox[0:8]"  0.98990488349315608 1 1 0.9802150233228647 
+		1 1 1 1 1;
+	setAttr -s 9 ".koy[0:8]"  -0.14173327639055391 0 0 -0.19793561592638148 
+		0 0 0 0 0;
 	setAttr ".pre" 3;
 createNode animCurveTA -n "Torso_FK_Ctrl_rotateX";
 	rename -uid "4985A6E1-49D8-3011-055D-F08F8C1958B8";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 7 ".ktv[0:6]"  0 -23.179366827538182 2 -23.169908572732545
+	setAttr -s 9 ".ktv[0:8]"  0 -23.179366827538182 2 -23.169908572732545
 		 17 -23.364552535958257 29 -23.182485567279439 30 -23.179366827538182 37 -23.368895184840575
-		 40 -23.179366827538182;
+		 40 -23.179366827538182 46 28.847962141808601 50 32.893733411815148;
 	setAttr ".pre" 3;
 createNode animCurveTA -n "Backpack_1_Jnt_Ctrl_rotateX";
 	rename -uid "1BD6E1E8-4257-499D-067F-FFADDDDD053D";
@@ -3491,17 +3530,17 @@ createNode animCurveTL -n "Head_Ctrl_translateX";
 	rename -uid "7F15C799-4AC2-5770-53EC-7F9347D3749C";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  0 0 29 0 30 0;
+	setAttr -s 4 ".ktv[0:3]"  0 0 29 0 30 0 46 0;
 createNode animCurveTL -n "Head_Ctrl_translateY";
 	rename -uid "E17289A6-4E5C-34C8-3993-E5A3B179FADA";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  0 0 29 0 30 0;
+	setAttr -s 4 ".ktv[0:3]"  0 0 29 0 30 0 46 0;
 createNode animCurveTL -n "Head_Ctrl_translateZ";
 	rename -uid "9FE0B412-4666-9F74-95F6-F294E611CF90";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  0 0 29 0 30 0;
+	setAttr -s 4 ".ktv[0:3]"  0 0 29 0 30 0 46 0;
 createNode animCurveTL -n "R_Foot_Reverse_Foot_Outer_Ctrl_translateX";
 	rename -uid "30C61C52-468E-5EA2-E747-8BA1DB37CB69";
 	setAttr ".tan" 18;
@@ -3747,17 +3786,17 @@ createNode animCurveTL -n "R_Arm_PV_Ctrl_translateX";
 	rename -uid "3F081633-467D-9352-1417-5D9B848EB9ED";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  0 0 29 0 30 0;
+	setAttr -s 4 ".ktv[0:3]"  0 0 29 0 30 0 50 -3.1974423109204502e-16;
 createNode animCurveTL -n "R_Arm_PV_Ctrl_translateY";
 	rename -uid "FA51034A-4E14-B525-1CBB-1CBEFCBE1E03";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  0 0 29 0 30 0;
+	setAttr -s 4 ".ktv[0:3]"  0 0 29 0 30 0 50 0.58860844668283596;
 createNode animCurveTL -n "R_Arm_PV_Ctrl_translateZ";
 	rename -uid "3F282415-4EA1-F1B8-4605-1482DEDC597D";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  0 0 29 0 30 0;
+	setAttr -s 4 ".ktv[0:3]"  0 0 29 0 30 0 50 -5.5289106626332791e-16;
 createNode animCurveTL -n "Axe_Jnt_Ctrl_translateX";
 	rename -uid "7A55723D-4FD1-3FEF-8B07-F29002D444E4";
 	setAttr ".tan" 18;
@@ -4150,19 +4189,19 @@ createNode animCurveTL -n "Neck_Ctrl_translateX";
 	rename -uid "D86CF008-4B0D-F9F9-AE06-7185F1AB846C";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  0 0 29 0 30 0;
+	setAttr -s 4 ".ktv[0:3]"  0 0 29 0 30 0 46 0;
 createNode animCurveTL -n "Neck_Ctrl_translateY";
 	rename -uid "48425513-4312-65EB-4CFA-C986ABFD1ED9";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  0 0.00048325719737320612 29 0.00048325719737320612
-		 30 0.00048325719737320612;
+	setAttr -s 4 ".ktv[0:3]"  0 0.00048325719737320612 29 0.00048325719737320612
+		 30 0.00048325719737320612 46 0.00048325719737320612;
 createNode animCurveTL -n "Neck_Ctrl_translateZ";
 	rename -uid "FE8EEA63-415C-3452-F579-C1A7EEB78C6A";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  0 -0.00025745226008638155 29 -0.00025745226008638155
-		 30 -0.00025745226008638155;
+	setAttr -s 4 ".ktv[0:3]"  0 -0.00025745226008638155 29 -0.00025745226008638155
+		 30 -0.00025745226008638155 46 -0.00025745226008638155;
 createNode animCurveTL -n "R_Foot_Reverse_Foot_ToeTap_Ctrl_translateX";
 	rename -uid "BADB14EF-4DE4-12CE-CB3C-D2AC1F4EA155";
 	setAttr ".tan" 18;
@@ -4487,39 +4526,16 @@ createNode nodeGraphEditorInfo -n "MayaNodeEditorSavedTabsInfo";
 	setAttr ".tgi[0].ni[3].x" 559.2918701171875;
 	setAttr ".tgi[0].ni[3].y" 309.42547607421875;
 	setAttr ".tgi[0].ni[3].nvs" 18306;
-createNode animCurveTL -n "Placeholder_translateX";
-	rename -uid "E4479DE9-4DD1-FEA8-A18E-1DA0AED15F5B";
-	setAttr ".tan" 18;
+createNode animCurveTU -n "R_Arm_IK_Ctrl_Local_Space";
+	rename -uid "895B2954-4693-DA45-2DAB-CB9277EE06C9";
+	setAttr ".tan" 2;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  41 0.31330782347163288;
-createNode animCurveTL -n "Placeholder_translateY";
-	rename -uid "0D9CD952-4529-4606-3030-909AC20343A2";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  41 0.24140672187043577;
-createNode animCurveTL -n "Placeholder_translateZ";
-	rename -uid "700B3861-462E-4C2E-F1D1-0CB8C95A5DF7";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  41 0.42086382158299857;
-createNode animCurveTA -n "Placeholder_rotateX";
-	rename -uid "5A463CF7-417B-2F4B-C744-07A1747A84B3";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  41 0;
-createNode animCurveTA -n "Placeholder_rotateY";
-	rename -uid "0B0F051B-4A0A-6DF7-F93B-7283F7B78DC7";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  41 353.618873;
-createNode animCurveTA -n "Placeholder_rotateZ";
-	rename -uid "83700E2C-4E94-15D1-621E-649D91ADFD26";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  41 0;
+	setAttr -s 2 ".ktv[0:1]"  40 2 41 4;
+	setAttr -s 2 ".kit[1]"  9;
+	setAttr -s 2 ".kot[0:1]"  5 2;
 select -ne :time1;
-	setAttr ".o" 30;
-	setAttr ".unw" 30;
+	setAttr ".o" 32;
+	setAttr ".unw" 32;
 select -ne :hardwareRenderingGlobals;
 	setAttr ".otfna" -type "stringArray" 22 "NURBS Curves" "NURBS Surfaces" "Polygons" "Subdiv Surface" "Particles" "Particle Instance" "Fluids" "Strokes" "Image Planes" "UI" "Lights" "Cameras" "Locators" "Joints" "IK Handles" "Deformers" "Motion Trails" "Components" "Hair Systems" "Follicles" "Misc. UI" "Ornaments"  ;
 	setAttr ".otfva" -type "Int32Array" 22 0 1 1 1 1 1
@@ -4579,8 +4595,8 @@ connectAttr "Caleb_RigRN.phl[7]" "pCylinder1_parentConstraint1.tg[0].trp";
 connectAttr "Caleb_RigRN.phl[8]" "pCylinder1_parentConstraint1.tg[0].trt";
 connectAttr "Caleb_RigRN.phl[9]" "pCylinder1_parentConstraint1.tg[0].tjo";
 connectAttr "Caleb_RigRN.phl[10]" "pCylinder1_parentConstraint1.tg[0].tsc";
-connectAttr "Caleb_RigRN.phl[11]" "pCylinder1_scaleConstraint1.tg[0].tpm";
-connectAttr "Caleb_RigRN.phl[12]" "pCylinder1_parentConstraint1.tg[0].tpm";
+connectAttr "Caleb_RigRN.phl[11]" "pCylinder1_parentConstraint1.tg[0].tpm";
+connectAttr "Caleb_RigRN.phl[12]" "pCylinder1_scaleConstraint1.tg[0].tpm";
 connectAttr "Spine_IKFK_Switch_Ctrl_rotateX.o" "Caleb_RigRN.phl[13]";
 connectAttr "Spine_IKFK_Switch_Ctrl_rotateY.o" "Caleb_RigRN.phl[14]";
 connectAttr "Spine_IKFK_Switch_Ctrl_rotateZ.o" "Caleb_RigRN.phl[15]";
@@ -4677,8 +4693,8 @@ connectAttr "Caleb_RigRN.phl[99]" "L_Arm_IK_Ctrl_parentConstraint1.cro";
 connectAttr "L_Arm_IK_Ctrl_scaleConstraint1.csx" "Caleb_RigRN.phl[100]";
 connectAttr "L_Arm_IK_Ctrl_scaleConstraint1.csy" "Caleb_RigRN.phl[101]";
 connectAttr "L_Arm_IK_Ctrl_scaleConstraint1.csz" "Caleb_RigRN.phl[102]";
-connectAttr "Caleb_RigRN.phl[103]" "L_Arm_IK_Ctrl_parentConstraint1.cpim";
-connectAttr "Caleb_RigRN.phl[104]" "L_Arm_IK_Ctrl_scaleConstraint1.cpim";
+connectAttr "Caleb_RigRN.phl[103]" "L_Arm_IK_Ctrl_scaleConstraint1.cpim";
+connectAttr "Caleb_RigRN.phl[104]" "L_Arm_IK_Ctrl_parentConstraint1.cpim";
 connectAttr "Caleb_RigRN.phl[105]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[1].dn"
 		;
 connectAttr "L_Arm_IK_Base_Ctrl_translateX.o" "Caleb_RigRN.phl[106]";
@@ -4756,337 +4772,338 @@ connectAttr "Caleb_RigRN.phl[177]" "L_Arm_IK_Ctrl_parentConstraint1.tg[0].ts";
 connectAttr "Caleb_RigRN.phl[178]" "L_Arm_IK_Ctrl_scaleConstraint1.tg[0].ts";
 connectAttr "Caleb_RigRN.phl[179]" "L_Arm_IK_Ctrl_parentConstraint1.tg[0].tpm";
 connectAttr "Caleb_RigRN.phl[180]" "L_Arm_IK_Ctrl_scaleConstraint1.tg[0].tpm";
-connectAttr "Caleb_RigRN.phl[181]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[0].dn"
+connectAttr "R_Arm_IK_Ctrl_Local_Space.o" "Caleb_RigRN.phl[181]";
+connectAttr "Caleb_RigRN.phl[182]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[0].dn"
 		;
-connectAttr "R_Arm_IK_Base_Ctrl_translateX.o" "Caleb_RigRN.phl[182]";
-connectAttr "R_Arm_IK_Base_Ctrl_translateY.o" "Caleb_RigRN.phl[183]";
-connectAttr "R_Arm_IK_Base_Ctrl_translateZ.o" "Caleb_RigRN.phl[184]";
-connectAttr "R_Arm_IK_Base_Ctrl_rotateX.o" "Caleb_RigRN.phl[185]";
-connectAttr "R_Arm_IK_Base_Ctrl_rotateY.o" "Caleb_RigRN.phl[186]";
-connectAttr "R_Arm_IK_Base_Ctrl_rotateZ.o" "Caleb_RigRN.phl[187]";
-connectAttr "R_Thumb_Jnt2_Ctrl_translateX.o" "Caleb_RigRN.phl[188]";
-connectAttr "R_Thumb_Jnt2_Ctrl_translateY.o" "Caleb_RigRN.phl[189]";
-connectAttr "R_Thumb_Jnt2_Ctrl_translateZ.o" "Caleb_RigRN.phl[190]";
-connectAttr "R_Thumb_Jnt2_Ctrl_rotateX.o" "Caleb_RigRN.phl[191]";
-connectAttr "R_Thumb_Jnt2_Ctrl_rotateY.o" "Caleb_RigRN.phl[192]";
-connectAttr "R_Thumb_Jnt2_Ctrl_rotateZ.o" "Caleb_RigRN.phl[193]";
-connectAttr "R_Thumb_Jnt1_Ctrl_translateX.o" "Caleb_RigRN.phl[194]";
-connectAttr "R_Thumb_Jnt1_Ctrl_translateY.o" "Caleb_RigRN.phl[195]";
-connectAttr "R_Thumb_Jnt1_Ctrl_translateZ.o" "Caleb_RigRN.phl[196]";
-connectAttr "R_Thumb_Jnt1_Ctrl_rotateX.o" "Caleb_RigRN.phl[197]";
-connectAttr "R_Thumb_Jnt1_Ctrl_rotateY.o" "Caleb_RigRN.phl[198]";
-connectAttr "R_Thumb_Jnt1_Ctrl_rotateZ.o" "Caleb_RigRN.phl[199]";
-connectAttr "R_Finger_3_Jnt_Ctrl_translateX.o" "Caleb_RigRN.phl[200]";
-connectAttr "R_Finger_3_Jnt_Ctrl_translateY.o" "Caleb_RigRN.phl[201]";
-connectAttr "R_Finger_3_Jnt_Ctrl_translateZ.o" "Caleb_RigRN.phl[202]";
-connectAttr "R_Finger_3_Jnt_Ctrl_rotateX.o" "Caleb_RigRN.phl[203]";
-connectAttr "R_Finger_3_Jnt_Ctrl_rotateY.o" "Caleb_RigRN.phl[204]";
-connectAttr "R_Finger_3_Jnt_Ctrl_rotateZ.o" "Caleb_RigRN.phl[205]";
-connectAttr "R_Finger_2_Jnt_Ctrl_translateX.o" "Caleb_RigRN.phl[206]";
-connectAttr "R_Finger_2_Jnt_Ctrl_translateY.o" "Caleb_RigRN.phl[207]";
-connectAttr "R_Finger_2_Jnt_Ctrl_translateZ.o" "Caleb_RigRN.phl[208]";
-connectAttr "R_Finger_2_Jnt_Ctrl_rotateX.o" "Caleb_RigRN.phl[209]";
-connectAttr "R_Finger_2_Jnt_Ctrl_rotateY.o" "Caleb_RigRN.phl[210]";
-connectAttr "R_Finger_2_Jnt_Ctrl_rotateZ.o" "Caleb_RigRN.phl[211]";
-connectAttr "R_Finger_1_Jnt1_Ctrl_translateX.o" "Caleb_RigRN.phl[212]";
-connectAttr "R_Finger_1_Jnt1_Ctrl_translateY.o" "Caleb_RigRN.phl[213]";
-connectAttr "R_Finger_1_Jnt1_Ctrl_translateZ.o" "Caleb_RigRN.phl[214]";
-connectAttr "R_Finger_1_Jnt1_Ctrl_rotateX.o" "Caleb_RigRN.phl[215]";
-connectAttr "R_Finger_1_Jnt1_Ctrl_rotateY.o" "Caleb_RigRN.phl[216]";
-connectAttr "R_Finger_1_Jnt1_Ctrl_rotateZ.o" "Caleb_RigRN.phl[217]";
-connectAttr "R_Fist_3_Jnt_Ctrl_translateX.o" "Caleb_RigRN.phl[218]";
-connectAttr "R_Fist_3_Jnt_Ctrl_translateY.o" "Caleb_RigRN.phl[219]";
-connectAttr "R_Fist_3_Jnt_Ctrl_translateZ.o" "Caleb_RigRN.phl[220]";
-connectAttr "R_Fist_3_Jnt_Ctrl_rotateX.o" "Caleb_RigRN.phl[221]";
-connectAttr "R_Fist_3_Jnt_Ctrl_rotateY.o" "Caleb_RigRN.phl[222]";
-connectAttr "R_Fist_3_Jnt_Ctrl_rotateZ.o" "Caleb_RigRN.phl[223]";
-connectAttr "R_Fist_2_Jnt_Ctrl_translateX.o" "Caleb_RigRN.phl[224]";
-connectAttr "R_Fist_2_Jnt_Ctrl_translateY.o" "Caleb_RigRN.phl[225]";
-connectAttr "R_Fist_2_Jnt_Ctrl_translateZ.o" "Caleb_RigRN.phl[226]";
-connectAttr "R_Fist_2_Jnt_Ctrl_rotateX.o" "Caleb_RigRN.phl[227]";
-connectAttr "R_Fist_2_Jnt_Ctrl_rotateY.o" "Caleb_RigRN.phl[228]";
-connectAttr "R_Fist_2_Jnt_Ctrl_rotateZ.o" "Caleb_RigRN.phl[229]";
-connectAttr "R_Fist_1_Jnt_Ctrl_translateX.o" "Caleb_RigRN.phl[230]";
-connectAttr "R_Fist_1_Jnt_Ctrl_translateY.o" "Caleb_RigRN.phl[231]";
-connectAttr "R_Fist_1_Jnt_Ctrl_translateZ.o" "Caleb_RigRN.phl[232]";
-connectAttr "R_Fist_1_Jnt_Ctrl_rotateX.o" "Caleb_RigRN.phl[233]";
-connectAttr "R_Fist_1_Jnt_Ctrl_rotateY.o" "Caleb_RigRN.phl[234]";
-connectAttr "R_Fist_1_Jnt_Ctrl_rotateZ.o" "Caleb_RigRN.phl[235]";
-connectAttr "CoG_Jnt_Ctrl_translateX.o" "Caleb_RigRN.phl[236]";
-connectAttr "CoG_Jnt_Ctrl_translateY.o" "Caleb_RigRN.phl[237]";
-connectAttr "CoG_Jnt_Ctrl_translateZ.o" "Caleb_RigRN.phl[238]";
-connectAttr "CoG_Jnt_Ctrl_rotateX.o" "Caleb_RigRN.phl[239]";
-connectAttr "CoG_Jnt_Ctrl_rotateY.o" "Caleb_RigRN.phl[240]";
-connectAttr "CoG_Jnt_Ctrl_rotateZ.o" "Caleb_RigRN.phl[241]";
-connectAttr "Pelvis_Ctrl_translateX.o" "Caleb_RigRN.phl[242]";
-connectAttr "Pelvis_Ctrl_translateY.o" "Caleb_RigRN.phl[243]";
-connectAttr "Pelvis_Ctrl_translateZ.o" "Caleb_RigRN.phl[244]";
-connectAttr "Pelvis_Ctrl_rotateX.o" "Caleb_RigRN.phl[245]";
-connectAttr "Pelvis_Ctrl_rotateY.o" "Caleb_RigRN.phl[246]";
-connectAttr "Pelvis_Ctrl_rotateZ.o" "Caleb_RigRN.phl[247]";
-connectAttr "L_Leg_IK_PV_Ctrl_translateX.o" "Caleb_RigRN.phl[248]";
-connectAttr "L_Leg_IK_PV_Ctrl_translateY.o" "Caleb_RigRN.phl[249]";
-connectAttr "L_Leg_IK_PV_Ctrl_translateZ.o" "Caleb_RigRN.phl[250]";
-connectAttr "L_Leg_IK_PV_Ctrl_rotateX.o" "Caleb_RigRN.phl[251]";
-connectAttr "L_Leg_IK_PV_Ctrl_rotateY.o" "Caleb_RigRN.phl[252]";
-connectAttr "L_Leg_IK_PV_Ctrl_rotateZ.o" "Caleb_RigRN.phl[253]";
-connectAttr "L_Leg_IK_Base_Ctrl_translateX.o" "Caleb_RigRN.phl[254]";
-connectAttr "L_Leg_IK_Base_Ctrl_translateY.o" "Caleb_RigRN.phl[255]";
-connectAttr "L_Leg_IK_Base_Ctrl_translateZ.o" "Caleb_RigRN.phl[256]";
-connectAttr "L_Leg_IK_Base_Ctrl_rotateX.o" "Caleb_RigRN.phl[257]";
-connectAttr "L_Leg_IK_Base_Ctrl_rotateY.o" "Caleb_RigRN.phl[258]";
-connectAttr "L_Leg_IK_Base_Ctrl_rotateZ.o" "Caleb_RigRN.phl[259]";
-connectAttr "L_Leg_IK_Ctrl_translateX.o" "Caleb_RigRN.phl[260]";
-connectAttr "L_Leg_IK_Ctrl_translateZ.o" "Caleb_RigRN.phl[261]";
-connectAttr "L_Leg_IK_Ctrl_translateY.o" "Caleb_RigRN.phl[262]";
-connectAttr "L_Leg_IK_Ctrl_rotateX.o" "Caleb_RigRN.phl[263]";
-connectAttr "L_Leg_IK_Ctrl_rotateY.o" "Caleb_RigRN.phl[264]";
-connectAttr "L_Leg_IK_Ctrl_rotateZ.o" "Caleb_RigRN.phl[265]";
-connectAttr "L_Leg_IK_Ctrl_Local_Space.o" "Caleb_RigRN.phl[266]";
-connectAttr "L_Foot_Reverse_Foot_Outer_Ctrl_translateX.o" "Caleb_RigRN.phl[267]"
+connectAttr "R_Arm_IK_Base_Ctrl_translateX.o" "Caleb_RigRN.phl[183]";
+connectAttr "R_Arm_IK_Base_Ctrl_translateY.o" "Caleb_RigRN.phl[184]";
+connectAttr "R_Arm_IK_Base_Ctrl_translateZ.o" "Caleb_RigRN.phl[185]";
+connectAttr "R_Arm_IK_Base_Ctrl_rotateX.o" "Caleb_RigRN.phl[186]";
+connectAttr "R_Arm_IK_Base_Ctrl_rotateY.o" "Caleb_RigRN.phl[187]";
+connectAttr "R_Arm_IK_Base_Ctrl_rotateZ.o" "Caleb_RigRN.phl[188]";
+connectAttr "R_Thumb_Jnt2_Ctrl_translateX.o" "Caleb_RigRN.phl[189]";
+connectAttr "R_Thumb_Jnt2_Ctrl_translateY.o" "Caleb_RigRN.phl[190]";
+connectAttr "R_Thumb_Jnt2_Ctrl_translateZ.o" "Caleb_RigRN.phl[191]";
+connectAttr "R_Thumb_Jnt2_Ctrl_rotateX.o" "Caleb_RigRN.phl[192]";
+connectAttr "R_Thumb_Jnt2_Ctrl_rotateY.o" "Caleb_RigRN.phl[193]";
+connectAttr "R_Thumb_Jnt2_Ctrl_rotateZ.o" "Caleb_RigRN.phl[194]";
+connectAttr "R_Thumb_Jnt1_Ctrl_translateX.o" "Caleb_RigRN.phl[195]";
+connectAttr "R_Thumb_Jnt1_Ctrl_translateY.o" "Caleb_RigRN.phl[196]";
+connectAttr "R_Thumb_Jnt1_Ctrl_translateZ.o" "Caleb_RigRN.phl[197]";
+connectAttr "R_Thumb_Jnt1_Ctrl_rotateX.o" "Caleb_RigRN.phl[198]";
+connectAttr "R_Thumb_Jnt1_Ctrl_rotateY.o" "Caleb_RigRN.phl[199]";
+connectAttr "R_Thumb_Jnt1_Ctrl_rotateZ.o" "Caleb_RigRN.phl[200]";
+connectAttr "R_Finger_3_Jnt_Ctrl_translateX.o" "Caleb_RigRN.phl[201]";
+connectAttr "R_Finger_3_Jnt_Ctrl_translateY.o" "Caleb_RigRN.phl[202]";
+connectAttr "R_Finger_3_Jnt_Ctrl_translateZ.o" "Caleb_RigRN.phl[203]";
+connectAttr "R_Finger_3_Jnt_Ctrl_rotateX.o" "Caleb_RigRN.phl[204]";
+connectAttr "R_Finger_3_Jnt_Ctrl_rotateY.o" "Caleb_RigRN.phl[205]";
+connectAttr "R_Finger_3_Jnt_Ctrl_rotateZ.o" "Caleb_RigRN.phl[206]";
+connectAttr "R_Finger_2_Jnt_Ctrl_translateX.o" "Caleb_RigRN.phl[207]";
+connectAttr "R_Finger_2_Jnt_Ctrl_translateY.o" "Caleb_RigRN.phl[208]";
+connectAttr "R_Finger_2_Jnt_Ctrl_translateZ.o" "Caleb_RigRN.phl[209]";
+connectAttr "R_Finger_2_Jnt_Ctrl_rotateX.o" "Caleb_RigRN.phl[210]";
+connectAttr "R_Finger_2_Jnt_Ctrl_rotateY.o" "Caleb_RigRN.phl[211]";
+connectAttr "R_Finger_2_Jnt_Ctrl_rotateZ.o" "Caleb_RigRN.phl[212]";
+connectAttr "R_Finger_1_Jnt1_Ctrl_translateX.o" "Caleb_RigRN.phl[213]";
+connectAttr "R_Finger_1_Jnt1_Ctrl_translateY.o" "Caleb_RigRN.phl[214]";
+connectAttr "R_Finger_1_Jnt1_Ctrl_translateZ.o" "Caleb_RigRN.phl[215]";
+connectAttr "R_Finger_1_Jnt1_Ctrl_rotateX.o" "Caleb_RigRN.phl[216]";
+connectAttr "R_Finger_1_Jnt1_Ctrl_rotateY.o" "Caleb_RigRN.phl[217]";
+connectAttr "R_Finger_1_Jnt1_Ctrl_rotateZ.o" "Caleb_RigRN.phl[218]";
+connectAttr "R_Fist_3_Jnt_Ctrl_translateX.o" "Caleb_RigRN.phl[219]";
+connectAttr "R_Fist_3_Jnt_Ctrl_translateY.o" "Caleb_RigRN.phl[220]";
+connectAttr "R_Fist_3_Jnt_Ctrl_translateZ.o" "Caleb_RigRN.phl[221]";
+connectAttr "R_Fist_3_Jnt_Ctrl_rotateX.o" "Caleb_RigRN.phl[222]";
+connectAttr "R_Fist_3_Jnt_Ctrl_rotateY.o" "Caleb_RigRN.phl[223]";
+connectAttr "R_Fist_3_Jnt_Ctrl_rotateZ.o" "Caleb_RigRN.phl[224]";
+connectAttr "R_Fist_2_Jnt_Ctrl_translateX.o" "Caleb_RigRN.phl[225]";
+connectAttr "R_Fist_2_Jnt_Ctrl_translateY.o" "Caleb_RigRN.phl[226]";
+connectAttr "R_Fist_2_Jnt_Ctrl_translateZ.o" "Caleb_RigRN.phl[227]";
+connectAttr "R_Fist_2_Jnt_Ctrl_rotateX.o" "Caleb_RigRN.phl[228]";
+connectAttr "R_Fist_2_Jnt_Ctrl_rotateY.o" "Caleb_RigRN.phl[229]";
+connectAttr "R_Fist_2_Jnt_Ctrl_rotateZ.o" "Caleb_RigRN.phl[230]";
+connectAttr "R_Fist_1_Jnt_Ctrl_translateX.o" "Caleb_RigRN.phl[231]";
+connectAttr "R_Fist_1_Jnt_Ctrl_translateY.o" "Caleb_RigRN.phl[232]";
+connectAttr "R_Fist_1_Jnt_Ctrl_translateZ.o" "Caleb_RigRN.phl[233]";
+connectAttr "R_Fist_1_Jnt_Ctrl_rotateX.o" "Caleb_RigRN.phl[234]";
+connectAttr "R_Fist_1_Jnt_Ctrl_rotateY.o" "Caleb_RigRN.phl[235]";
+connectAttr "R_Fist_1_Jnt_Ctrl_rotateZ.o" "Caleb_RigRN.phl[236]";
+connectAttr "CoG_Jnt_Ctrl_translateX.o" "Caleb_RigRN.phl[237]";
+connectAttr "CoG_Jnt_Ctrl_translateY.o" "Caleb_RigRN.phl[238]";
+connectAttr "CoG_Jnt_Ctrl_translateZ.o" "Caleb_RigRN.phl[239]";
+connectAttr "CoG_Jnt_Ctrl_rotateX.o" "Caleb_RigRN.phl[240]";
+connectAttr "CoG_Jnt_Ctrl_rotateY.o" "Caleb_RigRN.phl[241]";
+connectAttr "CoG_Jnt_Ctrl_rotateZ.o" "Caleb_RigRN.phl[242]";
+connectAttr "Pelvis_Ctrl_translateX.o" "Caleb_RigRN.phl[243]";
+connectAttr "Pelvis_Ctrl_translateY.o" "Caleb_RigRN.phl[244]";
+connectAttr "Pelvis_Ctrl_translateZ.o" "Caleb_RigRN.phl[245]";
+connectAttr "Pelvis_Ctrl_rotateX.o" "Caleb_RigRN.phl[246]";
+connectAttr "Pelvis_Ctrl_rotateY.o" "Caleb_RigRN.phl[247]";
+connectAttr "Pelvis_Ctrl_rotateZ.o" "Caleb_RigRN.phl[248]";
+connectAttr "L_Leg_IK_PV_Ctrl_translateX.o" "Caleb_RigRN.phl[249]";
+connectAttr "L_Leg_IK_PV_Ctrl_translateY.o" "Caleb_RigRN.phl[250]";
+connectAttr "L_Leg_IK_PV_Ctrl_translateZ.o" "Caleb_RigRN.phl[251]";
+connectAttr "L_Leg_IK_PV_Ctrl_rotateX.o" "Caleb_RigRN.phl[252]";
+connectAttr "L_Leg_IK_PV_Ctrl_rotateY.o" "Caleb_RigRN.phl[253]";
+connectAttr "L_Leg_IK_PV_Ctrl_rotateZ.o" "Caleb_RigRN.phl[254]";
+connectAttr "L_Leg_IK_Base_Ctrl_translateX.o" "Caleb_RigRN.phl[255]";
+connectAttr "L_Leg_IK_Base_Ctrl_translateY.o" "Caleb_RigRN.phl[256]";
+connectAttr "L_Leg_IK_Base_Ctrl_translateZ.o" "Caleb_RigRN.phl[257]";
+connectAttr "L_Leg_IK_Base_Ctrl_rotateX.o" "Caleb_RigRN.phl[258]";
+connectAttr "L_Leg_IK_Base_Ctrl_rotateY.o" "Caleb_RigRN.phl[259]";
+connectAttr "L_Leg_IK_Base_Ctrl_rotateZ.o" "Caleb_RigRN.phl[260]";
+connectAttr "L_Leg_IK_Ctrl_translateX.o" "Caleb_RigRN.phl[261]";
+connectAttr "L_Leg_IK_Ctrl_translateZ.o" "Caleb_RigRN.phl[262]";
+connectAttr "L_Leg_IK_Ctrl_translateY.o" "Caleb_RigRN.phl[263]";
+connectAttr "L_Leg_IK_Ctrl_rotateX.o" "Caleb_RigRN.phl[264]";
+connectAttr "L_Leg_IK_Ctrl_rotateY.o" "Caleb_RigRN.phl[265]";
+connectAttr "L_Leg_IK_Ctrl_rotateZ.o" "Caleb_RigRN.phl[266]";
+connectAttr "L_Leg_IK_Ctrl_Local_Space.o" "Caleb_RigRN.phl[267]";
+connectAttr "L_Foot_Reverse_Foot_Outer_Ctrl_translateX.o" "Caleb_RigRN.phl[268]"
 		;
-connectAttr "L_Foot_Reverse_Foot_Outer_Ctrl_translateY.o" "Caleb_RigRN.phl[268]"
+connectAttr "L_Foot_Reverse_Foot_Outer_Ctrl_translateY.o" "Caleb_RigRN.phl[269]"
 		;
-connectAttr "L_Foot_Reverse_Foot_Outer_Ctrl_translateZ.o" "Caleb_RigRN.phl[269]"
+connectAttr "L_Foot_Reverse_Foot_Outer_Ctrl_translateZ.o" "Caleb_RigRN.phl[270]"
 		;
-connectAttr "L_Foot_Reverse_Foot_Outer_Ctrl_rotateX.o" "Caleb_RigRN.phl[270]";
-connectAttr "L_Foot_Reverse_Foot_Outer_Ctrl_rotateY.o" "Caleb_RigRN.phl[271]";
-connectAttr "L_Foot_Reverse_Foot_Outer_Ctrl_rotateZ.o" "Caleb_RigRN.phl[272]";
-connectAttr "L_Foot_Reverse_Foot_Inner_Ctrl_translateX.o" "Caleb_RigRN.phl[273]"
+connectAttr "L_Foot_Reverse_Foot_Outer_Ctrl_rotateX.o" "Caleb_RigRN.phl[271]";
+connectAttr "L_Foot_Reverse_Foot_Outer_Ctrl_rotateY.o" "Caleb_RigRN.phl[272]";
+connectAttr "L_Foot_Reverse_Foot_Outer_Ctrl_rotateZ.o" "Caleb_RigRN.phl[273]";
+connectAttr "L_Foot_Reverse_Foot_Inner_Ctrl_translateX.o" "Caleb_RigRN.phl[274]"
 		;
-connectAttr "L_Foot_Reverse_Foot_Inner_Ctrl_translateY.o" "Caleb_RigRN.phl[274]"
+connectAttr "L_Foot_Reverse_Foot_Inner_Ctrl_translateY.o" "Caleb_RigRN.phl[275]"
 		;
-connectAttr "L_Foot_Reverse_Foot_Inner_Ctrl_translateZ.o" "Caleb_RigRN.phl[275]"
+connectAttr "L_Foot_Reverse_Foot_Inner_Ctrl_translateZ.o" "Caleb_RigRN.phl[276]"
 		;
-connectAttr "L_Foot_Reverse_Foot_Inner_Ctrl_rotateX.o" "Caleb_RigRN.phl[276]";
-connectAttr "L_Foot_Reverse_Foot_Inner_Ctrl_rotateY.o" "Caleb_RigRN.phl[277]";
-connectAttr "L_Foot_Reverse_Foot_Inner_Ctrl_rotateZ.o" "Caleb_RigRN.phl[278]";
-connectAttr "L_Foot_Reverse_Foot_Heel_Ctrl_translateX.o" "Caleb_RigRN.phl[279]";
-connectAttr "L_Foot_Reverse_Foot_Heel_Ctrl_translateY.o" "Caleb_RigRN.phl[280]";
-connectAttr "L_Foot_Reverse_Foot_Heel_Ctrl_translateZ.o" "Caleb_RigRN.phl[281]";
-connectAttr "L_Foot_Reverse_Foot_Heel_Ctrl_rotateX.o" "Caleb_RigRN.phl[282]";
-connectAttr "L_Foot_Reverse_Foot_Heel_Ctrl_rotateY.o" "Caleb_RigRN.phl[283]";
-connectAttr "L_Foot_Reverse_Foot_Heel_Ctrl_rotateZ.o" "Caleb_RigRN.phl[284]";
-connectAttr "L_Foot_Reverse_Foot_Toe_Ctrl_translateX.o" "Caleb_RigRN.phl[285]";
-connectAttr "L_Foot_Reverse_Foot_Toe_Ctrl_translateY.o" "Caleb_RigRN.phl[286]";
-connectAttr "L_Foot_Reverse_Foot_Toe_Ctrl_translateZ.o" "Caleb_RigRN.phl[287]";
-connectAttr "L_Foot_Reverse_Foot_Toe_Ctrl_rotateX.o" "Caleb_RigRN.phl[288]";
-connectAttr "L_Foot_Reverse_Foot_Toe_Ctrl_rotateY.o" "Caleb_RigRN.phl[289]";
-connectAttr "L_Foot_Reverse_Foot_Toe_Ctrl_rotateZ.o" "Caleb_RigRN.phl[290]";
-connectAttr "L_Foot_Reverse_Foot_Ball_Ctrl_translateX.o" "Caleb_RigRN.phl[291]";
-connectAttr "L_Foot_Reverse_Foot_Ball_Ctrl_translateY.o" "Caleb_RigRN.phl[292]";
-connectAttr "L_Foot_Reverse_Foot_Ball_Ctrl_translateZ.o" "Caleb_RigRN.phl[293]";
-connectAttr "L_Foot_Reverse_Foot_Ball_Ctrl_rotateX.o" "Caleb_RigRN.phl[294]";
-connectAttr "L_Foot_Reverse_Foot_Ball_Ctrl_rotateY.o" "Caleb_RigRN.phl[295]";
-connectAttr "L_Foot_Reverse_Foot_Ball_Ctrl_rotateZ.o" "Caleb_RigRN.phl[296]";
-connectAttr "L_Foot_Reverse_Foot_ToeTap_Ctrl_translateX.o" "Caleb_RigRN.phl[297]"
+connectAttr "L_Foot_Reverse_Foot_Inner_Ctrl_rotateX.o" "Caleb_RigRN.phl[277]";
+connectAttr "L_Foot_Reverse_Foot_Inner_Ctrl_rotateY.o" "Caleb_RigRN.phl[278]";
+connectAttr "L_Foot_Reverse_Foot_Inner_Ctrl_rotateZ.o" "Caleb_RigRN.phl[279]";
+connectAttr "L_Foot_Reverse_Foot_Heel_Ctrl_translateX.o" "Caleb_RigRN.phl[280]";
+connectAttr "L_Foot_Reverse_Foot_Heel_Ctrl_translateY.o" "Caleb_RigRN.phl[281]";
+connectAttr "L_Foot_Reverse_Foot_Heel_Ctrl_translateZ.o" "Caleb_RigRN.phl[282]";
+connectAttr "L_Foot_Reverse_Foot_Heel_Ctrl_rotateX.o" "Caleb_RigRN.phl[283]";
+connectAttr "L_Foot_Reverse_Foot_Heel_Ctrl_rotateY.o" "Caleb_RigRN.phl[284]";
+connectAttr "L_Foot_Reverse_Foot_Heel_Ctrl_rotateZ.o" "Caleb_RigRN.phl[285]";
+connectAttr "L_Foot_Reverse_Foot_Toe_Ctrl_translateX.o" "Caleb_RigRN.phl[286]";
+connectAttr "L_Foot_Reverse_Foot_Toe_Ctrl_translateY.o" "Caleb_RigRN.phl[287]";
+connectAttr "L_Foot_Reverse_Foot_Toe_Ctrl_translateZ.o" "Caleb_RigRN.phl[288]";
+connectAttr "L_Foot_Reverse_Foot_Toe_Ctrl_rotateX.o" "Caleb_RigRN.phl[289]";
+connectAttr "L_Foot_Reverse_Foot_Toe_Ctrl_rotateY.o" "Caleb_RigRN.phl[290]";
+connectAttr "L_Foot_Reverse_Foot_Toe_Ctrl_rotateZ.o" "Caleb_RigRN.phl[291]";
+connectAttr "L_Foot_Reverse_Foot_Ball_Ctrl_translateX.o" "Caleb_RigRN.phl[292]";
+connectAttr "L_Foot_Reverse_Foot_Ball_Ctrl_translateY.o" "Caleb_RigRN.phl[293]";
+connectAttr "L_Foot_Reverse_Foot_Ball_Ctrl_translateZ.o" "Caleb_RigRN.phl[294]";
+connectAttr "L_Foot_Reverse_Foot_Ball_Ctrl_rotateX.o" "Caleb_RigRN.phl[295]";
+connectAttr "L_Foot_Reverse_Foot_Ball_Ctrl_rotateY.o" "Caleb_RigRN.phl[296]";
+connectAttr "L_Foot_Reverse_Foot_Ball_Ctrl_rotateZ.o" "Caleb_RigRN.phl[297]";
+connectAttr "L_Foot_Reverse_Foot_ToeTap_Ctrl_translateX.o" "Caleb_RigRN.phl[298]"
 		;
-connectAttr "L_Foot_Reverse_Foot_ToeTap_Ctrl_translateY.o" "Caleb_RigRN.phl[298]"
+connectAttr "L_Foot_Reverse_Foot_ToeTap_Ctrl_translateY.o" "Caleb_RigRN.phl[299]"
 		;
-connectAttr "L_Foot_Reverse_Foot_ToeTap_Ctrl_translateZ.o" "Caleb_RigRN.phl[299]"
+connectAttr "L_Foot_Reverse_Foot_ToeTap_Ctrl_translateZ.o" "Caleb_RigRN.phl[300]"
 		;
-connectAttr "L_Foot_Reverse_Foot_ToeTap_Ctrl_rotateX.o" "Caleb_RigRN.phl[300]";
-connectAttr "L_Foot_Reverse_Foot_ToeTap_Ctrl_rotateY.o" "Caleb_RigRN.phl[301]";
-connectAttr "L_Foot_Reverse_Foot_ToeTap_Ctrl_rotateZ.o" "Caleb_RigRN.phl[302]";
-connectAttr "R_Leg_IK_PV_Ctrl_translateX.o" "Caleb_RigRN.phl[303]";
-connectAttr "R_Leg_IK_PV_Ctrl_translateY.o" "Caleb_RigRN.phl[304]";
-connectAttr "R_Leg_IK_PV_Ctrl_translateZ.o" "Caleb_RigRN.phl[305]";
-connectAttr "R_Leg_IK_PV_Ctrl_rotateX.o" "Caleb_RigRN.phl[306]";
-connectAttr "R_Leg_IK_PV_Ctrl_rotateY.o" "Caleb_RigRN.phl[307]";
-connectAttr "R_Leg_IK_PV_Ctrl_rotateZ.o" "Caleb_RigRN.phl[308]";
-connectAttr "R_Leg_IK_Base_Ctrl_translateX.o" "Caleb_RigRN.phl[309]";
-connectAttr "R_Leg_IK_Base_Ctrl_translateY.o" "Caleb_RigRN.phl[310]";
-connectAttr "R_Leg_IK_Base_Ctrl_translateZ.o" "Caleb_RigRN.phl[311]";
-connectAttr "R_Leg_IK_Base_Ctrl_rotateX.o" "Caleb_RigRN.phl[312]";
-connectAttr "R_Leg_IK_Base_Ctrl_rotateY.o" "Caleb_RigRN.phl[313]";
-connectAttr "R_Leg_IK_Base_Ctrl_rotateZ.o" "Caleb_RigRN.phl[314]";
-connectAttr "R_Leg_IK_Ctrl_translateX.o" "Caleb_RigRN.phl[315]";
-connectAttr "R_Leg_IK_Ctrl_translateY.o" "Caleb_RigRN.phl[316]";
-connectAttr "R_Leg_IK_Ctrl_translateZ.o" "Caleb_RigRN.phl[317]";
-connectAttr "R_Leg_IK_Ctrl_rotateX.o" "Caleb_RigRN.phl[318]";
-connectAttr "R_Leg_IK_Ctrl_rotateY.o" "Caleb_RigRN.phl[319]";
-connectAttr "R_Leg_IK_Ctrl_rotateZ.o" "Caleb_RigRN.phl[320]";
-connectAttr "R_Leg_IK_Ctrl_Local_Space.o" "Caleb_RigRN.phl[321]";
-connectAttr "R_Foot_Reverse_Foot_Outer_Ctrl_translateX.o" "Caleb_RigRN.phl[322]"
+connectAttr "L_Foot_Reverse_Foot_ToeTap_Ctrl_rotateX.o" "Caleb_RigRN.phl[301]";
+connectAttr "L_Foot_Reverse_Foot_ToeTap_Ctrl_rotateY.o" "Caleb_RigRN.phl[302]";
+connectAttr "L_Foot_Reverse_Foot_ToeTap_Ctrl_rotateZ.o" "Caleb_RigRN.phl[303]";
+connectAttr "R_Leg_IK_PV_Ctrl_translateX.o" "Caleb_RigRN.phl[304]";
+connectAttr "R_Leg_IK_PV_Ctrl_translateY.o" "Caleb_RigRN.phl[305]";
+connectAttr "R_Leg_IK_PV_Ctrl_translateZ.o" "Caleb_RigRN.phl[306]";
+connectAttr "R_Leg_IK_PV_Ctrl_rotateX.o" "Caleb_RigRN.phl[307]";
+connectAttr "R_Leg_IK_PV_Ctrl_rotateY.o" "Caleb_RigRN.phl[308]";
+connectAttr "R_Leg_IK_PV_Ctrl_rotateZ.o" "Caleb_RigRN.phl[309]";
+connectAttr "R_Leg_IK_Base_Ctrl_translateX.o" "Caleb_RigRN.phl[310]";
+connectAttr "R_Leg_IK_Base_Ctrl_translateY.o" "Caleb_RigRN.phl[311]";
+connectAttr "R_Leg_IK_Base_Ctrl_translateZ.o" "Caleb_RigRN.phl[312]";
+connectAttr "R_Leg_IK_Base_Ctrl_rotateX.o" "Caleb_RigRN.phl[313]";
+connectAttr "R_Leg_IK_Base_Ctrl_rotateY.o" "Caleb_RigRN.phl[314]";
+connectAttr "R_Leg_IK_Base_Ctrl_rotateZ.o" "Caleb_RigRN.phl[315]";
+connectAttr "R_Leg_IK_Ctrl_translateX.o" "Caleb_RigRN.phl[316]";
+connectAttr "R_Leg_IK_Ctrl_translateY.o" "Caleb_RigRN.phl[317]";
+connectAttr "R_Leg_IK_Ctrl_translateZ.o" "Caleb_RigRN.phl[318]";
+connectAttr "R_Leg_IK_Ctrl_rotateX.o" "Caleb_RigRN.phl[319]";
+connectAttr "R_Leg_IK_Ctrl_rotateY.o" "Caleb_RigRN.phl[320]";
+connectAttr "R_Leg_IK_Ctrl_rotateZ.o" "Caleb_RigRN.phl[321]";
+connectAttr "R_Leg_IK_Ctrl_Local_Space.o" "Caleb_RigRN.phl[322]";
+connectAttr "R_Foot_Reverse_Foot_Outer_Ctrl_translateX.o" "Caleb_RigRN.phl[323]"
 		;
-connectAttr "R_Foot_Reverse_Foot_Outer_Ctrl_translateY.o" "Caleb_RigRN.phl[323]"
+connectAttr "R_Foot_Reverse_Foot_Outer_Ctrl_translateY.o" "Caleb_RigRN.phl[324]"
 		;
-connectAttr "R_Foot_Reverse_Foot_Outer_Ctrl_translateZ.o" "Caleb_RigRN.phl[324]"
+connectAttr "R_Foot_Reverse_Foot_Outer_Ctrl_translateZ.o" "Caleb_RigRN.phl[325]"
 		;
-connectAttr "R_Foot_Reverse_Foot_Outer_Ctrl_rotateX.o" "Caleb_RigRN.phl[325]";
-connectAttr "R_Foot_Reverse_Foot_Outer_Ctrl_rotateY.o" "Caleb_RigRN.phl[326]";
-connectAttr "R_Foot_Reverse_Foot_Outer_Ctrl_rotateZ.o" "Caleb_RigRN.phl[327]";
-connectAttr "R_Foot_Reverse_Foot_Inner_Ctrl_rotateZ.o" "Caleb_RigRN.phl[328]";
-connectAttr "R_Foot_Reverse_Foot_Inner_Ctrl_rotateX.o" "Caleb_RigRN.phl[329]";
-connectAttr "R_Foot_Reverse_Foot_Inner_Ctrl_rotateY.o" "Caleb_RigRN.phl[330]";
-connectAttr "R_Foot_Reverse_Foot_Inner_Ctrl_translateX.o" "Caleb_RigRN.phl[331]"
+connectAttr "R_Foot_Reverse_Foot_Outer_Ctrl_rotateX.o" "Caleb_RigRN.phl[326]";
+connectAttr "R_Foot_Reverse_Foot_Outer_Ctrl_rotateY.o" "Caleb_RigRN.phl[327]";
+connectAttr "R_Foot_Reverse_Foot_Outer_Ctrl_rotateZ.o" "Caleb_RigRN.phl[328]";
+connectAttr "R_Foot_Reverse_Foot_Inner_Ctrl_rotateZ.o" "Caleb_RigRN.phl[329]";
+connectAttr "R_Foot_Reverse_Foot_Inner_Ctrl_rotateX.o" "Caleb_RigRN.phl[330]";
+connectAttr "R_Foot_Reverse_Foot_Inner_Ctrl_rotateY.o" "Caleb_RigRN.phl[331]";
+connectAttr "R_Foot_Reverse_Foot_Inner_Ctrl_translateX.o" "Caleb_RigRN.phl[332]"
 		;
-connectAttr "R_Foot_Reverse_Foot_Inner_Ctrl_translateY.o" "Caleb_RigRN.phl[332]"
+connectAttr "R_Foot_Reverse_Foot_Inner_Ctrl_translateY.o" "Caleb_RigRN.phl[333]"
 		;
-connectAttr "R_Foot_Reverse_Foot_Inner_Ctrl_translateZ.o" "Caleb_RigRN.phl[333]"
+connectAttr "R_Foot_Reverse_Foot_Inner_Ctrl_translateZ.o" "Caleb_RigRN.phl[334]"
 		;
-connectAttr "R_Foot_Reverse_Foot_Heel_Ctrl_translateX.o" "Caleb_RigRN.phl[334]";
-connectAttr "R_Foot_Reverse_Foot_Heel_Ctrl_translateY.o" "Caleb_RigRN.phl[335]";
-connectAttr "R_Foot_Reverse_Foot_Heel_Ctrl_translateZ.o" "Caleb_RigRN.phl[336]";
-connectAttr "R_Foot_Reverse_Foot_Heel_Ctrl_rotateX.o" "Caleb_RigRN.phl[337]";
-connectAttr "R_Foot_Reverse_Foot_Heel_Ctrl_rotateY.o" "Caleb_RigRN.phl[338]";
-connectAttr "R_Foot_Reverse_Foot_Heel_Ctrl_rotateZ.o" "Caleb_RigRN.phl[339]";
-connectAttr "R_Foot_Reverse_Foot_Toe_Ctrl_translateX.o" "Caleb_RigRN.phl[340]";
-connectAttr "R_Foot_Reverse_Foot_Toe_Ctrl_translateY.o" "Caleb_RigRN.phl[341]";
-connectAttr "R_Foot_Reverse_Foot_Toe_Ctrl_translateZ.o" "Caleb_RigRN.phl[342]";
-connectAttr "R_Foot_Reverse_Foot_Toe_Ctrl_rotateX.o" "Caleb_RigRN.phl[343]";
-connectAttr "R_Foot_Reverse_Foot_Toe_Ctrl_rotateY.o" "Caleb_RigRN.phl[344]";
-connectAttr "R_Foot_Reverse_Foot_Toe_Ctrl_rotateZ.o" "Caleb_RigRN.phl[345]";
-connectAttr "R_Foot_Reverse_Foot_Ball_Ctrl_translateX.o" "Caleb_RigRN.phl[346]";
-connectAttr "R_Foot_Reverse_Foot_Ball_Ctrl_translateY.o" "Caleb_RigRN.phl[347]";
-connectAttr "R_Foot_Reverse_Foot_Ball_Ctrl_translateZ.o" "Caleb_RigRN.phl[348]";
-connectAttr "R_Foot_Reverse_Foot_Ball_Ctrl_rotateX.o" "Caleb_RigRN.phl[349]";
-connectAttr "R_Foot_Reverse_Foot_Ball_Ctrl_rotateY.o" "Caleb_RigRN.phl[350]";
-connectAttr "R_Foot_Reverse_Foot_Ball_Ctrl_rotateZ.o" "Caleb_RigRN.phl[351]";
-connectAttr "R_Foot_Reverse_Foot_ToeTap_Ctrl_translateX.o" "Caleb_RigRN.phl[352]"
+connectAttr "R_Foot_Reverse_Foot_Heel_Ctrl_translateX.o" "Caleb_RigRN.phl[335]";
+connectAttr "R_Foot_Reverse_Foot_Heel_Ctrl_translateY.o" "Caleb_RigRN.phl[336]";
+connectAttr "R_Foot_Reverse_Foot_Heel_Ctrl_translateZ.o" "Caleb_RigRN.phl[337]";
+connectAttr "R_Foot_Reverse_Foot_Heel_Ctrl_rotateX.o" "Caleb_RigRN.phl[338]";
+connectAttr "R_Foot_Reverse_Foot_Heel_Ctrl_rotateY.o" "Caleb_RigRN.phl[339]";
+connectAttr "R_Foot_Reverse_Foot_Heel_Ctrl_rotateZ.o" "Caleb_RigRN.phl[340]";
+connectAttr "R_Foot_Reverse_Foot_Toe_Ctrl_translateX.o" "Caleb_RigRN.phl[341]";
+connectAttr "R_Foot_Reverse_Foot_Toe_Ctrl_translateY.o" "Caleb_RigRN.phl[342]";
+connectAttr "R_Foot_Reverse_Foot_Toe_Ctrl_translateZ.o" "Caleb_RigRN.phl[343]";
+connectAttr "R_Foot_Reverse_Foot_Toe_Ctrl_rotateX.o" "Caleb_RigRN.phl[344]";
+connectAttr "R_Foot_Reverse_Foot_Toe_Ctrl_rotateY.o" "Caleb_RigRN.phl[345]";
+connectAttr "R_Foot_Reverse_Foot_Toe_Ctrl_rotateZ.o" "Caleb_RigRN.phl[346]";
+connectAttr "R_Foot_Reverse_Foot_Ball_Ctrl_translateX.o" "Caleb_RigRN.phl[347]";
+connectAttr "R_Foot_Reverse_Foot_Ball_Ctrl_translateY.o" "Caleb_RigRN.phl[348]";
+connectAttr "R_Foot_Reverse_Foot_Ball_Ctrl_translateZ.o" "Caleb_RigRN.phl[349]";
+connectAttr "R_Foot_Reverse_Foot_Ball_Ctrl_rotateX.o" "Caleb_RigRN.phl[350]";
+connectAttr "R_Foot_Reverse_Foot_Ball_Ctrl_rotateY.o" "Caleb_RigRN.phl[351]";
+connectAttr "R_Foot_Reverse_Foot_Ball_Ctrl_rotateZ.o" "Caleb_RigRN.phl[352]";
+connectAttr "R_Foot_Reverse_Foot_ToeTap_Ctrl_translateX.o" "Caleb_RigRN.phl[353]"
 		;
-connectAttr "R_Foot_Reverse_Foot_ToeTap_Ctrl_translateY.o" "Caleb_RigRN.phl[353]"
+connectAttr "R_Foot_Reverse_Foot_ToeTap_Ctrl_translateY.o" "Caleb_RigRN.phl[354]"
 		;
-connectAttr "R_Foot_Reverse_Foot_ToeTap_Ctrl_translateZ.o" "Caleb_RigRN.phl[354]"
+connectAttr "R_Foot_Reverse_Foot_ToeTap_Ctrl_translateZ.o" "Caleb_RigRN.phl[355]"
 		;
-connectAttr "R_Foot_Reverse_Foot_ToeTap_Ctrl_rotateX.o" "Caleb_RigRN.phl[355]";
-connectAttr "R_Foot_Reverse_Foot_ToeTap_Ctrl_rotateY.o" "Caleb_RigRN.phl[356]";
-connectAttr "R_Foot_Reverse_Foot_ToeTap_Ctrl_rotateZ.o" "Caleb_RigRN.phl[357]";
-connectAttr "Neck_Ctrl_translateX.o" "Caleb_RigRN.phl[358]";
-connectAttr "Neck_Ctrl_translateY.o" "Caleb_RigRN.phl[359]";
-connectAttr "Neck_Ctrl_translateZ.o" "Caleb_RigRN.phl[360]";
-connectAttr "Neck_Ctrl_rotateX.o" "Caleb_RigRN.phl[361]";
-connectAttr "Neck_Ctrl_rotateY.o" "Caleb_RigRN.phl[362]";
-connectAttr "Neck_Ctrl_rotateZ.o" "Caleb_RigRN.phl[363]";
-connectAttr "Head_Ctrl_translateX.o" "Caleb_RigRN.phl[364]";
-connectAttr "Head_Ctrl_translateY.o" "Caleb_RigRN.phl[365]";
-connectAttr "Head_Ctrl_translateZ.o" "Caleb_RigRN.phl[366]";
-connectAttr "Head_Ctrl_rotateX.o" "Caleb_RigRN.phl[367]";
-connectAttr "Head_Ctrl_rotateY.o" "Caleb_RigRN.phl[368]";
-connectAttr "Head_Ctrl_rotateZ.o" "Caleb_RigRN.phl[369]";
-connectAttr "Hat_Jnt_Ctrl_translateX.o" "Caleb_RigRN.phl[370]";
-connectAttr "Hat_Jnt_Ctrl_translateY.o" "Caleb_RigRN.phl[371]";
-connectAttr "Hat_Jnt_Ctrl_translateZ.o" "Caleb_RigRN.phl[372]";
-connectAttr "Hat_Jnt_Ctrl_rotateX.o" "Caleb_RigRN.phl[373]";
-connectAttr "Hat_Jnt_Ctrl_rotateY.o" "Caleb_RigRN.phl[374]";
-connectAttr "Hat_Jnt_Ctrl_rotateZ.o" "Caleb_RigRN.phl[375]";
-connectAttr "Nose_Jnt_Ctrl_translateX.o" "Caleb_RigRN.phl[376]";
-connectAttr "Nose_Jnt_Ctrl_translateY.o" "Caleb_RigRN.phl[377]";
-connectAttr "Nose_Jnt_Ctrl_translateZ.o" "Caleb_RigRN.phl[378]";
-connectAttr "Nose_Jnt_Ctrl_rotateX.o" "Caleb_RigRN.phl[379]";
-connectAttr "Nose_Jnt_Ctrl_rotateY.o" "Caleb_RigRN.phl[380]";
-connectAttr "Nose_Jnt_Ctrl_rotateZ.o" "Caleb_RigRN.phl[381]";
-connectAttr "Jaw_Ctrl_translateX.o" "Caleb_RigRN.phl[382]";
-connectAttr "Jaw_Ctrl_translateY.o" "Caleb_RigRN.phl[383]";
-connectAttr "Jaw_Ctrl_translateZ.o" "Caleb_RigRN.phl[384]";
-connectAttr "Jaw_Ctrl_rotateX.o" "Caleb_RigRN.phl[385]";
-connectAttr "Jaw_Ctrl_rotateY.o" "Caleb_RigRN.phl[386]";
-connectAttr "Jaw_Ctrl_rotateZ.o" "Caleb_RigRN.phl[387]";
-connectAttr "L_Eyelid_Ctrl_translateX.o" "Caleb_RigRN.phl[388]";
-connectAttr "L_Eyelid_Ctrl_translateY.o" "Caleb_RigRN.phl[389]";
-connectAttr "L_Eyelid_Ctrl_translateZ.o" "Caleb_RigRN.phl[390]";
-connectAttr "L_Eyelid_Ctrl_rotateX.o" "Caleb_RigRN.phl[391]";
-connectAttr "L_Eyelid_Ctrl_rotateY.o" "Caleb_RigRN.phl[392]";
-connectAttr "L_Eyelid_Ctrl_rotateZ.o" "Caleb_RigRN.phl[393]";
-connectAttr "R_Eyelid_Ctrl_translateX.o" "Caleb_RigRN.phl[394]";
-connectAttr "R_Eyelid_Ctrl_translateY.o" "Caleb_RigRN.phl[395]";
-connectAttr "R_Eyelid_Ctrl_translateZ.o" "Caleb_RigRN.phl[396]";
-connectAttr "R_Eyelid_Ctrl_rotateX.o" "Caleb_RigRN.phl[397]";
-connectAttr "R_Eyelid_Ctrl_rotateY.o" "Caleb_RigRN.phl[398]";
-connectAttr "R_Eyelid_Ctrl_rotateZ.o" "Caleb_RigRN.phl[399]";
-connectAttr "L_Eye_Jnt_Ctrl_translateX.o" "Caleb_RigRN.phl[400]";
-connectAttr "L_Eye_Jnt_Ctrl_translateY.o" "Caleb_RigRN.phl[401]";
-connectAttr "L_Eye_Jnt_Ctrl_translateZ.o" "Caleb_RigRN.phl[402]";
-connectAttr "L_Eye_Jnt_Ctrl_rotateX.o" "Caleb_RigRN.phl[403]";
-connectAttr "L_Eye_Jnt_Ctrl_rotateY.o" "Caleb_RigRN.phl[404]";
-connectAttr "L_Eye_Jnt_Ctrl_rotateZ.o" "Caleb_RigRN.phl[405]";
-connectAttr "R_Eye_Jnt_Ctrl_translateX.o" "Caleb_RigRN.phl[406]";
-connectAttr "R_Eye_Jnt_Ctrl_translateY.o" "Caleb_RigRN.phl[407]";
-connectAttr "R_Eye_Jnt_Ctrl_translateZ.o" "Caleb_RigRN.phl[408]";
-connectAttr "R_Eye_Jnt_Ctrl_rotateX.o" "Caleb_RigRN.phl[409]";
-connectAttr "R_Eye_Jnt_Ctrl_rotateY.o" "Caleb_RigRN.phl[410]";
-connectAttr "R_Eye_Jnt_Ctrl_rotateZ.o" "Caleb_RigRN.phl[411]";
-connectAttr "Eye_Master_Ctrl_translateX.o" "Caleb_RigRN.phl[412]";
-connectAttr "Eye_Master_Ctrl_translateY.o" "Caleb_RigRN.phl[413]";
-connectAttr "Eye_Master_Ctrl_translateZ.o" "Caleb_RigRN.phl[414]";
-connectAttr "Eye_Master_Ctrl_rotateX.o" "Caleb_RigRN.phl[415]";
-connectAttr "Eye_Master_Ctrl_rotateY.o" "Caleb_RigRN.phl[416]";
-connectAttr "Eye_Master_Ctrl_rotateZ.o" "Caleb_RigRN.phl[417]";
-connectAttr "Eye_Master_Ctrl_Local_Space.o" "Caleb_RigRN.phl[418]";
-connectAttr "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_translateX.o" "Caleb_RigRN.phl[419]"
+connectAttr "R_Foot_Reverse_Foot_ToeTap_Ctrl_rotateX.o" "Caleb_RigRN.phl[356]";
+connectAttr "R_Foot_Reverse_Foot_ToeTap_Ctrl_rotateY.o" "Caleb_RigRN.phl[357]";
+connectAttr "R_Foot_Reverse_Foot_ToeTap_Ctrl_rotateZ.o" "Caleb_RigRN.phl[358]";
+connectAttr "Neck_Ctrl_translateX.o" "Caleb_RigRN.phl[359]";
+connectAttr "Neck_Ctrl_translateY.o" "Caleb_RigRN.phl[360]";
+connectAttr "Neck_Ctrl_translateZ.o" "Caleb_RigRN.phl[361]";
+connectAttr "Neck_Ctrl_rotateX.o" "Caleb_RigRN.phl[362]";
+connectAttr "Neck_Ctrl_rotateY.o" "Caleb_RigRN.phl[363]";
+connectAttr "Neck_Ctrl_rotateZ.o" "Caleb_RigRN.phl[364]";
+connectAttr "Head_Ctrl_translateX.o" "Caleb_RigRN.phl[365]";
+connectAttr "Head_Ctrl_translateY.o" "Caleb_RigRN.phl[366]";
+connectAttr "Head_Ctrl_translateZ.o" "Caleb_RigRN.phl[367]";
+connectAttr "Head_Ctrl_rotateX.o" "Caleb_RigRN.phl[368]";
+connectAttr "Head_Ctrl_rotateY.o" "Caleb_RigRN.phl[369]";
+connectAttr "Head_Ctrl_rotateZ.o" "Caleb_RigRN.phl[370]";
+connectAttr "Hat_Jnt_Ctrl_translateX.o" "Caleb_RigRN.phl[371]";
+connectAttr "Hat_Jnt_Ctrl_translateY.o" "Caleb_RigRN.phl[372]";
+connectAttr "Hat_Jnt_Ctrl_translateZ.o" "Caleb_RigRN.phl[373]";
+connectAttr "Hat_Jnt_Ctrl_rotateX.o" "Caleb_RigRN.phl[374]";
+connectAttr "Hat_Jnt_Ctrl_rotateY.o" "Caleb_RigRN.phl[375]";
+connectAttr "Hat_Jnt_Ctrl_rotateZ.o" "Caleb_RigRN.phl[376]";
+connectAttr "Nose_Jnt_Ctrl_translateX.o" "Caleb_RigRN.phl[377]";
+connectAttr "Nose_Jnt_Ctrl_translateY.o" "Caleb_RigRN.phl[378]";
+connectAttr "Nose_Jnt_Ctrl_translateZ.o" "Caleb_RigRN.phl[379]";
+connectAttr "Nose_Jnt_Ctrl_rotateX.o" "Caleb_RigRN.phl[380]";
+connectAttr "Nose_Jnt_Ctrl_rotateY.o" "Caleb_RigRN.phl[381]";
+connectAttr "Nose_Jnt_Ctrl_rotateZ.o" "Caleb_RigRN.phl[382]";
+connectAttr "Jaw_Ctrl_translateX.o" "Caleb_RigRN.phl[383]";
+connectAttr "Jaw_Ctrl_translateY.o" "Caleb_RigRN.phl[384]";
+connectAttr "Jaw_Ctrl_translateZ.o" "Caleb_RigRN.phl[385]";
+connectAttr "Jaw_Ctrl_rotateX.o" "Caleb_RigRN.phl[386]";
+connectAttr "Jaw_Ctrl_rotateY.o" "Caleb_RigRN.phl[387]";
+connectAttr "Jaw_Ctrl_rotateZ.o" "Caleb_RigRN.phl[388]";
+connectAttr "L_Eyelid_Ctrl_translateX.o" "Caleb_RigRN.phl[389]";
+connectAttr "L_Eyelid_Ctrl_translateY.o" "Caleb_RigRN.phl[390]";
+connectAttr "L_Eyelid_Ctrl_translateZ.o" "Caleb_RigRN.phl[391]";
+connectAttr "L_Eyelid_Ctrl_rotateX.o" "Caleb_RigRN.phl[392]";
+connectAttr "L_Eyelid_Ctrl_rotateY.o" "Caleb_RigRN.phl[393]";
+connectAttr "L_Eyelid_Ctrl_rotateZ.o" "Caleb_RigRN.phl[394]";
+connectAttr "R_Eyelid_Ctrl_translateX.o" "Caleb_RigRN.phl[395]";
+connectAttr "R_Eyelid_Ctrl_translateY.o" "Caleb_RigRN.phl[396]";
+connectAttr "R_Eyelid_Ctrl_translateZ.o" "Caleb_RigRN.phl[397]";
+connectAttr "R_Eyelid_Ctrl_rotateX.o" "Caleb_RigRN.phl[398]";
+connectAttr "R_Eyelid_Ctrl_rotateY.o" "Caleb_RigRN.phl[399]";
+connectAttr "R_Eyelid_Ctrl_rotateZ.o" "Caleb_RigRN.phl[400]";
+connectAttr "L_Eye_Jnt_Ctrl_translateX.o" "Caleb_RigRN.phl[401]";
+connectAttr "L_Eye_Jnt_Ctrl_translateY.o" "Caleb_RigRN.phl[402]";
+connectAttr "L_Eye_Jnt_Ctrl_translateZ.o" "Caleb_RigRN.phl[403]";
+connectAttr "L_Eye_Jnt_Ctrl_rotateX.o" "Caleb_RigRN.phl[404]";
+connectAttr "L_Eye_Jnt_Ctrl_rotateY.o" "Caleb_RigRN.phl[405]";
+connectAttr "L_Eye_Jnt_Ctrl_rotateZ.o" "Caleb_RigRN.phl[406]";
+connectAttr "R_Eye_Jnt_Ctrl_translateX.o" "Caleb_RigRN.phl[407]";
+connectAttr "R_Eye_Jnt_Ctrl_translateY.o" "Caleb_RigRN.phl[408]";
+connectAttr "R_Eye_Jnt_Ctrl_translateZ.o" "Caleb_RigRN.phl[409]";
+connectAttr "R_Eye_Jnt_Ctrl_rotateX.o" "Caleb_RigRN.phl[410]";
+connectAttr "R_Eye_Jnt_Ctrl_rotateY.o" "Caleb_RigRN.phl[411]";
+connectAttr "R_Eye_Jnt_Ctrl_rotateZ.o" "Caleb_RigRN.phl[412]";
+connectAttr "Eye_Master_Ctrl_translateX.o" "Caleb_RigRN.phl[413]";
+connectAttr "Eye_Master_Ctrl_translateY.o" "Caleb_RigRN.phl[414]";
+connectAttr "Eye_Master_Ctrl_translateZ.o" "Caleb_RigRN.phl[415]";
+connectAttr "Eye_Master_Ctrl_rotateX.o" "Caleb_RigRN.phl[416]";
+connectAttr "Eye_Master_Ctrl_rotateY.o" "Caleb_RigRN.phl[417]";
+connectAttr "Eye_Master_Ctrl_rotateZ.o" "Caleb_RigRN.phl[418]";
+connectAttr "Eye_Master_Ctrl_Local_Space.o" "Caleb_RigRN.phl[419]";
+connectAttr "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_translateX.o" "Caleb_RigRN.phl[420]"
 		;
-connectAttr "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_translateY.o" "Caleb_RigRN.phl[420]"
+connectAttr "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_translateY.o" "Caleb_RigRN.phl[421]"
 		;
-connectAttr "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_translateZ.o" "Caleb_RigRN.phl[421]"
+connectAttr "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_translateZ.o" "Caleb_RigRN.phl[422]"
 		;
-connectAttr "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_rotateX.o" "Caleb_RigRN.phl[422]"
+connectAttr "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_rotateX.o" "Caleb_RigRN.phl[423]"
 		;
-connectAttr "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_rotateY.o" "Caleb_RigRN.phl[423]"
+connectAttr "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_rotateY.o" "Caleb_RigRN.phl[424]"
 		;
-connectAttr "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_rotateZ.o" "Caleb_RigRN.phl[424]"
+connectAttr "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_rotateZ.o" "Caleb_RigRN.phl[425]"
 		;
-connectAttr "Hair_Back_Bounce_CONTROL_Jnt_Ctrl_translateX.o" "Caleb_RigRN.phl[425]"
+connectAttr "Hair_Back_Bounce_CONTROL_Jnt_Ctrl_translateX.o" "Caleb_RigRN.phl[426]"
 		;
-connectAttr "Hair_Back_Bounce_CONTROL_Jnt_Ctrl_translateY.o" "Caleb_RigRN.phl[426]"
+connectAttr "Hair_Back_Bounce_CONTROL_Jnt_Ctrl_translateY.o" "Caleb_RigRN.phl[427]"
 		;
-connectAttr "Hair_Back_Bounce_CONTROL_Jnt_Ctrl_translateZ.o" "Caleb_RigRN.phl[427]"
+connectAttr "Hair_Back_Bounce_CONTROL_Jnt_Ctrl_translateZ.o" "Caleb_RigRN.phl[428]"
 		;
-connectAttr "Hair_Back_Bounce_CONTROL_Jnt_Ctrl_rotateX.o" "Caleb_RigRN.phl[428]"
+connectAttr "Hair_Back_Bounce_CONTROL_Jnt_Ctrl_rotateX.o" "Caleb_RigRN.phl[429]"
 		;
-connectAttr "Hair_Back_Bounce_CONTROL_Jnt_Ctrl_rotateY.o" "Caleb_RigRN.phl[429]"
+connectAttr "Hair_Back_Bounce_CONTROL_Jnt_Ctrl_rotateY.o" "Caleb_RigRN.phl[430]"
 		;
-connectAttr "Hair_Back_Bounce_CONTROL_Jnt_Ctrl_rotateZ.o" "Caleb_RigRN.phl[430]"
+connectAttr "Hair_Back_Bounce_CONTROL_Jnt_Ctrl_rotateZ.o" "Caleb_RigRN.phl[431]"
 		;
-connectAttr "Neck_Tie_Ctrl_2_Jnt_Ctrl_translateX.o" "Caleb_RigRN.phl[431]";
-connectAttr "Neck_Tie_Ctrl_2_Jnt_Ctrl_translateY.o" "Caleb_RigRN.phl[432]";
-connectAttr "Neck_Tie_Ctrl_2_Jnt_Ctrl_translateZ.o" "Caleb_RigRN.phl[433]";
-connectAttr "Neck_Tie_Ctrl_2_Jnt_Ctrl_rotateX.o" "Caleb_RigRN.phl[434]";
-connectAttr "Neck_Tie_Ctrl_2_Jnt_Ctrl_rotateY.o" "Caleb_RigRN.phl[435]";
-connectAttr "Neck_Tie_Ctrl_2_Jnt_Ctrl_rotateZ.o" "Caleb_RigRN.phl[436]";
-connectAttr "Neck_Tie_Ctrl_1_Jnt_Ctrl_translateX.o" "Caleb_RigRN.phl[437]";
-connectAttr "Neck_Tie_Ctrl_1_Jnt_Ctrl_translateY.o" "Caleb_RigRN.phl[438]";
-connectAttr "Neck_Tie_Ctrl_1_Jnt_Ctrl_translateZ.o" "Caleb_RigRN.phl[439]";
-connectAttr "Neck_Tie_Ctrl_1_Jnt_Ctrl_rotateX.o" "Caleb_RigRN.phl[440]";
-connectAttr "Neck_Tie_Ctrl_1_Jnt_Ctrl_rotateY.o" "Caleb_RigRN.phl[441]";
-connectAttr "Neck_Tie_Ctrl_1_Jnt_Ctrl_rotateZ.o" "Caleb_RigRN.phl[442]";
-connectAttr "Neck_Tie_Ctrl_3_Jnt_Ctrl_rotateX.o" "Caleb_RigRN.phl[443]";
-connectAttr "Neck_Tie_Ctrl_3_Jnt_Ctrl_rotateY.o" "Caleb_RigRN.phl[444]";
-connectAttr "Neck_Tie_Ctrl_3_Jnt_Ctrl_rotateZ.o" "Caleb_RigRN.phl[445]";
-connectAttr "Neck_Tie_Ctrl_3_Jnt_Ctrl_translateX.o" "Caleb_RigRN.phl[446]";
-connectAttr "Neck_Tie_Ctrl_3_Jnt_Ctrl_translateY.o" "Caleb_RigRN.phl[447]";
-connectAttr "Neck_Tie_Ctrl_3_Jnt_Ctrl_translateZ.o" "Caleb_RigRN.phl[448]";
-connectAttr "Rope_Jnt_Ctrl_translateX.o" "Caleb_RigRN.phl[449]";
-connectAttr "Rope_Jnt_Ctrl_translateY.o" "Caleb_RigRN.phl[450]";
-connectAttr "Rope_Jnt_Ctrl_translateZ.o" "Caleb_RigRN.phl[451]";
-connectAttr "Rope_Jnt_Ctrl_rotateX.o" "Caleb_RigRN.phl[452]";
-connectAttr "Rope_Jnt_Ctrl_rotateY.o" "Caleb_RigRN.phl[453]";
-connectAttr "Rope_Jnt_Ctrl_rotateZ.o" "Caleb_RigRN.phl[454]";
-connectAttr "Backpack_2_Jnt_Ctrl_translateX.o" "Caleb_RigRN.phl[455]";
-connectAttr "Backpack_2_Jnt_Ctrl_translateY.o" "Caleb_RigRN.phl[456]";
-connectAttr "Backpack_2_Jnt_Ctrl_translateZ.o" "Caleb_RigRN.phl[457]";
-connectAttr "Backpack_2_Jnt_Ctrl_rotateX.o" "Caleb_RigRN.phl[458]";
-connectAttr "Backpack_2_Jnt_Ctrl_rotateY.o" "Caleb_RigRN.phl[459]";
-connectAttr "Backpack_2_Jnt_Ctrl_rotateZ.o" "Caleb_RigRN.phl[460]";
-connectAttr "Backpack_1_Jnt_Ctrl_translateY.o" "Caleb_RigRN.phl[461]";
-connectAttr "Backpack_1_Jnt_Ctrl_translateX.o" "Caleb_RigRN.phl[462]";
-connectAttr "Backpack_1_Jnt_Ctrl_translateZ.o" "Caleb_RigRN.phl[463]";
-connectAttr "Backpack_1_Jnt_Ctrl_rotateX.o" "Caleb_RigRN.phl[464]";
-connectAttr "Backpack_1_Jnt_Ctrl_rotateY.o" "Caleb_RigRN.phl[465]";
-connectAttr "Backpack_1_Jnt_Ctrl_rotateZ.o" "Caleb_RigRN.phl[466]";
-connectAttr "NeckTieRear_Jnt_Ctrl_translateX.o" "Caleb_RigRN.phl[467]";
-connectAttr "NeckTieRear_Jnt_Ctrl_translateY.o" "Caleb_RigRN.phl[468]";
-connectAttr "NeckTieRear_Jnt_Ctrl_translateZ.o" "Caleb_RigRN.phl[469]";
-connectAttr "NeckTieRear_Jnt_Ctrl_rotateX.o" "Caleb_RigRN.phl[470]";
-connectAttr "NeckTieRear_Jnt_Ctrl_rotateY.o" "Caleb_RigRN.phl[471]";
-connectAttr "NeckTieRear_Jnt_Ctrl_rotateZ.o" "Caleb_RigRN.phl[472]";
-connectAttr "Axe_Jnt_Ctrl_translateX.o" "Caleb_RigRN.phl[473]";
-connectAttr "Axe_Jnt_Ctrl_translateY.o" "Caleb_RigRN.phl[474]";
-connectAttr "Axe_Jnt_Ctrl_translateZ.o" "Caleb_RigRN.phl[475]";
-connectAttr "Axe_Jnt_Ctrl_rotateX.o" "Caleb_RigRN.phl[476]";
-connectAttr "Axe_Jnt_Ctrl_rotateY.o" "Caleb_RigRN.phl[477]";
-connectAttr "Axe_Jnt_Ctrl_rotateZ.o" "Caleb_RigRN.phl[478]";
-connectAttr "Caleb_RigRN.phl[479]" "Caleb_RigRN.phl[480]";
-connectAttr "Caleb_RigRN.phl[481]" "pCylinder1.do";
+connectAttr "Neck_Tie_Ctrl_2_Jnt_Ctrl_translateX.o" "Caleb_RigRN.phl[432]";
+connectAttr "Neck_Tie_Ctrl_2_Jnt_Ctrl_translateY.o" "Caleb_RigRN.phl[433]";
+connectAttr "Neck_Tie_Ctrl_2_Jnt_Ctrl_translateZ.o" "Caleb_RigRN.phl[434]";
+connectAttr "Neck_Tie_Ctrl_2_Jnt_Ctrl_rotateX.o" "Caleb_RigRN.phl[435]";
+connectAttr "Neck_Tie_Ctrl_2_Jnt_Ctrl_rotateY.o" "Caleb_RigRN.phl[436]";
+connectAttr "Neck_Tie_Ctrl_2_Jnt_Ctrl_rotateZ.o" "Caleb_RigRN.phl[437]";
+connectAttr "Neck_Tie_Ctrl_1_Jnt_Ctrl_translateX.o" "Caleb_RigRN.phl[438]";
+connectAttr "Neck_Tie_Ctrl_1_Jnt_Ctrl_translateY.o" "Caleb_RigRN.phl[439]";
+connectAttr "Neck_Tie_Ctrl_1_Jnt_Ctrl_translateZ.o" "Caleb_RigRN.phl[440]";
+connectAttr "Neck_Tie_Ctrl_1_Jnt_Ctrl_rotateX.o" "Caleb_RigRN.phl[441]";
+connectAttr "Neck_Tie_Ctrl_1_Jnt_Ctrl_rotateY.o" "Caleb_RigRN.phl[442]";
+connectAttr "Neck_Tie_Ctrl_1_Jnt_Ctrl_rotateZ.o" "Caleb_RigRN.phl[443]";
+connectAttr "Neck_Tie_Ctrl_3_Jnt_Ctrl_rotateX.o" "Caleb_RigRN.phl[444]";
+connectAttr "Neck_Tie_Ctrl_3_Jnt_Ctrl_rotateY.o" "Caleb_RigRN.phl[445]";
+connectAttr "Neck_Tie_Ctrl_3_Jnt_Ctrl_rotateZ.o" "Caleb_RigRN.phl[446]";
+connectAttr "Neck_Tie_Ctrl_3_Jnt_Ctrl_translateX.o" "Caleb_RigRN.phl[447]";
+connectAttr "Neck_Tie_Ctrl_3_Jnt_Ctrl_translateY.o" "Caleb_RigRN.phl[448]";
+connectAttr "Neck_Tie_Ctrl_3_Jnt_Ctrl_translateZ.o" "Caleb_RigRN.phl[449]";
+connectAttr "Rope_Jnt_Ctrl_translateX.o" "Caleb_RigRN.phl[450]";
+connectAttr "Rope_Jnt_Ctrl_translateY.o" "Caleb_RigRN.phl[451]";
+connectAttr "Rope_Jnt_Ctrl_translateZ.o" "Caleb_RigRN.phl[452]";
+connectAttr "Rope_Jnt_Ctrl_rotateX.o" "Caleb_RigRN.phl[453]";
+connectAttr "Rope_Jnt_Ctrl_rotateY.o" "Caleb_RigRN.phl[454]";
+connectAttr "Rope_Jnt_Ctrl_rotateZ.o" "Caleb_RigRN.phl[455]";
+connectAttr "Backpack_2_Jnt_Ctrl_translateX.o" "Caleb_RigRN.phl[456]";
+connectAttr "Backpack_2_Jnt_Ctrl_translateY.o" "Caleb_RigRN.phl[457]";
+connectAttr "Backpack_2_Jnt_Ctrl_translateZ.o" "Caleb_RigRN.phl[458]";
+connectAttr "Backpack_2_Jnt_Ctrl_rotateX.o" "Caleb_RigRN.phl[459]";
+connectAttr "Backpack_2_Jnt_Ctrl_rotateY.o" "Caleb_RigRN.phl[460]";
+connectAttr "Backpack_2_Jnt_Ctrl_rotateZ.o" "Caleb_RigRN.phl[461]";
+connectAttr "Backpack_1_Jnt_Ctrl_translateY.o" "Caleb_RigRN.phl[462]";
+connectAttr "Backpack_1_Jnt_Ctrl_translateX.o" "Caleb_RigRN.phl[463]";
+connectAttr "Backpack_1_Jnt_Ctrl_translateZ.o" "Caleb_RigRN.phl[464]";
+connectAttr "Backpack_1_Jnt_Ctrl_rotateX.o" "Caleb_RigRN.phl[465]";
+connectAttr "Backpack_1_Jnt_Ctrl_rotateY.o" "Caleb_RigRN.phl[466]";
+connectAttr "Backpack_1_Jnt_Ctrl_rotateZ.o" "Caleb_RigRN.phl[467]";
+connectAttr "NeckTieRear_Jnt_Ctrl_translateX.o" "Caleb_RigRN.phl[468]";
+connectAttr "NeckTieRear_Jnt_Ctrl_translateY.o" "Caleb_RigRN.phl[469]";
+connectAttr "NeckTieRear_Jnt_Ctrl_translateZ.o" "Caleb_RigRN.phl[470]";
+connectAttr "NeckTieRear_Jnt_Ctrl_rotateX.o" "Caleb_RigRN.phl[471]";
+connectAttr "NeckTieRear_Jnt_Ctrl_rotateY.o" "Caleb_RigRN.phl[472]";
+connectAttr "NeckTieRear_Jnt_Ctrl_rotateZ.o" "Caleb_RigRN.phl[473]";
+connectAttr "Axe_Jnt_Ctrl_translateX.o" "Caleb_RigRN.phl[474]";
+connectAttr "Axe_Jnt_Ctrl_translateY.o" "Caleb_RigRN.phl[475]";
+connectAttr "Axe_Jnt_Ctrl_translateZ.o" "Caleb_RigRN.phl[476]";
+connectAttr "Axe_Jnt_Ctrl_rotateX.o" "Caleb_RigRN.phl[477]";
+connectAttr "Axe_Jnt_Ctrl_rotateY.o" "Caleb_RigRN.phl[478]";
+connectAttr "Axe_Jnt_Ctrl_rotateZ.o" "Caleb_RigRN.phl[479]";
+connectAttr "Caleb_RigRN.phl[480]" "Caleb_RigRN.phl[481]";
+connectAttr "Caleb_RigRN.phl[482]" "pCylinder1.do";
 connectAttr "pCylinder1_parentConstraint1.ctx" "pCylinder1.tx";
 connectAttr "pCylinder1_parentConstraint1.cty" "pCylinder1.ty";
 connectAttr "pCylinder1_parentConstraint1.ctz" "pCylinder1.tz";
@@ -5106,12 +5123,6 @@ connectAttr "pCylinder1.rpt" "pCylinder1_parentConstraint1.crt";
 connectAttr "pCylinder1_scaleConstraint1.w0" "pCylinder1_scaleConstraint1.tg[0].tw"
 		;
 connectAttr "pCylinder1.pim" "pCylinder1_scaleConstraint1.cpim";
-connectAttr "Placeholder_translateX.o" "Placeholder.tx";
-connectAttr "Placeholder_translateY.o" "Placeholder.ty";
-connectAttr "Placeholder_translateZ.o" "Placeholder.tz";
-connectAttr "Placeholder_rotateX.o" "Placeholder.rx";
-connectAttr "Placeholder_rotateY.o" "Placeholder.ry";
-connectAttr "Placeholder_rotateZ.o" "Placeholder.rz";
 connectAttr "L_Arm_IK_Ctrl_scaleConstraint1.w0" "L_Arm_IK_Ctrl_scaleConstraint1.tg[0].tw"
 		;
 connectAttr "L_Arm_IK_Ctrl_parentConstraint1.w0" "L_Arm_IK_Ctrl_parentConstraint1.tg[0].tw"
