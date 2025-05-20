@@ -1,6 +1,6 @@
 //Maya ASCII 2026 scene
 //Name: Caleb_Idle_Walk_Run_Animation.ma
-//Last modified: Mon, May 19, 2025 07:13:34 PM
+//Last modified: Mon, May 19, 2025 10:19:30 PM
 //Codeset: 1252
 file -rdi 1 -ns "Caleb_Rig" -rfn "Caleb_RigRN" -op "v=0;" -typ "mayaAscii" "E:/CryptidMobile/ProjectCryptid/CryptidMobile_MayaProject//scenes/Caleb/Caleb Rig.ma";
 file -r -ns "Caleb_Rig" -dr 1 -rfn "Caleb_RigRN" -op "v=0;" -typ "mayaAscii" "E:/CryptidMobile/ProjectCryptid/CryptidMobile_MayaProject//scenes/Caleb/Caleb Rig.ma";
@@ -16,23 +16,24 @@ fileInfo "product" "Maya 2026";
 fileInfo "version" "2026";
 fileInfo "cutIdentifier" "202502240946-c910a8ba47";
 fileInfo "osv" "Windows 10 Pro for Workstations v2009 (Build: 19045)";
-fileInfo "UUID" "A76BF21F-4509-933E-C1BD-16887DA493EB";
+fileInfo "UUID" "D337B0BC-426E-2449-91FC-3B928089D70C";
 createNode transform -s -n "persp";
 	rename -uid "CBF88C2F-4AA7-20B4-1B3E-B9981C21D59C";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -4.0650369015262946 3.52707606479103 14.490096681062123 ;
-	setAttr ".r" -type "double3" -9.3383526681050029 -7935.7999999977774 2.0659005435990018e-16 ;
+	setAttr ".t" -type "double3" 24.469158069075458 2.2651622899084178 8.2004985820152161 ;
+	setAttr ".r" -type "double3" 0.26164728650549324 -11447.7999999943 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "BDE4A5E7-4F26-2D45-107D-84BDA17E4896";
 	setAttr -k off ".v" no;
+	setAttr ".pze" yes;
 	setAttr ".fl" 34.999999999999993;
 	setAttr ".ncp" 1;
 	setAttr ".fcp" 100;
-	setAttr ".coi" 14.351945931303558;
+	setAttr ".coi" 27.252383744346961;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
-	setAttr ".tp" -type "double3" 53.655650094124638 155.19993703843585 -2.3558045417015023 ;
+	setAttr ".tp" -type "double3" -6.3611418941144242 139.65939957933821 12.477341307421833 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 createNode transform -s -n "top";
 	rename -uid "EB23F0A5-4714-22A8-9EDA-A192DB33726E";
@@ -93,8 +94,8 @@ createNode camera -s -n "sideShape" -p "side";
 	setAttr ".ai_translator" -type "string" "orthographic";
 createNode lightLinker -s -n "lightLinker1";
 	rename -uid "97683EB3-4CBF-B2B6-1A4D-D68674676450";
-	setAttr -s 13 ".lnk";
-	setAttr -s 13 ".slnk";
+	setAttr -s 23 ".lnk";
+	setAttr -s 23 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
 	rename -uid "A07F4351-48DE-B334-D3BE-8897A73B814A";
 	setAttr ".bsdt[0].bscd" -type "Int32Array" 1 0 ;
@@ -3838,7 +3839,7 @@ createNode reference -n "Caleb_RigRN";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"Caleb_RigRN"
 		"Caleb_RigRN" 0
-		"Caleb_RigRN" 3767
+		"Caleb_RigRN" 3788
 		2 "|Caleb_Rig:CALEB|Caleb_Rig:Geometry|Caleb_Rig:Skinned_Geo|Caleb_Rig:Caleb_Geo_Export|Caleb_Rig:Caleb_Geo_ExportShape" 
 		"uvSet[0].uvSetName" " -type \"string\" \"map1\""
 		2 "|Caleb_Rig:CALEB|Caleb_Rig:Geometry|Caleb_Rig:Skinned_Geo|Caleb_Rig:Caleb_Geo_Export|Caleb_Rig:Caleb_Geo_ExportShape" 
@@ -3856,9 +3857,20 @@ createNode reference -n "Caleb_RigRN";
 		2 "|Caleb_Rig:CALEB|Caleb_Rig:Geometry|Caleb_Rig:Skinned_Geo|Caleb_Rig:Caleb_Geo_Export|Caleb_Rig:Caleb_Geo_ExportShape" 
 		"colorSet[1].representation" " 4"
 		2 "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Spine_Ctrls|Caleb_Rig:FK_Spine_Ctrls|Caleb_Rig:Spine_2_Jnt_FK_Ctrl_Grp|Caleb_Rig:Spine_2_Jnt_FK_Ctrl" 
+		"translate" " -type \"double3\" 0 0 0"
+		2 "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Spine_Ctrls|Caleb_Rig:FK_Spine_Ctrls|Caleb_Rig:Spine_2_Jnt_FK_Ctrl_Grp|Caleb_Rig:Spine_2_Jnt_FK_Ctrl" 
+		"translateX" " -av"
+		2 "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Spine_Ctrls|Caleb_Rig:FK_Spine_Ctrls|Caleb_Rig:Spine_2_Jnt_FK_Ctrl_Grp|Caleb_Rig:Spine_2_Jnt_FK_Ctrl" 
+		"translateY" " -av"
+		2 "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Spine_Ctrls|Caleb_Rig:FK_Spine_Ctrls|Caleb_Rig:Spine_2_Jnt_FK_Ctrl_Grp|Caleb_Rig:Spine_2_Jnt_FK_Ctrl" 
+		"translateZ" " -av"
+		2 "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Spine_Ctrls|Caleb_Rig:FK_Spine_Ctrls|Caleb_Rig:Spine_2_Jnt_FK_Ctrl_Grp|Caleb_Rig:Spine_2_Jnt_FK_Ctrl" 
 		"rotatePivotTranslate" " -type \"double3\" 0 0 0"
 		2 "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Spine_Ctrls|Caleb_Rig:FK_Spine_Ctrls|Caleb_Rig:Torso_FK_Ctrl_Grp|Caleb_Rig:Torso_FK_Ctrl" 
 		"rotatePivotTranslate" " -type \"double3\" 0 0 0"
+		2 "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Spine_Ctrls|Caleb_Rig:FK_Spine_Ctrls|Caleb_Rig:Torso_FK_Ctrl_Grp|Caleb_Rig:Torso_FK_Ctrl|Caleb_Rig:Torso_FK_CtrlShape" 
+		"cp[0:16]" (" -s 17 -type \"double3\" -5.13200527951033081 1.25101577943116182 -1.28755972839715138 -5.13200527951033081 0.74898422056881886 -1.28755972839715138 -5.13200527951033081 0.74898422056881886 -0.71244027160284573 -5.13200527951033081 1.25101577943116182 -0.71244027160284573 -5.13200527951033081 1.25101577943116182 -1.28755972839715138 -4.71244027160281043 1.25101577943116071 -1.28755972839715138 -4.71244027160281043 1.25101577943116071 -0.71244027160284573 -4.71244027160281043 0.74898422056881886 -0.71244027160284573 -4.71244027160281043 0.74898422056881886 -1.28755972839715138 -5.13200527951033081 0.74898422056881886 -1.28755972839715138 -5.13200527951033081 0.74898422056881886 -0.71244027160284573 -4.71244027160281043 0.74898422056881886 -0.71244027160284573 -4.71244027160281043 1.25101577943116071 -0.71244027160284573 -5.13200527951033081 1.25101577943116182 -0.71244027160284573 -5.13200527951033081 1.25101577943116182 -1.28755972839715138 -4.71244027160281043 1.25101577943116071 -1.28755972839715138 -4.712440"
+		+ "27160281043 0.74898422056881886 -1.28755972839715138")
 		2 "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:L_Arm_Ctrls|Caleb_Rig:L_Arm_FK_Ctrls|Caleb_Rig:L_Arm_3_Jnt_FK_Ctrl_Grp|Caleb_Rig:L_Arm_3_Jnt_FK_Ctrl" 
 		"rotatePivotTranslate" " -type \"double3\" 0 0 0"
 		2 "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:L_Arm_Ctrls|Caleb_Rig:L_Arm_FK_Ctrls|Caleb_Rig:L_Arm_2_Jnt_FK_Ctrl_Grp|Caleb_Rig:L_Arm_2_Jnt_FK_Ctrl" 
@@ -3872,15 +3884,24 @@ createNode reference -n "Caleb_RigRN";
 		2 "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:L_Arm_Ctrls|Caleb_Rig:L_Finger_Ctrls|Caleb_Rig:L_Fist_1_Jnt_Ctrl_Grp1|Caleb_Rig:L_Fist_1_Jnt_Ctrl" 
 		"rotatePivotTranslate" " -type \"double3\" 0 0 0"
 		2 "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:L_Arm_Ctrls|Caleb_Rig:L_Finger_Ctrls|Caleb_Rig:L_Thumb_Jnt1_Ctrl_Grp|Caleb_Rig:L_Thumb_Jnt1_Ctrl" 
+		"rotate" " -type \"double3\" 23.42530236615634465 -7.0241409837569293 15.76160172241030999"
+		
+		2 "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:L_Arm_Ctrls|Caleb_Rig:L_Finger_Ctrls|Caleb_Rig:L_Thumb_Jnt1_Ctrl_Grp|Caleb_Rig:L_Thumb_Jnt1_Ctrl" 
+		"rotateZ" " -av"
+		2 "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:L_Arm_Ctrls|Caleb_Rig:L_Finger_Ctrls|Caleb_Rig:L_Thumb_Jnt1_Ctrl_Grp|Caleb_Rig:L_Thumb_Jnt1_Ctrl" 
+		"rotateX" " -av"
+		2 "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:L_Arm_Ctrls|Caleb_Rig:L_Finger_Ctrls|Caleb_Rig:L_Thumb_Jnt1_Ctrl_Grp|Caleb_Rig:L_Thumb_Jnt1_Ctrl" 
+		"rotateY" " -av"
+		2 "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:L_Arm_Ctrls|Caleb_Rig:L_Finger_Ctrls|Caleb_Rig:L_Thumb_Jnt1_Ctrl_Grp|Caleb_Rig:L_Thumb_Jnt1_Ctrl" 
 		"rotatePivotTranslate" " -type \"double3\" 0 0 0"
 		2 "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:L_Arm_Ctrls|Caleb_Rig:L_Finger_Ctrls|Caleb_Rig:L_Thumb_Jnt2_Ctrl_Grp|Caleb_Rig:L_Thumb_Jnt2_Ctrl" 
 		"rotatePivotTranslate" " -type \"double3\" 0 0 0"
 		2 "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:R_Arm_Ctrls|Caleb_Rig:R_Arm_FK_Ctrls|Caleb_Rig:R_Arm_3_Jnt_FK_Ctrl_Grp|Caleb_Rig:R_Arm_3_Jnt_FK_Ctrl" 
 		"rotatePivotTranslate" " -type \"double3\" 0 0 0"
 		2 "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:R_Arm_Ctrls|Caleb_Rig:R_Arm_FK_Ctrls|Caleb_Rig:R_Arm_3_Jnt_FK_Ctrl_Grp|Caleb_Rig:R_Arm_3_Jnt_FK_Ctrl" 
-		"FollowTranslate" " -av -k 1 1"
+		"FollowTranslate" " -k 1"
 		2 "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:R_Arm_Ctrls|Caleb_Rig:R_Arm_FK_Ctrls|Caleb_Rig:R_Arm_3_Jnt_FK_Ctrl_Grp|Caleb_Rig:R_Arm_3_Jnt_FK_Ctrl" 
-		"FollowRotate" " -av -k 1 1"
+		"FollowRotate" " -k 1"
 		2 "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:R_Arm_Ctrls|Caleb_Rig:R_Arm_FK_Ctrls|Caleb_Rig:R_Arm_2_Jnt_FK_Ctrl_Grp|Caleb_Rig:R_Arm_2_Jnt_FK_Ctrl" 
 		"rotatePivotTranslate" " -type \"double3\" 0 0 0"
 		2 "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:R_Arm_Ctrls|Caleb_Rig:R_Arm_FK_Ctrls|Caleb_Rig:R_Arm_1_Jnt_FK_Ctrl_Grp|Caleb_Rig:R_Arm_1_Jnt_FK_Ctrl" 
@@ -3903,6 +3924,22 @@ createNode reference -n "Caleb_RigRN";
 		"rotatePivotTranslate" " -type \"double3\" 0 0 0"
 		2 "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:R_Leg_IK_Ctrls|Caleb_Rig:R_Leg_IK_Ctrl_Grp|Caleb_Rig:R_Leg_IK_Ctrl" 
 		"rotatePivotTranslate" " -type \"double3\" 0 0 0"
+		2 "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Head_Ctrls|Caleb_Rig:Hair_Ctrls|Caleb_Rig:Hair_Front_Bounce_CONTROL_Jnt_Ctrl_Grp|Caleb_Rig:Hair_Front_Bounce_CONTROL_Jnt_Ctrl" 
+		"SimulationEffect" " -k 1"
+		2 "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Head_Ctrls|Caleb_Rig:Hair_Ctrls|Caleb_Rig:Hair_Back_Bounce_CONTROL_Jnt_Ctrl_Grp|Caleb_Rig:Hair_Back_Bounce_CONTROL_Jnt_Ctrl" 
+		"translate" " -type \"double3\" 0 0 0"
+		2 "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Head_Ctrls|Caleb_Rig:Hair_Ctrls|Caleb_Rig:Hair_Back_Bounce_CONTROL_Jnt_Ctrl_Grp|Caleb_Rig:Hair_Back_Bounce_CONTROL_Jnt_Ctrl" 
+		"translateX" " -av"
+		2 "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Head_Ctrls|Caleb_Rig:Hair_Ctrls|Caleb_Rig:Hair_Back_Bounce_CONTROL_Jnt_Ctrl_Grp|Caleb_Rig:Hair_Back_Bounce_CONTROL_Jnt_Ctrl" 
+		"translateY" " -av"
+		2 "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Head_Ctrls|Caleb_Rig:Hair_Ctrls|Caleb_Rig:Hair_Back_Bounce_CONTROL_Jnt_Ctrl_Grp|Caleb_Rig:Hair_Back_Bounce_CONTROL_Jnt_Ctrl" 
+		"translateZ" " -av"
+		2 "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Head_Ctrls|Caleb_Rig:Hair_Ctrls|Caleb_Rig:Hair_Back_Bounce_CONTROL_Jnt_Ctrl_Grp|Caleb_Rig:Hair_Back_Bounce_CONTROL_Jnt_Ctrl" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Head_Ctrls|Caleb_Rig:Hair_Ctrls|Caleb_Rig:Hair_Back_Bounce_CONTROL_Jnt_Ctrl_Grp|Caleb_Rig:Hair_Back_Bounce_CONTROL_Jnt_Ctrl" 
+		"rotateY" " -av"
+		2 "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Head_Ctrls|Caleb_Rig:Hair_Ctrls|Caleb_Rig:Hair_Back_Bounce_CONTROL_Jnt_Ctrl_Grp|Caleb_Rig:Hair_Back_Bounce_CONTROL_Jnt_Ctrl" 
+		"rotateZ" " -av"
 		2 "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Auxillary|Caleb_Rig:Neck_Tie_Ctrls|Caleb_Rig:Neck_Tie_Ctrl_2_Jnt_Ctrl_Grp|Caleb_Rig:Neck_Tie_Ctrl_2_Jnt_Ctrl" 
 		"rotatePivotTranslate" " -type \"double3\" 0 0 0"
 		2 "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Auxillary|Caleb_Rig:Neck_Tie_Ctrls|Caleb_Rig:Neck_Tie_Ctrl_3_Jnt_Ctrl_Grp|Caleb_Rig:Neck_Tie_Ctrl_3_Jnt_Ctrl" 
@@ -3912,28 +3949,35 @@ createNode reference -n "Caleb_RigRN";
 		2 "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Auxillary|Caleb_Rig:Backpack_1_Jnt_Ctrl_Grp|Caleb_Rig:Backpack_1_Jnt_Ctrl" 
 		"rotatePivotTranslate" " -type \"double3\" 0 0 0"
 		2 "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Auxillary|Caleb_Rig:NeckTieRear_Ctrl_Grp|Caleb_Rig:NecktieBack_Backpack_OFFSET|Caleb_Rig:NeckTieRear_Jnt_Ctrl" 
+		"translate" " -type \"double3\" 0 0 0"
+		2 "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Auxillary|Caleb_Rig:NeckTieRear_Ctrl_Grp|Caleb_Rig:NecktieBack_Backpack_OFFSET|Caleb_Rig:NeckTieRear_Jnt_Ctrl" 
+		"translateY" " -av"
+		2 "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Auxillary|Caleb_Rig:NeckTieRear_Ctrl_Grp|Caleb_Rig:NecktieBack_Backpack_OFFSET|Caleb_Rig:NeckTieRear_Jnt_Ctrl" 
+		"translateZ" " -av"
+		2 "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Auxillary|Caleb_Rig:NeckTieRear_Ctrl_Grp|Caleb_Rig:NecktieBack_Backpack_OFFSET|Caleb_Rig:NeckTieRear_Jnt_Ctrl" 
 		"rotatePivotTranslate" " -type \"double3\" 0 0 0"
 		2 "|Caleb_Rig:CALEB|Caleb_Rig:Deformers|Caleb_Rig:IK_Handles|Caleb_Rig:Spine_IK_Handle" 
-		"translate" " -type \"double3\" 0.027772442858496813 1.7618966934840381 -0.07989928618814196"
+		"translate" " -type \"double3\" 0.017726347203931646 1.76440566617272343 -0.077600837870091435"
 		
 		2 "|Caleb_Rig:Axe_Geometry:left" "visibility" " 0"
 		2 "|Caleb_Rig:Axe_Geometry:Axe" "visibility" " 1"
 		2 "Caleb_Rig:Geometry_Layer" "displayType" " 2"
 		2 "Caleb_Rig:Geometry_Layer" "hideOnPlayback" " 0"
+		2 "Caleb_Rig:Joint_Layer" "visibility" " 0"
 		2 "Caleb_Rig:Controls_Layer" "displayType" " 0"
 		2 "Caleb_Rig:Controls_Layer" "visibility" " 1"
 		2 "Caleb_Rig:Deformer_Layer" "visibility" " 0"
-		3 "|Caleb_Rig:CALEB|Caleb_Rig:Geometry|Caleb_Rig:Skinned_Geo|Caleb_Rig:Caleb_Geo_Export|Caleb_Rig:Caleb_Geo_ExportShape.instObjGroups" 
-		"Caleb_Rig:standardSurface2SG.dagSetMembers" "-na"
-		3 ":standardSurface1.message" "Caleb_Rig:materialInfo68.material" ""
-		3 "Caleb_Rig:polyNormalPerVertex2.output" "|Caleb_Rig:CALEB|Caleb_Rig:Geometry|Caleb_Rig:Skinned_Geo|Caleb_Rig:Caleb_Geo_Export|Caleb_Rig:Caleb_Geo_ExportShape.inMesh" 
+		3 "Caleb_Rig:polyTweakUV1.output" "|Caleb_Rig:CALEB|Caleb_Rig:Geometry|Caleb_Rig:Skinned_Geo|Caleb_Rig:Caleb_Geo_Export|Caleb_Rig:Caleb_Geo_ExportShape.inMesh" 
 		""
+		3 "|Caleb_Rig:CALEB|Caleb_Rig:Geometry|Caleb_Rig:Skinned_Geo|Caleb_Rig:Caleb_Geo_Export|Caleb_Rig:Caleb_Geo_ExportShape.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 ":standardSurface1.message" "Caleb_Rig:materialInfo68.material" ""
 		5 3 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Geometry|Caleb_Rig:Skinned_Geo|Caleb_Rig:Caleb_Geo_Export.message" 
 		"Caleb_RigRN.placeHolderList[1]" ""
 		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Geometry|Caleb_Rig:Skinned_Geo|Caleb_Rig:Caleb_Geo_Export|Caleb_Rig:Caleb_Geo_ExportShape.inMesh" 
 		"Caleb_RigRN.placeHolderList[2]" ""
 		5 3 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Geometry|Caleb_Rig:Skinned_Geo|Caleb_Rig:Caleb_Geo_Export|Caleb_Rig:Caleb_Geo_ExportShape.instObjGroups" 
-		"Caleb_RigRN.placeHolderList[3]" "Caleb_Rig:standardSurface2SG.dsm"
+		"Caleb_RigRN.placeHolderList[3]" ":initialShadingGroup.dsm"
 		5 3 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Geometry|Caleb_Rig:Skinned_Geo|Caleb_Rig:Caleb_Geo_Export|Caleb_Rig:Caleb_Geo_ExportShape.message" 
 		"Caleb_RigRN.placeHolderList[4]" ""
 		5 3 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Geometry|Caleb_Rig:Skinned_Geo|Caleb_Rig:Caleb_Geo_Export|Caleb_Rig:Caleb_Geo_ExportShape1Orig.message" 
@@ -11348,23 +11392,23 @@ createNode reference -n "Caleb_RigRN";
 		""
 		5 4 "Caleb_RigRN" "Caleb_Rig:materialInfo68.texture" "Caleb_RigRN.placeHolderList[3710]" 
 		""
-		5 4 "Caleb_RigRN" "Caleb_Rig:Axe_Geometry:axe_mat.color" "Caleb_RigRN.placeHolderList[3711]" 
+		5 4 "Caleb_RigRN" "Caleb_Rig:CalebMat.baseColor" "Caleb_RigRN.placeHolderList[3711]" 
 		""
-		5 3 "Caleb_RigRN" "Caleb_Rig:polyNormal2.message" "Caleb_RigRN.placeHolderList[3712]" 
+		5 4 "Caleb_RigRN" "Caleb_Rig:CalebMat.opacityR" "Caleb_RigRN.placeHolderList[3712]" 
 		""
-		5 3 "Caleb_RigRN" "Caleb_Rig:skinCluster14.message" "Caleb_RigRN.placeHolderList[3713]" 
+		5 4 "Caleb_RigRN" "Caleb_Rig:CalebMat.opacityG" "Caleb_RigRN.placeHolderList[3713]" 
 		""
-		5 3 "Caleb_RigRN" "Caleb_Rig:polyTweakUV1.message" "Caleb_RigRN.placeHolderList[3714]" 
+		5 4 "Caleb_RigRN" "Caleb_Rig:CalebMat.opacityB" "Caleb_RigRN.placeHolderList[3714]" 
 		""
-		5 3 "Caleb_RigRN" "Caleb_Rig:polyNormalPerVertex2.output" "Caleb_RigRN.placeHolderList[3715]" 
+		5 4 "Caleb_RigRN" "Caleb_Rig:Axe_Geometry:axe_mat.color" "Caleb_RigRN.placeHolderList[3715]" 
+		""
+		5 3 "Caleb_RigRN" "Caleb_Rig:polyNormal2.message" "Caleb_RigRN.placeHolderList[3716]" 
+		""
+		5 3 "Caleb_RigRN" "Caleb_Rig:skinCluster14.message" "Caleb_RigRN.placeHolderList[3717]" 
+		""
+		5 3 "Caleb_RigRN" "Caleb_Rig:polyTweakUV1.output" "Caleb_RigRN.placeHolderList[3718]" 
 		"Caleb_Rig:Caleb_Geo_ExportShape.i"
-		5 4 "Caleb_RigRN" "Caleb_Rig:CalebMat.baseColor" "Caleb_RigRN.placeHolderList[3716]" 
-		""
-		5 4 "Caleb_RigRN" "Caleb_Rig:CalebMat.opacityR" "Caleb_RigRN.placeHolderList[3717]" 
-		""
-		5 4 "Caleb_RigRN" "Caleb_Rig:CalebMat.opacityG" "Caleb_RigRN.placeHolderList[3718]" 
-		""
-		5 4 "Caleb_RigRN" "Caleb_Rig:CalebMat.opacityB" "Caleb_RigRN.placeHolderList[3719]" 
+		5 3 "Caleb_RigRN" "Caleb_Rig:polyTweakUV1.message" "Caleb_RigRN.placeHolderList[3719]" 
 		"";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
@@ -11391,17 +11435,17 @@ createNode script -n "uiConfigurationScriptNode";
 		"// Maya Mel UI Configuration File.\n//\n//  This script is machine generated.  Edit at your own risk.\n//\n//\n\nglobal string $gMainPane;\nif (`paneLayout -exists $gMainPane`) {\n\n\tglobal int $gUseScenePanelConfig;\n\tint    $useSceneConfig = $gUseScenePanelConfig;\n\tint    $nodeEditorPanelVisible = stringArrayContains(\"nodeEditorPanel1\", `getPanel -vis`);\n\tint    $nodeEditorWorkspaceControlOpen = (`workspaceControl -exists nodeEditorPanel1Window` && `workspaceControl -q -visible nodeEditorPanel1Window`);\n\tint    $menusOkayInPanels = `optionVar -q allowMenusInPanels`;\n\tint    $nVisPanes = `paneLayout -q -nvp $gMainPane`;\n\tint    $nPanes = 0;\n\tstring $editorName;\n\tstring $panelName;\n\tstring $itemFilterName;\n\tstring $panelConfig;\n\n\t//\n\t//  get current state of the UI\n\t//\n\tsceneUIReplacement -update $gMainPane;\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Top View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Top View\")) -mbv $menusOkayInPanels  $panelName;\n"
 		+ "\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|top\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n"
 		+ "            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n"
-		+ "            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n"
+		+ "            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 636\n            -height 396\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n"
 		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Side View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|side\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n"
 		+ "            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n"
 		+ "            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n"
-		+ "            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n"
+		+ "            -shadows 0\n            -captureSequenceNumber -1\n            -width 96\n            -height 0\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n"
 		+ "            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n"
 		+ "            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n"
-		+ "            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n"
-		+ "            -camera \"|persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 1\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n"
+		+ "            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 96\n            -height 0\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n"
+		+ "            -camera \"|persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 1\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 1\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n"
 		+ "            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n"
-		+ "            -imagePlane 1\n            -joints 1\n            -ikHandles 0\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 4515\n            -height 1317\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n"
+		+ "            -imagePlane 1\n            -joints 1\n            -ikHandles 0\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 4554\n            -height 1319\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n"
 		+ "\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 0\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n"
 		+ "            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 0\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -isSet 0\n            -isSetMember 0\n            -showUfeItems 1\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n"
 		+ "            -longNames 0\n            -niceNames 1\n            -selectCommand \"print(\\\"\\\")\" \n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -renderFilterIndex 0\n            -selectionOrder \"chronological\" \n            -expandAttribute 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n            -showAttributes 0\n            -showConnected 0\n"
@@ -11428,13 +11472,13 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "                -maxConstantTransparency 1\n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 4 4 \n                -bumpResolution 4 4 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -controllers 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n"
 		+ "                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -bluePencil 1\n                -greasePencils 0\n                -shadows 0\n                -captureSequenceNumber -1\n                -width 0\n                -height 0\n                -sceneRenderFilter 0\n                -displayMode \"centerEye\" \n"
 		+ "                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n            stereoCameraView -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName; };\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
-		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 0\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 4515\\n    -height 1317\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
-		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 0\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 4515\\n    -height 1317\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 1\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 0\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 4554\\n    -height 1319\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 1\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 0\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 4554\\n    -height 1319\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
 		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 10 -size 36 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
 	setAttr ".st" 3;
 createNode script -n "sceneConfigurationScriptNode";
 	rename -uid "DDE48C29-44E0-1526-8B42-D693ED35C190";
-	setAttr ".b" -type "string" "playbackOptions -min 1 -max 154 -ast 1 -aet 500 ";
+	setAttr ".b" -type "string" "playbackOptions -min 92 -max 192 -ast 1 -aet 500 ";
 	setAttr ".st" 6;
 createNode file -n "file1";
 	rename -uid "77C9A8DC-4C40-C01C-EA71-568FBA8A4B5B";
@@ -16619,6 +16663,8 @@ createNode animLayer -n "head_turn";
 	rename -uid "53791842-499F-5624-7D49-CC82EC2B12B5";
 	setAttr -s 870 ".dsm";
 	setAttr -s 724 ".bnds";
+	setAttr ".pref" yes;
+	setAttr ".slct" yes;
 createNode animBlendNodeBoolean -n "Spine_1_Jnt_FK_Ctrl_visibility_head_turn";
 	rename -uid "232CE815-4FB3-1AA3-A61B-4E82CB8785B2";
 	setAttr ".ib" yes;
@@ -16631,7 +16677,7 @@ createNode animBlendNodeAdditiveDL -n "Spine_1_Jnt_FK_Ctrl_translateZ_head_turn"
 	rename -uid "A3649D33-4025-2085-2B41-A9A44C3D94DB";
 createNode animBlendNodeAdditiveRotation -n "Spine_1_Jnt_FK_Ctrl_rotate_head_turn";
 	rename -uid "CF75B9AF-42D5-461A-7DED-78943966766A";
-	setAttr ".o" -type "double3" -13.138160959851865 0 0 ;
+	setAttr ".o" -type "double3" -13.138160959851861 0 0 ;
 createNode animBlendNodeAdditiveScale -n "Spine_1_Jnt_FK_Ctrl_scaleX_head_turn";
 	rename -uid "82BA5EC7-46AE-F331-A115-AF91258BEBBF";
 	setAttr ".ib" 1;
@@ -16662,7 +16708,7 @@ createNode animBlendNodeAdditiveDL -n "L_Arm_1_Jnt_FK_Ctrl_translateZ_head_turn"
 	rename -uid "287CE268-4A69-9BC1-CB0F-90A4F2F69121";
 createNode animBlendNodeAdditiveRotation -n "L_Arm_1_Jnt_FK_Ctrl_rotate_head_turn";
 	rename -uid "D8609DE9-42C5-CB8F-9371-02BFC9E25C1E";
-	setAttr ".o" -type "double3" -3.5461759054361779 2.8120141393077516 22.629732879840439 ;
+	setAttr ".o" -type "double3" -3.5461759054361779 2.8120141393077516 22.629732879840436 ;
 createNode animBlendNodeAdditiveScale -n "L_Arm_1_Jnt_FK_Ctrl_scaleX_head_turn";
 	rename -uid "C5F26E06-4680-D78A-5B9D-0184C4209AA4";
 	setAttr ".ib" 1;
@@ -16719,7 +16765,7 @@ createNode animBlendNodeAdditiveDL -n "Head_Ctrl_translateZ_head_turn";
 	rename -uid "2206F165-4714-A98C-DE61-B68455FAEE06";
 createNode animBlendNodeAdditiveRotation -n "Head_Ctrl_rotate_head_turn";
 	rename -uid "73E5DCD5-4E15-38DB-B168-25B5FC24603D";
-	setAttr ".o" -type "double3" -10.554377020557437 0 0 ;
+	setAttr ".o" -type "double3" -10.554377020557435 0 0 ;
 createNode animBlendNodeAdditiveScale -n "Head_Ctrl_scaleX_head_turn";
 	rename -uid "533F5283-4EF5-D77D-271A-21AD1F17D873";
 	setAttr ".ib" 1;
@@ -16744,13 +16790,13 @@ createNode animBlendNodeBoolean -n "CoG_Jnt_Ctrl_visibility_head_turn";
 	setAttr ".o" yes;
 createNode animBlendNodeAdditiveDL -n "CoG_Jnt_Ctrl_translateX_head_turn";
 	rename -uid "1D258067-410A-4864-05E5-6BA3666F2E34";
-	setAttr ".o" 0.029233167627584541;
+	setAttr ".o" 0.019187071973019658;
 createNode animBlendNodeAdditiveDL -n "CoG_Jnt_Ctrl_translateY_head_turn";
 	rename -uid "6B4E6A13-407D-D65A-489D-9BAECD904256";
-	setAttr ".o" -0.077478481843792954;
+	setAttr ".o" -0.074969509155107458;
 createNode animBlendNodeAdditiveDL -n "CoG_Jnt_Ctrl_translateZ_head_turn";
 	rename -uid "392AAF11-4550-A8D3-756E-C5A5DE3227A3";
-	setAttr ".o" -0.14392188248858356;
+	setAttr ".o" -0.1416234341705323;
 createNode animBlendNodeAdditiveRotation -n "CoG_Jnt_Ctrl_rotate_head_turn";
 	rename -uid "AF048F93-490C-FD96-E61E-8D94F706BD4F";
 	setAttr ".o" -type "double3" 9.355162726003897 -1.79825523051489 -0.29620232965153204 ;
@@ -16969,7 +17015,7 @@ createNode animBlendNodeAdditiveDL -n "Spine_2_Jnt_FK_Ctrl_translateZ_head_turn"
 	rename -uid "FAC3D8B4-4888-7134-4C03-06B7820C8F60";
 createNode animBlendNodeAdditiveRotation -n "Spine_2_Jnt_FK_Ctrl_rotate_head_turn";
 	rename -uid "B3D0C10E-456A-22AF-0ABA-5C85341BF1CD";
-	setAttr ".o" -type "double3" 0 -7.2610792225793572 0 ;
+	setAttr ".o" -type "double3" 0 -7.2610792225793555 0 ;
 createNode animBlendNodeAdditiveScale -n "Spine_2_Jnt_FK_Ctrl_scaleX_head_turn";
 	rename -uid "FF7E4696-4669-EF40-60AD-BA973AA23728";
 	setAttr ".ib" 1;
@@ -17474,10 +17520,13 @@ createNode animBlendNodeBoolean -n "Neck_Tie_Ctrl_2_Jnt_Ctrl_visibility_head_tur
 	setAttr ".o" yes;
 createNode animBlendNodeAdditiveDL -n "Neck_Tie_Ctrl_2_Jnt_Ctrl_translateX_head_turn";
 	rename -uid "64364567-4162-6305-092A-B3B3E9225B70";
+	setAttr ".o" -1.8429702208777617e-16;
 createNode animBlendNodeAdditiveDL -n "Neck_Tie_Ctrl_2_Jnt_Ctrl_translateY_head_turn";
 	rename -uid "7050DAC1-4DCA-0376-6ECD-5FB12D60A115";
+	setAttr ".o" 0.060921631205916545;
 createNode animBlendNodeAdditiveDL -n "Neck_Tie_Ctrl_2_Jnt_Ctrl_translateZ_head_turn";
 	rename -uid "349D894D-4874-850F-CD8D-D4B4347D4515";
+	setAttr ".o" 6.6613381477509613e-18;
 createNode animBlendNodeAdditiveRotation -n "Neck_Tie_Ctrl_2_Jnt_Ctrl_rotate_head_turn";
 	rename -uid "197303EA-407A-2A14-8648-48BC91EEB208";
 createNode animBlendNodeAdditiveScale -n "Neck_Tie_Ctrl_2_Jnt_Ctrl_scaleX_head_turn";
@@ -17509,7 +17558,7 @@ createNode animBlendNodeAdditiveDL -n "Neck_Ctrl_translateZ_head_turn";
 	setAttr ".o" -0.00025745226008638155;
 createNode animBlendNodeAdditiveRotation -n "Neck_Ctrl_rotate_head_turn";
 	rename -uid "2E5EB1EF-429D-2425-CD92-EF992AC2FA8D";
-	setAttr ".o" -type "double3" 15.784920377273936 0 0 ;
+	setAttr ".o" -type "double3" 15.815791489290913 0.0846865080468297 0.023948535370594756 ;
 createNode animBlendNodeAdditiveScale -n "Neck_Ctrl_scaleX_head_turn";
 	rename -uid "B4F44AFE-48C8-3649-8FEF-C1A4B3E38CDB";
 	setAttr ".ib" 1;
@@ -18109,7 +18158,7 @@ createNode animBlendNodeAdditiveDL -n "R_Leg_IK_Ctrl_translateZ_head_turn";
 	setAttr ".o" 0.10274849812116291;
 createNode animBlendNodeAdditiveRotation -n "R_Leg_IK_Ctrl_rotate_head_turn";
 	rename -uid "71BFBCB8-4A53-A046-A13D-E5ABE0A3C5FB";
-	setAttr ".o" -type "double3" 0 15.734046133144034 0 ;
+	setAttr ".o" -type "double3" 0 15.73404613314403 0 ;
 createNode animBlendNodeAdditiveScale -n "R_Leg_IK_Ctrl_scaleX_head_turn";
 	rename -uid "DEBBA898-40A9-72F3-70B9-EFA66D0D0159";
 	setAttr ".ib" 1;
@@ -18465,7 +18514,7 @@ createNode animBlendNodeAdditive -n "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_Simulati
 	setAttr ".o" 1;
 createNode animBlendNodeAdditive -n "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_SimulationEffect_head_turn";
 	rename -uid "0893F629-45C0-B8A2-A5C3-92963A88F80D";
-	setAttr ".o" 1;
+	setAttr ".o" 0.41999999999999993;
 createNode animBlendNodeAdditive -n "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_Drag_head_turn";
 	rename -uid "B5A1BA64-4241-D9AA-DE99-35A24E5C48FB";
 	setAttr ".o" 0.8;
@@ -18729,7 +18778,7 @@ createNode animBlendNodeAdditiveDL -n "R_Fist_3_Jnt_Ctrl_translateZ_head_turn";
 	rename -uid "04C8635A-4A3A-01CB-9768-DE917A680B60";
 createNode animBlendNodeAdditiveRotation -n "R_Fist_3_Jnt_Ctrl_rotate_head_turn";
 	rename -uid "E66B2A76-4488-158A-35D3-FBA343763831";
-	setAttr ".o" -type "double3" 0 49.459635784876141 0 ;
+	setAttr ".o" -type "double3" 0 49.459635784876134 0 ;
 createNode animBlendNodeAdditiveScale -n "R_Fist_3_Jnt_Ctrl_scaleX_head_turn";
 	rename -uid "35B36936-45FF-7C32-936D-3A9C80A918EF";
 	setAttr ".ib" 1;
@@ -18784,7 +18833,7 @@ createNode animBlendNodeAdditiveDL -n "_L_Arm_IKFK_Switch_Ctrl_translateX_head_t
 	setAttr ".o" -2.8421709430404008e-16;
 createNode animBlendNodeAdditiveDL -n "_L_Arm_IKFK_Switch_Ctrl_translateY_head_turn";
 	rename -uid "7A6F4D18-4476-68F4-B093-5E86E1382A8E";
-	setAttr ".o" 0.2232335246574306;
+	setAttr ".o" 0.22323352465743057;
 createNode animBlendNodeAdditiveDL -n "_L_Arm_IKFK_Switch_Ctrl_translateZ_head_turn";
 	rename -uid "3F454C9F-46F0-48DA-63F9-3198F5420F9B";
 createNode animBlendNodeAdditiveRotation -n "_L_Arm_IKFK_Switch_Ctrl_rotate_head_turn";
@@ -18813,7 +18862,7 @@ createNode animBlendNodeAdditiveDL -n "_R_Arm_IKFK_Switch_Ctrl_translateX_head_t
 	setAttr ".o" -2.8421709430404008e-16;
 createNode animBlendNodeAdditiveDL -n "_R_Arm_IKFK_Switch_Ctrl_translateY_head_turn";
 	rename -uid "B4A9A3E1-4992-0C7C-56F3-CDB09E901913";
-	setAttr ".o" 0.2232335246574306;
+	setAttr ".o" 0.22323352465743057;
 createNode animBlendNodeAdditiveDL -n "_R_Arm_IKFK_Switch_Ctrl_translateZ_head_turn";
 	rename -uid "CCB9405E-4F0F-2D63-3932-FF9FAE491A72";
 createNode animBlendNodeAdditiveRotation -n "_R_Arm_IKFK_Switch_Ctrl_rotate_head_turn";
@@ -18837,53 +18886,62 @@ createNode animCurveTL -n "Neck_Ctrl_translateX_head_turn_inputB";
 	rename -uid "7EA644D6-4017-0CE3-5D36-148E3331FBE7";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1.125 0 54 0 64.125 0 69.75 0 104.625 0
-		 113.625 0 119.25 0 156.375 0 181.125 0 190.125 0;
+	setAttr -s 10 ".ktv[0:9]"  1 0 54 0 64 0 70 0 105 0 114 0 119 0 156 0
+		 171 0 185 0;
 	setAttr ".pre" 3;
 	setAttr ".pst" 3;
 createNode animCurveTL -n "Neck_Ctrl_translateY_head_turn_inputB";
 	rename -uid "884924E9-4246-61ED-666A-5FA8F44108BA";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1.125 0 54 0 64.125 0 69.75 0 104.625 0
-		 113.625 0 119.25 0 156.375 0 181.125 0 190.125 0;
+	setAttr -s 10 ".ktv[0:9]"  1 0 54 0 64 0 70 0 105 0 114 0 119 0 156 0
+		 171 0 185 0;
 	setAttr ".pre" 3;
 	setAttr ".pst" 3;
 createNode animCurveTL -n "Neck_Ctrl_translateZ_head_turn_inputB";
 	rename -uid "4F7E0504-4EB8-243E-CE88-A288C1398486";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1.125 0 54 0 64.125 0 69.75 0 104.625 0
-		 113.625 0 119.25 0 156.375 0 181.125 0 190.125 0;
+	setAttr -s 10 ".ktv[0:9]"  1 0 54 0 64 0 70 0 105 0 114 0 119 0 156 0
+		 171 0 185 0;
 	setAttr ".pre" 3;
 	setAttr ".pst" 3;
 createNode animCurveTA -n "Neck_Ctrl_rotate_head_turn_inputBX";
 	rename -uid "167AB673-4182-2C7A-3AD1-AAA6EA9ADB2D";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1.125 0 54 0 64.125 0.88569062935048126
-		 69.75 1.6240853311841832 104.625 2.1675485582759673 113.625 6.667007550462519 119.25 11.271800073886284
-		 156.375 11.855504393364367 181.125 0.67768265099665437 190.125 0;
+	setAttr -s 10 ".ktv[0:9]"  1 0 54 0 64 0.88569062935048126 70 1.6240853311841832
+		 105 2.1675485582759673 114 6.667007550462519 119 11.271800073886284 156 11.855504393364367
+		 171 0.67768265099665437 185 0;
 	setAttr ".pre" 3;
 	setAttr ".pst" 3;
 createNode animCurveTA -n "Neck_Ctrl_rotate_head_turn_inputBY";
 	rename -uid "5EBA7458-4268-8ECE-0746-698D5C4ADEE3";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1.125 0 54 0 64.125 -31.657327333779094
-		 69.75 -35.299055572759755 104.625 -37.606731930862345 113.625 43.113563782316774
-		 119.25 52.200210980846776 156.375 52.78391530032485 181.125 1.8590382246440253 190.125 0;
+	setAttr -s 10 ".ktv[0:9]"  1 0 54 0 64 -34.011250438757855 70 -35.551261619721764
+		 105 -36.76604510765565 114 43.113563782316774 119 52.200210980846776 156 52.78391530032485
+		 171 1.8590382246440253 185 0;
+	setAttr -s 10 ".kit[2:9]"  1 1 18 18 18 18 18 18;
+	setAttr -s 10 ".kot[2:9]"  1 1 18 18 18 18 18 18;
 	setAttr -s 10 ".ktl[4:9]" no yes yes yes yes yes;
+	setAttr -s 10 ".kix[2:9]"  0.97494920792563144 0.99895832387716854 
+		1 0.40111203954395735 0.99980355358372575 1 0.98636188074575248 1;
+	setAttr -s 10 ".kiy[2:9]"  -0.22242761061789015 -0.045631865582267686 
+		0 0.91602900157849076 0.019820550985130091 0 -0.1645911304162587 0;
+	setAttr -s 10 ".kox[2:9]"  0.97494921265247514 0.99895832451895605 
+		1 0.40111203954395735 0.99980355358372575 1 0.98636188074575248 1;
+	setAttr -s 10 ".koy[2:9]"  -0.22242758989909261 -0.045631851532453964 
+		0 0.91602900157849088 0.019820550985130091 0 -0.1645911304162587 0;
 	setAttr ".pre" 3;
 	setAttr ".pst" 3;
 createNode animCurveTA -n "Neck_Ctrl_rotate_head_turn_inputBZ";
 	rename -uid "2C7D9640-4DCE-A477-14E4-A4B609C208C0";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1.125 0 54 0 64.125 -4.8672564293045699
-		 69.75 -6.2051324065868343 104.625 -7.1196066660262423 113.625 13.374527964652993
-		 119.25 19.582280310818899 156.375 20.165984630296983 181.125 0.52571824845529946
-		 190.125 0;
+	setAttr -s 10 ".ktv[0:9]"  1 0 54 0 64 -4.8672564293045699 70 -6.2051324065868343
+		 105 -7.1196066660262423 114 13.374527964652993 119 19.582280310818899 156 20.165984630296983
+		 171 0.52571824845529946 185 0;
 	setAttr ".pre" 3;
 	setAttr ".pst" 3;
 createNode displayLayer -n "layer1";
@@ -18895,10 +18953,8 @@ createNode animLayer -n "BaseAnimation_extract";
 	rename -uid "5AD6E5A4-4648-13D2-716A-DD85D7D39F05";
 	setAttr -s 870 ".dsm";
 	setAttr -s 724 ".bnds";
-	setAttr ".pref" yes;
-	setAttr ".slct" yes;
 	setAttr ".ovrd" yes;
-	setAttr ".wgth" 0.5776397513;
+	setAttr ".wgth" 0.28881987609999998;
 createNode animBlendNodeBoolean -n "Spine_1_Jnt_FK_Ctrl_visibility_BaseAnimation_extract";
 	rename -uid "0F13A034-4849-918F-DEDA-078D9B9D1EDE";
 	setAttr -av ".ia" yes;
@@ -18913,7 +18969,7 @@ createNode animBlendNodeAdditiveDL -n "Spine_1_Jnt_FK_Ctrl_translateZ_BaseAnimat
 createNode animBlendNodeAdditiveRotation -n "Spine_1_Jnt_FK_Ctrl_rotate_BaseAnimation_extract";
 	rename -uid "26923C51-479E-8A3B-D846-42B45FCD4DA4";
 	setAttr ".ia" -type "double3" -13.138160959851863 0 0 ;
-	setAttr ".o" -type "double3" -13.138160959851865 0 0 ;
+	setAttr ".o" -type "double3" -13.138160959851861 0 0 ;
 createNode animBlendNodeAdditiveScale -n "Spine_1_Jnt_FK_Ctrl_scaleX_BaseAnimation_extract";
 	rename -uid "E3684A52-4FEC-9171-A5C9-7AB31A80312E";
 	setAttr -av ".ia" 1;
@@ -18953,7 +19009,7 @@ createNode animBlendNodeAdditiveDL -n "L_Arm_1_Jnt_FK_Ctrl_translateZ_BaseAnimat
 createNode animBlendNodeAdditiveRotation -n "L_Arm_1_Jnt_FK_Ctrl_rotate_BaseAnimation_extract";
 	rename -uid "8061353E-4286-7A99-48A5-C7BD2C00E749";
 	setAttr ".ia" -type "double3" -3.5461759054361779 2.8120141393077516 22.629732879840439 ;
-	setAttr ".o" -type "double3" -3.5461759054361779 2.8120141393077516 22.629732879840439 ;
+	setAttr ".o" -type "double3" -3.5461759054361779 2.8120141393077516 22.629732879840436 ;
 createNode animBlendNodeAdditiveScale -n "L_Arm_1_Jnt_FK_Ctrl_scaleX_BaseAnimation_extract";
 	rename -uid "F6A4BF6C-42E7-A821-4885-50AE62983169";
 	setAttr -av ".ia" 1;
@@ -19019,7 +19075,7 @@ createNode animBlendNodeAdditiveDL -n "Head_Ctrl_translateZ_BaseAnimation_extrac
 createNode animBlendNodeAdditiveRotation -n "Head_Ctrl_rotate_BaseAnimation_extract";
 	rename -uid "8C903139-4C49-9655-F611-A2B73708E640";
 	setAttr ".ia" -type "double3" -10.554377020557437 0 0 ;
-	setAttr ".o" -type "double3" -10.554377020557437 0 0 ;
+	setAttr ".o" -type "double3" -10.554377020557435 0 0 ;
 createNode animBlendNodeAdditiveScale -n "Head_Ctrl_scaleX_BaseAnimation_extract";
 	rename -uid "9E3C692E-4538-94F5-8723-0299F612947D";
 	setAttr -av ".ia" 1;
@@ -19053,15 +19109,15 @@ createNode animBlendNodeBoolean -n "CoG_Jnt_Ctrl_visibility_BaseAnimation_extrac
 createNode animBlendNodeAdditiveDL -n "CoG_Jnt_Ctrl_translateX_BaseAnimation_extract";
 	rename -uid "37EF94F8-4AAF-231C-8E66-19B02A076A9B";
 	setAttr ".ia" 0.010893016424843971;
-	setAttr ".o" 0.029233167627584541;
+	setAttr ".o" 0.019187071973019658;
 createNode animBlendNodeAdditiveDL -n "CoG_Jnt_Ctrl_translateY_BaseAnimation_extract";
 	rename -uid "2B2576A8-4E8A-C6F8-3CED-2E98C850AC77";
 	setAttr ".ia" -0.0721709228971575;
-	setAttr ".o" -0.077478481843792954;
+	setAttr ".o" -0.074969509155107458;
 createNode animBlendNodeAdditiveDL -n "CoG_Jnt_Ctrl_translateZ_BaseAnimation_extract";
 	rename -uid "9FE8F2FD-4845-9435-A912-B9933A7B8642";
 	setAttr ".ia" -0.13816802243551496;
-	setAttr ".o" -0.14392188248858356;
+	setAttr ".o" -0.1416234341705323;
 createNode animBlendNodeAdditiveRotation -n "CoG_Jnt_Ctrl_rotate_BaseAnimation_extract";
 	rename -uid "95C6A06F-423C-03C7-1227-69B8B400E8D4";
 	setAttr ".ia" -type "double3" 9.355162726003897 -1.79825523051489 -0.29620232965153204 ;
@@ -19366,7 +19422,7 @@ createNode animBlendNodeAdditiveRotation -n "Spine_2_Jnt_FK_Ctrl_rotate_BaseAnim
 	setAttr -av ".iay";
 	setAttr -av ".iaz";
 	setAttr ".ib" -type "double3" 0 -7.2610792225793572 0 ;
-	setAttr ".o" -type "double3" 0 -7.2610792225793572 0 ;
+	setAttr ".o" -type "double3" 0 -7.2610792225793555 0 ;
 createNode animBlendNodeAdditiveScale -n "Spine_2_Jnt_FK_Ctrl_scaleX_BaseAnimation_extract";
 	rename -uid "98024181-425E-B7C5-4ED5-9F9808B5E08E";
 	setAttr -av ".ia" 1;
@@ -20074,12 +20130,15 @@ createNode animBlendNodeBoolean -n "Neck_Tie_Ctrl_2_Jnt_Ctrl_visibility_BaseAnim
 createNode animBlendNodeAdditiveDL -n "Neck_Tie_Ctrl_2_Jnt_Ctrl_translateX_BaseAnimation_extract";
 	rename -uid "EAF82D4E-48E4-C882-8417-A196BB762268";
 	setAttr -av ".ia";
+	setAttr ".o" -1.8429702208777617e-16;
 createNode animBlendNodeAdditiveDL -n "Neck_Tie_Ctrl_2_Jnt_Ctrl_translateY_BaseAnimation_extract";
 	rename -uid "A65FCCAF-463D-2D78-B1E8-C8A15C0D9951";
 	setAttr -av ".ia";
+	setAttr ".o" 0.060921631205916545;
 createNode animBlendNodeAdditiveDL -n "Neck_Tie_Ctrl_2_Jnt_Ctrl_translateZ_BaseAnimation_extract";
 	rename -uid "8CCC7A01-45CC-E2EA-3443-7DBA81DDE5C3";
 	setAttr -av ".ia";
+	setAttr ".o" 6.6613381477509613e-18;
 createNode animBlendNodeAdditiveRotation -n "Neck_Tie_Ctrl_2_Jnt_Ctrl_rotate_BaseAnimation_extract";
 	rename -uid "E664BBA2-4A69-5801-927C-C88CE4AF5BB1";
 	setAttr -av ".iax";
@@ -20976,7 +21035,7 @@ createNode animBlendNodeAdditiveDL -n "R_Leg_IK_Ctrl_translateZ_BaseAnimation_ex
 createNode animBlendNodeAdditiveRotation -n "R_Leg_IK_Ctrl_rotate_BaseAnimation_extract";
 	rename -uid "2EB927B9-48E4-F605-C7F8-C0B197863649";
 	setAttr ".ia" -type "double3" 0 15.734046133144034 0 ;
-	setAttr ".o" -type "double3" 0 15.734046133144034 0 ;
+	setAttr ".o" -type "double3" 0 15.73404613314403 0 ;
 createNode animBlendNodeAdditiveScale -n "R_Leg_IK_Ctrl_scaleX_BaseAnimation_extract";
 	rename -uid "819560AB-4D9C-7550-1DFF-B38FBC7215D9";
 	setAttr -av ".ia" 1;
@@ -21428,7 +21487,6 @@ createNode animBlendNodeAdditiveScale -n "R_Foot_Reverse_Foot_Inner_Ctrl_scaleZ_
 createNode animBlendNodeBoolean -n "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_visibility_BaseAnimation_extract";
 	rename -uid "D90C04B8-459E-0F14-9CF9-178F9427DD5D";
 	setAttr -av ".ia" yes;
-	setAttr ".ib" yes;
 	setAttr ".o" yes;
 createNode animBlendNodeAdditiveDL -n "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_translateX_BaseAnimation_extract";
 	rename -uid "7D08D723-4F83-AE27-F9D5-81BF43228ADB";
@@ -21447,27 +21505,22 @@ createNode animBlendNodeAdditiveRotation -n "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_
 createNode animBlendNodeAdditiveScale -n "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_scaleX_BaseAnimation_extract";
 	rename -uid "FB8BE0DF-4517-938F-3546-A6B9869003D2";
 	setAttr -av ".ia" 1;
-	setAttr ".ib" 1;
 	setAttr ".o" 1;
 createNode animBlendNodeAdditiveScale -n "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_scaleY_BaseAnimation_extract";
 	rename -uid "38C7CF8B-4DD0-03D0-A700-61998C32AF7A";
 	setAttr -av ".ia" 1;
-	setAttr ".ib" 1;
 	setAttr ".o" 1;
 createNode animBlendNodeAdditiveScale -n "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_scaleZ_BaseAnimation_extract";
 	rename -uid "8A737C01-4241-89C8-34A8-31A16024DB39";
 	setAttr -av ".ia" 1;
-	setAttr ".ib" 1;
 	setAttr ".o" 1;
 createNode animBlendNodeAdditive -n "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_FollowTranslate_BaseAnimation_extract";
 	rename -uid "F863176B-4398-F37E-CD27-6683B7F7EFCC";
 	setAttr -av ".ia" 1;
-	setAttr ".ib" 1;
 	setAttr ".o" 1;
 createNode animBlendNodeAdditive -n "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_FollowRotate_BaseAnimation_extract";
 	rename -uid "AD950F48-4F35-2EE6-8621-DD88239452E7";
 	setAttr -av ".ia" 1;
-	setAttr ".ib" 1;
 	setAttr ".o" 1;
 createNode animBlendNodeEnum -n "Hair_Front_Bounce_CONTROL_Jnt_Ctrl___________________BaseAnimation_extract";
 	rename -uid "4BEE67BE-48D8-0BA9-3A79-15A9F0558E0B";
@@ -21475,27 +21528,22 @@ createNode animBlendNodeEnum -n "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_____________
 createNode animBlendNodeAdditive -n "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_SimulationActive_BaseAnimation_extract";
 	rename -uid "2AF64CB7-4462-9B52-9DC7-36940609DD01";
 	setAttr -av ".ia" 1;
-	setAttr ".ib" 1;
 	setAttr ".o" 1;
 createNode animBlendNodeAdditive -n "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_SimulationEffect_BaseAnimation_extract";
 	rename -uid "63913D28-4F16-8B6C-BDCA-1B828B4A1A62";
 	setAttr -av ".ia" 1;
-	setAttr ".ib" 1;
-	setAttr ".o" 1;
+	setAttr ".o" 0.41999999999999993;
 createNode animBlendNodeAdditive -n "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_Drag_BaseAnimation_extract";
 	rename -uid "29F7DAED-4D0F-0924-C020-9CB7BAC0BD0C";
 	setAttr -av ".ia" 0.8;
-	setAttr ".ib" 0.8;
 	setAttr ".o" 0.8;
 createNode animBlendNodeAdditive -n "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_MatchControl_BaseAnimation_extract";
 	rename -uid "94AC4234-476B-541D-E328-3BB43E54C599";
 	setAttr -av ".ia" 0.5;
-	setAttr ".ib" 0.5;
 	setAttr ".o" 0.5;
 createNode animBlendNodeAdditiveF -n "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_Stretch_BaseAnimation_extract";
 	rename -uid "A5617069-424D-9CFE-70E1-4DAC900CC472";
 	setAttr -av ".ia" 1;
-	setAttr ".ib" 1;
 	setAttr ".o" 1;
 createNode animBlendNodeBoolean -n "R_Foot_Reverse_Foot_Ball_Ctrl_visibility_BaseAnimation_extract";
 	rename -uid "45F8E5BF-4AE8-AC32-7686-2AA6E513C316";
@@ -21861,7 +21909,7 @@ createNode animBlendNodeAdditiveDL -n "R_Fist_3_Jnt_Ctrl_translateZ_BaseAnimatio
 createNode animBlendNodeAdditiveRotation -n "R_Fist_3_Jnt_Ctrl_rotate_BaseAnimation_extract";
 	rename -uid "AB34834E-4356-F196-CDE0-F6B82E724112";
 	setAttr ".ia" -type "double3" 0 49.459635784876141 0 ;
-	setAttr ".o" -type "double3" 0 49.459635784876141 0 ;
+	setAttr ".o" -type "double3" 0 49.459635784876134 0 ;
 createNode animBlendNodeAdditiveScale -n "R_Fist_3_Jnt_Ctrl_scaleX_BaseAnimation_extract";
 	rename -uid "76E39BDD-4245-2F6F-04EE-BC844357459E";
 	setAttr ".ia" 1;
@@ -21937,7 +21985,7 @@ createNode animBlendNodeAdditiveDL -n "_L_Arm_IKFK_Switch_Ctrl_translateY_BaseAn
 	rename -uid "8D5DF86A-4571-FC54-F756-A1B302DB669B";
 	setAttr -av ".ia" 0.2232335246574306;
 	setAttr ".ib" 0.2232335246574306;
-	setAttr ".o" 0.2232335246574306;
+	setAttr ".o" 0.22323352465743057;
 createNode animBlendNodeAdditiveDL -n "_L_Arm_IKFK_Switch_Ctrl_translateZ_BaseAnimation_extract";
 	rename -uid "0718B96C-4497-2D68-0744-8C8E6E6025D7";
 	setAttr -av ".ia";
@@ -21980,7 +22028,7 @@ createNode animBlendNodeAdditiveDL -n "_R_Arm_IKFK_Switch_Ctrl_translateY_BaseAn
 	rename -uid "3EAE79E3-4638-7CE9-524F-D4831DD1F367";
 	setAttr -av ".ia" 0.2232335246574306;
 	setAttr ".ib" 0.2232335246574306;
-	setAttr ".o" 0.2232335246574306;
+	setAttr ".o" 0.22323352465743057;
 createNode animBlendNodeAdditiveDL -n "_R_Arm_IKFK_Switch_Ctrl_translateZ_BaseAnimation_extract";
 	rename -uid "0734F4DB-4E0E-250D-4DAC-429D4403B518";
 	setAttr -av ".ia";
@@ -22025,7 +22073,7 @@ createNode animBlendNodeAdditiveDL -n "Spine_1_Jnt_FK_Ctrl_translateZ_breathing"
 	rename -uid "78B26D7F-4846-A863-EBC2-54A26BFFAF37";
 createNode animBlendNodeAdditiveRotation -n "Spine_1_Jnt_FK_Ctrl_rotate_breathing";
 	rename -uid "91816A90-40AF-DD03-4230-D68780017EC1";
-	setAttr ".o" -type "double3" -13.138160959851865 0 0 ;
+	setAttr ".o" -type "double3" -13.138160959851861 0 0 ;
 createNode animBlendNodeAdditiveScale -n "Spine_1_Jnt_FK_Ctrl_scaleX_breathing";
 	rename -uid "0050FC2F-435F-A836-8E02-A58415029882";
 	setAttr ".ib" 1;
@@ -22056,7 +22104,7 @@ createNode animBlendNodeAdditiveDL -n "L_Arm_1_Jnt_FK_Ctrl_translateZ_breathing"
 	rename -uid "38FF94EB-471A-0B08-BBB7-1585C8478A19";
 createNode animBlendNodeAdditiveRotation -n "L_Arm_1_Jnt_FK_Ctrl_rotate_breathing";
 	rename -uid "F5E90B26-434A-B3FF-991D-D4B699FA5E7F";
-	setAttr ".o" -type "double3" -4.0089296762600091 2.1644717766254464 12.54831462557584 ;
+	setAttr ".o" -type "double3" -4.1263444053053862 1.9796202088186794 11.508629147951996 ;
 createNode animBlendNodeAdditiveScale -n "L_Arm_1_Jnt_FK_Ctrl_scaleX_breathing";
 	rename -uid "60267887-4E48-EFEE-C3F2-67B7934D514F";
 	setAttr ".ib" 1;
@@ -22113,7 +22161,7 @@ createNode animBlendNodeAdditiveDL -n "Head_Ctrl_translateZ_breathing";
 	rename -uid "691F9E9A-4293-745C-DA6D-7C819D3D8415";
 createNode animBlendNodeAdditiveRotation -n "Head_Ctrl_rotate_breathing";
 	rename -uid "F50AEB60-4194-F1F1-C124-D797F13D2766";
-	setAttr ".o" -type "double3" -10.554377020557437 0 0 ;
+	setAttr ".o" -type "double3" -10.554377020557435 0 0 ;
 createNode animBlendNodeAdditiveScale -n "Head_Ctrl_scaleX_breathing";
 	rename -uid "8319FD90-4B70-4276-8F0B-038FE79C5946";
 	setAttr ".ib" 1;
@@ -22139,15 +22187,15 @@ createNode animBlendNodeBoolean -n "CoG_Jnt_Ctrl_visibility_breathing";
 createNode animBlendNodeAdditiveDL -n "CoG_Jnt_Ctrl_translateX_breathing";
 	rename -uid "C5B87B43-4A65-A239-875A-178E04669DE1";
 	setAttr ".ib" 9.8960469251845171e-08;
-	setAttr ".o" 0.02923326658805379;
+	setAttr ".o" 0.019187170933488911;
 createNode animBlendNodeAdditiveDL -n "CoG_Jnt_Ctrl_translateY_breathing";
 	rename -uid "9333793C-4599-4579-82E9-089BF33C4AF7";
 	setAttr ".ib" 0.00021956352014755433;
-	setAttr ".o" -0.077258918323645398;
+	setAttr ".o" -0.074749945634959916;
 createNode animBlendNodeAdditiveDL -n "CoG_Jnt_Ctrl_translateZ_breathing";
 	rename -uid "74F20C33-4D0C-964B-F74D-5CB8D01F5DEF";
 	setAttr ".ib" 3.3001712039858903e-05;
-	setAttr ".o" -0.14388888077654372;
+	setAttr ".o" -0.14159043245849245;
 createNode animBlendNodeAdditiveRotation -n "CoG_Jnt_Ctrl_rotate_breathing";
 	rename -uid "3DF5A7B8-4201-5CDA-7379-0EAB51BFB04C";
 	setAttr ".ib" -type "double3" -0.030419024382123867 0 0 ;
@@ -22367,7 +22415,7 @@ createNode animBlendNodeAdditiveDL -n "Spine_2_Jnt_FK_Ctrl_translateZ_breathing"
 	rename -uid "31991A20-4F8E-D479-2CC8-1591863DD236";
 createNode animBlendNodeAdditiveRotation -n "Spine_2_Jnt_FK_Ctrl_rotate_breathing";
 	rename -uid "F9B2A302-4D31-C89A-D714-D78266CE3ECB";
-	setAttr ".o" -type "double3" 0 -7.2610792225793572 0 ;
+	setAttr ".o" -type "double3" 0 -7.2610792225793555 0 ;
 createNode animBlendNodeAdditiveScale -n "Spine_2_Jnt_FK_Ctrl_scaleX_breathing";
 	rename -uid "2AAB04CE-4A7E-83E0-331E-A79FF77158ED";
 	setAttr ".ib" 1;
@@ -22398,7 +22446,7 @@ createNode animBlendNodeAdditiveDL -n "R_Arm_1_Jnt_FK_Ctrl_translateZ_breathing"
 	rename -uid "0228DFE1-4D3A-E22A-6817-439735D64B1C";
 createNode animBlendNodeAdditiveRotation -n "R_Arm_1_Jnt_FK_Ctrl_rotate_breathing";
 	rename -uid "C281D34A-4F49-A585-28E9-91BE6973932D";
-	setAttr ".o" -type "double3" 0.7925532539751885 -3.4874248868390869 -16.036567033815803 ;
+	setAttr ".o" -type "double3" 0.87561326189752187 -3.4657646072983734 -17.412910132496421 ;
 createNode animBlendNodeAdditiveScale -n "R_Arm_1_Jnt_FK_Ctrl_scaleX_breathing";
 	rename -uid "A061941D-4720-345B-4AC6-1CAC6380C678";
 	setAttr ".ib" 1;
@@ -22824,7 +22872,7 @@ createNode animBlendNodeAdditiveDL -n "Backpack_1_Jnt_Ctrl_translateZ_breathing"
 	rename -uid "68CFDBB7-43EC-A12B-C276-3D951EBF5203";
 createNode animBlendNodeAdditiveRotation -n "Backpack_1_Jnt_Ctrl_rotate_breathing";
 	rename -uid "A25C213F-4D4C-CEA7-51F2-548DCE66D2EB";
-	setAttr ".o" -type "double3" -4.1813164658444846 0 0 ;
+	setAttr ".o" -type "double3" -2.6611340763119493 0 0 ;
 createNode animBlendNodeAdditiveScale -n "Backpack_1_Jnt_Ctrl_scaleX_breathing";
 	rename -uid "308277AD-465F-9889-D075-4496AEDE40DE";
 	setAttr ".ib" 1;
@@ -22873,10 +22921,13 @@ createNode animBlendNodeBoolean -n "Neck_Tie_Ctrl_2_Jnt_Ctrl_visibility_breathin
 	setAttr ".o" yes;
 createNode animBlendNodeAdditiveDL -n "Neck_Tie_Ctrl_2_Jnt_Ctrl_translateX_breathing";
 	rename -uid "1FAE55F9-4AD2-3400-2F8B-C9BFF24CA98E";
+	setAttr ".o" 1.4988010832439602e-16;
 createNode animBlendNodeAdditiveDL -n "Neck_Tie_Ctrl_2_Jnt_Ctrl_translateY_breathing";
 	rename -uid "DBD32050-4C62-0576-3D71-10B92F3E3072";
+	setAttr ".o" 0.028351188334012574;
 createNode animBlendNodeAdditiveDL -n "Neck_Tie_Ctrl_2_Jnt_Ctrl_translateZ_breathing";
 	rename -uid "C9B71438-4686-4343-5D9F-D1B4E50793F4";
+	setAttr ".o" 1.1102230246251589e-17;
 createNode animBlendNodeAdditiveRotation -n "Neck_Tie_Ctrl_2_Jnt_Ctrl_rotate_breathing";
 	rename -uid "6C5D991B-40C6-E7BF-7B9F-9883164726C6";
 createNode animBlendNodeAdditiveScale -n "Neck_Tie_Ctrl_2_Jnt_Ctrl_scaleX_breathing";
@@ -22908,7 +22959,7 @@ createNode animBlendNodeAdditiveDL -n "Neck_Ctrl_translateZ_breathing";
 	setAttr ".o" -0.00025745226008638155;
 createNode animBlendNodeAdditiveRotation -n "Neck_Ctrl_rotate_breathing";
 	rename -uid "221EA1D4-4465-0644-2561-B9B38C909FB1";
-	setAttr ".o" -type "double3" 15.784920377273936 0 0 ;
+	setAttr ".o" -type "double3" 15.815791489290913 0.0846865080468297 0.023948535370594756 ;
 createNode animBlendNodeAdditiveScale -n "Neck_Ctrl_scaleX_breathing";
 	rename -uid "702B00BA-4EAE-327C-78AC-D5B1CA5A8905";
 	setAttr ".ib" 1;
@@ -23508,7 +23559,7 @@ createNode animBlendNodeAdditiveDL -n "R_Leg_IK_Ctrl_translateZ_breathing";
 	setAttr ".o" 0.10274849812116291;
 createNode animBlendNodeAdditiveRotation -n "R_Leg_IK_Ctrl_rotate_breathing";
 	rename -uid "CB53426B-441C-2C71-5FC2-909BA369858C";
-	setAttr ".o" -type "double3" 0 15.734046133144034 0 ;
+	setAttr ".o" -type "double3" 0 15.73404613314403 0 ;
 createNode animBlendNodeAdditiveScale -n "R_Leg_IK_Ctrl_scaleX_breathing";
 	rename -uid "ECE9F00B-4D61-8A93-C2F9-A1B598BCB5C2";
 	setAttr ".ib" 1;
@@ -23778,12 +23829,16 @@ createNode animBlendNodeBoolean -n "Neck_Tie_Ctrl_3_Jnt_Ctrl_visibility_breathin
 	setAttr ".o" yes;
 createNode animBlendNodeAdditiveDL -n "Neck_Tie_Ctrl_3_Jnt_Ctrl_translateX_breathing";
 	rename -uid "80D89DEC-44AC-7F52-8B65-34BD9FDF43E6";
+	setAttr ".o" -0.0094291578918108583;
 createNode animBlendNodeAdditiveDL -n "Neck_Tie_Ctrl_3_Jnt_Ctrl_translateY_breathing";
 	rename -uid "280BDCCC-4159-5CF1-7E09-81BC5F2BA506";
+	setAttr ".o" 0.026507829183602245;
 createNode animBlendNodeAdditiveDL -n "Neck_Tie_Ctrl_3_Jnt_Ctrl_translateZ_breathing";
 	rename -uid "FFA4AE77-4E62-59B2-709B-23869F3FCD32";
+	setAttr ".o" -2.2482016248659415e-17;
 createNode animBlendNodeAdditiveRotation -n "Neck_Tie_Ctrl_3_Jnt_Ctrl_rotate_breathing";
 	rename -uid "D4F013E9-4755-37CB-A095-8CA54B428FC3";
+	setAttr ".o" -type "double3" 0 0 19.581092556465549 ;
 createNode animBlendNodeAdditiveScale -n "Neck_Tie_Ctrl_3_Jnt_Ctrl_scaleX_breathing";
 	rename -uid "8B1017BC-4D07-48A2-8B85-F59AE47471B7";
 	setAttr ".ib" 1;
@@ -23864,7 +23919,7 @@ createNode animBlendNodeAdditive -n "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_Simulati
 	setAttr ".o" 1;
 createNode animBlendNodeAdditive -n "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_SimulationEffect_breathing";
 	rename -uid "1BED3817-41E6-7EF0-DA36-E7A6D369192F";
-	setAttr ".o" 1;
+	setAttr ".o" 0.41999999999999993;
 createNode animBlendNodeAdditive -n "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_Drag_breathing";
 	rename -uid "1126E682-4222-EC8F-A43F-CA84B12BA184";
 	setAttr ".o" 0.8;
@@ -23974,18 +24029,15 @@ createNode animBlendNodeAdditiveDL -n "Torso_FK_Ctrl_translateZ_breathing";
 	setAttr ".o" -0.00025745226008638155;
 createNode animBlendNodeAdditiveRotation -n "Torso_FK_Ctrl_rotate_breathing";
 	rename -uid "3A5FC972-4948-4058-A4F8-6791C306E794";
-	setAttr ".o" -type "double3" 0 -8.9223283651491236 0 ;
+	setAttr ".o" -type "double3" 0 -7.9717457155782538 0 ;
 createNode animBlendNodeAdditiveScale -n "Torso_FK_Ctrl_scaleX_breathing";
 	rename -uid "EA7CA248-4779-769B-8A53-5BB4B7776A7D";
-	setAttr ".ib" 1;
 	setAttr ".o" 1;
 createNode animBlendNodeAdditiveScale -n "Torso_FK_Ctrl_scaleY_breathing";
 	rename -uid "D6396795-4CC0-2E42-5FA4-428E3EAED5BD";
-	setAttr ".ib" 1;
 	setAttr ".o" 1;
 createNode animBlendNodeAdditiveScale -n "Torso_FK_Ctrl_scaleZ_breathing";
 	rename -uid "FBFB1A44-4EB2-4967-84F5-EB89EF78CD43";
-	setAttr ".ib" 1;
 	setAttr ".o" 1;
 createNode animBlendNodeAdditive -n "Torso_FK_Ctrl_FollowTranslate_breathing";
 	rename -uid "8896CA53-49F0-8C98-AFE5-C5BFC983FCA8";
@@ -24128,7 +24180,7 @@ createNode animBlendNodeAdditiveDL -n "R_Fist_3_Jnt_Ctrl_translateZ_breathing";
 	rename -uid "BF06E8D3-4CB4-03FC-79AA-F8953B48A86A";
 createNode animBlendNodeAdditiveRotation -n "R_Fist_3_Jnt_Ctrl_rotate_breathing";
 	rename -uid "C81C93DB-4CD7-57D5-C554-3BA64D0F0A1C";
-	setAttr ".o" -type "double3" 0 49.459635784876141 0 ;
+	setAttr ".o" -type "double3" 0 49.459635784876134 0 ;
 createNode animBlendNodeAdditiveScale -n "R_Fist_3_Jnt_Ctrl_scaleX_breathing";
 	rename -uid "2D28DF56-49E7-63E3-9A25-A8B11AB08F54";
 	setAttr ".ib" 1;
@@ -24183,7 +24235,7 @@ createNode animBlendNodeAdditiveDL -n "_L_Arm_IKFK_Switch_Ctrl_translateX_breath
 	setAttr ".o" -2.8421709430404008e-16;
 createNode animBlendNodeAdditiveDL -n "_L_Arm_IKFK_Switch_Ctrl_translateY_breathing";
 	rename -uid "7651157B-4592-12DC-3195-6DBCE3BD20F2";
-	setAttr ".o" 0.2232335246574306;
+	setAttr ".o" 0.22323352465743057;
 createNode animBlendNodeAdditiveDL -n "_L_Arm_IKFK_Switch_Ctrl_translateZ_breathing";
 	rename -uid "C651FA65-4E06-DEB5-8D21-B2B90B423E8E";
 createNode animBlendNodeAdditiveRotation -n "_L_Arm_IKFK_Switch_Ctrl_rotate_breathing";
@@ -24212,7 +24264,7 @@ createNode animBlendNodeAdditiveDL -n "_R_Arm_IKFK_Switch_Ctrl_translateX_breath
 	setAttr ".o" -2.8421709430404008e-16;
 createNode animBlendNodeAdditiveDL -n "_R_Arm_IKFK_Switch_Ctrl_translateY_breathing";
 	rename -uid "9529A2F3-4822-5DAA-FC3E-E7BCAC3DD051";
-	setAttr ".o" 0.2232335246574306;
+	setAttr ".o" 0.22323352465743057;
 createNode animBlendNodeAdditiveDL -n "_R_Arm_IKFK_Switch_Ctrl_translateZ_breathing";
 	rename -uid "5BF4B0D0-4AC9-55F1-DB28-59B814B3A000";
 createNode animBlendNodeAdditiveRotation -n "_R_Arm_IKFK_Switch_Ctrl_rotate_breathing";
@@ -24236,43 +24288,43 @@ createNode animCurveTL -n "Torso_FK_Ctrl_translateX_breathing_inputB";
 	rename -uid "31E72328-4513-1280-1FCD-86B20F0B8694";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  0.75 0 9.75 0 12 0 24.75 0 30 0;
+	setAttr -s 5 ".ktv[0:4]"  0.75 0 10 0 12 0 25 0 30 0;
 	setAttr ".pre" 3;
 	setAttr ".pst" 3;
 createNode animCurveTL -n "Torso_FK_Ctrl_translateY_breathing_inputB";
 	rename -uid "C572EDF2-47DE-7B91-EF70-23A45DEB2511";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  0.75 0 9.75 0 12 0 24.75 0 30 0;
+	setAttr -s 5 ".ktv[0:4]"  0.75 0 10 0 12 0 25 0 30 0;
 	setAttr ".pre" 3;
 	setAttr ".pst" 3;
 createNode animCurveTL -n "Torso_FK_Ctrl_translateZ_breathing_inputB";
 	rename -uid "F3FDBD72-4D0A-1B61-4B87-DA8647E6B766";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  0.75 0 9.75 0 12 0 24.75 0 30 0;
+	setAttr -s 5 ".ktv[0:4]"  0.75 0 10 0 12 0 25 0 30 0;
 	setAttr ".pre" 3;
 	setAttr ".pst" 3;
 createNode animCurveTA -n "Torso_FK_Ctrl_rotate_breathing_inputBX";
 	rename -uid "CB05FA0D-4455-6852-4E1F-70AEFBAA012A";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  0.75 0 9.75 0 12 0 24.75 0 30 0;
+	setAttr -s 5 ".ktv[0:4]"  0.75 0 10 0 12 0 25 0 30 0;
 	setAttr ".pre" 3;
 	setAttr ".pst" 3;
 createNode animCurveTA -n "Torso_FK_Ctrl_rotate_breathing_inputBY";
 	rename -uid "E00C936D-4EB2-1FDA-DFB6-C0A150CD785D";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  0.75 0 9.75 5.8310757011046146 12 5.9395666938109155
-		 24.75 0.55897789710661716 30 0;
+	setAttr -s 5 ".ktv[0:4]"  0.75 0 10 4.3928547453557263 12 4.5013457380620281
+		 25 0.55897789710661716 30 0;
 	setAttr ".pre" 3;
 	setAttr ".pst" 3;
 createNode animCurveTA -n "Torso_FK_Ctrl_rotate_breathing_inputBZ";
 	rename -uid "C3A53FA4-4028-A1AC-524F-11BC792D0C5C";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  0.75 0 9.75 0 12 0 24.75 0 30 0;
+	setAttr -s 5 ".ktv[0:4]"  0.75 0 10 0 12 0 25 0 30 0;
 	setAttr ".pre" 3;
 	setAttr ".pst" 3;
 createNode animCurveTL -n "R_Arm_1_Jnt_FK_Ctrl_translateX_breathing_inputB";
@@ -24439,8 +24491,8 @@ createNode animCurveTA -n "L_Arm_1_Jnt_FK_Ctrl_rotate_breathing_inputBZ";
 	rename -uid "61BC0D28-41BE-CC47-01D9-AF9CFE644D0F";
 	setAttr ".tan" 3;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  0.75 -10.0814182542646 9.75 -17.456917903332478
-		 12 -17.456917903332478 24.75 -10.0814182542646 30 -10.0814182542646;
+	setAttr -s 5 ".ktv[0:4]"  0.75 -10.0814182542646 10 -12.971030791882178
+		 12 -12.971030791882178 24.75 -10.0814182542646 30 -10.0814182542646;
 	setAttr -s 5 ".kot[0:4]"  28 28 28 28 28;
 	setAttr ".pre" 3;
 	setAttr ".pst" 3;
@@ -24448,175 +24500,423 @@ createNode animCurveTL -n "L_Eyelid_Ctrl_translateX_head_turn_inputB";
 	rename -uid "4AE88608-402F-7204-89B7-5F8518866574";
 	setAttr ".tan" 3;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1.5 0 54 0 60 0 64.5 0 105 0 108 0 115.5 0
-		 166.5 0 172.5 0 183 0;
+	setAttr -s 10 ".ktv[0:9]"  1 0 54 0 58 0 62 0 105 0 108 0 116 0 161 0
+		 163 0 166 0;
 	setAttr -s 10 ".kot[0:9]"  28 28 28 28 28 28 28 28 
 		28 28;
 createNode animCurveTL -n "L_Eyelid_Ctrl_translateY_head_turn_inputB";
 	rename -uid "0776B0C1-47F0-B2FD-A5F1-049F2FDEF45B";
 	setAttr ".tan" 3;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1.5 0 54 0 60 0 64.5 0 105 0 108 0 115.5 0
-		 166.5 0 172.5 0 183 0;
+	setAttr -s 10 ".ktv[0:9]"  1 0 54 0 58 0 62 0 105 0 108 0 116 0 161 0
+		 163 0 166 0;
 	setAttr -s 10 ".kot[0:9]"  28 28 28 28 28 28 28 28 
 		28 28;
 createNode animCurveTL -n "L_Eyelid_Ctrl_translateZ_head_turn_inputB";
 	rename -uid "46BF95D4-4D1C-1AB8-EE5D-9093E2435328";
 	setAttr ".tan" 3;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1.5 0 54 0 60 0 64.5 0 105 0 108 0 115.5 0
-		 166.5 0 172.5 0 183 0;
+	setAttr -s 10 ".ktv[0:9]"  1 0 54 0 58 0 62 0 105 0 108 0 116 0 161 0
+		 163 0 166 0;
 	setAttr -s 10 ".kot[0:9]"  28 28 28 28 28 28 28 28 
 		28 28;
 createNode animCurveTL -n "R_Eyelid_Ctrl_translateX_head_turn_inputB";
 	rename -uid "DD770573-4D45-9B1B-4CA6-0F8D89E6BB84";
 	setAttr ".tan" 3;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1.5 0 54 0 60 0 64.5 0 105 0 108 0 115.5 0
-		 166.5 0 172.5 0 183 0;
+	setAttr -s 10 ".ktv[0:9]"  1 0 54 0 58 0 62 0 105 0 108 0 116 0 161 0
+		 163 0 166 0;
 	setAttr -s 10 ".kot[0:9]"  28 28 28 28 28 28 28 28 
 		28 28;
 createNode animCurveTL -n "R_Eyelid_Ctrl_translateY_head_turn_inputB";
 	rename -uid "E94AFB1D-428F-6DA5-A8D1-6487B650D470";
 	setAttr ".tan" 3;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1.5 0 54 0 60 0 64.5 0 105 0 108 0 115.5 0
-		 166.5 0 172.5 0 183 0;
+	setAttr -s 10 ".ktv[0:9]"  1 0 54 0 58 0 62 0 105 0 108 0 116 0 161 0
+		 163 0 166 0;
 	setAttr -s 10 ".kot[0:9]"  28 28 28 28 28 28 28 28 
 		28 28;
 createNode animCurveTL -n "R_Eyelid_Ctrl_translateZ_head_turn_inputB";
 	rename -uid "AB0587F1-4FB0-5A54-FD49-908F891A1F78";
 	setAttr ".tan" 3;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1.5 0 54 0 60 0 64.5 0 105 0 108 0 115.5 0
-		 166.5 0 172.5 0 183 0;
+	setAttr -s 10 ".ktv[0:9]"  1 0 54 0 58 0 62 0 105 0 108 0 116 0 161 0
+		 163 0 166 0;
 	setAttr -s 10 ".kot[0:9]"  28 28 28 28 28 28 28 28 
 		28 28;
 createNode animCurveTA -n "L_Eyelid_Ctrl_rotate_head_turn_inputBX";
 	rename -uid "6CF724F2-4DBB-1D34-BF8A-D4921F94E288";
 	setAttr ".tan" 3;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1.5 0 54 0 60 0 64.5 0 105 0 108 0 115.5 0
-		 166.5 0 172.5 0 183 0;
+	setAttr -s 10 ".ktv[0:9]"  1 0 54 0 58 0 62 0 105 0 108 0 116 0 161 0
+		 163 0 166 0;
 	setAttr -s 10 ".kot[0:9]"  28 28 28 28 28 28 28 28 
 		28 28;
 createNode animCurveTA -n "L_Eyelid_Ctrl_rotate_head_turn_inputBY";
 	rename -uid "0375243A-4DA0-C11B-D056-6182EC8D17F3";
 	setAttr ".tan" 3;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1.5 0 54 0 60 0 64.5 0 105 0 108 0 115.5 0
-		 166.5 0 172.5 0 183 0;
+	setAttr -s 10 ".ktv[0:9]"  1 0 54 0 58 0 62 0 105 0 108 0 116 0 161 0
+		 163 0 166 0;
 	setAttr -s 10 ".kot[0:9]"  28 28 28 28 28 28 28 28 
 		28 28;
 createNode animCurveTA -n "L_Eyelid_Ctrl_rotate_head_turn_inputBZ";
 	rename -uid "3D28FE5A-4028-0181-155D-DDBEF1417E35";
 	setAttr ".tan" 3;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1.5 0 54 0 60 -40.381346289201637 64.5 0
-		 105 0 108 -38.312392713974461 115.5 0 166.5 0 172.5 -11.690220936680578 183 0;
+	setAttr -s 10 ".ktv[0:9]"  1 0 54 0 58 -40.381346289201637 62 0 105 0
+		 108 -38.312392713974461 116 0 161 0 163 -17.845015380416914 166 0;
+	setAttr -s 10 ".kit[8:9]"  1 3;
 	setAttr -s 10 ".kot[0:9]"  28 28 28 28 28 28 28 28 
-		28 28;
+		1 28;
+	setAttr -s 10 ".kix[8:9]"  0.99502905858872015 1;
+	setAttr -s 10 ".kiy[8:9]"  -0.099585001702291578 0;
+	setAttr -s 10 ".kox[8:9]"  0.99502906234133925 1;
+	setAttr -s 10 ".koy[8:9]"  -0.099584964207028698 0;
 createNode animCurveTA -n "R_Eyelid_Ctrl_rotate_head_turn_inputBX";
 	rename -uid "606BC650-4F8B-31A3-F9B8-F49D655EF889";
 	setAttr ".tan" 3;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1.5 0 54 0 60 0 64.5 0 105 0 108 0 115.5 0
-		 166.5 0 172.5 0 183 0;
+	setAttr -s 10 ".ktv[0:9]"  1 0 54 0 58 0 62 0 105 0 108 0 116 0 161 0
+		 163 0 166 0;
 	setAttr -s 10 ".kot[0:9]"  28 28 28 28 28 28 28 28 
 		28 28;
 createNode animCurveTA -n "R_Eyelid_Ctrl_rotate_head_turn_inputBY";
 	rename -uid "22DA7617-42CC-F31F-59FA-E2B08C6102A9";
 	setAttr ".tan" 3;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1.5 0 54 0 60 0 64.5 0 105 0 108 0 115.5 0
-		 166.5 0 172.5 0 183 0;
+	setAttr -s 10 ".ktv[0:9]"  1 0 54 0 58 0 62 0 105 0 108 0 116 0 161 0
+		 163 0 166 0;
 	setAttr -s 10 ".kot[0:9]"  28 28 28 28 28 28 28 28 
 		28 28;
 createNode animCurveTA -n "R_Eyelid_Ctrl_rotate_head_turn_inputBZ";
 	rename -uid "07729FD4-464F-CD3F-AE27-B1B58B708EA5";
 	setAttr ".tan" 3;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1.5 0 54 0 60 -40.381346289201637 64.5 0
-		 105 0 108 -38.312392713974461 115.5 0 166.5 0 172.5 -11.690220936680578 183 0;
+	setAttr -s 10 ".ktv[0:9]"  1 0 54 0 58 -40.381346289201637 62 0 105 0
+		 108 -38.312392713974461 116 0 161 0 163 -17.845015380416914 166 0;
+	setAttr -s 10 ".kit[8:9]"  1 3;
 	setAttr -s 10 ".kot[0:9]"  28 28 28 28 28 28 28 28 
-		28 28;
+		1 28;
+	setAttr -s 10 ".kix[8:9]"  0.99502905858872015 1;
+	setAttr -s 10 ".kiy[8:9]"  -0.099585001702291578 0;
+	setAttr -s 10 ".kox[8:9]"  0.99502906234133925 1;
+	setAttr -s 10 ".koy[8:9]"  -0.099584964207028698 0;
 createNode animCurveTL -n "Eye_Master_Ctrl_translateX_head_turn_inputB";
 	rename -uid "74FBA8A4-478A-BC2D-DCB7-A8A81D6D0711";
 	setAttr ".tan" 3;
 	setAttr ".wgt" no;
-	setAttr -s 12 ".ktv[0:11]"  1.5 0 54 0 60 0 64.5 -0.47398026362917739
-		 105 -0.47398026362917739 111 -0.47398026362917739 115.5 0.75149052019393725 156 0.79503882333505105
-		 162 0.79503882333505105 169.5 0 175.5 1.2767564783189301e-17 181.5 0;
-	setAttr -s 12 ".kot[0:11]"  28 28 28 28 28 28 28 28 
-		28 28 28 28;
+	setAttr -s 11 ".ktv[0:10]"  2 0 54 0 59 0 63 -0.47398026362917739 105 -0.47398026362917739
+		 110 -0.47398026362917739 114 0.75149052019393725 156 0.79503882333505105 162 0.79503882333505105
+		 170 -1.5543122344752144e-17 179 0;
+	setAttr -s 11 ".kot[0:10]"  28 28 28 28 28 28 28 28 
+		28 28 28;
 createNode animCurveTL -n "Eye_Master_Ctrl_translateY_head_turn_inputB";
 	rename -uid "7F36FDC9-4743-7655-A904-99B750C40276";
 	setAttr ".tan" 3;
 	setAttr ".wgt" no;
-	setAttr -s 12 ".ktv[0:11]"  1.5 0 54 0 60 0 64.5 3.1086244689504376e-16
-		 105 3.1086244689504376e-16 111 3.1086244689504376e-16 115.5 2.6645352591003694e-17
-		 156 -3.7303493627405258e-16 162 -3.7303493627405258e-16 169.5 0 175.5 0.18656609134477609
-		 181.5 0;
-	setAttr -s 12 ".kot[0:11]"  28 28 28 28 28 28 28 28 
-		28 28 28 28;
+	setAttr -s 11 ".ktv[0:10]"  2 0 54 0 59 0 63 0 105 3.1086244689504376e-16
+		 110 0 114 0 156 -3.7303493627405258e-16 162 -3.7303493627405258e-16 170 0.15783182769593548
+		 179 0;
+	setAttr -s 11 ".kot[0:10]"  28 28 28 28 28 28 28 28 
+		28 28 28;
 createNode animCurveTL -n "Eye_Master_Ctrl_translateZ_head_turn_inputB";
 	rename -uid "31506C75-4A88-0A4B-DF74-FDBBDFA1005C";
 	setAttr ".tan" 3;
 	setAttr ".wgt" no;
-	setAttr -s 12 ".ktv[0:11]"  1.5 0 54 0 60 0 64.5 2.1316282072803012e-16
-		 105 2.1316282072803012e-16 111 2.1316282072803012e-16 115.5 2.8421709430404008e-16
-		 156 1.5987211554602254e-16 162 1.5987211554602254e-16 169.5 0 175.5 -7.9047879353311147e-16
-		 181.5 0;
-	setAttr -s 12 ".kot[0:11]"  28 28 28 28 28 28 28 28 
-		28 28 28 28;
+	setAttr -s 11 ".ktv[0:10]"  2 0 54 0 59 0 63 0 105 2.1316282072803012e-16
+		 110 0 114 0 156 1.5987211554602254e-16 162 1.5987211554602254e-16 170 3.7303493627405253e-16
+		 179 0;
+	setAttr -s 11 ".kot[0:10]"  28 28 28 28 28 28 28 28 
+		28 28 28;
 createNode animCurveTA -n "Eye_Master_Ctrl_rotate_head_turn_inputBX";
 	rename -uid "AA3B9ED9-4772-56CC-57AF-4792B4078E48";
 	setAttr ".tan" 3;
 	setAttr ".wgt" no;
-	setAttr -s 12 ".ktv[0:11]"  1.5 0 54 0 60 0 64.5 0 105 0 111 0 115.5 0
-		 156 0 162 0 169.5 0 175.5 0 181.5 0;
-	setAttr -s 12 ".kot[0:11]"  28 28 28 28 28 28 28 28 
-		28 28 28 28;
+	setAttr -s 11 ".ktv[0:10]"  2 0 54 0 59 0 63 0 105 0 110 0 114 0 156 0
+		 162 0 170 0 179 0;
+	setAttr -s 11 ".kot[0:10]"  28 28 28 28 28 28 28 28 
+		28 28 28;
 createNode animCurveTA -n "Eye_Master_Ctrl_rotate_head_turn_inputBY";
 	rename -uid "B9CD22CF-4BD8-597E-E1E6-E685F7417E24";
 	setAttr ".tan" 3;
 	setAttr ".wgt" no;
-	setAttr -s 12 ".ktv[0:11]"  1.5 0 54 0 60 0 64.5 0 105 0 111 0 115.5 0
-		 156 0 162 0 169.5 0 175.5 0 181.5 0;
-	setAttr -s 12 ".kot[0:11]"  28 28 28 28 28 28 28 28 
-		28 28 28 28;
+	setAttr -s 11 ".ktv[0:10]"  2 0 54 0 59 0 63 0 105 0 110 0 114 0 156 0
+		 162 0 170 0 179 0;
+	setAttr -s 11 ".kot[0:10]"  28 28 28 28 28 28 28 28 
+		28 28 28;
 createNode animCurveTA -n "Eye_Master_Ctrl_rotate_head_turn_inputBZ";
 	rename -uid "E377496F-4C2A-C2D1-8EF8-7694A3CBA8D9";
 	setAttr ".tan" 3;
 	setAttr ".wgt" no;
-	setAttr -s 12 ".ktv[0:11]"  1.5 0 54 0 60 0 64.5 0 105 0 111 0 115.5 0
-		 156 0 162 0 169.5 0 175.5 0 181.5 0;
-	setAttr -s 12 ".kot[0:11]"  28 28 28 28 28 28 28 28 
-		28 28 28 28;
+	setAttr -s 11 ".ktv[0:10]"  2 0 54 0 59 0 63 0 105 0 110 0 114 0 156 0
+		 162 0 170 0 179 0;
+	setAttr -s 11 ".kot[0:10]"  28 28 28 28 28 28 28 28 
+		28 28 28;
+createNode animCurveTU -n "Torso_FK_Ctrl_scaleX_breathing_inputB";
+	rename -uid "BE1A80AB-4B98-51CE-A0E5-6BA042617EC6";
+	setAttr ".tan" 3;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  1 1 10 1;
+	setAttr -s 2 ".kot[0:1]"  28 28;
+createNode animCurveTU -n "Torso_FK_Ctrl_scaleY_breathing_inputB";
+	rename -uid "51CFA270-4E95-9BA9-16CD-9A84458F71E5";
+	setAttr ".tan" 3;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  1 1 10 1;
+	setAttr -s 2 ".kot[0:1]"  28 28;
+createNode animCurveTU -n "Torso_FK_Ctrl_scaleZ_breathing_inputB";
+	rename -uid "1D6B746D-462D-F809-FEDF-9DB9F9B84EA8";
+	setAttr ".tan" 3;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  1 1 10 1;
+	setAttr -s 2 ".kot[0:1]"  28 28;
+createNode animCurveTU -n "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_visibility_BaseAnimation_extract_inputB";
+	rename -uid "D63077D5-4026-24A0-5146-69AB161B23D7";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+	setAttr ".kot[0]"  5;
+createNode animCurveTL -n "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_translateX_BaseAnimation_extract_inputB";
+	rename -uid "BB77CB45-4B0D-12B3-05CD-59975EA0650C";
+	setAttr ".tan" 3;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+	setAttr ".kot[0]"  28;
+createNode animCurveTL -n "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_translateY_BaseAnimation_extract_inputB";
+	rename -uid "5F0A92A7-4275-D60F-A323-2B88C654933C";
+	setAttr ".tan" 3;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+	setAttr ".kot[0]"  28;
+createNode animCurveTL -n "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_translateZ_BaseAnimation_extract_inputB";
+	rename -uid "EF619548-4CB1-E79F-9205-12B3F441B122";
+	setAttr ".tan" 3;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+	setAttr ".kot[0]"  28;
+createNode animCurveTA -n "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_rotate_BaseAnimation_extract_inputBX";
+	rename -uid "F5FA2ADE-45E4-8F19-8014-16A8B3266B68";
+	setAttr ".tan" 3;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+	setAttr ".kot[0]"  28;
+createNode animCurveTA -n "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_rotate_BaseAnimation_extract_inputBY";
+	rename -uid "E121DBF7-4DC5-F4B3-BC8D-4EB4D4F4D4B3";
+	setAttr ".tan" 3;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+	setAttr ".kot[0]"  28;
+createNode animCurveTA -n "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_rotate_BaseAnimation_extract_inputBZ";
+	rename -uid "390DC0FB-4217-9EAB-51F9-2681416AF994";
+	setAttr ".tan" 3;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+	setAttr ".kot[0]"  28;
+createNode animCurveTU -n "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_scaleX_BaseAnimation_extract_inputB";
+	rename -uid "54C1C351-422E-4DB4-EA8C-1B822FAC07D7";
+	setAttr ".tan" 3;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+	setAttr ".kot[0]"  28;
+createNode animCurveTU -n "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_scaleY_BaseAnimation_extract_inputB";
+	rename -uid "84AD0EF6-49CF-597B-F6B6-EEB7F0796159";
+	setAttr ".tan" 3;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+	setAttr ".kot[0]"  28;
+createNode animCurveTU -n "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_scaleZ_BaseAnimation_extract_inputB";
+	rename -uid "49E6D6AF-47B1-612D-5DC9-218277F38BE2";
+	setAttr ".tan" 3;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+	setAttr ".kot[0]"  28;
+createNode animCurveTU -n "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_FollowTranslate_BaseAnimation_extract_inputB";
+	rename -uid "76ED5067-42FA-6C2C-9768-53AC92089ED8";
+	setAttr ".tan" 3;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1.0000000000000002;
+	setAttr ".kot[0]"  28;
+createNode animCurveTU -n "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_FollowRotate_BaseAnimation_extract_inputB";
+	rename -uid "2A038992-4A04-65CF-6160-8CA33CD855A0";
+	setAttr ".tan" 3;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1.0000000000000002;
+	setAttr ".kot[0]"  28;
+createNode animCurveTU -n "Hair_Front_Bounce_CONTROL_Jnt_Ctrl___________________BaseAnimation_extract_inputB";
+	rename -uid "461B58AD-4668-EBDC-EE87-E4AE534C798B";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+	setAttr ".kot[0]"  5;
+createNode animCurveTU -n "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_SimulationActive_BaseAnimation_extract_inputB";
+	rename -uid "4947982B-49E4-868E-5EF5-D499F3E53943";
+	setAttr ".tan" 3;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1.0000000000000002;
+	setAttr ".kot[0]"  28;
+createNode animCurveTU -n "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_SimulationEffect_BaseAnimation_extract_inputB";
+	rename -uid "868ED6EA-4185-93E6-B7F8-A19325FBC0FB";
+	setAttr ".tan" 3;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 -1.0081720407607364;
+	setAttr ".kot[0]"  28;
+createNode animCurveTU -n "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_Drag_BaseAnimation_extract_inputB";
+	rename -uid "A1F4EE76-4C6B-7D7D-ABA0-9CB528118964";
+	setAttr ".tan" 3;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0.80000000000000027;
+	setAttr ".kot[0]"  28;
+createNode animCurveTU -n "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_MatchControl_BaseAnimation_extract_inputB";
+	rename -uid "54B12044-4DC8-16F4-415A-09A63E929666";
+	setAttr ".tan" 3;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0.50000000000000011;
+	setAttr ".kot[0]"  28;
+createNode animCurveTU -n "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_Stretch_BaseAnimation_extract_inputB";
+	rename -uid "179660F6-44FE-8D7D-8D97-2A9ECD49D12D";
+	setAttr ".tan" 3;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1.0000000000000002;
+	setAttr ".kot[0]"  28;
+createNode animCurveTL -n "Neck_Tie_Ctrl_2_Jnt_Ctrl_translateX_BaseAnimation_extract_inputB";
+	rename -uid "204E0592-4A2F-88F3-9B33-80B00CADD05A";
+	setAttr ".tan" 3;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 -6.3810366715885521e-16;
+	setAttr ".kot[0]"  28;
+createNode animCurveTL -n "Neck_Tie_Ctrl_2_Jnt_Ctrl_translateY_BaseAnimation_extract_inputB";
+	rename -uid "7B7E2F2B-47B0-B341-FA41-288FE66491C4";
+	setAttr ".tan" 3;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0.21093295942285928;
+	setAttr ".kot[0]"  28;
+createNode animCurveTL -n "Neck_Tie_Ctrl_2_Jnt_Ctrl_translateZ_BaseAnimation_extract_inputB";
+	rename -uid "A32113FF-4007-C031-EE9E-2AA39AADF329";
+	setAttr ".tan" 3;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 2.3063987969597226e-17;
+	setAttr ".kot[0]"  28;
+createNode animCurveTA -n "Neck_Tie_Ctrl_2_Jnt_Ctrl_rotate_BaseAnimation_extract_inputBX";
+	rename -uid "36486C3E-4FD8-A7A3-7E63-75B905E72D81";
+	setAttr ".tan" 3;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+	setAttr ".kot[0]"  28;
+createNode animCurveTA -n "Neck_Tie_Ctrl_2_Jnt_Ctrl_rotate_BaseAnimation_extract_inputBY";
+	rename -uid "E086EE28-4994-95B3-BBA3-B8A200B1CA41";
+	setAttr ".tan" 3;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+	setAttr ".kot[0]"  28;
+createNode animCurveTA -n "Neck_Tie_Ctrl_2_Jnt_Ctrl_rotate_BaseAnimation_extract_inputBZ";
+	rename -uid "F73D5726-4021-713B-1891-B8B2E9EC5432";
+	setAttr ".tan" 3;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+	setAttr ".kot[0]"  28;
+createNode animCurveTL -n "Neck_Tie_Ctrl_2_Jnt_Ctrl_translateX_breathing_inputB";
+	rename -uid "AD6FE30F-43E6-3C2C-4966-E89CE9EF4E13";
+	setAttr ".tan" 3;
+	setAttr ".wgt" no;
+	setAttr -s 3 ".ktv[0:2]"  1 4.2243986086987183e-16 9 3.3417713041217219e-16
+		 11 3.3417713041217219e-16;
+	setAttr -s 3 ".kot[0:2]"  28 28 28;
+createNode animCurveTL -n "Neck_Tie_Ctrl_2_Jnt_Ctrl_translateY_breathing_inputB";
+	rename -uid "FA0BD094-4772-4A7F-EC3F-E4BF78694B79";
+	setAttr ".tan" 3;
+	setAttr ".wgt" no;
+	setAttr -s 3 ".ktv[0:2]"  1 -0.036825512094330326 9 -0.032570442871903971
+		 11 -0.032570442871903971;
+	setAttr -s 3 ".kot[0:2]"  28 28 28;
+createNode animCurveTL -n "Neck_Tie_Ctrl_2_Jnt_Ctrl_translateZ_breathing_inputB";
+	rename -uid "E5A9C206-4112-2A5E-7746-238E8DE297E5";
+	setAttr ".tan" 3;
+	setAttr ".wgt" no;
+	setAttr -s 3 ".ktv[0:2]"  1 -8.3266726846886691e-17 9 4.4408920985006286e-18
+		 11 4.4408920985006286e-18;
+	setAttr -s 3 ".kot[0:2]"  28 28 28;
+createNode animCurveTA -n "Neck_Tie_Ctrl_2_Jnt_Ctrl_rotate_breathing_inputBX";
+	rename -uid "FAD8B3B0-4CB3-7F48-17A0-7B9C5C7F76F8";
+	setAttr ".tan" 3;
+	setAttr ".wgt" no;
+	setAttr -s 3 ".ktv[0:2]"  1 0 9 0 11 0;
+	setAttr -s 3 ".kot[0:2]"  28 28 28;
+createNode animCurveTA -n "Neck_Tie_Ctrl_2_Jnt_Ctrl_rotate_breathing_inputBY";
+	rename -uid "924C9314-4927-BFBF-C90E-A98BE4B94643";
+	setAttr ".tan" 3;
+	setAttr ".wgt" no;
+	setAttr -s 3 ".ktv[0:2]"  1 0 9 0 11 0;
+	setAttr -s 3 ".kot[0:2]"  28 28 28;
+createNode animCurveTA -n "Neck_Tie_Ctrl_2_Jnt_Ctrl_rotate_breathing_inputBZ";
+	rename -uid "9C8A4F8E-432F-00D2-F217-D3817941CA08";
+	setAttr ".tan" 3;
+	setAttr ".wgt" no;
+	setAttr -s 3 ".ktv[0:2]"  1 0 9 0 11 0;
+	setAttr -s 3 ".kot[0:2]"  28 28 28;
+createNode animCurveTL -n "Neck_Tie_Ctrl_3_Jnt_Ctrl_translateX_breathing_inputB";
+	rename -uid "FB21DCD5-48CE-DABE-CA69-D0BBFA3236B2";
+	setAttr ".tan" 3;
+	setAttr ".wgt" no;
+	setAttr -s 3 ".ktv[0:2]"  1 -0.012255724311187701 9 -0.0094291578918108583
+		 11 -0.0094291578918108583;
+	setAttr -s 3 ".kot[0:2]"  28 28 28;
+createNode animCurveTL -n "Neck_Tie_Ctrl_3_Jnt_Ctrl_translateY_breathing_inputB";
+	rename -uid "4F499688-46FB-7840-CA60-70B42E29ADC7";
+	setAttr ".tan" 3;
+	setAttr ".wgt" no;
+	setAttr -s 3 ".ktv[0:2]"  1 0.03445404672292509 9 0.026507829183602245
+		 11 0.026507829183602245;
+	setAttr -s 3 ".kot[0:2]"  28 28 28;
+createNode animCurveTL -n "Neck_Tie_Ctrl_3_Jnt_Ctrl_translateZ_breathing_inputB";
+	rename -uid "1472B546-4055-5AD0-C2B1-F1BA1CD31AFE";
+	setAttr ".tan" 3;
+	setAttr ".wgt" no;
+	setAttr -s 3 ".ktv[0:2]"  1 9.9920072216264085e-18 9 -2.2482016248659415e-17
+		 11 -2.2482016248659415e-17;
+	setAttr -s 3 ".kot[0:2]"  28 28 28;
+createNode animCurveTA -n "Neck_Tie_Ctrl_3_Jnt_Ctrl_rotate_breathing_inputBX";
+	rename -uid "BB232C34-44BC-16BA-AC64-E18607C5554A";
+	setAttr ".tan" 3;
+	setAttr ".wgt" no;
+	setAttr -s 3 ".ktv[0:2]"  1 0 9 0 11 0;
+	setAttr -s 3 ".kot[0:2]"  28 28 28;
+createNode animCurveTA -n "Neck_Tie_Ctrl_3_Jnt_Ctrl_rotate_breathing_inputBY";
+	rename -uid "F6723FCA-46E4-FF7E-DCDE-0D814D1399A5";
+	setAttr ".tan" 3;
+	setAttr ".wgt" no;
+	setAttr -s 3 ".ktv[0:2]"  1 0 9 0 11 0;
+	setAttr -s 3 ".kot[0:2]"  28 28 28;
+createNode animCurveTA -n "Neck_Tie_Ctrl_3_Jnt_Ctrl_rotate_breathing_inputBZ";
+	rename -uid "9D09DEA5-4751-1676-34AE-F59E10339E20";
+	setAttr ".tan" 3;
+	setAttr ".wgt" no;
+	setAttr -s 3 ".ktv[0:2]"  1 19.581092556465549 9 19.581092556465549
+		 11 19.581092556465549;
+	setAttr -s 3 ".kot[0:2]"  28 28 28;
 select -ne :time1;
-	setAttr ".o" 25;
-	setAttr ".unw" 25;
+	setAttr ".o" 180;
+	setAttr ".unw" 180;
 select -ne :hardwareRenderingGlobals;
 	setAttr ".otfna" -type "stringArray" 22 "NURBS Curves" "NURBS Surfaces" "Polygons" "Subdiv Surface" "Particles" "Particle Instance" "Fluids" "Strokes" "Image Planes" "UI" "Lights" "Cameras" "Locators" "Joints" "IK Handles" "Deformers" "Motion Trails" "Components" "Hair Systems" "Follicles" "Misc. UI" "Ornaments"  ;
 	setAttr ".otfva" -type "Int32Array" 22 0 1 1 1 1 1
 		 1 1 1 0 0 0 0 0 0 0 0 0
 		 0 0 0 0 ;
-	setAttr ".aoon" yes;
 	setAttr ".fprt" yes;
 	setAttr ".rtfm" 1;
 select -ne :renderPartition;
-	setAttr -s 13 ".st";
+	setAttr -s 12 ".st";
 select -ne :renderGlobalsList1;
 select -ne :defaultShaderList1;
-	setAttr -s 16 ".s";
+	setAttr -s 15 ".s";
 select -ne :postProcessList1;
 	setAttr -s 2 ".p";
 select -ne :defaultRenderUtilityList1;
-	setAttr -s 24 ".u";
+	setAttr -s 19 ".u";
 select -ne :defaultRenderingList1;
 	setAttr -s 2 ".r";
 select -ne :defaultTextureList1;
-	setAttr -s 8 ".tx";
+	setAttr -s 3 ".tx";
 select -ne :standardSurface1;
 	setAttr ".sr" 0.5;
 select -ne :openPBR_shader1;
@@ -24628,7 +24928,7 @@ select -ne :initialShadingGroup;
 select -ne :initialParticleSE;
 	setAttr ".ro" yes;
 select -ne :initialMaterialInfo;
-	setAttr -s 3 ".t";
+	setAttr -s 2 ".t";
 select -ne :defaultRenderGlobals;
 	addAttr -ci true -h true -sn "dss" -ln "defaultSurfaceShader" -dt "string";
 	setAttr ".mcfr" 30;
@@ -24663,52 +24963,52 @@ connectAttr "Caleb_RigRN.phl[9]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[10]" "breathing.dsm" -na;
 connectAttr "Spine_IKFK_Switch_Ctrl_Spine_IKFK_breathing.o" "Caleb_RigRN.phl[11]"
 		;
-connectAttr "Caleb_RigRN.phl[12]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[13]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[12]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[13]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[14]" "breathing.dsm" -na;
 connectAttr "Spine_IKFK_Switch_Ctrl_visibility_breathing.o" "Caleb_RigRN.phl[15]"
 		;
-connectAttr "Caleb_RigRN.phl[16]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[17]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[16]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[17]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[18]" "breathing.dsm" -na;
 connectAttr "Spine_IKFK_Switch_Ctrl_translateX_breathing.o" "Caleb_RigRN.phl[19]"
 		;
-connectAttr "Caleb_RigRN.phl[20]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[21]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[20]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[21]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[22]" "breathing.dsm" -na;
 connectAttr "Spine_IKFK_Switch_Ctrl_translateY_breathing.o" "Caleb_RigRN.phl[23]"
 		;
-connectAttr "Caleb_RigRN.phl[24]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[25]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[24]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[25]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[26]" "breathing.dsm" -na;
 connectAttr "Spine_IKFK_Switch_Ctrl_translateZ_breathing.o" "Caleb_RigRN.phl[27]"
 		;
-connectAttr "Caleb_RigRN.phl[28]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[29]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[28]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[29]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[30]" "breathing.dsm" -na;
 connectAttr "Spine_IKFK_Switch_Ctrl_rotate_breathing.ox" "Caleb_RigRN.phl[31]";
-connectAttr "Caleb_RigRN.phl[32]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[33]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[32]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[33]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[34]" "breathing.dsm" -na;
 connectAttr "Spine_IKFK_Switch_Ctrl_rotate_breathing.oy" "Caleb_RigRN.phl[35]";
-connectAttr "Caleb_RigRN.phl[36]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[37]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[36]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[37]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[38]" "breathing.dsm" -na;
 connectAttr "Spine_IKFK_Switch_Ctrl_rotate_breathing.oz" "Caleb_RigRN.phl[39]";
-connectAttr "Caleb_RigRN.phl[40]" "Spine_IKFK_Switch_Ctrl_rotate_head_turn.ro";
-connectAttr "Caleb_RigRN.phl[41]" "Spine_IKFK_Switch_Ctrl_rotate_BaseAnimation_extract.ro"
+connectAttr "Caleb_RigRN.phl[40]" "Spine_IKFK_Switch_Ctrl_rotate_BaseAnimation_extract.ro"
 		;
+connectAttr "Caleb_RigRN.phl[41]" "Spine_IKFK_Switch_Ctrl_rotate_head_turn.ro";
 connectAttr "Caleb_RigRN.phl[42]" "Spine_IKFK_Switch_Ctrl_rotate_breathing.ro";
-connectAttr "Caleb_RigRN.phl[43]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[44]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[43]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[44]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[45]" "breathing.dsm" -na;
 connectAttr "Spine_IKFK_Switch_Ctrl_scaleX_breathing.o" "Caleb_RigRN.phl[46]";
-connectAttr "Caleb_RigRN.phl[47]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[48]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[47]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[48]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[49]" "breathing.dsm" -na;
 connectAttr "Spine_IKFK_Switch_Ctrl_scaleY_breathing.o" "Caleb_RigRN.phl[50]";
-connectAttr "Caleb_RigRN.phl[51]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[52]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[51]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[52]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[53]" "breathing.dsm" -na;
 connectAttr "Spine_IKFK_Switch_Ctrl_scaleZ_breathing.o" "Caleb_RigRN.phl[54]";
 connectAttr "Caleb_RigRN.phl[55]" "head_turn.dsm" -na;
@@ -24716,52 +25016,53 @@ connectAttr "Caleb_RigRN.phl[56]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[57]" "breathing.dsm" -na;
 connectAttr "_R_Leg_IKFK_Switch_Ctrl_R_Leg_IKFK_breathing.o" "Caleb_RigRN.phl[58]"
 		;
-connectAttr "Caleb_RigRN.phl[59]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[60]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[59]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[60]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[61]" "breathing.dsm" -na;
 connectAttr "_R_Leg_IKFK_Switch_Ctrl_rotate_breathing.ox" "Caleb_RigRN.phl[62]";
-connectAttr "Caleb_RigRN.phl[63]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[64]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[63]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[64]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[65]" "breathing.dsm" -na;
 connectAttr "_R_Leg_IKFK_Switch_Ctrl_rotate_breathing.oy" "Caleb_RigRN.phl[66]";
-connectAttr "Caleb_RigRN.phl[67]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[68]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[67]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[68]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[69]" "breathing.dsm" -na;
 connectAttr "_R_Leg_IKFK_Switch_Ctrl_rotate_breathing.oz" "Caleb_RigRN.phl[70]";
-connectAttr "Caleb_RigRN.phl[71]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[72]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[71]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[72]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[73]" "breathing.dsm" -na;
 connectAttr "_R_Leg_IKFK_Switch_Ctrl_visibility_breathing.o" "Caleb_RigRN.phl[74]"
 		;
-connectAttr "Caleb_RigRN.phl[75]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[76]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[75]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[76]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[77]" "breathing.dsm" -na;
 connectAttr "_R_Leg_IKFK_Switch_Ctrl_translateX_breathing.o" "Caleb_RigRN.phl[78]"
 		;
-connectAttr "Caleb_RigRN.phl[79]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[80]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[79]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[80]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[81]" "breathing.dsm" -na;
 connectAttr "_R_Leg_IKFK_Switch_Ctrl_translateY_breathing.o" "Caleb_RigRN.phl[82]"
 		;
-connectAttr "Caleb_RigRN.phl[83]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[84]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[83]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[84]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[85]" "breathing.dsm" -na;
 connectAttr "_R_Leg_IKFK_Switch_Ctrl_translateZ_breathing.o" "Caleb_RigRN.phl[86]"
 		;
-connectAttr "Caleb_RigRN.phl[87]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[88]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[87]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[88]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[89]" "breathing.dsm" -na;
 connectAttr "_R_Leg_IKFK_Switch_Ctrl_scaleX_breathing.o" "Caleb_RigRN.phl[90]";
-connectAttr "Caleb_RigRN.phl[91]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[92]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[91]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[92]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[93]" "breathing.dsm" -na;
 connectAttr "_R_Leg_IKFK_Switch_Ctrl_scaleY_breathing.o" "Caleb_RigRN.phl[94]";
-connectAttr "Caleb_RigRN.phl[95]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[96]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[95]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[96]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[97]" "breathing.dsm" -na;
 connectAttr "_R_Leg_IKFK_Switch_Ctrl_scaleZ_breathing.o" "Caleb_RigRN.phl[98]";
-connectAttr "Caleb_RigRN.phl[99]" "_R_Leg_IKFK_Switch_Ctrl_rotate_head_turn.ro";
-connectAttr "Caleb_RigRN.phl[100]" "_R_Leg_IKFK_Switch_Ctrl_rotate_BaseAnimation_extract.ro"
+connectAttr "Caleb_RigRN.phl[99]" "_R_Leg_IKFK_Switch_Ctrl_rotate_BaseAnimation_extract.ro"
+		;
+connectAttr "Caleb_RigRN.phl[100]" "_R_Leg_IKFK_Switch_Ctrl_rotate_head_turn.ro"
 		;
 connectAttr "Caleb_RigRN.phl[101]" "_R_Leg_IKFK_Switch_Ctrl_rotate_breathing.ro"
 		;
@@ -24770,57 +25071,57 @@ connectAttr "Caleb_RigRN.phl[103]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[104]" "breathing.dsm" -na;
 connectAttr "_R_Arm_IKFK_Switch_Ctrl_R_Arm_IKFK_breathing.o" "Caleb_RigRN.phl[105]"
 		;
-connectAttr "Caleb_RigRN.phl[106]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[107]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[106]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[107]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[108]" "breathing.dsm" -na;
 connectAttr "_R_Arm_IKFK_Switch_Ctrl_visibility_breathing.o" "Caleb_RigRN.phl[109]"
 		;
-connectAttr "Caleb_RigRN.phl[110]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[111]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[110]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[111]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[112]" "breathing.dsm" -na;
 connectAttr "_R_Arm_IKFK_Switch_Ctrl_translateX_breathing.o" "Caleb_RigRN.phl[113]"
 		;
-connectAttr "Caleb_RigRN.phl[114]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[115]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[114]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[115]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[116]" "breathing.dsm" -na;
 connectAttr "_R_Arm_IKFK_Switch_Ctrl_translateY_breathing.o" "Caleb_RigRN.phl[117]"
 		;
-connectAttr "Caleb_RigRN.phl[118]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[119]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[118]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[119]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[120]" "breathing.dsm" -na;
 connectAttr "_R_Arm_IKFK_Switch_Ctrl_translateZ_breathing.o" "Caleb_RigRN.phl[121]"
 		;
-connectAttr "Caleb_RigRN.phl[122]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[123]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[122]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[123]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[124]" "breathing.dsm" -na;
 connectAttr "_R_Arm_IKFK_Switch_Ctrl_rotate_breathing.ox" "Caleb_RigRN.phl[125]"
 		;
-connectAttr "Caleb_RigRN.phl[126]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[127]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[126]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[127]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[128]" "breathing.dsm" -na;
 connectAttr "_R_Arm_IKFK_Switch_Ctrl_rotate_breathing.oy" "Caleb_RigRN.phl[129]"
 		;
-connectAttr "Caleb_RigRN.phl[130]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[131]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[130]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[131]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[132]" "breathing.dsm" -na;
 connectAttr "_R_Arm_IKFK_Switch_Ctrl_rotate_breathing.oz" "Caleb_RigRN.phl[133]"
 		;
-connectAttr "Caleb_RigRN.phl[134]" "_R_Arm_IKFK_Switch_Ctrl_rotate_head_turn.ro"
+connectAttr "Caleb_RigRN.phl[134]" "_R_Arm_IKFK_Switch_Ctrl_rotate_BaseAnimation_extract.ro"
 		;
-connectAttr "Caleb_RigRN.phl[135]" "_R_Arm_IKFK_Switch_Ctrl_rotate_BaseAnimation_extract.ro"
+connectAttr "Caleb_RigRN.phl[135]" "_R_Arm_IKFK_Switch_Ctrl_rotate_head_turn.ro"
 		;
 connectAttr "Caleb_RigRN.phl[136]" "_R_Arm_IKFK_Switch_Ctrl_rotate_breathing.ro"
 		;
-connectAttr "Caleb_RigRN.phl[137]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[138]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[137]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[138]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[139]" "breathing.dsm" -na;
 connectAttr "_R_Arm_IKFK_Switch_Ctrl_scaleX_breathing.o" "Caleb_RigRN.phl[140]";
-connectAttr "Caleb_RigRN.phl[141]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[142]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[141]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[142]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[143]" "breathing.dsm" -na;
 connectAttr "_R_Arm_IKFK_Switch_Ctrl_scaleY_breathing.o" "Caleb_RigRN.phl[144]";
-connectAttr "Caleb_RigRN.phl[145]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[146]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[145]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[146]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[147]" "breathing.dsm" -na;
 connectAttr "_R_Arm_IKFK_Switch_Ctrl_scaleZ_breathing.o" "Caleb_RigRN.phl[148]";
 connectAttr "Caleb_RigRN.phl[149]" "head_turn.dsm" -na;
@@ -24828,59 +25129,59 @@ connectAttr "Caleb_RigRN.phl[150]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[151]" "breathing.dsm" -na;
 connectAttr "_L_Leg_L_Leg_L_Leg_IKFK_Switch_Ctrl_L_Leg_IKFK_breathing.o" "Caleb_RigRN.phl[152]"
 		;
-connectAttr "Caleb_RigRN.phl[153]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[154]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[153]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[154]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[155]" "breathing.dsm" -na;
 connectAttr "_L_Leg_L_Leg_L_Leg_IKFK_Switch_Ctrl_rotate_breathing.ox" "Caleb_RigRN.phl[156]"
 		;
-connectAttr "Caleb_RigRN.phl[157]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[158]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[157]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[158]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[159]" "breathing.dsm" -na;
 connectAttr "_L_Leg_L_Leg_L_Leg_IKFK_Switch_Ctrl_rotate_breathing.oy" "Caleb_RigRN.phl[160]"
 		;
-connectAttr "Caleb_RigRN.phl[161]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[162]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[161]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[162]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[163]" "breathing.dsm" -na;
 connectAttr "_L_Leg_L_Leg_L_Leg_IKFK_Switch_Ctrl_rotate_breathing.oz" "Caleb_RigRN.phl[164]"
 		;
-connectAttr "Caleb_RigRN.phl[165]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[166]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[165]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[166]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[167]" "breathing.dsm" -na;
 connectAttr "_L_Leg_L_Leg_L_Leg_IKFK_Switch_Ctrl_visibility_breathing.o" "Caleb_RigRN.phl[168]"
 		;
-connectAttr "Caleb_RigRN.phl[169]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[170]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[169]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[170]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[171]" "breathing.dsm" -na;
 connectAttr "_L_Leg_L_Leg_L_Leg_IKFK_Switch_Ctrl_translateX_breathing.o" "Caleb_RigRN.phl[172]"
 		;
-connectAttr "Caleb_RigRN.phl[173]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[174]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[173]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[174]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[175]" "breathing.dsm" -na;
 connectAttr "_L_Leg_L_Leg_L_Leg_IKFK_Switch_Ctrl_translateY_breathing.o" "Caleb_RigRN.phl[176]"
 		;
-connectAttr "Caleb_RigRN.phl[177]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[178]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[177]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[178]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[179]" "breathing.dsm" -na;
 connectAttr "_L_Leg_L_Leg_L_Leg_IKFK_Switch_Ctrl_translateZ_breathing.o" "Caleb_RigRN.phl[180]"
 		;
-connectAttr "Caleb_RigRN.phl[181]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[182]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[181]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[182]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[183]" "breathing.dsm" -na;
 connectAttr "_L_Leg_L_Leg_L_Leg_IKFK_Switch_Ctrl_scaleX_breathing.o" "Caleb_RigRN.phl[184]"
 		;
-connectAttr "Caleb_RigRN.phl[185]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[186]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[185]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[186]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[187]" "breathing.dsm" -na;
 connectAttr "_L_Leg_L_Leg_L_Leg_IKFK_Switch_Ctrl_scaleY_breathing.o" "Caleb_RigRN.phl[188]"
 		;
-connectAttr "Caleb_RigRN.phl[189]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[190]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[189]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[190]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[191]" "breathing.dsm" -na;
 connectAttr "_L_Leg_L_Leg_L_Leg_IKFK_Switch_Ctrl_scaleZ_breathing.o" "Caleb_RigRN.phl[192]"
 		;
-connectAttr "Caleb_RigRN.phl[193]" "_L_Leg_L_Leg_L_Leg_IKFK_Switch_Ctrl_rotate_head_turn.ro"
+connectAttr "Caleb_RigRN.phl[193]" "_L_Leg_L_Leg_L_Leg_IKFK_Switch_Ctrl_rotate_BaseAnimation_extract.ro"
 		;
-connectAttr "Caleb_RigRN.phl[194]" "_L_Leg_L_Leg_L_Leg_IKFK_Switch_Ctrl_rotate_BaseAnimation_extract.ro"
+connectAttr "Caleb_RigRN.phl[194]" "_L_Leg_L_Leg_L_Leg_IKFK_Switch_Ctrl_rotate_head_turn.ro"
 		;
 connectAttr "Caleb_RigRN.phl[195]" "_L_Leg_L_Leg_L_Leg_IKFK_Switch_Ctrl_rotate_breathing.ro"
 		;
@@ -24889,145 +25190,145 @@ connectAttr "Caleb_RigRN.phl[197]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[198]" "breathing.dsm" -na;
 connectAttr "_L_Arm_IKFK_Switch_Ctrl_L_Arm_IKFK_breathing.o" "Caleb_RigRN.phl[199]"
 		;
-connectAttr "Caleb_RigRN.phl[200]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[201]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[200]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[201]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[202]" "breathing.dsm" -na;
 connectAttr "_L_Arm_IKFK_Switch_Ctrl_visibility_breathing.o" "Caleb_RigRN.phl[203]"
 		;
-connectAttr "Caleb_RigRN.phl[204]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[205]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[204]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[205]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[206]" "breathing.dsm" -na;
 connectAttr "_L_Arm_IKFK_Switch_Ctrl_translateX_breathing.o" "Caleb_RigRN.phl[207]"
 		;
-connectAttr "Caleb_RigRN.phl[208]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[209]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[208]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[209]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[210]" "breathing.dsm" -na;
 connectAttr "_L_Arm_IKFK_Switch_Ctrl_translateY_breathing.o" "Caleb_RigRN.phl[211]"
 		;
-connectAttr "Caleb_RigRN.phl[212]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[213]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[212]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[213]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[214]" "breathing.dsm" -na;
 connectAttr "_L_Arm_IKFK_Switch_Ctrl_translateZ_breathing.o" "Caleb_RigRN.phl[215]"
 		;
-connectAttr "Caleb_RigRN.phl[216]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[217]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[216]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[217]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[218]" "breathing.dsm" -na;
 connectAttr "_L_Arm_IKFK_Switch_Ctrl_rotate_breathing.ox" "Caleb_RigRN.phl[219]"
 		;
-connectAttr "Caleb_RigRN.phl[220]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[221]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[220]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[221]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[222]" "breathing.dsm" -na;
 connectAttr "_L_Arm_IKFK_Switch_Ctrl_rotate_breathing.oy" "Caleb_RigRN.phl[223]"
 		;
-connectAttr "Caleb_RigRN.phl[224]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[225]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[224]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[225]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[226]" "breathing.dsm" -na;
 connectAttr "_L_Arm_IKFK_Switch_Ctrl_rotate_breathing.oz" "Caleb_RigRN.phl[227]"
 		;
-connectAttr "Caleb_RigRN.phl[228]" "_L_Arm_IKFK_Switch_Ctrl_rotate_head_turn.ro"
+connectAttr "Caleb_RigRN.phl[228]" "_L_Arm_IKFK_Switch_Ctrl_rotate_BaseAnimation_extract.ro"
 		;
-connectAttr "Caleb_RigRN.phl[229]" "_L_Arm_IKFK_Switch_Ctrl_rotate_BaseAnimation_extract.ro"
+connectAttr "Caleb_RigRN.phl[229]" "_L_Arm_IKFK_Switch_Ctrl_rotate_head_turn.ro"
 		;
 connectAttr "Caleb_RigRN.phl[230]" "_L_Arm_IKFK_Switch_Ctrl_rotate_breathing.ro"
 		;
-connectAttr "Caleb_RigRN.phl[231]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[232]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[231]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[232]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[233]" "breathing.dsm" -na;
 connectAttr "_L_Arm_IKFK_Switch_Ctrl_scaleX_breathing.o" "Caleb_RigRN.phl[234]";
-connectAttr "Caleb_RigRN.phl[235]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[236]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[235]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[236]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[237]" "breathing.dsm" -na;
 connectAttr "_L_Arm_IKFK_Switch_Ctrl_scaleY_breathing.o" "Caleb_RigRN.phl[238]";
-connectAttr "Caleb_RigRN.phl[239]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[240]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[239]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[240]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[241]" "breathing.dsm" -na;
 connectAttr "_L_Arm_IKFK_Switch_Ctrl_scaleZ_breathing.o" "Caleb_RigRN.phl[242]";
 connectAttr "Caleb_RigRN.phl[243]" "head_turn.dsm" -na;
 connectAttr "Caleb_RigRN.phl[244]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[245]" "breathing.dsm" -na;
 connectAttr "Transform_Control_MasterScale_breathing.o" "Caleb_RigRN.phl[246]";
-connectAttr "Caleb_RigRN.phl[247]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[248]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[247]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[248]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[249]" "breathing.dsm" -na;
 connectAttr "Transform_Control_translateX_breathing.o" "Caleb_RigRN.phl[250]";
-connectAttr "Caleb_RigRN.phl[251]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[252]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[251]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[252]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[253]" "breathing.dsm" -na;
 connectAttr "Transform_Control_translateY_breathing.o" "Caleb_RigRN.phl[254]";
-connectAttr "Caleb_RigRN.phl[255]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[256]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[255]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[256]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[257]" "breathing.dsm" -na;
 connectAttr "Transform_Control_translateZ_breathing.o" "Caleb_RigRN.phl[258]";
-connectAttr "Caleb_RigRN.phl[259]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[260]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[259]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[260]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[261]" "breathing.dsm" -na;
 connectAttr "Transform_Control_rotate_breathing.ox" "Caleb_RigRN.phl[262]";
-connectAttr "Caleb_RigRN.phl[263]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[264]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[263]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[264]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[265]" "breathing.dsm" -na;
 connectAttr "Transform_Control_rotate_breathing.oy" "Caleb_RigRN.phl[266]";
-connectAttr "Caleb_RigRN.phl[267]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[268]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[267]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[268]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[269]" "breathing.dsm" -na;
 connectAttr "Transform_Control_rotate_breathing.oz" "Caleb_RigRN.phl[270]";
 connectAttr "Caleb_RigRN.phl[271]" "Transform_Control_rotate_head_turn.ro";
 connectAttr "Caleb_RigRN.phl[272]" "Transform_Control_rotate_BaseAnimation_extract.ro"
 		;
 connectAttr "Caleb_RigRN.phl[273]" "Transform_Control_rotate_breathing.ro";
-connectAttr "Caleb_RigRN.phl[274]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[275]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[274]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[275]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[276]" "breathing.dsm" -na;
 connectAttr "Transform_Control_scaleX_breathing.o" "Caleb_RigRN.phl[277]";
-connectAttr "Caleb_RigRN.phl[278]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[279]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[278]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[279]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[280]" "breathing.dsm" -na;
 connectAttr "Transform_Control_scaleY_breathing.o" "Caleb_RigRN.phl[281]";
-connectAttr "Caleb_RigRN.phl[282]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[283]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[282]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[283]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[284]" "breathing.dsm" -na;
 connectAttr "Transform_Control_scaleZ_breathing.o" "Caleb_RigRN.phl[285]";
-connectAttr "Caleb_RigRN.phl[286]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[287]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[286]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[287]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[288]" "breathing.dsm" -na;
 connectAttr "Transform_Control_visibility_breathing.o" "Caleb_RigRN.phl[289]";
-connectAttr "Caleb_RigRN.phl[290]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[291]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[290]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[291]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[292]" "breathing.dsm" -na;
 connectAttr "R_Clavicle_Jnt_Ctrl_translateX_breathing.o" "Caleb_RigRN.phl[293]";
-connectAttr "Caleb_RigRN.phl[294]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[295]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[294]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[295]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[296]" "breathing.dsm" -na;
 connectAttr "R_Clavicle_Jnt_Ctrl_translateY_breathing.o" "Caleb_RigRN.phl[297]";
-connectAttr "Caleb_RigRN.phl[298]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[299]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[298]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[299]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[300]" "breathing.dsm" -na;
 connectAttr "R_Clavicle_Jnt_Ctrl_translateZ_breathing.o" "Caleb_RigRN.phl[301]";
-connectAttr "Caleb_RigRN.phl[302]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[303]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[302]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[303]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[304]" "breathing.dsm" -na;
 connectAttr "R_Clavicle_Jnt_Ctrl_rotate_breathing.ox" "Caleb_RigRN.phl[305]";
-connectAttr "Caleb_RigRN.phl[306]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[307]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[306]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[307]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[308]" "breathing.dsm" -na;
 connectAttr "R_Clavicle_Jnt_Ctrl_rotate_breathing.oy" "Caleb_RigRN.phl[309]";
-connectAttr "Caleb_RigRN.phl[310]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[311]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[310]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[311]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[312]" "breathing.dsm" -na;
 connectAttr "R_Clavicle_Jnt_Ctrl_rotate_breathing.oz" "Caleb_RigRN.phl[313]";
 connectAttr "Caleb_RigRN.phl[314]" "R_Clavicle_Jnt_Ctrl_rotate_head_turn.ro";
 connectAttr "Caleb_RigRN.phl[315]" "R_Clavicle_Jnt_Ctrl_rotate_BaseAnimation_extract.ro"
 		;
 connectAttr "Caleb_RigRN.phl[316]" "R_Clavicle_Jnt_Ctrl_rotate_breathing.ro";
-connectAttr "Caleb_RigRN.phl[317]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[318]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[317]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[318]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[319]" "breathing.dsm" -na;
 connectAttr "R_Clavicle_Jnt_Ctrl_scaleX_breathing.o" "Caleb_RigRN.phl[320]";
-connectAttr "Caleb_RigRN.phl[321]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[322]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[321]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[322]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[323]" "breathing.dsm" -na;
 connectAttr "R_Clavicle_Jnt_Ctrl_scaleY_breathing.o" "Caleb_RigRN.phl[324]";
-connectAttr "Caleb_RigRN.phl[325]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[326]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[325]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[326]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[327]" "breathing.dsm" -na;
 connectAttr "R_Clavicle_Jnt_Ctrl_scaleZ_breathing.o" "Caleb_RigRN.phl[328]";
 connectAttr "Caleb_RigRN.phl[329]" "head_turn.dsm" -na;
@@ -25040,48 +25341,48 @@ connectAttr "Caleb_RigRN.phl[334]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[335]" "breathing.dsm" -na;
 connectAttr "R_Clavicle_Jnt_Ctrl_FollowRotate_breathing.o" "Caleb_RigRN.phl[336]"
 		;
-connectAttr "Caleb_RigRN.phl[337]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[338]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[337]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[338]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[339]" "breathing.dsm" -na;
 connectAttr "R_Clavicle_Jnt_Ctrl_visibility_breathing.o" "Caleb_RigRN.phl[340]";
-connectAttr "Caleb_RigRN.phl[341]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[342]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[341]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[342]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[343]" "breathing.dsm" -na;
 connectAttr "L_Clavicle_Jnt_Ctrl_translateX_breathing.o" "Caleb_RigRN.phl[344]";
-connectAttr "Caleb_RigRN.phl[345]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[346]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[345]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[346]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[347]" "breathing.dsm" -na;
 connectAttr "L_Clavicle_Jnt_Ctrl_translateY_breathing.o" "Caleb_RigRN.phl[348]";
-connectAttr "Caleb_RigRN.phl[349]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[350]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[349]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[350]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[351]" "breathing.dsm" -na;
 connectAttr "L_Clavicle_Jnt_Ctrl_translateZ_breathing.o" "Caleb_RigRN.phl[352]";
-connectAttr "Caleb_RigRN.phl[353]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[354]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[353]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[354]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[355]" "breathing.dsm" -na;
 connectAttr "L_Clavicle_Jnt_Ctrl_rotate_breathing.ox" "Caleb_RigRN.phl[356]";
-connectAttr "Caleb_RigRN.phl[357]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[358]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[357]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[358]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[359]" "breathing.dsm" -na;
 connectAttr "L_Clavicle_Jnt_Ctrl_rotate_breathing.oy" "Caleb_RigRN.phl[360]";
-connectAttr "Caleb_RigRN.phl[361]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[362]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[361]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[362]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[363]" "breathing.dsm" -na;
 connectAttr "L_Clavicle_Jnt_Ctrl_rotate_breathing.oz" "Caleb_RigRN.phl[364]";
 connectAttr "Caleb_RigRN.phl[365]" "L_Clavicle_Jnt_Ctrl_rotate_head_turn.ro";
 connectAttr "Caleb_RigRN.phl[366]" "L_Clavicle_Jnt_Ctrl_rotate_BaseAnimation_extract.ro"
 		;
 connectAttr "Caleb_RigRN.phl[367]" "L_Clavicle_Jnt_Ctrl_rotate_breathing.ro";
-connectAttr "Caleb_RigRN.phl[368]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[369]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[368]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[369]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[370]" "breathing.dsm" -na;
 connectAttr "L_Clavicle_Jnt_Ctrl_scaleX_breathing.o" "Caleb_RigRN.phl[371]";
-connectAttr "Caleb_RigRN.phl[372]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[373]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[372]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[373]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[374]" "breathing.dsm" -na;
 connectAttr "L_Clavicle_Jnt_Ctrl_scaleY_breathing.o" "Caleb_RigRN.phl[375]";
-connectAttr "Caleb_RigRN.phl[376]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[377]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[376]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[377]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[378]" "breathing.dsm" -na;
 connectAttr "L_Clavicle_Jnt_Ctrl_scaleZ_breathing.o" "Caleb_RigRN.phl[379]";
 connectAttr "Caleb_RigRN.phl[380]" "head_turn.dsm" -na;
@@ -25094,48 +25395,48 @@ connectAttr "Caleb_RigRN.phl[385]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[386]" "breathing.dsm" -na;
 connectAttr "L_Clavicle_Jnt_Ctrl_FollowRotate_breathing.o" "Caleb_RigRN.phl[387]"
 		;
-connectAttr "Caleb_RigRN.phl[388]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[389]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[388]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[389]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[390]" "breathing.dsm" -na;
 connectAttr "L_Clavicle_Jnt_Ctrl_visibility_breathing.o" "Caleb_RigRN.phl[391]";
-connectAttr "Caleb_RigRN.phl[392]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[393]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[392]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[393]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[394]" "breathing.dsm" -na;
 connectAttr "Spine_2_Jnt_FK_Ctrl_translateX_breathing.o" "Caleb_RigRN.phl[395]";
-connectAttr "Caleb_RigRN.phl[396]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[397]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[396]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[397]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[398]" "breathing.dsm" -na;
 connectAttr "Spine_2_Jnt_FK_Ctrl_translateY_breathing.o" "Caleb_RigRN.phl[399]";
-connectAttr "Caleb_RigRN.phl[400]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[401]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[400]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[401]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[402]" "breathing.dsm" -na;
 connectAttr "Spine_2_Jnt_FK_Ctrl_translateZ_breathing.o" "Caleb_RigRN.phl[403]";
-connectAttr "Caleb_RigRN.phl[404]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[405]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[404]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[405]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[406]" "breathing.dsm" -na;
 connectAttr "Spine_2_Jnt_FK_Ctrl_rotate_breathing.ox" "Caleb_RigRN.phl[407]";
-connectAttr "Caleb_RigRN.phl[408]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[409]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[408]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[409]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[410]" "breathing.dsm" -na;
 connectAttr "Spine_2_Jnt_FK_Ctrl_rotate_breathing.oy" "Caleb_RigRN.phl[411]";
-connectAttr "Caleb_RigRN.phl[412]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[413]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[412]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[413]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[414]" "breathing.dsm" -na;
 connectAttr "Spine_2_Jnt_FK_Ctrl_rotate_breathing.oz" "Caleb_RigRN.phl[415]";
 connectAttr "Caleb_RigRN.phl[416]" "Spine_2_Jnt_FK_Ctrl_rotate_head_turn.ro";
 connectAttr "Caleb_RigRN.phl[417]" "Spine_2_Jnt_FK_Ctrl_rotate_BaseAnimation_extract.ro"
 		;
 connectAttr "Caleb_RigRN.phl[418]" "Spine_2_Jnt_FK_Ctrl_rotate_breathing.ro";
-connectAttr "Caleb_RigRN.phl[419]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[420]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[419]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[420]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[421]" "breathing.dsm" -na;
 connectAttr "Spine_2_Jnt_FK_Ctrl_scaleX_breathing.o" "Caleb_RigRN.phl[422]";
-connectAttr "Caleb_RigRN.phl[423]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[424]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[423]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[424]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[425]" "breathing.dsm" -na;
 connectAttr "Spine_2_Jnt_FK_Ctrl_scaleY_breathing.o" "Caleb_RigRN.phl[426]";
-connectAttr "Caleb_RigRN.phl[427]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[428]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[427]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[428]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[429]" "breathing.dsm" -na;
 connectAttr "Spine_2_Jnt_FK_Ctrl_scaleZ_breathing.o" "Caleb_RigRN.phl[430]";
 connectAttr "Caleb_RigRN.phl[431]" "head_turn.dsm" -na;
@@ -25148,48 +25449,48 @@ connectAttr "Caleb_RigRN.phl[436]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[437]" "breathing.dsm" -na;
 connectAttr "Spine_2_Jnt_FK_Ctrl_FollowRotate_breathing.o" "Caleb_RigRN.phl[438]"
 		;
-connectAttr "Caleb_RigRN.phl[439]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[440]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[439]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[440]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[441]" "breathing.dsm" -na;
 connectAttr "Spine_2_Jnt_FK_Ctrl_visibility_breathing.o" "Caleb_RigRN.phl[442]";
-connectAttr "Caleb_RigRN.phl[443]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[444]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[443]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[444]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[445]" "breathing.dsm" -na;
 connectAttr "Spine_1_Jnt_FK_Ctrl_translateX_breathing.o" "Caleb_RigRN.phl[446]";
-connectAttr "Caleb_RigRN.phl[447]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[448]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[447]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[448]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[449]" "breathing.dsm" -na;
 connectAttr "Spine_1_Jnt_FK_Ctrl_translateY_breathing.o" "Caleb_RigRN.phl[450]";
-connectAttr "Caleb_RigRN.phl[451]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[452]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[451]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[452]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[453]" "breathing.dsm" -na;
 connectAttr "Spine_1_Jnt_FK_Ctrl_translateZ_breathing.o" "Caleb_RigRN.phl[454]";
-connectAttr "Caleb_RigRN.phl[455]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[456]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[455]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[456]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[457]" "breathing.dsm" -na;
 connectAttr "Spine_1_Jnt_FK_Ctrl_rotate_breathing.ox" "Caleb_RigRN.phl[458]";
-connectAttr "Caleb_RigRN.phl[459]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[460]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[459]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[460]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[461]" "breathing.dsm" -na;
 connectAttr "Spine_1_Jnt_FK_Ctrl_rotate_breathing.oy" "Caleb_RigRN.phl[462]";
-connectAttr "Caleb_RigRN.phl[463]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[464]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[463]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[464]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[465]" "breathing.dsm" -na;
 connectAttr "Spine_1_Jnt_FK_Ctrl_rotate_breathing.oz" "Caleb_RigRN.phl[466]";
 connectAttr "Caleb_RigRN.phl[467]" "Spine_1_Jnt_FK_Ctrl_rotate_head_turn.ro";
 connectAttr "Caleb_RigRN.phl[468]" "Spine_1_Jnt_FK_Ctrl_rotate_BaseAnimation_extract.ro"
 		;
 connectAttr "Caleb_RigRN.phl[469]" "Spine_1_Jnt_FK_Ctrl_rotate_breathing.ro";
-connectAttr "Caleb_RigRN.phl[470]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[471]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[470]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[471]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[472]" "breathing.dsm" -na;
 connectAttr "Spine_1_Jnt_FK_Ctrl_scaleX_breathing.o" "Caleb_RigRN.phl[473]";
-connectAttr "Caleb_RigRN.phl[474]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[475]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[474]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[475]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[476]" "breathing.dsm" -na;
 connectAttr "Spine_1_Jnt_FK_Ctrl_scaleY_breathing.o" "Caleb_RigRN.phl[477]";
-connectAttr "Caleb_RigRN.phl[478]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[479]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[478]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[479]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[480]" "breathing.dsm" -na;
 connectAttr "Spine_1_Jnt_FK_Ctrl_scaleZ_breathing.o" "Caleb_RigRN.phl[481]";
 connectAttr "Caleb_RigRN.phl[482]" "head_turn.dsm" -na;
@@ -25202,48 +25503,48 @@ connectAttr "Caleb_RigRN.phl[487]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[488]" "breathing.dsm" -na;
 connectAttr "Spine_1_Jnt_FK_Ctrl_FollowRotate_breathing.o" "Caleb_RigRN.phl[489]"
 		;
-connectAttr "Caleb_RigRN.phl[490]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[491]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[490]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[491]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[492]" "breathing.dsm" -na;
 connectAttr "Spine_1_Jnt_FK_Ctrl_visibility_breathing.o" "Caleb_RigRN.phl[493]";
-connectAttr "Caleb_RigRN.phl[494]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[495]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[494]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[495]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[496]" "breathing.dsm" -na;
 connectAttr "Torso_FK_Ctrl_translateX_breathing.o" "Caleb_RigRN.phl[497]";
-connectAttr "Caleb_RigRN.phl[498]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[499]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[498]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[499]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[500]" "breathing.dsm" -na;
 connectAttr "Torso_FK_Ctrl_translateY_breathing.o" "Caleb_RigRN.phl[501]";
-connectAttr "Caleb_RigRN.phl[502]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[503]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[502]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[503]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[504]" "breathing.dsm" -na;
 connectAttr "Torso_FK_Ctrl_translateZ_breathing.o" "Caleb_RigRN.phl[505]";
-connectAttr "Caleb_RigRN.phl[506]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[507]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[506]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[507]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[508]" "breathing.dsm" -na;
 connectAttr "Torso_FK_Ctrl_rotate_breathing.oy" "Caleb_RigRN.phl[509]";
-connectAttr "Caleb_RigRN.phl[510]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[511]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[510]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[511]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[512]" "breathing.dsm" -na;
 connectAttr "Torso_FK_Ctrl_rotate_breathing.ox" "Caleb_RigRN.phl[513]";
-connectAttr "Caleb_RigRN.phl[514]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[515]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[514]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[515]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[516]" "breathing.dsm" -na;
 connectAttr "Torso_FK_Ctrl_rotate_breathing.oz" "Caleb_RigRN.phl[517]";
 connectAttr "Caleb_RigRN.phl[518]" "Torso_FK_Ctrl_rotate_head_turn.ro";
 connectAttr "Caleb_RigRN.phl[519]" "Torso_FK_Ctrl_rotate_BaseAnimation_extract.ro"
 		;
 connectAttr "Caleb_RigRN.phl[520]" "Torso_FK_Ctrl_rotate_breathing.ro";
-connectAttr "Caleb_RigRN.phl[521]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[522]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[521]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[522]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[523]" "breathing.dsm" -na;
 connectAttr "Torso_FK_Ctrl_scaleX_breathing.o" "Caleb_RigRN.phl[524]";
-connectAttr "Caleb_RigRN.phl[525]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[526]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[525]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[526]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[527]" "breathing.dsm" -na;
 connectAttr "Torso_FK_Ctrl_scaleY_breathing.o" "Caleb_RigRN.phl[528]";
-connectAttr "Caleb_RigRN.phl[529]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[530]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[529]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[530]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[531]" "breathing.dsm" -na;
 connectAttr "Torso_FK_Ctrl_scaleZ_breathing.o" "Caleb_RigRN.phl[532]";
 connectAttr "Caleb_RigRN.phl[533]" "head_turn.dsm" -na;
@@ -25254,48 +25555,48 @@ connectAttr "Caleb_RigRN.phl[537]" "head_turn.dsm" -na;
 connectAttr "Caleb_RigRN.phl[538]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[539]" "breathing.dsm" -na;
 connectAttr "Torso_FK_Ctrl_FollowRotate_breathing.o" "Caleb_RigRN.phl[540]";
-connectAttr "Caleb_RigRN.phl[541]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[542]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[541]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[542]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[543]" "breathing.dsm" -na;
 connectAttr "Torso_FK_Ctrl_visibility_breathing.o" "Caleb_RigRN.phl[544]";
-connectAttr "Caleb_RigRN.phl[545]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[546]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[545]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[546]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[547]" "breathing.dsm" -na;
 connectAttr "L_Arm_3_Jnt_FK_Ctrl_translateX_breathing.o" "Caleb_RigRN.phl[548]";
-connectAttr "Caleb_RigRN.phl[549]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[550]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[549]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[550]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[551]" "breathing.dsm" -na;
 connectAttr "L_Arm_3_Jnt_FK_Ctrl_translateY_breathing.o" "Caleb_RigRN.phl[552]";
-connectAttr "Caleb_RigRN.phl[553]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[554]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[553]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[554]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[555]" "breathing.dsm" -na;
 connectAttr "L_Arm_3_Jnt_FK_Ctrl_translateZ_breathing.o" "Caleb_RigRN.phl[556]";
-connectAttr "Caleb_RigRN.phl[557]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[558]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[557]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[558]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[559]" "breathing.dsm" -na;
 connectAttr "L_Arm_3_Jnt_FK_Ctrl_rotate_breathing.oy" "Caleb_RigRN.phl[560]";
-connectAttr "Caleb_RigRN.phl[561]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[562]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[561]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[562]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[563]" "breathing.dsm" -na;
 connectAttr "L_Arm_3_Jnt_FK_Ctrl_rotate_breathing.oz" "Caleb_RigRN.phl[564]";
-connectAttr "Caleb_RigRN.phl[565]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[566]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[565]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[566]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[567]" "breathing.dsm" -na;
 connectAttr "L_Arm_3_Jnt_FK_Ctrl_rotate_breathing.ox" "Caleb_RigRN.phl[568]";
 connectAttr "Caleb_RigRN.phl[569]" "L_Arm_3_Jnt_FK_Ctrl_rotate_head_turn.ro";
 connectAttr "Caleb_RigRN.phl[570]" "L_Arm_3_Jnt_FK_Ctrl_rotate_BaseAnimation_extract.ro"
 		;
 connectAttr "Caleb_RigRN.phl[571]" "L_Arm_3_Jnt_FK_Ctrl_rotate_breathing.ro";
-connectAttr "Caleb_RigRN.phl[572]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[573]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[572]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[573]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[574]" "breathing.dsm" -na;
 connectAttr "L_Arm_3_Jnt_FK_Ctrl_scaleX_breathing.o" "Caleb_RigRN.phl[575]";
-connectAttr "Caleb_RigRN.phl[576]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[577]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[576]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[577]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[578]" "breathing.dsm" -na;
 connectAttr "L_Arm_3_Jnt_FK_Ctrl_scaleY_breathing.o" "Caleb_RigRN.phl[579]";
-connectAttr "Caleb_RigRN.phl[580]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[581]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[580]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[581]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[582]" "breathing.dsm" -na;
 connectAttr "L_Arm_3_Jnt_FK_Ctrl_scaleZ_breathing.o" "Caleb_RigRN.phl[583]";
 connectAttr "Caleb_RigRN.phl[584]" "head_turn.dsm" -na;
@@ -25308,48 +25609,48 @@ connectAttr "Caleb_RigRN.phl[589]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[590]" "breathing.dsm" -na;
 connectAttr "L_Arm_3_Jnt_FK_Ctrl_FollowRotate_breathing.o" "Caleb_RigRN.phl[591]"
 		;
-connectAttr "Caleb_RigRN.phl[592]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[593]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[592]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[593]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[594]" "breathing.dsm" -na;
 connectAttr "L_Arm_3_Jnt_FK_Ctrl_visibility_breathing.o" "Caleb_RigRN.phl[595]";
-connectAttr "Caleb_RigRN.phl[596]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[597]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[596]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[597]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[598]" "breathing.dsm" -na;
 connectAttr "L_Arm_2_Jnt_FK_Ctrl_translateX_breathing.o" "Caleb_RigRN.phl[599]";
-connectAttr "Caleb_RigRN.phl[600]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[601]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[600]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[601]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[602]" "breathing.dsm" -na;
 connectAttr "L_Arm_2_Jnt_FK_Ctrl_translateY_breathing.o" "Caleb_RigRN.phl[603]";
-connectAttr "Caleb_RigRN.phl[604]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[605]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[604]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[605]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[606]" "breathing.dsm" -na;
 connectAttr "L_Arm_2_Jnt_FK_Ctrl_translateZ_breathing.o" "Caleb_RigRN.phl[607]";
-connectAttr "Caleb_RigRN.phl[608]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[609]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[608]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[609]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[610]" "breathing.dsm" -na;
 connectAttr "L_Arm_2_Jnt_FK_Ctrl_rotate_breathing.oz" "Caleb_RigRN.phl[611]";
-connectAttr "Caleb_RigRN.phl[612]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[613]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[612]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[613]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[614]" "breathing.dsm" -na;
 connectAttr "L_Arm_2_Jnt_FK_Ctrl_rotate_breathing.ox" "Caleb_RigRN.phl[615]";
-connectAttr "Caleb_RigRN.phl[616]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[617]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[616]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[617]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[618]" "breathing.dsm" -na;
 connectAttr "L_Arm_2_Jnt_FK_Ctrl_rotate_breathing.oy" "Caleb_RigRN.phl[619]";
 connectAttr "Caleb_RigRN.phl[620]" "L_Arm_2_Jnt_FK_Ctrl_rotate_head_turn.ro";
 connectAttr "Caleb_RigRN.phl[621]" "L_Arm_2_Jnt_FK_Ctrl_rotate_BaseAnimation_extract.ro"
 		;
 connectAttr "Caleb_RigRN.phl[622]" "L_Arm_2_Jnt_FK_Ctrl_rotate_breathing.ro";
-connectAttr "Caleb_RigRN.phl[623]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[624]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[623]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[624]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[625]" "breathing.dsm" -na;
 connectAttr "L_Arm_2_Jnt_FK_Ctrl_scaleX_breathing.o" "Caleb_RigRN.phl[626]";
-connectAttr "Caleb_RigRN.phl[627]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[628]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[627]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[628]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[629]" "breathing.dsm" -na;
 connectAttr "L_Arm_2_Jnt_FK_Ctrl_scaleY_breathing.o" "Caleb_RigRN.phl[630]";
-connectAttr "Caleb_RigRN.phl[631]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[632]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[631]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[632]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[633]" "breathing.dsm" -na;
 connectAttr "L_Arm_2_Jnt_FK_Ctrl_scaleZ_breathing.o" "Caleb_RigRN.phl[634]";
 connectAttr "Caleb_RigRN.phl[635]" "head_turn.dsm" -na;
@@ -25362,48 +25663,48 @@ connectAttr "Caleb_RigRN.phl[640]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[641]" "breathing.dsm" -na;
 connectAttr "L_Arm_2_Jnt_FK_Ctrl_FollowRotate_breathing.o" "Caleb_RigRN.phl[642]"
 		;
-connectAttr "Caleb_RigRN.phl[643]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[644]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[643]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[644]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[645]" "breathing.dsm" -na;
 connectAttr "L_Arm_2_Jnt_FK_Ctrl_visibility_breathing.o" "Caleb_RigRN.phl[646]";
-connectAttr "Caleb_RigRN.phl[647]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[648]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[647]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[648]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[649]" "breathing.dsm" -na;
 connectAttr "L_Arm_1_Jnt_FK_Ctrl_translateX_breathing.o" "Caleb_RigRN.phl[650]";
-connectAttr "Caleb_RigRN.phl[651]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[652]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[651]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[652]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[653]" "breathing.dsm" -na;
 connectAttr "L_Arm_1_Jnt_FK_Ctrl_translateY_breathing.o" "Caleb_RigRN.phl[654]";
-connectAttr "Caleb_RigRN.phl[655]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[656]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[655]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[656]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[657]" "breathing.dsm" -na;
 connectAttr "L_Arm_1_Jnt_FK_Ctrl_translateZ_breathing.o" "Caleb_RigRN.phl[658]";
-connectAttr "Caleb_RigRN.phl[659]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[660]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[659]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[660]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[661]" "breathing.dsm" -na;
 connectAttr "L_Arm_1_Jnt_FK_Ctrl_rotate_breathing.oz" "Caleb_RigRN.phl[662]";
-connectAttr "Caleb_RigRN.phl[663]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[664]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[663]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[664]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[665]" "breathing.dsm" -na;
 connectAttr "L_Arm_1_Jnt_FK_Ctrl_rotate_breathing.ox" "Caleb_RigRN.phl[666]";
-connectAttr "Caleb_RigRN.phl[667]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[668]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[667]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[668]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[669]" "breathing.dsm" -na;
 connectAttr "L_Arm_1_Jnt_FK_Ctrl_rotate_breathing.oy" "Caleb_RigRN.phl[670]";
 connectAttr "Caleb_RigRN.phl[671]" "L_Arm_1_Jnt_FK_Ctrl_rotate_head_turn.ro";
 connectAttr "Caleb_RigRN.phl[672]" "L_Arm_1_Jnt_FK_Ctrl_rotate_BaseAnimation_extract.ro"
 		;
 connectAttr "Caleb_RigRN.phl[673]" "L_Arm_1_Jnt_FK_Ctrl_rotate_breathing.ro";
-connectAttr "Caleb_RigRN.phl[674]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[675]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[674]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[675]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[676]" "breathing.dsm" -na;
 connectAttr "L_Arm_1_Jnt_FK_Ctrl_scaleX_breathing.o" "Caleb_RigRN.phl[677]";
-connectAttr "Caleb_RigRN.phl[678]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[679]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[678]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[679]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[680]" "breathing.dsm" -na;
 connectAttr "L_Arm_1_Jnt_FK_Ctrl_scaleY_breathing.o" "Caleb_RigRN.phl[681]";
-connectAttr "Caleb_RigRN.phl[682]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[683]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[682]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[683]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[684]" "breathing.dsm" -na;
 connectAttr "L_Arm_1_Jnt_FK_Ctrl_scaleZ_breathing.o" "Caleb_RigRN.phl[685]";
 connectAttr "Caleb_RigRN.phl[686]" "head_turn.dsm" -na;
@@ -25416,48 +25717,48 @@ connectAttr "Caleb_RigRN.phl[691]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[692]" "breathing.dsm" -na;
 connectAttr "L_Arm_1_Jnt_FK_Ctrl_FollowRotate_breathing.o" "Caleb_RigRN.phl[693]"
 		;
-connectAttr "Caleb_RigRN.phl[694]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[695]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[694]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[695]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[696]" "breathing.dsm" -na;
 connectAttr "L_Arm_1_Jnt_FK_Ctrl_visibility_breathing.o" "Caleb_RigRN.phl[697]";
-connectAttr "Caleb_RigRN.phl[698]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[699]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[698]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[699]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[700]" "breathing.dsm" -na;
 connectAttr "L_Finger_3_Jnt_Ctrl_translateX_breathing.o" "Caleb_RigRN.phl[701]";
-connectAttr "Caleb_RigRN.phl[702]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[703]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[702]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[703]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[704]" "breathing.dsm" -na;
 connectAttr "L_Finger_3_Jnt_Ctrl_translateY_breathing.o" "Caleb_RigRN.phl[705]";
-connectAttr "Caleb_RigRN.phl[706]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[707]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[706]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[707]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[708]" "breathing.dsm" -na;
 connectAttr "L_Finger_3_Jnt_Ctrl_translateZ_breathing.o" "Caleb_RigRN.phl[709]";
-connectAttr "Caleb_RigRN.phl[710]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[711]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[710]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[711]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[712]" "breathing.dsm" -na;
 connectAttr "L_Finger_3_Jnt_Ctrl_rotate_breathing.ox" "Caleb_RigRN.phl[713]";
-connectAttr "Caleb_RigRN.phl[714]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[715]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[714]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[715]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[716]" "breathing.dsm" -na;
 connectAttr "L_Finger_3_Jnt_Ctrl_rotate_breathing.oy" "Caleb_RigRN.phl[717]";
-connectAttr "Caleb_RigRN.phl[718]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[719]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[718]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[719]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[720]" "breathing.dsm" -na;
 connectAttr "L_Finger_3_Jnt_Ctrl_rotate_breathing.oz" "Caleb_RigRN.phl[721]";
 connectAttr "Caleb_RigRN.phl[722]" "L_Finger_3_Jnt_Ctrl_rotate_head_turn.ro";
 connectAttr "Caleb_RigRN.phl[723]" "L_Finger_3_Jnt_Ctrl_rotate_BaseAnimation_extract.ro"
 		;
 connectAttr "Caleb_RigRN.phl[724]" "L_Finger_3_Jnt_Ctrl_rotate_breathing.ro";
-connectAttr "Caleb_RigRN.phl[725]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[726]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[725]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[726]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[727]" "breathing.dsm" -na;
 connectAttr "L_Finger_3_Jnt_Ctrl_scaleX_breathing.o" "Caleb_RigRN.phl[728]";
-connectAttr "Caleb_RigRN.phl[729]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[730]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[729]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[730]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[731]" "breathing.dsm" -na;
 connectAttr "L_Finger_3_Jnt_Ctrl_scaleY_breathing.o" "Caleb_RigRN.phl[732]";
-connectAttr "Caleb_RigRN.phl[733]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[734]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[733]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[734]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[735]" "breathing.dsm" -na;
 connectAttr "L_Finger_3_Jnt_Ctrl_scaleZ_breathing.o" "Caleb_RigRN.phl[736]";
 connectAttr "Caleb_RigRN.phl[737]" "head_turn.dsm" -na;
@@ -25470,48 +25771,48 @@ connectAttr "Caleb_RigRN.phl[742]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[743]" "breathing.dsm" -na;
 connectAttr "L_Finger_3_Jnt_Ctrl_FollowRotate_breathing.o" "Caleb_RigRN.phl[744]"
 		;
-connectAttr "Caleb_RigRN.phl[745]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[746]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[745]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[746]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[747]" "breathing.dsm" -na;
 connectAttr "L_Finger_3_Jnt_Ctrl_visibility_breathing.o" "Caleb_RigRN.phl[748]";
-connectAttr "Caleb_RigRN.phl[749]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[750]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[749]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[750]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[751]" "breathing.dsm" -na;
 connectAttr "L_Finger_2_Jnt_Ctrl_translateX_breathing.o" "Caleb_RigRN.phl[752]";
-connectAttr "Caleb_RigRN.phl[753]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[754]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[753]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[754]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[755]" "breathing.dsm" -na;
 connectAttr "L_Finger_2_Jnt_Ctrl_translateY_breathing.o" "Caleb_RigRN.phl[756]";
-connectAttr "Caleb_RigRN.phl[757]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[758]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[757]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[758]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[759]" "breathing.dsm" -na;
 connectAttr "L_Finger_2_Jnt_Ctrl_translateZ_breathing.o" "Caleb_RigRN.phl[760]";
-connectAttr "Caleb_RigRN.phl[761]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[762]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[761]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[762]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[763]" "breathing.dsm" -na;
 connectAttr "L_Finger_2_Jnt_Ctrl_rotate_breathing.oy" "Caleb_RigRN.phl[764]";
-connectAttr "Caleb_RigRN.phl[765]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[766]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[765]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[766]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[767]" "breathing.dsm" -na;
 connectAttr "L_Finger_2_Jnt_Ctrl_rotate_breathing.ox" "Caleb_RigRN.phl[768]";
-connectAttr "Caleb_RigRN.phl[769]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[770]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[769]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[770]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[771]" "breathing.dsm" -na;
 connectAttr "L_Finger_2_Jnt_Ctrl_rotate_breathing.oz" "Caleb_RigRN.phl[772]";
 connectAttr "Caleb_RigRN.phl[773]" "L_Finger_2_Jnt_Ctrl_rotate_head_turn.ro";
 connectAttr "Caleb_RigRN.phl[774]" "L_Finger_2_Jnt_Ctrl_rotate_BaseAnimation_extract.ro"
 		;
 connectAttr "Caleb_RigRN.phl[775]" "L_Finger_2_Jnt_Ctrl_rotate_breathing.ro";
-connectAttr "Caleb_RigRN.phl[776]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[777]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[776]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[777]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[778]" "breathing.dsm" -na;
 connectAttr "L_Finger_2_Jnt_Ctrl_scaleX_breathing.o" "Caleb_RigRN.phl[779]";
-connectAttr "Caleb_RigRN.phl[780]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[781]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[780]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[781]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[782]" "breathing.dsm" -na;
 connectAttr "L_Finger_2_Jnt_Ctrl_scaleY_breathing.o" "Caleb_RigRN.phl[783]";
-connectAttr "Caleb_RigRN.phl[784]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[785]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[784]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[785]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[786]" "breathing.dsm" -na;
 connectAttr "L_Finger_2_Jnt_Ctrl_scaleZ_breathing.o" "Caleb_RigRN.phl[787]";
 connectAttr "Caleb_RigRN.phl[788]" "head_turn.dsm" -na;
@@ -25524,51 +25825,51 @@ connectAttr "Caleb_RigRN.phl[793]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[794]" "breathing.dsm" -na;
 connectAttr "L_Finger_2_Jnt_Ctrl_FollowRotate_breathing.o" "Caleb_RigRN.phl[795]"
 		;
-connectAttr "Caleb_RigRN.phl[796]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[797]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[796]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[797]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[798]" "breathing.dsm" -na;
 connectAttr "L_Finger_2_Jnt_Ctrl_visibility_breathing.o" "Caleb_RigRN.phl[799]";
-connectAttr "Caleb_RigRN.phl[800]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[801]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[800]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[801]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[802]" "breathing.dsm" -na;
 connectAttr "L_Finger_1_Jnt1_Ctrl_translateX_breathing.o" "Caleb_RigRN.phl[803]"
 		;
-connectAttr "Caleb_RigRN.phl[804]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[805]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[804]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[805]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[806]" "breathing.dsm" -na;
 connectAttr "L_Finger_1_Jnt1_Ctrl_translateY_breathing.o" "Caleb_RigRN.phl[807]"
 		;
-connectAttr "Caleb_RigRN.phl[808]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[809]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[808]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[809]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[810]" "breathing.dsm" -na;
 connectAttr "L_Finger_1_Jnt1_Ctrl_translateZ_breathing.o" "Caleb_RigRN.phl[811]"
 		;
-connectAttr "Caleb_RigRN.phl[812]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[813]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[812]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[813]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[814]" "breathing.dsm" -na;
 connectAttr "L_Finger_1_Jnt1_Ctrl_rotate_breathing.oy" "Caleb_RigRN.phl[815]";
-connectAttr "Caleb_RigRN.phl[816]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[817]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[816]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[817]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[818]" "breathing.dsm" -na;
 connectAttr "L_Finger_1_Jnt1_Ctrl_rotate_breathing.ox" "Caleb_RigRN.phl[819]";
-connectAttr "Caleb_RigRN.phl[820]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[821]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[820]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[821]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[822]" "breathing.dsm" -na;
 connectAttr "L_Finger_1_Jnt1_Ctrl_rotate_breathing.oz" "Caleb_RigRN.phl[823]";
 connectAttr "Caleb_RigRN.phl[824]" "L_Finger_1_Jnt1_Ctrl_rotate_head_turn.ro";
 connectAttr "Caleb_RigRN.phl[825]" "L_Finger_1_Jnt1_Ctrl_rotate_BaseAnimation_extract.ro"
 		;
 connectAttr "Caleb_RigRN.phl[826]" "L_Finger_1_Jnt1_Ctrl_rotate_breathing.ro";
-connectAttr "Caleb_RigRN.phl[827]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[828]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[827]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[828]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[829]" "breathing.dsm" -na;
 connectAttr "L_Finger_1_Jnt1_Ctrl_scaleX_breathing.o" "Caleb_RigRN.phl[830]";
-connectAttr "Caleb_RigRN.phl[831]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[832]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[831]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[832]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[833]" "breathing.dsm" -na;
 connectAttr "L_Finger_1_Jnt1_Ctrl_scaleY_breathing.o" "Caleb_RigRN.phl[834]";
-connectAttr "Caleb_RigRN.phl[835]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[836]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[835]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[836]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[837]" "breathing.dsm" -na;
 connectAttr "L_Finger_1_Jnt1_Ctrl_scaleZ_breathing.o" "Caleb_RigRN.phl[838]";
 connectAttr "Caleb_RigRN.phl[839]" "head_turn.dsm" -na;
@@ -25581,49 +25882,49 @@ connectAttr "Caleb_RigRN.phl[844]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[845]" "breathing.dsm" -na;
 connectAttr "L_Finger_1_Jnt1_Ctrl_FollowRotate_breathing.o" "Caleb_RigRN.phl[846]"
 		;
-connectAttr "Caleb_RigRN.phl[847]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[848]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[847]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[848]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[849]" "breathing.dsm" -na;
 connectAttr "L_Finger_1_Jnt1_Ctrl_visibility_breathing.o" "Caleb_RigRN.phl[850]"
 		;
-connectAttr "Caleb_RigRN.phl[851]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[852]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[851]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[852]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[853]" "breathing.dsm" -na;
 connectAttr "L_Fist_3_Jnt_Ctrl_translateX_breathing.o" "Caleb_RigRN.phl[854]";
-connectAttr "Caleb_RigRN.phl[855]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[856]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[855]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[856]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[857]" "breathing.dsm" -na;
 connectAttr "L_Fist_3_Jnt_Ctrl_translateY_breathing.o" "Caleb_RigRN.phl[858]";
-connectAttr "Caleb_RigRN.phl[859]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[860]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[859]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[860]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[861]" "breathing.dsm" -na;
 connectAttr "L_Fist_3_Jnt_Ctrl_translateZ_breathing.o" "Caleb_RigRN.phl[862]";
-connectAttr "Caleb_RigRN.phl[863]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[864]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[863]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[864]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[865]" "breathing.dsm" -na;
 connectAttr "L_Fist_3_Jnt_Ctrl_rotate_breathing.ox" "Caleb_RigRN.phl[866]";
-connectAttr "Caleb_RigRN.phl[867]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[868]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[867]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[868]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[869]" "breathing.dsm" -na;
 connectAttr "L_Fist_3_Jnt_Ctrl_rotate_breathing.oy" "Caleb_RigRN.phl[870]";
-connectAttr "Caleb_RigRN.phl[871]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[872]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[871]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[872]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[873]" "breathing.dsm" -na;
 connectAttr "L_Fist_3_Jnt_Ctrl_rotate_breathing.oz" "Caleb_RigRN.phl[874]";
 connectAttr "Caleb_RigRN.phl[875]" "L_Fist_3_Jnt_Ctrl_rotate_head_turn.ro";
 connectAttr "Caleb_RigRN.phl[876]" "L_Fist_3_Jnt_Ctrl_rotate_BaseAnimation_extract.ro"
 		;
 connectAttr "Caleb_RigRN.phl[877]" "L_Fist_3_Jnt_Ctrl_rotate_breathing.ro";
-connectAttr "Caleb_RigRN.phl[878]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[879]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[878]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[879]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[880]" "breathing.dsm" -na;
 connectAttr "L_Fist_3_Jnt_Ctrl_scaleX_breathing.o" "Caleb_RigRN.phl[881]";
-connectAttr "Caleb_RigRN.phl[882]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[883]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[882]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[883]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[884]" "breathing.dsm" -na;
 connectAttr "L_Fist_3_Jnt_Ctrl_scaleY_breathing.o" "Caleb_RigRN.phl[885]";
-connectAttr "Caleb_RigRN.phl[886]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[887]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[886]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[887]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[888]" "breathing.dsm" -na;
 connectAttr "L_Fist_3_Jnt_Ctrl_scaleZ_breathing.o" "Caleb_RigRN.phl[889]";
 connectAttr "Caleb_RigRN.phl[890]" "head_turn.dsm" -na;
@@ -25635,48 +25936,48 @@ connectAttr "Caleb_RigRN.phl[894]" "head_turn.dsm" -na;
 connectAttr "Caleb_RigRN.phl[895]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[896]" "breathing.dsm" -na;
 connectAttr "L_Fist_3_Jnt_Ctrl_FollowRotate_breathing.o" "Caleb_RigRN.phl[897]";
-connectAttr "Caleb_RigRN.phl[898]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[899]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[898]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[899]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[900]" "breathing.dsm" -na;
 connectAttr "L_Fist_3_Jnt_Ctrl_visibility_breathing.o" "Caleb_RigRN.phl[901]";
-connectAttr "Caleb_RigRN.phl[902]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[903]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[902]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[903]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[904]" "breathing.dsm" -na;
 connectAttr "L_Fist_2_Jnt_Ctrl_translateX_breathing.o" "Caleb_RigRN.phl[905]";
-connectAttr "Caleb_RigRN.phl[906]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[907]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[906]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[907]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[908]" "breathing.dsm" -na;
 connectAttr "L_Fist_2_Jnt_Ctrl_translateY_breathing.o" "Caleb_RigRN.phl[909]";
-connectAttr "Caleb_RigRN.phl[910]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[911]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[910]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[911]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[912]" "breathing.dsm" -na;
 connectAttr "L_Fist_2_Jnt_Ctrl_translateZ_breathing.o" "Caleb_RigRN.phl[913]";
-connectAttr "Caleb_RigRN.phl[914]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[915]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[914]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[915]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[916]" "breathing.dsm" -na;
 connectAttr "L_Fist_2_Jnt_Ctrl_rotate_breathing.oy" "Caleb_RigRN.phl[917]";
-connectAttr "Caleb_RigRN.phl[918]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[919]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[918]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[919]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[920]" "breathing.dsm" -na;
 connectAttr "L_Fist_2_Jnt_Ctrl_rotate_breathing.ox" "Caleb_RigRN.phl[921]";
-connectAttr "Caleb_RigRN.phl[922]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[923]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[922]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[923]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[924]" "breathing.dsm" -na;
 connectAttr "L_Fist_2_Jnt_Ctrl_rotate_breathing.oz" "Caleb_RigRN.phl[925]";
 connectAttr "Caleb_RigRN.phl[926]" "L_Fist_2_Jnt_Ctrl_rotate_head_turn.ro";
 connectAttr "Caleb_RigRN.phl[927]" "L_Fist_2_Jnt_Ctrl_rotate_BaseAnimation_extract.ro"
 		;
 connectAttr "Caleb_RigRN.phl[928]" "L_Fist_2_Jnt_Ctrl_rotate_breathing.ro";
-connectAttr "Caleb_RigRN.phl[929]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[930]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[929]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[930]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[931]" "breathing.dsm" -na;
 connectAttr "L_Fist_2_Jnt_Ctrl_scaleX_breathing.o" "Caleb_RigRN.phl[932]";
-connectAttr "Caleb_RigRN.phl[933]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[934]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[933]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[934]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[935]" "breathing.dsm" -na;
 connectAttr "L_Fist_2_Jnt_Ctrl_scaleY_breathing.o" "Caleb_RigRN.phl[936]";
-connectAttr "Caleb_RigRN.phl[937]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[938]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[937]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[938]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[939]" "breathing.dsm" -na;
 connectAttr "L_Fist_2_Jnt_Ctrl_scaleZ_breathing.o" "Caleb_RigRN.phl[940]";
 connectAttr "Caleb_RigRN.phl[941]" "head_turn.dsm" -na;
@@ -25688,48 +25989,48 @@ connectAttr "Caleb_RigRN.phl[945]" "head_turn.dsm" -na;
 connectAttr "Caleb_RigRN.phl[946]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[947]" "breathing.dsm" -na;
 connectAttr "L_Fist_2_Jnt_Ctrl_FollowRotate_breathing.o" "Caleb_RigRN.phl[948]";
-connectAttr "Caleb_RigRN.phl[949]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[950]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[949]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[950]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[951]" "breathing.dsm" -na;
 connectAttr "L_Fist_2_Jnt_Ctrl_visibility_breathing.o" "Caleb_RigRN.phl[952]";
-connectAttr "Caleb_RigRN.phl[953]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[954]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[953]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[954]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[955]" "breathing.dsm" -na;
 connectAttr "L_Fist_1_Jnt_Ctrl_translateX_breathing.o" "Caleb_RigRN.phl[956]";
-connectAttr "Caleb_RigRN.phl[957]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[958]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[957]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[958]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[959]" "breathing.dsm" -na;
 connectAttr "L_Fist_1_Jnt_Ctrl_translateY_breathing.o" "Caleb_RigRN.phl[960]";
-connectAttr "Caleb_RigRN.phl[961]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[962]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[961]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[962]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[963]" "breathing.dsm" -na;
 connectAttr "L_Fist_1_Jnt_Ctrl_translateZ_breathing.o" "Caleb_RigRN.phl[964]";
-connectAttr "Caleb_RigRN.phl[965]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[966]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[965]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[966]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[967]" "breathing.dsm" -na;
 connectAttr "L_Fist_1_Jnt_Ctrl_rotate_breathing.oy" "Caleb_RigRN.phl[968]";
-connectAttr "Caleb_RigRN.phl[969]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[970]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[969]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[970]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[971]" "breathing.dsm" -na;
 connectAttr "L_Fist_1_Jnt_Ctrl_rotate_breathing.ox" "Caleb_RigRN.phl[972]";
-connectAttr "Caleb_RigRN.phl[973]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[974]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[973]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[974]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[975]" "breathing.dsm" -na;
 connectAttr "L_Fist_1_Jnt_Ctrl_rotate_breathing.oz" "Caleb_RigRN.phl[976]";
 connectAttr "Caleb_RigRN.phl[977]" "L_Fist_1_Jnt_Ctrl_rotate_head_turn.ro";
 connectAttr "Caleb_RigRN.phl[978]" "L_Fist_1_Jnt_Ctrl_rotate_BaseAnimation_extract.ro"
 		;
 connectAttr "Caleb_RigRN.phl[979]" "L_Fist_1_Jnt_Ctrl_rotate_breathing.ro";
-connectAttr "Caleb_RigRN.phl[980]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[981]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[980]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[981]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[982]" "breathing.dsm" -na;
 connectAttr "L_Fist_1_Jnt_Ctrl_scaleX_breathing.o" "Caleb_RigRN.phl[983]";
-connectAttr "Caleb_RigRN.phl[984]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[985]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[984]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[985]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[986]" "breathing.dsm" -na;
 connectAttr "L_Fist_1_Jnt_Ctrl_scaleY_breathing.o" "Caleb_RigRN.phl[987]";
-connectAttr "Caleb_RigRN.phl[988]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[989]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[988]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[989]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[990]" "breathing.dsm" -na;
 connectAttr "L_Fist_1_Jnt_Ctrl_scaleZ_breathing.o" "Caleb_RigRN.phl[991]";
 connectAttr "Caleb_RigRN.phl[992]" "head_turn.dsm" -na;
@@ -25741,48 +26042,48 @@ connectAttr "Caleb_RigRN.phl[996]" "head_turn.dsm" -na;
 connectAttr "Caleb_RigRN.phl[997]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[998]" "breathing.dsm" -na;
 connectAttr "L_Fist_1_Jnt_Ctrl_FollowRotate_breathing.o" "Caleb_RigRN.phl[999]";
-connectAttr "Caleb_RigRN.phl[1000]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1001]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1000]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1001]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1002]" "breathing.dsm" -na;
 connectAttr "L_Fist_1_Jnt_Ctrl_visibility_breathing.o" "Caleb_RigRN.phl[1003]";
-connectAttr "Caleb_RigRN.phl[1004]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1005]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1004]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1005]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1006]" "breathing.dsm" -na;
 connectAttr "L_Thumb_Jnt1_Ctrl_translateX_breathing.o" "Caleb_RigRN.phl[1007]";
-connectAttr "Caleb_RigRN.phl[1008]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1009]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1008]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1009]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1010]" "breathing.dsm" -na;
 connectAttr "L_Thumb_Jnt1_Ctrl_translateY_breathing.o" "Caleb_RigRN.phl[1011]";
-connectAttr "Caleb_RigRN.phl[1012]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1013]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1012]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1013]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1014]" "breathing.dsm" -na;
 connectAttr "L_Thumb_Jnt1_Ctrl_translateZ_breathing.o" "Caleb_RigRN.phl[1015]";
-connectAttr "Caleb_RigRN.phl[1016]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1017]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1016]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1017]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1018]" "breathing.dsm" -na;
 connectAttr "L_Thumb_Jnt1_Ctrl_rotate_breathing.oz" "Caleb_RigRN.phl[1019]";
-connectAttr "Caleb_RigRN.phl[1020]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1021]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1020]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1021]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1022]" "breathing.dsm" -na;
 connectAttr "L_Thumb_Jnt1_Ctrl_rotate_breathing.ox" "Caleb_RigRN.phl[1023]";
-connectAttr "Caleb_RigRN.phl[1024]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1025]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1024]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1025]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1026]" "breathing.dsm" -na;
 connectAttr "L_Thumb_Jnt1_Ctrl_rotate_breathing.oy" "Caleb_RigRN.phl[1027]";
 connectAttr "Caleb_RigRN.phl[1028]" "L_Thumb_Jnt1_Ctrl_rotate_head_turn.ro";
 connectAttr "Caleb_RigRN.phl[1029]" "L_Thumb_Jnt1_Ctrl_rotate_BaseAnimation_extract.ro"
 		;
 connectAttr "Caleb_RigRN.phl[1030]" "L_Thumb_Jnt1_Ctrl_rotate_breathing.ro";
-connectAttr "Caleb_RigRN.phl[1031]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1032]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1031]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1032]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1033]" "breathing.dsm" -na;
 connectAttr "L_Thumb_Jnt1_Ctrl_scaleX_breathing.o" "Caleb_RigRN.phl[1034]";
-connectAttr "Caleb_RigRN.phl[1035]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1036]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1035]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1036]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1037]" "breathing.dsm" -na;
 connectAttr "L_Thumb_Jnt1_Ctrl_scaleY_breathing.o" "Caleb_RigRN.phl[1038]";
-connectAttr "Caleb_RigRN.phl[1039]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1040]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1039]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1040]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1041]" "breathing.dsm" -na;
 connectAttr "L_Thumb_Jnt1_Ctrl_scaleZ_breathing.o" "Caleb_RigRN.phl[1042]";
 connectAttr "Caleb_RigRN.phl[1043]" "head_turn.dsm" -na;
@@ -25795,48 +26096,48 @@ connectAttr "Caleb_RigRN.phl[1048]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1049]" "breathing.dsm" -na;
 connectAttr "L_Thumb_Jnt1_Ctrl_FollowRotate_breathing.o" "Caleb_RigRN.phl[1050]"
 		;
-connectAttr "Caleb_RigRN.phl[1051]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1052]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1051]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1052]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1053]" "breathing.dsm" -na;
 connectAttr "L_Thumb_Jnt1_Ctrl_visibility_breathing.o" "Caleb_RigRN.phl[1054]";
-connectAttr "Caleb_RigRN.phl[1055]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1056]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1055]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1056]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1057]" "breathing.dsm" -na;
 connectAttr "L_Thumb_Jnt2_Ctrl_translateX_breathing.o" "Caleb_RigRN.phl[1058]";
-connectAttr "Caleb_RigRN.phl[1059]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1060]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1059]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1060]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1061]" "breathing.dsm" -na;
 connectAttr "L_Thumb_Jnt2_Ctrl_translateY_breathing.o" "Caleb_RigRN.phl[1062]";
-connectAttr "Caleb_RigRN.phl[1063]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1064]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1063]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1064]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1065]" "breathing.dsm" -na;
 connectAttr "L_Thumb_Jnt2_Ctrl_translateZ_breathing.o" "Caleb_RigRN.phl[1066]";
-connectAttr "Caleb_RigRN.phl[1067]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1068]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1067]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1068]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1069]" "breathing.dsm" -na;
 connectAttr "L_Thumb_Jnt2_Ctrl_rotate_breathing.oz" "Caleb_RigRN.phl[1070]";
-connectAttr "Caleb_RigRN.phl[1071]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1072]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1071]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1072]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1073]" "breathing.dsm" -na;
 connectAttr "L_Thumb_Jnt2_Ctrl_rotate_breathing.ox" "Caleb_RigRN.phl[1074]";
-connectAttr "Caleb_RigRN.phl[1075]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1076]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1075]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1076]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1077]" "breathing.dsm" -na;
 connectAttr "L_Thumb_Jnt2_Ctrl_rotate_breathing.oy" "Caleb_RigRN.phl[1078]";
 connectAttr "Caleb_RigRN.phl[1079]" "L_Thumb_Jnt2_Ctrl_rotate_head_turn.ro";
 connectAttr "Caleb_RigRN.phl[1080]" "L_Thumb_Jnt2_Ctrl_rotate_BaseAnimation_extract.ro"
 		;
 connectAttr "Caleb_RigRN.phl[1081]" "L_Thumb_Jnt2_Ctrl_rotate_breathing.ro";
-connectAttr "Caleb_RigRN.phl[1082]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1083]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1082]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1083]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1084]" "breathing.dsm" -na;
 connectAttr "L_Thumb_Jnt2_Ctrl_scaleX_breathing.o" "Caleb_RigRN.phl[1085]";
-connectAttr "Caleb_RigRN.phl[1086]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1087]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1086]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1087]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1088]" "breathing.dsm" -na;
 connectAttr "L_Thumb_Jnt2_Ctrl_scaleY_breathing.o" "Caleb_RigRN.phl[1089]";
-connectAttr "Caleb_RigRN.phl[1090]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1091]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1090]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1091]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1092]" "breathing.dsm" -na;
 connectAttr "L_Thumb_Jnt2_Ctrl_scaleZ_breathing.o" "Caleb_RigRN.phl[1093]";
 connectAttr "Caleb_RigRN.phl[1094]" "head_turn.dsm" -na;
@@ -25849,51 +26150,51 @@ connectAttr "Caleb_RigRN.phl[1099]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1100]" "breathing.dsm" -na;
 connectAttr "L_Thumb_Jnt2_Ctrl_FollowRotate_breathing.o" "Caleb_RigRN.phl[1101]"
 		;
-connectAttr "Caleb_RigRN.phl[1102]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1103]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1102]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1103]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1104]" "breathing.dsm" -na;
 connectAttr "L_Thumb_Jnt2_Ctrl_visibility_breathing.o" "Caleb_RigRN.phl[1105]";
-connectAttr "Caleb_RigRN.phl[1106]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1107]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1106]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1107]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1108]" "breathing.dsm" -na;
 connectAttr "R_Arm_3_Jnt_FK_Ctrl_translateX_breathing.o" "Caleb_RigRN.phl[1109]"
 		;
-connectAttr "Caleb_RigRN.phl[1110]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1111]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1110]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1111]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1112]" "breathing.dsm" -na;
 connectAttr "R_Arm_3_Jnt_FK_Ctrl_translateY_breathing.o" "Caleb_RigRN.phl[1113]"
 		;
-connectAttr "Caleb_RigRN.phl[1114]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1115]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1114]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1115]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1116]" "breathing.dsm" -na;
 connectAttr "R_Arm_3_Jnt_FK_Ctrl_translateZ_breathing.o" "Caleb_RigRN.phl[1117]"
 		;
-connectAttr "Caleb_RigRN.phl[1118]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1119]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1118]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1119]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1120]" "breathing.dsm" -na;
 connectAttr "R_Arm_3_Jnt_FK_Ctrl_rotate_breathing.oy" "Caleb_RigRN.phl[1121]";
-connectAttr "Caleb_RigRN.phl[1122]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1123]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1122]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1123]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1124]" "breathing.dsm" -na;
 connectAttr "R_Arm_3_Jnt_FK_Ctrl_rotate_breathing.oz" "Caleb_RigRN.phl[1125]";
-connectAttr "Caleb_RigRN.phl[1126]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1127]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1126]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1127]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1128]" "breathing.dsm" -na;
 connectAttr "R_Arm_3_Jnt_FK_Ctrl_rotate_breathing.ox" "Caleb_RigRN.phl[1129]";
 connectAttr "Caleb_RigRN.phl[1130]" "R_Arm_3_Jnt_FK_Ctrl_rotate_head_turn.ro";
 connectAttr "Caleb_RigRN.phl[1131]" "R_Arm_3_Jnt_FK_Ctrl_rotate_BaseAnimation_extract.ro"
 		;
 connectAttr "Caleb_RigRN.phl[1132]" "R_Arm_3_Jnt_FK_Ctrl_rotate_breathing.ro";
-connectAttr "Caleb_RigRN.phl[1133]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1134]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1133]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1134]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1135]" "breathing.dsm" -na;
 connectAttr "R_Arm_3_Jnt_FK_Ctrl_scaleX_breathing.o" "Caleb_RigRN.phl[1136]";
-connectAttr "Caleb_RigRN.phl[1137]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1138]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1137]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1138]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1139]" "breathing.dsm" -na;
 connectAttr "R_Arm_3_Jnt_FK_Ctrl_scaleY_breathing.o" "Caleb_RigRN.phl[1140]";
-connectAttr "Caleb_RigRN.phl[1141]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1142]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1141]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1142]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1143]" "breathing.dsm" -na;
 connectAttr "R_Arm_3_Jnt_FK_Ctrl_scaleZ_breathing.o" "Caleb_RigRN.phl[1144]";
 connectAttr "Caleb_RigRN.phl[1145]" "head_turn.dsm" -na;
@@ -25906,52 +26207,52 @@ connectAttr "Caleb_RigRN.phl[1150]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1151]" "breathing.dsm" -na;
 connectAttr "R_Arm_3_Jnt_FK_Ctrl_FollowRotate_breathing.o" "Caleb_RigRN.phl[1152]"
 		;
-connectAttr "Caleb_RigRN.phl[1153]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1154]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1153]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1154]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1155]" "breathing.dsm" -na;
 connectAttr "R_Arm_3_Jnt_FK_Ctrl_visibility_breathing.o" "Caleb_RigRN.phl[1156]"
 		;
-connectAttr "Caleb_RigRN.phl[1157]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1158]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1157]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1158]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1159]" "breathing.dsm" -na;
 connectAttr "R_Arm_2_Jnt_FK_Ctrl_translateX_breathing.o" "Caleb_RigRN.phl[1160]"
 		;
-connectAttr "Caleb_RigRN.phl[1161]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1162]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1161]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1162]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1163]" "breathing.dsm" -na;
 connectAttr "R_Arm_2_Jnt_FK_Ctrl_translateY_breathing.o" "Caleb_RigRN.phl[1164]"
 		;
-connectAttr "Caleb_RigRN.phl[1165]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1166]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1165]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1166]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1167]" "breathing.dsm" -na;
 connectAttr "R_Arm_2_Jnt_FK_Ctrl_translateZ_breathing.o" "Caleb_RigRN.phl[1168]"
 		;
-connectAttr "Caleb_RigRN.phl[1169]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1170]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1169]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1170]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1171]" "breathing.dsm" -na;
 connectAttr "R_Arm_2_Jnt_FK_Ctrl_rotate_breathing.ox" "Caleb_RigRN.phl[1172]";
-connectAttr "Caleb_RigRN.phl[1173]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1174]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1173]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1174]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1175]" "breathing.dsm" -na;
 connectAttr "R_Arm_2_Jnt_FK_Ctrl_rotate_breathing.oy" "Caleb_RigRN.phl[1176]";
-connectAttr "Caleb_RigRN.phl[1177]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1178]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1177]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1178]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1179]" "breathing.dsm" -na;
 connectAttr "R_Arm_2_Jnt_FK_Ctrl_rotate_breathing.oz" "Caleb_RigRN.phl[1180]";
 connectAttr "Caleb_RigRN.phl[1181]" "R_Arm_2_Jnt_FK_Ctrl_rotate_head_turn.ro";
 connectAttr "Caleb_RigRN.phl[1182]" "R_Arm_2_Jnt_FK_Ctrl_rotate_BaseAnimation_extract.ro"
 		;
 connectAttr "Caleb_RigRN.phl[1183]" "R_Arm_2_Jnt_FK_Ctrl_rotate_breathing.ro";
-connectAttr "Caleb_RigRN.phl[1184]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1185]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1184]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1185]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1186]" "breathing.dsm" -na;
 connectAttr "R_Arm_2_Jnt_FK_Ctrl_scaleX_breathing.o" "Caleb_RigRN.phl[1187]";
-connectAttr "Caleb_RigRN.phl[1188]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1189]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1188]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1189]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1190]" "breathing.dsm" -na;
 connectAttr "R_Arm_2_Jnt_FK_Ctrl_scaleY_breathing.o" "Caleb_RigRN.phl[1191]";
-connectAttr "Caleb_RigRN.phl[1192]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1193]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1192]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1193]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1194]" "breathing.dsm" -na;
 connectAttr "R_Arm_2_Jnt_FK_Ctrl_scaleZ_breathing.o" "Caleb_RigRN.phl[1195]";
 connectAttr "Caleb_RigRN.phl[1196]" "head_turn.dsm" -na;
@@ -25964,52 +26265,52 @@ connectAttr "Caleb_RigRN.phl[1201]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1202]" "breathing.dsm" -na;
 connectAttr "R_Arm_2_Jnt_FK_Ctrl_FollowRotate_breathing.o" "Caleb_RigRN.phl[1203]"
 		;
-connectAttr "Caleb_RigRN.phl[1204]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1205]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1204]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1205]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1206]" "breathing.dsm" -na;
 connectAttr "R_Arm_2_Jnt_FK_Ctrl_visibility_breathing.o" "Caleb_RigRN.phl[1207]"
 		;
-connectAttr "Caleb_RigRN.phl[1208]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1209]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1208]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1209]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1210]" "breathing.dsm" -na;
 connectAttr "R_Arm_1_Jnt_FK_Ctrl_translateX_breathing.o" "Caleb_RigRN.phl[1211]"
 		;
-connectAttr "Caleb_RigRN.phl[1212]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1213]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1212]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1213]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1214]" "breathing.dsm" -na;
 connectAttr "R_Arm_1_Jnt_FK_Ctrl_translateY_breathing.o" "Caleb_RigRN.phl[1215]"
 		;
-connectAttr "Caleb_RigRN.phl[1216]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1217]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1216]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1217]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1218]" "breathing.dsm" -na;
 connectAttr "R_Arm_1_Jnt_FK_Ctrl_translateZ_breathing.o" "Caleb_RigRN.phl[1219]"
 		;
-connectAttr "Caleb_RigRN.phl[1220]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1221]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1220]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1221]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1222]" "breathing.dsm" -na;
 connectAttr "R_Arm_1_Jnt_FK_Ctrl_rotate_breathing.oy" "Caleb_RigRN.phl[1223]";
-connectAttr "Caleb_RigRN.phl[1224]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1225]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1224]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1225]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1226]" "breathing.dsm" -na;
 connectAttr "R_Arm_1_Jnt_FK_Ctrl_rotate_breathing.ox" "Caleb_RigRN.phl[1227]";
-connectAttr "Caleb_RigRN.phl[1228]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1229]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1228]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1229]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1230]" "breathing.dsm" -na;
 connectAttr "R_Arm_1_Jnt_FK_Ctrl_rotate_breathing.oz" "Caleb_RigRN.phl[1231]";
 connectAttr "Caleb_RigRN.phl[1232]" "R_Arm_1_Jnt_FK_Ctrl_rotate_head_turn.ro";
 connectAttr "Caleb_RigRN.phl[1233]" "R_Arm_1_Jnt_FK_Ctrl_rotate_BaseAnimation_extract.ro"
 		;
 connectAttr "Caleb_RigRN.phl[1234]" "R_Arm_1_Jnt_FK_Ctrl_rotate_breathing.ro";
-connectAttr "Caleb_RigRN.phl[1235]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1236]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1235]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1236]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1237]" "breathing.dsm" -na;
 connectAttr "R_Arm_1_Jnt_FK_Ctrl_scaleX_breathing.o" "Caleb_RigRN.phl[1238]";
-connectAttr "Caleb_RigRN.phl[1239]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1240]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1239]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1240]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1241]" "breathing.dsm" -na;
 connectAttr "R_Arm_1_Jnt_FK_Ctrl_scaleY_breathing.o" "Caleb_RigRN.phl[1242]";
-connectAttr "Caleb_RigRN.phl[1243]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1244]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1243]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1244]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1245]" "breathing.dsm" -na;
 connectAttr "R_Arm_1_Jnt_FK_Ctrl_scaleZ_breathing.o" "Caleb_RigRN.phl[1246]";
 connectAttr "Caleb_RigRN.phl[1247]" "head_turn.dsm" -na;
@@ -26022,49 +26323,49 @@ connectAttr "Caleb_RigRN.phl[1252]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1253]" "breathing.dsm" -na;
 connectAttr "R_Arm_1_Jnt_FK_Ctrl_FollowRotate_breathing.o" "Caleb_RigRN.phl[1254]"
 		;
-connectAttr "Caleb_RigRN.phl[1255]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1256]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1255]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1256]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1257]" "breathing.dsm" -na;
 connectAttr "R_Arm_1_Jnt_FK_Ctrl_visibility_breathing.o" "Caleb_RigRN.phl[1258]"
 		;
-connectAttr "Caleb_RigRN.phl[1259]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1260]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1259]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1260]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1261]" "breathing.dsm" -na;
 connectAttr "R_Thumb_Jnt2_Ctrl_translateX_breathing.o" "Caleb_RigRN.phl[1262]";
-connectAttr "Caleb_RigRN.phl[1263]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1264]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1263]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1264]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1265]" "breathing.dsm" -na;
 connectAttr "R_Thumb_Jnt2_Ctrl_translateY_breathing.o" "Caleb_RigRN.phl[1266]";
-connectAttr "Caleb_RigRN.phl[1267]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1268]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1267]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1268]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1269]" "breathing.dsm" -na;
 connectAttr "R_Thumb_Jnt2_Ctrl_translateZ_breathing.o" "Caleb_RigRN.phl[1270]";
-connectAttr "Caleb_RigRN.phl[1271]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1272]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1271]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1272]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1273]" "breathing.dsm" -na;
 connectAttr "R_Thumb_Jnt2_Ctrl_rotate_breathing.oz" "Caleb_RigRN.phl[1274]";
-connectAttr "Caleb_RigRN.phl[1275]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1276]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1275]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1276]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1277]" "breathing.dsm" -na;
 connectAttr "R_Thumb_Jnt2_Ctrl_rotate_breathing.ox" "Caleb_RigRN.phl[1278]";
-connectAttr "Caleb_RigRN.phl[1279]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1280]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1279]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1280]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1281]" "breathing.dsm" -na;
 connectAttr "R_Thumb_Jnt2_Ctrl_rotate_breathing.oy" "Caleb_RigRN.phl[1282]";
 connectAttr "Caleb_RigRN.phl[1283]" "R_Thumb_Jnt2_Ctrl_rotate_head_turn.ro";
 connectAttr "Caleb_RigRN.phl[1284]" "R_Thumb_Jnt2_Ctrl_rotate_BaseAnimation_extract.ro"
 		;
 connectAttr "Caleb_RigRN.phl[1285]" "R_Thumb_Jnt2_Ctrl_rotate_breathing.ro";
-connectAttr "Caleb_RigRN.phl[1286]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1287]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1286]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1287]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1288]" "breathing.dsm" -na;
 connectAttr "R_Thumb_Jnt2_Ctrl_scaleX_breathing.o" "Caleb_RigRN.phl[1289]";
-connectAttr "Caleb_RigRN.phl[1290]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1291]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1290]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1291]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1292]" "breathing.dsm" -na;
 connectAttr "R_Thumb_Jnt2_Ctrl_scaleY_breathing.o" "Caleb_RigRN.phl[1293]";
-connectAttr "Caleb_RigRN.phl[1294]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1295]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1294]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1295]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1296]" "breathing.dsm" -na;
 connectAttr "R_Thumb_Jnt2_Ctrl_scaleZ_breathing.o" "Caleb_RigRN.phl[1297]";
 connectAttr "Caleb_RigRN.phl[1298]" "head_turn.dsm" -na;
@@ -26077,48 +26378,48 @@ connectAttr "Caleb_RigRN.phl[1303]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1304]" "breathing.dsm" -na;
 connectAttr "R_Thumb_Jnt2_Ctrl_FollowRotate_breathing.o" "Caleb_RigRN.phl[1305]"
 		;
-connectAttr "Caleb_RigRN.phl[1306]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1307]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1306]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1307]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1308]" "breathing.dsm" -na;
 connectAttr "R_Thumb_Jnt2_Ctrl_visibility_breathing.o" "Caleb_RigRN.phl[1309]";
-connectAttr "Caleb_RigRN.phl[1310]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1311]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1310]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1311]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1312]" "breathing.dsm" -na;
 connectAttr "R_Thumb_Jnt1_Ctrl_translateX_breathing.o" "Caleb_RigRN.phl[1313]";
-connectAttr "Caleb_RigRN.phl[1314]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1315]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1314]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1315]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1316]" "breathing.dsm" -na;
 connectAttr "R_Thumb_Jnt1_Ctrl_translateY_breathing.o" "Caleb_RigRN.phl[1317]";
-connectAttr "Caleb_RigRN.phl[1318]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1319]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1318]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1319]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1320]" "breathing.dsm" -na;
 connectAttr "R_Thumb_Jnt1_Ctrl_translateZ_breathing.o" "Caleb_RigRN.phl[1321]";
-connectAttr "Caleb_RigRN.phl[1322]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1323]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1322]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1323]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1324]" "breathing.dsm" -na;
 connectAttr "R_Thumb_Jnt1_Ctrl_rotate_breathing.ox" "Caleb_RigRN.phl[1325]";
-connectAttr "Caleb_RigRN.phl[1326]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1327]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1326]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1327]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1328]" "breathing.dsm" -na;
 connectAttr "R_Thumb_Jnt1_Ctrl_rotate_breathing.oy" "Caleb_RigRN.phl[1329]";
-connectAttr "Caleb_RigRN.phl[1330]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1331]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1330]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1331]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1332]" "breathing.dsm" -na;
 connectAttr "R_Thumb_Jnt1_Ctrl_rotate_breathing.oz" "Caleb_RigRN.phl[1333]";
 connectAttr "Caleb_RigRN.phl[1334]" "R_Thumb_Jnt1_Ctrl_rotate_head_turn.ro";
 connectAttr "Caleb_RigRN.phl[1335]" "R_Thumb_Jnt1_Ctrl_rotate_BaseAnimation_extract.ro"
 		;
 connectAttr "Caleb_RigRN.phl[1336]" "R_Thumb_Jnt1_Ctrl_rotate_breathing.ro";
-connectAttr "Caleb_RigRN.phl[1337]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1338]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1337]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1338]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1339]" "breathing.dsm" -na;
 connectAttr "R_Thumb_Jnt1_Ctrl_scaleX_breathing.o" "Caleb_RigRN.phl[1340]";
-connectAttr "Caleb_RigRN.phl[1341]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1342]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1341]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1342]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1343]" "breathing.dsm" -na;
 connectAttr "R_Thumb_Jnt1_Ctrl_scaleY_breathing.o" "Caleb_RigRN.phl[1344]";
-connectAttr "Caleb_RigRN.phl[1345]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1346]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1345]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1346]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1347]" "breathing.dsm" -na;
 connectAttr "R_Thumb_Jnt1_Ctrl_scaleZ_breathing.o" "Caleb_RigRN.phl[1348]";
 connectAttr "Caleb_RigRN.phl[1349]" "head_turn.dsm" -na;
@@ -26131,51 +26432,51 @@ connectAttr "Caleb_RigRN.phl[1354]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1355]" "breathing.dsm" -na;
 connectAttr "R_Thumb_Jnt1_Ctrl_FollowRotate_breathing.o" "Caleb_RigRN.phl[1356]"
 		;
-connectAttr "Caleb_RigRN.phl[1357]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1358]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1357]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1358]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1359]" "breathing.dsm" -na;
 connectAttr "R_Thumb_Jnt1_Ctrl_visibility_breathing.o" "Caleb_RigRN.phl[1360]";
-connectAttr "Caleb_RigRN.phl[1361]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1362]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1361]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1362]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1363]" "breathing.dsm" -na;
 connectAttr "R_Finger_3_Jnt_Ctrl_translateX_breathing.o" "Caleb_RigRN.phl[1364]"
 		;
-connectAttr "Caleb_RigRN.phl[1365]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1366]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1365]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1366]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1367]" "breathing.dsm" -na;
 connectAttr "R_Finger_3_Jnt_Ctrl_translateY_breathing.o" "Caleb_RigRN.phl[1368]"
 		;
-connectAttr "Caleb_RigRN.phl[1369]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1370]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1369]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1370]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1371]" "breathing.dsm" -na;
 connectAttr "R_Finger_3_Jnt_Ctrl_translateZ_breathing.o" "Caleb_RigRN.phl[1372]"
 		;
-connectAttr "Caleb_RigRN.phl[1373]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1374]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1373]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1374]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1375]" "breathing.dsm" -na;
 connectAttr "R_Finger_3_Jnt_Ctrl_rotate_breathing.oy" "Caleb_RigRN.phl[1376]";
-connectAttr "Caleb_RigRN.phl[1377]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1378]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1377]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1378]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1379]" "breathing.dsm" -na;
 connectAttr "R_Finger_3_Jnt_Ctrl_rotate_breathing.ox" "Caleb_RigRN.phl[1380]";
-connectAttr "Caleb_RigRN.phl[1381]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1382]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1381]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1382]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1383]" "breathing.dsm" -na;
 connectAttr "R_Finger_3_Jnt_Ctrl_rotate_breathing.oz" "Caleb_RigRN.phl[1384]";
 connectAttr "Caleb_RigRN.phl[1385]" "R_Finger_3_Jnt_Ctrl_rotate_head_turn.ro";
 connectAttr "Caleb_RigRN.phl[1386]" "R_Finger_3_Jnt_Ctrl_rotate_BaseAnimation_extract.ro"
 		;
 connectAttr "Caleb_RigRN.phl[1387]" "R_Finger_3_Jnt_Ctrl_rotate_breathing.ro";
-connectAttr "Caleb_RigRN.phl[1388]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1389]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1388]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1389]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1390]" "breathing.dsm" -na;
 connectAttr "R_Finger_3_Jnt_Ctrl_scaleX_breathing.o" "Caleb_RigRN.phl[1391]";
-connectAttr "Caleb_RigRN.phl[1392]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1393]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1392]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1393]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1394]" "breathing.dsm" -na;
 connectAttr "R_Finger_3_Jnt_Ctrl_scaleY_breathing.o" "Caleb_RigRN.phl[1395]";
-connectAttr "Caleb_RigRN.phl[1396]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1397]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1396]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1397]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1398]" "breathing.dsm" -na;
 connectAttr "R_Finger_3_Jnt_Ctrl_scaleZ_breathing.o" "Caleb_RigRN.phl[1399]";
 connectAttr "Caleb_RigRN.phl[1400]" "head_turn.dsm" -na;
@@ -26188,52 +26489,52 @@ connectAttr "Caleb_RigRN.phl[1405]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1406]" "breathing.dsm" -na;
 connectAttr "R_Finger_3_Jnt_Ctrl_FollowRotate_breathing.o" "Caleb_RigRN.phl[1407]"
 		;
-connectAttr "Caleb_RigRN.phl[1408]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1409]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1408]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1409]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1410]" "breathing.dsm" -na;
 connectAttr "R_Finger_3_Jnt_Ctrl_visibility_breathing.o" "Caleb_RigRN.phl[1411]"
 		;
-connectAttr "Caleb_RigRN.phl[1412]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1413]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1412]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1413]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1414]" "breathing.dsm" -na;
 connectAttr "R_Finger_2_Jnt_Ctrl_translateX_breathing.o" "Caleb_RigRN.phl[1415]"
 		;
-connectAttr "Caleb_RigRN.phl[1416]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1417]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1416]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1417]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1418]" "breathing.dsm" -na;
 connectAttr "R_Finger_2_Jnt_Ctrl_translateY_breathing.o" "Caleb_RigRN.phl[1419]"
 		;
-connectAttr "Caleb_RigRN.phl[1420]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1421]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1420]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1421]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1422]" "breathing.dsm" -na;
 connectAttr "R_Finger_2_Jnt_Ctrl_translateZ_breathing.o" "Caleb_RigRN.phl[1423]"
 		;
-connectAttr "Caleb_RigRN.phl[1424]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1425]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1424]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1425]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1426]" "breathing.dsm" -na;
 connectAttr "R_Finger_2_Jnt_Ctrl_rotate_breathing.oy" "Caleb_RigRN.phl[1427]";
-connectAttr "Caleb_RigRN.phl[1428]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1429]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1428]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1429]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1430]" "breathing.dsm" -na;
 connectAttr "R_Finger_2_Jnt_Ctrl_rotate_breathing.ox" "Caleb_RigRN.phl[1431]";
-connectAttr "Caleb_RigRN.phl[1432]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1433]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1432]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1433]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1434]" "breathing.dsm" -na;
 connectAttr "R_Finger_2_Jnt_Ctrl_rotate_breathing.oz" "Caleb_RigRN.phl[1435]";
 connectAttr "Caleb_RigRN.phl[1436]" "R_Finger_2_Jnt_Ctrl_rotate_head_turn.ro";
 connectAttr "Caleb_RigRN.phl[1437]" "R_Finger_2_Jnt_Ctrl_rotate_BaseAnimation_extract.ro"
 		;
 connectAttr "Caleb_RigRN.phl[1438]" "R_Finger_2_Jnt_Ctrl_rotate_breathing.ro";
-connectAttr "Caleb_RigRN.phl[1439]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1440]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1439]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1440]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1441]" "breathing.dsm" -na;
 connectAttr "R_Finger_2_Jnt_Ctrl_scaleX_breathing.o" "Caleb_RigRN.phl[1442]";
-connectAttr "Caleb_RigRN.phl[1443]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1444]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1443]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1444]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1445]" "breathing.dsm" -na;
 connectAttr "R_Finger_2_Jnt_Ctrl_scaleY_breathing.o" "Caleb_RigRN.phl[1446]";
-connectAttr "Caleb_RigRN.phl[1447]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1448]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1447]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1448]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1449]" "breathing.dsm" -na;
 connectAttr "R_Finger_2_Jnt_Ctrl_scaleZ_breathing.o" "Caleb_RigRN.phl[1450]";
 connectAttr "Caleb_RigRN.phl[1451]" "head_turn.dsm" -na;
@@ -26246,52 +26547,52 @@ connectAttr "Caleb_RigRN.phl[1456]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1457]" "breathing.dsm" -na;
 connectAttr "R_Finger_2_Jnt_Ctrl_FollowRotate_breathing.o" "Caleb_RigRN.phl[1458]"
 		;
-connectAttr "Caleb_RigRN.phl[1459]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1460]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1459]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1460]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1461]" "breathing.dsm" -na;
 connectAttr "R_Finger_2_Jnt_Ctrl_visibility_breathing.o" "Caleb_RigRN.phl[1462]"
 		;
-connectAttr "Caleb_RigRN.phl[1463]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1464]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1463]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1464]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1465]" "breathing.dsm" -na;
 connectAttr "R_Finger_1_Jnt1_Ctrl_translateX_breathing.o" "Caleb_RigRN.phl[1466]"
 		;
-connectAttr "Caleb_RigRN.phl[1467]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1468]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1467]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1468]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1469]" "breathing.dsm" -na;
 connectAttr "R_Finger_1_Jnt1_Ctrl_translateY_breathing.o" "Caleb_RigRN.phl[1470]"
 		;
-connectAttr "Caleb_RigRN.phl[1471]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1472]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1471]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1472]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1473]" "breathing.dsm" -na;
 connectAttr "R_Finger_1_Jnt1_Ctrl_translateZ_breathing.o" "Caleb_RigRN.phl[1474]"
 		;
-connectAttr "Caleb_RigRN.phl[1475]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1476]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1475]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1476]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1477]" "breathing.dsm" -na;
 connectAttr "R_Finger_1_Jnt1_Ctrl_rotate_breathing.oy" "Caleb_RigRN.phl[1478]";
-connectAttr "Caleb_RigRN.phl[1479]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1480]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1479]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1480]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1481]" "breathing.dsm" -na;
 connectAttr "R_Finger_1_Jnt1_Ctrl_rotate_breathing.ox" "Caleb_RigRN.phl[1482]";
-connectAttr "Caleb_RigRN.phl[1483]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1484]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1483]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1484]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1485]" "breathing.dsm" -na;
 connectAttr "R_Finger_1_Jnt1_Ctrl_rotate_breathing.oz" "Caleb_RigRN.phl[1486]";
 connectAttr "Caleb_RigRN.phl[1487]" "R_Finger_1_Jnt1_Ctrl_rotate_head_turn.ro";
 connectAttr "Caleb_RigRN.phl[1488]" "R_Finger_1_Jnt1_Ctrl_rotate_BaseAnimation_extract.ro"
 		;
 connectAttr "Caleb_RigRN.phl[1489]" "R_Finger_1_Jnt1_Ctrl_rotate_breathing.ro";
-connectAttr "Caleb_RigRN.phl[1490]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1491]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1490]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1491]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1492]" "breathing.dsm" -na;
 connectAttr "R_Finger_1_Jnt1_Ctrl_scaleX_breathing.o" "Caleb_RigRN.phl[1493]";
-connectAttr "Caleb_RigRN.phl[1494]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1495]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1494]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1495]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1496]" "breathing.dsm" -na;
 connectAttr "R_Finger_1_Jnt1_Ctrl_scaleY_breathing.o" "Caleb_RigRN.phl[1497]";
-connectAttr "Caleb_RigRN.phl[1498]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1499]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1498]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1499]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1500]" "breathing.dsm" -na;
 connectAttr "R_Finger_1_Jnt1_Ctrl_scaleZ_breathing.o" "Caleb_RigRN.phl[1501]";
 connectAttr "Caleb_RigRN.phl[1502]" "head_turn.dsm" -na;
@@ -26304,49 +26605,49 @@ connectAttr "Caleb_RigRN.phl[1507]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1508]" "breathing.dsm" -na;
 connectAttr "R_Finger_1_Jnt1_Ctrl_FollowRotate_breathing.o" "Caleb_RigRN.phl[1509]"
 		;
-connectAttr "Caleb_RigRN.phl[1510]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1511]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1510]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1511]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1512]" "breathing.dsm" -na;
 connectAttr "R_Finger_1_Jnt1_Ctrl_visibility_breathing.o" "Caleb_RigRN.phl[1513]"
 		;
-connectAttr "Caleb_RigRN.phl[1514]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1515]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1514]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1515]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1516]" "breathing.dsm" -na;
 connectAttr "R_Fist_3_Jnt_Ctrl_translateX_breathing.o" "Caleb_RigRN.phl[1517]";
-connectAttr "Caleb_RigRN.phl[1518]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1519]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1518]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1519]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1520]" "breathing.dsm" -na;
 connectAttr "R_Fist_3_Jnt_Ctrl_translateY_breathing.o" "Caleb_RigRN.phl[1521]";
-connectAttr "Caleb_RigRN.phl[1522]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1523]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1522]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1523]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1524]" "breathing.dsm" -na;
 connectAttr "R_Fist_3_Jnt_Ctrl_translateZ_breathing.o" "Caleb_RigRN.phl[1525]";
-connectAttr "Caleb_RigRN.phl[1526]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1527]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1526]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1527]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1528]" "breathing.dsm" -na;
 connectAttr "R_Fist_3_Jnt_Ctrl_rotate_breathing.oy" "Caleb_RigRN.phl[1529]";
-connectAttr "Caleb_RigRN.phl[1530]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1531]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1530]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1531]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1532]" "breathing.dsm" -na;
 connectAttr "R_Fist_3_Jnt_Ctrl_rotate_breathing.ox" "Caleb_RigRN.phl[1533]";
-connectAttr "Caleb_RigRN.phl[1534]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1535]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1534]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1535]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1536]" "breathing.dsm" -na;
 connectAttr "R_Fist_3_Jnt_Ctrl_rotate_breathing.oz" "Caleb_RigRN.phl[1537]";
 connectAttr "Caleb_RigRN.phl[1538]" "R_Fist_3_Jnt_Ctrl_rotate_head_turn.ro";
 connectAttr "Caleb_RigRN.phl[1539]" "R_Fist_3_Jnt_Ctrl_rotate_BaseAnimation_extract.ro"
 		;
 connectAttr "Caleb_RigRN.phl[1540]" "R_Fist_3_Jnt_Ctrl_rotate_breathing.ro";
-connectAttr "Caleb_RigRN.phl[1541]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1542]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1541]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1542]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1543]" "breathing.dsm" -na;
 connectAttr "R_Fist_3_Jnt_Ctrl_scaleX_breathing.o" "Caleb_RigRN.phl[1544]";
-connectAttr "Caleb_RigRN.phl[1545]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1546]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1545]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1546]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1547]" "breathing.dsm" -na;
 connectAttr "R_Fist_3_Jnt_Ctrl_scaleY_breathing.o" "Caleb_RigRN.phl[1548]";
-connectAttr "Caleb_RigRN.phl[1549]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1550]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1549]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1550]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1551]" "breathing.dsm" -na;
 connectAttr "R_Fist_3_Jnt_Ctrl_scaleZ_breathing.o" "Caleb_RigRN.phl[1552]";
 connectAttr "Caleb_RigRN.phl[1553]" "head_turn.dsm" -na;
@@ -26359,48 +26660,48 @@ connectAttr "Caleb_RigRN.phl[1558]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1559]" "breathing.dsm" -na;
 connectAttr "R_Fist_3_Jnt_Ctrl_FollowRotate_breathing.o" "Caleb_RigRN.phl[1560]"
 		;
-connectAttr "Caleb_RigRN.phl[1561]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1562]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1561]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1562]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1563]" "breathing.dsm" -na;
 connectAttr "R_Fist_3_Jnt_Ctrl_visibility_breathing.o" "Caleb_RigRN.phl[1564]";
-connectAttr "Caleb_RigRN.phl[1565]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1566]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1565]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1566]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1567]" "breathing.dsm" -na;
 connectAttr "R_Fist_2_Jnt_Ctrl_translateX_breathing.o" "Caleb_RigRN.phl[1568]";
-connectAttr "Caleb_RigRN.phl[1569]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1570]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1569]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1570]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1571]" "breathing.dsm" -na;
 connectAttr "R_Fist_2_Jnt_Ctrl_translateY_breathing.o" "Caleb_RigRN.phl[1572]";
-connectAttr "Caleb_RigRN.phl[1573]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1574]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1573]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1574]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1575]" "breathing.dsm" -na;
 connectAttr "R_Fist_2_Jnt_Ctrl_translateZ_breathing.o" "Caleb_RigRN.phl[1576]";
-connectAttr "Caleb_RigRN.phl[1577]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1578]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1577]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1578]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1579]" "breathing.dsm" -na;
 connectAttr "R_Fist_2_Jnt_Ctrl_rotate_breathing.oy" "Caleb_RigRN.phl[1580]";
-connectAttr "Caleb_RigRN.phl[1581]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1582]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1581]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1582]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1583]" "breathing.dsm" -na;
 connectAttr "R_Fist_2_Jnt_Ctrl_rotate_breathing.ox" "Caleb_RigRN.phl[1584]";
-connectAttr "Caleb_RigRN.phl[1585]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1586]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1585]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1586]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1587]" "breathing.dsm" -na;
 connectAttr "R_Fist_2_Jnt_Ctrl_rotate_breathing.oz" "Caleb_RigRN.phl[1588]";
 connectAttr "Caleb_RigRN.phl[1589]" "R_Fist_2_Jnt_Ctrl_rotate_head_turn.ro";
 connectAttr "Caleb_RigRN.phl[1590]" "R_Fist_2_Jnt_Ctrl_rotate_BaseAnimation_extract.ro"
 		;
 connectAttr "Caleb_RigRN.phl[1591]" "R_Fist_2_Jnt_Ctrl_rotate_breathing.ro";
-connectAttr "Caleb_RigRN.phl[1592]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1593]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1592]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1593]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1594]" "breathing.dsm" -na;
 connectAttr "R_Fist_2_Jnt_Ctrl_scaleX_breathing.o" "Caleb_RigRN.phl[1595]";
-connectAttr "Caleb_RigRN.phl[1596]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1597]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1596]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1597]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1598]" "breathing.dsm" -na;
 connectAttr "R_Fist_2_Jnt_Ctrl_scaleY_breathing.o" "Caleb_RigRN.phl[1599]";
-connectAttr "Caleb_RigRN.phl[1600]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1601]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1600]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1601]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1602]" "breathing.dsm" -na;
 connectAttr "R_Fist_2_Jnt_Ctrl_scaleZ_breathing.o" "Caleb_RigRN.phl[1603]";
 connectAttr "Caleb_RigRN.phl[1604]" "head_turn.dsm" -na;
@@ -26413,48 +26714,48 @@ connectAttr "Caleb_RigRN.phl[1609]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1610]" "breathing.dsm" -na;
 connectAttr "R_Fist_2_Jnt_Ctrl_FollowRotate_breathing.o" "Caleb_RigRN.phl[1611]"
 		;
-connectAttr "Caleb_RigRN.phl[1612]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1613]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1612]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1613]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1614]" "breathing.dsm" -na;
 connectAttr "R_Fist_2_Jnt_Ctrl_visibility_breathing.o" "Caleb_RigRN.phl[1615]";
-connectAttr "Caleb_RigRN.phl[1616]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1617]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1616]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1617]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1618]" "breathing.dsm" -na;
 connectAttr "R_Fist_1_Jnt_Ctrl_translateX_breathing.o" "Caleb_RigRN.phl[1619]";
-connectAttr "Caleb_RigRN.phl[1620]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1621]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1620]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1621]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1622]" "breathing.dsm" -na;
 connectAttr "R_Fist_1_Jnt_Ctrl_translateY_breathing.o" "Caleb_RigRN.phl[1623]";
-connectAttr "Caleb_RigRN.phl[1624]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1625]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1624]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1625]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1626]" "breathing.dsm" -na;
 connectAttr "R_Fist_1_Jnt_Ctrl_translateZ_breathing.o" "Caleb_RigRN.phl[1627]";
-connectAttr "Caleb_RigRN.phl[1628]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1629]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1628]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1629]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1630]" "breathing.dsm" -na;
 connectAttr "R_Fist_1_Jnt_Ctrl_rotate_breathing.oy" "Caleb_RigRN.phl[1631]";
-connectAttr "Caleb_RigRN.phl[1632]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1633]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1632]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1633]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1634]" "breathing.dsm" -na;
 connectAttr "R_Fist_1_Jnt_Ctrl_rotate_breathing.ox" "Caleb_RigRN.phl[1635]";
-connectAttr "Caleb_RigRN.phl[1636]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1637]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1636]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1637]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1638]" "breathing.dsm" -na;
 connectAttr "R_Fist_1_Jnt_Ctrl_rotate_breathing.oz" "Caleb_RigRN.phl[1639]";
 connectAttr "Caleb_RigRN.phl[1640]" "R_Fist_1_Jnt_Ctrl_rotate_head_turn.ro";
 connectAttr "Caleb_RigRN.phl[1641]" "R_Fist_1_Jnt_Ctrl_rotate_BaseAnimation_extract.ro"
 		;
 connectAttr "Caleb_RigRN.phl[1642]" "R_Fist_1_Jnt_Ctrl_rotate_breathing.ro";
-connectAttr "Caleb_RigRN.phl[1643]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1644]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1643]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1644]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1645]" "breathing.dsm" -na;
 connectAttr "R_Fist_1_Jnt_Ctrl_scaleX_breathing.o" "Caleb_RigRN.phl[1646]";
-connectAttr "Caleb_RigRN.phl[1647]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1648]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1647]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1648]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1649]" "breathing.dsm" -na;
 connectAttr "R_Fist_1_Jnt_Ctrl_scaleY_breathing.o" "Caleb_RigRN.phl[1650]";
-connectAttr "Caleb_RigRN.phl[1651]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1652]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1651]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1652]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1653]" "breathing.dsm" -na;
 connectAttr "R_Fist_1_Jnt_Ctrl_scaleZ_breathing.o" "Caleb_RigRN.phl[1654]";
 connectAttr "Caleb_RigRN.phl[1655]" "head_turn.dsm" -na;
@@ -26467,48 +26768,48 @@ connectAttr "Caleb_RigRN.phl[1660]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1661]" "breathing.dsm" -na;
 connectAttr "R_Fist_1_Jnt_Ctrl_FollowRotate_breathing.o" "Caleb_RigRN.phl[1662]"
 		;
-connectAttr "Caleb_RigRN.phl[1663]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1664]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1663]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1664]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1665]" "breathing.dsm" -na;
 connectAttr "R_Fist_1_Jnt_Ctrl_visibility_breathing.o" "Caleb_RigRN.phl[1666]";
-connectAttr "Caleb_RigRN.phl[1667]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1668]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1667]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1668]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1669]" "breathing.dsm" -na;
 connectAttr "CoG_Jnt_Ctrl_translateX_breathing.o" "Caleb_RigRN.phl[1670]";
-connectAttr "Caleb_RigRN.phl[1671]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1672]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1671]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1672]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1673]" "breathing.dsm" -na;
 connectAttr "CoG_Jnt_Ctrl_translateY_breathing.o" "Caleb_RigRN.phl[1674]";
-connectAttr "Caleb_RigRN.phl[1675]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1676]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1675]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1676]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1677]" "breathing.dsm" -na;
 connectAttr "CoG_Jnt_Ctrl_translateZ_breathing.o" "Caleb_RigRN.phl[1678]";
-connectAttr "Caleb_RigRN.phl[1679]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1680]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1679]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1680]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1681]" "breathing.dsm" -na;
 connectAttr "CoG_Jnt_Ctrl_rotate_breathing.ox" "Caleb_RigRN.phl[1682]";
-connectAttr "Caleb_RigRN.phl[1683]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1684]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1683]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1684]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1685]" "breathing.dsm" -na;
 connectAttr "CoG_Jnt_Ctrl_rotate_breathing.oy" "Caleb_RigRN.phl[1686]";
-connectAttr "Caleb_RigRN.phl[1687]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1688]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1687]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1688]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1689]" "breathing.dsm" -na;
 connectAttr "CoG_Jnt_Ctrl_rotate_breathing.oz" "Caleb_RigRN.phl[1690]";
 connectAttr "Caleb_RigRN.phl[1691]" "CoG_Jnt_Ctrl_rotate_head_turn.ro";
 connectAttr "Caleb_RigRN.phl[1692]" "CoG_Jnt_Ctrl_rotate_BaseAnimation_extract.ro"
 		;
 connectAttr "Caleb_RigRN.phl[1693]" "CoG_Jnt_Ctrl_rotate_breathing.ro";
-connectAttr "Caleb_RigRN.phl[1694]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1695]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1694]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1695]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1696]" "breathing.dsm" -na;
 connectAttr "CoG_Jnt_Ctrl_scaleX_breathing.o" "Caleb_RigRN.phl[1697]";
-connectAttr "Caleb_RigRN.phl[1698]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1699]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1698]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1699]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1700]" "breathing.dsm" -na;
 connectAttr "CoG_Jnt_Ctrl_scaleY_breathing.o" "Caleb_RigRN.phl[1701]";
-connectAttr "Caleb_RigRN.phl[1702]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1703]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1702]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1703]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1704]" "breathing.dsm" -na;
 connectAttr "CoG_Jnt_Ctrl_scaleZ_breathing.o" "Caleb_RigRN.phl[1705]";
 connectAttr "Caleb_RigRN.phl[1706]" "head_turn.dsm" -na;
@@ -26519,48 +26820,48 @@ connectAttr "Caleb_RigRN.phl[1710]" "head_turn.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1711]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1712]" "breathing.dsm" -na;
 connectAttr "CoG_Jnt_Ctrl_FollowRotate_breathing.o" "Caleb_RigRN.phl[1713]";
-connectAttr "Caleb_RigRN.phl[1714]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1715]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1714]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1715]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1716]" "breathing.dsm" -na;
 connectAttr "CoG_Jnt_Ctrl_visibility_breathing.o" "Caleb_RigRN.phl[1717]";
-connectAttr "Caleb_RigRN.phl[1718]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1719]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1718]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1719]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1720]" "breathing.dsm" -na;
 connectAttr "Pelvis_Ctrl_translateX_breathing.o" "Caleb_RigRN.phl[1721]";
-connectAttr "Caleb_RigRN.phl[1722]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1723]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1722]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1723]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1724]" "breathing.dsm" -na;
 connectAttr "Pelvis_Ctrl_translateY_breathing.o" "Caleb_RigRN.phl[1725]";
-connectAttr "Caleb_RigRN.phl[1726]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1727]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1726]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1727]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1728]" "breathing.dsm" -na;
 connectAttr "Pelvis_Ctrl_translateZ_breathing.o" "Caleb_RigRN.phl[1729]";
-connectAttr "Caleb_RigRN.phl[1730]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1731]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1730]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1731]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1732]" "breathing.dsm" -na;
 connectAttr "Pelvis_Ctrl_rotate_breathing.ox" "Caleb_RigRN.phl[1733]";
-connectAttr "Caleb_RigRN.phl[1734]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1735]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1734]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1735]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1736]" "breathing.dsm" -na;
 connectAttr "Pelvis_Ctrl_rotate_breathing.oy" "Caleb_RigRN.phl[1737]";
-connectAttr "Caleb_RigRN.phl[1738]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1739]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1738]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1739]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1740]" "breathing.dsm" -na;
 connectAttr "Pelvis_Ctrl_rotate_breathing.oz" "Caleb_RigRN.phl[1741]";
 connectAttr "Caleb_RigRN.phl[1742]" "Pelvis_Ctrl_rotate_head_turn.ro";
 connectAttr "Caleb_RigRN.phl[1743]" "Pelvis_Ctrl_rotate_BaseAnimation_extract.ro"
 		;
 connectAttr "Caleb_RigRN.phl[1744]" "Pelvis_Ctrl_rotate_breathing.ro";
-connectAttr "Caleb_RigRN.phl[1745]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1746]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1745]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1746]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1747]" "breathing.dsm" -na;
 connectAttr "Pelvis_Ctrl_scaleX_breathing.o" "Caleb_RigRN.phl[1748]";
-connectAttr "Caleb_RigRN.phl[1749]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1750]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1749]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1750]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1751]" "breathing.dsm" -na;
 connectAttr "Pelvis_Ctrl_scaleY_breathing.o" "Caleb_RigRN.phl[1752]";
-connectAttr "Caleb_RigRN.phl[1753]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1754]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1753]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1754]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1755]" "breathing.dsm" -na;
 connectAttr "Pelvis_Ctrl_scaleZ_breathing.o" "Caleb_RigRN.phl[1756]";
 connectAttr "Caleb_RigRN.phl[1757]" "head_turn.dsm" -na;
@@ -26571,68 +26872,68 @@ connectAttr "Caleb_RigRN.phl[1761]" "head_turn.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1762]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1763]" "breathing.dsm" -na;
 connectAttr "Pelvis_Ctrl_FollowRotate_breathing.o" "Caleb_RigRN.phl[1764]";
-connectAttr "Caleb_RigRN.phl[1765]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1766]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1765]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1766]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1767]" "breathing.dsm" -na;
 connectAttr "Pelvis_Ctrl_visibility_breathing.o" "Caleb_RigRN.phl[1768]";
-connectAttr "Caleb_RigRN.phl[1769]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1770]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1769]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1770]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1771]" "breathing.dsm" -na;
 connectAttr "L_Leg_IK_PV_Ctrl_translateZ_breathing.o" "Caleb_RigRN.phl[1772]";
-connectAttr "Caleb_RigRN.phl[1773]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1774]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1773]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1774]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1775]" "breathing.dsm" -na;
 connectAttr "L_Leg_IK_PV_Ctrl_translateX_breathing.o" "Caleb_RigRN.phl[1776]";
-connectAttr "Caleb_RigRN.phl[1777]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1778]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1777]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1778]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1779]" "breathing.dsm" -na;
 connectAttr "L_Leg_IK_PV_Ctrl_translateY_breathing.o" "Caleb_RigRN.phl[1780]";
 connectAttr "Caleb_RigRN.phl[1781]" "head_turn.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1782]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1783]" "breathing.dsm" -na;
 connectAttr "L_Leg_IK_PV_Ctrl_Local_Space_breathing.o" "Caleb_RigRN.phl[1784]";
-connectAttr "Caleb_RigRN.phl[1785]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1786]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1785]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1786]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1787]" "breathing.dsm" -na;
 connectAttr "L_Leg_IK_PV_Ctrl_rotate_breathing.ox" "Caleb_RigRN.phl[1788]";
-connectAttr "Caleb_RigRN.phl[1789]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1790]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1789]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1790]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1791]" "breathing.dsm" -na;
 connectAttr "L_Leg_IK_PV_Ctrl_rotate_breathing.oy" "Caleb_RigRN.phl[1792]";
-connectAttr "Caleb_RigRN.phl[1793]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1794]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1793]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1794]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1795]" "breathing.dsm" -na;
 connectAttr "L_Leg_IK_PV_Ctrl_rotate_breathing.oz" "Caleb_RigRN.phl[1796]";
-connectAttr "Caleb_RigRN.phl[1797]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1798]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1797]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1798]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1799]" "breathing.dsm" -na;
 connectAttr "L_Leg_IK_PV_Ctrl_visibility_breathing.o" "Caleb_RigRN.phl[1800]";
-connectAttr "Caleb_RigRN.phl[1801]" "L_Leg_IK_PV_Ctrl_rotate_head_turn.ro";
-connectAttr "Caleb_RigRN.phl[1802]" "L_Leg_IK_PV_Ctrl_rotate_BaseAnimation_extract.ro"
+connectAttr "Caleb_RigRN.phl[1801]" "L_Leg_IK_PV_Ctrl_rotate_BaseAnimation_extract.ro"
 		;
+connectAttr "Caleb_RigRN.phl[1802]" "L_Leg_IK_PV_Ctrl_rotate_head_turn.ro";
 connectAttr "Caleb_RigRN.phl[1803]" "L_Leg_IK_PV_Ctrl_rotate_breathing.ro";
-connectAttr "Caleb_RigRN.phl[1804]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1805]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1804]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1805]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1806]" "breathing.dsm" -na;
 connectAttr "L_Leg_IK_PV_Ctrl_scaleX_breathing.o" "Caleb_RigRN.phl[1807]";
-connectAttr "Caleb_RigRN.phl[1808]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1809]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1808]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1809]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1810]" "breathing.dsm" -na;
 connectAttr "L_Leg_IK_PV_Ctrl_scaleY_breathing.o" "Caleb_RigRN.phl[1811]";
-connectAttr "Caleb_RigRN.phl[1812]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1813]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1812]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1813]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1814]" "breathing.dsm" -na;
 connectAttr "L_Leg_IK_PV_Ctrl_scaleZ_breathing.o" "Caleb_RigRN.phl[1815]";
-connectAttr "Caleb_RigRN.phl[1816]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1817]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1816]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1817]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1818]" "breathing.dsm" -na;
 connectAttr "L_Leg_IK_Base_Ctrl_translateX_breathing.o" "Caleb_RigRN.phl[1819]";
-connectAttr "Caleb_RigRN.phl[1820]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1821]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1820]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1821]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1822]" "breathing.dsm" -na;
 connectAttr "L_Leg_IK_Base_Ctrl_translateY_breathing.o" "Caleb_RigRN.phl[1823]";
-connectAttr "Caleb_RigRN.phl[1824]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1825]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1824]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1825]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1826]" "breathing.dsm" -na;
 connectAttr "L_Leg_IK_Base_Ctrl_translateZ_breathing.o" "Caleb_RigRN.phl[1827]";
 connectAttr "Caleb_RigRN.phl[1828]" "head_turn.dsm" -na;
@@ -26645,40 +26946,40 @@ connectAttr "Caleb_RigRN.phl[1833]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1834]" "breathing.dsm" -na;
 connectAttr "L_Leg_IK_Base_Ctrl_FollowRotate_breathing.o" "Caleb_RigRN.phl[1835]"
 		;
-connectAttr "Caleb_RigRN.phl[1836]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1837]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1836]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1837]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1838]" "breathing.dsm" -na;
 connectAttr "L_Leg_IK_Base_Ctrl_rotate_breathing.ox" "Caleb_RigRN.phl[1839]";
-connectAttr "Caleb_RigRN.phl[1840]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1841]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1840]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1841]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1842]" "breathing.dsm" -na;
 connectAttr "L_Leg_IK_Base_Ctrl_rotate_breathing.oy" "Caleb_RigRN.phl[1843]";
-connectAttr "Caleb_RigRN.phl[1844]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1845]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1844]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1845]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1846]" "breathing.dsm" -na;
 connectAttr "L_Leg_IK_Base_Ctrl_rotate_breathing.oz" "Caleb_RigRN.phl[1847]";
 connectAttr "Caleb_RigRN.phl[1848]" "L_Leg_IK_Base_Ctrl_rotate_head_turn.ro";
 connectAttr "Caleb_RigRN.phl[1849]" "L_Leg_IK_Base_Ctrl_rotate_BaseAnimation_extract.ro"
 		;
 connectAttr "Caleb_RigRN.phl[1850]" "L_Leg_IK_Base_Ctrl_rotate_breathing.ro";
-connectAttr "Caleb_RigRN.phl[1851]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1852]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1851]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1852]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1853]" "breathing.dsm" -na;
 connectAttr "L_Leg_IK_Base_Ctrl_scaleX_breathing.o" "Caleb_RigRN.phl[1854]";
-connectAttr "Caleb_RigRN.phl[1855]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1856]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1855]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1856]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1857]" "breathing.dsm" -na;
 connectAttr "L_Leg_IK_Base_Ctrl_scaleY_breathing.o" "Caleb_RigRN.phl[1858]";
-connectAttr "Caleb_RigRN.phl[1859]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1860]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1859]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1860]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1861]" "breathing.dsm" -na;
 connectAttr "L_Leg_IK_Base_Ctrl_scaleZ_breathing.o" "Caleb_RigRN.phl[1862]";
-connectAttr "Caleb_RigRN.phl[1863]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1864]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1863]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1864]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1865]" "breathing.dsm" -na;
 connectAttr "L_Leg_IK_Base_Ctrl_visibility_breathing.o" "Caleb_RigRN.phl[1866]";
-connectAttr "Caleb_RigRN.phl[1867]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1868]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1867]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1868]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1869]" "breathing.dsm" -na;
 connectAttr "L_Leg_IK_Ctrl_________________breathing.o" "Caleb_RigRN.phl[1870]";
 connectAttr "Caleb_RigRN.phl[1871]" "head_turn.dsm" -na;
@@ -26718,44 +27019,44 @@ connectAttr "Caleb_RigRN.phl[1903]" "head_turn.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1904]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1905]" "breathing.dsm" -na;
 connectAttr "L_Leg_IK_Ctrl_FootTilt_breathing.o" "Caleb_RigRN.phl[1906]";
-connectAttr "Caleb_RigRN.phl[1907]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1908]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1907]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1908]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1909]" "breathing.dsm" -na;
 connectAttr "L_Leg_IK_Ctrl_translateX_breathing.o" "Caleb_RigRN.phl[1910]";
-connectAttr "Caleb_RigRN.phl[1911]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1912]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1911]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1912]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1913]" "breathing.dsm" -na;
 connectAttr "L_Leg_IK_Ctrl_translateY_breathing.o" "Caleb_RigRN.phl[1914]";
-connectAttr "Caleb_RigRN.phl[1915]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1916]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1915]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1916]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1917]" "breathing.dsm" -na;
 connectAttr "L_Leg_IK_Ctrl_translateZ_breathing.o" "Caleb_RigRN.phl[1918]";
-connectAttr "Caleb_RigRN.phl[1919]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1920]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1919]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1920]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1921]" "breathing.dsm" -na;
 connectAttr "L_Leg_IK_Ctrl_rotate_breathing.ox" "Caleb_RigRN.phl[1922]";
-connectAttr "Caleb_RigRN.phl[1923]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1924]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1923]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1924]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1925]" "breathing.dsm" -na;
 connectAttr "L_Leg_IK_Ctrl_rotate_breathing.oy" "Caleb_RigRN.phl[1926]";
-connectAttr "Caleb_RigRN.phl[1927]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1928]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1927]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1928]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1929]" "breathing.dsm" -na;
 connectAttr "L_Leg_IK_Ctrl_rotate_breathing.oz" "Caleb_RigRN.phl[1930]";
 connectAttr "Caleb_RigRN.phl[1931]" "L_Leg_IK_Ctrl_rotate_head_turn.ro";
 connectAttr "Caleb_RigRN.phl[1932]" "L_Leg_IK_Ctrl_rotate_BaseAnimation_extract.ro"
 		;
 connectAttr "Caleb_RigRN.phl[1933]" "L_Leg_IK_Ctrl_rotate_breathing.ro";
-connectAttr "Caleb_RigRN.phl[1934]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1935]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1934]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1935]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1936]" "breathing.dsm" -na;
 connectAttr "L_Leg_IK_Ctrl_scaleX_breathing.o" "Caleb_RigRN.phl[1937]";
-connectAttr "Caleb_RigRN.phl[1938]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1939]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1938]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1939]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1940]" "breathing.dsm" -na;
 connectAttr "L_Leg_IK_Ctrl_scaleY_breathing.o" "Caleb_RigRN.phl[1941]";
-connectAttr "Caleb_RigRN.phl[1942]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1943]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1942]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1943]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1944]" "breathing.dsm" -na;
 connectAttr "L_Leg_IK_Ctrl_scaleZ_breathing.o" "Caleb_RigRN.phl[1945]";
 connectAttr "Caleb_RigRN.phl[1946]" "head_turn.dsm" -na;
@@ -26770,261 +27071,261 @@ connectAttr "Caleb_RigRN.phl[1954]" "head_turn.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1955]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1956]" "breathing.dsm" -na;
 connectAttr "L_Leg_IK_Ctrl_Local_Space_breathing.o" "Caleb_RigRN.phl[1957]";
-connectAttr "Caleb_RigRN.phl[1958]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1959]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1958]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1959]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1960]" "breathing.dsm" -na;
 connectAttr "L_Leg_IK_Ctrl_visibility_breathing.o" "Caleb_RigRN.phl[1961]";
-connectAttr "Caleb_RigRN.phl[1962]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1963]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1962]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1963]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1964]" "breathing.dsm" -na;
 connectAttr "L_Foot_Reverse_Foot_Outer_Ctrl_visibility_breathing.o" "Caleb_RigRN.phl[1965]"
 		;
-connectAttr "Caleb_RigRN.phl[1966]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1967]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1966]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1967]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1968]" "breathing.dsm" -na;
 connectAttr "L_Foot_Reverse_Foot_Outer_Ctrl_translateX_breathing.o" "Caleb_RigRN.phl[1969]"
 		;
-connectAttr "Caleb_RigRN.phl[1970]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1971]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1970]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1971]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1972]" "breathing.dsm" -na;
 connectAttr "L_Foot_Reverse_Foot_Outer_Ctrl_translateY_breathing.o" "Caleb_RigRN.phl[1973]"
 		;
-connectAttr "Caleb_RigRN.phl[1974]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1975]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1974]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1975]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1976]" "breathing.dsm" -na;
 connectAttr "L_Foot_Reverse_Foot_Outer_Ctrl_translateZ_breathing.o" "Caleb_RigRN.phl[1977]"
 		;
-connectAttr "Caleb_RigRN.phl[1978]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1979]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1978]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1979]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1980]" "breathing.dsm" -na;
 connectAttr "L_Foot_Reverse_Foot_Outer_Ctrl_rotate_breathing.ox" "Caleb_RigRN.phl[1981]"
 		;
-connectAttr "Caleb_RigRN.phl[1982]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1983]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1982]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1983]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1984]" "breathing.dsm" -na;
 connectAttr "L_Foot_Reverse_Foot_Outer_Ctrl_rotate_breathing.oy" "Caleb_RigRN.phl[1985]"
 		;
-connectAttr "Caleb_RigRN.phl[1986]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1987]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1986]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1987]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1988]" "breathing.dsm" -na;
 connectAttr "L_Foot_Reverse_Foot_Outer_Ctrl_rotate_breathing.oz" "Caleb_RigRN.phl[1989]"
 		;
-connectAttr "Caleb_RigRN.phl[1990]" "L_Foot_Reverse_Foot_Outer_Ctrl_rotate_head_turn.ro"
+connectAttr "Caleb_RigRN.phl[1990]" "L_Foot_Reverse_Foot_Outer_Ctrl_rotate_BaseAnimation_extract.ro"
 		;
-connectAttr "Caleb_RigRN.phl[1991]" "L_Foot_Reverse_Foot_Outer_Ctrl_rotate_BaseAnimation_extract.ro"
+connectAttr "Caleb_RigRN.phl[1991]" "L_Foot_Reverse_Foot_Outer_Ctrl_rotate_head_turn.ro"
 		;
 connectAttr "Caleb_RigRN.phl[1992]" "L_Foot_Reverse_Foot_Outer_Ctrl_rotate_breathing.ro"
 		;
-connectAttr "Caleb_RigRN.phl[1993]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1994]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1993]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1994]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1995]" "breathing.dsm" -na;
 connectAttr "L_Foot_Reverse_Foot_Outer_Ctrl_scaleX_breathing.o" "Caleb_RigRN.phl[1996]"
 		;
-connectAttr "Caleb_RigRN.phl[1997]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[1998]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1997]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[1998]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[1999]" "breathing.dsm" -na;
 connectAttr "L_Foot_Reverse_Foot_Outer_Ctrl_scaleY_breathing.o" "Caleb_RigRN.phl[2000]"
 		;
-connectAttr "Caleb_RigRN.phl[2001]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2002]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2001]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2002]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2003]" "breathing.dsm" -na;
 connectAttr "L_Foot_Reverse_Foot_Outer_Ctrl_scaleZ_breathing.o" "Caleb_RigRN.phl[2004]"
 		;
-connectAttr "Caleb_RigRN.phl[2005]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2006]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2005]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2006]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2007]" "breathing.dsm" -na;
 connectAttr "L_Foot_Reverse_Foot_Inner_Ctrl_visibility_breathing.o" "Caleb_RigRN.phl[2008]"
 		;
-connectAttr "Caleb_RigRN.phl[2009]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2010]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2009]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2010]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2011]" "breathing.dsm" -na;
 connectAttr "L_Foot_Reverse_Foot_Inner_Ctrl_translateX_breathing.o" "Caleb_RigRN.phl[2012]"
 		;
-connectAttr "Caleb_RigRN.phl[2013]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2014]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2013]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2014]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2015]" "breathing.dsm" -na;
 connectAttr "L_Foot_Reverse_Foot_Inner_Ctrl_translateY_breathing.o" "Caleb_RigRN.phl[2016]"
 		;
-connectAttr "Caleb_RigRN.phl[2017]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2018]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2017]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2018]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2019]" "breathing.dsm" -na;
 connectAttr "L_Foot_Reverse_Foot_Inner_Ctrl_translateZ_breathing.o" "Caleb_RigRN.phl[2020]"
 		;
-connectAttr "Caleb_RigRN.phl[2021]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2022]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2021]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2022]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2023]" "breathing.dsm" -na;
 connectAttr "L_Foot_Reverse_Foot_Inner_Ctrl_rotate_breathing.ox" "Caleb_RigRN.phl[2024]"
 		;
-connectAttr "Caleb_RigRN.phl[2025]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2026]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2025]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2026]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2027]" "breathing.dsm" -na;
 connectAttr "L_Foot_Reverse_Foot_Inner_Ctrl_rotate_breathing.oy" "Caleb_RigRN.phl[2028]"
 		;
-connectAttr "Caleb_RigRN.phl[2029]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2030]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2029]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2030]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2031]" "breathing.dsm" -na;
 connectAttr "L_Foot_Reverse_Foot_Inner_Ctrl_rotate_breathing.oz" "Caleb_RigRN.phl[2032]"
 		;
-connectAttr "Caleb_RigRN.phl[2033]" "L_Foot_Reverse_Foot_Inner_Ctrl_rotate_head_turn.ro"
+connectAttr "Caleb_RigRN.phl[2033]" "L_Foot_Reverse_Foot_Inner_Ctrl_rotate_BaseAnimation_extract.ro"
 		;
-connectAttr "Caleb_RigRN.phl[2034]" "L_Foot_Reverse_Foot_Inner_Ctrl_rotate_BaseAnimation_extract.ro"
+connectAttr "Caleb_RigRN.phl[2034]" "L_Foot_Reverse_Foot_Inner_Ctrl_rotate_head_turn.ro"
 		;
 connectAttr "Caleb_RigRN.phl[2035]" "L_Foot_Reverse_Foot_Inner_Ctrl_rotate_breathing.ro"
 		;
-connectAttr "Caleb_RigRN.phl[2036]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2037]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2036]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2037]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2038]" "breathing.dsm" -na;
 connectAttr "L_Foot_Reverse_Foot_Inner_Ctrl_scaleX_breathing.o" "Caleb_RigRN.phl[2039]"
 		;
-connectAttr "Caleb_RigRN.phl[2040]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2041]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2040]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2041]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2042]" "breathing.dsm" -na;
 connectAttr "L_Foot_Reverse_Foot_Inner_Ctrl_scaleY_breathing.o" "Caleb_RigRN.phl[2043]"
 		;
-connectAttr "Caleb_RigRN.phl[2044]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2045]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2044]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2045]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2046]" "breathing.dsm" -na;
 connectAttr "L_Foot_Reverse_Foot_Inner_Ctrl_scaleZ_breathing.o" "Caleb_RigRN.phl[2047]"
 		;
-connectAttr "Caleb_RigRN.phl[2048]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2049]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2048]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2049]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2050]" "breathing.dsm" -na;
 connectAttr "L_Foot_Reverse_Foot_Heel_Ctrl_visibility_breathing.o" "Caleb_RigRN.phl[2051]"
 		;
-connectAttr "Caleb_RigRN.phl[2052]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2053]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2052]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2053]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2054]" "breathing.dsm" -na;
 connectAttr "L_Foot_Reverse_Foot_Heel_Ctrl_translateX_breathing.o" "Caleb_RigRN.phl[2055]"
 		;
-connectAttr "Caleb_RigRN.phl[2056]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2057]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2056]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2057]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2058]" "breathing.dsm" -na;
 connectAttr "L_Foot_Reverse_Foot_Heel_Ctrl_translateY_breathing.o" "Caleb_RigRN.phl[2059]"
 		;
-connectAttr "Caleb_RigRN.phl[2060]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2061]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2060]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2061]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2062]" "breathing.dsm" -na;
 connectAttr "L_Foot_Reverse_Foot_Heel_Ctrl_translateZ_breathing.o" "Caleb_RigRN.phl[2063]"
 		;
-connectAttr "Caleb_RigRN.phl[2064]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2065]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2064]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2065]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2066]" "breathing.dsm" -na;
 connectAttr "L_Foot_Reverse_Foot_Heel_Ctrl_rotate_breathing.ox" "Caleb_RigRN.phl[2067]"
 		;
-connectAttr "Caleb_RigRN.phl[2068]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2069]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2068]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2069]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2070]" "breathing.dsm" -na;
 connectAttr "L_Foot_Reverse_Foot_Heel_Ctrl_rotate_breathing.oy" "Caleb_RigRN.phl[2071]"
 		;
-connectAttr "Caleb_RigRN.phl[2072]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2073]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2072]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2073]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2074]" "breathing.dsm" -na;
 connectAttr "L_Foot_Reverse_Foot_Heel_Ctrl_rotate_breathing.oz" "Caleb_RigRN.phl[2075]"
 		;
-connectAttr "Caleb_RigRN.phl[2076]" "L_Foot_Reverse_Foot_Heel_Ctrl_rotate_head_turn.ro"
+connectAttr "Caleb_RigRN.phl[2076]" "L_Foot_Reverse_Foot_Heel_Ctrl_rotate_BaseAnimation_extract.ro"
 		;
-connectAttr "Caleb_RigRN.phl[2077]" "L_Foot_Reverse_Foot_Heel_Ctrl_rotate_BaseAnimation_extract.ro"
+connectAttr "Caleb_RigRN.phl[2077]" "L_Foot_Reverse_Foot_Heel_Ctrl_rotate_head_turn.ro"
 		;
 connectAttr "Caleb_RigRN.phl[2078]" "L_Foot_Reverse_Foot_Heel_Ctrl_rotate_breathing.ro"
 		;
-connectAttr "Caleb_RigRN.phl[2079]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2080]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2079]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2080]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2081]" "breathing.dsm" -na;
 connectAttr "L_Foot_Reverse_Foot_Heel_Ctrl_scaleX_breathing.o" "Caleb_RigRN.phl[2082]"
 		;
-connectAttr "Caleb_RigRN.phl[2083]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2084]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2083]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2084]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2085]" "breathing.dsm" -na;
 connectAttr "L_Foot_Reverse_Foot_Heel_Ctrl_scaleY_breathing.o" "Caleb_RigRN.phl[2086]"
 		;
-connectAttr "Caleb_RigRN.phl[2087]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2088]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2087]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2088]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2089]" "breathing.dsm" -na;
 connectAttr "L_Foot_Reverse_Foot_Heel_Ctrl_scaleZ_breathing.o" "Caleb_RigRN.phl[2090]"
 		;
-connectAttr "Caleb_RigRN.phl[2091]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2092]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2091]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2092]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2093]" "breathing.dsm" -na;
 connectAttr "L_Foot_Reverse_Foot_Toe_Ctrl_visibility_breathing.o" "Caleb_RigRN.phl[2094]"
 		;
-connectAttr "Caleb_RigRN.phl[2095]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2096]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2095]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2096]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2097]" "breathing.dsm" -na;
 connectAttr "L_Foot_Reverse_Foot_Toe_Ctrl_translateX_breathing.o" "Caleb_RigRN.phl[2098]"
 		;
-connectAttr "Caleb_RigRN.phl[2099]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2100]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2099]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2100]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2101]" "breathing.dsm" -na;
 connectAttr "L_Foot_Reverse_Foot_Toe_Ctrl_translateY_breathing.o" "Caleb_RigRN.phl[2102]"
 		;
-connectAttr "Caleb_RigRN.phl[2103]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2104]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2103]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2104]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2105]" "breathing.dsm" -na;
 connectAttr "L_Foot_Reverse_Foot_Toe_Ctrl_translateZ_breathing.o" "Caleb_RigRN.phl[2106]"
 		;
-connectAttr "Caleb_RigRN.phl[2107]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2108]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2107]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2108]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2109]" "breathing.dsm" -na;
 connectAttr "L_Foot_Reverse_Foot_Toe_Ctrl_rotate_breathing.ox" "Caleb_RigRN.phl[2110]"
 		;
-connectAttr "Caleb_RigRN.phl[2111]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2112]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2111]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2112]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2113]" "breathing.dsm" -na;
 connectAttr "L_Foot_Reverse_Foot_Toe_Ctrl_rotate_breathing.oy" "Caleb_RigRN.phl[2114]"
 		;
-connectAttr "Caleb_RigRN.phl[2115]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2116]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2115]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2116]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2117]" "breathing.dsm" -na;
 connectAttr "L_Foot_Reverse_Foot_Toe_Ctrl_rotate_breathing.oz" "Caleb_RigRN.phl[2118]"
 		;
-connectAttr "Caleb_RigRN.phl[2119]" "L_Foot_Reverse_Foot_Toe_Ctrl_rotate_head_turn.ro"
+connectAttr "Caleb_RigRN.phl[2119]" "L_Foot_Reverse_Foot_Toe_Ctrl_rotate_BaseAnimation_extract.ro"
 		;
-connectAttr "Caleb_RigRN.phl[2120]" "L_Foot_Reverse_Foot_Toe_Ctrl_rotate_BaseAnimation_extract.ro"
+connectAttr "Caleb_RigRN.phl[2120]" "L_Foot_Reverse_Foot_Toe_Ctrl_rotate_head_turn.ro"
 		;
 connectAttr "Caleb_RigRN.phl[2121]" "L_Foot_Reverse_Foot_Toe_Ctrl_rotate_breathing.ro"
 		;
-connectAttr "Caleb_RigRN.phl[2122]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2123]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2122]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2123]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2124]" "breathing.dsm" -na;
 connectAttr "L_Foot_Reverse_Foot_Toe_Ctrl_scaleX_breathing.o" "Caleb_RigRN.phl[2125]"
 		;
-connectAttr "Caleb_RigRN.phl[2126]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2127]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2126]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2127]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2128]" "breathing.dsm" -na;
 connectAttr "L_Foot_Reverse_Foot_Toe_Ctrl_scaleY_breathing.o" "Caleb_RigRN.phl[2129]"
 		;
-connectAttr "Caleb_RigRN.phl[2130]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2131]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2130]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2131]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2132]" "breathing.dsm" -na;
 connectAttr "L_Foot_Reverse_Foot_Toe_Ctrl_scaleZ_breathing.o" "Caleb_RigRN.phl[2133]"
 		;
-connectAttr "Caleb_RigRN.phl[2134]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2135]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2134]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2135]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2136]" "breathing.dsm" -na;
 connectAttr "L_Foot_Reverse_Foot_Ball_Ctrl_translateX_breathing.o" "Caleb_RigRN.phl[2137]"
 		;
-connectAttr "Caleb_RigRN.phl[2138]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2139]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2138]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2139]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2140]" "breathing.dsm" -na;
 connectAttr "L_Foot_Reverse_Foot_Ball_Ctrl_translateY_breathing.o" "Caleb_RigRN.phl[2141]"
 		;
-connectAttr "Caleb_RigRN.phl[2142]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2143]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2142]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2143]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2144]" "breathing.dsm" -na;
 connectAttr "L_Foot_Reverse_Foot_Ball_Ctrl_translateZ_breathing.o" "Caleb_RigRN.phl[2145]"
 		;
-connectAttr "Caleb_RigRN.phl[2146]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2147]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2146]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2147]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2148]" "breathing.dsm" -na;
 connectAttr "L_Foot_Reverse_Foot_Ball_Ctrl_rotate_breathing.ox" "Caleb_RigRN.phl[2149]"
 		;
-connectAttr "Caleb_RigRN.phl[2150]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2151]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2150]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2151]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2152]" "breathing.dsm" -na;
 connectAttr "L_Foot_Reverse_Foot_Ball_Ctrl_rotate_breathing.oy" "Caleb_RigRN.phl[2153]"
 		;
-connectAttr "Caleb_RigRN.phl[2154]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2155]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2154]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2155]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2156]" "breathing.dsm" -na;
 connectAttr "L_Foot_Reverse_Foot_Ball_Ctrl_rotate_breathing.oz" "Caleb_RigRN.phl[2157]"
 		;
@@ -27034,140 +27335,140 @@ connectAttr "Caleb_RigRN.phl[2159]" "L_Foot_Reverse_Foot_Ball_Ctrl_rotate_BaseAn
 		;
 connectAttr "Caleb_RigRN.phl[2160]" "L_Foot_Reverse_Foot_Ball_Ctrl_rotate_breathing.ro"
 		;
-connectAttr "Caleb_RigRN.phl[2161]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2162]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2161]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2162]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2163]" "breathing.dsm" -na;
 connectAttr "L_Foot_Reverse_Foot_Ball_Ctrl_scaleX_breathing.o" "Caleb_RigRN.phl[2164]"
 		;
-connectAttr "Caleb_RigRN.phl[2165]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2166]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2165]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2166]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2167]" "breathing.dsm" -na;
 connectAttr "L_Foot_Reverse_Foot_Ball_Ctrl_scaleY_breathing.o" "Caleb_RigRN.phl[2168]"
 		;
-connectAttr "Caleb_RigRN.phl[2169]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2170]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2169]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2170]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2171]" "breathing.dsm" -na;
 connectAttr "L_Foot_Reverse_Foot_Ball_Ctrl_scaleZ_breathing.o" "Caleb_RigRN.phl[2172]"
 		;
-connectAttr "Caleb_RigRN.phl[2173]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2174]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2173]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2174]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2175]" "breathing.dsm" -na;
 connectAttr "L_Foot_Reverse_Foot_Ball_Ctrl_visibility_breathing.o" "Caleb_RigRN.phl[2176]"
 		;
-connectAttr "Caleb_RigRN.phl[2177]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2178]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2177]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2178]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2179]" "breathing.dsm" -na;
 connectAttr "L_Foot_Reverse_Foot_ToeTap_Ctrl_visibility_breathing.o" "Caleb_RigRN.phl[2180]"
 		;
-connectAttr "Caleb_RigRN.phl[2181]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2182]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2181]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2182]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2183]" "breathing.dsm" -na;
 connectAttr "L_Foot_Reverse_Foot_ToeTap_Ctrl_translateX_breathing.o" "Caleb_RigRN.phl[2184]"
 		;
-connectAttr "Caleb_RigRN.phl[2185]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2186]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2185]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2186]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2187]" "breathing.dsm" -na;
 connectAttr "L_Foot_Reverse_Foot_ToeTap_Ctrl_translateY_breathing.o" "Caleb_RigRN.phl[2188]"
 		;
-connectAttr "Caleb_RigRN.phl[2189]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2190]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2189]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2190]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2191]" "breathing.dsm" -na;
 connectAttr "L_Foot_Reverse_Foot_ToeTap_Ctrl_translateZ_breathing.o" "Caleb_RigRN.phl[2192]"
 		;
-connectAttr "Caleb_RigRN.phl[2193]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2194]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2193]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2194]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2195]" "breathing.dsm" -na;
 connectAttr "L_Foot_Reverse_Foot_ToeTap_Ctrl_rotate_breathing.ox" "Caleb_RigRN.phl[2196]"
 		;
-connectAttr "Caleb_RigRN.phl[2197]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2198]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2197]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2198]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2199]" "breathing.dsm" -na;
 connectAttr "L_Foot_Reverse_Foot_ToeTap_Ctrl_rotate_breathing.oy" "Caleb_RigRN.phl[2200]"
 		;
-connectAttr "Caleb_RigRN.phl[2201]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2202]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2201]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2202]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2203]" "breathing.dsm" -na;
 connectAttr "L_Foot_Reverse_Foot_ToeTap_Ctrl_rotate_breathing.oz" "Caleb_RigRN.phl[2204]"
 		;
-connectAttr "Caleb_RigRN.phl[2205]" "L_Foot_Reverse_Foot_ToeTap_Ctrl_rotate_head_turn.ro"
+connectAttr "Caleb_RigRN.phl[2205]" "L_Foot_Reverse_Foot_ToeTap_Ctrl_rotate_BaseAnimation_extract.ro"
 		;
-connectAttr "Caleb_RigRN.phl[2206]" "L_Foot_Reverse_Foot_ToeTap_Ctrl_rotate_BaseAnimation_extract.ro"
+connectAttr "Caleb_RigRN.phl[2206]" "L_Foot_Reverse_Foot_ToeTap_Ctrl_rotate_head_turn.ro"
 		;
 connectAttr "Caleb_RigRN.phl[2207]" "L_Foot_Reverse_Foot_ToeTap_Ctrl_rotate_breathing.ro"
 		;
-connectAttr "Caleb_RigRN.phl[2208]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2209]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2208]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2209]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2210]" "breathing.dsm" -na;
 connectAttr "L_Foot_Reverse_Foot_ToeTap_Ctrl_scaleX_breathing.o" "Caleb_RigRN.phl[2211]"
 		;
-connectAttr "Caleb_RigRN.phl[2212]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2213]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2212]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2213]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2214]" "breathing.dsm" -na;
 connectAttr "L_Foot_Reverse_Foot_ToeTap_Ctrl_scaleY_breathing.o" "Caleb_RigRN.phl[2215]"
 		;
-connectAttr "Caleb_RigRN.phl[2216]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2217]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2216]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2217]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2218]" "breathing.dsm" -na;
 connectAttr "L_Foot_Reverse_Foot_ToeTap_Ctrl_scaleZ_breathing.o" "Caleb_RigRN.phl[2219]"
 		;
-connectAttr "Caleb_RigRN.phl[2220]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2221]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2220]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2221]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2222]" "breathing.dsm" -na;
 connectAttr "R_Leg_IK_PV_Ctrl_translateZ_breathing.o" "Caleb_RigRN.phl[2223]";
-connectAttr "Caleb_RigRN.phl[2224]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2225]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2224]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2225]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2226]" "breathing.dsm" -na;
 connectAttr "R_Leg_IK_PV_Ctrl_translateX_breathing.o" "Caleb_RigRN.phl[2227]";
-connectAttr "Caleb_RigRN.phl[2228]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2229]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2228]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2229]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2230]" "breathing.dsm" -na;
 connectAttr "R_Leg_IK_PV_Ctrl_translateY_breathing.o" "Caleb_RigRN.phl[2231]";
 connectAttr "Caleb_RigRN.phl[2232]" "head_turn.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2233]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2234]" "breathing.dsm" -na;
 connectAttr "R_Leg_IK_PV_Ctrl_Local_Space_breathing.o" "Caleb_RigRN.phl[2235]";
-connectAttr "Caleb_RigRN.phl[2236]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2237]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2236]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2237]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2238]" "breathing.dsm" -na;
 connectAttr "R_Leg_IK_PV_Ctrl_rotate_breathing.ox" "Caleb_RigRN.phl[2239]";
-connectAttr "Caleb_RigRN.phl[2240]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2241]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2240]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2241]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2242]" "breathing.dsm" -na;
 connectAttr "R_Leg_IK_PV_Ctrl_rotate_breathing.oy" "Caleb_RigRN.phl[2243]";
-connectAttr "Caleb_RigRN.phl[2244]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2245]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2244]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2245]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2246]" "breathing.dsm" -na;
 connectAttr "R_Leg_IK_PV_Ctrl_rotate_breathing.oz" "Caleb_RigRN.phl[2247]";
-connectAttr "Caleb_RigRN.phl[2248]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2249]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2248]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2249]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2250]" "breathing.dsm" -na;
 connectAttr "R_Leg_IK_PV_Ctrl_visibility_breathing.o" "Caleb_RigRN.phl[2251]";
-connectAttr "Caleb_RigRN.phl[2252]" "R_Leg_IK_PV_Ctrl_rotate_head_turn.ro";
-connectAttr "Caleb_RigRN.phl[2253]" "R_Leg_IK_PV_Ctrl_rotate_BaseAnimation_extract.ro"
+connectAttr "Caleb_RigRN.phl[2252]" "R_Leg_IK_PV_Ctrl_rotate_BaseAnimation_extract.ro"
 		;
+connectAttr "Caleb_RigRN.phl[2253]" "R_Leg_IK_PV_Ctrl_rotate_head_turn.ro";
 connectAttr "Caleb_RigRN.phl[2254]" "R_Leg_IK_PV_Ctrl_rotate_breathing.ro";
-connectAttr "Caleb_RigRN.phl[2255]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2256]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2255]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2256]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2257]" "breathing.dsm" -na;
 connectAttr "R_Leg_IK_PV_Ctrl_scaleX_breathing.o" "Caleb_RigRN.phl[2258]";
-connectAttr "Caleb_RigRN.phl[2259]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2260]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2259]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2260]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2261]" "breathing.dsm" -na;
 connectAttr "R_Leg_IK_PV_Ctrl_scaleY_breathing.o" "Caleb_RigRN.phl[2262]";
-connectAttr "Caleb_RigRN.phl[2263]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2264]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2263]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2264]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2265]" "breathing.dsm" -na;
 connectAttr "R_Leg_IK_PV_Ctrl_scaleZ_breathing.o" "Caleb_RigRN.phl[2266]";
-connectAttr "Caleb_RigRN.phl[2267]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2268]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2267]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2268]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2269]" "breathing.dsm" -na;
 connectAttr "R_Leg_IK_Base_Ctrl_translateX_breathing.o" "Caleb_RigRN.phl[2270]";
-connectAttr "Caleb_RigRN.phl[2271]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2272]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2271]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2272]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2273]" "breathing.dsm" -na;
 connectAttr "R_Leg_IK_Base_Ctrl_translateY_breathing.o" "Caleb_RigRN.phl[2274]";
-connectAttr "Caleb_RigRN.phl[2275]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2276]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2275]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2276]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2277]" "breathing.dsm" -na;
 connectAttr "R_Leg_IK_Base_Ctrl_translateZ_breathing.o" "Caleb_RigRN.phl[2278]";
 connectAttr "Caleb_RigRN.phl[2279]" "head_turn.dsm" -na;
@@ -27180,40 +27481,40 @@ connectAttr "Caleb_RigRN.phl[2284]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2285]" "breathing.dsm" -na;
 connectAttr "R_Leg_IK_Base_Ctrl_FollowRotate_breathing.o" "Caleb_RigRN.phl[2286]"
 		;
-connectAttr "Caleb_RigRN.phl[2287]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2288]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2287]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2288]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2289]" "breathing.dsm" -na;
 connectAttr "R_Leg_IK_Base_Ctrl_rotate_breathing.ox" "Caleb_RigRN.phl[2290]";
-connectAttr "Caleb_RigRN.phl[2291]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2292]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2291]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2292]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2293]" "breathing.dsm" -na;
 connectAttr "R_Leg_IK_Base_Ctrl_rotate_breathing.oy" "Caleb_RigRN.phl[2294]";
-connectAttr "Caleb_RigRN.phl[2295]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2296]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2295]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2296]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2297]" "breathing.dsm" -na;
 connectAttr "R_Leg_IK_Base_Ctrl_rotate_breathing.oz" "Caleb_RigRN.phl[2298]";
 connectAttr "Caleb_RigRN.phl[2299]" "R_Leg_IK_Base_Ctrl_rotate_head_turn.ro";
 connectAttr "Caleb_RigRN.phl[2300]" "R_Leg_IK_Base_Ctrl_rotate_BaseAnimation_extract.ro"
 		;
 connectAttr "Caleb_RigRN.phl[2301]" "R_Leg_IK_Base_Ctrl_rotate_breathing.ro";
-connectAttr "Caleb_RigRN.phl[2302]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2303]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2302]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2303]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2304]" "breathing.dsm" -na;
 connectAttr "R_Leg_IK_Base_Ctrl_scaleX_breathing.o" "Caleb_RigRN.phl[2305]";
-connectAttr "Caleb_RigRN.phl[2306]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2307]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2306]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2307]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2308]" "breathing.dsm" -na;
 connectAttr "R_Leg_IK_Base_Ctrl_scaleY_breathing.o" "Caleb_RigRN.phl[2309]";
-connectAttr "Caleb_RigRN.phl[2310]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2311]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2310]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2311]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2312]" "breathing.dsm" -na;
 connectAttr "R_Leg_IK_Base_Ctrl_scaleZ_breathing.o" "Caleb_RigRN.phl[2313]";
-connectAttr "Caleb_RigRN.phl[2314]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2315]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2314]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2315]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2316]" "breathing.dsm" -na;
 connectAttr "R_Leg_IK_Base_Ctrl_visibility_breathing.o" "Caleb_RigRN.phl[2317]";
-connectAttr "Caleb_RigRN.phl[2318]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2319]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2318]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2319]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2320]" "breathing.dsm" -na;
 connectAttr "R_Leg_IK_Ctrl_________________breathing.o" "Caleb_RigRN.phl[2321]";
 connectAttr "Caleb_RigRN.phl[2322]" "head_turn.dsm" -na;
@@ -27253,44 +27554,44 @@ connectAttr "Caleb_RigRN.phl[2354]" "head_turn.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2355]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2356]" "breathing.dsm" -na;
 connectAttr "R_Leg_IK_Ctrl_FootTilt_breathing.o" "Caleb_RigRN.phl[2357]";
-connectAttr "Caleb_RigRN.phl[2358]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2359]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2358]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2359]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2360]" "breathing.dsm" -na;
 connectAttr "R_Leg_IK_Ctrl_translateX_breathing.o" "Caleb_RigRN.phl[2361]";
-connectAttr "Caleb_RigRN.phl[2362]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2363]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2362]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2363]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2364]" "breathing.dsm" -na;
 connectAttr "R_Leg_IK_Ctrl_translateY_breathing.o" "Caleb_RigRN.phl[2365]";
-connectAttr "Caleb_RigRN.phl[2366]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2367]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2366]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2367]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2368]" "breathing.dsm" -na;
 connectAttr "R_Leg_IK_Ctrl_translateZ_breathing.o" "Caleb_RigRN.phl[2369]";
-connectAttr "Caleb_RigRN.phl[2370]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2371]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2370]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2371]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2372]" "breathing.dsm" -na;
 connectAttr "R_Leg_IK_Ctrl_rotate_breathing.ox" "Caleb_RigRN.phl[2373]";
-connectAttr "Caleb_RigRN.phl[2374]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2375]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2374]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2375]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2376]" "breathing.dsm" -na;
 connectAttr "R_Leg_IK_Ctrl_rotate_breathing.oy" "Caleb_RigRN.phl[2377]";
-connectAttr "Caleb_RigRN.phl[2378]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2379]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2378]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2379]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2380]" "breathing.dsm" -na;
 connectAttr "R_Leg_IK_Ctrl_rotate_breathing.oz" "Caleb_RigRN.phl[2381]";
 connectAttr "Caleb_RigRN.phl[2382]" "R_Leg_IK_Ctrl_rotate_head_turn.ro";
 connectAttr "Caleb_RigRN.phl[2383]" "R_Leg_IK_Ctrl_rotate_BaseAnimation_extract.ro"
 		;
 connectAttr "Caleb_RigRN.phl[2384]" "R_Leg_IK_Ctrl_rotate_breathing.ro";
-connectAttr "Caleb_RigRN.phl[2385]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2386]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2385]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2386]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2387]" "breathing.dsm" -na;
 connectAttr "R_Leg_IK_Ctrl_scaleX_breathing.o" "Caleb_RigRN.phl[2388]";
-connectAttr "Caleb_RigRN.phl[2389]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2390]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2389]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2390]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2391]" "breathing.dsm" -na;
 connectAttr "R_Leg_IK_Ctrl_scaleY_breathing.o" "Caleb_RigRN.phl[2392]";
-connectAttr "Caleb_RigRN.phl[2393]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2394]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2393]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2394]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2395]" "breathing.dsm" -na;
 connectAttr "R_Leg_IK_Ctrl_scaleZ_breathing.o" "Caleb_RigRN.phl[2396]";
 connectAttr "Caleb_RigRN.phl[2397]" "head_turn.dsm" -na;
@@ -27305,261 +27606,261 @@ connectAttr "Caleb_RigRN.phl[2405]" "head_turn.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2406]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2407]" "breathing.dsm" -na;
 connectAttr "R_Leg_IK_Ctrl_Local_Space_breathing.o" "Caleb_RigRN.phl[2408]";
-connectAttr "Caleb_RigRN.phl[2409]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2410]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2409]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2410]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2411]" "breathing.dsm" -na;
 connectAttr "R_Leg_IK_Ctrl_visibility_breathing.o" "Caleb_RigRN.phl[2412]";
-connectAttr "Caleb_RigRN.phl[2413]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2414]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2413]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2414]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2415]" "breathing.dsm" -na;
 connectAttr "R_Foot_Reverse_Foot_Outer_Ctrl_visibility_breathing.o" "Caleb_RigRN.phl[2416]"
 		;
-connectAttr "Caleb_RigRN.phl[2417]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2418]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2417]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2418]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2419]" "breathing.dsm" -na;
 connectAttr "R_Foot_Reverse_Foot_Outer_Ctrl_translateX_breathing.o" "Caleb_RigRN.phl[2420]"
 		;
-connectAttr "Caleb_RigRN.phl[2421]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2422]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2421]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2422]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2423]" "breathing.dsm" -na;
 connectAttr "R_Foot_Reverse_Foot_Outer_Ctrl_translateY_breathing.o" "Caleb_RigRN.phl[2424]"
 		;
-connectAttr "Caleb_RigRN.phl[2425]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2426]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2425]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2426]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2427]" "breathing.dsm" -na;
 connectAttr "R_Foot_Reverse_Foot_Outer_Ctrl_translateZ_breathing.o" "Caleb_RigRN.phl[2428]"
 		;
-connectAttr "Caleb_RigRN.phl[2429]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2430]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2429]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2430]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2431]" "breathing.dsm" -na;
 connectAttr "R_Foot_Reverse_Foot_Outer_Ctrl_rotate_breathing.ox" "Caleb_RigRN.phl[2432]"
 		;
-connectAttr "Caleb_RigRN.phl[2433]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2434]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2433]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2434]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2435]" "breathing.dsm" -na;
 connectAttr "R_Foot_Reverse_Foot_Outer_Ctrl_rotate_breathing.oy" "Caleb_RigRN.phl[2436]"
 		;
-connectAttr "Caleb_RigRN.phl[2437]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2438]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2437]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2438]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2439]" "breathing.dsm" -na;
 connectAttr "R_Foot_Reverse_Foot_Outer_Ctrl_rotate_breathing.oz" "Caleb_RigRN.phl[2440]"
 		;
-connectAttr "Caleb_RigRN.phl[2441]" "R_Foot_Reverse_Foot_Outer_Ctrl_rotate_head_turn.ro"
+connectAttr "Caleb_RigRN.phl[2441]" "R_Foot_Reverse_Foot_Outer_Ctrl_rotate_BaseAnimation_extract.ro"
 		;
-connectAttr "Caleb_RigRN.phl[2442]" "R_Foot_Reverse_Foot_Outer_Ctrl_rotate_BaseAnimation_extract.ro"
+connectAttr "Caleb_RigRN.phl[2442]" "R_Foot_Reverse_Foot_Outer_Ctrl_rotate_head_turn.ro"
 		;
 connectAttr "Caleb_RigRN.phl[2443]" "R_Foot_Reverse_Foot_Outer_Ctrl_rotate_breathing.ro"
 		;
-connectAttr "Caleb_RigRN.phl[2444]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2445]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2444]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2445]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2446]" "breathing.dsm" -na;
 connectAttr "R_Foot_Reverse_Foot_Outer_Ctrl_scaleX_breathing.o" "Caleb_RigRN.phl[2447]"
 		;
-connectAttr "Caleb_RigRN.phl[2448]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2449]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2448]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2449]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2450]" "breathing.dsm" -na;
 connectAttr "R_Foot_Reverse_Foot_Outer_Ctrl_scaleY_breathing.o" "Caleb_RigRN.phl[2451]"
 		;
-connectAttr "Caleb_RigRN.phl[2452]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2453]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2452]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2453]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2454]" "breathing.dsm" -na;
 connectAttr "R_Foot_Reverse_Foot_Outer_Ctrl_scaleZ_breathing.o" "Caleb_RigRN.phl[2455]"
 		;
-connectAttr "Caleb_RigRN.phl[2456]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2457]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2456]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2457]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2458]" "breathing.dsm" -na;
 connectAttr "R_Foot_Reverse_Foot_Inner_Ctrl_visibility_breathing.o" "Caleb_RigRN.phl[2459]"
 		;
-connectAttr "Caleb_RigRN.phl[2460]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2461]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2460]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2461]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2462]" "breathing.dsm" -na;
 connectAttr "R_Foot_Reverse_Foot_Inner_Ctrl_translateX_breathing.o" "Caleb_RigRN.phl[2463]"
 		;
-connectAttr "Caleb_RigRN.phl[2464]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2465]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2464]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2465]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2466]" "breathing.dsm" -na;
 connectAttr "R_Foot_Reverse_Foot_Inner_Ctrl_translateY_breathing.o" "Caleb_RigRN.phl[2467]"
 		;
-connectAttr "Caleb_RigRN.phl[2468]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2469]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2468]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2469]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2470]" "breathing.dsm" -na;
 connectAttr "R_Foot_Reverse_Foot_Inner_Ctrl_translateZ_breathing.o" "Caleb_RigRN.phl[2471]"
 		;
-connectAttr "Caleb_RigRN.phl[2472]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2473]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2472]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2473]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2474]" "breathing.dsm" -na;
 connectAttr "R_Foot_Reverse_Foot_Inner_Ctrl_rotate_breathing.ox" "Caleb_RigRN.phl[2475]"
 		;
-connectAttr "Caleb_RigRN.phl[2476]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2477]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2476]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2477]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2478]" "breathing.dsm" -na;
 connectAttr "R_Foot_Reverse_Foot_Inner_Ctrl_rotate_breathing.oy" "Caleb_RigRN.phl[2479]"
 		;
-connectAttr "Caleb_RigRN.phl[2480]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2481]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2480]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2481]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2482]" "breathing.dsm" -na;
 connectAttr "R_Foot_Reverse_Foot_Inner_Ctrl_rotate_breathing.oz" "Caleb_RigRN.phl[2483]"
 		;
-connectAttr "Caleb_RigRN.phl[2484]" "R_Foot_Reverse_Foot_Inner_Ctrl_rotate_head_turn.ro"
+connectAttr "Caleb_RigRN.phl[2484]" "R_Foot_Reverse_Foot_Inner_Ctrl_rotate_BaseAnimation_extract.ro"
 		;
-connectAttr "Caleb_RigRN.phl[2485]" "R_Foot_Reverse_Foot_Inner_Ctrl_rotate_BaseAnimation_extract.ro"
+connectAttr "Caleb_RigRN.phl[2485]" "R_Foot_Reverse_Foot_Inner_Ctrl_rotate_head_turn.ro"
 		;
 connectAttr "Caleb_RigRN.phl[2486]" "R_Foot_Reverse_Foot_Inner_Ctrl_rotate_breathing.ro"
 		;
-connectAttr "Caleb_RigRN.phl[2487]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2488]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2487]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2488]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2489]" "breathing.dsm" -na;
 connectAttr "R_Foot_Reverse_Foot_Inner_Ctrl_scaleX_breathing.o" "Caleb_RigRN.phl[2490]"
 		;
-connectAttr "Caleb_RigRN.phl[2491]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2492]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2491]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2492]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2493]" "breathing.dsm" -na;
 connectAttr "R_Foot_Reverse_Foot_Inner_Ctrl_scaleY_breathing.o" "Caleb_RigRN.phl[2494]"
 		;
-connectAttr "Caleb_RigRN.phl[2495]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2496]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2495]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2496]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2497]" "breathing.dsm" -na;
 connectAttr "R_Foot_Reverse_Foot_Inner_Ctrl_scaleZ_breathing.o" "Caleb_RigRN.phl[2498]"
 		;
-connectAttr "Caleb_RigRN.phl[2499]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2500]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2499]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2500]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2501]" "breathing.dsm" -na;
 connectAttr "R_Foot_Reverse_Foot_Heel_Ctrl_visibility_breathing.o" "Caleb_RigRN.phl[2502]"
 		;
-connectAttr "Caleb_RigRN.phl[2503]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2504]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2503]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2504]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2505]" "breathing.dsm" -na;
 connectAttr "R_Foot_Reverse_Foot_Heel_Ctrl_translateX_breathing.o" "Caleb_RigRN.phl[2506]"
 		;
-connectAttr "Caleb_RigRN.phl[2507]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2508]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2507]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2508]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2509]" "breathing.dsm" -na;
 connectAttr "R_Foot_Reverse_Foot_Heel_Ctrl_translateY_breathing.o" "Caleb_RigRN.phl[2510]"
 		;
-connectAttr "Caleb_RigRN.phl[2511]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2512]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2511]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2512]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2513]" "breathing.dsm" -na;
 connectAttr "R_Foot_Reverse_Foot_Heel_Ctrl_translateZ_breathing.o" "Caleb_RigRN.phl[2514]"
 		;
-connectAttr "Caleb_RigRN.phl[2515]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2516]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2515]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2516]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2517]" "breathing.dsm" -na;
 connectAttr "R_Foot_Reverse_Foot_Heel_Ctrl_rotate_breathing.ox" "Caleb_RigRN.phl[2518]"
 		;
-connectAttr "Caleb_RigRN.phl[2519]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2520]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2519]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2520]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2521]" "breathing.dsm" -na;
 connectAttr "R_Foot_Reverse_Foot_Heel_Ctrl_rotate_breathing.oy" "Caleb_RigRN.phl[2522]"
 		;
-connectAttr "Caleb_RigRN.phl[2523]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2524]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2523]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2524]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2525]" "breathing.dsm" -na;
 connectAttr "R_Foot_Reverse_Foot_Heel_Ctrl_rotate_breathing.oz" "Caleb_RigRN.phl[2526]"
 		;
-connectAttr "Caleb_RigRN.phl[2527]" "R_Foot_Reverse_Foot_Heel_Ctrl_rotate_head_turn.ro"
+connectAttr "Caleb_RigRN.phl[2527]" "R_Foot_Reverse_Foot_Heel_Ctrl_rotate_BaseAnimation_extract.ro"
 		;
-connectAttr "Caleb_RigRN.phl[2528]" "R_Foot_Reverse_Foot_Heel_Ctrl_rotate_BaseAnimation_extract.ro"
+connectAttr "Caleb_RigRN.phl[2528]" "R_Foot_Reverse_Foot_Heel_Ctrl_rotate_head_turn.ro"
 		;
 connectAttr "Caleb_RigRN.phl[2529]" "R_Foot_Reverse_Foot_Heel_Ctrl_rotate_breathing.ro"
 		;
-connectAttr "Caleb_RigRN.phl[2530]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2531]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2530]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2531]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2532]" "breathing.dsm" -na;
 connectAttr "R_Foot_Reverse_Foot_Heel_Ctrl_scaleX_breathing.o" "Caleb_RigRN.phl[2533]"
 		;
-connectAttr "Caleb_RigRN.phl[2534]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2535]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2534]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2535]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2536]" "breathing.dsm" -na;
 connectAttr "R_Foot_Reverse_Foot_Heel_Ctrl_scaleY_breathing.o" "Caleb_RigRN.phl[2537]"
 		;
-connectAttr "Caleb_RigRN.phl[2538]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2539]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2538]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2539]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2540]" "breathing.dsm" -na;
 connectAttr "R_Foot_Reverse_Foot_Heel_Ctrl_scaleZ_breathing.o" "Caleb_RigRN.phl[2541]"
 		;
-connectAttr "Caleb_RigRN.phl[2542]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2543]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2542]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2543]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2544]" "breathing.dsm" -na;
 connectAttr "R_Foot_Reverse_Foot_Toe_Ctrl_visibility_breathing.o" "Caleb_RigRN.phl[2545]"
 		;
-connectAttr "Caleb_RigRN.phl[2546]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2547]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2546]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2547]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2548]" "breathing.dsm" -na;
 connectAttr "R_Foot_Reverse_Foot_Toe_Ctrl_translateX_breathing.o" "Caleb_RigRN.phl[2549]"
 		;
-connectAttr "Caleb_RigRN.phl[2550]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2551]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2550]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2551]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2552]" "breathing.dsm" -na;
 connectAttr "R_Foot_Reverse_Foot_Toe_Ctrl_translateY_breathing.o" "Caleb_RigRN.phl[2553]"
 		;
-connectAttr "Caleb_RigRN.phl[2554]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2555]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2554]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2555]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2556]" "breathing.dsm" -na;
 connectAttr "R_Foot_Reverse_Foot_Toe_Ctrl_translateZ_breathing.o" "Caleb_RigRN.phl[2557]"
 		;
-connectAttr "Caleb_RigRN.phl[2558]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2559]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2558]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2559]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2560]" "breathing.dsm" -na;
 connectAttr "R_Foot_Reverse_Foot_Toe_Ctrl_rotate_breathing.ox" "Caleb_RigRN.phl[2561]"
 		;
-connectAttr "Caleb_RigRN.phl[2562]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2563]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2562]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2563]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2564]" "breathing.dsm" -na;
 connectAttr "R_Foot_Reverse_Foot_Toe_Ctrl_rotate_breathing.oy" "Caleb_RigRN.phl[2565]"
 		;
-connectAttr "Caleb_RigRN.phl[2566]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2567]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2566]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2567]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2568]" "breathing.dsm" -na;
 connectAttr "R_Foot_Reverse_Foot_Toe_Ctrl_rotate_breathing.oz" "Caleb_RigRN.phl[2569]"
 		;
-connectAttr "Caleb_RigRN.phl[2570]" "R_Foot_Reverse_Foot_Toe_Ctrl_rotate_head_turn.ro"
+connectAttr "Caleb_RigRN.phl[2570]" "R_Foot_Reverse_Foot_Toe_Ctrl_rotate_BaseAnimation_extract.ro"
 		;
-connectAttr "Caleb_RigRN.phl[2571]" "R_Foot_Reverse_Foot_Toe_Ctrl_rotate_BaseAnimation_extract.ro"
+connectAttr "Caleb_RigRN.phl[2571]" "R_Foot_Reverse_Foot_Toe_Ctrl_rotate_head_turn.ro"
 		;
 connectAttr "Caleb_RigRN.phl[2572]" "R_Foot_Reverse_Foot_Toe_Ctrl_rotate_breathing.ro"
 		;
-connectAttr "Caleb_RigRN.phl[2573]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2574]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2573]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2574]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2575]" "breathing.dsm" -na;
 connectAttr "R_Foot_Reverse_Foot_Toe_Ctrl_scaleX_breathing.o" "Caleb_RigRN.phl[2576]"
 		;
-connectAttr "Caleb_RigRN.phl[2577]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2578]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2577]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2578]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2579]" "breathing.dsm" -na;
 connectAttr "R_Foot_Reverse_Foot_Toe_Ctrl_scaleY_breathing.o" "Caleb_RigRN.phl[2580]"
 		;
-connectAttr "Caleb_RigRN.phl[2581]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2582]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2581]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2582]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2583]" "breathing.dsm" -na;
 connectAttr "R_Foot_Reverse_Foot_Toe_Ctrl_scaleZ_breathing.o" "Caleb_RigRN.phl[2584]"
 		;
-connectAttr "Caleb_RigRN.phl[2585]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2586]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2585]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2586]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2587]" "breathing.dsm" -na;
 connectAttr "R_Foot_Reverse_Foot_Ball_Ctrl_translateX_breathing.o" "Caleb_RigRN.phl[2588]"
 		;
-connectAttr "Caleb_RigRN.phl[2589]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2590]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2589]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2590]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2591]" "breathing.dsm" -na;
 connectAttr "R_Foot_Reverse_Foot_Ball_Ctrl_translateY_breathing.o" "Caleb_RigRN.phl[2592]"
 		;
-connectAttr "Caleb_RigRN.phl[2593]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2594]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2593]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2594]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2595]" "breathing.dsm" -na;
 connectAttr "R_Foot_Reverse_Foot_Ball_Ctrl_translateZ_breathing.o" "Caleb_RigRN.phl[2596]"
 		;
-connectAttr "Caleb_RigRN.phl[2597]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2598]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2597]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2598]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2599]" "breathing.dsm" -na;
 connectAttr "R_Foot_Reverse_Foot_Ball_Ctrl_rotate_breathing.ox" "Caleb_RigRN.phl[2600]"
 		;
-connectAttr "Caleb_RigRN.phl[2601]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2602]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2601]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2602]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2603]" "breathing.dsm" -na;
 connectAttr "R_Foot_Reverse_Foot_Ball_Ctrl_rotate_breathing.oy" "Caleb_RigRN.phl[2604]"
 		;
-connectAttr "Caleb_RigRN.phl[2605]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2606]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2605]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2606]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2607]" "breathing.dsm" -na;
 connectAttr "R_Foot_Reverse_Foot_Ball_Ctrl_rotate_breathing.oz" "Caleb_RigRN.phl[2608]"
 		;
@@ -27569,119 +27870,119 @@ connectAttr "Caleb_RigRN.phl[2610]" "R_Foot_Reverse_Foot_Ball_Ctrl_rotate_BaseAn
 		;
 connectAttr "Caleb_RigRN.phl[2611]" "R_Foot_Reverse_Foot_Ball_Ctrl_rotate_breathing.ro"
 		;
-connectAttr "Caleb_RigRN.phl[2612]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2613]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2612]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2613]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2614]" "breathing.dsm" -na;
 connectAttr "R_Foot_Reverse_Foot_Ball_Ctrl_scaleX_breathing.o" "Caleb_RigRN.phl[2615]"
 		;
-connectAttr "Caleb_RigRN.phl[2616]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2617]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2616]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2617]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2618]" "breathing.dsm" -na;
 connectAttr "R_Foot_Reverse_Foot_Ball_Ctrl_scaleY_breathing.o" "Caleb_RigRN.phl[2619]"
 		;
-connectAttr "Caleb_RigRN.phl[2620]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2621]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2620]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2621]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2622]" "breathing.dsm" -na;
 connectAttr "R_Foot_Reverse_Foot_Ball_Ctrl_scaleZ_breathing.o" "Caleb_RigRN.phl[2623]"
 		;
-connectAttr "Caleb_RigRN.phl[2624]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2625]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2624]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2625]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2626]" "breathing.dsm" -na;
 connectAttr "R_Foot_Reverse_Foot_Ball_Ctrl_visibility_breathing.o" "Caleb_RigRN.phl[2627]"
 		;
-connectAttr "Caleb_RigRN.phl[2628]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2629]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2628]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2629]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2630]" "breathing.dsm" -na;
 connectAttr "R_Foot_Reverse_Foot_ToeTap_Ctrl_visibility_breathing.o" "Caleb_RigRN.phl[2631]"
 		;
-connectAttr "Caleb_RigRN.phl[2632]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2633]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2632]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2633]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2634]" "breathing.dsm" -na;
 connectAttr "R_Foot_Reverse_Foot_ToeTap_Ctrl_translateX_breathing.o" "Caleb_RigRN.phl[2635]"
 		;
-connectAttr "Caleb_RigRN.phl[2636]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2637]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2636]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2637]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2638]" "breathing.dsm" -na;
 connectAttr "R_Foot_Reverse_Foot_ToeTap_Ctrl_translateY_breathing.o" "Caleb_RigRN.phl[2639]"
 		;
-connectAttr "Caleb_RigRN.phl[2640]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2641]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2640]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2641]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2642]" "breathing.dsm" -na;
 connectAttr "R_Foot_Reverse_Foot_ToeTap_Ctrl_translateZ_breathing.o" "Caleb_RigRN.phl[2643]"
 		;
-connectAttr "Caleb_RigRN.phl[2644]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2645]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2644]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2645]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2646]" "breathing.dsm" -na;
 connectAttr "R_Foot_Reverse_Foot_ToeTap_Ctrl_rotate_breathing.ox" "Caleb_RigRN.phl[2647]"
 		;
-connectAttr "Caleb_RigRN.phl[2648]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2649]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2648]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2649]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2650]" "breathing.dsm" -na;
 connectAttr "R_Foot_Reverse_Foot_ToeTap_Ctrl_rotate_breathing.oy" "Caleb_RigRN.phl[2651]"
 		;
-connectAttr "Caleb_RigRN.phl[2652]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2653]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2652]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2653]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2654]" "breathing.dsm" -na;
 connectAttr "R_Foot_Reverse_Foot_ToeTap_Ctrl_rotate_breathing.oz" "Caleb_RigRN.phl[2655]"
 		;
-connectAttr "Caleb_RigRN.phl[2656]" "R_Foot_Reverse_Foot_ToeTap_Ctrl_rotate_head_turn.ro"
+connectAttr "Caleb_RigRN.phl[2656]" "R_Foot_Reverse_Foot_ToeTap_Ctrl_rotate_BaseAnimation_extract.ro"
 		;
-connectAttr "Caleb_RigRN.phl[2657]" "R_Foot_Reverse_Foot_ToeTap_Ctrl_rotate_BaseAnimation_extract.ro"
+connectAttr "Caleb_RigRN.phl[2657]" "R_Foot_Reverse_Foot_ToeTap_Ctrl_rotate_head_turn.ro"
 		;
 connectAttr "Caleb_RigRN.phl[2658]" "R_Foot_Reverse_Foot_ToeTap_Ctrl_rotate_breathing.ro"
 		;
-connectAttr "Caleb_RigRN.phl[2659]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2660]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2659]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2660]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2661]" "breathing.dsm" -na;
 connectAttr "R_Foot_Reverse_Foot_ToeTap_Ctrl_scaleX_breathing.o" "Caleb_RigRN.phl[2662]"
 		;
-connectAttr "Caleb_RigRN.phl[2663]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2664]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2663]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2664]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2665]" "breathing.dsm" -na;
 connectAttr "R_Foot_Reverse_Foot_ToeTap_Ctrl_scaleY_breathing.o" "Caleb_RigRN.phl[2666]"
 		;
-connectAttr "Caleb_RigRN.phl[2667]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2668]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2667]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2668]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2669]" "breathing.dsm" -na;
 connectAttr "R_Foot_Reverse_Foot_ToeTap_Ctrl_scaleZ_breathing.o" "Caleb_RigRN.phl[2670]"
 		;
-connectAttr "Caleb_RigRN.phl[2671]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2672]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2671]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2672]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2673]" "breathing.dsm" -na;
 connectAttr "Neck_Ctrl_translateY_breathing.o" "Caleb_RigRN.phl[2674]";
-connectAttr "Caleb_RigRN.phl[2675]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2676]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2675]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2676]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2677]" "breathing.dsm" -na;
 connectAttr "Neck_Ctrl_translateZ_breathing.o" "Caleb_RigRN.phl[2678]";
-connectAttr "Caleb_RigRN.phl[2679]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2680]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2679]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2680]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2681]" "breathing.dsm" -na;
 connectAttr "Neck_Ctrl_translateX_breathing.o" "Caleb_RigRN.phl[2682]";
-connectAttr "Caleb_RigRN.phl[2683]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2684]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2683]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2684]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2685]" "breathing.dsm" -na;
 connectAttr "Neck_Ctrl_rotate_breathing.ox" "Caleb_RigRN.phl[2686]";
-connectAttr "Caleb_RigRN.phl[2687]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2688]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2687]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2688]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2689]" "breathing.dsm" -na;
 connectAttr "Neck_Ctrl_rotate_breathing.oy" "Caleb_RigRN.phl[2690]";
-connectAttr "Caleb_RigRN.phl[2691]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2692]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2691]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2692]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2693]" "breathing.dsm" -na;
 connectAttr "Neck_Ctrl_rotate_breathing.oz" "Caleb_RigRN.phl[2694]";
 connectAttr "Caleb_RigRN.phl[2695]" "Neck_Ctrl_rotate_head_turn.ro";
 connectAttr "Caleb_RigRN.phl[2696]" "Neck_Ctrl_rotate_BaseAnimation_extract.ro";
 connectAttr "Caleb_RigRN.phl[2697]" "Neck_Ctrl_rotate_breathing.ro";
-connectAttr "Caleb_RigRN.phl[2698]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2699]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2698]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2699]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2700]" "breathing.dsm" -na;
 connectAttr "Neck_Ctrl_scaleX_breathing.o" "Caleb_RigRN.phl[2701]";
-connectAttr "Caleb_RigRN.phl[2702]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2703]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2702]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2703]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2704]" "breathing.dsm" -na;
 connectAttr "Neck_Ctrl_scaleY_breathing.o" "Caleb_RigRN.phl[2705]";
-connectAttr "Caleb_RigRN.phl[2706]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2707]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2706]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2707]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2708]" "breathing.dsm" -na;
 connectAttr "Neck_Ctrl_scaleZ_breathing.o" "Caleb_RigRN.phl[2709]";
 connectAttr "Caleb_RigRN.phl[2710]" "head_turn.dsm" -na;
@@ -27692,47 +27993,47 @@ connectAttr "Caleb_RigRN.phl[2714]" "head_turn.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2715]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2716]" "breathing.dsm" -na;
 connectAttr "Neck_Ctrl_FollowRotate_breathing.o" "Caleb_RigRN.phl[2717]";
-connectAttr "Caleb_RigRN.phl[2718]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2719]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2718]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2719]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2720]" "breathing.dsm" -na;
 connectAttr "Neck_Ctrl_visibility_breathing.o" "Caleb_RigRN.phl[2721]";
-connectAttr "Caleb_RigRN.phl[2722]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2723]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2722]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2723]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2724]" "breathing.dsm" -na;
 connectAttr "Head_Ctrl_translateX_breathing.o" "Caleb_RigRN.phl[2725]";
-connectAttr "Caleb_RigRN.phl[2726]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2727]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2726]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2727]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2728]" "breathing.dsm" -na;
 connectAttr "Head_Ctrl_translateY_breathing.o" "Caleb_RigRN.phl[2729]";
-connectAttr "Caleb_RigRN.phl[2730]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2731]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2730]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2731]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2732]" "breathing.dsm" -na;
 connectAttr "Head_Ctrl_translateZ_breathing.o" "Caleb_RigRN.phl[2733]";
-connectAttr "Caleb_RigRN.phl[2734]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2735]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2734]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2735]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2736]" "breathing.dsm" -na;
 connectAttr "Head_Ctrl_rotate_breathing.ox" "Caleb_RigRN.phl[2737]";
-connectAttr "Caleb_RigRN.phl[2738]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2739]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2738]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2739]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2740]" "breathing.dsm" -na;
 connectAttr "Head_Ctrl_rotate_breathing.oy" "Caleb_RigRN.phl[2741]";
-connectAttr "Caleb_RigRN.phl[2742]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2743]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2742]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2743]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2744]" "breathing.dsm" -na;
 connectAttr "Head_Ctrl_rotate_breathing.oz" "Caleb_RigRN.phl[2745]";
 connectAttr "Caleb_RigRN.phl[2746]" "Head_Ctrl_rotate_head_turn.ro";
 connectAttr "Caleb_RigRN.phl[2747]" "Head_Ctrl_rotate_BaseAnimation_extract.ro";
 connectAttr "Caleb_RigRN.phl[2748]" "Head_Ctrl_rotate_breathing.ro";
-connectAttr "Caleb_RigRN.phl[2749]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2750]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2749]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2750]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2751]" "breathing.dsm" -na;
 connectAttr "Head_Ctrl_scaleX_breathing.o" "Caleb_RigRN.phl[2752]";
-connectAttr "Caleb_RigRN.phl[2753]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2754]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2753]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2754]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2755]" "breathing.dsm" -na;
 connectAttr "Head_Ctrl_scaleY_breathing.o" "Caleb_RigRN.phl[2756]";
-connectAttr "Caleb_RigRN.phl[2757]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2758]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2757]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2758]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2759]" "breathing.dsm" -na;
 connectAttr "Head_Ctrl_scaleZ_breathing.o" "Caleb_RigRN.phl[2760]";
 connectAttr "Caleb_RigRN.phl[2761]" "head_turn.dsm" -na;
@@ -27743,48 +28044,48 @@ connectAttr "Caleb_RigRN.phl[2765]" "head_turn.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2766]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2767]" "breathing.dsm" -na;
 connectAttr "Head_Ctrl_FollowRotate_breathing.o" "Caleb_RigRN.phl[2768]";
-connectAttr "Caleb_RigRN.phl[2769]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2770]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2769]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2770]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2771]" "breathing.dsm" -na;
 connectAttr "Head_Ctrl_visibility_breathing.o" "Caleb_RigRN.phl[2772]";
-connectAttr "Caleb_RigRN.phl[2773]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2774]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2773]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2774]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2775]" "breathing.dsm" -na;
 connectAttr "Hat_Jnt_Ctrl_translateX_breathing.o" "Caleb_RigRN.phl[2776]";
-connectAttr "Caleb_RigRN.phl[2777]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2778]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2777]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2778]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2779]" "breathing.dsm" -na;
 connectAttr "Hat_Jnt_Ctrl_translateY_breathing.o" "Caleb_RigRN.phl[2780]";
-connectAttr "Caleb_RigRN.phl[2781]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2782]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2781]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2782]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2783]" "breathing.dsm" -na;
 connectAttr "Hat_Jnt_Ctrl_translateZ_breathing.o" "Caleb_RigRN.phl[2784]";
-connectAttr "Caleb_RigRN.phl[2785]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2786]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2785]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2786]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2787]" "breathing.dsm" -na;
 connectAttr "Hat_Jnt_Ctrl_rotate_breathing.ox" "Caleb_RigRN.phl[2788]";
-connectAttr "Caleb_RigRN.phl[2789]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2790]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2789]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2790]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2791]" "breathing.dsm" -na;
 connectAttr "Hat_Jnt_Ctrl_rotate_breathing.oy" "Caleb_RigRN.phl[2792]";
-connectAttr "Caleb_RigRN.phl[2793]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2794]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2793]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2794]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2795]" "breathing.dsm" -na;
 connectAttr "Hat_Jnt_Ctrl_rotate_breathing.oz" "Caleb_RigRN.phl[2796]";
 connectAttr "Caleb_RigRN.phl[2797]" "Hat_Jnt_Ctrl_rotate_head_turn.ro";
 connectAttr "Caleb_RigRN.phl[2798]" "Hat_Jnt_Ctrl_rotate_BaseAnimation_extract.ro"
 		;
 connectAttr "Caleb_RigRN.phl[2799]" "Hat_Jnt_Ctrl_rotate_breathing.ro";
-connectAttr "Caleb_RigRN.phl[2800]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2801]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2800]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2801]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2802]" "breathing.dsm" -na;
 connectAttr "Hat_Jnt_Ctrl_scaleX_breathing.o" "Caleb_RigRN.phl[2803]";
-connectAttr "Caleb_RigRN.phl[2804]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2805]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2804]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2805]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2806]" "breathing.dsm" -na;
 connectAttr "Hat_Jnt_Ctrl_scaleY_breathing.o" "Caleb_RigRN.phl[2807]";
-connectAttr "Caleb_RigRN.phl[2808]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2809]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2808]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2809]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2810]" "breathing.dsm" -na;
 connectAttr "Hat_Jnt_Ctrl_scaleZ_breathing.o" "Caleb_RigRN.phl[2811]";
 connectAttr "Caleb_RigRN.phl[2812]" "head_turn.dsm" -na;
@@ -27795,48 +28096,48 @@ connectAttr "Caleb_RigRN.phl[2816]" "head_turn.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2817]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2818]" "breathing.dsm" -na;
 connectAttr "Hat_Jnt_Ctrl_FollowRotate_breathing.o" "Caleb_RigRN.phl[2819]";
-connectAttr "Caleb_RigRN.phl[2820]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2821]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2820]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2821]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2822]" "breathing.dsm" -na;
 connectAttr "Hat_Jnt_Ctrl_visibility_breathing.o" "Caleb_RigRN.phl[2823]";
-connectAttr "Caleb_RigRN.phl[2824]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2825]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2824]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2825]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2826]" "breathing.dsm" -na;
 connectAttr "Nose_Jnt_Ctrl_translateX_breathing.o" "Caleb_RigRN.phl[2827]";
-connectAttr "Caleb_RigRN.phl[2828]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2829]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2828]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2829]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2830]" "breathing.dsm" -na;
 connectAttr "Nose_Jnt_Ctrl_translateY_breathing.o" "Caleb_RigRN.phl[2831]";
-connectAttr "Caleb_RigRN.phl[2832]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2833]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2832]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2833]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2834]" "breathing.dsm" -na;
 connectAttr "Nose_Jnt_Ctrl_translateZ_breathing.o" "Caleb_RigRN.phl[2835]";
-connectAttr "Caleb_RigRN.phl[2836]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2837]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2836]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2837]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2838]" "breathing.dsm" -na;
 connectAttr "Nose_Jnt_Ctrl_rotate_breathing.ox" "Caleb_RigRN.phl[2839]";
-connectAttr "Caleb_RigRN.phl[2840]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2841]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2840]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2841]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2842]" "breathing.dsm" -na;
 connectAttr "Nose_Jnt_Ctrl_rotate_breathing.oy" "Caleb_RigRN.phl[2843]";
-connectAttr "Caleb_RigRN.phl[2844]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2845]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2844]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2845]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2846]" "breathing.dsm" -na;
 connectAttr "Nose_Jnt_Ctrl_rotate_breathing.oz" "Caleb_RigRN.phl[2847]";
 connectAttr "Caleb_RigRN.phl[2848]" "Nose_Jnt_Ctrl_rotate_head_turn.ro";
 connectAttr "Caleb_RigRN.phl[2849]" "Nose_Jnt_Ctrl_rotate_BaseAnimation_extract.ro"
 		;
 connectAttr "Caleb_RigRN.phl[2850]" "Nose_Jnt_Ctrl_rotate_breathing.ro";
-connectAttr "Caleb_RigRN.phl[2851]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2852]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2851]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2852]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2853]" "breathing.dsm" -na;
 connectAttr "Nose_Jnt_Ctrl_scaleX_breathing.o" "Caleb_RigRN.phl[2854]";
-connectAttr "Caleb_RigRN.phl[2855]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2856]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2855]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2856]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2857]" "breathing.dsm" -na;
 connectAttr "Nose_Jnt_Ctrl_scaleY_breathing.o" "Caleb_RigRN.phl[2858]";
-connectAttr "Caleb_RigRN.phl[2859]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2860]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2859]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2860]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2861]" "breathing.dsm" -na;
 connectAttr "Nose_Jnt_Ctrl_scaleZ_breathing.o" "Caleb_RigRN.phl[2862]";
 connectAttr "Caleb_RigRN.phl[2863]" "head_turn.dsm" -na;
@@ -27847,47 +28148,47 @@ connectAttr "Caleb_RigRN.phl[2867]" "head_turn.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2868]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2869]" "breathing.dsm" -na;
 connectAttr "Nose_Jnt_Ctrl_FollowRotate_breathing.o" "Caleb_RigRN.phl[2870]";
-connectAttr "Caleb_RigRN.phl[2871]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2872]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2871]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2872]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2873]" "breathing.dsm" -na;
 connectAttr "Nose_Jnt_Ctrl_visibility_breathing.o" "Caleb_RigRN.phl[2874]";
-connectAttr "Caleb_RigRN.phl[2875]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2876]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2875]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2876]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2877]" "breathing.dsm" -na;
 connectAttr "Jaw_Ctrl_translateX_breathing.o" "Caleb_RigRN.phl[2878]";
-connectAttr "Caleb_RigRN.phl[2879]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2880]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2879]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2880]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2881]" "breathing.dsm" -na;
 connectAttr "Jaw_Ctrl_translateY_breathing.o" "Caleb_RigRN.phl[2882]";
-connectAttr "Caleb_RigRN.phl[2883]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2884]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2883]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2884]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2885]" "breathing.dsm" -na;
 connectAttr "Jaw_Ctrl_translateZ_breathing.o" "Caleb_RigRN.phl[2886]";
-connectAttr "Caleb_RigRN.phl[2887]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2888]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2887]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2888]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2889]" "breathing.dsm" -na;
 connectAttr "Jaw_Ctrl_rotate_breathing.ox" "Caleb_RigRN.phl[2890]";
-connectAttr "Caleb_RigRN.phl[2891]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2892]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2891]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2892]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2893]" "breathing.dsm" -na;
 connectAttr "Jaw_Ctrl_rotate_breathing.oy" "Caleb_RigRN.phl[2894]";
-connectAttr "Caleb_RigRN.phl[2895]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2896]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2895]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2896]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2897]" "breathing.dsm" -na;
 connectAttr "Jaw_Ctrl_rotate_breathing.oz" "Caleb_RigRN.phl[2898]";
 connectAttr "Caleb_RigRN.phl[2899]" "Jaw_Ctrl_rotate_head_turn.ro";
 connectAttr "Caleb_RigRN.phl[2900]" "Jaw_Ctrl_rotate_BaseAnimation_extract.ro";
 connectAttr "Caleb_RigRN.phl[2901]" "Jaw_Ctrl_rotate_breathing.ro";
-connectAttr "Caleb_RigRN.phl[2902]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2903]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2902]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2903]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2904]" "breathing.dsm" -na;
 connectAttr "Jaw_Ctrl_scaleX_breathing.o" "Caleb_RigRN.phl[2905]";
-connectAttr "Caleb_RigRN.phl[2906]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2907]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2906]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2907]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2908]" "breathing.dsm" -na;
 connectAttr "Jaw_Ctrl_scaleY_breathing.o" "Caleb_RigRN.phl[2909]";
-connectAttr "Caleb_RigRN.phl[2910]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2911]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2910]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2911]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2912]" "breathing.dsm" -na;
 connectAttr "Jaw_Ctrl_scaleZ_breathing.o" "Caleb_RigRN.phl[2913]";
 connectAttr "Caleb_RigRN.phl[2914]" "head_turn.dsm" -na;
@@ -27898,48 +28199,48 @@ connectAttr "Caleb_RigRN.phl[2918]" "head_turn.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2919]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2920]" "breathing.dsm" -na;
 connectAttr "Jaw_Ctrl_FollowRotate_breathing.o" "Caleb_RigRN.phl[2921]";
-connectAttr "Caleb_RigRN.phl[2922]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2923]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2922]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2923]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2924]" "breathing.dsm" -na;
 connectAttr "Jaw_Ctrl_visibility_breathing.o" "Caleb_RigRN.phl[2925]";
-connectAttr "Caleb_RigRN.phl[2926]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2927]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2926]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2927]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2928]" "breathing.dsm" -na;
 connectAttr "L_Eyelid_Ctrl_translateX_breathing.o" "Caleb_RigRN.phl[2929]";
-connectAttr "Caleb_RigRN.phl[2930]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2931]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2930]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2931]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2932]" "breathing.dsm" -na;
 connectAttr "L_Eyelid_Ctrl_translateY_breathing.o" "Caleb_RigRN.phl[2933]";
-connectAttr "Caleb_RigRN.phl[2934]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2935]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2934]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2935]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2936]" "breathing.dsm" -na;
 connectAttr "L_Eyelid_Ctrl_translateZ_breathing.o" "Caleb_RigRN.phl[2937]";
-connectAttr "Caleb_RigRN.phl[2938]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2939]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2938]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2939]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2940]" "breathing.dsm" -na;
 connectAttr "L_Eyelid_Ctrl_rotate_breathing.ox" "Caleb_RigRN.phl[2941]";
-connectAttr "Caleb_RigRN.phl[2942]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2943]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2942]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2943]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2944]" "breathing.dsm" -na;
 connectAttr "L_Eyelid_Ctrl_rotate_breathing.oy" "Caleb_RigRN.phl[2945]";
-connectAttr "Caleb_RigRN.phl[2946]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2947]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2946]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2947]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2948]" "breathing.dsm" -na;
 connectAttr "L_Eyelid_Ctrl_rotate_breathing.oz" "Caleb_RigRN.phl[2949]";
 connectAttr "Caleb_RigRN.phl[2950]" "L_Eyelid_Ctrl_rotate_head_turn.ro";
 connectAttr "Caleb_RigRN.phl[2951]" "L_Eyelid_Ctrl_rotate_BaseAnimation_extract.ro"
 		;
 connectAttr "Caleb_RigRN.phl[2952]" "L_Eyelid_Ctrl_rotate_breathing.ro";
-connectAttr "Caleb_RigRN.phl[2953]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2954]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2953]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2954]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2955]" "breathing.dsm" -na;
 connectAttr "L_Eyelid_Ctrl_scaleX_breathing.o" "Caleb_RigRN.phl[2956]";
-connectAttr "Caleb_RigRN.phl[2957]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2958]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2957]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2958]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2959]" "breathing.dsm" -na;
 connectAttr "L_Eyelid_Ctrl_scaleY_breathing.o" "Caleb_RigRN.phl[2960]";
-connectAttr "Caleb_RigRN.phl[2961]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2962]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2961]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2962]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2963]" "breathing.dsm" -na;
 connectAttr "L_Eyelid_Ctrl_scaleZ_breathing.o" "Caleb_RigRN.phl[2964]";
 connectAttr "Caleb_RigRN.phl[2965]" "head_turn.dsm" -na;
@@ -27950,48 +28251,48 @@ connectAttr "Caleb_RigRN.phl[2969]" "head_turn.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2970]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2971]" "breathing.dsm" -na;
 connectAttr "L_Eyelid_Ctrl_FollowRotate_breathing.o" "Caleb_RigRN.phl[2972]";
-connectAttr "Caleb_RigRN.phl[2973]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2974]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2973]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2974]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2975]" "breathing.dsm" -na;
 connectAttr "L_Eyelid_Ctrl_visibility_breathing.o" "Caleb_RigRN.phl[2976]";
-connectAttr "Caleb_RigRN.phl[2977]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2978]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2977]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2978]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2979]" "breathing.dsm" -na;
 connectAttr "R_Eyelid_Ctrl_translateX_breathing.o" "Caleb_RigRN.phl[2980]";
-connectAttr "Caleb_RigRN.phl[2981]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2982]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2981]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2982]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2983]" "breathing.dsm" -na;
 connectAttr "R_Eyelid_Ctrl_translateY_breathing.o" "Caleb_RigRN.phl[2984]";
-connectAttr "Caleb_RigRN.phl[2985]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2986]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2985]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2986]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2987]" "breathing.dsm" -na;
 connectAttr "R_Eyelid_Ctrl_translateZ_breathing.o" "Caleb_RigRN.phl[2988]";
-connectAttr "Caleb_RigRN.phl[2989]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2990]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2989]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2990]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2991]" "breathing.dsm" -na;
 connectAttr "R_Eyelid_Ctrl_rotate_breathing.ox" "Caleb_RigRN.phl[2992]";
-connectAttr "Caleb_RigRN.phl[2993]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2994]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2993]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2994]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2995]" "breathing.dsm" -na;
 connectAttr "R_Eyelid_Ctrl_rotate_breathing.oy" "Caleb_RigRN.phl[2996]";
-connectAttr "Caleb_RigRN.phl[2997]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[2998]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2997]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[2998]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[2999]" "breathing.dsm" -na;
 connectAttr "R_Eyelid_Ctrl_rotate_breathing.oz" "Caleb_RigRN.phl[3000]";
 connectAttr "Caleb_RigRN.phl[3001]" "R_Eyelid_Ctrl_rotate_head_turn.ro";
 connectAttr "Caleb_RigRN.phl[3002]" "R_Eyelid_Ctrl_rotate_BaseAnimation_extract.ro"
 		;
 connectAttr "Caleb_RigRN.phl[3003]" "R_Eyelid_Ctrl_rotate_breathing.ro";
-connectAttr "Caleb_RigRN.phl[3004]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[3005]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3004]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3005]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[3006]" "breathing.dsm" -na;
 connectAttr "R_Eyelid_Ctrl_scaleX_breathing.o" "Caleb_RigRN.phl[3007]";
-connectAttr "Caleb_RigRN.phl[3008]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[3009]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3008]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3009]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[3010]" "breathing.dsm" -na;
 connectAttr "R_Eyelid_Ctrl_scaleY_breathing.o" "Caleb_RigRN.phl[3011]";
-connectAttr "Caleb_RigRN.phl[3012]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[3013]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3012]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3013]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[3014]" "breathing.dsm" -na;
 connectAttr "R_Eyelid_Ctrl_scaleZ_breathing.o" "Caleb_RigRN.phl[3015]";
 connectAttr "Caleb_RigRN.phl[3016]" "head_turn.dsm" -na;
@@ -28002,20 +28303,20 @@ connectAttr "Caleb_RigRN.phl[3020]" "head_turn.dsm" -na;
 connectAttr "Caleb_RigRN.phl[3021]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[3022]" "breathing.dsm" -na;
 connectAttr "R_Eyelid_Ctrl_FollowRotate_breathing.o" "Caleb_RigRN.phl[3023]";
-connectAttr "Caleb_RigRN.phl[3024]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[3025]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3024]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3025]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[3026]" "breathing.dsm" -na;
 connectAttr "R_Eyelid_Ctrl_visibility_breathing.o" "Caleb_RigRN.phl[3027]";
-connectAttr "Caleb_RigRN.phl[3028]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[3029]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3028]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3029]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[3030]" "breathing.dsm" -na;
 connectAttr "L_Eye_Jnt_Ctrl_translateX_breathing.o" "Caleb_RigRN.phl[3031]";
-connectAttr "Caleb_RigRN.phl[3032]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[3033]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3032]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3033]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[3034]" "breathing.dsm" -na;
 connectAttr "L_Eye_Jnt_Ctrl_translateY_breathing.o" "Caleb_RigRN.phl[3035]";
-connectAttr "Caleb_RigRN.phl[3036]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[3037]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3036]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3037]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[3038]" "breathing.dsm" -na;
 connectAttr "L_Eye_Jnt_Ctrl_translateZ_breathing.o" "Caleb_RigRN.phl[3039]";
 connectAttr "Caleb_RigRN.phl[3040]" "head_turn.dsm" -na;
@@ -28027,48 +28328,48 @@ connectAttr "Caleb_RigRN.phl[3044]" "head_turn.dsm" -na;
 connectAttr "Caleb_RigRN.phl[3045]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[3046]" "breathing.dsm" -na;
 connectAttr "L_Eye_Jnt_Ctrl_FollowRotate_breathing.o" "Caleb_RigRN.phl[3047]";
-connectAttr "Caleb_RigRN.phl[3048]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[3049]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3048]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3049]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[3050]" "breathing.dsm" -na;
 connectAttr "L_Eye_Jnt_Ctrl_visibility_breathing.o" "Caleb_RigRN.phl[3051]";
-connectAttr "Caleb_RigRN.phl[3052]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[3053]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3052]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3053]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[3054]" "breathing.dsm" -na;
 connectAttr "L_Eye_Jnt_Ctrl_rotate_breathing.ox" "Caleb_RigRN.phl[3055]";
-connectAttr "Caleb_RigRN.phl[3056]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[3057]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3056]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3057]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[3058]" "breathing.dsm" -na;
 connectAttr "L_Eye_Jnt_Ctrl_rotate_breathing.oy" "Caleb_RigRN.phl[3059]";
-connectAttr "Caleb_RigRN.phl[3060]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[3061]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3060]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3061]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[3062]" "breathing.dsm" -na;
 connectAttr "L_Eye_Jnt_Ctrl_rotate_breathing.oz" "Caleb_RigRN.phl[3063]";
-connectAttr "Caleb_RigRN.phl[3064]" "L_Eye_Jnt_Ctrl_rotate_head_turn.ro";
-connectAttr "Caleb_RigRN.phl[3065]" "L_Eye_Jnt_Ctrl_rotate_BaseAnimation_extract.ro"
+connectAttr "Caleb_RigRN.phl[3064]" "L_Eye_Jnt_Ctrl_rotate_BaseAnimation_extract.ro"
 		;
+connectAttr "Caleb_RigRN.phl[3065]" "L_Eye_Jnt_Ctrl_rotate_head_turn.ro";
 connectAttr "Caleb_RigRN.phl[3066]" "L_Eye_Jnt_Ctrl_rotate_breathing.ro";
-connectAttr "Caleb_RigRN.phl[3067]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[3068]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3067]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3068]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[3069]" "breathing.dsm" -na;
 connectAttr "L_Eye_Jnt_Ctrl_scaleX_breathing.o" "Caleb_RigRN.phl[3070]";
-connectAttr "Caleb_RigRN.phl[3071]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[3072]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3071]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3072]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[3073]" "breathing.dsm" -na;
 connectAttr "L_Eye_Jnt_Ctrl_scaleY_breathing.o" "Caleb_RigRN.phl[3074]";
-connectAttr "Caleb_RigRN.phl[3075]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[3076]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3075]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3076]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[3077]" "breathing.dsm" -na;
 connectAttr "L_Eye_Jnt_Ctrl_scaleZ_breathing.o" "Caleb_RigRN.phl[3078]";
-connectAttr "Caleb_RigRN.phl[3079]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[3080]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3079]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3080]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[3081]" "breathing.dsm" -na;
 connectAttr "R_Eye_Jnt_Ctrl_translateX_breathing.o" "Caleb_RigRN.phl[3082]";
-connectAttr "Caleb_RigRN.phl[3083]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[3084]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3083]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3084]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[3085]" "breathing.dsm" -na;
 connectAttr "R_Eye_Jnt_Ctrl_translateY_breathing.o" "Caleb_RigRN.phl[3086]";
-connectAttr "Caleb_RigRN.phl[3087]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[3088]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3087]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3088]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[3089]" "breathing.dsm" -na;
 connectAttr "R_Eye_Jnt_Ctrl_translateZ_breathing.o" "Caleb_RigRN.phl[3090]";
 connectAttr "Caleb_RigRN.phl[3091]" "head_turn.dsm" -na;
@@ -28080,88 +28381,88 @@ connectAttr "Caleb_RigRN.phl[3095]" "head_turn.dsm" -na;
 connectAttr "Caleb_RigRN.phl[3096]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[3097]" "breathing.dsm" -na;
 connectAttr "R_Eye_Jnt_Ctrl_FollowRotate_breathing.o" "Caleb_RigRN.phl[3098]";
-connectAttr "Caleb_RigRN.phl[3099]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[3100]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3099]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3100]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[3101]" "breathing.dsm" -na;
 connectAttr "R_Eye_Jnt_Ctrl_visibility_breathing.o" "Caleb_RigRN.phl[3102]";
-connectAttr "Caleb_RigRN.phl[3103]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[3104]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3103]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3104]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[3105]" "breathing.dsm" -na;
 connectAttr "R_Eye_Jnt_Ctrl_rotate_breathing.ox" "Caleb_RigRN.phl[3106]";
-connectAttr "Caleb_RigRN.phl[3107]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[3108]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3107]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3108]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[3109]" "breathing.dsm" -na;
 connectAttr "R_Eye_Jnt_Ctrl_rotate_breathing.oy" "Caleb_RigRN.phl[3110]";
-connectAttr "Caleb_RigRN.phl[3111]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[3112]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3111]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3112]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[3113]" "breathing.dsm" -na;
 connectAttr "R_Eye_Jnt_Ctrl_rotate_breathing.oz" "Caleb_RigRN.phl[3114]";
-connectAttr "Caleb_RigRN.phl[3115]" "R_Eye_Jnt_Ctrl_rotate_head_turn.ro";
-connectAttr "Caleb_RigRN.phl[3116]" "R_Eye_Jnt_Ctrl_rotate_BaseAnimation_extract.ro"
+connectAttr "Caleb_RigRN.phl[3115]" "R_Eye_Jnt_Ctrl_rotate_BaseAnimation_extract.ro"
 		;
+connectAttr "Caleb_RigRN.phl[3116]" "R_Eye_Jnt_Ctrl_rotate_head_turn.ro";
 connectAttr "Caleb_RigRN.phl[3117]" "R_Eye_Jnt_Ctrl_rotate_breathing.ro";
-connectAttr "Caleb_RigRN.phl[3118]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[3119]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3118]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3119]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[3120]" "breathing.dsm" -na;
 connectAttr "R_Eye_Jnt_Ctrl_scaleX_breathing.o" "Caleb_RigRN.phl[3121]";
-connectAttr "Caleb_RigRN.phl[3122]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[3123]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3122]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3123]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[3124]" "breathing.dsm" -na;
 connectAttr "R_Eye_Jnt_Ctrl_scaleY_breathing.o" "Caleb_RigRN.phl[3125]";
-connectAttr "Caleb_RigRN.phl[3126]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[3127]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3126]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3127]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[3128]" "breathing.dsm" -na;
 connectAttr "R_Eye_Jnt_Ctrl_scaleZ_breathing.o" "Caleb_RigRN.phl[3129]";
-connectAttr "Caleb_RigRN.phl[3130]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[3131]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3130]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3131]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[3132]" "breathing.dsm" -na;
 connectAttr "Eye_Master_Ctrl_translateX_breathing.o" "Caleb_RigRN.phl[3133]";
-connectAttr "Caleb_RigRN.phl[3134]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[3135]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3134]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3135]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[3136]" "breathing.dsm" -na;
 connectAttr "Eye_Master_Ctrl_translateY_breathing.o" "Caleb_RigRN.phl[3137]";
-connectAttr "Caleb_RigRN.phl[3138]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[3139]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3138]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3139]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[3140]" "breathing.dsm" -na;
 connectAttr "Eye_Master_Ctrl_translateZ_breathing.o" "Caleb_RigRN.phl[3141]";
-connectAttr "Caleb_RigRN.phl[3142]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[3143]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3142]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3143]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[3144]" "breathing.dsm" -na;
 connectAttr "Eye_Master_Ctrl_rotate_breathing.ox" "Caleb_RigRN.phl[3145]";
-connectAttr "Caleb_RigRN.phl[3146]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[3147]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3146]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3147]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[3148]" "breathing.dsm" -na;
 connectAttr "Eye_Master_Ctrl_rotate_breathing.oy" "Caleb_RigRN.phl[3149]";
-connectAttr "Caleb_RigRN.phl[3150]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[3151]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3150]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3151]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[3152]" "breathing.dsm" -na;
 connectAttr "Eye_Master_Ctrl_rotate_breathing.oz" "Caleb_RigRN.phl[3153]";
 connectAttr "Caleb_RigRN.phl[3154]" "Eye_Master_Ctrl_rotate_head_turn.ro";
 connectAttr "Caleb_RigRN.phl[3155]" "Eye_Master_Ctrl_rotate_BaseAnimation_extract.ro"
 		;
 connectAttr "Caleb_RigRN.phl[3156]" "Eye_Master_Ctrl_rotate_breathing.ro";
-connectAttr "Caleb_RigRN.phl[3157]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[3158]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3157]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3158]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[3159]" "breathing.dsm" -na;
 connectAttr "Eye_Master_Ctrl_scaleX_breathing.o" "Caleb_RigRN.phl[3160]";
-connectAttr "Caleb_RigRN.phl[3161]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[3162]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3161]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3162]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[3163]" "breathing.dsm" -na;
 connectAttr "Eye_Master_Ctrl_scaleY_breathing.o" "Caleb_RigRN.phl[3164]";
-connectAttr "Caleb_RigRN.phl[3165]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[3166]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3165]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3166]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[3167]" "breathing.dsm" -na;
 connectAttr "Eye_Master_Ctrl_scaleZ_breathing.o" "Caleb_RigRN.phl[3168]";
 connectAttr "Caleb_RigRN.phl[3169]" "head_turn.dsm" -na;
 connectAttr "Caleb_RigRN.phl[3170]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[3171]" "breathing.dsm" -na;
 connectAttr "Eye_Master_Ctrl_Local_Space_breathing.o" "Caleb_RigRN.phl[3172]";
-connectAttr "Caleb_RigRN.phl[3173]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[3174]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3173]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3174]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[3175]" "breathing.dsm" -na;
 connectAttr "Eye_Master_Ctrl_visibility_breathing.o" "Caleb_RigRN.phl[3176]";
-connectAttr "Caleb_RigRN.phl[3177]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[3178]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3177]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3178]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[3179]" "breathing.dsm" -na;
 connectAttr "Hair_Front_Bounce_CONTROL_Jnt_Ctrl___________________breathing.o" "Caleb_RigRN.phl[3180]"
 		;
@@ -28195,33 +28496,33 @@ connectAttr "Caleb_RigRN.phl[3202]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[3203]" "breathing.dsm" -na;
 connectAttr "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_FollowRotate_breathing.o" "Caleb_RigRN.phl[3204]"
 		;
-connectAttr "Caleb_RigRN.phl[3205]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[3206]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3205]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3206]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[3207]" "breathing.dsm" -na;
 connectAttr "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_translateX_breathing.o" "Caleb_RigRN.phl[3208]"
 		;
-connectAttr "Caleb_RigRN.phl[3209]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[3210]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3209]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3210]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[3211]" "breathing.dsm" -na;
 connectAttr "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_translateY_breathing.o" "Caleb_RigRN.phl[3212]"
 		;
-connectAttr "Caleb_RigRN.phl[3213]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[3214]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3213]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3214]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[3215]" "breathing.dsm" -na;
 connectAttr "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_translateZ_breathing.o" "Caleb_RigRN.phl[3216]"
 		;
-connectAttr "Caleb_RigRN.phl[3217]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[3218]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3217]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3218]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[3219]" "breathing.dsm" -na;
 connectAttr "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_rotate_breathing.ox" "Caleb_RigRN.phl[3220]"
 		;
-connectAttr "Caleb_RigRN.phl[3221]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[3222]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3221]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3222]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[3223]" "breathing.dsm" -na;
 connectAttr "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_rotate_breathing.oy" "Caleb_RigRN.phl[3224]"
 		;
-connectAttr "Caleb_RigRN.phl[3225]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[3226]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3225]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3226]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[3227]" "breathing.dsm" -na;
 connectAttr "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_rotate_breathing.oz" "Caleb_RigRN.phl[3228]"
 		;
@@ -28231,18 +28532,18 @@ connectAttr "Caleb_RigRN.phl[3230]" "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_rotate_B
 		;
 connectAttr "Caleb_RigRN.phl[3231]" "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_rotate_breathing.ro"
 		;
-connectAttr "Caleb_RigRN.phl[3232]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[3233]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3232]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3233]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[3234]" "breathing.dsm" -na;
 connectAttr "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_scaleX_breathing.o" "Caleb_RigRN.phl[3235]"
 		;
-connectAttr "Caleb_RigRN.phl[3236]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[3237]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3236]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3237]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[3238]" "breathing.dsm" -na;
 connectAttr "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_scaleY_breathing.o" "Caleb_RigRN.phl[3239]"
 		;
-connectAttr "Caleb_RigRN.phl[3240]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[3241]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3240]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3241]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[3242]" "breathing.dsm" -na;
 connectAttr "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_scaleZ_breathing.o" "Caleb_RigRN.phl[3243]"
 		;
@@ -28251,8 +28552,8 @@ connectAttr "Caleb_RigRN.phl[3245]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[3246]" "breathing.dsm" -na;
 connectAttr "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_Stretch_breathing.o" "Caleb_RigRN.phl[3247]"
 		;
-connectAttr "Caleb_RigRN.phl[3248]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[3249]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3248]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3249]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[3250]" "breathing.dsm" -na;
 connectAttr "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_visibility_breathing.o" "Caleb_RigRN.phl[3251]"
 		;
@@ -28266,33 +28567,33 @@ connectAttr "Caleb_RigRN.phl[3257]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[3258]" "breathing.dsm" -na;
 connectAttr "Hair_Back_Bounce_CONTROL_Jnt_Ctrl_FollowRotate_breathing.o" "Caleb_RigRN.phl[3259]"
 		;
-connectAttr "Caleb_RigRN.phl[3260]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[3261]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3260]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3261]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[3262]" "breathing.dsm" -na;
 connectAttr "Hair_Back_Bounce_CONTROL_Jnt_Ctrl_translateX_breathing.o" "Caleb_RigRN.phl[3263]"
 		;
-connectAttr "Caleb_RigRN.phl[3264]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[3265]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3264]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3265]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[3266]" "breathing.dsm" -na;
 connectAttr "Hair_Back_Bounce_CONTROL_Jnt_Ctrl_translateY_breathing.o" "Caleb_RigRN.phl[3267]"
 		;
-connectAttr "Caleb_RigRN.phl[3268]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[3269]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3268]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3269]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[3270]" "breathing.dsm" -na;
 connectAttr "Hair_Back_Bounce_CONTROL_Jnt_Ctrl_translateZ_breathing.o" "Caleb_RigRN.phl[3271]"
 		;
-connectAttr "Caleb_RigRN.phl[3272]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[3273]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3272]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3273]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[3274]" "breathing.dsm" -na;
 connectAttr "Hair_Back_Bounce_CONTROL_Jnt_Ctrl_rotate_breathing.ox" "Caleb_RigRN.phl[3275]"
 		;
-connectAttr "Caleb_RigRN.phl[3276]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[3277]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3276]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3277]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[3278]" "breathing.dsm" -na;
 connectAttr "Hair_Back_Bounce_CONTROL_Jnt_Ctrl_rotate_breathing.oy" "Caleb_RigRN.phl[3279]"
 		;
-connectAttr "Caleb_RigRN.phl[3280]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[3281]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3280]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3281]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[3282]" "breathing.dsm" -na;
 connectAttr "Hair_Back_Bounce_CONTROL_Jnt_Ctrl_rotate_breathing.oz" "Caleb_RigRN.phl[3283]"
 		;
@@ -28302,18 +28603,18 @@ connectAttr "Caleb_RigRN.phl[3285]" "Hair_Back_Bounce_CONTROL_Jnt_Ctrl_rotate_Ba
 		;
 connectAttr "Caleb_RigRN.phl[3286]" "Hair_Back_Bounce_CONTROL_Jnt_Ctrl_rotate_breathing.ro"
 		;
-connectAttr "Caleb_RigRN.phl[3287]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[3288]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3287]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3288]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[3289]" "breathing.dsm" -na;
 connectAttr "Hair_Back_Bounce_CONTROL_Jnt_Ctrl_scaleX_breathing.o" "Caleb_RigRN.phl[3290]"
 		;
-connectAttr "Caleb_RigRN.phl[3291]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[3292]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3291]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3292]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[3293]" "breathing.dsm" -na;
 connectAttr "Hair_Back_Bounce_CONTROL_Jnt_Ctrl_scaleY_breathing.o" "Caleb_RigRN.phl[3294]"
 		;
-connectAttr "Caleb_RigRN.phl[3295]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[3296]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3295]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3296]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[3297]" "breathing.dsm" -na;
 connectAttr "Hair_Back_Bounce_CONTROL_Jnt_Ctrl_scaleZ_breathing.o" "Caleb_RigRN.phl[3298]"
 		;
@@ -28322,8 +28623,8 @@ connectAttr "Caleb_RigRN.phl[3300]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[3301]" "breathing.dsm" -na;
 connectAttr "Hair_Back_Bounce_CONTROL_Jnt_Ctrl_Stretch_breathing.o" "Caleb_RigRN.phl[3302]"
 		;
-connectAttr "Caleb_RigRN.phl[3303]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[3304]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3303]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3304]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[3305]" "breathing.dsm" -na;
 connectAttr "Hair_Back_Bounce_CONTROL_Jnt_Ctrl_visibility_breathing.o" "Caleb_RigRN.phl[3306]"
 		;
@@ -28332,33 +28633,33 @@ connectAttr "Caleb_RigRN.phl[3308]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[3309]" "breathing.dsm" -na;
 connectAttr "Neck_Tie_Ctrl_2_Jnt_Ctrl_FollowBaseTip_breathing.o" "Caleb_RigRN.phl[3310]"
 		;
-connectAttr "Caleb_RigRN.phl[3311]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[3312]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3311]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3312]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[3313]" "breathing.dsm" -na;
 connectAttr "Neck_Tie_Ctrl_2_Jnt_Ctrl_translateX_breathing.o" "Caleb_RigRN.phl[3314]"
 		;
-connectAttr "Caleb_RigRN.phl[3315]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[3316]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3315]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3316]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[3317]" "breathing.dsm" -na;
 connectAttr "Neck_Tie_Ctrl_2_Jnt_Ctrl_translateY_breathing.o" "Caleb_RigRN.phl[3318]"
 		;
-connectAttr "Caleb_RigRN.phl[3319]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[3320]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3319]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3320]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[3321]" "breathing.dsm" -na;
 connectAttr "Neck_Tie_Ctrl_2_Jnt_Ctrl_translateZ_breathing.o" "Caleb_RigRN.phl[3322]"
 		;
-connectAttr "Caleb_RigRN.phl[3323]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[3324]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3323]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3324]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[3325]" "breathing.dsm" -na;
 connectAttr "Neck_Tie_Ctrl_2_Jnt_Ctrl_rotate_breathing.ox" "Caleb_RigRN.phl[3326]"
 		;
-connectAttr "Caleb_RigRN.phl[3327]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[3328]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3327]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3328]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[3329]" "breathing.dsm" -na;
 connectAttr "Neck_Tie_Ctrl_2_Jnt_Ctrl_rotate_breathing.oy" "Caleb_RigRN.phl[3330]"
 		;
-connectAttr "Caleb_RigRN.phl[3331]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[3332]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3331]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3332]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[3333]" "breathing.dsm" -na;
 connectAttr "Neck_Tie_Ctrl_2_Jnt_Ctrl_rotate_breathing.oz" "Caleb_RigRN.phl[3334]"
 		;
@@ -28368,53 +28669,53 @@ connectAttr "Caleb_RigRN.phl[3336]" "Neck_Tie_Ctrl_2_Jnt_Ctrl_rotate_BaseAnimati
 		;
 connectAttr "Caleb_RigRN.phl[3337]" "Neck_Tie_Ctrl_2_Jnt_Ctrl_rotate_breathing.ro"
 		;
-connectAttr "Caleb_RigRN.phl[3338]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[3339]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3338]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3339]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[3340]" "breathing.dsm" -na;
 connectAttr "Neck_Tie_Ctrl_2_Jnt_Ctrl_scaleX_breathing.o" "Caleb_RigRN.phl[3341]"
 		;
-connectAttr "Caleb_RigRN.phl[3342]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[3343]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3342]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3343]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[3344]" "breathing.dsm" -na;
 connectAttr "Neck_Tie_Ctrl_2_Jnt_Ctrl_scaleY_breathing.o" "Caleb_RigRN.phl[3345]"
 		;
-connectAttr "Caleb_RigRN.phl[3346]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[3347]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3346]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3347]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[3348]" "breathing.dsm" -na;
 connectAttr "Neck_Tie_Ctrl_2_Jnt_Ctrl_scaleZ_breathing.o" "Caleb_RigRN.phl[3349]"
 		;
-connectAttr "Caleb_RigRN.phl[3350]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[3351]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3350]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3351]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[3352]" "breathing.dsm" -na;
 connectAttr "Neck_Tie_Ctrl_2_Jnt_Ctrl_visibility_breathing.o" "Caleb_RigRN.phl[3353]"
 		;
-connectAttr "Caleb_RigRN.phl[3354]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[3355]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3354]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3355]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[3356]" "breathing.dsm" -na;
 connectAttr "Neck_Tie_Ctrl_1_Jnt_Ctrl_translateX_breathing.o" "Caleb_RigRN.phl[3357]"
 		;
-connectAttr "Caleb_RigRN.phl[3358]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[3359]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3358]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3359]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[3360]" "breathing.dsm" -na;
 connectAttr "Neck_Tie_Ctrl_1_Jnt_Ctrl_translateY_breathing.o" "Caleb_RigRN.phl[3361]"
 		;
-connectAttr "Caleb_RigRN.phl[3362]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[3363]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3362]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3363]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[3364]" "breathing.dsm" -na;
 connectAttr "Neck_Tie_Ctrl_1_Jnt_Ctrl_translateZ_breathing.o" "Caleb_RigRN.phl[3365]"
 		;
-connectAttr "Caleb_RigRN.phl[3366]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[3367]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3366]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3367]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[3368]" "breathing.dsm" -na;
 connectAttr "Neck_Tie_Ctrl_1_Jnt_Ctrl_rotate_breathing.ox" "Caleb_RigRN.phl[3369]"
 		;
-connectAttr "Caleb_RigRN.phl[3370]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[3371]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3370]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3371]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[3372]" "breathing.dsm" -na;
 connectAttr "Neck_Tie_Ctrl_1_Jnt_Ctrl_rotate_breathing.oy" "Caleb_RigRN.phl[3373]"
 		;
-connectAttr "Caleb_RigRN.phl[3374]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[3375]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3374]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3375]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[3376]" "breathing.dsm" -na;
 connectAttr "Neck_Tie_Ctrl_1_Jnt_Ctrl_rotate_breathing.oz" "Caleb_RigRN.phl[3377]"
 		;
@@ -28424,18 +28725,18 @@ connectAttr "Caleb_RigRN.phl[3379]" "Neck_Tie_Ctrl_1_Jnt_Ctrl_rotate_BaseAnimati
 		;
 connectAttr "Caleb_RigRN.phl[3380]" "Neck_Tie_Ctrl_1_Jnt_Ctrl_rotate_breathing.ro"
 		;
-connectAttr "Caleb_RigRN.phl[3381]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[3382]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3381]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3382]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[3383]" "breathing.dsm" -na;
 connectAttr "Neck_Tie_Ctrl_1_Jnt_Ctrl_scaleX_breathing.o" "Caleb_RigRN.phl[3384]"
 		;
-connectAttr "Caleb_RigRN.phl[3385]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[3386]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3385]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3386]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[3387]" "breathing.dsm" -na;
 connectAttr "Neck_Tie_Ctrl_1_Jnt_Ctrl_scaleY_breathing.o" "Caleb_RigRN.phl[3388]"
 		;
-connectAttr "Caleb_RigRN.phl[3389]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[3390]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3389]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3390]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[3391]" "breathing.dsm" -na;
 connectAttr "Neck_Tie_Ctrl_1_Jnt_Ctrl_scaleZ_breathing.o" "Caleb_RigRN.phl[3392]"
 		;
@@ -28449,8 +28750,8 @@ connectAttr "Caleb_RigRN.phl[3398]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[3399]" "breathing.dsm" -na;
 connectAttr "Neck_Tie_Ctrl_1_Jnt_Ctrl_FollowRotate_breathing.o" "Caleb_RigRN.phl[3400]"
 		;
-connectAttr "Caleb_RigRN.phl[3401]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[3402]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3401]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3402]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[3403]" "breathing.dsm" -na;
 connectAttr "Neck_Tie_Ctrl_1_Jnt_Ctrl_visibility_breathing.o" "Caleb_RigRN.phl[3404]"
 		;
@@ -28459,13 +28760,13 @@ connectAttr "Caleb_RigRN.phl[3406]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[3407]" "breathing.dsm" -na;
 connectAttr "Neck_Tie_Ctrl_3_Jnt_Ctrl_rotate_breathing.ox" "Caleb_RigRN.phl[3408]"
 		;
-connectAttr "Caleb_RigRN.phl[3409]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[3410]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3409]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3410]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[3411]" "breathing.dsm" -na;
 connectAttr "Neck_Tie_Ctrl_3_Jnt_Ctrl_rotate_breathing.oy" "Caleb_RigRN.phl[3412]"
 		;
-connectAttr "Caleb_RigRN.phl[3413]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[3414]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3413]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3414]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[3415]" "breathing.dsm" -na;
 connectAttr "Neck_Tie_Ctrl_3_Jnt_Ctrl_rotate_breathing.oz" "Caleb_RigRN.phl[3416]"
 		;
@@ -28475,33 +28776,33 @@ connectAttr "Caleb_RigRN.phl[3418]" "Neck_Tie_Ctrl_3_Jnt_Ctrl_rotate_BaseAnimati
 		;
 connectAttr "Caleb_RigRN.phl[3419]" "Neck_Tie_Ctrl_3_Jnt_Ctrl_rotate_breathing.ro"
 		;
-connectAttr "Caleb_RigRN.phl[3420]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[3421]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3420]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3421]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[3422]" "breathing.dsm" -na;
 connectAttr "Neck_Tie_Ctrl_3_Jnt_Ctrl_translateX_breathing.o" "Caleb_RigRN.phl[3423]"
 		;
-connectAttr "Caleb_RigRN.phl[3424]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[3425]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3424]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3425]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[3426]" "breathing.dsm" -na;
 connectAttr "Neck_Tie_Ctrl_3_Jnt_Ctrl_translateY_breathing.o" "Caleb_RigRN.phl[3427]"
 		;
-connectAttr "Caleb_RigRN.phl[3428]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[3429]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3428]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3429]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[3430]" "breathing.dsm" -na;
 connectAttr "Neck_Tie_Ctrl_3_Jnt_Ctrl_translateZ_breathing.o" "Caleb_RigRN.phl[3431]"
 		;
-connectAttr "Caleb_RigRN.phl[3432]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[3433]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3432]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3433]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[3434]" "breathing.dsm" -na;
 connectAttr "Neck_Tie_Ctrl_3_Jnt_Ctrl_scaleX_breathing.o" "Caleb_RigRN.phl[3435]"
 		;
-connectAttr "Caleb_RigRN.phl[3436]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[3437]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3436]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3437]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[3438]" "breathing.dsm" -na;
 connectAttr "Neck_Tie_Ctrl_3_Jnt_Ctrl_scaleY_breathing.o" "Caleb_RigRN.phl[3439]"
 		;
-connectAttr "Caleb_RigRN.phl[3440]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[3441]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3440]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3441]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[3442]" "breathing.dsm" -na;
 connectAttr "Neck_Tie_Ctrl_3_Jnt_Ctrl_scaleZ_breathing.o" "Caleb_RigRN.phl[3443]"
 		;
@@ -28515,49 +28816,49 @@ connectAttr "Caleb_RigRN.phl[3449]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[3450]" "breathing.dsm" -na;
 connectAttr "Neck_Tie_Ctrl_3_Jnt_Ctrl_Local_Space_breathing.o" "Caleb_RigRN.phl[3451]"
 		;
-connectAttr "Caleb_RigRN.phl[3452]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[3453]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3452]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3453]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[3454]" "breathing.dsm" -na;
 connectAttr "Neck_Tie_Ctrl_3_Jnt_Ctrl_visibility_breathing.o" "Caleb_RigRN.phl[3455]"
 		;
-connectAttr "Caleb_RigRN.phl[3456]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[3457]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3456]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3457]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[3458]" "breathing.dsm" -na;
 connectAttr "Rope_Jnt_Ctrl_translateX_breathing.o" "Caleb_RigRN.phl[3459]";
-connectAttr "Caleb_RigRN.phl[3460]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[3461]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3460]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3461]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[3462]" "breathing.dsm" -na;
 connectAttr "Rope_Jnt_Ctrl_translateY_breathing.o" "Caleb_RigRN.phl[3463]";
-connectAttr "Caleb_RigRN.phl[3464]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[3465]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3464]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3465]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[3466]" "breathing.dsm" -na;
 connectAttr "Rope_Jnt_Ctrl_translateZ_breathing.o" "Caleb_RigRN.phl[3467]";
-connectAttr "Caleb_RigRN.phl[3468]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[3469]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3468]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3469]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[3470]" "breathing.dsm" -na;
 connectAttr "Rope_Jnt_Ctrl_rotate_breathing.ox" "Caleb_RigRN.phl[3471]";
-connectAttr "Caleb_RigRN.phl[3472]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[3473]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3472]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3473]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[3474]" "breathing.dsm" -na;
 connectAttr "Rope_Jnt_Ctrl_rotate_breathing.oy" "Caleb_RigRN.phl[3475]";
-connectAttr "Caleb_RigRN.phl[3476]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[3477]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3476]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3477]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[3478]" "breathing.dsm" -na;
 connectAttr "Rope_Jnt_Ctrl_rotate_breathing.oz" "Caleb_RigRN.phl[3479]";
 connectAttr "Caleb_RigRN.phl[3480]" "Rope_Jnt_Ctrl_rotate_head_turn.ro";
 connectAttr "Caleb_RigRN.phl[3481]" "Rope_Jnt_Ctrl_rotate_BaseAnimation_extract.ro"
 		;
 connectAttr "Caleb_RigRN.phl[3482]" "Rope_Jnt_Ctrl_rotate_breathing.ro";
-connectAttr "Caleb_RigRN.phl[3483]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[3484]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3483]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3484]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[3485]" "breathing.dsm" -na;
 connectAttr "Rope_Jnt_Ctrl_scaleX_breathing.o" "Caleb_RigRN.phl[3486]";
-connectAttr "Caleb_RigRN.phl[3487]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[3488]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3487]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3488]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[3489]" "breathing.dsm" -na;
 connectAttr "Rope_Jnt_Ctrl_scaleY_breathing.o" "Caleb_RigRN.phl[3490]";
-connectAttr "Caleb_RigRN.phl[3491]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[3492]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3491]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3492]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[3493]" "breathing.dsm" -na;
 connectAttr "Rope_Jnt_Ctrl_scaleZ_breathing.o" "Caleb_RigRN.phl[3494]";
 connectAttr "Caleb_RigRN.phl[3495]" "head_turn.dsm" -na;
@@ -28568,51 +28869,51 @@ connectAttr "Caleb_RigRN.phl[3499]" "head_turn.dsm" -na;
 connectAttr "Caleb_RigRN.phl[3500]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[3501]" "breathing.dsm" -na;
 connectAttr "Rope_Jnt_Ctrl_FollowRotate_breathing.o" "Caleb_RigRN.phl[3502]";
-connectAttr "Caleb_RigRN.phl[3503]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[3504]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3503]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3504]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[3505]" "breathing.dsm" -na;
 connectAttr "Rope_Jnt_Ctrl_visibility_breathing.o" "Caleb_RigRN.phl[3506]";
-connectAttr "Caleb_RigRN.phl[3507]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[3508]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3507]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3508]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[3509]" "breathing.dsm" -na;
 connectAttr "Backpack_2_Jnt_Ctrl_translateX_breathing.o" "Caleb_RigRN.phl[3510]"
 		;
-connectAttr "Caleb_RigRN.phl[3511]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[3512]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3511]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3512]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[3513]" "breathing.dsm" -na;
 connectAttr "Backpack_2_Jnt_Ctrl_translateY_breathing.o" "Caleb_RigRN.phl[3514]"
 		;
-connectAttr "Caleb_RigRN.phl[3515]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[3516]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3515]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3516]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[3517]" "breathing.dsm" -na;
 connectAttr "Backpack_2_Jnt_Ctrl_translateZ_breathing.o" "Caleb_RigRN.phl[3518]"
 		;
-connectAttr "Caleb_RigRN.phl[3519]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[3520]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3519]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3520]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[3521]" "breathing.dsm" -na;
 connectAttr "Backpack_2_Jnt_Ctrl_rotate_breathing.ox" "Caleb_RigRN.phl[3522]";
-connectAttr "Caleb_RigRN.phl[3523]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[3524]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3523]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3524]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[3525]" "breathing.dsm" -na;
 connectAttr "Backpack_2_Jnt_Ctrl_rotate_breathing.oy" "Caleb_RigRN.phl[3526]";
-connectAttr "Caleb_RigRN.phl[3527]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[3528]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3527]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3528]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[3529]" "breathing.dsm" -na;
 connectAttr "Backpack_2_Jnt_Ctrl_rotate_breathing.oz" "Caleb_RigRN.phl[3530]";
 connectAttr "Caleb_RigRN.phl[3531]" "Backpack_2_Jnt_Ctrl_rotate_head_turn.ro";
 connectAttr "Caleb_RigRN.phl[3532]" "Backpack_2_Jnt_Ctrl_rotate_BaseAnimation_extract.ro"
 		;
 connectAttr "Caleb_RigRN.phl[3533]" "Backpack_2_Jnt_Ctrl_rotate_breathing.ro";
-connectAttr "Caleb_RigRN.phl[3534]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[3535]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3534]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3535]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[3536]" "breathing.dsm" -na;
 connectAttr "Backpack_2_Jnt_Ctrl_scaleX_breathing.o" "Caleb_RigRN.phl[3537]";
-connectAttr "Caleb_RigRN.phl[3538]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[3539]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3538]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3539]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[3540]" "breathing.dsm" -na;
 connectAttr "Backpack_2_Jnt_Ctrl_scaleY_breathing.o" "Caleb_RigRN.phl[3541]";
-connectAttr "Caleb_RigRN.phl[3542]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[3543]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3542]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3543]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[3544]" "breathing.dsm" -na;
 connectAttr "Backpack_2_Jnt_Ctrl_scaleZ_breathing.o" "Caleb_RigRN.phl[3545]";
 connectAttr "Caleb_RigRN.phl[3546]" "head_turn.dsm" -na;
@@ -28625,8 +28926,8 @@ connectAttr "Caleb_RigRN.phl[3551]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[3552]" "breathing.dsm" -na;
 connectAttr "Backpack_2_Jnt_Ctrl_FollowRotate_breathing.o" "Caleb_RigRN.phl[3553]"
 		;
-connectAttr "Caleb_RigRN.phl[3554]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[3555]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3554]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3555]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[3556]" "breathing.dsm" -na;
 connectAttr "Backpack_2_Jnt_Ctrl_visibility_breathing.o" "Caleb_RigRN.phl[3557]"
 		;
@@ -28635,42 +28936,42 @@ connectAttr "Caleb_RigRN.phl[3559]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[3560]" "breathing.dsm" -na;
 connectAttr "Backpack_1_Jnt_Ctrl_translateY_breathing.o" "Caleb_RigRN.phl[3561]"
 		;
-connectAttr "Caleb_RigRN.phl[3562]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[3563]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3562]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3563]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[3564]" "breathing.dsm" -na;
 connectAttr "Backpack_1_Jnt_Ctrl_translateX_breathing.o" "Caleb_RigRN.phl[3565]"
 		;
-connectAttr "Caleb_RigRN.phl[3566]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[3567]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3566]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3567]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[3568]" "breathing.dsm" -na;
 connectAttr "Backpack_1_Jnt_Ctrl_translateZ_breathing.o" "Caleb_RigRN.phl[3569]"
 		;
-connectAttr "Caleb_RigRN.phl[3570]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[3571]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3570]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3571]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[3572]" "breathing.dsm" -na;
 connectAttr "Backpack_1_Jnt_Ctrl_rotate_breathing.ox" "Caleb_RigRN.phl[3573]";
-connectAttr "Caleb_RigRN.phl[3574]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[3575]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3574]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3575]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[3576]" "breathing.dsm" -na;
 connectAttr "Backpack_1_Jnt_Ctrl_rotate_breathing.oy" "Caleb_RigRN.phl[3577]";
-connectAttr "Caleb_RigRN.phl[3578]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[3579]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3578]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3579]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[3580]" "breathing.dsm" -na;
 connectAttr "Backpack_1_Jnt_Ctrl_rotate_breathing.oz" "Caleb_RigRN.phl[3581]";
 connectAttr "Caleb_RigRN.phl[3582]" "Backpack_1_Jnt_Ctrl_rotate_head_turn.ro";
 connectAttr "Caleb_RigRN.phl[3583]" "Backpack_1_Jnt_Ctrl_rotate_BaseAnimation_extract.ro"
 		;
 connectAttr "Caleb_RigRN.phl[3584]" "Backpack_1_Jnt_Ctrl_rotate_breathing.ro";
-connectAttr "Caleb_RigRN.phl[3585]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[3586]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3585]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3586]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[3587]" "breathing.dsm" -na;
 connectAttr "Backpack_1_Jnt_Ctrl_scaleX_breathing.o" "Caleb_RigRN.phl[3588]";
-connectAttr "Caleb_RigRN.phl[3589]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[3590]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3589]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3590]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[3591]" "breathing.dsm" -na;
 connectAttr "Backpack_1_Jnt_Ctrl_scaleY_breathing.o" "Caleb_RigRN.phl[3592]";
-connectAttr "Caleb_RigRN.phl[3593]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[3594]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3593]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3594]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[3595]" "breathing.dsm" -na;
 connectAttr "Backpack_1_Jnt_Ctrl_scaleZ_breathing.o" "Caleb_RigRN.phl[3596]";
 connectAttr "Caleb_RigRN.phl[3597]" "head_turn.dsm" -na;
@@ -28683,52 +28984,52 @@ connectAttr "Caleb_RigRN.phl[3602]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[3603]" "breathing.dsm" -na;
 connectAttr "Backpack_1_Jnt_Ctrl_FollowRotate_breathing.o" "Caleb_RigRN.phl[3604]"
 		;
-connectAttr "Caleb_RigRN.phl[3605]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[3606]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3605]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3606]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[3607]" "breathing.dsm" -na;
 connectAttr "Backpack_1_Jnt_Ctrl_visibility_breathing.o" "Caleb_RigRN.phl[3608]"
 		;
-connectAttr "Caleb_RigRN.phl[3609]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[3610]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3609]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3610]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[3611]" "breathing.dsm" -na;
 connectAttr "NeckTieRear_Jnt_Ctrl_translateX_breathing.o" "Caleb_RigRN.phl[3612]"
 		;
-connectAttr "Caleb_RigRN.phl[3613]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[3614]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3613]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3614]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[3615]" "breathing.dsm" -na;
 connectAttr "NeckTieRear_Jnt_Ctrl_translateY_breathing.o" "Caleb_RigRN.phl[3616]"
 		;
-connectAttr "Caleb_RigRN.phl[3617]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[3618]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3617]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3618]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[3619]" "breathing.dsm" -na;
 connectAttr "NeckTieRear_Jnt_Ctrl_translateZ_breathing.o" "Caleb_RigRN.phl[3620]"
 		;
-connectAttr "Caleb_RigRN.phl[3621]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[3622]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3621]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3622]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[3623]" "breathing.dsm" -na;
 connectAttr "NeckTieRear_Jnt_Ctrl_rotate_breathing.ox" "Caleb_RigRN.phl[3624]";
-connectAttr "Caleb_RigRN.phl[3625]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[3626]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3625]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3626]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[3627]" "breathing.dsm" -na;
 connectAttr "NeckTieRear_Jnt_Ctrl_rotate_breathing.oy" "Caleb_RigRN.phl[3628]";
-connectAttr "Caleb_RigRN.phl[3629]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[3630]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3629]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3630]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[3631]" "breathing.dsm" -na;
 connectAttr "NeckTieRear_Jnt_Ctrl_rotate_breathing.oz" "Caleb_RigRN.phl[3632]";
 connectAttr "Caleb_RigRN.phl[3633]" "NeckTieRear_Jnt_Ctrl_rotate_head_turn.ro";
 connectAttr "Caleb_RigRN.phl[3634]" "NeckTieRear_Jnt_Ctrl_rotate_BaseAnimation_extract.ro"
 		;
 connectAttr "Caleb_RigRN.phl[3635]" "NeckTieRear_Jnt_Ctrl_rotate_breathing.ro";
-connectAttr "Caleb_RigRN.phl[3636]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[3637]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3636]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3637]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[3638]" "breathing.dsm" -na;
 connectAttr "NeckTieRear_Jnt_Ctrl_scaleX_breathing.o" "Caleb_RigRN.phl[3639]";
-connectAttr "Caleb_RigRN.phl[3640]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[3641]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3640]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3641]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[3642]" "breathing.dsm" -na;
 connectAttr "NeckTieRear_Jnt_Ctrl_scaleY_breathing.o" "Caleb_RigRN.phl[3643]";
-connectAttr "Caleb_RigRN.phl[3644]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[3645]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3644]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3645]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[3646]" "breathing.dsm" -na;
 connectAttr "NeckTieRear_Jnt_Ctrl_scaleZ_breathing.o" "Caleb_RigRN.phl[3647]";
 connectAttr "Caleb_RigRN.phl[3648]" "head_turn.dsm" -na;
@@ -28741,8 +29042,8 @@ connectAttr "Caleb_RigRN.phl[3653]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[3654]" "breathing.dsm" -na;
 connectAttr "NeckTieRear_Jnt_Ctrl_FollowRotate_breathing.o" "Caleb_RigRN.phl[3655]"
 		;
-connectAttr "Caleb_RigRN.phl[3656]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[3657]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3656]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3657]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[3658]" "breathing.dsm" -na;
 connectAttr "NeckTieRear_Jnt_Ctrl_visibility_breathing.o" "Caleb_RigRN.phl[3659]"
 		;
@@ -28750,48 +29051,48 @@ connectAttr "Caleb_RigRN.phl[3660]" "head_turn.dsm" -na;
 connectAttr "Caleb_RigRN.phl[3661]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[3662]" "breathing.dsm" -na;
 connectAttr "Axe_Jnt_Ctrl_LocalSpace_breathing.o" "Caleb_RigRN.phl[3663]";
-connectAttr "Caleb_RigRN.phl[3664]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[3665]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3664]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3665]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[3666]" "breathing.dsm" -na;
 connectAttr "Axe_Jnt_Ctrl_translateX_breathing.o" "Caleb_RigRN.phl[3667]";
-connectAttr "Caleb_RigRN.phl[3668]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[3669]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3668]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3669]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[3670]" "breathing.dsm" -na;
 connectAttr "Axe_Jnt_Ctrl_translateY_breathing.o" "Caleb_RigRN.phl[3671]";
-connectAttr "Caleb_RigRN.phl[3672]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[3673]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3672]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3673]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[3674]" "breathing.dsm" -na;
 connectAttr "Axe_Jnt_Ctrl_translateZ_breathing.o" "Caleb_RigRN.phl[3675]";
-connectAttr "Caleb_RigRN.phl[3676]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[3677]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3676]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3677]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[3678]" "breathing.dsm" -na;
 connectAttr "Axe_Jnt_Ctrl_rotate_breathing.ox" "Caleb_RigRN.phl[3679]";
-connectAttr "Caleb_RigRN.phl[3680]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[3681]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3680]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3681]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[3682]" "breathing.dsm" -na;
 connectAttr "Axe_Jnt_Ctrl_rotate_breathing.oy" "Caleb_RigRN.phl[3683]";
-connectAttr "Caleb_RigRN.phl[3684]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[3685]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3684]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3685]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[3686]" "breathing.dsm" -na;
 connectAttr "Axe_Jnt_Ctrl_rotate_breathing.oz" "Caleb_RigRN.phl[3687]";
 connectAttr "Caleb_RigRN.phl[3688]" "Axe_Jnt_Ctrl_rotate_head_turn.ro";
 connectAttr "Caleb_RigRN.phl[3689]" "Axe_Jnt_Ctrl_rotate_BaseAnimation_extract.ro"
 		;
 connectAttr "Caleb_RigRN.phl[3690]" "Axe_Jnt_Ctrl_rotate_breathing.ro";
-connectAttr "Caleb_RigRN.phl[3691]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[3692]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3691]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3692]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[3693]" "breathing.dsm" -na;
 connectAttr "Axe_Jnt_Ctrl_scaleX_breathing.o" "Caleb_RigRN.phl[3694]";
-connectAttr "Caleb_RigRN.phl[3695]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[3696]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3695]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3696]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[3697]" "breathing.dsm" -na;
 connectAttr "Axe_Jnt_Ctrl_scaleY_breathing.o" "Caleb_RigRN.phl[3698]";
-connectAttr "Caleb_RigRN.phl[3699]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[3700]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3699]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3700]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[3701]" "breathing.dsm" -na;
 connectAttr "Axe_Jnt_Ctrl_scaleZ_breathing.o" "Caleb_RigRN.phl[3702]";
-connectAttr "Caleb_RigRN.phl[3703]" "BaseAnimation_extract.dsm" -na;
-connectAttr "Caleb_RigRN.phl[3704]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3703]" "head_turn.dsm" -na;
+connectAttr "Caleb_RigRN.phl[3704]" "BaseAnimation_extract.dsm" -na;
 connectAttr "Caleb_RigRN.phl[3705]" "breathing.dsm" -na;
 connectAttr "Axe_Jnt_Ctrl_visibility_breathing.o" "Caleb_RigRN.phl[3706]";
 connectAttr "layer1.di" "Caleb_RigRN.phl[3707]";
@@ -28799,18 +29100,18 @@ connectAttr "Caleb_RigRN.phl[3708]" "hyperShadePrimaryNodeEditorSavedTabsInfo.tg
 		;
 connectAttr ":standardSurface1.msg" "Caleb_RigRN.phl[3709]";
 connectAttr "file1.msg" "Caleb_RigRN.phl[3710]";
-connectAttr "file3.oc" "Caleb_RigRN.phl[3711]";
-connectAttr "Caleb_RigRN.phl[3712]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[3].dn"
+connectAttr "file2.oc" "Caleb_RigRN.phl[3711]";
+connectAttr "file2.oa" "Caleb_RigRN.phl[3712]";
+connectAttr "file2.oa" "Caleb_RigRN.phl[3713]";
+connectAttr "file2.oa" "Caleb_RigRN.phl[3714]";
+connectAttr "file3.oc" "Caleb_RigRN.phl[3715]";
+connectAttr "Caleb_RigRN.phl[3716]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[3].dn"
 		;
-connectAttr "Caleb_RigRN.phl[3713]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[7].dn"
+connectAttr "Caleb_RigRN.phl[3717]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[7].dn"
 		;
-connectAttr "Caleb_RigRN.phl[3714]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[6].dn"
+connectAttr "Caleb_RigRN.phl[3718]" "polyNormalPerVertex1.ip";
+connectAttr "Caleb_RigRN.phl[3719]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[6].dn"
 		;
-connectAttr "Caleb_RigRN.phl[3715]" "polyNormalPerVertex1.ip";
-connectAttr "file2.oc" "Caleb_RigRN.phl[3716]";
-connectAttr "file2.oa" "Caleb_RigRN.phl[3717]";
-connectAttr "file2.oa" "Caleb_RigRN.phl[3718]";
-connectAttr "file2.oa" "Caleb_RigRN.phl[3719]";
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
@@ -36753,19 +37054,31 @@ connectAttr "BaseAnimation_extract.bgwt" "Neck_Tie_Ctrl_2_Jnt_Ctrl_translateX_Ba
 		;
 connectAttr "BaseAnimation_extract.fgwt" "Neck_Tie_Ctrl_2_Jnt_Ctrl_translateX_BaseAnimation_extract.wb"
 		;
+connectAttr "Neck_Tie_Ctrl_2_Jnt_Ctrl_translateX_BaseAnimation_extract_inputB.o" "Neck_Tie_Ctrl_2_Jnt_Ctrl_translateX_BaseAnimation_extract.ib"
+		;
 connectAttr "BaseAnimation_extract.bgwt" "Neck_Tie_Ctrl_2_Jnt_Ctrl_translateY_BaseAnimation_extract.wa"
 		;
 connectAttr "BaseAnimation_extract.fgwt" "Neck_Tie_Ctrl_2_Jnt_Ctrl_translateY_BaseAnimation_extract.wb"
 		;
+connectAttr "Neck_Tie_Ctrl_2_Jnt_Ctrl_translateY_BaseAnimation_extract_inputB.o" "Neck_Tie_Ctrl_2_Jnt_Ctrl_translateY_BaseAnimation_extract.ib"
+		;
 connectAttr "BaseAnimation_extract.bgwt" "Neck_Tie_Ctrl_2_Jnt_Ctrl_translateZ_BaseAnimation_extract.wa"
 		;
 connectAttr "BaseAnimation_extract.fgwt" "Neck_Tie_Ctrl_2_Jnt_Ctrl_translateZ_BaseAnimation_extract.wb"
+		;
+connectAttr "Neck_Tie_Ctrl_2_Jnt_Ctrl_translateZ_BaseAnimation_extract_inputB.o" "Neck_Tie_Ctrl_2_Jnt_Ctrl_translateZ_BaseAnimation_extract.ib"
 		;
 connectAttr "BaseAnimation_extract.oram" "Neck_Tie_Ctrl_2_Jnt_Ctrl_rotate_BaseAnimation_extract.acm"
 		;
 connectAttr "BaseAnimation_extract.bgwt" "Neck_Tie_Ctrl_2_Jnt_Ctrl_rotate_BaseAnimation_extract.wa"
 		;
 connectAttr "BaseAnimation_extract.fgwt" "Neck_Tie_Ctrl_2_Jnt_Ctrl_rotate_BaseAnimation_extract.wb"
+		;
+connectAttr "Neck_Tie_Ctrl_2_Jnt_Ctrl_rotate_BaseAnimation_extract_inputBX.o" "Neck_Tie_Ctrl_2_Jnt_Ctrl_rotate_BaseAnimation_extract.ibx"
+		;
+connectAttr "Neck_Tie_Ctrl_2_Jnt_Ctrl_rotate_BaseAnimation_extract_inputBY.o" "Neck_Tie_Ctrl_2_Jnt_Ctrl_rotate_BaseAnimation_extract.iby"
+		;
+connectAttr "Neck_Tie_Ctrl_2_Jnt_Ctrl_rotate_BaseAnimation_extract_inputBZ.o" "Neck_Tie_Ctrl_2_Jnt_Ctrl_rotate_BaseAnimation_extract.ibz"
 		;
 connectAttr "BaseAnimation_extract.sam" "Neck_Tie_Ctrl_2_Jnt_Ctrl_scaleX_BaseAnimation_extract.acm"
 		;
@@ -38371,17 +38684,25 @@ connectAttr "BaseAnimation_extract.bgwt" "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_vis
 		;
 connectAttr "BaseAnimation_extract.fgwt" "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_visibility_BaseAnimation_extract.wb"
 		;
+connectAttr "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_visibility_BaseAnimation_extract_inputB.o" "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_visibility_BaseAnimation_extract.ib"
+		;
 connectAttr "BaseAnimation_extract.bgwt" "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_translateX_BaseAnimation_extract.wa"
 		;
 connectAttr "BaseAnimation_extract.fgwt" "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_translateX_BaseAnimation_extract.wb"
+		;
+connectAttr "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_translateX_BaseAnimation_extract_inputB.o" "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_translateX_BaseAnimation_extract.ib"
 		;
 connectAttr "BaseAnimation_extract.bgwt" "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_translateY_BaseAnimation_extract.wa"
 		;
 connectAttr "BaseAnimation_extract.fgwt" "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_translateY_BaseAnimation_extract.wb"
 		;
+connectAttr "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_translateY_BaseAnimation_extract_inputB.o" "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_translateY_BaseAnimation_extract.ib"
+		;
 connectAttr "BaseAnimation_extract.bgwt" "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_translateZ_BaseAnimation_extract.wa"
 		;
 connectAttr "BaseAnimation_extract.fgwt" "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_translateZ_BaseAnimation_extract.wb"
+		;
+connectAttr "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_translateZ_BaseAnimation_extract_inputB.o" "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_translateZ_BaseAnimation_extract.ib"
 		;
 connectAttr "BaseAnimation_extract.oram" "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_rotate_BaseAnimation_extract.acm"
 		;
@@ -38389,11 +38710,19 @@ connectAttr "BaseAnimation_extract.bgwt" "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_rot
 		;
 connectAttr "BaseAnimation_extract.fgwt" "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_rotate_BaseAnimation_extract.wb"
 		;
+connectAttr "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_rotate_BaseAnimation_extract_inputBX.o" "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_rotate_BaseAnimation_extract.ibx"
+		;
+connectAttr "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_rotate_BaseAnimation_extract_inputBY.o" "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_rotate_BaseAnimation_extract.iby"
+		;
+connectAttr "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_rotate_BaseAnimation_extract_inputBZ.o" "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_rotate_BaseAnimation_extract.ibz"
+		;
 connectAttr "BaseAnimation_extract.sam" "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_scaleX_BaseAnimation_extract.acm"
 		;
 connectAttr "BaseAnimation_extract.bgwt" "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_scaleX_BaseAnimation_extract.wa"
 		;
 connectAttr "BaseAnimation_extract.fgwt" "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_scaleX_BaseAnimation_extract.wb"
+		;
+connectAttr "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_scaleX_BaseAnimation_extract_inputB.o" "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_scaleX_BaseAnimation_extract.ib"
 		;
 connectAttr "BaseAnimation_extract.sam" "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_scaleY_BaseAnimation_extract.acm"
 		;
@@ -38401,43 +38730,63 @@ connectAttr "BaseAnimation_extract.bgwt" "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_sca
 		;
 connectAttr "BaseAnimation_extract.fgwt" "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_scaleY_BaseAnimation_extract.wb"
 		;
+connectAttr "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_scaleY_BaseAnimation_extract_inputB.o" "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_scaleY_BaseAnimation_extract.ib"
+		;
 connectAttr "BaseAnimation_extract.sam" "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_scaleZ_BaseAnimation_extract.acm"
 		;
 connectAttr "BaseAnimation_extract.bgwt" "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_scaleZ_BaseAnimation_extract.wa"
 		;
 connectAttr "BaseAnimation_extract.fgwt" "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_scaleZ_BaseAnimation_extract.wb"
 		;
+connectAttr "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_scaleZ_BaseAnimation_extract_inputB.o" "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_scaleZ_BaseAnimation_extract.ib"
+		;
 connectAttr "BaseAnimation_extract.bgwt" "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_FollowTranslate_BaseAnimation_extract.wa"
 		;
 connectAttr "BaseAnimation_extract.fgwt" "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_FollowTranslate_BaseAnimation_extract.wb"
+		;
+connectAttr "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_FollowTranslate_BaseAnimation_extract_inputB.o" "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_FollowTranslate_BaseAnimation_extract.ib"
 		;
 connectAttr "BaseAnimation_extract.bgwt" "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_FollowRotate_BaseAnimation_extract.wa"
 		;
 connectAttr "BaseAnimation_extract.fgwt" "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_FollowRotate_BaseAnimation_extract.wb"
 		;
+connectAttr "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_FollowRotate_BaseAnimation_extract_inputB.o" "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_FollowRotate_BaseAnimation_extract.ib"
+		;
 connectAttr "BaseAnimation_extract.bgwt" "Hair_Front_Bounce_CONTROL_Jnt_Ctrl___________________BaseAnimation_extract.wa"
 		;
 connectAttr "BaseAnimation_extract.fgwt" "Hair_Front_Bounce_CONTROL_Jnt_Ctrl___________________BaseAnimation_extract.wb"
+		;
+connectAttr "Hair_Front_Bounce_CONTROL_Jnt_Ctrl___________________BaseAnimation_extract_inputB.o" "Hair_Front_Bounce_CONTROL_Jnt_Ctrl___________________BaseAnimation_extract.ib"
 		;
 connectAttr "BaseAnimation_extract.bgwt" "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_SimulationActive_BaseAnimation_extract.wa"
 		;
 connectAttr "BaseAnimation_extract.fgwt" "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_SimulationActive_BaseAnimation_extract.wb"
 		;
+connectAttr "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_SimulationActive_BaseAnimation_extract_inputB.o" "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_SimulationActive_BaseAnimation_extract.ib"
+		;
 connectAttr "BaseAnimation_extract.bgwt" "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_SimulationEffect_BaseAnimation_extract.wa"
 		;
 connectAttr "BaseAnimation_extract.fgwt" "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_SimulationEffect_BaseAnimation_extract.wb"
+		;
+connectAttr "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_SimulationEffect_BaseAnimation_extract_inputB.o" "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_SimulationEffect_BaseAnimation_extract.ib"
 		;
 connectAttr "BaseAnimation_extract.bgwt" "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_Drag_BaseAnimation_extract.wa"
 		;
 connectAttr "BaseAnimation_extract.fgwt" "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_Drag_BaseAnimation_extract.wb"
 		;
+connectAttr "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_Drag_BaseAnimation_extract_inputB.o" "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_Drag_BaseAnimation_extract.ib"
+		;
 connectAttr "BaseAnimation_extract.bgwt" "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_MatchControl_BaseAnimation_extract.wa"
 		;
 connectAttr "BaseAnimation_extract.fgwt" "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_MatchControl_BaseAnimation_extract.wb"
 		;
+connectAttr "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_MatchControl_BaseAnimation_extract_inputB.o" "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_MatchControl_BaseAnimation_extract.ib"
+		;
 connectAttr "BaseAnimation_extract.bgwt" "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_Stretch_BaseAnimation_extract.wa"
 		;
 connectAttr "BaseAnimation_extract.fgwt" "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_Stretch_BaseAnimation_extract.wb"
+		;
+connectAttr "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_Stretch_BaseAnimation_extract_inputB.o" "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_Stretch_BaseAnimation_extract.ib"
 		;
 connectAttr "BaseAnimation_extract.bgwt" "R_Foot_Reverse_Foot_Ball_Ctrl_visibility_BaseAnimation_extract.wa"
 		;
@@ -41528,13 +41877,19 @@ connectAttr "breathing.bgwt" "Neck_Tie_Ctrl_2_Jnt_Ctrl_translateX_breathing.wa";
 connectAttr "breathing.fgwt" "Neck_Tie_Ctrl_2_Jnt_Ctrl_translateX_breathing.wb";
 connectAttr "Neck_Tie_Ctrl_2_Jnt_Ctrl_translateX_head_turn.o" "Neck_Tie_Ctrl_2_Jnt_Ctrl_translateX_breathing.ia"
 		;
+connectAttr "Neck_Tie_Ctrl_2_Jnt_Ctrl_translateX_breathing_inputB.o" "Neck_Tie_Ctrl_2_Jnt_Ctrl_translateX_breathing.ib"
+		;
 connectAttr "breathing.bgwt" "Neck_Tie_Ctrl_2_Jnt_Ctrl_translateY_breathing.wa";
 connectAttr "breathing.fgwt" "Neck_Tie_Ctrl_2_Jnt_Ctrl_translateY_breathing.wb";
 connectAttr "Neck_Tie_Ctrl_2_Jnt_Ctrl_translateY_head_turn.o" "Neck_Tie_Ctrl_2_Jnt_Ctrl_translateY_breathing.ia"
 		;
+connectAttr "Neck_Tie_Ctrl_2_Jnt_Ctrl_translateY_breathing_inputB.o" "Neck_Tie_Ctrl_2_Jnt_Ctrl_translateY_breathing.ib"
+		;
 connectAttr "breathing.bgwt" "Neck_Tie_Ctrl_2_Jnt_Ctrl_translateZ_breathing.wa";
 connectAttr "breathing.fgwt" "Neck_Tie_Ctrl_2_Jnt_Ctrl_translateZ_breathing.wb";
 connectAttr "Neck_Tie_Ctrl_2_Jnt_Ctrl_translateZ_head_turn.o" "Neck_Tie_Ctrl_2_Jnt_Ctrl_translateZ_breathing.ia"
+		;
+connectAttr "Neck_Tie_Ctrl_2_Jnt_Ctrl_translateZ_breathing_inputB.o" "Neck_Tie_Ctrl_2_Jnt_Ctrl_translateZ_breathing.ib"
 		;
 connectAttr "Neck_Tie_Ctrl_2_Jnt_Ctrl_rotate_head_turn.ox" "Neck_Tie_Ctrl_2_Jnt_Ctrl_rotate_breathing.iax"
 		;
@@ -41545,6 +41900,12 @@ connectAttr "Neck_Tie_Ctrl_2_Jnt_Ctrl_rotate_head_turn.oz" "Neck_Tie_Ctrl_2_Jnt_
 connectAttr "breathing.oram" "Neck_Tie_Ctrl_2_Jnt_Ctrl_rotate_breathing.acm";
 connectAttr "breathing.bgwt" "Neck_Tie_Ctrl_2_Jnt_Ctrl_rotate_breathing.wa";
 connectAttr "breathing.fgwt" "Neck_Tie_Ctrl_2_Jnt_Ctrl_rotate_breathing.wb";
+connectAttr "Neck_Tie_Ctrl_2_Jnt_Ctrl_rotate_breathing_inputBX.o" "Neck_Tie_Ctrl_2_Jnt_Ctrl_rotate_breathing.ibx"
+		;
+connectAttr "Neck_Tie_Ctrl_2_Jnt_Ctrl_rotate_breathing_inputBY.o" "Neck_Tie_Ctrl_2_Jnt_Ctrl_rotate_breathing.iby"
+		;
+connectAttr "Neck_Tie_Ctrl_2_Jnt_Ctrl_rotate_breathing_inputBZ.o" "Neck_Tie_Ctrl_2_Jnt_Ctrl_rotate_breathing.ibz"
+		;
 connectAttr "breathing.sam" "Neck_Tie_Ctrl_2_Jnt_Ctrl_scaleX_breathing.acm";
 connectAttr "breathing.bgwt" "Neck_Tie_Ctrl_2_Jnt_Ctrl_scaleX_breathing.wa";
 connectAttr "breathing.fgwt" "Neck_Tie_Ctrl_2_Jnt_Ctrl_scaleX_breathing.wb";
@@ -43104,13 +43465,19 @@ connectAttr "breathing.bgwt" "Neck_Tie_Ctrl_3_Jnt_Ctrl_translateX_breathing.wa";
 connectAttr "breathing.fgwt" "Neck_Tie_Ctrl_3_Jnt_Ctrl_translateX_breathing.wb";
 connectAttr "Neck_Tie_Ctrl_3_Jnt_Ctrl_translateX_head_turn.o" "Neck_Tie_Ctrl_3_Jnt_Ctrl_translateX_breathing.ia"
 		;
+connectAttr "Neck_Tie_Ctrl_3_Jnt_Ctrl_translateX_breathing_inputB.o" "Neck_Tie_Ctrl_3_Jnt_Ctrl_translateX_breathing.ib"
+		;
 connectAttr "breathing.bgwt" "Neck_Tie_Ctrl_3_Jnt_Ctrl_translateY_breathing.wa";
 connectAttr "breathing.fgwt" "Neck_Tie_Ctrl_3_Jnt_Ctrl_translateY_breathing.wb";
 connectAttr "Neck_Tie_Ctrl_3_Jnt_Ctrl_translateY_head_turn.o" "Neck_Tie_Ctrl_3_Jnt_Ctrl_translateY_breathing.ia"
 		;
+connectAttr "Neck_Tie_Ctrl_3_Jnt_Ctrl_translateY_breathing_inputB.o" "Neck_Tie_Ctrl_3_Jnt_Ctrl_translateY_breathing.ib"
+		;
 connectAttr "breathing.bgwt" "Neck_Tie_Ctrl_3_Jnt_Ctrl_translateZ_breathing.wa";
 connectAttr "breathing.fgwt" "Neck_Tie_Ctrl_3_Jnt_Ctrl_translateZ_breathing.wb";
 connectAttr "Neck_Tie_Ctrl_3_Jnt_Ctrl_translateZ_head_turn.o" "Neck_Tie_Ctrl_3_Jnt_Ctrl_translateZ_breathing.ia"
+		;
+connectAttr "Neck_Tie_Ctrl_3_Jnt_Ctrl_translateZ_breathing_inputB.o" "Neck_Tie_Ctrl_3_Jnt_Ctrl_translateZ_breathing.ib"
 		;
 connectAttr "Neck_Tie_Ctrl_3_Jnt_Ctrl_rotate_head_turn.ox" "Neck_Tie_Ctrl_3_Jnt_Ctrl_rotate_breathing.iax"
 		;
@@ -43121,6 +43488,12 @@ connectAttr "Neck_Tie_Ctrl_3_Jnt_Ctrl_rotate_head_turn.oz" "Neck_Tie_Ctrl_3_Jnt_
 connectAttr "breathing.oram" "Neck_Tie_Ctrl_3_Jnt_Ctrl_rotate_breathing.acm";
 connectAttr "breathing.bgwt" "Neck_Tie_Ctrl_3_Jnt_Ctrl_rotate_breathing.wa";
 connectAttr "breathing.fgwt" "Neck_Tie_Ctrl_3_Jnt_Ctrl_rotate_breathing.wb";
+connectAttr "Neck_Tie_Ctrl_3_Jnt_Ctrl_rotate_breathing_inputBX.o" "Neck_Tie_Ctrl_3_Jnt_Ctrl_rotate_breathing.ibx"
+		;
+connectAttr "Neck_Tie_Ctrl_3_Jnt_Ctrl_rotate_breathing_inputBY.o" "Neck_Tie_Ctrl_3_Jnt_Ctrl_rotate_breathing.iby"
+		;
+connectAttr "Neck_Tie_Ctrl_3_Jnt_Ctrl_rotate_breathing_inputBZ.o" "Neck_Tie_Ctrl_3_Jnt_Ctrl_rotate_breathing.ibz"
+		;
 connectAttr "breathing.sam" "Neck_Tie_Ctrl_3_Jnt_Ctrl_scaleX_breathing.acm";
 connectAttr "breathing.bgwt" "Neck_Tie_Ctrl_3_Jnt_Ctrl_scaleX_breathing.wa";
 connectAttr "breathing.fgwt" "Neck_Tie_Ctrl_3_Jnt_Ctrl_scaleX_breathing.wb";
@@ -43508,15 +43881,21 @@ connectAttr "breathing.bgwt" "Torso_FK_Ctrl_scaleX_breathing.wa";
 connectAttr "breathing.fgwt" "Torso_FK_Ctrl_scaleX_breathing.wb";
 connectAttr "Torso_FK_Ctrl_scaleX_head_turn.o" "Torso_FK_Ctrl_scaleX_breathing.ia"
 		;
+connectAttr "Torso_FK_Ctrl_scaleX_breathing_inputB.o" "Torso_FK_Ctrl_scaleX_breathing.ib"
+		;
 connectAttr "breathing.sam" "Torso_FK_Ctrl_scaleY_breathing.acm";
 connectAttr "breathing.bgwt" "Torso_FK_Ctrl_scaleY_breathing.wa";
 connectAttr "breathing.fgwt" "Torso_FK_Ctrl_scaleY_breathing.wb";
 connectAttr "Torso_FK_Ctrl_scaleY_head_turn.o" "Torso_FK_Ctrl_scaleY_breathing.ia"
 		;
+connectAttr "Torso_FK_Ctrl_scaleY_breathing_inputB.o" "Torso_FK_Ctrl_scaleY_breathing.ib"
+		;
 connectAttr "breathing.sam" "Torso_FK_Ctrl_scaleZ_breathing.acm";
 connectAttr "breathing.bgwt" "Torso_FK_Ctrl_scaleZ_breathing.wa";
 connectAttr "breathing.fgwt" "Torso_FK_Ctrl_scaleZ_breathing.wb";
 connectAttr "Torso_FK_Ctrl_scaleZ_head_turn.o" "Torso_FK_Ctrl_scaleZ_breathing.ia"
+		;
+connectAttr "Torso_FK_Ctrl_scaleZ_breathing_inputB.o" "Torso_FK_Ctrl_scaleZ_breathing.ib"
 		;
 connectAttr "breathing.bgwt" "Torso_FK_Ctrl_FollowTranslate_breathing.wa";
 connectAttr "breathing.fgwt" "Torso_FK_Ctrl_FollowTranslate_breathing.wb";
