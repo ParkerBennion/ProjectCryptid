@@ -1,6 +1,6 @@
 //Maya ASCII 2026 scene
 //Name: Caleb_Walk_Run_Animation.ma
-//Last modified: Tue, May 20, 2025 12:57:42 AM
+//Last modified: Tue, May 20, 2025 02:02:44 AM
 //Codeset: 1252
 file -rdi 1 -ns "Caleb_Rig" -rfn "Caleb_RigRN" -op "v=0;" -typ "mayaAscii" "C:/Users/caris/Desktop/ProjectCryptid/CryptidMobile_MayaProject//scenes/Caleb/Caleb Rig.ma";
 file -r -ns "Caleb_Rig" -dr 1 -rfn "Caleb_RigRN" -op "v=0;" -typ "mayaAscii" "C:/Users/caris/Desktop/ProjectCryptid/CryptidMobile_MayaProject//scenes/Caleb/Caleb Rig.ma";
@@ -16,18 +16,18 @@ fileInfo "product" "Maya 2026";
 fileInfo "version" "2026";
 fileInfo "cutIdentifier" "202502240946-c910a8ba47";
 fileInfo "osv" "Windows 10 Pro for Workstations v2009 (Build: 19045)";
-fileInfo "UUID" "21A74DE6-4119-AE42-D25F-B4A09B515CEB";
+fileInfo "UUID" "597E1A32-4FBE-5357-381C-20B8E2B2E0FF";
 createNode transform -s -n "persp";
 	rename -uid "994CFC71-4D15-C776-2D5B-4EBC89C0FDE0";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -3.9598190486683507 1075.2345366564305 -1250.2653979569566 ;
-	setAttr ".r" -type "double3" -34.954197770104592 -4136.5999999950855 0 ;
+	setAttr ".t" -type "double3" -2821.9562438674889 412.27981324589086 77.317569529370772 ;
+	setAttr ".r" -type "double3" -6.1541977772795402 -4768.599999999893 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "EB48AC33-471B-7D9D-AF37-A29A51E2BF7A";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
 	setAttr ".ncp" 1;
-	setAttr ".coi" 1612.1041370357432;
+	setAttr ".coi" 2847.3504098638005;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -82,39 +82,17 @@ createNode camera -s -n "sideShape" -p "side";
 	setAttr ".hc" -type "string" "viewSet -s %camera";
 	setAttr ".o" yes;
 	setAttr ".ai_translator" -type "string" "orthographic";
-createNode transform -n "Caleb_Rig:CoG_Jnt_Ctrl_motionTrail";
-	rename -uid "FFCAF2B8-40DE-C61B-C8C2-ACA9B40A650D";
-	setAttr -l on ".t";
-	setAttr -k off ".tx";
-	setAttr -k off ".ty";
-	setAttr -k off ".tz";
-	setAttr -l on ".r";
-	setAttr -k off ".rx";
-	setAttr -k off ".ry";
-	setAttr -k off ".rz";
-	setAttr -l on ".s";
-	setAttr -k off ".sx";
-	setAttr -k off ".sy";
-	setAttr -k off ".sz";
-createNode motionTrailShape -n "Caleb_Rig:CoG_Jnt_Ctrl_motionTrailShape" -p "Caleb_Rig:CoG_Jnt_Ctrl_motionTrail";
-	rename -uid "39E2FD95-4C19-BC03-8C3C-07BCBFCC4FB3";
-	setAttr -k off ".v";
-	setAttr ".sf" yes;
-	setAttr ".tt" 2;
-	setAttr ".stc" -type "float3" 0.565 0.2 0.78799999 ;
-	setAttr ".ftc" -type "float3" 0.68599999 0.22 0.071000002 ;
-instanceable -a 0;
 createNode transform -n "left";
 	rename -uid "4B194EA1-4A48-84A8-90B9-818B7A7724C0";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -1044.3708346427907 176.75364732996727 63.651663775591061 ;
+	setAttr ".t" -type "double3" -1044.3708346427907 166.1546452220739 7.5392996749791337 ;
 	setAttr ".r" -type "double3" 0 -90 0 ;
 createNode camera -n "leftShape" -p "left";
 	rename -uid "FC35E1E8-4B27-F4A5-75DA-629EE5F0E910";
 	setAttr -k off ".v";
 	setAttr ".rnd" no;
 	setAttr ".coi" 1184.710652172231;
-	setAttr ".ow" 1050.9828713196052;
+	setAttr ".ow" 1297.9642317241323;
 	setAttr ".imn" -type "string" "left1";
 	setAttr ".den" -type "string" "left1_depth";
 	setAttr ".man" -type "string" "left1_mask";
@@ -173,9 +151,9 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n"
 		+ "            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n"
 		+ "            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 96\n            -height 0\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n"
-		+ "            -camera \"|persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 1\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n"
+		+ "            -camera \"|persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n"
 		+ "            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 0\n"
-		+ "            -imagePlane 1\n            -joints 1\n            -ikHandles 0\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 0\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 2294\n            -height 1178\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n"
+		+ "            -imagePlane 1\n            -joints 1\n            -ikHandles 0\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 3920\n            -height 1319\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n"
 		+ "\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 0\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n"
 		+ "            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 0\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -isSet 0\n            -isSetMember 0\n            -showUfeItems 1\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n"
 		+ "            -longNames 0\n            -niceNames 1\n            -selectCommand \"print(\\\"\\\")\" \n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -renderFilterIndex 0\n            -selectionOrder \"chronological\" \n            -expandAttribute 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n            -showAttributes 0\n            -showConnected 0\n"
@@ -202,17 +180,17 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "                -maxConstantTransparency 1\n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 4 4 \n                -bumpResolution 4 4 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -controllers 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n"
 		+ "                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -bluePencil 1\n                -greasePencils 0\n                -excludeObjectPreset \"All\" \n                -shadows 0\n                -captureSequenceNumber -1\n                -width 0\n                -height 0\n                -sceneRenderFilter 0\n"
 		+ "                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n            stereoCameraView -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName; };\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
-		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 1\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 0\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 0\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 0\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 2294\\n    -height 1178\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
-		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 1\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 0\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 0\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 0\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 2294\\n    -height 1178\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 0\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 0\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 3920\\n    -height 1319\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 0\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 0\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 3920\\n    -height 1319\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
 		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 10 -size 36 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
 	setAttr ".st" 3;
 createNode script -n "sceneConfigurationScriptNode";
 	rename -uid "8E66E0E4-406B-F4D6-6364-F9B411F140C7";
-	setAttr ".b" -type "string" "playbackOptions -min 1 -max 25 -ast 1 -aet 200 ";
+	setAttr ".b" -type "string" "playbackOptions -min 1 -max 26 -ast 1 -aet 200 ";
 	setAttr ".st" 6;
 createNode reference -n "Caleb_RigRN";
 	rename -uid "B3E60151-4ACF-531A-2ACB-F8BBCB16EF2E";
-	setAttr -s 75 ".phl";
+	setAttr -s 59 ".phl";
 	setAttr ".phl[1]" 0;
 	setAttr ".phl[2]" 0;
 	setAttr ".phl[3]" 0;
@@ -272,26 +250,20 @@ createNode reference -n "Caleb_RigRN";
 	setAttr ".phl[57]" 0;
 	setAttr ".phl[58]" 0;
 	setAttr ".phl[59]" 0;
-	setAttr ".phl[60]" 0;
-	setAttr ".phl[61]" 0;
-	setAttr ".phl[62]" 0;
-	setAttr ".phl[63]" 0;
-	setAttr ".phl[64]" 0;
-	setAttr ".phl[65]" 0;
-	setAttr ".phl[66]" 0;
-	setAttr ".phl[67]" 0;
-	setAttr ".phl[68]" 0;
-	setAttr ".phl[69]" 0;
-	setAttr ".phl[70]" 0;
-	setAttr ".phl[71]" 0;
-	setAttr ".phl[72]" 0;
-	setAttr ".phl[73]" 0;
-	setAttr ".phl[74]" 0;
-	setAttr ".phl[75]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"Caleb_RigRN"
 		"Caleb_RigRN" 0
-		"Caleb_RigRN" 110
+		"Caleb_RigRN" 103
+		2 "|Caleb_Rig:CALEB|Caleb_Rig:Geometry|Caleb_Rig:Skinned_Geo|Caleb_Rig:Caleb_Geo_Export|Caleb_Rig:Caleb_Geo_ExportShape" 
+		"uvPivot" " -type \"double2\" 0.38216948555782437 0.90647530555725098"
+		2 "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:L_Arm_Ctrls|Caleb_Rig:L_Arm_FK_Ctrls|Caleb_Rig:L_Arm_1_Jnt_FK_Ctrl_Grp|Caleb_Rig:L_Arm_1_Jnt_FK_Ctrl" 
+		"rotate" " -type \"double3\" 0 -5.34905047196625105 0"
+		2 "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:L_Arm_Ctrls|Caleb_Rig:L_Arm_FK_Ctrls|Caleb_Rig:L_Arm_1_Jnt_FK_Ctrl_Grp|Caleb_Rig:L_Arm_1_Jnt_FK_Ctrl" 
+		"rotatePivotTranslate" " -type \"double3\" 0 0 0"
+		2 "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:R_Arm_Ctrls|Caleb_Rig:R_Arm_FK_Ctrls|Caleb_Rig:R_Arm_1_Jnt_FK_Ctrl_Grp|Caleb_Rig:R_Arm_1_Jnt_FK_Ctrl" 
+		"rotate" " -type \"double3\" 0 -7.6606320793941487 0"
+		2 "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:R_Arm_Ctrls|Caleb_Rig:R_Arm_FK_Ctrls|Caleb_Rig:R_Arm_1_Jnt_FK_Ctrl_Grp|Caleb_Rig:R_Arm_1_Jnt_FK_Ctrl" 
+		"rotatePivotTranslate" " -type \"double3\" 0 0 0"
 		2 "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:CoG_Jnt_Ctrl_Grp|Caleb_Rig:CoG_Jnt_Ctrl|Caleb_Rig:CoG_Jnt_CtrlShape" 
 		"ghosting" " 0"
 		2 "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:CoG_Jnt_Ctrl_Grp|Caleb_Rig:CoG_Jnt_Ctrl|Caleb_Rig:CoG_Jnt_CtrlShape" 
@@ -311,6 +283,10 @@ createNode reference -n "Caleb_RigRN";
 		2 "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:CoG_Jnt_Ctrl_Grp|Caleb_Rig:CoG_Jnt_Ctrl|Caleb_Rig:CoG_Jnt_CtrlShape" 
 		"ghostColorPost" " -type \"float3\" 0.87800001999999999 0.67799997000000001 0.66299998999999998"
 		
+		2 "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:L_Leg_IK_Ctrls|Caleb_Rig:L_Leg_IK_PV_Ctrl_Grp|Caleb_Rig:L_Leg_IK_PV_Ctrl" 
+		"translate" " -type \"double3\" -162.45355343014165328 0 0"
+		2 "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:L_Leg_IK_Ctrls|Caleb_Rig:L_Leg_IK_PV_Ctrl_Grp|Caleb_Rig:L_Leg_IK_PV_Ctrl" 
+		"rotate" " -type \"double3\" 0 0 0"
 		2 "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:L_Leg_IK_Ctrls|Caleb_Rig:L_Leg_IK_Ctrl_Grp|Caleb_Rig:L_Leg_IK_Ctrl" 
 		"HeelTilt" " -k 1"
 		2 "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:L_Leg_IK_Ctrls|Caleb_Rig:L_Leg_IK_Ctrl_Grp|Caleb_Rig:L_Leg_IK_Ctrl" 
@@ -323,6 +299,10 @@ createNode reference -n "Caleb_RigRN";
 		"ToeTap" " -k 1"
 		2 "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:L_Leg_IK_Ctrls|Caleb_Rig:L_Leg_IK_Ctrl_Grp|Caleb_Rig:L_Leg_IK_Ctrl" 
 		"WalkCycle" " -k 1"
+		2 "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:R_Leg_IK_Ctrls|Caleb_Rig:R_Leg_IK_PV_Ctrl_Grp|Caleb_Rig:R_Leg_IK_PV_Ctrl" 
+		"translate" " -type \"double3\" -162.45355343014165328 0 0"
+		2 "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:R_Leg_IK_Ctrls|Caleb_Rig:R_Leg_IK_PV_Ctrl_Grp|Caleb_Rig:R_Leg_IK_PV_Ctrl" 
+		"rotate" " -type \"double3\" 0 0 0"
 		2 "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:R_Leg_IK_Ctrls|Caleb_Rig:R_Leg_IK_Ctrl_Grp|Caleb_Rig:R_Leg_IK_Ctrl" 
 		"rotatePivotTranslate" " -type \"double3\" 0 0 0"
 		2 "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:R_Leg_IK_Ctrls|Caleb_Rig:R_Leg_IK_Ctrl_Grp|Caleb_Rig:R_Leg_IK_Ctrl" 
@@ -378,137 +358,105 @@ createNode reference -n "Caleb_RigRN";
 		"Caleb_RigRN.placeHolderList[8]" ""
 		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:CoG_Jnt_Ctrl_Grp|Caleb_Rig:CoG_Jnt_Ctrl.translateZ" 
 		"Caleb_RigRN.placeHolderList[9]" ""
-		5 3 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:CoG_Jnt_Ctrl_Grp|Caleb_Rig:CoG_Jnt_Ctrl.rotatePivot" 
-		"Caleb_RigRN.placeHolderList[10]" ""
 		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:CoG_Jnt_Ctrl_Grp|Caleb_Rig:CoG_Jnt_Ctrl.rotateX" 
-		"Caleb_RigRN.placeHolderList[11]" ""
+		"Caleb_RigRN.placeHolderList[10]" ""
 		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:CoG_Jnt_Ctrl_Grp|Caleb_Rig:CoG_Jnt_Ctrl.rotateY" 
-		"Caleb_RigRN.placeHolderList[12]" ""
+		"Caleb_RigRN.placeHolderList[11]" ""
 		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:CoG_Jnt_Ctrl_Grp|Caleb_Rig:CoG_Jnt_Ctrl.rotateZ" 
-		"Caleb_RigRN.placeHolderList[13]" ""
-		5 3 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:CoG_Jnt_Ctrl_Grp|Caleb_Rig:CoG_Jnt_Ctrl.worldMatrix" 
-		"Caleb_RigRN.placeHolderList[14]" ""
-		5 3 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:CoG_Jnt_Ctrl_Grp|Caleb_Rig:CoG_Jnt_Ctrl.message" 
-		"Caleb_RigRN.placeHolderList[15]" ""
-		5 3 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:CoG_Jnt_Ctrl_Grp|Caleb_Rig:CoG_Jnt_Ctrl.message" 
-		"Caleb_RigRN.placeHolderList[16]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:L_Leg_IK_Ctrls|Caleb_Rig:L_Leg_IK_PV_Ctrl_Grp|Caleb_Rig:L_Leg_IK_PV_Ctrl.translateX" 
-		"Caleb_RigRN.placeHolderList[17]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:L_Leg_IK_Ctrls|Caleb_Rig:L_Leg_IK_PV_Ctrl_Grp|Caleb_Rig:L_Leg_IK_PV_Ctrl.translateY" 
-		"Caleb_RigRN.placeHolderList[18]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:L_Leg_IK_Ctrls|Caleb_Rig:L_Leg_IK_PV_Ctrl_Grp|Caleb_Rig:L_Leg_IK_PV_Ctrl.translateZ" 
-		"Caleb_RigRN.placeHolderList[19]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:L_Leg_IK_Ctrls|Caleb_Rig:L_Leg_IK_PV_Ctrl_Grp|Caleb_Rig:L_Leg_IK_PV_Ctrl.rotateX" 
-		"Caleb_RigRN.placeHolderList[20]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:L_Leg_IK_Ctrls|Caleb_Rig:L_Leg_IK_PV_Ctrl_Grp|Caleb_Rig:L_Leg_IK_PV_Ctrl.rotateY" 
-		"Caleb_RigRN.placeHolderList[21]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:L_Leg_IK_Ctrls|Caleb_Rig:L_Leg_IK_PV_Ctrl_Grp|Caleb_Rig:L_Leg_IK_PV_Ctrl.rotateZ" 
-		"Caleb_RigRN.placeHolderList[22]" ""
+		"Caleb_RigRN.placeHolderList[12]" ""
 		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:L_Leg_IK_Ctrls|Caleb_Rig:L_Leg_IK_Ctrl_Grp|Caleb_Rig:L_Leg_IK_Ctrl._______________" 
-		"Caleb_RigRN.placeHolderList[23]" ""
+		"Caleb_RigRN.placeHolderList[13]" ""
 		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:L_Leg_IK_Ctrls|Caleb_Rig:L_Leg_IK_Ctrl_Grp|Caleb_Rig:L_Leg_IK_Ctrl.ShowFootControls" 
-		"Caleb_RigRN.placeHolderList[24]" ""
+		"Caleb_RigRN.placeHolderList[14]" ""
 		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:L_Leg_IK_Ctrls|Caleb_Rig:L_Leg_IK_Ctrl_Grp|Caleb_Rig:L_Leg_IK_Ctrl.HeelTilt" 
-		"Caleb_RigRN.placeHolderList[25]" ""
+		"Caleb_RigRN.placeHolderList[15]" ""
 		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:L_Leg_IK_Ctrls|Caleb_Rig:L_Leg_IK_Ctrl_Grp|Caleb_Rig:L_Leg_IK_Ctrl.HeelPivot" 
-		"Caleb_RigRN.placeHolderList[26]" ""
+		"Caleb_RigRN.placeHolderList[16]" ""
 		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:L_Leg_IK_Ctrls|Caleb_Rig:L_Leg_IK_Ctrl_Grp|Caleb_Rig:L_Leg_IK_Ctrl.ToeTilt" 
-		"Caleb_RigRN.placeHolderList[27]" ""
+		"Caleb_RigRN.placeHolderList[17]" ""
 		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:L_Leg_IK_Ctrls|Caleb_Rig:L_Leg_IK_Ctrl_Grp|Caleb_Rig:L_Leg_IK_Ctrl.ToePivot" 
-		"Caleb_RigRN.placeHolderList[28]" ""
+		"Caleb_RigRN.placeHolderList[18]" ""
 		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:L_Leg_IK_Ctrls|Caleb_Rig:L_Leg_IK_Ctrl_Grp|Caleb_Rig:L_Leg_IK_Ctrl.BallTilt" 
-		"Caleb_RigRN.placeHolderList[29]" ""
+		"Caleb_RigRN.placeHolderList[19]" ""
 		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:L_Leg_IK_Ctrls|Caleb_Rig:L_Leg_IK_Ctrl_Grp|Caleb_Rig:L_Leg_IK_Ctrl.ToeTap" 
-		"Caleb_RigRN.placeHolderList[30]" ""
+		"Caleb_RigRN.placeHolderList[20]" ""
 		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:L_Leg_IK_Ctrls|Caleb_Rig:L_Leg_IK_Ctrl_Grp|Caleb_Rig:L_Leg_IK_Ctrl.WalkCycle" 
-		"Caleb_RigRN.placeHolderList[31]" ""
+		"Caleb_RigRN.placeHolderList[21]" ""
 		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:L_Leg_IK_Ctrls|Caleb_Rig:L_Leg_IK_Ctrl_Grp|Caleb_Rig:L_Leg_IK_Ctrl.FootTilt" 
-		"Caleb_RigRN.placeHolderList[32]" ""
+		"Caleb_RigRN.placeHolderList[22]" ""
 		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:L_Leg_IK_Ctrls|Caleb_Rig:L_Leg_IK_Ctrl_Grp|Caleb_Rig:L_Leg_IK_Ctrl.translateX" 
-		"Caleb_RigRN.placeHolderList[33]" ""
+		"Caleb_RigRN.placeHolderList[23]" ""
 		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:L_Leg_IK_Ctrls|Caleb_Rig:L_Leg_IK_Ctrl_Grp|Caleb_Rig:L_Leg_IK_Ctrl.translateY" 
-		"Caleb_RigRN.placeHolderList[34]" ""
+		"Caleb_RigRN.placeHolderList[24]" ""
 		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:L_Leg_IK_Ctrls|Caleb_Rig:L_Leg_IK_Ctrl_Grp|Caleb_Rig:L_Leg_IK_Ctrl.translateZ" 
-		"Caleb_RigRN.placeHolderList[35]" ""
+		"Caleb_RigRN.placeHolderList[25]" ""
 		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:L_Leg_IK_Ctrls|Caleb_Rig:L_Leg_IK_Ctrl_Grp|Caleb_Rig:L_Leg_IK_Ctrl.rotateX" 
-		"Caleb_RigRN.placeHolderList[36]" ""
+		"Caleb_RigRN.placeHolderList[26]" ""
 		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:L_Leg_IK_Ctrls|Caleb_Rig:L_Leg_IK_Ctrl_Grp|Caleb_Rig:L_Leg_IK_Ctrl.rotateY" 
-		"Caleb_RigRN.placeHolderList[37]" ""
+		"Caleb_RigRN.placeHolderList[27]" ""
 		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:L_Leg_IK_Ctrls|Caleb_Rig:L_Leg_IK_Ctrl_Grp|Caleb_Rig:L_Leg_IK_Ctrl.rotateZ" 
-		"Caleb_RigRN.placeHolderList[38]" ""
+		"Caleb_RigRN.placeHolderList[28]" ""
 		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:L_Leg_IK_Ctrls|Caleb_Rig:L_Leg_IK_Ctrl_Grp|Caleb_Rig:L_Leg_IK_Ctrl.scaleX" 
-		"Caleb_RigRN.placeHolderList[39]" ""
+		"Caleb_RigRN.placeHolderList[29]" ""
 		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:L_Leg_IK_Ctrls|Caleb_Rig:L_Leg_IK_Ctrl_Grp|Caleb_Rig:L_Leg_IK_Ctrl.scaleY" 
-		"Caleb_RigRN.placeHolderList[40]" ""
+		"Caleb_RigRN.placeHolderList[30]" ""
 		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:L_Leg_IK_Ctrls|Caleb_Rig:L_Leg_IK_Ctrl_Grp|Caleb_Rig:L_Leg_IK_Ctrl.scaleZ" 
-		"Caleb_RigRN.placeHolderList[41]" ""
+		"Caleb_RigRN.placeHolderList[31]" ""
 		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:L_Leg_IK_Ctrls|Caleb_Rig:L_Leg_IK_Ctrl_Grp|Caleb_Rig:L_Leg_IK_Ctrl.Stretch" 
-		"Caleb_RigRN.placeHolderList[42]" ""
+		"Caleb_RigRN.placeHolderList[32]" ""
 		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:L_Leg_IK_Ctrls|Caleb_Rig:L_Leg_IK_Ctrl_Grp|Caleb_Rig:L_Leg_IK_Ctrl.Max_Stretch" 
-		"Caleb_RigRN.placeHolderList[43]" ""
+		"Caleb_RigRN.placeHolderList[33]" ""
 		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:L_Leg_IK_Ctrls|Caleb_Rig:L_Leg_IK_Ctrl_Grp|Caleb_Rig:L_Leg_IK_Ctrl.Local_Space" 
-		"Caleb_RigRN.placeHolderList[44]" ""
+		"Caleb_RigRN.placeHolderList[34]" ""
 		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:L_Leg_IK_Ctrls|Caleb_Rig:L_Leg_IK_Ctrl_Grp|Caleb_Rig:L_Leg_IK_Ctrl.visibility" 
-		"Caleb_RigRN.placeHolderList[45]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:R_Leg_IK_Ctrls|Caleb_Rig:R_Leg_IK_PV_Ctrl_Grp|Caleb_Rig:R_Leg_IK_PV_Ctrl.translateX" 
-		"Caleb_RigRN.placeHolderList[46]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:R_Leg_IK_Ctrls|Caleb_Rig:R_Leg_IK_PV_Ctrl_Grp|Caleb_Rig:R_Leg_IK_PV_Ctrl.translateY" 
-		"Caleb_RigRN.placeHolderList[47]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:R_Leg_IK_Ctrls|Caleb_Rig:R_Leg_IK_PV_Ctrl_Grp|Caleb_Rig:R_Leg_IK_PV_Ctrl.translateZ" 
-		"Caleb_RigRN.placeHolderList[48]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:R_Leg_IK_Ctrls|Caleb_Rig:R_Leg_IK_PV_Ctrl_Grp|Caleb_Rig:R_Leg_IK_PV_Ctrl.rotateX" 
-		"Caleb_RigRN.placeHolderList[49]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:R_Leg_IK_Ctrls|Caleb_Rig:R_Leg_IK_PV_Ctrl_Grp|Caleb_Rig:R_Leg_IK_PV_Ctrl.rotateY" 
-		"Caleb_RigRN.placeHolderList[50]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:R_Leg_IK_Ctrls|Caleb_Rig:R_Leg_IK_PV_Ctrl_Grp|Caleb_Rig:R_Leg_IK_PV_Ctrl.rotateZ" 
-		"Caleb_RigRN.placeHolderList[51]" ""
+		"Caleb_RigRN.placeHolderList[35]" ""
 		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:R_Leg_IK_Ctrls|Caleb_Rig:R_Leg_IK_Ctrl_Grp|Caleb_Rig:R_Leg_IK_Ctrl._______________" 
-		"Caleb_RigRN.placeHolderList[52]" ""
+		"Caleb_RigRN.placeHolderList[36]" ""
 		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:R_Leg_IK_Ctrls|Caleb_Rig:R_Leg_IK_Ctrl_Grp|Caleb_Rig:R_Leg_IK_Ctrl.ShowFootControls" 
-		"Caleb_RigRN.placeHolderList[53]" ""
+		"Caleb_RigRN.placeHolderList[37]" ""
 		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:R_Leg_IK_Ctrls|Caleb_Rig:R_Leg_IK_Ctrl_Grp|Caleb_Rig:R_Leg_IK_Ctrl.HeelTilt" 
-		"Caleb_RigRN.placeHolderList[54]" ""
+		"Caleb_RigRN.placeHolderList[38]" ""
 		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:R_Leg_IK_Ctrls|Caleb_Rig:R_Leg_IK_Ctrl_Grp|Caleb_Rig:R_Leg_IK_Ctrl.HeelPivot" 
-		"Caleb_RigRN.placeHolderList[55]" ""
+		"Caleb_RigRN.placeHolderList[39]" ""
 		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:R_Leg_IK_Ctrls|Caleb_Rig:R_Leg_IK_Ctrl_Grp|Caleb_Rig:R_Leg_IK_Ctrl.ToeTilt" 
-		"Caleb_RigRN.placeHolderList[56]" ""
+		"Caleb_RigRN.placeHolderList[40]" ""
 		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:R_Leg_IK_Ctrls|Caleb_Rig:R_Leg_IK_Ctrl_Grp|Caleb_Rig:R_Leg_IK_Ctrl.ToePivot" 
-		"Caleb_RigRN.placeHolderList[57]" ""
+		"Caleb_RigRN.placeHolderList[41]" ""
 		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:R_Leg_IK_Ctrls|Caleb_Rig:R_Leg_IK_Ctrl_Grp|Caleb_Rig:R_Leg_IK_Ctrl.BallTilt" 
-		"Caleb_RigRN.placeHolderList[58]" ""
+		"Caleb_RigRN.placeHolderList[42]" ""
 		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:R_Leg_IK_Ctrls|Caleb_Rig:R_Leg_IK_Ctrl_Grp|Caleb_Rig:R_Leg_IK_Ctrl.ToeTap" 
-		"Caleb_RigRN.placeHolderList[59]" ""
+		"Caleb_RigRN.placeHolderList[43]" ""
 		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:R_Leg_IK_Ctrls|Caleb_Rig:R_Leg_IK_Ctrl_Grp|Caleb_Rig:R_Leg_IK_Ctrl.WalkCycle" 
-		"Caleb_RigRN.placeHolderList[60]" ""
+		"Caleb_RigRN.placeHolderList[44]" ""
 		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:R_Leg_IK_Ctrls|Caleb_Rig:R_Leg_IK_Ctrl_Grp|Caleb_Rig:R_Leg_IK_Ctrl.FootTilt" 
-		"Caleb_RigRN.placeHolderList[61]" ""
+		"Caleb_RigRN.placeHolderList[45]" ""
 		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:R_Leg_IK_Ctrls|Caleb_Rig:R_Leg_IK_Ctrl_Grp|Caleb_Rig:R_Leg_IK_Ctrl.translateX" 
-		"Caleb_RigRN.placeHolderList[62]" ""
+		"Caleb_RigRN.placeHolderList[46]" ""
 		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:R_Leg_IK_Ctrls|Caleb_Rig:R_Leg_IK_Ctrl_Grp|Caleb_Rig:R_Leg_IK_Ctrl.translateY" 
-		"Caleb_RigRN.placeHolderList[63]" ""
+		"Caleb_RigRN.placeHolderList[47]" ""
 		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:R_Leg_IK_Ctrls|Caleb_Rig:R_Leg_IK_Ctrl_Grp|Caleb_Rig:R_Leg_IK_Ctrl.translateZ" 
-		"Caleb_RigRN.placeHolderList[64]" ""
+		"Caleb_RigRN.placeHolderList[48]" ""
 		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:R_Leg_IK_Ctrls|Caleb_Rig:R_Leg_IK_Ctrl_Grp|Caleb_Rig:R_Leg_IK_Ctrl.rotateX" 
-		"Caleb_RigRN.placeHolderList[65]" ""
+		"Caleb_RigRN.placeHolderList[49]" ""
 		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:R_Leg_IK_Ctrls|Caleb_Rig:R_Leg_IK_Ctrl_Grp|Caleb_Rig:R_Leg_IK_Ctrl.rotateY" 
-		"Caleb_RigRN.placeHolderList[66]" ""
+		"Caleb_RigRN.placeHolderList[50]" ""
 		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:R_Leg_IK_Ctrls|Caleb_Rig:R_Leg_IK_Ctrl_Grp|Caleb_Rig:R_Leg_IK_Ctrl.rotateZ" 
-		"Caleb_RigRN.placeHolderList[67]" ""
+		"Caleb_RigRN.placeHolderList[51]" ""
 		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:R_Leg_IK_Ctrls|Caleb_Rig:R_Leg_IK_Ctrl_Grp|Caleb_Rig:R_Leg_IK_Ctrl.scaleX" 
-		"Caleb_RigRN.placeHolderList[68]" ""
+		"Caleb_RigRN.placeHolderList[52]" ""
 		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:R_Leg_IK_Ctrls|Caleb_Rig:R_Leg_IK_Ctrl_Grp|Caleb_Rig:R_Leg_IK_Ctrl.scaleY" 
-		"Caleb_RigRN.placeHolderList[69]" ""
+		"Caleb_RigRN.placeHolderList[53]" ""
 		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:R_Leg_IK_Ctrls|Caleb_Rig:R_Leg_IK_Ctrl_Grp|Caleb_Rig:R_Leg_IK_Ctrl.scaleZ" 
-		"Caleb_RigRN.placeHolderList[70]" ""
+		"Caleb_RigRN.placeHolderList[54]" ""
 		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:R_Leg_IK_Ctrls|Caleb_Rig:R_Leg_IK_Ctrl_Grp|Caleb_Rig:R_Leg_IK_Ctrl.Stretch" 
-		"Caleb_RigRN.placeHolderList[71]" ""
+		"Caleb_RigRN.placeHolderList[55]" ""
 		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:R_Leg_IK_Ctrls|Caleb_Rig:R_Leg_IK_Ctrl_Grp|Caleb_Rig:R_Leg_IK_Ctrl.Max_Stretch" 
-		"Caleb_RigRN.placeHolderList[72]" ""
+		"Caleb_RigRN.placeHolderList[56]" ""
 		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:R_Leg_IK_Ctrls|Caleb_Rig:R_Leg_IK_Ctrl_Grp|Caleb_Rig:R_Leg_IK_Ctrl.Local_Space" 
-		"Caleb_RigRN.placeHolderList[73]" ""
+		"Caleb_RigRN.placeHolderList[57]" ""
 		5 4 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Leg_Ctrls|Caleb_Rig:R_Leg_IK_Ctrls|Caleb_Rig:R_Leg_IK_Ctrl_Grp|Caleb_Rig:R_Leg_IK_Ctrl.visibility" 
-		"Caleb_RigRN.placeHolderList[74]" ""
-		5 4 "Caleb_RigRN" "|Caleb_Rig:Axe_Geometry:Axe.drawOverride" "Caleb_RigRN.placeHolderList[75]" 
+		"Caleb_RigRN.placeHolderList[58]" ""
+		5 4 "Caleb_RigRN" "|Caleb_Rig:Axe_Geometry:Axe.drawOverride" "Caleb_RigRN.placeHolderList[59]" 
 		"";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
@@ -529,61 +477,71 @@ createNode animCurveTL -n "CoG_Jnt_Ctrl_translateY";
 	rename -uid "C35E9F48-44B8-1E1A-C8D0-10980FC2F1C8";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 -9.461676790032115 4 -19.852573439068003
-		 7 -3.7284573333981541 10 6.2134526380344397 13 -7.0531853888142706 16 -19.85 19 -3.72
-		 22 6.21 25 -9.4616767900000003;
+	setAttr -s 6 ".ktv[0:5]"  1 -9.461676790032115 4 -14.225696149336278
+		 10 -0.039132763333128651 16 -14.38604311020041 22 -0.058258651874639078 25 -9.461676790032115;
 createNode animCurveTL -n "CoG_Jnt_Ctrl_translateZ";
 	rename -uid "B6BD0CB8-491A-6AC4-4A1F-30877FE86F70";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
+	setAttr -s 2 ".ktv[0:1]"  1 0 25 0;
 createNode animCurveTA -n "CoG_Jnt_Ctrl_rotateX";
 	rename -uid "029DE906-462A-5463-B788-73A47AB7AF76";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
+	setAttr -s 2 ".ktv[0:1]"  1 0 25 0;
 createNode animCurveTA -n "CoG_Jnt_Ctrl_rotateY";
 	rename -uid "D04922DC-4A09-A27B-866D-FA895A2B0706";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
+	setAttr -s 2 ".ktv[0:1]"  1 0 25 0;
 createNode animCurveTA -n "CoG_Jnt_Ctrl_rotateZ";
 	rename -uid "727DC542-4E1E-995F-5333-FCBE39488567";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
+	setAttr -s 2 ".ktv[0:1]"  1 0 25 0;
 createNode animCurveTL -n "L_Leg_IK_Ctrl_translateX";
 	rename -uid "D4BE9C78-4B3A-3EEE-EE81-3597B04EE720";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  1 -7.1054273576010019e-15 7 0 13 0;
+	setAttr -s 6 ".ktv[0:5]"  1 -6 4 -6 7 -6 13 -6 19 -6 25 -6;
 createNode animCurveTL -n "L_Leg_IK_Ctrl_translateY";
 	rename -uid "9916C16B-40F2-5B5B-105D-6CA575EE47B5";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 -7.1054273576010019e-15 7 0 13 0 19 36.001562707605871
-		 25 0;
+	setAttr -s 7 ".ktv[0:6]"  1 -7.1054273576010019e-15 7 0 13 0 16 0
+		 19 4.1402532366953899 22 -26.931543842331699 25 -7.1054273576010019e-15;
 createNode animCurveTL -n "L_Leg_IK_Ctrl_translateZ";
 	rename -uid "1FD833B4-4FE9-0180-90C8-8F82BB64E2B4";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  1 83.586252026183203 4 54.053004817266043
-		 7 8.4107136762121435 10 -48.865886971384896 13 -69.449665329115106 25 83.5862520262;
+	setAttr -s 8 ".ktv[0:7]"  1 73.246055445904034 4 54.482891305894313
+		 7 8.4107136762121435 10 -50.736299108071989 13 -59.360858274251882 16 -83.569516688317592
+		 19 -99.658148340699327 25 73.246055445904034;
+	setAttr -s 8 ".kit[2:7]"  1 1 18 18 18 18;
+	setAttr -s 8 ".kot[2:7]"  1 1 18 18 18 18;
+	setAttr -s 8 ".kix[2:7]"  0.0018337970884992581 0.0035210628545664681 
+		0.0076140193273073996 0.0062037717348615382 1 1;
+	setAttr -s 8 ".kiy[2:7]"  -0.99999831859270538 -0.99999380103897351 
+		-0.99997101293471669 -0.99998075642297324 0 0;
+	setAttr -s 8 ".kox[2:7]"  0.0018337972014780539 0.003521063747528056 
+		0.0076140193273073996 0.0062037717348615382 1 1;
+	setAttr -s 8 ".koy[2:7]"  -0.99999831859249844 -0.99999380103582935 
+		-0.99997101293471669 -0.99998075642297324 0 0;
 createNode animCurveTA -n "L_Leg_IK_Ctrl_rotateX";
 	rename -uid "01FB7066-4A49-BD42-EA0A-75BF56D85E3E";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 0 13 0 19 89.352026536593229 25 0;
+	setAttr -s 5 ".ktv[0:4]"  1 0 13 0 16 0 19 0 25 0;
 createNode animCurveTA -n "L_Leg_IK_Ctrl_rotateY";
 	rename -uid "7C01408A-42C0-EC7B-5C1D-64A2705C66EB";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 13 0;
+	setAttr -s 3 ".ktv[0:2]"  1 0 13 0 25 0;
 createNode animCurveTA -n "L_Leg_IK_Ctrl_rotateZ";
 	rename -uid "E1715777-4708-C54C-AC52-72A546FBF8D5";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 13 0;
+	setAttr -s 3 ".ktv[0:2]"  1 0 13 0 25 0;
 createNode animCurveTL -n "Spine_1_Jnt_FK_Ctrl_translateX";
 	rename -uid "D45FB7E3-46C9-22B6-005E-C1BE323617E8";
 	setAttr ".tan" 18;
@@ -618,18 +576,24 @@ createNode animCurveTA -n "R_Leg_IK_Ctrl_rotateX";
 	rename -uid "DF354C24-4CA5-F7ED-6D03-6FBC71A7CDE6";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  1 0 4 0 7 5.3557014410578132 10 14.647720079024879
-		 13 0 16 0;
+	setAttr -s 7 ".ktv[0:6]"  1 0 4 0 7 5.3557014410578132 10 14.647720079024879
+		 13 0 16 0 25 0;
+	setAttr -s 7 ".kit[2:6]"  1 18 18 18 18;
+	setAttr -s 7 ".kot[2:6]"  1 18 18 18 18;
+	setAttr -s 7 ".kix[2:6]"  0.5854597183144109 1 1 1 1;
+	setAttr -s 7 ".kiy[2:6]"  0.81070149761253729 0 0 0 0;
+	setAttr -s 7 ".kox[2:6]"  0.58545967460411386 1 1 1 1;
+	setAttr -s 7 ".koy[2:6]"  0.81070152917855354 0 0 0 0;
 createNode animCurveTA -n "R_Leg_IK_Ctrl_rotateY";
 	rename -uid "C0FBEF5C-4D6D-BCD4-1F7F-FAAB91242309";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  1 0 4 0 16 0;
+	setAttr -s 4 ".ktv[0:3]"  1 0 4 0 16 0 25 0;
 createNode animCurveTA -n "R_Leg_IK_Ctrl_rotateZ";
 	rename -uid "221E1227-4EAB-2855-7818-67838C2DD3B3";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  1 0 4 0 16 0;
+	setAttr -s 4 ".ktv[0:3]"  1 0 4 0 16 0 25 0;
 createNode animCurveTU -n "R_Leg_IK_Ctrl_scaleX";
 	rename -uid "BC165623-456B-0237-D895-CBA9779FEF81";
 	setAttr ".tan" 18;
@@ -649,21 +613,21 @@ createNode animCurveTL -n "R_Leg_IK_Ctrl_translateX";
 	rename -uid "7A2618C7-42FF-FB3A-50D9-929DA0ECA265";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  1 -3.6865157175170401e-22 4 0 7 0 10 -0.69440493502604927
-		 16 -0.44997439789687999 25 0;
+	setAttr -s 7 ".ktv[0:6]"  1 6 4 6 7 6 10 5.2813516828146376 13 6 16 6
+		 25 6;
 createNode animCurveTL -n "R_Leg_IK_Ctrl_translateY";
 	rename -uid "1E3A21B9-4220-6AFE-AC8D-FF923FDEECE2";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  1 1.0383647722583345e-14 4 0 7 -12.036834593969028
-		 10 23.591465740994021 13 0 16 0;
+	setAttr -s 7 ".ktv[0:6]"  1 1.0383647722583345e-14 4 0 7 -10.362250059907824
+		 10 16.584224122458867 13 0 16 0 25 1.0383647722583345e-14;
 createNode animCurveTL -n "R_Leg_IK_Ctrl_translateZ";
 	rename -uid "541C4175-4467-CC8F-A598-B3823CC0FF59";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 7 ".ktv[0:6]"  1 55.415082623544095 4 84.053382947342584
-		 7 98.275485629582136 10 -4.6434061590686753 13 -79.818944509039738 16 -58.688627769580414
-		 25 55.415082623499998;
+	setAttr -s 7 ".ktv[0:6]"  1 55.415082623544095 4 75.987294867025753
+		 7 96.623537606622051 10 -3.5033302524458207 13 -72.827509439118757 16 -47.546559153610715
+		 25 55.415082623544095;
 createNode animCurveTU -n "R_Leg_IK_Ctrl_visibility";
 	rename -uid "621FB139-4527-DED6-12E2-51ACDF3EAFFB";
 	setAttr ".tan" 18;
@@ -713,7 +677,7 @@ createNode animCurveTU -n "R_Leg_IK_Ctrl_BallTilt";
 	rename -uid "7C8DCFD6-4D65-A7EA-FE66-F7A397AE4B68";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 3 7 0 13 0 25 3;
+	setAttr -s 5 ".ktv[0:4]"  1 3 7 0 13 0 19 0 25 3;
 createNode animCurveTU -n "R_Leg_IK_Ctrl_ToeTap";
 	rename -uid "72A44C20-477E-914F-D737-77B673B3FBB7";
 	setAttr ".tan" 18;
@@ -723,7 +687,7 @@ createNode animCurveTU -n "R_Leg_IK_Ctrl_WalkCycle";
 	rename -uid "9F8CFA11-41FB-1041-5B17-3AAC91CBAB20";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 10 7 0 13 -9 19 0 25 10;
+	setAttr -s 7 ".ktv[0:6]"  1 10 7 0 13 -9 16 0 19 0 22 0 25 10;
 createNode animCurveTU -n "R_Leg_IK_Ctrl_FootTilt";
 	rename -uid "BB95559C-46C5-315C-1EC3-4983CF1FE664";
 	setAttr ".tan" 18;
@@ -788,7 +752,7 @@ createNode animCurveTU -n "L_Leg_IK_Ctrl_ToeTilt";
 	rename -uid "DDAE0AEF-4759-D722-B6DA-70BBF97ED481";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  1 0 19 1 25 0;
+	setAttr -s 5 ".ktv[0:4]"  1 0 13 0 16 5 19 10 25 0;
 createNode animCurveTU -n "L_Leg_IK_Ctrl_ToePivot";
 	rename -uid "035CD9F3-4049-3896-8ED7-F0967515CBFF";
 	setAttr ".tan" 18;
@@ -798,7 +762,7 @@ createNode animCurveTU -n "L_Leg_IK_Ctrl_BallTilt";
 	rename -uid "74FB3803-421E-462F-5AD9-C0BA5A0D516C";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 0 7 0 13 3 19 0;
+	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 3 16 1.5 19 0;
 createNode animCurveTU -n "L_Leg_IK_Ctrl_ToeTap";
 	rename -uid "36F0AFED-486A-E8C3-1857-0D91272F997F";
 	setAttr ".tan" 18;
@@ -808,7 +772,7 @@ createNode animCurveTU -n "L_Leg_IK_Ctrl_WalkCycle";
 	rename -uid "BBD6694C-473B-484F-8BA8-34A2D7901496";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 7 ".ktv[0:6]"  1 -9 4 0 7 0 10 12 13 10 19 0 25 -9;
+	setAttr -s 8 ".ktv[0:7]"  1 -9 4 0 7 0 10 12 13 10 16 6 19 0 25 -9;
 createNode animCurveTU -n "L_Leg_IK_Ctrl_FootTilt";
 	rename -uid "6D9F8B6B-4698-8BB5-FB16-408CA663DDE6";
 	setAttr ".tan" 18;
@@ -819,73 +783,9 @@ createNode animCurveTU -n "L_Leg_IK_Ctrl_Local_Space";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr ".ktv[0]"  1 1;
-createNode animCurveTL -n "R_Leg_IK_PV_Ctrl_translateX";
-	rename -uid "9817927D-4396-0A2D-BC98-CAB31D40087B";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  7 -162.45355343014165 13 -381.22176873628086;
-createNode animCurveTL -n "R_Leg_IK_PV_Ctrl_translateY";
-	rename -uid "FC5DF119-4497-4E88-11F9-59B8A721E155";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  7 0;
-createNode animCurveTL -n "R_Leg_IK_PV_Ctrl_translateZ";
-	rename -uid "0375FD07-4FA7-E212-7CF7-EF8EFD72F974";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  7 0;
-createNode animCurveTL -n "L_Leg_IK_PV_Ctrl_translateX";
-	rename -uid "3959C947-4C7E-BF26-A8AE-649D9F09E468";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  7 -162.45355343014165 13 -381.22176873628086;
-createNode animCurveTL -n "L_Leg_IK_PV_Ctrl_translateY";
-	rename -uid "9FFF012F-4755-45CB-B9DE-67AB4AE106F5";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  7 0;
-createNode animCurveTL -n "L_Leg_IK_PV_Ctrl_translateZ";
-	rename -uid "8E2B4331-4F52-19E5-9319-0FB55A455205";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  7 0;
-createNode animCurveTA -n "R_Leg_IK_PV_Ctrl_rotateX";
-	rename -uid "787CE9F2-4C57-87D0-8562-0DB069CB01CB";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  7 0;
-createNode animCurveTA -n "R_Leg_IK_PV_Ctrl_rotateY";
-	rename -uid "295FD02B-4774-60B7-15C7-19ABD4A43953";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  7 0;
-createNode animCurveTA -n "R_Leg_IK_PV_Ctrl_rotateZ";
-	rename -uid "A4DB8406-4480-7083-01EC-C1866302B19C";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  7 0;
-createNode animCurveTA -n "L_Leg_IK_PV_Ctrl_rotateX";
-	rename -uid "5B5BCDB9-46BA-E704-874A-DF9FDADC290D";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  7 0;
-createNode animCurveTA -n "L_Leg_IK_PV_Ctrl_rotateY";
-	rename -uid "BFC5CBE0-498B-7D4E-1A62-B8BB1EA9CC04";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  7 0;
-createNode animCurveTA -n "L_Leg_IK_PV_Ctrl_rotateZ";
-	rename -uid "6EA591ED-4566-9663-C43A-2A8F3200CC6F";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  7 0;
-createNode motionTrail -n "motionTrail1";
-	rename -uid "BB5C05EE-4419-4DB6-9000-489A6C9AD483";
-	setAttr ".s" 1;
-	setAttr ".e" 26;
 select -ne :time1;
-	setAttr ".o" 1;
-	setAttr ".unw" 1;
+	setAttr ".o" 20;
+	setAttr ".unw" 20;
 select -ne :hardwareRenderingGlobals;
 	setAttr ".otfna" -type "stringArray" 22 "NURBS Curves" "NURBS Surfaces" "Polygons" "Subdiv Surface" "Particles" "Particle Instance" "Fluids" "Strokes" "Image Planes" "UI" "Lights" "Cameras" "Locators" "Joints" "IK Handles" "Deformers" "Motion Trails" "Components" "Hair Systems" "Follicles" "Misc. UI" "Ornaments"  ;
 	setAttr ".otfva" -type "Int32Array" 22 0 1 1 1 1 1
@@ -944,80 +844,56 @@ connectAttr "Spine_1_Jnt_FK_Ctrl_rotateZ.o" "Caleb_RigRN.phl[6]";
 connectAttr "CoG_Jnt_Ctrl_translateX.o" "Caleb_RigRN.phl[7]";
 connectAttr "CoG_Jnt_Ctrl_translateY.o" "Caleb_RigRN.phl[8]";
 connectAttr "CoG_Jnt_Ctrl_translateZ.o" "Caleb_RigRN.phl[9]";
-connectAttr "Caleb_RigRN.phl[10]" "motionTrail1.lp";
-connectAttr "CoG_Jnt_Ctrl_rotateX.o" "Caleb_RigRN.phl[11]";
-connectAttr "CoG_Jnt_Ctrl_rotateY.o" "Caleb_RigRN.phl[12]";
-connectAttr "CoG_Jnt_Ctrl_rotateZ.o" "Caleb_RigRN.phl[13]";
-connectAttr "Caleb_RigRN.phl[14]" "motionTrail1.im";
-connectAttr "Caleb_RigRN.phl[15]" "motionTrail1.so";
-connectAttr "Caleb_RigRN.phl[16]" "Caleb_Rig:CoG_Jnt_Ctrl_motionTrailShape.tr";
-connectAttr "L_Leg_IK_PV_Ctrl_translateX.o" "Caleb_RigRN.phl[17]";
-connectAttr "L_Leg_IK_PV_Ctrl_translateY.o" "Caleb_RigRN.phl[18]";
-connectAttr "L_Leg_IK_PV_Ctrl_translateZ.o" "Caleb_RigRN.phl[19]";
-connectAttr "L_Leg_IK_PV_Ctrl_rotateX.o" "Caleb_RigRN.phl[20]";
-connectAttr "L_Leg_IK_PV_Ctrl_rotateY.o" "Caleb_RigRN.phl[21]";
-connectAttr "L_Leg_IK_PV_Ctrl_rotateZ.o" "Caleb_RigRN.phl[22]";
-connectAttr "L_Leg_IK_Ctrl________________.o" "Caleb_RigRN.phl[23]";
-connectAttr "L_Leg_IK_Ctrl_ShowFootControls.o" "Caleb_RigRN.phl[24]";
-connectAttr "L_Leg_IK_Ctrl_HeelTilt.o" "Caleb_RigRN.phl[25]";
-connectAttr "L_Leg_IK_Ctrl_HeelPivot.o" "Caleb_RigRN.phl[26]";
-connectAttr "L_Leg_IK_Ctrl_ToeTilt.o" "Caleb_RigRN.phl[27]";
-connectAttr "L_Leg_IK_Ctrl_ToePivot.o" "Caleb_RigRN.phl[28]";
-connectAttr "L_Leg_IK_Ctrl_BallTilt.o" "Caleb_RigRN.phl[29]";
-connectAttr "L_Leg_IK_Ctrl_ToeTap.o" "Caleb_RigRN.phl[30]";
-connectAttr "L_Leg_IK_Ctrl_WalkCycle.o" "Caleb_RigRN.phl[31]";
-connectAttr "L_Leg_IK_Ctrl_FootTilt.o" "Caleb_RigRN.phl[32]";
-connectAttr "L_Leg_IK_Ctrl_translateX.o" "Caleb_RigRN.phl[33]";
-connectAttr "L_Leg_IK_Ctrl_translateY.o" "Caleb_RigRN.phl[34]";
-connectAttr "L_Leg_IK_Ctrl_translateZ.o" "Caleb_RigRN.phl[35]";
-connectAttr "L_Leg_IK_Ctrl_rotateX.o" "Caleb_RigRN.phl[36]";
-connectAttr "L_Leg_IK_Ctrl_rotateY.o" "Caleb_RigRN.phl[37]";
-connectAttr "L_Leg_IK_Ctrl_rotateZ.o" "Caleb_RigRN.phl[38]";
-connectAttr "L_Leg_IK_Ctrl_scaleX.o" "Caleb_RigRN.phl[39]";
-connectAttr "L_Leg_IK_Ctrl_scaleY.o" "Caleb_RigRN.phl[40]";
-connectAttr "L_Leg_IK_Ctrl_scaleZ.o" "Caleb_RigRN.phl[41]";
-connectAttr "L_Leg_IK_Ctrl_Stretch.o" "Caleb_RigRN.phl[42]";
-connectAttr "L_Leg_IK_Ctrl_Max_Stretch.o" "Caleb_RigRN.phl[43]";
-connectAttr "L_Leg_IK_Ctrl_Local_Space.o" "Caleb_RigRN.phl[44]";
-connectAttr "L_Leg_IK_Ctrl_visibility.o" "Caleb_RigRN.phl[45]";
-connectAttr "R_Leg_IK_PV_Ctrl_translateX.o" "Caleb_RigRN.phl[46]";
-connectAttr "R_Leg_IK_PV_Ctrl_translateY.o" "Caleb_RigRN.phl[47]";
-connectAttr "R_Leg_IK_PV_Ctrl_translateZ.o" "Caleb_RigRN.phl[48]";
-connectAttr "R_Leg_IK_PV_Ctrl_rotateX.o" "Caleb_RigRN.phl[49]";
-connectAttr "R_Leg_IK_PV_Ctrl_rotateY.o" "Caleb_RigRN.phl[50]";
-connectAttr "R_Leg_IK_PV_Ctrl_rotateZ.o" "Caleb_RigRN.phl[51]";
-connectAttr "R_Leg_IK_Ctrl________________.o" "Caleb_RigRN.phl[52]";
-connectAttr "R_Leg_IK_Ctrl_ShowFootControls.o" "Caleb_RigRN.phl[53]";
-connectAttr "R_Leg_IK_Ctrl_HeelTilt.o" "Caleb_RigRN.phl[54]";
-connectAttr "R_Leg_IK_Ctrl_HeelPivot.o" "Caleb_RigRN.phl[55]";
-connectAttr "R_Leg_IK_Ctrl_ToeTilt.o" "Caleb_RigRN.phl[56]";
-connectAttr "R_Leg_IK_Ctrl_ToePivot.o" "Caleb_RigRN.phl[57]";
-connectAttr "R_Leg_IK_Ctrl_BallTilt.o" "Caleb_RigRN.phl[58]";
-connectAttr "R_Leg_IK_Ctrl_ToeTap.o" "Caleb_RigRN.phl[59]";
-connectAttr "R_Leg_IK_Ctrl_WalkCycle.o" "Caleb_RigRN.phl[60]";
-connectAttr "R_Leg_IK_Ctrl_FootTilt.o" "Caleb_RigRN.phl[61]";
-connectAttr "R_Leg_IK_Ctrl_translateX.o" "Caleb_RigRN.phl[62]";
-connectAttr "R_Leg_IK_Ctrl_translateY.o" "Caleb_RigRN.phl[63]";
-connectAttr "R_Leg_IK_Ctrl_translateZ.o" "Caleb_RigRN.phl[64]";
-connectAttr "R_Leg_IK_Ctrl_rotateX.o" "Caleb_RigRN.phl[65]";
-connectAttr "R_Leg_IK_Ctrl_rotateY.o" "Caleb_RigRN.phl[66]";
-connectAttr "R_Leg_IK_Ctrl_rotateZ.o" "Caleb_RigRN.phl[67]";
-connectAttr "R_Leg_IK_Ctrl_scaleX.o" "Caleb_RigRN.phl[68]";
-connectAttr "R_Leg_IK_Ctrl_scaleY.o" "Caleb_RigRN.phl[69]";
-connectAttr "R_Leg_IK_Ctrl_scaleZ.o" "Caleb_RigRN.phl[70]";
-connectAttr "R_Leg_IK_Ctrl_Stretch.o" "Caleb_RigRN.phl[71]";
-connectAttr "R_Leg_IK_Ctrl_Max_Stretch.o" "Caleb_RigRN.phl[72]";
-connectAttr "R_Leg_IK_Ctrl_Local_Space.o" "Caleb_RigRN.phl[73]";
-connectAttr "R_Leg_IK_Ctrl_visibility.o" "Caleb_RigRN.phl[74]";
-connectAttr "axe_geo.di" "Caleb_RigRN.phl[75]";
-connectAttr "motionTrail1.pts" "Caleb_Rig:CoG_Jnt_Ctrl_motionTrailShape.pts";
-connectAttr "motionTrail1.lp" "Caleb_Rig:CoG_Jnt_Ctrl_motionTrailShape.lp";
-connectAttr "motionTrail1.f" "Caleb_Rig:CoG_Jnt_Ctrl_motionTrailShape.f";
-connectAttr "motionTrail1.kt" "Caleb_Rig:CoG_Jnt_Ctrl_motionTrailShape.kt";
-connectAttr "motionTrail1.fk" "Caleb_Rig:CoG_Jnt_Ctrl_motionTrailShape.fk";
-connectAttr "motionTrail1.ekt" "Caleb_Rig:CoG_Jnt_Ctrl_motionTrailShape.ekt";
-connectAttr "motionTrail1.s" "Caleb_Rig:CoG_Jnt_Ctrl_motionTrailShape.s";
-connectAttr "motionTrail1.b" "Caleb_Rig:CoG_Jnt_Ctrl_motionTrailShape.b";
+connectAttr "CoG_Jnt_Ctrl_rotateX.o" "Caleb_RigRN.phl[10]";
+connectAttr "CoG_Jnt_Ctrl_rotateY.o" "Caleb_RigRN.phl[11]";
+connectAttr "CoG_Jnt_Ctrl_rotateZ.o" "Caleb_RigRN.phl[12]";
+connectAttr "L_Leg_IK_Ctrl________________.o" "Caleb_RigRN.phl[13]";
+connectAttr "L_Leg_IK_Ctrl_ShowFootControls.o" "Caleb_RigRN.phl[14]";
+connectAttr "L_Leg_IK_Ctrl_HeelTilt.o" "Caleb_RigRN.phl[15]";
+connectAttr "L_Leg_IK_Ctrl_HeelPivot.o" "Caleb_RigRN.phl[16]";
+connectAttr "L_Leg_IK_Ctrl_ToeTilt.o" "Caleb_RigRN.phl[17]";
+connectAttr "L_Leg_IK_Ctrl_ToePivot.o" "Caleb_RigRN.phl[18]";
+connectAttr "L_Leg_IK_Ctrl_BallTilt.o" "Caleb_RigRN.phl[19]";
+connectAttr "L_Leg_IK_Ctrl_ToeTap.o" "Caleb_RigRN.phl[20]";
+connectAttr "L_Leg_IK_Ctrl_WalkCycle.o" "Caleb_RigRN.phl[21]";
+connectAttr "L_Leg_IK_Ctrl_FootTilt.o" "Caleb_RigRN.phl[22]";
+connectAttr "L_Leg_IK_Ctrl_translateX.o" "Caleb_RigRN.phl[23]";
+connectAttr "L_Leg_IK_Ctrl_translateY.o" "Caleb_RigRN.phl[24]";
+connectAttr "L_Leg_IK_Ctrl_translateZ.o" "Caleb_RigRN.phl[25]";
+connectAttr "L_Leg_IK_Ctrl_rotateX.o" "Caleb_RigRN.phl[26]";
+connectAttr "L_Leg_IK_Ctrl_rotateY.o" "Caleb_RigRN.phl[27]";
+connectAttr "L_Leg_IK_Ctrl_rotateZ.o" "Caleb_RigRN.phl[28]";
+connectAttr "L_Leg_IK_Ctrl_scaleX.o" "Caleb_RigRN.phl[29]";
+connectAttr "L_Leg_IK_Ctrl_scaleY.o" "Caleb_RigRN.phl[30]";
+connectAttr "L_Leg_IK_Ctrl_scaleZ.o" "Caleb_RigRN.phl[31]";
+connectAttr "L_Leg_IK_Ctrl_Stretch.o" "Caleb_RigRN.phl[32]";
+connectAttr "L_Leg_IK_Ctrl_Max_Stretch.o" "Caleb_RigRN.phl[33]";
+connectAttr "L_Leg_IK_Ctrl_Local_Space.o" "Caleb_RigRN.phl[34]";
+connectAttr "L_Leg_IK_Ctrl_visibility.o" "Caleb_RigRN.phl[35]";
+connectAttr "R_Leg_IK_Ctrl________________.o" "Caleb_RigRN.phl[36]";
+connectAttr "R_Leg_IK_Ctrl_ShowFootControls.o" "Caleb_RigRN.phl[37]";
+connectAttr "R_Leg_IK_Ctrl_HeelTilt.o" "Caleb_RigRN.phl[38]";
+connectAttr "R_Leg_IK_Ctrl_HeelPivot.o" "Caleb_RigRN.phl[39]";
+connectAttr "R_Leg_IK_Ctrl_ToeTilt.o" "Caleb_RigRN.phl[40]";
+connectAttr "R_Leg_IK_Ctrl_ToePivot.o" "Caleb_RigRN.phl[41]";
+connectAttr "R_Leg_IK_Ctrl_BallTilt.o" "Caleb_RigRN.phl[42]";
+connectAttr "R_Leg_IK_Ctrl_ToeTap.o" "Caleb_RigRN.phl[43]";
+connectAttr "R_Leg_IK_Ctrl_WalkCycle.o" "Caleb_RigRN.phl[44]";
+connectAttr "R_Leg_IK_Ctrl_FootTilt.o" "Caleb_RigRN.phl[45]";
+connectAttr "R_Leg_IK_Ctrl_translateX.o" "Caleb_RigRN.phl[46]";
+connectAttr "R_Leg_IK_Ctrl_translateY.o" "Caleb_RigRN.phl[47]";
+connectAttr "R_Leg_IK_Ctrl_translateZ.o" "Caleb_RigRN.phl[48]";
+connectAttr "R_Leg_IK_Ctrl_rotateX.o" "Caleb_RigRN.phl[49]";
+connectAttr "R_Leg_IK_Ctrl_rotateY.o" "Caleb_RigRN.phl[50]";
+connectAttr "R_Leg_IK_Ctrl_rotateZ.o" "Caleb_RigRN.phl[51]";
+connectAttr "R_Leg_IK_Ctrl_scaleX.o" "Caleb_RigRN.phl[52]";
+connectAttr "R_Leg_IK_Ctrl_scaleY.o" "Caleb_RigRN.phl[53]";
+connectAttr "R_Leg_IK_Ctrl_scaleZ.o" "Caleb_RigRN.phl[54]";
+connectAttr "R_Leg_IK_Ctrl_Stretch.o" "Caleb_RigRN.phl[55]";
+connectAttr "R_Leg_IK_Ctrl_Max_Stretch.o" "Caleb_RigRN.phl[56]";
+connectAttr "R_Leg_IK_Ctrl_Local_Space.o" "Caleb_RigRN.phl[57]";
+connectAttr "R_Leg_IK_Ctrl_visibility.o" "Caleb_RigRN.phl[58]";
+connectAttr "axe_geo.di" "Caleb_RigRN.phl[59]";
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
