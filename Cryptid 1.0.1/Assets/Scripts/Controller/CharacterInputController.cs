@@ -25,6 +25,7 @@ public class CharacterInputController : MonoBehaviour
 
     private Coroutine chargingAttack;
     private bool perfectAttack;
+    private bool CanAttack { get; set; }
 
     [SerializeField]private Animator animator;
     
@@ -100,7 +101,8 @@ public class CharacterInputController : MonoBehaviour
 /// </summary>
     private void StartAttack()
     {
-        chargingAttack = StartCoroutine(ChargingRoutine());
+        if(CanAttack)
+            chargingAttack = StartCoroutine(ChargingRoutine());
     }
 
 /// <summary>
