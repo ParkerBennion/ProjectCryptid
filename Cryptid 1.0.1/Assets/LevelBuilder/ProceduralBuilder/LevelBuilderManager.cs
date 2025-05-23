@@ -11,7 +11,7 @@ public class LevelBuilderManager : MonoBehaviour
     public Cell startingCell;
     public NavMeshSurface navMesh;
     public float maxDistance;
-    public GameObject player;
+    public GameObject player, basicCell;
 
     public void CreateStartingCells()
     {
@@ -47,4 +47,5 @@ public class LevelBuilderManager : MonoBehaviour
         }
         tempList.Clear();
     }
+    
 }

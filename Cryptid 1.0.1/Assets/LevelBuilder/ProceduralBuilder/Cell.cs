@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using Unity.Mathematics;
 using UnityEngine;
 
@@ -6,16 +7,18 @@ public class Cell : MonoBehaviour
 {
     [SerializeField] private LevelBuilderManager cellManager;
     public GameObject[] adjacentCells;
-    public GameObject defaultCell;
-    public bool explored;
+    public GameObject defaultCell, exampleTile;
+    public Tile tileBrain;
+    public List<GameObject> neighbors;
 
-    
-    
+
+
+
     private void Awake()
     {
-        explored = false;
         adjacentCells = new GameObject[7];
         adjacentCells[0] = this.gameObject;
+        neighbors = new List<GameObject>();
     }
 
     public void EnterCell()
@@ -26,10 +29,9 @@ public class Cell : MonoBehaviour
         
         //find which direction you came from
     }
-    public void PopulateEmptyCells()
+    public void PopulateEmptyCellsOld()
     {
         print("Filling empty spots");
-        explored = true;
         for (int i = 1; i < 7; i++)
         {
             if (adjacentCells[i] != null)
@@ -43,6 +45,42 @@ public class Cell : MonoBehaviour
         }
     }
 
+    
+    public void PopulateEmptyCells()
+    {
+
+        List<int> newCellSpots = new List<int>();
+        print("Filling empty spots with code");
+        for (int i = 1; i < 7; i++)//Create new EMPTY CELLS in empty spots
+        {
+            if (adjacentCells[i] == null)
+            {
+                PopulateCell(i);
+                newCellSpots.Add(i);
+            }
+        }
+
+        string printString = "";//Print which spots are new empty cells
+        foreach (int VARIABLE in newCellSpots)
+        {
+            printString += VARIABLE.ToString();
+        }
+        //print(printString);
+        for (int i = 1; i < 7; i++)//assign neighbors of new cells
+        {
+            AssignNeighborCellNeighbors(i);
+        }
+        
+        foreach (int spot in newCellSpots)//hand over tile creation to the create tile method
+        {
+            adjacentCells[spot].GetComponent<Cell>().CreateTile(exampleTile);
+        }
+        
+        cellManager.PurgeDistantCells();
+        
+    }
+    
+    
     public void LeaveCell()
     {
         cellManager.activeCells.Remove(this);
@@ -50,10 +88,12 @@ public class Cell : MonoBehaviour
     
     public void PopulateCell(int directionIndex)
     {
-        GameObject newCell = null;
+        GameObject newCell;
+        defaultCell = cellManager.basicCell;
         switch (directionIndex)
         {
             case 1:
+                //createCell at position based on the direction
                 newCell = Instantiate(defaultCell, new Vector3(0, 0, 10)+transform.position, quaternion.identity);
                 break;
             case 2:
@@ -80,47 +120,6 @@ public class Cell : MonoBehaviour
         newCell.GetComponent<Cell>().cellManager = cellManager;
         adjacentCells[directionIndex] = newCell;
     }
-
-   /* private void AssignNewCellNeigbors(int newCellIndex)
-    {
-        Cell newCellBrain = adjacentCells[newCellIndex].GetComponent<Cell>();
-        switch (newCellIndex)
-        {
-            case 1:
-                newCellBrain.adjacentCells[5] = adjacentCells[6];
-                newCellBrain.adjacentCells[4] = gameObject;
-                newCellBrain.adjacentCells[3] = adjacentCells[2];
-                break;
-            case 2:
-                newCellBrain.adjacentCells[6] = adjacentCells[1];
-                newCellBrain.adjacentCells[5] = adjacentCells[0];
-                newCellBrain.adjacentCells[4] = adjacentCells[3];
-                break;
-            case 3:
-                newCellBrain.adjacentCells[1] = adjacentCells[2];
-                newCellBrain.adjacentCells[6] = gameObject;
-                newCellBrain.adjacentCells[5] = adjacentCells[4];
-                break;
-            case 4:
-                newCellBrain.adjacentCells[2] = adjacentCells[3];
-                newCellBrain.adjacentCells[1] = gameObject;
-                newCellBrain.adjacentCells[6] = adjacentCells[5];
-                break;
-            case 5:
-                newCellBrain.adjacentCells[3] = adjacentCells[4];
-                newCellBrain.adjacentCells[2] = gameObject;
-                newCellBrain.adjacentCells[1] = adjacentCells[6];
-                break;
-            case 6:
-                newCellBrain.adjacentCells[4] = adjacentCells[5];
-                newCellBrain.adjacentCells[3] = gameObject;
-                newCellBrain.adjacentCells[2] = adjacentCells[1];
-                break;
-        }
-        
-    }
-*/ 
-   // THIS CODE IS SUMMARIZED BELOW 
     private void AssignNeighborCellNeighbors(int index)
     {
         Cell newCellBrain = adjacentCells[index].GetComponent<Cell>();
@@ -129,8 +128,29 @@ public class Cell : MonoBehaviour
         newCellBrain.adjacentCells[(index + 1) % 6 + 1] = adjacentCells[index % 6+1];
     }
 
-    public void DestroyOldCell()
+    public void CreateTile(GameObject tileObj)
     {
-        //remove this cell from neighbor references then destroy it
+        string BorderCode = "";
+        //get list of nearby built tiles
+        for (int i = 1; i<7; i++)
+        {
+            if (adjacentCells[i] == null) continue;
+            if (adjacentCells[i].GetComponent<Cell>().tileBrain==null) continue;
+            Cell neighborBrain = adjacentCells[i].GetComponent<Cell>();
+            print(neighborBrain.tileBrain.gameObject.name);
+            BorderCode += neighborBrain.tileBrain.GetBorderCodeIndex(RotateIndexClockwise(i,3)-1);
+            neighbors.Add(adjacentCells[i].GetComponent<Cell>().tileBrain.gameObject);
+        }
+        print(BorderCode);
+        tileBrain = Instantiate(tileObj, gameObject.transform.position, quaternion.identity, gameObject.transform).GetComponent<Tile>();
+        print("Created Tile");
     }
+
+    private int RotateIndexClockwise(int originalIndex, int numRotations)
+    {
+        return ((originalIndex - 1 + numRotations) % 6) + 1;
+    }
+    
+    
+
 }

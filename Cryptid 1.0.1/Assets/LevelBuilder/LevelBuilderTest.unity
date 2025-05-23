@@ -672,6 +672,7 @@ MonoBehaviour:
   adjacentCells: []
   defaultCell: {fileID: 5650620722496709884, guid: cc0d79fbfd62d7e45a4380a092125bc1, type: 3}
   explored: 1
+  borderCodes: 010101010101
 --- !u!33 &5786920516105861598
 MeshFilter:
   m_ObjectHideFlags: 0
