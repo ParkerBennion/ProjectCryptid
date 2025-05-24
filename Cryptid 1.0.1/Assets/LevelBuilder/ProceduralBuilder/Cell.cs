@@ -9,7 +9,6 @@ public class Cell : MonoBehaviour
     public GameObject[] adjacentCells;
     public GameObject defaultCell, exampleTile;
     public Tile tileBrain;
-    public List<GameObject> neighbors;
 
 
 
@@ -18,7 +17,6 @@ public class Cell : MonoBehaviour
     {
         adjacentCells = new GameObject[7];
         adjacentCells[0] = this.gameObject;
-        neighbors = new List<GameObject>();
     }
 
     public void EnterCell()
@@ -48,7 +46,7 @@ public class Cell : MonoBehaviour
     
     public void PopulateEmptyCells()
     {
-
+        string printString = "";//Print which spots are new empty cells
         List<int> newCellSpots = new List<int>();
         print("Filling empty spots with code");
         for (int i = 1; i < 7; i++)//Create new EMPTY CELLS in empty spots
@@ -59,23 +57,41 @@ public class Cell : MonoBehaviour
                 newCellSpots.Add(i);
             }
         }
-
-        string printString = "";//Print which spots are new empty cells
-        foreach (int VARIABLE in newCellSpots)
-        {
-            printString += VARIABLE.ToString();
-        }
-        //print(printString);
         for (int i = 1; i < 7; i++)//assign neighbors of new cells
         {
             AssignNeighborCellNeighbors(i);
         }
-        
-        foreach (int spot in newCellSpots)//hand over tile creation to the create tile method
+        //hand over tile creation to the create tile method
+        if (newCellSpots.Count == 3)//FOR 3 NEW CELLS
         {
-            adjacentCells[spot].GetComponent<Cell>().CreateTile(exampleTile);
+            //edge case
+            if (newCellSpots[0] == 1 && newCellSpots[2] == 6)
+            {
+                switch (newCellSpots[1])
+                {
+                    case 2:
+                        newCellSpots = new List<int> {6, 1, 2};
+                        break;
+                    case 5:
+                        newCellSpots = new List<int> {5, 6, 1};
+                        break;
+                    default:
+                        Debug.LogError("Something went wrong reordering the edge case");
+                        break;
+                }
+            }
+            //Create the middle cell first
+            adjacentCells[newCellSpots[1]].GetComponent<Cell>().CreateTile(exampleTile);
+            adjacentCells[newCellSpots[0]].GetComponent<Cell>().CreateTile(exampleTile);
+            adjacentCells[newCellSpots[2]].GetComponent<Cell>().CreateTile(exampleTile);
         }
-        
+        else
+        {
+            foreach (int spot in newCellSpots)
+            {
+                adjacentCells[spot].GetComponent<Cell>().CreateTile(exampleTile);
+            }
+        }
         cellManager.PurgeDistantCells();
         
     }
@@ -130,18 +146,23 @@ public class Cell : MonoBehaviour
 
     public void CreateTile(GameObject tileObj)
     {
-        string BorderCode = "";
+        string borderCode = "";
+        string registeredCells = "";
         //get list of nearby built tiles
         for (int i = 1; i<7; i++)
         {
             if (adjacentCells[i] == null) continue;
             if (adjacentCells[i].GetComponent<Cell>().tileBrain==null) continue;
+            registeredCells += i.ToString();
             Cell neighborBrain = adjacentCells[i].GetComponent<Cell>();
-            print(neighborBrain.tileBrain.gameObject.name);
-            BorderCode += neighborBrain.tileBrain.GetBorderCodeIndex(RotateIndexClockwise(i,3)-1);
-            neighbors.Add(adjacentCells[i].GetComponent<Cell>().tileBrain.gameObject);
+            borderCode += neighborBrain.tileBrain.GetBorderCodeIndex(RotateIndexClockwise(i,3)-1);
         }
-        print(BorderCode);
+        print(borderCode);
+        //edge cases
+        if (registeredCells == "156")
+            borderCode = string.Concat(borderCode[1], borderCode[2], borderCode[0]);
+        if (registeredCells == "126")
+            borderCode = string.Concat(borderCode[2], borderCode[0], borderCode[1]);
         tileBrain = Instantiate(tileObj, gameObject.transform.position, quaternion.identity, gameObject.transform).GetComponent<Tile>();
         print("Created Tile");
     }

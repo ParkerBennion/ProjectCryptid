@@ -49,9 +49,8 @@ MonoBehaviour:
   cellManager: {fileID: 0}
   adjacentCells: []
   defaultCell: {fileID: 0}
-  exampleTile: {fileID: 5650620722496709884, guid: a340a873dc2f77f469d67989f1484eac, type: 3}
+  exampleTile: {fileID: 5650620722496709884, guid: 4a08b145f714ed248aea62c5ca157d72, type: 3}
   tileBrain: {fileID: 0}
-  neighbors: []
 --- !u!114 &7357468244183108833
 MonoBehaviour:
   m_ObjectHideFlags: 0
