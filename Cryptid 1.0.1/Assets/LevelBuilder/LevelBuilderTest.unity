@@ -319,6 +319,63 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!1001 &822250564
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 5084290002629690903}
+    m_Modifications:
+    - target: {fileID: 5084290003078939522, guid: 105402a6082d8dc4ba695ad60fe39bed, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5084290003078939522, guid: 105402a6082d8dc4ba695ad60fe39bed, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5084290003078939522, guid: 105402a6082d8dc4ba695ad60fe39bed, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5084290003078939522, guid: 105402a6082d8dc4ba695ad60fe39bed, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5084290003078939522, guid: 105402a6082d8dc4ba695ad60fe39bed, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5084290003078939522, guid: 105402a6082d8dc4ba695ad60fe39bed, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5084290003078939522, guid: 105402a6082d8dc4ba695ad60fe39bed, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5084290003078939522, guid: 105402a6082d8dc4ba695ad60fe39bed, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5084290003078939522, guid: 105402a6082d8dc4ba695ad60fe39bed, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5084290003078939522, guid: 105402a6082d8dc4ba695ad60fe39bed, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5650620722496709884, guid: 105402a6082d8dc4ba695ad60fe39bed, type: 3}
+      propertyPath: m_Name
+      value: HOMETILE
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 105402a6082d8dc4ba695ad60fe39bed, type: 3}
 --- !u!1 &927555316
 GameObject:
   m_ObjectHideFlags: 0
@@ -566,6 +623,7 @@ MonoBehaviour:
   navMesh: {fileID: 337610543}
   maxDistance: 18
   player: {fileID: 786686097}
+  basicCell: {fileID: 5650620722496709884, guid: cc0d79fbfd62d7e45a4380a092125bc1, type: 3}
 --- !u!4 &1673036144
 Transform:
   m_ObjectHideFlags: 0
@@ -581,6 +639,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1953512967 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5084290003078939522, guid: 105402a6082d8dc4ba695ad60fe39bed, type: 3}
+  m_PrefabInstance: {fileID: 822250564}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1953512968 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1719108879233915820, guid: 105402a6082d8dc4ba695ad60fe39bed, type: 3}
+  m_PrefabInstance: {fileID: 822250564}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8980c3034ca1b404b994f69a6cedd146, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!33 &89865415034657085
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -635,6 +709,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7973244024407124636}
+  - {fileID: 1953512967}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5650620722979512681
@@ -671,8 +746,8 @@ MonoBehaviour:
   cellManager: {fileID: 1673036143}
   adjacentCells: []
   defaultCell: {fileID: 5650620722496709884, guid: cc0d79fbfd62d7e45a4380a092125bc1, type: 3}
-  explored: 1
-  borderCodes: 010101010101
+  exampleTile: {fileID: 5650620722496709884, guid: a340a873dc2f77f469d67989f1484eac, type: 3}
+  tileBrain: {fileID: 1953512968}
 --- !u!33 &5786920516105861598
 MeshFilter:
   m_ObjectHideFlags: 0
