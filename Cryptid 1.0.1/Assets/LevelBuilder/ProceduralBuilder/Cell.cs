@@ -149,18 +149,18 @@ public class Cell : MonoBehaviour
         string borderCode = "";
         string registeredCells = "";
 
-        for (int i = 1; i < 7; i++)//get nearby neigbor cells
+        for (int i = 1; i < 7; i++)//get indexes of existing neighbor cells
         {
             if (adjacentCells[i] != null)
             {
                 registeredCells += i.ToString();
             }
         }
-        if (registeredCells == "156")
+        if (registeredCells == "156")//make sure the neigbor cell order is continuous clockwise
             registeredCells = "561";
         else if (registeredCells == "126")
             registeredCells = "612";
-        for (int i = 0; i < registeredCells.Length; i++)
+        for (int i = 0; i < registeredCells.Length; i++)// get the border code from the registered cells
         {
             Tile neighborCell = adjacentCells[registeredCells[i] - '0'].GetComponent<Cell>().tileBrain;
             if (neighborCell == null)
@@ -173,36 +173,41 @@ public class Cell : MonoBehaviour
             }
         }
         print(registeredCells+"->"+borderCode);
-        ///////////////////////////////////////////////////////
-        //get list of nearby built tiles
-        for (int i = 1; i<7; i++)
-        {
-            if (adjacentCells[i] == null) continue;
-            if (adjacentCells[i].GetComponent<Cell>().tileBrain == null)
-            {
-                borderCode += "N";//cell has none
-                continue;
-            }
-            registeredCells += i.ToString();
-            Cell neighborBrain = adjacentCells[i].GetComponent<Cell>();
-            borderCode += neighborBrain.tileBrain.GetBorderCodeIndex(RotateIndexClockwise(i,3)-1);
-        }
-        //edge cases
-        if (registeredCells == "156")
-            borderCode = string.Concat(borderCode[1], borderCode[2], borderCode[0]);
-        if (registeredCells == "126")
-            borderCode = string.Concat(borderCode[2], borderCode[0], borderCode[1]);
-        /////////////////////////////////////////////////////////////////////
-       // print(registeredCells+"->"+borderCode);
         
         tileBrain = Instantiate(tileObj, gameObject.transform.position, quaternion.identity, gameObject.transform).GetComponent<Tile>();
     }
-
     private int RotateIndexClockwise(int originalIndex, int numRotations)
     {
         return ((originalIndex - 1 + numRotations) % 6) + 1;
     }
     
     
+/*using System.Collections.Generic;
+using UnityEngine;
 
+public class ManualDictSetup : MonoBehaviour
+{
+    Dictionary<int, int[]> myDict = new Dictionary<int, int[]>();
+
+    void Start()
+    {
+        // Manually assigning arrays to each key
+        myDict[1] = new int[] { 1, 3, 5 };
+        myDict[2] = new int[] { 0, 2 };
+        myDict[3] = new int[] { 4 };
+        myDict[4] = new int[] { 5, 0, 1 };
+        myDict[5] = new int[] { 2, 2, 3 };
+        myDict[6] = new int[] { 1, 4 };
+        myDict[7] = new int[] { 3, 5 };
+        myDict[8] = new int[] { 0 };
+        myDict[9] = new int[] { 2, 4, 0 };
+
+        // Print the dictionary to verify
+        foreach (var pair in myDict)
+        {
+            Debug.Log($"Key: {pair.Key} → Values: [{string.Join(", ", pair.Value)}]");
+        }
+    }
+}
+*/
 }
