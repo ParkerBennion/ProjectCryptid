@@ -1,7 +1,10 @@
+using System;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
-public class TileLibrary: ScriptableObject
+public class TileLibrary: MonoBehaviour
 {
     public TileVariation[] tileLists;
 
@@ -26,7 +29,13 @@ public class TileLibrary: ScriptableObject
 
     private void Awake()
     {
+        Initialize();
+    }
+
+    public void Initialize()
+    {
         //instantiate all the tile dictionaries
+        Debug.Log("Initializing dictionaries");
          //N0N
          codeN0N = new Dictionary<int, int[]>
          {
@@ -40,6 +49,7 @@ public class TileLibrary: ScriptableObject
              {8, new[] {1, 3, 5}},
              {9, new[] {2, 3, 4}}
          };
+         
          //N1N
          codeN1N = new Dictionary<int, int[]>
          {
@@ -52,7 +62,6 @@ public class TileLibrary: ScriptableObject
              {8, new[]{0,2,4}},
              {9, new[]{0,1,5}}
          };
-
          //00N
          code00N = new Dictionary<int, int[]>
          {
@@ -134,7 +143,7 @@ public class TileLibrary: ScriptableObject
              {9, new[]{5}}
          };
          //N11
-         codeN1N = new Dictionary<int, int[]>
+         codeN11 = new Dictionary<int, int[]>
          {
              {5, new[]{1}},
              {6, new[]{3}},
@@ -210,10 +219,13 @@ public class TileLibrary: ScriptableObject
          {
              {9, new[]{0}}
          };
-    }//end of awake
+    }//end of initialize
 
-    public (int, int) GetTileFromCode(string borderCode)
+    
+    
+    public (GameObject, int) GetTileFromCode(string borderCode)
     {
+        Debug.Log("Recieved code "+borderCode);
         switch (borderCode)
         {
             case "N0N":
@@ -254,14 +266,23 @@ public class TileLibrary: ScriptableObject
                 return GetRandomTileWithRotation(code111);
             default:
                 Debug.LogWarning("Tile library did not recognize the code "+borderCode+", creating empty space");
-                return (1, 0);
+                return (null, 0);
         }
     }
 
-    private (int, int) GetRandomTileWithRotation(Dictionary<int, int[]> codeDictionary)
+    private (GameObject, int) GetRandomTileWithRotation(Dictionary<int, int[]> codeDictionary)
     {
+        Debug.Log(codeDictionary.Keys.Count +" Keys");
+        foreach (int val in codeDictionary.Keys)
+        {
+            Debug.Log(val);
+        }
+
+        int randomKey = codeDictionary.Keys.ElementAt(Random.Range(0, codeDictionary.Keys.Count));
+        int randomRotation = codeDictionary[randomKey][Random.Range(0, codeDictionary[randomKey].Length)];
+        print("RandomKey " + randomKey+" Rotation "+randomRotation);
         // THIS NEEDS TO BE IMPLEMENTED STILL
         
-        return (1, 1);
+        return (null, 1);
     }
 }

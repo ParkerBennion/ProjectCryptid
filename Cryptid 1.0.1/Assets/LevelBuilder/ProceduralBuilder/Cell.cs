@@ -46,7 +46,7 @@ public class Cell : MonoBehaviour
     
     public void PopulateEmptyCells()
     {
-        string printString = "";//Print which spots are new empty cells
+        //string printString = "";//Print which spots are new empty cells
         List<int> newCellSpots = new List<int>();
         print("Filling empty spots with code");
         for (int i = 1; i < 7; i++)//Create new EMPTY CELLS in empty spots
@@ -172,8 +172,7 @@ public class Cell : MonoBehaviour
                 borderCode+=neighborCell.GetBorderCodeIndex(RotateIndexClockwise(registeredCells[i] - '0',3)-1);
             }
         }
-        print(registeredCells+"->"+borderCode);
-        
+        //print(registeredCells+"->"+borderCode);
         tileBrain = Instantiate(tileObj, gameObject.transform.position, quaternion.identity, gameObject.transform).GetComponent<Tile>();
     }
     private int RotateIndexClockwise(int originalIndex, int numRotations)

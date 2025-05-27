@@ -12,6 +12,8 @@ public class LevelBuilderManager : MonoBehaviour
     public NavMeshSurface navMesh;
     public float maxDistance;
     public GameObject player, basicCell;
+    public TileLibrary tileLibrary;
+    public string testString;
 
     public void CreateStartingCells()
     {
@@ -46,6 +48,11 @@ public class LevelBuilderManager : MonoBehaviour
             Destroy(cell.gameObject);
         }
         tempList.Clear();
+    }
+
+    public void TestLibrary()
+    {
+        tileLibrary.GetTileFromCode(testString);
     }
     
 }
