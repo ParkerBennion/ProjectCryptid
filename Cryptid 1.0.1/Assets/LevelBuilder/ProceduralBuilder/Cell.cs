@@ -9,6 +9,7 @@ public class Cell : MonoBehaviour
     public GameObject[] adjacentCells;
     public GameObject defaultCell, exampleTile;
     public Tile tileBrain;
+    public TileLibrary tileLibrary;
 
 
 
@@ -81,15 +82,15 @@ public class Cell : MonoBehaviour
                 }
             }
             //Create the middle cell first
-            adjacentCells[newCellSpots[1]].GetComponent<Cell>().CreateTile(exampleTile);
-            adjacentCells[newCellSpots[0]].GetComponent<Cell>().CreateTile(exampleTile);
-            adjacentCells[newCellSpots[2]].GetComponent<Cell>().CreateTile(exampleTile);
+            adjacentCells[newCellSpots[1]].GetComponent<Cell>().CreateTile(newCellSpots[1]);
+            adjacentCells[newCellSpots[0]].GetComponent<Cell>().CreateTile(newCellSpots[0]);
+            adjacentCells[newCellSpots[2]].GetComponent<Cell>().CreateTile(newCellSpots[2]);
         }
         else
         {
             foreach (int spot in newCellSpots)
             {
-                adjacentCells[spot].GetComponent<Cell>().CreateTile(exampleTile);
+                adjacentCells[spot].GetComponent<Cell>().CreateTile(spot);
             }
         }
         cellManager.PurgeDistantCells();
@@ -131,9 +132,11 @@ public class Cell : MonoBehaviour
                 Debug.LogWarning("Direction Index was out of bounds when creating a new cell");
                 return;
         }
-        
+
         cellManager.activeCells.Add(newCell.GetComponent<Cell>());
-        newCell.GetComponent<Cell>().cellManager = cellManager;
+        Cell newCellBrain = newCell.GetComponent<Cell>();
+        newCellBrain.cellManager = cellManager;
+        newCellBrain.tileLibrary = cellManager.GetComponent<TileLibrary>();
         adjacentCells[directionIndex] = newCell;
     }
     private void AssignNeighborCellNeighbors(int index)
@@ -144,7 +147,7 @@ public class Cell : MonoBehaviour
         newCellBrain.adjacentCells[(index + 1) % 6 + 1] = adjacentCells[index % 6+1];
     }
 
-    public void CreateTile(GameObject tileObj)
+    public void CreateTile(int directionFromOrigin)
     {
         string borderCode = "";
         string registeredCells = "";
@@ -172,8 +175,13 @@ public class Cell : MonoBehaviour
                 borderCode+=neighborCell.GetBorderCodeIndex(RotateIndexClockwise(registeredCells[i] - '0',3)-1);
             }
         }
-        //print(registeredCells+"->"+borderCode);
-        tileBrain = Instantiate(tileObj, gameObject.transform.position, quaternion.identity, gameObject.transform).GetComponent<Tile>();
+
+        (GameObject, int) tileData = tileLibrary.GetTileFromCode(borderCode);
+        int newRotation = directionFromOrigin + tileData.Item2;
+        
+        print(registeredCells+"->"+borderCode);
+        tileBrain = Instantiate(tileData.Item1, gameObject.transform.position, quaternion.identity, gameObject.transform).GetComponent<Tile>();
+        tileBrain.RotateTile(newRotation-1);
     }
     private int RotateIndexClockwise(int originalIndex, int numRotations)
     {

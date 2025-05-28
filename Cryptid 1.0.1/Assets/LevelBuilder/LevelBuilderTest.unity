@@ -599,6 +599,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1673036144}
   - component: {fileID: 1673036143}
+  - component: {fileID: 1673036146}
+  - component: {fileID: 1673036147}
   m_Layer: 0
   m_Name: BuildManager
   m_TagString: Untagged
@@ -624,6 +626,8 @@ MonoBehaviour:
   maxDistance: 18
   player: {fileID: 786686097}
   basicCell: {fileID: 5650620722496709884, guid: cc0d79fbfd62d7e45a4380a092125bc1, type: 3}
+  tileLibrary: {fileID: 1673036147}
+  testString: 101
 --- !u!4 &1673036144
 Transform:
   m_ObjectHideFlags: 0
@@ -639,6 +643,79 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1673036146
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1673036142}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0c08fae9cc335642afdb04d329a69a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  awakeEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  startEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1673036143}
+        m_TargetAssemblyTypeName: LevelBuilderManager, Assembly-CSharp
+        m_MethodName: TestLibrary
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  enableEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  collisionEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  triggerEnterEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  tapEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  destroyEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  disableEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  quitEvent:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &1673036147
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1673036142}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5120e2d91cb2ff44286ba7d15854814a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tileLists:
+  - {fileID: 11400000, guid: 9f569a80636cfe441b39ae43e1c74a1f, type: 2}
+  - {fileID: 11400000, guid: 70273b89919fa654c948cd3862527517, type: 2}
+  - {fileID: 11400000, guid: 5448aa52a429f6140a662ef6da9f3e77, type: 2}
+  - {fileID: 11400000, guid: 43c96a18ce764ef4da30ef9373ac2d76, type: 2}
+  - {fileID: 11400000, guid: 06ed1c43b23267c49a47e9e5a1f9f94e, type: 2}
+  - {fileID: 11400000, guid: 1fa17ad1720cc1c458ca020257bdbf1d, type: 2}
+  - {fileID: 11400000, guid: 36aa83862a36f4f45ace995bd450c413, type: 2}
+  - {fileID: 11400000, guid: e2e5f1097cbdbc344b1c8eb63a3281c9, type: 2}
+  - {fileID: 11400000, guid: f1551391f88a1e14b862ceab3022a52d, type: 2}
 --- !u!4 &1953512967 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5084290003078939522, guid: 105402a6082d8dc4ba695ad60fe39bed, type: 3}

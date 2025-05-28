@@ -50,9 +50,4 @@ public class LevelBuilderManager : MonoBehaviour
         tempList.Clear();
     }
 
-    public void TestLibrary()
-    {
-        tileLibrary.GetTileFromCode(testString);
-    }
-    
 }

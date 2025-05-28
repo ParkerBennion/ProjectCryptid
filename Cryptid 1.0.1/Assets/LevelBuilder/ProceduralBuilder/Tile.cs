@@ -28,8 +28,8 @@ public class Tile : MonoBehaviour
 
     public void RotateTile(int numUnits)
     {
-        gameObject.transform.Rotate(new Vector3(0, numUnits*60, 0));
         RotateBorderCode(numUnits);
+        gameObject.transform.Rotate(new Vector3(0, (numUnits * 60)%360, 0));
     }
 
     public int GetBorderCodeIndex(int direction)

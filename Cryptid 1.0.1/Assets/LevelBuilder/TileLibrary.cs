@@ -83,7 +83,7 @@ public class TileLibrary: MonoBehaviour
              {5, new[]{1}},
              {6, new[]{0,3}},
              {7, new[]{0,4}},
-             {8, new[]{1,3,5}},
+             {8, new[]{0,2,4}},
              {9, new[]{1}}
          };
          //10N
@@ -177,7 +177,7 @@ public class TileLibrary: MonoBehaviour
              {4, new[]{0,2}},
              {6, new[]{0}},
              {7, new[]{0}},
-             {8, new[]{1,3,5}}
+             {8, new[]{0,2,4}}
          };
          //011
          code011 = new Dictionary<int, int[]>
@@ -272,17 +272,17 @@ public class TileLibrary: MonoBehaviour
 
     private (GameObject, int) GetRandomTileWithRotation(Dictionary<int, int[]> codeDictionary)
     {
+        /*
         Debug.Log(codeDictionary.Keys.Count +" Keys");
         foreach (int val in codeDictionary.Keys)
         {
             Debug.Log(val);
         }
-
+        */
         int randomKey = codeDictionary.Keys.ElementAt(Random.Range(0, codeDictionary.Keys.Count));
+        Debug.Log(randomKey+" randomkey");
         int randomRotation = codeDictionary[randomKey][Random.Range(0, codeDictionary[randomKey].Length)];
-        print("RandomKey " + randomKey+" Rotation "+randomRotation);
+        return (tileLists[randomKey-1].PickRandom(), randomRotation);
         // THIS NEEDS TO BE IMPLEMENTED STILL
-        
-        return (null, 1);
     }
 }

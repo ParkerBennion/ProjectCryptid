@@ -14,6 +14,8 @@ public class TileVariation : ScriptableObject
 
     public GameObject PickRandom()
     {
-        return variations[Random.Range(0, listLength)];
+        int newVar = Random.Range(0, listLength);
+        Debug.Log(newVar+"is new tile");
+        return variations[newVar];
     }
 }

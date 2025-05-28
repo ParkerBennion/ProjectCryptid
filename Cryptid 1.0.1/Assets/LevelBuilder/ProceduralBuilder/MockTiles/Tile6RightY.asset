@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac0399d9fcab59f46bb2601452bba079, type: 3}
   m_Name: Tile6RightY
   m_EditorClassIdentifier: 
-  variations: []
+  variations:
+  - {fileID: 5650620722496709884, guid: 4f968992783701f42874eb858cc2edb4, type: 3}
