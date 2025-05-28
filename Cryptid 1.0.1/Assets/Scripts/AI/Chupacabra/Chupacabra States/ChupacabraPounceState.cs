@@ -32,6 +32,7 @@ public class ChupacabraPounceState : State
     public override void OnExitState()
     {
         StopCoroutine(currentRoutine);
+        navAgent.enabled = true;
         StartCoroutine(PounceCD());
     }
 
