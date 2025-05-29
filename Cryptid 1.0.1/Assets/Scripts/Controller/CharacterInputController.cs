@@ -25,7 +25,8 @@ public class CharacterInputController : MonoBehaviour
 
     private Coroutine chargingAttack;
     private bool perfectAttack;
-    private bool CanAttack { get; set; }
+    public bool canAttack;
+    private bool attackPressed;
 
     [SerializeField]private Animator animator;
     
@@ -40,6 +41,7 @@ public class CharacterInputController : MonoBehaviour
     }
     private void Awake()
     {
+        canAttack = true;
         chargeStartDelayWFS = new WaitForSeconds(heavyWindupStartDelay);
         chargeTimeWFS = new WaitForSeconds(heavyWindupChargeTime);
         frameWFS = new WaitForSeconds(perfectHeavyFrameTime);
@@ -101,8 +103,11 @@ public class CharacterInputController : MonoBehaviour
 /// </summary>
     private void StartAttack()
     {
-        if(CanAttack)
+        if(canAttack)
+        {
             chargingAttack = StartCoroutine(ChargingRoutine());
+            attackPressed = true;
+        }
     }
 
 /// <summary>
@@ -110,6 +115,8 @@ public class CharacterInputController : MonoBehaviour
 /// </summary>
     private void ReleaseAttack()
     {
+        if(!canAttack||!attackPressed)
+            return;
         if(chargingAttack!=null)
             StopCoroutine(chargingAttack);
         if (!activelyCharging && !attackCharged)
@@ -172,4 +179,16 @@ public class CharacterInputController : MonoBehaviour
         inputs.PlayerMobile.Attack.started -= StartAttackCallback;
         inputs.PlayerMobile.Attack.canceled -= ReleaseAttackCallback;
     }
+    //for animation
+    public void SetCanAttack()
+    {
+        canAttack = true;
+    }
+
+    public void SetCannotAttack()
+    {
+        canAttack = false;
+    }
+
+    
 }
