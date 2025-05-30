@@ -103,11 +103,8 @@ public class CharacterInputController : MonoBehaviour
 /// </summary>
     private void StartAttack()
     {
-        if(canAttack)
-        {
-            chargingAttack = StartCoroutine(ChargingRoutine());
-            attackPressed = true;
-        }
+        chargingAttack = StartCoroutine(ChargingRoutine());
+        attackPressed = true;
     }
 
 /// <summary>
@@ -115,10 +112,10 @@ public class CharacterInputController : MonoBehaviour
 /// </summary>
     private void ReleaseAttack()
     {
-        if(!canAttack||!attackPressed)
-            return;
         if(chargingAttack!=null)
             StopCoroutine(chargingAttack);
+        if(!canAttack||!attackPressed)
+            return;
         if (!activelyCharging && !attackCharged)
         {
             attack.LightAttack();
@@ -135,7 +132,7 @@ public class CharacterInputController : MonoBehaviour
             attack.HeavyAttack(perfectAttack);
             animator.SetTrigger("HeavyRelease");
         }
-        
+        animator.SetBool("HeavyCharging", false);
         attackCharged = false;
         activelyCharging = false;
         activePlayerRunSpeed = playerSpeed;
@@ -151,7 +148,7 @@ public class CharacterInputController : MonoBehaviour
         animator.SetBool("HeavyCharged", false);
         print("Charging Heavy attack");
         activelyCharging = true;
-        animator.SetTrigger("HeavyWindup");
+        animator.SetBool("HeavyCharging", true);
         activePlayerRunSpeed *= chargeMovementMultiplier;
         yield return chargeTimeWFS;
         print("Heavy attack is Charged");

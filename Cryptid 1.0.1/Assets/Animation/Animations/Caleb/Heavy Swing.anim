@@ -91173,6 +91173,13 @@ AnimationClip:
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
+  - time: 0
+    functionName: DisableMask
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
   - time: 0.96666664
     functionName: EnableControls
     data: 
@@ -91182,6 +91189,13 @@ AnimationClip:
     messageOptions: 0
   - time: 0.96666664
     functionName: DisableRootMotion
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.96666664
+    functionName: EnableMask
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0

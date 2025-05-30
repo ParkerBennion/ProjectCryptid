@@ -30,6 +30,15 @@ public class CharacterAnimationInputInterface : MonoBehaviour
         controller.canAttack = false;
     }
 
+    public void DisableMask()
+    {
+        animator.SetLayerWeight(1,0);
+    }
+
+    public void EnableMask()
+    {
+        animator.SetLayerWeight(1,1);
+    }
     public void EnableRootMotion()
     {
         animator.applyRootMotion = true;
