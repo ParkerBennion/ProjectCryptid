@@ -48,4 +48,9 @@ public class CharacterAnimationInputInterface : MonoBehaviour
     {
         animator.applyRootMotion = false;
     }
+
+    public void RecenterPlayer()
+    {
+        transform.parent.Translate(0,0,1.2318f);
+    }
 }

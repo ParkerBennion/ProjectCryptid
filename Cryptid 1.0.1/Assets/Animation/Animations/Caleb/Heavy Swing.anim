@@ -91167,13 +91167,6 @@ AnimationClip:
     intParameter: 0
     messageOptions: 0
   - time: 0
-    functionName: EnableRootMotion
-    data: 
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
-  - time: 0
     functionName: DisableMask
     data: 
     objectReferenceParameter: {fileID: 0}
@@ -91188,14 +91181,14 @@ AnimationClip:
     intParameter: 0
     messageOptions: 0
   - time: 0.96666664
-    functionName: DisableRootMotion
+    functionName: EnableMask
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
   - time: 0.96666664
-    functionName: EnableMask
+    functionName: RecenterPlayer
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
