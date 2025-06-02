@@ -131,6 +131,7 @@ public class CharacterInputController : MonoBehaviour
         {
             attack.HeavyAttack(perfectAttack);
             animator.SetTrigger("HeavyRelease");
+            animator.Play("LurchForward");
         }
         animator.SetBool("HeavyCharging", false);
         attackCharged = false;
