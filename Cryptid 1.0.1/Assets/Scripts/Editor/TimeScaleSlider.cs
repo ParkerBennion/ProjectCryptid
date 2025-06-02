@@ -22,6 +22,11 @@ public class TimeScaleSlider: EditorWindow
             timeScale = newTimeScale;
             ApplyTimeScale();
         }
+        /*  //this adds a button
+        if (GUILayout.Button("Print some bullshit"))
+        {
+            Debug.Log("Some Bullshit");
+        }*/
 
     }
 
