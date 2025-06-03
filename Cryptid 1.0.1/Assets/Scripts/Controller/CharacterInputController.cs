@@ -25,6 +25,8 @@ public class CharacterInputController : MonoBehaviour
 
     private Coroutine chargingAttack;
     private bool perfectAttack;
+    public bool canAttack;
+    private bool attackPressed;
 
     [SerializeField]private Animator animator;
     
@@ -39,6 +41,7 @@ public class CharacterInputController : MonoBehaviour
     }
     private void Awake()
     {
+        canAttack = true;
         chargeStartDelayWFS = new WaitForSeconds(heavyWindupStartDelay);
         chargeTimeWFS = new WaitForSeconds(heavyWindupChargeTime);
         frameWFS = new WaitForSeconds(perfectHeavyFrameTime);
@@ -101,6 +104,7 @@ public class CharacterInputController : MonoBehaviour
     private void StartAttack()
     {
         chargingAttack = StartCoroutine(ChargingRoutine());
+        attackPressed = true;
     }
 
 /// <summary>
@@ -110,6 +114,8 @@ public class CharacterInputController : MonoBehaviour
     {
         if(chargingAttack!=null)
             StopCoroutine(chargingAttack);
+        if(!canAttack||!attackPressed)
+            return;
         if (!activelyCharging && !attackCharged)
         {
             attack.LightAttack();
@@ -125,8 +131,9 @@ public class CharacterInputController : MonoBehaviour
         {
             attack.HeavyAttack(perfectAttack);
             animator.SetTrigger("HeavyRelease");
+            animator.Play("LurchForward");
         }
-        
+        animator.SetBool("HeavyCharging", false);
         attackCharged = false;
         activelyCharging = false;
         activePlayerRunSpeed = playerSpeed;
@@ -142,7 +149,7 @@ public class CharacterInputController : MonoBehaviour
         animator.SetBool("HeavyCharged", false);
         print("Charging Heavy attack");
         activelyCharging = true;
-        animator.SetTrigger("HeavyWindup");
+        animator.SetBool("HeavyCharging", true);
         activePlayerRunSpeed *= chargeMovementMultiplier;
         yield return chargeTimeWFS;
         print("Heavy attack is Charged");
@@ -170,4 +177,16 @@ public class CharacterInputController : MonoBehaviour
         inputs.PlayerMobile.Attack.started -= StartAttackCallback;
         inputs.PlayerMobile.Attack.canceled -= ReleaseAttackCallback;
     }
+    //for animation
+    public void SetCanAttack()
+    {
+        canAttack = true;
+    }
+
+    public void SetCannotAttack()
+    {
+        canAttack = false;
+    }
+
+    
 }

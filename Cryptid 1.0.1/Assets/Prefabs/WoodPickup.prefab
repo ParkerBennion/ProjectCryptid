@@ -52,7 +52,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.50000006
+  m_Radius: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &8525139497039914582
 MonoBehaviour:
@@ -101,7 +101,7 @@ GameObject:
   - component: {fileID: 4548711423083210897}
   - component: {fileID: 3026072289952355850}
   - component: {fileID: 8740754908376494084}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: WoodPickup
   m_TagString: Untagged
   m_Icon: {fileID: 0}

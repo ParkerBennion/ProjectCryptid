@@ -12,7 +12,7 @@ TagManager:
   - PlayerLayer
   - Water
   - UI
-  - NavmeshIgnore
+  - Collectibles
   - Enemy
   - Destructible
   - Foliage
