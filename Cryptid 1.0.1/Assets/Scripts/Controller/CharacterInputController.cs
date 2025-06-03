@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.VFX;
@@ -16,7 +17,7 @@ public class CharacterInputController : MonoBehaviour
     private Vector3 moveVector, lookVector;
     
     public bool attackCharged, activelyCharging;
-    public float playerSpeed,  heavyWindupStartDelay, heavyWindupChargeTime, perfectHeavyFrameTime;
+    [SerializeField] private float playerSpeed,  heavyWindupStartDelay, heavyWindupChargeTime, perfectHeavyFrameTime;
 
     [Range(0, 1)] 
     public float chargeMovementMultiplier;
@@ -24,16 +25,23 @@ public class CharacterInputController : MonoBehaviour
 
     private Coroutine chargingAttack;
     private bool perfectAttack;
+    public bool canAttack;
+    private bool attackPressed;
 
+    [SerializeField]private Animator animator;
+    
+    private static readonly int animSpeed = Animator.StringToHash("Speed");
+    
     private WaitForSeconds chargeStartDelayWFS, chargeTimeWFS, frameWFS;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     
     private void OnEnable() // Enables controls when the object is enabled
     {
-        SetControlsEnabled(true);
+        EnableControls();
     }
     private void Awake()
     {
+        canAttack = true;
         chargeStartDelayWFS = new WaitForSeconds(heavyWindupStartDelay);
         chargeTimeWFS = new WaitForSeconds(heavyWindupChargeTime);
         frameWFS = new WaitForSeconds(perfectHeavyFrameTime);
@@ -46,8 +54,8 @@ public class CharacterInputController : MonoBehaviour
         
         heavyFrameFX.SetFloat("FrameTime", perfectHeavyFrameTime);
 
-        inputs.PlayerMobile.Attack.started += ctx => StartAttack();
-        inputs.PlayerMobile.Attack.canceled += ctx => ReleaseAttack();
+        inputs.PlayerMobile.Attack.started += StartAttackCallback;
+        inputs.PlayerMobile.Attack.canceled += ReleaseAttackCallback;
         
         inputs.PlayerMobile.Move.performed += ctx => moveAxis = ctx.ReadValue<Vector2>();
         inputs.PlayerMobile.Move.canceled += ctx => moveAxis = Vector2.zero;
@@ -63,17 +71,31 @@ public class CharacterInputController : MonoBehaviour
         transform.Translate(moveVector * (activePlayerRunSpeed * Time.deltaTime), Space.World);
         if (moveAxis!=Vector2.zero)//Updates the players rotation if they are moving, and does nothing if the player is not moving
             transform.rotation = Quaternion.LookRotation(moveVector);
+        animator.SetFloat(animSpeed, moveVector.magnitude*activePlayerRunSpeed);
     }
+    
+    private void StartAttackCallback(InputAction.CallbackContext ctx)
+    {
+        StartAttack();
+    }
+
+    private void ReleaseAttackCallback(InputAction.CallbackContext ctx)
+    {
+        ReleaseAttack();
+    }
+    
 /// <summary>
 /// Either enables or disables the controls
 /// </summary>
 /// <param name="state"></param>
-    public void SetControlsEnabled(bool state)
+    public void EnableControls()
     {
-        if (state)
-            inputs.PlayerMobile.Enable();
-        else 
-            inputs.PlayerMobile.Disable();
+        inputs.PlayerMobile.Enable();
+    }
+
+    public void DisableControls()
+    {
+        inputs.PlayerMobile.Disable();
     }
 
 /// <summary>
@@ -82,6 +104,7 @@ public class CharacterInputController : MonoBehaviour
     private void StartAttack()
     {
         chargingAttack = StartCoroutine(ChargingRoutine());
+        attackPressed = true;
     }
 
 /// <summary>
@@ -89,21 +112,28 @@ public class CharacterInputController : MonoBehaviour
 /// </summary>
     private void ReleaseAttack()
     {
-        StopCoroutine(chargingAttack);
+        if(chargingAttack!=null)
+            StopCoroutine(chargingAttack);
+        if(!canAttack||!attackPressed)
+            return;
         if (!activelyCharging && !attackCharged)
         {
             attack.LightAttack();
+            animator.SetTrigger("LightAttack");
         }
         else if (activelyCharging)
         {
             print("Heavy Charge Interrupted => ");
+            animator.SetTrigger("HeavyRelease");
             attack.LightAttack();
         }
         else if (attackCharged)
         {
             attack.HeavyAttack(perfectAttack);
+            animator.SetTrigger("HeavyRelease");
+            animator.Play("LurchForward");
         }
-        
+        animator.SetBool("HeavyCharging", false);
         attackCharged = false;
         activelyCharging = false;
         activePlayerRunSpeed = playerSpeed;
@@ -116,14 +146,17 @@ public class CharacterInputController : MonoBehaviour
     private IEnumerator ChargingRoutine()
     {
         yield return chargeStartDelayWFS;
+        animator.SetBool("HeavyCharged", false);
         print("Charging Heavy attack");
         activelyCharging = true;
+        animator.SetBool("HeavyCharging", true);
         activePlayerRunSpeed *= chargeMovementMultiplier;
         yield return chargeTimeWFS;
         print("Heavy attack is Charged");
         StartCoroutine(PerfectHeavyAttackFrame());
         activelyCharging = false;
         attackCharged = true;
+        animator.SetBool("HeavyCharged", true);
     }
 
     private IEnumerator PerfectHeavyAttackFrame()
@@ -133,6 +166,27 @@ public class CharacterInputController : MonoBehaviour
         yield return frameWFS;
         perfectAttack = false;
     }
-    
+
+    private void OnDestroy()
+    {
+        
+    }
+    private void OnDisable()
+    {
+        DisableControls(); // disables input map
+        inputs.PlayerMobile.Attack.started -= StartAttackCallback;
+        inputs.PlayerMobile.Attack.canceled -= ReleaseAttackCallback;
+    }
+    //for animation
+    public void SetCanAttack()
+    {
+        canAttack = true;
+    }
+
+    public void SetCannotAttack()
+    {
+        canAttack = false;
+    }
+
     
 }

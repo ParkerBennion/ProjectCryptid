@@ -6,17 +6,17 @@ using UnityEngine.Events;
 public class DetectPlayerTag : MonoBehaviour
 {
     public UnityEvent detectEvent, unDetectEvent;
+    public UnityEvent<GameObject> playerParameterEvent;
 /// <summary>
 /// When an object marked as player enters the trigger area, invoke an event
 /// </summary>
 /// <param name="other"></param>
     private void OnTriggerEnter(Collider other)
     {
-        print("Collided");
-        if (other.gameObject.CompareTag("Player"))
+        if (other.gameObject.CompareTag("PlayerCharacter"))
         {
-            print("Player entered area");
             detectEvent.Invoke();
+            playerParameterEvent.Invoke(other.gameObject);
         }
     }
 /// <summary>
@@ -25,9 +25,8 @@ public class DetectPlayerTag : MonoBehaviour
 /// <param name="other"></param>
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.CompareTag("Player"))
+        if (other.gameObject.CompareTag("PlayerCharacter"))
         {
-            print("Player left area");
             unDetectEvent.Invoke();
         }
     }

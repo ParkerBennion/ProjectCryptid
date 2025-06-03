@@ -5,7 +5,7 @@ using System.Reflection;
 public class DataDisplayUpdater : MonoBehaviour
 {
     public TMP_Text displayText;
-    public string fieldName = "coins";
+    public string fieldName = "logs";
     public GameAction updateDisplayAction; // Reference to the GameAction
 
     private DataBlockSO data;

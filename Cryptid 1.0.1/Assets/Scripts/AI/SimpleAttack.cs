@@ -6,7 +6,8 @@ public class SimpleAttack : MonoBehaviour
     public string[] layerList;
     private LayerMask validLayers;
 
-
+    [SerializeField] private float damageAmt, damageRadius;
+    [SerializeField] private Vector3 AttackOrigin;
     private void Awake()
     {
         if (layerList.Length == 0)
@@ -19,6 +20,10 @@ public class SimpleAttack : MonoBehaviour
         }
     }
 
+    public void PerformSimpleAttack()
+    {
+        Attack(damageAmt, damageRadius, AttackOrigin);
+    }
     /// <summary>
     /// Searches the area in front of the object for damageable entities and calls the DealDamage function for specified damage amount
     /// </summary>

@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 3
-  tags: []
+  tags:
+  - PlayerCharacter
   layers:
   - Default
   - TransparentFX
@@ -11,12 +12,12 @@ TagManager:
   - PlayerLayer
   - Water
   - UI
-  - NavmeshIgnore
+  - Collectibles
   - Enemy
   - Destructible
-  - 
+  - Foliage
   - 3D ui Layer
-  - 
+  - Ground
   - 
   - 
   - 

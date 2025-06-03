@@ -5,11 +5,13 @@ using UnityEngine.Events;
 public class EntityHealth : MonoBehaviour, IDamageable
 {
     public float entityCurrentHealth, MaxHealth;
-    public UnityEvent deathEvent;
+    public UnityEvent damageEvent, deathEvent;
+    public bool invulnerable;
 
     private void Awake()
     {
         entityCurrentHealth = MaxHealth;
+        invulnerable = false;
     }
     
 /// <summary>
@@ -18,12 +20,14 @@ public class EntityHealth : MonoBehaviour, IDamageable
 /// <param name="damage">The amount of health to deduct</param>
     public void DealDamage(float damage)
     {
+        if (invulnerable) return;
         changeHealth(damage*-1);
         if(entityCurrentHealth<=0)//if the entity runs out of health, do not proceed and instead execute the death function
         {
             Death();
             return;
         }
+        damageEvent.Invoke();
         //damage animation
         print("OUCH");
     }
@@ -32,7 +36,7 @@ public class EntityHealth : MonoBehaviour, IDamageable
 /// Updates the health value of the entity
 /// </summary>
 /// <param name="changeAmount">The amount by which to change the health. Positive values increase the health, negative values decrease the health</param>
-public void changeHealth(float changeAmount)
+    public void changeHealth(float changeAmount)
     {
         entityCurrentHealth += changeAmount;
     }
@@ -42,7 +46,7 @@ public void changeHealth(float changeAmount)
 /// </summary>
     private void Death()
     {
-        Debug.Log(gameObject+"_died");
         deathEvent?.Invoke();
     }
+    
 }

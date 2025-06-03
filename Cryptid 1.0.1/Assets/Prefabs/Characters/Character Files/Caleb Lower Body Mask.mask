@@ -1,0 +1,165 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!319 &31900000
+AvatarMask:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Caleb Lower Body Mask
+  m_Mask: 01000000000000000000000001000000010000000000000000000000000000000000000000000000000000000000000000000000
+  m_Elements:
+  - m_Path: 
+    m_Weight: 1
+  - m_Path: Geometry
+    m_Weight: 0
+  - m_Path: Geometry/Skinned_Geo
+    m_Weight: 0
+  - m_Path: Geometry/Skinned_Geo/Caleb_Geo_Export
+    m_Weight: 0
+  - m_Path: Skeleton
+    m_Weight: 0
+  - m_Path: Skeleton/ROOT_JNT
+    m_Weight: 0
+  - m_Path: Skeleton/ROOT_SKIN_JNT
+    m_Weight: 0
+  - m_Path: Skeleton/ROOT_SKIN_JNT/Axe_Jnt
+    m_Weight: 0
+  - m_Path: Skeleton/ROOT_SKIN_JNT/CoG_Skin_Jnt
+    m_Weight: 1
+  - m_Path: Skeleton/ROOT_SKIN_JNT/CoG_Skin_Jnt/Pelvis_Skin_Jnt
+    m_Weight: 1
+  - m_Path: Skeleton/ROOT_SKIN_JNT/CoG_Skin_Jnt/Pelvis_Skin_Jnt/L_Leg_1_Skin_Jnt
+    m_Weight: 1
+  - m_Path: Skeleton/ROOT_SKIN_JNT/CoG_Skin_Jnt/Pelvis_Skin_Jnt/L_Leg_1_Skin_Jnt/L_Leg_UpperTwist_Skin_Jnt
+    m_Weight: 1
+  - m_Path: Skeleton/ROOT_SKIN_JNT/CoG_Skin_Jnt/Pelvis_Skin_Jnt/L_Leg_1_Skin_Jnt/L_Leg_UpperTwist_Skin_Jnt/L_Leg_2_Skin_Jnt
+    m_Weight: 1
+  - m_Path: Skeleton/ROOT_SKIN_JNT/CoG_Skin_Jnt/Pelvis_Skin_Jnt/L_Leg_1_Skin_Jnt/L_Leg_UpperTwist_Skin_Jnt/L_Leg_2_Skin_Jnt/L_Leg_Shin_Twist_Skin_Jnt
+    m_Weight: 1
+  - m_Path: Skeleton/ROOT_SKIN_JNT/CoG_Skin_Jnt/Pelvis_Skin_Jnt/L_Leg_1_Skin_Jnt/L_Leg_UpperTwist_Skin_Jnt/L_Leg_2_Skin_Jnt/L_Leg_Shin_Twist_Skin_Jnt/L_Leg_3_Skin_Jnt
+    m_Weight: 1
+  - m_Path: Skeleton/ROOT_SKIN_JNT/CoG_Skin_Jnt/Pelvis_Skin_Jnt/L_Leg_1_Skin_Jnt/L_Leg_UpperTwist_Skin_Jnt/L_Leg_2_Skin_Jnt/L_Leg_Shin_Twist_Skin_Jnt/L_Leg_3_Skin_Jnt/L_Foot_1_Skin_Jnt
+    m_Weight: 1
+  - m_Path: Skeleton/ROOT_SKIN_JNT/CoG_Skin_Jnt/Pelvis_Skin_Jnt/L_Leg_1_Skin_Jnt/L_Leg_UpperTwist_Skin_Jnt/L_Leg_2_Skin_Jnt/L_Leg_Shin_Twist_Skin_Jnt/L_Leg_3_Skin_Jnt/L_Foot_1_Skin_Jnt/L_Foot_2_Skin_Jnt
+    m_Weight: 1
+  - m_Path: Skeleton/ROOT_SKIN_JNT/CoG_Skin_Jnt/Pelvis_Skin_Jnt/L_Leg_1_Skin_Jnt/L_Leg_UpperTwist_Skin_Jnt/L_Leg_2_Skin_Jnt/L_Leg_Shin_Twist_Skin_Jnt/L_Leg_3_Skin_Jnt/L_Foot_1_Skin_Jnt/L_Foot_2_Skin_Jnt/L_Foot_3_Skin_Jnt
+    m_Weight: 1
+  - m_Path: Skeleton/ROOT_SKIN_JNT/CoG_Skin_Jnt/Pelvis_Skin_Jnt/R_Leg_1_Skin_Jnt
+    m_Weight: 1
+  - m_Path: Skeleton/ROOT_SKIN_JNT/CoG_Skin_Jnt/Pelvis_Skin_Jnt/R_Leg_1_Skin_Jnt/R_Leg_UpperTwist_Skin_Jnt
+    m_Weight: 1
+  - m_Path: Skeleton/ROOT_SKIN_JNT/CoG_Skin_Jnt/Pelvis_Skin_Jnt/R_Leg_1_Skin_Jnt/R_Leg_UpperTwist_Skin_Jnt/R_Leg_2_Skin_Jnt
+    m_Weight: 1
+  - m_Path: Skeleton/ROOT_SKIN_JNT/CoG_Skin_Jnt/Pelvis_Skin_Jnt/R_Leg_1_Skin_Jnt/R_Leg_UpperTwist_Skin_Jnt/R_Leg_2_Skin_Jnt/R_Leg_Shin_Twist_Skin_Jnt
+    m_Weight: 1
+  - m_Path: Skeleton/ROOT_SKIN_JNT/CoG_Skin_Jnt/Pelvis_Skin_Jnt/R_Leg_1_Skin_Jnt/R_Leg_UpperTwist_Skin_Jnt/R_Leg_2_Skin_Jnt/R_Leg_Shin_Twist_Skin_Jnt/R_Leg_3_Skin_Jnt
+    m_Weight: 1
+  - m_Path: Skeleton/ROOT_SKIN_JNT/CoG_Skin_Jnt/Pelvis_Skin_Jnt/R_Leg_1_Skin_Jnt/R_Leg_UpperTwist_Skin_Jnt/R_Leg_2_Skin_Jnt/R_Leg_Shin_Twist_Skin_Jnt/R_Leg_3_Skin_Jnt/R_Foot_1_Skin_Jnt
+    m_Weight: 1
+  - m_Path: Skeleton/ROOT_SKIN_JNT/CoG_Skin_Jnt/Pelvis_Skin_Jnt/R_Leg_1_Skin_Jnt/R_Leg_UpperTwist_Skin_Jnt/R_Leg_2_Skin_Jnt/R_Leg_Shin_Twist_Skin_Jnt/R_Leg_3_Skin_Jnt/R_Foot_1_Skin_Jnt/R_Foot_2_Skin_Jnt
+    m_Weight: 1
+  - m_Path: Skeleton/ROOT_SKIN_JNT/CoG_Skin_Jnt/Pelvis_Skin_Jnt/R_Leg_1_Skin_Jnt/R_Leg_UpperTwist_Skin_Jnt/R_Leg_2_Skin_Jnt/R_Leg_Shin_Twist_Skin_Jnt/R_Leg_3_Skin_Jnt/R_Foot_1_Skin_Jnt/R_Foot_2_Skin_Jnt/R_Foot_3_Skin_Jnt
+    m_Weight: 1
+  - m_Path: Skeleton/ROOT_SKIN_JNT/CoG_Skin_Jnt/Spine_1_Skin_Jnt
+    m_Weight: 0
+  - m_Path: Skeleton/ROOT_SKIN_JNT/CoG_Skin_Jnt/Spine_1_Skin_Jnt/Spine_2_Skin_Jnt
+    m_Weight: 0
+  - m_Path: Skeleton/ROOT_SKIN_JNT/CoG_Skin_Jnt/Spine_1_Skin_Jnt/Spine_2_Skin_Jnt/Spine_3_Skin_Jnt
+    m_Weight: 0
+  - m_Path: Skeleton/ROOT_SKIN_JNT/CoG_Skin_Jnt/Spine_1_Skin_Jnt/Spine_2_Skin_Jnt/Spine_3_Skin_Jnt/Backpack_1_Skin_Jnt
+    m_Weight: 0
+  - m_Path: Skeleton/ROOT_SKIN_JNT/CoG_Skin_Jnt/Spine_1_Skin_Jnt/Spine_2_Skin_Jnt/Spine_3_Skin_Jnt/Backpack_1_Skin_Jnt/Backpack_2_Skin_Jnt
+    m_Weight: 0
+  - m_Path: Skeleton/ROOT_SKIN_JNT/CoG_Skin_Jnt/Spine_1_Skin_Jnt/Spine_2_Skin_Jnt/Spine_3_Skin_Jnt/Backpack_1_Skin_Jnt/Backpack_2_Skin_Jnt/Rope_Skin_Jnt
+    m_Weight: 0
+  - m_Path: Skeleton/ROOT_SKIN_JNT/CoG_Skin_Jnt/Spine_1_Skin_Jnt/Spine_2_Skin_Jnt/Spine_3_Skin_Jnt/L_Clavicle_Skin_Jnt
+    m_Weight: 0
+  - m_Path: Skeleton/ROOT_SKIN_JNT/CoG_Skin_Jnt/Spine_1_Skin_Jnt/Spine_2_Skin_Jnt/Spine_3_Skin_Jnt/L_Clavicle_Skin_Jnt/L_Arm_1_Skin_Jnt
+    m_Weight: 0
+  - m_Path: Skeleton/ROOT_SKIN_JNT/CoG_Skin_Jnt/Spine_1_Skin_Jnt/Spine_2_Skin_Jnt/Spine_3_Skin_Jnt/L_Clavicle_Skin_Jnt/L_Arm_1_Skin_Jnt/L_Upper_Twist_Skin_Jnt
+    m_Weight: 0
+  - m_Path: Skeleton/ROOT_SKIN_JNT/CoG_Skin_Jnt/Spine_1_Skin_Jnt/Spine_2_Skin_Jnt/Spine_3_Skin_Jnt/L_Clavicle_Skin_Jnt/L_Arm_1_Skin_Jnt/L_Upper_Twist_Skin_Jnt/L_Arm_2_Skin_Jnt
+    m_Weight: 0
+  - m_Path: Skeleton/ROOT_SKIN_JNT/CoG_Skin_Jnt/Spine_1_Skin_Jnt/Spine_2_Skin_Jnt/Spine_3_Skin_Jnt/L_Clavicle_Skin_Jnt/L_Arm_1_Skin_Jnt/L_Upper_Twist_Skin_Jnt/L_Arm_2_Skin_Jnt/L_Lower_Twist_Skin_Jnt
+    m_Weight: 0
+  - m_Path: Skeleton/ROOT_SKIN_JNT/CoG_Skin_Jnt/Spine_1_Skin_Jnt/Spine_2_Skin_Jnt/Spine_3_Skin_Jnt/L_Clavicle_Skin_Jnt/L_Arm_1_Skin_Jnt/L_Upper_Twist_Skin_Jnt/L_Arm_2_Skin_Jnt/L_Lower_Twist_Skin_Jnt/L_Arm_3_Skin_Jnt
+    m_Weight: 0
+  - m_Path: Skeleton/ROOT_SKIN_JNT/CoG_Skin_Jnt/Spine_1_Skin_Jnt/Spine_2_Skin_Jnt/Spine_3_Skin_Jnt/L_Clavicle_Skin_Jnt/L_Arm_1_Skin_Jnt/L_Upper_Twist_Skin_Jnt/L_Arm_2_Skin_Jnt/L_Lower_Twist_Skin_Jnt/L_Arm_3_Skin_Jnt/L_Hand_Skin_Jnt
+    m_Weight: 0
+  - m_Path: Skeleton/ROOT_SKIN_JNT/CoG_Skin_Jnt/Spine_1_Skin_Jnt/Spine_2_Skin_Jnt/Spine_3_Skin_Jnt/L_Clavicle_Skin_Jnt/L_Arm_1_Skin_Jnt/L_Upper_Twist_Skin_Jnt/L_Arm_2_Skin_Jnt/L_Lower_Twist_Skin_Jnt/L_Arm_3_Skin_Jnt/L_Hand_Skin_Jnt/L_Finger_1_Skin_Jnt1
+    m_Weight: 0
+  - m_Path: Skeleton/ROOT_SKIN_JNT/CoG_Skin_Jnt/Spine_1_Skin_Jnt/Spine_2_Skin_Jnt/Spine_3_Skin_Jnt/L_Clavicle_Skin_Jnt/L_Arm_1_Skin_Jnt/L_Upper_Twist_Skin_Jnt/L_Arm_2_Skin_Jnt/L_Lower_Twist_Skin_Jnt/L_Arm_3_Skin_Jnt/L_Hand_Skin_Jnt/L_Finger_1_Skin_Jnt1/L_Finger_2_Skin_Jnt
+    m_Weight: 0
+  - m_Path: Skeleton/ROOT_SKIN_JNT/CoG_Skin_Jnt/Spine_1_Skin_Jnt/Spine_2_Skin_Jnt/Spine_3_Skin_Jnt/L_Clavicle_Skin_Jnt/L_Arm_1_Skin_Jnt/L_Upper_Twist_Skin_Jnt/L_Arm_2_Skin_Jnt/L_Lower_Twist_Skin_Jnt/L_Arm_3_Skin_Jnt/L_Hand_Skin_Jnt/L_Finger_1_Skin_Jnt1/L_Finger_2_Skin_Jnt/L_Finger_3_Skin_Jnt
+    m_Weight: 0
+  - m_Path: Skeleton/ROOT_SKIN_JNT/CoG_Skin_Jnt/Spine_1_Skin_Jnt/Spine_2_Skin_Jnt/Spine_3_Skin_Jnt/L_Clavicle_Skin_Jnt/L_Arm_1_Skin_Jnt/L_Upper_Twist_Skin_Jnt/L_Arm_2_Skin_Jnt/L_Lower_Twist_Skin_Jnt/L_Arm_3_Skin_Jnt/L_Hand_Skin_Jnt/L_Finger_3_Skin_Jnt1
+    m_Weight: 0
+  - m_Path: Skeleton/ROOT_SKIN_JNT/CoG_Skin_Jnt/Spine_1_Skin_Jnt/Spine_2_Skin_Jnt/Spine_3_Skin_Jnt/L_Clavicle_Skin_Jnt/L_Arm_1_Skin_Jnt/L_Upper_Twist_Skin_Jnt/L_Arm_2_Skin_Jnt/L_Lower_Twist_Skin_Jnt/L_Arm_3_Skin_Jnt/L_Hand_Skin_Jnt/L_Finger_3_Skin_Jnt1/L_Finger_3_Skin_Jnt2
+    m_Weight: 0
+  - m_Path: Skeleton/ROOT_SKIN_JNT/CoG_Skin_Jnt/Spine_1_Skin_Jnt/Spine_2_Skin_Jnt/Spine_3_Skin_Jnt/L_Clavicle_Skin_Jnt/L_Arm_1_Skin_Jnt/L_Upper_Twist_Skin_Jnt/L_Arm_2_Skin_Jnt/L_Lower_Twist_Skin_Jnt/L_Arm_3_Skin_Jnt/L_Hand_Skin_Jnt/L_Fist_1_Skin_Jnt
+    m_Weight: 0
+  - m_Path: Skeleton/ROOT_SKIN_JNT/CoG_Skin_Jnt/Spine_1_Skin_Jnt/Spine_2_Skin_Jnt/Spine_3_Skin_Jnt/L_Clavicle_Skin_Jnt/L_Arm_1_Skin_Jnt/L_Upper_Twist_Skin_Jnt/L_Arm_2_Skin_Jnt/L_Lower_Twist_Skin_Jnt/L_Arm_3_Skin_Jnt/L_Hand_Skin_Jnt/L_Fist_1_Skin_Jnt/L_Fist_2_Skin_Jnt
+    m_Weight: 0
+  - m_Path: Skeleton/ROOT_SKIN_JNT/CoG_Skin_Jnt/Spine_1_Skin_Jnt/Spine_2_Skin_Jnt/Spine_3_Skin_Jnt/L_Clavicle_Skin_Jnt/L_Arm_1_Skin_Jnt/L_Upper_Twist_Skin_Jnt/L_Arm_2_Skin_Jnt/L_Lower_Twist_Skin_Jnt/L_Arm_3_Skin_Jnt/L_Hand_Skin_Jnt/L_Fist_1_Skin_Jnt/L_Fist_2_Skin_Jnt/L_Fist_3_Skin_Jnt
+    m_Weight: 0
+  - m_Path: Skeleton/ROOT_SKIN_JNT/CoG_Skin_Jnt/Spine_1_Skin_Jnt/Spine_2_Skin_Jnt/Spine_3_Skin_Jnt/Neck_Skin_Jnt
+    m_Weight: 0
+  - m_Path: Skeleton/ROOT_SKIN_JNT/CoG_Skin_Jnt/Spine_1_Skin_Jnt/Spine_2_Skin_Jnt/Spine_3_Skin_Jnt/Neck_Skin_Jnt/Head_Skin_Jnt
+    m_Weight: 0
+  - m_Path: Skeleton/ROOT_SKIN_JNT/CoG_Skin_Jnt/Spine_1_Skin_Jnt/Spine_2_Skin_Jnt/Spine_3_Skin_Jnt/Neck_Skin_Jnt/Head_Skin_Jnt/Hair_Back_Bounce_Jnt1
+    m_Weight: 0
+  - m_Path: Skeleton/ROOT_SKIN_JNT/CoG_Skin_Jnt/Spine_1_Skin_Jnt/Spine_2_Skin_Jnt/Spine_3_Skin_Jnt/Neck_Skin_Jnt/Head_Skin_Jnt/Hair_Front_Bounce_Jnt1
+    m_Weight: 0
+  - m_Path: Skeleton/ROOT_SKIN_JNT/CoG_Skin_Jnt/Spine_1_Skin_Jnt/Spine_2_Skin_Jnt/Spine_3_Skin_Jnt/Neck_Skin_Jnt/Head_Skin_Jnt/Hat_Skin_Jnt
+    m_Weight: 0
+  - m_Path: Skeleton/ROOT_SKIN_JNT/CoG_Skin_Jnt/Spine_1_Skin_Jnt/Spine_2_Skin_Jnt/Spine_3_Skin_Jnt/Neck_Skin_Jnt/Head_Skin_Jnt/Jaw_Skin_Jnt
+    m_Weight: 0
+  - m_Path: Skeleton/ROOT_SKIN_JNT/CoG_Skin_Jnt/Spine_1_Skin_Jnt/Spine_2_Skin_Jnt/Spine_3_Skin_Jnt/Neck_Skin_Jnt/Head_Skin_Jnt/L_Eye_Skin_Jnt
+    m_Weight: 0
+  - m_Path: Skeleton/ROOT_SKIN_JNT/CoG_Skin_Jnt/Spine_1_Skin_Jnt/Spine_2_Skin_Jnt/Spine_3_Skin_Jnt/Neck_Skin_Jnt/Head_Skin_Jnt/L_Eyelid_Skin_Jnt
+    m_Weight: 0
+  - m_Path: Skeleton/ROOT_SKIN_JNT/CoG_Skin_Jnt/Spine_1_Skin_Jnt/Spine_2_Skin_Jnt/Spine_3_Skin_Jnt/Neck_Skin_Jnt/Head_Skin_Jnt/Nose_Skin_Jnt
+    m_Weight: 0
+  - m_Path: Skeleton/ROOT_SKIN_JNT/CoG_Skin_Jnt/Spine_1_Skin_Jnt/Spine_2_Skin_Jnt/Spine_3_Skin_Jnt/Neck_Skin_Jnt/Head_Skin_Jnt/R_Eye_Skin_Jnt
+    m_Weight: 0
+  - m_Path: Skeleton/ROOT_SKIN_JNT/CoG_Skin_Jnt/Spine_1_Skin_Jnt/Spine_2_Skin_Jnt/Spine_3_Skin_Jnt/Neck_Skin_Jnt/Head_Skin_Jnt/R_Eyelid_Skin_Jnt
+    m_Weight: 0
+  - m_Path: Skeleton/ROOT_SKIN_JNT/CoG_Skin_Jnt/Spine_1_Skin_Jnt/Spine_2_Skin_Jnt/Spine_3_Skin_Jnt/Neck_Tie_1_Skin_Jnt
+    m_Weight: 0
+  - m_Path: Skeleton/ROOT_SKIN_JNT/CoG_Skin_Jnt/Spine_1_Skin_Jnt/Spine_2_Skin_Jnt/Spine_3_Skin_Jnt/Neck_Tie_1_Skin_Jnt/Neck_Tie_2_Skin_Jnt
+    m_Weight: 0
+  - m_Path: Skeleton/ROOT_SKIN_JNT/CoG_Skin_Jnt/Spine_1_Skin_Jnt/Spine_2_Skin_Jnt/Spine_3_Skin_Jnt/Neck_Tie_1_Skin_Jnt/Neck_Tie_2_Skin_Jnt/Neck_Tie_3_Skin_Jnt
+    m_Weight: 0
+  - m_Path: Skeleton/ROOT_SKIN_JNT/CoG_Skin_Jnt/Spine_1_Skin_Jnt/Spine_2_Skin_Jnt/Spine_3_Skin_Jnt/NeckTieRear_Skin_Jnt
+    m_Weight: 0
+  - m_Path: Skeleton/ROOT_SKIN_JNT/CoG_Skin_Jnt/Spine_1_Skin_Jnt/Spine_2_Skin_Jnt/Spine_3_Skin_Jnt/R_Clavicle_Skin_Jnt
+    m_Weight: 0
+  - m_Path: Skeleton/ROOT_SKIN_JNT/CoG_Skin_Jnt/Spine_1_Skin_Jnt/Spine_2_Skin_Jnt/Spine_3_Skin_Jnt/R_Clavicle_Skin_Jnt/R_Arm_1_Skin_Jnt
+    m_Weight: 0
+  - m_Path: Skeleton/ROOT_SKIN_JNT/CoG_Skin_Jnt/Spine_1_Skin_Jnt/Spine_2_Skin_Jnt/Spine_3_Skin_Jnt/R_Clavicle_Skin_Jnt/R_Arm_1_Skin_Jnt/R_Upper_Twist_Skin_Jnt
+    m_Weight: 0
+  - m_Path: Skeleton/ROOT_SKIN_JNT/CoG_Skin_Jnt/Spine_1_Skin_Jnt/Spine_2_Skin_Jnt/Spine_3_Skin_Jnt/R_Clavicle_Skin_Jnt/R_Arm_1_Skin_Jnt/R_Upper_Twist_Skin_Jnt/R_Arm_2_Skin_Jnt
+    m_Weight: 0
+  - m_Path: Skeleton/ROOT_SKIN_JNT/CoG_Skin_Jnt/Spine_1_Skin_Jnt/Spine_2_Skin_Jnt/Spine_3_Skin_Jnt/R_Clavicle_Skin_Jnt/R_Arm_1_Skin_Jnt/R_Upper_Twist_Skin_Jnt/R_Arm_2_Skin_Jnt/R_Lower_Twist_Skin_Jnt
+    m_Weight: 0
+  - m_Path: Skeleton/ROOT_SKIN_JNT/CoG_Skin_Jnt/Spine_1_Skin_Jnt/Spine_2_Skin_Jnt/Spine_3_Skin_Jnt/R_Clavicle_Skin_Jnt/R_Arm_1_Skin_Jnt/R_Upper_Twist_Skin_Jnt/R_Arm_2_Skin_Jnt/R_Lower_Twist_Skin_Jnt/R_Arm_3_Skin_Jnt
+    m_Weight: 0
+  - m_Path: Skeleton/ROOT_SKIN_JNT/CoG_Skin_Jnt/Spine_1_Skin_Jnt/Spine_2_Skin_Jnt/Spine_3_Skin_Jnt/R_Clavicle_Skin_Jnt/R_Arm_1_Skin_Jnt/R_Upper_Twist_Skin_Jnt/R_Arm_2_Skin_Jnt/R_Lower_Twist_Skin_Jnt/R_Arm_3_Skin_Jnt/R_Hand_Skin_Jnt
+    m_Weight: 0
+  - m_Path: Skeleton/ROOT_SKIN_JNT/CoG_Skin_Jnt/Spine_1_Skin_Jnt/Spine_2_Skin_Jnt/Spine_3_Skin_Jnt/R_Clavicle_Skin_Jnt/R_Arm_1_Skin_Jnt/R_Upper_Twist_Skin_Jnt/R_Arm_2_Skin_Jnt/R_Lower_Twist_Skin_Jnt/R_Arm_3_Skin_Jnt/R_Hand_Skin_Jnt/R_Finger_1_Skin_Jnt1
+    m_Weight: 0
+  - m_Path: Skeleton/ROOT_SKIN_JNT/CoG_Skin_Jnt/Spine_1_Skin_Jnt/Spine_2_Skin_Jnt/Spine_3_Skin_Jnt/R_Clavicle_Skin_Jnt/R_Arm_1_Skin_Jnt/R_Upper_Twist_Skin_Jnt/R_Arm_2_Skin_Jnt/R_Lower_Twist_Skin_Jnt/R_Arm_3_Skin_Jnt/R_Hand_Skin_Jnt/R_Finger_1_Skin_Jnt1/R_Finger_2_Skin_Jnt
+    m_Weight: 0
+  - m_Path: Skeleton/ROOT_SKIN_JNT/CoG_Skin_Jnt/Spine_1_Skin_Jnt/Spine_2_Skin_Jnt/Spine_3_Skin_Jnt/R_Clavicle_Skin_Jnt/R_Arm_1_Skin_Jnt/R_Upper_Twist_Skin_Jnt/R_Arm_2_Skin_Jnt/R_Lower_Twist_Skin_Jnt/R_Arm_3_Skin_Jnt/R_Hand_Skin_Jnt/R_Finger_1_Skin_Jnt1/R_Finger_2_Skin_Jnt/R_Finger_3_Skin_Jnt
+    m_Weight: 0
+  - m_Path: Skeleton/ROOT_SKIN_JNT/CoG_Skin_Jnt/Spine_1_Skin_Jnt/Spine_2_Skin_Jnt/Spine_3_Skin_Jnt/R_Clavicle_Skin_Jnt/R_Arm_1_Skin_Jnt/R_Upper_Twist_Skin_Jnt/R_Arm_2_Skin_Jnt/R_Lower_Twist_Skin_Jnt/R_Arm_3_Skin_Jnt/R_Hand_Skin_Jnt/R_Finger_3_Skin_Jnt1
+    m_Weight: 0
+  - m_Path: Skeleton/ROOT_SKIN_JNT/CoG_Skin_Jnt/Spine_1_Skin_Jnt/Spine_2_Skin_Jnt/Spine_3_Skin_Jnt/R_Clavicle_Skin_Jnt/R_Arm_1_Skin_Jnt/R_Upper_Twist_Skin_Jnt/R_Arm_2_Skin_Jnt/R_Lower_Twist_Skin_Jnt/R_Arm_3_Skin_Jnt/R_Hand_Skin_Jnt/R_Finger_3_Skin_Jnt1/R_Finger_3_Skin_Jnt2
+    m_Weight: 0
+  - m_Path: Skeleton/ROOT_SKIN_JNT/CoG_Skin_Jnt/Spine_1_Skin_Jnt/Spine_2_Skin_Jnt/Spine_3_Skin_Jnt/R_Clavicle_Skin_Jnt/R_Arm_1_Skin_Jnt/R_Upper_Twist_Skin_Jnt/R_Arm_2_Skin_Jnt/R_Lower_Twist_Skin_Jnt/R_Arm_3_Skin_Jnt/R_Hand_Skin_Jnt/R_Fist_1_Skin_Jnt
+    m_Weight: 0
+  - m_Path: Skeleton/ROOT_SKIN_JNT/CoG_Skin_Jnt/Spine_1_Skin_Jnt/Spine_2_Skin_Jnt/Spine_3_Skin_Jnt/R_Clavicle_Skin_Jnt/R_Arm_1_Skin_Jnt/R_Upper_Twist_Skin_Jnt/R_Arm_2_Skin_Jnt/R_Lower_Twist_Skin_Jnt/R_Arm_3_Skin_Jnt/R_Hand_Skin_Jnt/R_Fist_1_Skin_Jnt/R_Fist_2_Skin_Jnt
+    m_Weight: 0
+  - m_Path: Skeleton/ROOT_SKIN_JNT/CoG_Skin_Jnt/Spine_1_Skin_Jnt/Spine_2_Skin_Jnt/Spine_3_Skin_Jnt/R_Clavicle_Skin_Jnt/R_Arm_1_Skin_Jnt/R_Upper_Twist_Skin_Jnt/R_Arm_2_Skin_Jnt/R_Lower_Twist_Skin_Jnt/R_Arm_3_Skin_Jnt/R_Hand_Skin_Jnt/R_Fist_1_Skin_Jnt/R_Fist_2_Skin_Jnt/R_Fist_3_Skin_Jnt
+    m_Weight: 0
