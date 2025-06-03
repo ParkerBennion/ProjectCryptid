@@ -51,6 +51,7 @@ MonoBehaviour:
   defaultCell: {fileID: 0}
   exampleTile: {fileID: 5650620722496709884, guid: 4a08b145f714ed248aea62c5ca157d72, type: 3}
   tileBrain: {fileID: 0}
+  tileLibrary: {fileID: 0}
 --- !u!114 &7357468244183108833
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -72,7 +73,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7973244023815925513}
-  - component: {fileID: 5786920516689329227}
   - component: {fileID: 7414777805990822113}
   - component: {fileID: 2392983892601036629}
   m_Layer: 0
@@ -97,14 +97,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 5084290003078939522}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &5786920516689329227
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7796523088049801732}
-  m_Mesh: {fileID: -1799501131822033171, guid: ee2c4c3a74969db42bbb45a58713d246, type: 3}
 --- !u!64 &7414777805990822113
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -126,7 +118,7 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 1
   m_CookingOptions: 30
-  m_Mesh: {fileID: -1799501131822033171, guid: ee2c4c3a74969db42bbb45a58713d246, type: 3}
+  m_Mesh: {fileID: -1799501131822033171, guid: 8ec57db6640f7e24db684c88cefe4e09, type: 3}
 --- !u!114 &2392983892601036629
 MonoBehaviour:
   m_ObjectHideFlags: 0

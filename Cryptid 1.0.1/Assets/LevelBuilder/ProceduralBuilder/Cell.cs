@@ -24,7 +24,7 @@ public class Cell : MonoBehaviour
     {
         cellManager.activeCells.Add(this);
         PopulateEmptyCells();
-        cellManager.RebuildNavmesh(); 
+        //cellManager.RebuildNavmesh(); 
         
         //find which direction you came from
     }
@@ -111,22 +111,22 @@ public class Cell : MonoBehaviour
         {
             case 1:
                 //createCell at position based on the direction
-                newCell = Instantiate(defaultCell, new Vector3(0, 0, 10)+transform.position, quaternion.identity);
+                newCell = Instantiate(defaultCell, new Vector3(0, 0, 60)+transform.position, quaternion.identity);
                 break;
             case 2:
-                newCell = Instantiate(defaultCell, new Vector3((5 / math.sqrt(3))*3, 0, 5)+transform.position, quaternion.identity);
+                newCell = Instantiate(defaultCell, new Vector3((30 / math.sqrt(3))*3, 0, 30)+transform.position, quaternion.identity);
                 break;
             case 3:
-                newCell = Instantiate(defaultCell, new Vector3((5 / math.sqrt(3))*3, 0, -5)+transform.position, quaternion.identity);
+                newCell = Instantiate(defaultCell, new Vector3((30 / math.sqrt(3))*3, 0, -30)+transform.position, quaternion.identity);
                 break;
             case 4:
-                newCell = Instantiate(defaultCell, new Vector3(0, 0, -10)+transform.position, quaternion.identity);
+                newCell = Instantiate(defaultCell, new Vector3(0, 0, -60)+transform.position, quaternion.identity);
                 break;
             case 5:
-                newCell = Instantiate(defaultCell, new Vector3(-(5 / math.sqrt(3)*3), 0, -5)+transform.position, quaternion.identity);
+                newCell = Instantiate(defaultCell, new Vector3(-(30 / math.sqrt(3)*3), 0, -30)+transform.position, quaternion.identity);
                 break;
             case 6:
-                newCell = Instantiate(defaultCell, new Vector3(-(5 / math.sqrt(3)*3), 0, 5)+transform.position, quaternion.identity);
+                newCell = Instantiate(defaultCell, new Vector3(-(30 / math.sqrt(3)*3), 0, 30)+transform.position, quaternion.identity);
                 break;
             default:
                 Debug.LogWarning("Direction Index was out of bounds when creating a new cell");
