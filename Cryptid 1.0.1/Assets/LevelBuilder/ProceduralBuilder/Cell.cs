@@ -182,7 +182,7 @@ public class Cell : MonoBehaviour
         (GameObject, int) tileData = tileLibrary.GetTileFromCode(borderCode);
         int newRotation = directionFromOrigin + tileData.Item2;
         
-        print(registeredCells+"->"+borderCode);
+        //print(registeredCells+"->"+borderCode);
         tileBrain = Instantiate(tileData.Item1, gameObject.transform.position, quaternion.identity, gameObject.transform).GetComponent<Tile>();
         tileBrain.RotateTile(newRotation-1);
         RegisterNavmeshWithManager();
@@ -201,5 +201,6 @@ public class Cell : MonoBehaviour
     private void OnDestroy()
     {
         cellManager.navMeshInstances.Remove(navMeshInstance);
+        NavMesh.RemoveNavMeshData(navMeshInstance);
     }
 }
