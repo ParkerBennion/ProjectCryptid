@@ -1,5 +1,69 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &147001482583348875
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7136951039784660675}
+  - component: {fileID: 138185712992699348}
+  m_Layer: 0
+  m_Name: TripleSplitTileNavmesh
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7136951039784660675
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 147001482583348875}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5084290003078939522}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &138185712992699348
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 147001482583348875}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SerializedVersion: 0
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 2048
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_GenerateLinks: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.016666668
+  m_MinRegionArea: 2
+  m_NavMeshData: {fileID: 23800000, guid: 476b0a913a301814193e1bbacc3821fc, type: 2}
+  m_BuildHeightMesh: 0
 --- !u!1 &5188467588749597393
 GameObject:
   m_ObjectHideFlags: 0
@@ -11,7 +75,7 @@ GameObject:
   - component: {fileID: 1929868326549187813}
   - component: {fileID: 7125684348235137078}
   - component: {fileID: 2208256491733110881}
-  m_Layer: 9
+  m_Layer: 11
   m_Name: Cube (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27,7 +91,7 @@ Transform:
   m_GameObject: {fileID: 5188467588749597393}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.5, z: 0, w: 0.8660254}
-  m_LocalPosition: {x: -12.97, y: 0, z: -7.48}
+  m_LocalPosition: {x: -12.97, y: 0.5, z: -7.48}
   m_LocalScale: {x: 3, y: 1, z: 30}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -99,7 +163,7 @@ GameObject:
   - component: {fileID: 89865414451715240}
   - component: {fileID: -3289945287587296543}
   - component: {fileID: 3463978124832420008}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: TileTripleSplit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -119,6 +183,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 7136951039784660675}
   - {fileID: 5670914911890907694}
   - {fileID: 1929868326549187813}
   - {fileID: 645066635677679335}
@@ -190,6 +255,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   borderCode: 000000000000000001000000010000000100000000000000
+  tileNavMeshData: {fileID: 0}
+  navMesh: {fileID: 138185712992699348}
 --- !u!64 &3463978124832420008
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -223,7 +290,7 @@ GameObject:
   - component: {fileID: 5670914911890907694}
   - component: {fileID: 2119009970996721733}
   - component: {fileID: 2538119684773038204}
-  m_Layer: 9
+  m_Layer: 11
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -239,7 +306,7 @@ Transform:
   m_GameObject: {fileID: 8668832759795102700}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0.5, z: 0, w: 0.8660254}
-  m_LocalPosition: {x: 13.02, y: 0, z: -7.51}
+  m_LocalPosition: {x: 13.02, y: 0.5, z: -7.51}
   m_LocalScale: {x: 3, y: 1, z: 30}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -309,7 +376,7 @@ GameObject:
   - component: {fileID: 645066635677679335}
   - component: {fileID: 8169633362723051262}
   - component: {fileID: 6325953134824169924}
-  m_Layer: 9
+  m_Layer: 11
   m_Name: Cube (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -325,7 +392,7 @@ Transform:
   m_GameObject: {fileID: 9011171455093226572}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -15}
+  m_LocalPosition: {x: 0, y: 0.5, z: -15}
   m_LocalScale: {x: 3, y: 1, z: 30}
   m_ConstrainProportionsScale: 0
   m_Children: []
