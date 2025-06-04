@@ -119,6 +119,7 @@ public class CharacterInputController : MonoBehaviour
         if (!activelyCharging && !attackCharged)
         {
             attack.LightAttack();
+            canAttack = false;
             animator.SetTrigger("LightAttack");
         }
         else if (activelyCharging)
