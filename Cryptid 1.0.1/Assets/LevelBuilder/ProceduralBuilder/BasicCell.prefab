@@ -80,8 +80,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_SerializedVersion: 1
   m_AgentTypeID: 0
-  m_StartPoint: {x: 0, y: 0, z: -0.2}
-  m_EndPoint: {x: 0, y: 0, z: 0.2}
+  m_StartPoint: {x: 0, y: 0, z: -0.5}
+  m_EndPoint: {x: 0, y: 0, z: 0.5}
   m_StartTransform: {fileID: 0}
   m_EndTransform: {fileID: 0}
   m_Activated: 1
@@ -202,8 +202,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_SerializedVersion: 1
   m_AgentTypeID: 0
-  m_StartPoint: {x: 0, y: 0, z: -0.2}
-  m_EndPoint: {x: 0, y: 0, z: 0.2}
+  m_StartPoint: {x: 0, y: 0, z: -0.5}
+  m_EndPoint: {x: 0, y: 0, z: 0.5}
   m_StartTransform: {fileID: 0}
   m_EndTransform: {fileID: 0}
   m_Activated: 1
@@ -346,8 +346,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_SerializedVersion: 1
   m_AgentTypeID: 0
-  m_StartPoint: {x: 0, y: 0, z: -0.2}
-  m_EndPoint: {x: 0, y: 0, z: 0.2}
+  m_StartPoint: {x: 0, y: 0, z: -0.5}
+  m_EndPoint: {x: 0, y: 0, z: 0.5}
   m_StartTransform: {fileID: 0}
   m_EndTransform: {fileID: 0}
   m_Activated: 1
