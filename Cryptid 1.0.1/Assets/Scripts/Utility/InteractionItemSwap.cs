@@ -17,7 +17,7 @@ public class InteractionItemSwap : InteractionItem
             Transform parent = defaultObject.transform.parent;
 
             Destroy(defaultObject);
-            Instantiate(swappedObject, position, rotation, parent);
+            Instantiate(swappedObject, position, rotation, gameObject.transform);
         }
         else
         {
