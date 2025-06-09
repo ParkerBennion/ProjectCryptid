@@ -26,6 +26,7 @@ public class Cell : MonoBehaviour
     {
         cellManager.activeCells.Add(this);
         PopulateEmptyCells();
+        print("Player entered cell");
         //cellManager.RebuildNavmesh(); 
         
         //find which direction you came from
