@@ -57,6 +57,9 @@ public class CharacterInputController : MonoBehaviour
         inputs.PlayerMobile.Attack.started += StartAttackCallback;
         inputs.PlayerMobile.Attack.canceled += ReleaseAttackCallback;
         
+        inputs.PlayerMobile.Torch.started += StartTorchCallback;
+        //inputs.PlayerMobile.Torch.canceled += ReleaseTorchCallback;
+        
         inputs.PlayerMobile.Move.performed += ctx => moveAxis = ctx.ReadValue<Vector2>();
         inputs.PlayerMobile.Move.canceled += ctx => moveAxis = Vector2.zero;
     }
@@ -82,6 +85,24 @@ public class CharacterInputController : MonoBehaviour
     private void ReleaseAttackCallback(InputAction.CallbackContext ctx)
     {
         ReleaseAttack();
+    }
+
+    private void StartTorchCallback(InputAction.CallbackContext ctx)
+    {
+        StartTorch();
+    }
+    private void ReleaseTorchCallback(InputAction.CallbackContext ctx)
+    {
+        //currently no funcionality needs release torch mechanics
+        //ReleaseTorch();
+    }
+    public void StartTorch()
+    {
+        Debug.Log("StartTorch");
+    }
+    public void ReleaseTorch()
+    {
+        Debug.Log("StartTorch");
     }
     
 /// <summary>
@@ -176,6 +197,8 @@ public class CharacterInputController : MonoBehaviour
         DisableControls(); // disables input map
         inputs.PlayerMobile.Attack.started -= StartAttackCallback;
         inputs.PlayerMobile.Attack.canceled -= ReleaseAttackCallback;
+        inputs.PlayerMobile.Torch.started -= StartTorchCallback;
+        inputs.PlayerMobile.Torch.canceled -= ReleaseTorchCallback;
     }
     //for animation
     public void SetCanAttack()
