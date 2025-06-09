@@ -28,8 +28,9 @@ public class PlayerDataManager : MonoBehaviour
 
         // Ensure folder exists
         Directory.CreateDirectory(Path.GetDirectoryName(filePath));
-
+        
         LoadData();
+        
     }
 
     private void OnEnable()
