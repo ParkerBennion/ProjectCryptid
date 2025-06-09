@@ -1,6 +1,6 @@
 //Maya ASCII 2026 scene
 //Name: Caleb_Idle_Animation.ma
-//Last modified: Sun, Jun 08, 2025 11:18:01 PM
+//Last modified: Sun, Jun 08, 2025 11:47:30 PM
 //Codeset: 1252
 file -rdi 1 -ns "Caleb_Rig" -rfn "Caleb_RigRN" -op "v=0;" -typ "mayaAscii" "E:/CryptidMobile/ProjectCryptid/CryptidMobile_MayaProject//scenes/Caleb/Caleb Rig.ma";
 file -r -ns "Caleb_Rig" -dr 1 -rfn "Caleb_RigRN" -op "v=0;" -typ "mayaAscii" "E:/CryptidMobile/ProjectCryptid/CryptidMobile_MayaProject//scenes/Caleb/Caleb Rig.ma";
@@ -16,12 +16,12 @@ fileInfo "product" "Maya 2026";
 fileInfo "version" "2026";
 fileInfo "cutIdentifier" "202502240946-c910a8ba47";
 fileInfo "osv" "Windows 10 Pro for Workstations v2009 (Build: 19045)";
-fileInfo "UUID" "0082F80A-4352-2916-CABD-FD9939DF1FFF";
+fileInfo "UUID" "C893C44A-4384-9F80-02FB-5091E4911857";
 createNode transform -s -n "persp";
 	rename -uid "CBF88C2F-4AA7-20B4-1B3E-B9981C21D59C";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -4.5413158416867496 3.4791885056597689 10.365633256710357 ;
-	setAttr ".r" -type "double3" -9.3383525827048111 -20542.999999993444 -4.3190357299313482e-16 ;
+	setAttr ".t" -type "double3" -0.27105049473263765 3.4632450200816982 11.234224227465338 ;
+	setAttr ".r" -type "double3" -8.1383523152210078 -24845.399999998812 3.9934162746029298e-16 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "BDE4A5E7-4F26-2D45-107D-84BDA17E4896";
 	setAttr -k off ".v" no;
@@ -29,16 +29,16 @@ createNode camera -s -n "perspShape" -p "persp";
 	setAttr ".fl" 34.999999999999993;
 	setAttr ".ncp" 1;
 	setAttr ".fcp" 100;
-	setAttr ".coi" 11.398364992807137;
+	setAttr ".coi" 11.631302364715635;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
-	setAttr ".tp" -type "double3" 130.13223838999136 264.33945612830126 35.08401610709835 ;
+	setAttr ".tp" -type "double3" 7.2756766914616549 257.26373571233989 95.64008152351235 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 createNode transform -s -n "top";
 	rename -uid "EB23F0A5-4714-22A8-9EDA-A192DB33726E";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 0 1000.1 0 ;
+	setAttr ".t" -type "double3" 0.07275676691461655 1000.100461138155 0.95640081523534504 ;
 	setAttr ".r" -type "double3" -89.999999999999986 0 0 ;
 createNode camera -s -n "topShape" -p "top";
 	rename -uid "31ED6BB3-43CB-89A9-13A9-09BE41CB4CF7";
@@ -46,37 +46,38 @@ createNode camera -s -n "topShape" -p "top";
 	setAttr ".rnd" no;
 	setAttr ".ncp" 0.001;
 	setAttr ".fcp" 100;
-	setAttr ".coi" 1000.1;
-	setAttr ".ow" 30;
+	setAttr ".coi" 997.5278237810312;
+	setAttr ".ow" 0.80824472954549242;
 	setAttr ".imn" -type "string" "top";
 	setAttr ".den" -type "string" "top_depth";
 	setAttr ".man" -type "string" "top_mask";
+	setAttr ".tp" -type "double3" 7.2756766914616549 257.26373571233989 95.64008152351235 ;
 	setAttr ".hc" -type "string" "viewSet -t %camera";
 	setAttr ".o" yes;
 	setAttr ".ai_translator" -type "string" "orthographic";
 createNode transform -s -n "front";
 	rename -uid "EBA14B3F-4AB1-940D-E774-5E838B4E8DBD";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 0.040814789073244206 1.6588157951262121 1000.1013759589849 ;
+	setAttr ".t" -type "double3" 0.07275676691461655 2.5726373571233991 1000.1017943617106 ;
 createNode camera -s -n "frontShape" -p "front";
 	rename -uid "8D770881-4371-3EA9-299F-87B191AFEBEC";
 	setAttr -k off ".v" no;
 	setAttr ".rnd" no;
 	setAttr ".ncp" 0.001;
 	setAttr ".fcp" 100;
-	setAttr ".coi" 1000.5158629761744;
-	setAttr ".ow" 1.609465657106826;
+	setAttr ".coi" 999.14539354647559;
+	setAttr ".ow" 0.80824472954549242;
 	setAttr ".imn" -type "string" "front";
 	setAttr ".den" -type "string" "front_depth";
 	setAttr ".man" -type "string" "front_mask";
-	setAttr ".tp" -type "double3" 4.0814789073244206 165.88157951262122 -41.448701718948492 ;
+	setAttr ".tp" -type "double3" 7.2756766914616549 257.26373571233989 95.64008152351235 ;
 	setAttr ".hc" -type "string" "viewSet -f %camera";
 	setAttr ".o" yes;
 	setAttr ".ai_translator" -type "string" "orthographic";
 createNode transform -s -n "side";
 	rename -uid "195CFE47-4315-3AF4-80A6-DFA7CAF3A896";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 1000.105166568258 1.0183811731090489 -0.22978467866314137 ;
+	setAttr ".t" -type "double3" 1000.1070778786426 2.5726373571233991 0.95640081523534559 ;
 	setAttr ".r" -type "double3" 0 89.999999999999986 0 ;
 createNode camera -s -n "sideShape" -p "side";
 	rename -uid "CD944902-4CE2-87DC-CBA1-8FA5B7B92469";
@@ -84,12 +85,12 @@ createNode camera -s -n "sideShape" -p "side";
 	setAttr ".rnd" no;
 	setAttr ".ncp" 0.001;
 	setAttr ".fcp" 100;
-	setAttr ".coi" 1000.1042141233311;
-	setAttr ".ow" 7.9673169434933104;
+	setAttr ".coi" 1000.0343211117276;
+	setAttr ".ow" 0.19597177983701702;
 	setAttr ".imn" -type "string" "side";
 	setAttr ".den" -type "string" "side_depth";
 	setAttr ".man" -type "string" "side_mask";
-	setAttr ".tp" -type "double3" 0.095244492667546865 101.83811731090489 -22.978467866336345 ;
+	setAttr ".tp" -type "double3" 7.2756766914616549 257.26373571233989 95.64008152351235 ;
 	setAttr ".hc" -type "string" "viewSet -s %camera";
 	setAttr ".o" yes;
 	setAttr ".ai_translator" -type "string" "orthographic";
@@ -351,7 +352,7 @@ createNode parentConstraint -n "pasted__pCylinder2_parentConstraint1" -p "pasted
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" 0.21213649907838394 -0.25537513486820812 -0.097894332364350301 ;
 	setAttr ".tg[0].tor" -type "double3" -175.34955049034099 -71.07605620516415 0.070726775698728525 ;
-	setAttr ".lr" -type "double3" 18.663788025787589 -30.49863130702435 -11.372598710602009 ;
+	setAttr ".lr" -type "double3" 10.509336313115002 112.10760923857454 -10.984029258972626 ;
 	setAttr ".rst" -type "double3" 0.21355852075817666 0.61689234425912187 0.29462208283403329 ;
 	setAttr ".rsrr" -type "double3" 19.658213637337067 1.7493050748049344e-14 -10.39241403493714 ;
 	setAttr -k on ".w0";
@@ -3775,7 +3776,7 @@ createNode reference -n "Caleb_RigRN";
 		2 "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Auxillary|Caleb_Rig:Axe_Jnt_Ctrl_Grp|Caleb_Rig:Axe_Jnt_Ctrl" 
 		"LocalSpace" " -k 1"
 		2 "|Caleb_Rig:CALEB|Caleb_Rig:Deformers|Caleb_Rig:IK_Handles|Caleb_Rig:Spine_IK_Handle" 
-		"translate" " -type \"double3\" 0.033744579655573016 1.77036988750167557 -0.18119899548510951"
+		"translate" " -type \"double3\" 0.029239494833943037 1.77046370475036352 -0.08906436002642229"
 		
 		2 "|Caleb_Rig:Axe_Geometry:left" "visibility" " 0"
 		2 "|Caleb_Rig:Axe_Geometry:Axe" "visibility" " 1"
@@ -9744,7 +9745,7 @@ createNode script -n "uiConfigurationScriptNode";
 	setAttr ".st" 3;
 createNode script -n "sceneConfigurationScriptNode";
 	rename -uid "DDE48C29-44E0-1526-8B42-D693ED35C190";
-	setAttr ".b" -type "string" "playbackOptions -min 1 -max 238 -ast 1 -aet 500 ";
+	setAttr ".b" -type "string" "playbackOptions -min 1 -max 192 -ast 1 -aet 500 ";
 	setAttr ".st" 6;
 createNode file -n "file1";
 	rename -uid "77C9A8DC-4C40-C01C-EA71-568FBA8A4B5B";
@@ -13605,8 +13606,6 @@ createNode animLayer -n "head_turn";
 	rename -uid "53791842-499F-5624-7D49-CC82EC2B12B5";
 	setAttr -s 870 ".dsm";
 	setAttr -s 724 ".bnds";
-	setAttr ".pref" yes;
-	setAttr ".slct" yes;
 createNode animBlendNodeBoolean -n "Spine_1_Jnt_FK_Ctrl_visibility_head_turn";
 	rename -uid "232CE815-4FB3-1AA3-A61B-4E82CB8785B2";
 	setAttr ".ib" yes;
@@ -13619,7 +13618,7 @@ createNode animBlendNodeAdditiveDL -n "Spine_1_Jnt_FK_Ctrl_translateZ_head_turn"
 	rename -uid "A3649D33-4025-2085-2B41-A9A44C3D94DB";
 createNode animBlendNodeAdditiveRotation -n "Spine_1_Jnt_FK_Ctrl_rotate_head_turn";
 	rename -uid "CF75B9AF-42D5-461A-7DED-78943966766A";
-	setAttr ".o" -type "double3" -13.138160959851863 0 0 ;
+	setAttr ".o" -type "double3" 8.1174177678100037 0 0 ;
 createNode animBlendNodeAdditiveScale -n "Spine_1_Jnt_FK_Ctrl_scaleX_head_turn";
 	rename -uid "82BA5EC7-46AE-F331-A115-AF91258BEBBF";
 	setAttr ".ib" 1;
@@ -13650,7 +13649,7 @@ createNode animBlendNodeAdditiveDL -n "L_Arm_1_Jnt_FK_Ctrl_translateZ_head_turn"
 	rename -uid "287CE268-4A69-9BC1-CB0F-90A4F2F69121";
 createNode animBlendNodeAdditiveRotation -n "L_Arm_1_Jnt_FK_Ctrl_rotate_head_turn";
 	rename -uid "D8609DE9-42C5-CB8F-9371-02BFC9E25C1E";
-	setAttr ".o" -type "double3" 20.614852560663831 14.874300372643576 49.078963650522937 ;
+	setAttr ".o" -type "double3" -128.830467517991 -6.4913796784251101 -76.751265578524738 ;
 createNode animBlendNodeAdditiveScale -n "L_Arm_1_Jnt_FK_Ctrl_scaleX_head_turn";
 	rename -uid "C5F26E06-4680-D78A-5B9D-0184C4209AA4";
 	setAttr ".ib" 1;
@@ -13706,7 +13705,7 @@ createNode animBlendNodeAdditiveDL -n "Head_Ctrl_translateZ_head_turn";
 	rename -uid "2206F165-4714-A98C-DE61-B68455FAEE06";
 createNode animBlendNodeAdditiveRotation -n "Head_Ctrl_rotate_head_turn";
 	rename -uid "73E5DCD5-4E15-38DB-B168-25B5FC24603D";
-	setAttr ".o" -type "double3" -10.554377020557437 0 0 ;
+	setAttr ".o" -type "double3" -3.1775976891585107 24.539635572687367 0 ;
 createNode animBlendNodeAdditiveScale -n "Head_Ctrl_scaleX_head_turn";
 	rename -uid "533F5283-4EF5-D77D-271A-21AD1F17D873";
 	setAttr ".ib" 1;
@@ -13731,16 +13730,16 @@ createNode animBlendNodeBoolean -n "CoG_Jnt_Ctrl_visibility_head_turn";
 	setAttr ".o" yes;
 createNode animBlendNodeAdditiveDL -n "CoG_Jnt_Ctrl_translateX_head_turn";
 	rename -uid "1D258067-410A-4864-05E5-6BA3666F2E34";
-	setAttr ".o" 0.033767898773942935;
+	setAttr ".o" 0.013285408773958984;
 createNode animBlendNodeAdditiveDL -n "CoG_Jnt_Ctrl_translateY_head_turn";
 	rename -uid "6B4E6A13-407D-D65A-489D-9BAECD904256";
-	setAttr ".o" -0.084334312174919115;
+	setAttr ".o" -0.084238253619492373;
 createNode animBlendNodeAdditiveDL -n "CoG_Jnt_Ctrl_translateZ_head_turn";
 	rename -uid "392AAF11-4550-A8D3-756E-C5A5DE3227A3";
-	setAttr ".o" -0.14688304514124864;
+	setAttr ".o" -0.051900690013245113;
 createNode animBlendNodeAdditiveRotation -n "CoG_Jnt_Ctrl_rotate_head_turn";
 	rename -uid "AF048F93-490C-FD96-E61E-8D94F706BD4F";
-	setAttr ".o" -type "double3" -0.058458592565878806 0.002379456198368934 0.002379456198368934 ;
+	setAttr ".o" -type "double3" -0.062293659328008344 20.209509248065398 -0.019137714430045805 ;
 createNode animBlendNodeAdditiveScale -n "CoG_Jnt_Ctrl_scaleX_head_turn";
 	rename -uid "0FFCE7A8-45A8-43B3-ECBB-55A75AF25726";
 	setAttr ".ib" 1;
@@ -13771,7 +13770,7 @@ createNode animBlendNodeAdditiveDL -n "R_Clavicle_Jnt_Ctrl_translateZ_head_turn"
 	rename -uid "C510970F-4922-2655-B476-8C981DB5EB32";
 createNode animBlendNodeAdditiveRotation -n "R_Clavicle_Jnt_Ctrl_rotate_head_turn";
 	rename -uid "6672A5E8-45C1-E601-126F-8DBB61E41BC8";
-	setAttr ".o" -type "double3" 0 0 13.689045905268996 ;
+	setAttr ".o" -type "double3" 0 30.907970505138351 0 ;
 createNode animBlendNodeAdditiveScale -n "R_Clavicle_Jnt_Ctrl_scaleX_head_turn";
 	rename -uid "74CB6DD8-4354-2F26-0690-92B8C1DFD8B4";
 	setAttr ".ib" 1;
@@ -13802,7 +13801,7 @@ createNode animBlendNodeAdditiveDL -n "L_Arm_3_Jnt_FK_Ctrl_translateZ_head_turn"
 	rename -uid "4C7065E1-4D82-8348-0A1D-E292FC310F55";
 createNode animBlendNodeAdditiveRotation -n "L_Arm_3_Jnt_FK_Ctrl_rotate_head_turn";
 	rename -uid "E3FAF05F-4609-58BA-A031-328A2CBA4C2F";
-	setAttr ".o" -type "double3" -46.25222517917917 29.201362820805887 17.199047354509645 ;
+	setAttr ".o" -type "double3" -77.173551171013656 30.343353653073887 -11.694099344311498 ;
 createNode animBlendNodeAdditiveScale -n "L_Arm_3_Jnt_FK_Ctrl_scaleX_head_turn";
 	rename -uid "CBD65B90-4648-A2D0-7368-3EA8766082B6";
 	setAttr ".ib" 1;
@@ -13926,7 +13925,7 @@ createNode animBlendNodeAdditiveDL -n "L_Arm_2_Jnt_FK_Ctrl_translateZ_head_turn"
 	rename -uid "8AABBE8F-47CD-F1C0-8995-C2AC1838B3FA";
 createNode animBlendNodeAdditiveRotation -n "L_Arm_2_Jnt_FK_Ctrl_rotate_head_turn";
 	rename -uid "48D66250-460E-E7D4-8916-8289625A62BF";
-	setAttr ".o" -type "double3" -10.947168134650806 -22.810477661631776 -48.805122860868067 ;
+	setAttr ".o" -type "double3" 52.870895402175918 26.092499445660028 -17.661288311848871 ;
 createNode animBlendNodeAdditiveScale -n "L_Arm_2_Jnt_FK_Ctrl_scaleX_head_turn";
 	rename -uid "EBBF5C4D-4F01-1C84-DCF7-F98F64F313ED";
 	setAttr ".ib" 1;
@@ -13957,7 +13956,7 @@ createNode animBlendNodeAdditiveDL -n "Spine_2_Jnt_FK_Ctrl_translateZ_head_turn"
 	rename -uid "FAC3D8B4-4888-7134-4C03-06B7820C8F60";
 createNode animBlendNodeAdditiveRotation -n "Spine_2_Jnt_FK_Ctrl_rotate_head_turn";
 	rename -uid "B3D0C10E-456A-22AF-0ABA-5C85341BF1CD";
-	setAttr ".o" -type "double3" -1.4103161901902037 -22.789508202912646 -2.7100815779869296 ;
+	setAttr ".o" -type "double3" 10.159645715136845 -22.789508202912646 -2.7100815779869296 ;
 createNode animBlendNodeAdditiveScale -n "Spine_2_Jnt_FK_Ctrl_scaleX_head_turn";
 	rename -uid "FF7E4696-4669-EF40-60AD-BA973AA23728";
 	setAttr ".ib" 1;
@@ -14199,7 +14198,7 @@ createNode animBlendNodeAdditiveDL -n "L_Thumb_Jnt2_Ctrl_translateZ_head_turn";
 	rename -uid "85E50DB2-4EDB-B965-4B0F-829732965584";
 createNode animBlendNodeAdditiveRotation -n "L_Thumb_Jnt2_Ctrl_rotate_head_turn";
 	rename -uid "8F1A088E-44B0-2305-98EA-9F8D3BFD4847";
-	setAttr ".o" -type "double3" 0 0 21.762404168538641 ;
+	setAttr ".o" -type "double3" 0 23.6674454253669 18.765269197472826 ;
 createNode animBlendNodeAdditiveScale -n "L_Thumb_Jnt2_Ctrl_scaleX_head_turn";
 	rename -uid "66CFDA87-4DEB-2854-59A1-ED9C652B1A84";
 	setAttr ".ib" 1;
@@ -14501,7 +14500,7 @@ createNode animBlendNodeAdditiveDL -n "Neck_Ctrl_translateZ_head_turn";
 	setAttr ".o" -0.00025745226008638155;
 createNode animBlendNodeAdditiveRotation -n "Neck_Ctrl_rotate_head_turn";
 	rename -uid "2E5EB1EF-429D-2425-CD92-EF992AC2FA8D";
-	setAttr ".o" -type "double3" 22.266320520957095 -64.115330129505423 -6.0635805950787969 ;
+	setAttr ".o" -type "double3" 4.5281009803383157 95.018352737096464 -7.8673469094311557 ;
 createNode animBlendNodeAdditiveScale -n "Neck_Ctrl_scaleX_head_turn";
 	rename -uid "B4F44AFE-48C8-3649-8FEF-C1A4B3E38CDB";
 	setAttr ".ib" 1;
@@ -15427,6 +15426,7 @@ createNode animBlendNodeAdditiveScale -n "R_Foot_Reverse_Foot_Inner_Ctrl_scaleZ_
 	setAttr ".o" 1;
 createNode animBlendNodeBoolean -n "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_visibility_head_turn";
 	rename -uid "95E61B4D-464F-8201-50FE-B98806AAFF07";
+	setAttr ".ib" yes;
 	setAttr ".o" yes;
 createNode animBlendNodeAdditiveDL -n "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_translateX_head_turn";
 	rename -uid "36114DC5-4F3B-3545-6894-289ADB8E3DF1";
@@ -15438,12 +15438,15 @@ createNode animBlendNodeAdditiveRotation -n "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_
 	rename -uid "FC9CB763-476B-E7AD-451E-3280140B2B3B";
 createNode animBlendNodeAdditiveScale -n "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_scaleX_head_turn";
 	rename -uid "354B7B70-4B78-5ADF-9F96-78B4AFD2209B";
+	setAttr ".ib" 1;
 	setAttr ".o" 1;
 createNode animBlendNodeAdditiveScale -n "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_scaleY_head_turn";
 	rename -uid "59E086E1-4F4C-B992-E6B5-B2AC32238EEB";
+	setAttr ".ib" 1;
 	setAttr ".o" 1;
 createNode animBlendNodeAdditiveScale -n "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_scaleZ_head_turn";
 	rename -uid "818BC548-4CCD-70EA-D694-DCAC83DF8670";
+	setAttr ".ib" 1;
 	setAttr ".o" 1;
 createNode animBlendNodeAdditive -n "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_FollowTranslate_head_turn";
 	rename -uid "E377ACAF-4604-630D-BA0C-62AC38FDF942";
@@ -15455,12 +15458,14 @@ createNode animBlendNodeEnum -n "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_____________
 	rename -uid "84C829A7-46D0-74F1-FEBD-04A9F90AB2F8";
 createNode animBlendNodeAdditive -n "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_SimulationActive_head_turn";
 	rename -uid "47B9AACB-437C-074F-07E0-F59E605BD135";
+	setAttr ".ib" -2.2204460492503131e-16;
 	setAttr ".o" 1;
 createNode animBlendNodeAdditive -n "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_SimulationEffect_head_turn";
 	rename -uid "0893F629-45C0-B8A2-A5C3-92963A88F80D";
-	setAttr ".o" 0.32000000000000006;
+	setAttr ".ib" 1.3281720407607365;
 createNode animBlendNodeAdditive -n "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_Drag_head_turn";
 	rename -uid "B5A1BA64-4241-D9AA-DE99-35A24E5C48FB";
+	setAttr ".ib" -0.080000000000000071;
 	setAttr ".o" 0.7200000000000002;
 createNode animBlendNodeAdditive -n "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_MatchControl_head_turn";
 	rename -uid "3E4D444C-42FC-3220-BF11-7B804005F83F";
@@ -15532,13 +15537,13 @@ createNode animBlendNodeBoolean -n "Eye_Master_Ctrl_visibility_head_turn";
 	setAttr ".o" yes;
 createNode animBlendNodeAdditiveDL -n "Eye_Master_Ctrl_translateX_head_turn";
 	rename -uid "17DDFFAF-4DA0-9236-E961-E99093176DC1";
-	setAttr ".o" -0.47398026362917739;
+	setAttr ".o" 1.4574178317472619;
 createNode animBlendNodeAdditiveDL -n "Eye_Master_Ctrl_translateY_head_turn";
 	rename -uid "3E746225-40AF-0595-4AC2-219C99892CF5";
-	setAttr ".o" 0.10958360173223292;
+	setAttr ".o" 0.26620549229936463;
 createNode animBlendNodeAdditiveDL -n "Eye_Master_Ctrl_translateZ_head_turn";
 	rename -uid "E09831DC-4F34-88F9-0D69-3CAD885C634E";
-	setAttr ".o" 4.9647238486618764e-18;
+	setAttr ".o" -4.6441761040869396e-32;
 createNode animBlendNodeAdditiveRotation -n "Eye_Master_Ctrl_rotate_head_turn";
 	rename -uid "5F41C910-4594-854C-E011-E79CC4A644E9";
 createNode animBlendNodeAdditiveScale -n "Eye_Master_Ctrl_scaleX_head_turn";
@@ -15572,7 +15577,7 @@ createNode animBlendNodeAdditiveDL -n "Torso_FK_Ctrl_translateZ_head_turn";
 	setAttr ".o" -2.0644225550009096e-06;
 createNode animBlendNodeAdditiveRotation -n "Torso_FK_Ctrl_rotate_head_turn";
 	rename -uid "B11329C4-4CFF-69E5-B051-7CB0042AF380";
-	setAttr ".o" -type "double3" -9.632802249967213 -17.434576349969905 0 ;
+	setAttr ".o" -type "double3" 32.259578584874824 -6.8151617225989449 -1.2234279080294743 ;
 createNode animBlendNodeAdditiveScale -n "Torso_FK_Ctrl_scaleX_head_turn";
 	rename -uid "AE468CE9-4A3C-0ED4-1A1C-75B0BB9E1670";
 	setAttr ".ib" 1;
@@ -15603,7 +15608,7 @@ createNode animBlendNodeAdditiveDL -n "L_Clavicle_Jnt_Ctrl_translateZ_head_turn"
 	rename -uid "DFCDF4B8-450A-38B9-9F1F-E8812A95BEFE";
 createNode animBlendNodeAdditiveRotation -n "L_Clavicle_Jnt_Ctrl_rotate_head_turn";
 	rename -uid "84486DA8-4636-4083-D52D-2EA8822BA4C1";
-	setAttr ".o" -type "double3" -20.894363613292452 -1.3187957217031554 52.568291940810404 ;
+	setAttr ".o" -type "double3" 0 30.39105889418726 14.711132018606669 ;
 createNode animBlendNodeAdditiveScale -n "L_Clavicle_Jnt_Ctrl_scaleX_head_turn";
 	rename -uid "39F00A10-4AC9-EA51-5820-7C83F76766A0";
 	setAttr ".ib" 1;
@@ -15634,7 +15639,7 @@ createNode animBlendNodeAdditiveDL -n "L_Thumb_Jnt1_Ctrl_translateZ_head_turn";
 	rename -uid "1F4900DA-4365-452F-61CF-759E4836CF18";
 createNode animBlendNodeAdditiveRotation -n "L_Thumb_Jnt1_Ctrl_rotate_head_turn";
 	rename -uid "A6DE98A8-4EBF-F02F-80B0-128B20EF2156";
-	setAttr ".o" -type "double3" 53.99250123347624 15.010143730484334 -25.930698681280028 ;
+	setAttr ".o" -type "double3" 65.740847846818355 7.0244005811903607 -21.047304025843175 ;
 createNode animBlendNodeAdditiveScale -n "L_Thumb_Jnt1_Ctrl_scaleX_head_turn";
 	rename -uid "8CF1784F-41FD-E4D7-EE0A-8AB60B3F4187";
 	setAttr ".ib" 1;
@@ -15835,7 +15840,7 @@ createNode animCurveTL -n "Neck_Ctrl_translateX_head_turn_inputB";
 	rename -uid "7EA644D6-4017-0CE3-5D36-148E3331FBE7";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 0 54 0 62 0 66 0 105 0 115 0 120 0 157 0
+	setAttr -s 10 ".ktv[0:9]"  1 0 54 0 62 0 66 0 105 0 111 0 116 0 157 0
 		 180 0 194 0;
 	setAttr ".pre" 3;
 	setAttr ".pst" 3;
@@ -15843,7 +15848,7 @@ createNode animCurveTL -n "Neck_Ctrl_translateY_head_turn_inputB";
 	rename -uid "884924E9-4246-61ED-666A-5FA8F44108BA";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 0 54 0 62 0 66 0 105 0 115 0 120 0 157 0
+	setAttr -s 10 ".ktv[0:9]"  1 0 54 0 62 0 66 0 105 0 111 0 116 0 157 0
 		 180 0 194 0;
 	setAttr ".pre" 3;
 	setAttr ".pst" 3;
@@ -15851,7 +15856,7 @@ createNode animCurveTL -n "Neck_Ctrl_translateZ_head_turn_inputB";
 	rename -uid "4F7E0504-4EB8-243E-CE88-A288C1398486";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 0 54 0 62 0 66 0 105 0 115 0 120 0 157 0
+	setAttr -s 10 ".ktv[0:9]"  1 0 54 0 62 0 66 0 105 0 111 0 116 0 157 0
 		 180 0 194 0;
 	setAttr ".pre" 3;
 	setAttr ".pst" 3;
@@ -15860,8 +15865,8 @@ createNode animCurveTA -n "Neck_Ctrl_rotate_head_turn_inputBX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 10 ".ktv[0:9]"  1 4.9640811417100572 54 4.9640811417100572
-		 62 5.8497717710605368 66 6.5881664728942377 105 7.1316296999860205 115 -10.242560196836635
-		 120 -11.098608998095662 157 -11.266816 180 5.6417637927067119 194 4.9640811417100572;
+		 62 5.8497717710605368 66 6.5881664728942377 105 7.1316296999860205 111 -10.242560196836635
+		 116 -11.098608998095662 157 -11.266816 180 5.6417637927067119 194 4.9640811417100572;
 	setAttr ".pre" 3;
 	setAttr ".pst" 3;
 createNode animCurveTA -n "Neck_Ctrl_rotate_head_turn_inputBY";
@@ -15869,7 +15874,7 @@ createNode animCurveTA -n "Neck_Ctrl_rotate_head_turn_inputBY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 11 ".ktv[0:10]"  1 0 54 0 62 -60.604372325176101 66 -64.702303611651928
-		 105 -66.440928783695952 115 82.155915472345654 120 91.756840913048649 139 95.020241478658065
+		 105 -66.440928783695952 111 82.155915472345654 116 91.756840913048649 139 95.020241478658065
 		 157 93.643348880249363 180 1.8590382246440265 194 0;
 	setAttr -s 11 ".kit[2:10]"  1 1 18 18 18 18 18 18 
 		18;
@@ -15877,16 +15882,16 @@ createNode animCurveTA -n "Neck_Ctrl_rotate_head_turn_inputBY";
 		18;
 	setAttr -s 11 ".ktl[4:10]" no yes yes yes yes yes yes;
 	setAttr -s 11 ".kix[2:10]"  0.95826284144482021 0.99822064534865262 
-		1 0.38285097466503371 0.97749059359098933 1 0.99541174185933146 0.98636188074575259 
+		1 0.38285097466503376 0.98447370904324805 1 0.99541174185933146 0.98636188074575259 
 		1;
 	setAttr -s 11 ".kiy[2:10]"  -0.28588866138078911 -0.059628375793069351 
-		0 0.92381011641897137 0.21097900237022502 0 -0.095684189752391138 -0.16459113041625856 
+		0 0.92381011641897148 0.17553209450875423 0 -0.095684189752391138 -0.16459113041625856 
 		0;
 	setAttr -s 11 ".kox[2:10]"  0.95826284912003179 0.998220646443718 1 
-		0.38285097466503376 0.97749059359098922 1 0.99541174185933146 0.98636188074575271 
+		0.38285097466503376 0.98447370904324794 1 0.99541174185933146 0.98636188074575271 
 		1;
 	setAttr -s 11 ".koy[2:10]"  -0.28588863565444361 -0.059628357460907729 
-		0 0.92381011641897137 0.21097900237022496 0 -0.095684189752391138 -0.16459113041625859 
+		0 0.92381011641897137 0.17553209450875423 0 -0.095684189752391138 -0.16459113041625859 
 		0;
 	setAttr ".pre" 3;
 	setAttr ".pst" 3;
@@ -15895,7 +15900,7 @@ createNode animCurveTA -n "Neck_Ctrl_rotate_head_turn_inputBZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 10 ".ktv[0:9]"  1 0 54 0 62 -4.8672564293045699 66 -6.2051324065868343
-		 105 -7.1196066660262423 115 -7.1584847373373792 120 -7.7567742205577694 157 -7.8743335000000014
+		 105 -7.1196066660262423 111 -7.1584847373373792 116 -7.7567742205577694 157 -7.8743335000000014
 		 180 0.52571824845530202 194 0;
 	setAttr ".pre" 3;
 	setAttr ".pst" 3;
@@ -17762,7 +17767,7 @@ createNode animBlendNodeAdditive -n "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_Simulati
 	setAttr ".o" 1.0000000000000002;
 createNode animBlendNodeAdditive -n "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_SimulationEffect_breathing";
 	rename -uid "1BED3817-41E6-7EF0-DA36-E7A6D369192F";
-	setAttr ".o" -1.0081720407607364;
+	setAttr ".o" -1.3281720407607365;
 createNode animBlendNodeAdditive -n "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_Drag_breathing";
 	rename -uid "1126E682-4222-EC8F-A43F-CA84B12BA184";
 	setAttr ".o" 0.80000000000000027;
@@ -17875,7 +17880,7 @@ createNode animBlendNodeAdditiveDL -n "Torso_FK_Ctrl_translateZ_breathing";
 	setAttr ".o" -2.0644225550009096e-06;
 createNode animBlendNodeAdditiveRotation -n "Torso_FK_Ctrl_rotate_breathing";
 	rename -uid "3A5FC972-4948-4058-A4F8-6791C306E794";
-	setAttr ".o" -type "double3" 0 -17.414039457105051 0 ;
+	setAttr ".o" -type "double3" 0 -15.846452066468972 0 ;
 createNode animBlendNodeAdditiveScale -n "Torso_FK_Ctrl_scaleX_breathing";
 	rename -uid "EA7CA248-4779-769B-8A53-5BB4B7776A7D";
 	setAttr ".ib" 1;
@@ -17937,7 +17942,7 @@ createNode animBlendNodeAdditiveDL -n "L_Thumb_Jnt1_Ctrl_translateZ_breathing";
 	rename -uid "4914007F-4674-2303-BD93-0E83144AA6B3";
 createNode animBlendNodeAdditiveRotation -n "L_Thumb_Jnt1_Ctrl_rotate_breathing";
 	rename -uid "68E35FC1-43FE-9116-8DB0-1CB708450961";
-	setAttr ".o" -type "double3" 53.99250123347624 15.010143730484334 -25.930698681280028 ;
+	setAttr ".o" -type "double3" 65.740847846818355 7.0244005811903607 -21.047304025843175 ;
 createNode animBlendNodeAdditiveScale -n "L_Thumb_Jnt1_Ctrl_scaleX_breathing";
 	rename -uid "17EE03B0-4700-7872-2AD5-6B8010650591";
 	setAttr ".ib" 1;
@@ -18328,19 +18333,19 @@ createNode animCurveTL -n "Eye_Master_Ctrl_translateX_head_turn_inputB";
 	rename -uid "74FBA8A4-478A-BC2D-DCB7-A8A81D6D0711";
 	setAttr ".tan" 3;
 	setAttr ".wgt" no;
-	setAttr -s 12 ".ktv[0:11]"  1 0 54 0 58 0 61 -0.47398026362917739 105 -0.47398026362917739
-		 109 -0.47398026362917739 112 0.75149052019393725 115 1.7449629518389802 162 1.7449629518389802
-		 168 -0.4812579347587328 176 0 180 0;
-	setAttr -s 12 ".kit[7:11]"  18 18 18 3 3;
-	setAttr -s 12 ".kot[0:11]"  28 28 28 28 28 28 28 18 
-		18 18 28 28;
+	setAttr -s 11 ".ktv[0:10]"  1 0 54 0 58 0 61 -0.47398026362917739 105 -0.47398026362917739
+		 109 -0.47398026362917739 115 0.54438740305279398 162 1.7449629518389802 168 -0.4812579347587328
+		 176 0 180 0;
+	setAttr -s 11 ".kit[6:10]"  18 18 18 3 3;
+	setAttr -s 11 ".kot[0:10]"  28 28 28 28 28 28 18 18 
+		18 28 28;
 createNode animCurveTL -n "Eye_Master_Ctrl_translateY_head_turn_inputB";
 	rename -uid "7F36FDC9-4743-7655-A904-99B750C40276";
 	setAttr ".tan" 3;
 	setAttr ".wgt" no;
 	setAttr -s 12 ".ktv[0:11]"  1 0.10958360173223292 54 0.10958360173223292
 		 58 0.10958360173223292 61 0.10958360173223292 105 0.10958360173223324 109 0.10958360173223292
-		 112 0.10958360173223292 115 0.2662054922993648 162 0.2662054922993648 168 0.10958360173223254
+		 112 0.10958360173223292 115 0.26620549229936435 162 0.2662054922993648 168 0.10958360173223254
 		 176 0.26741542942816904 180 0.10958360173223292;
 	setAttr -s 12 ".kit[7:11]"  18 3 3 3 3;
 	setAttr -s 12 ".kot[0:11]"  28 28 28 28 28 28 28 18 
@@ -18350,7 +18355,7 @@ createNode animCurveTL -n "Eye_Master_Ctrl_translateZ_head_turn_inputB";
 	setAttr ".tan" 3;
 	setAttr ".wgt" no;
 	setAttr -s 12 ".ktv[0:11]"  1 0 54 0 58 0 61 0 105 2.1316282072803012e-16
-		 109 0 112 0 115 0 162 0 168 0 176 0 180 0;
+		 109 0 112 0 115 -1.1044052673094166e-31 162 0 168 0 176 0 180 0;
 	setAttr -s 12 ".kit[7:11]"  18 3 3 3 3;
 	setAttr -s 12 ".kot[0:11]"  28 28 28 28 28 28 28 18 
 		28 28 28 28;
@@ -18412,116 +18417,6 @@ createNode animCurveTL -n "CoG_Jnt_Ctrl_translateX";
 		0 0.9995435431304307 0;
 	setAttr ".pre" 3;
 	setAttr ".pst" 3;
-createNode animCurveTU -n "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_visibility_head_turn_inputB";
-	rename -uid "BC7E20CF-4F7C-C28B-E90F-368ECDD0BDD1";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 1;
-	setAttr -l on ".ktv[0]";
-	setAttr ".kot[0]"  5;
-createNode animCurveTL -n "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_translateX_head_turn_inputB";
-	rename -uid "1F6DCAA7-437C-79FB-C42E-609E612D23C3";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
-	setAttr -l on ".ktv[0]";
-createNode animCurveTL -n "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_translateY_head_turn_inputB";
-	rename -uid "31CEC0D4-45D2-E315-1D38-FD9B41ACD07E";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
-	setAttr -l on ".ktv[0]";
-createNode animCurveTL -n "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_translateZ_head_turn_inputB";
-	rename -uid "74F1BF6D-41B8-70C3-C8F8-728087194A75";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
-	setAttr -l on ".ktv[0]";
-createNode animCurveTA -n "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_rotate_head_turn_inputBX";
-	rename -uid "1950E8A4-4625-009A-EE5E-1599105C9EEE";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
-	setAttr -l on ".ktv[0]";
-createNode animCurveTA -n "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_rotate_head_turn_inputBY";
-	rename -uid "0DFDBF57-4272-5C92-B006-F2AA3CAC6949";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
-	setAttr -l on ".ktv[0]";
-createNode animCurveTA -n "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_rotate_head_turn_inputBZ";
-	rename -uid "196E6FD9-4075-51C4-4350-F2A502006D62";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
-	setAttr -l on ".ktv[0]";
-createNode animCurveTU -n "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_scaleX_head_turn_inputB";
-	rename -uid "477A5BEB-4E55-BBF4-E35A-EB9F0D2F2087";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 1;
-	setAttr -l on ".ktv[0]";
-createNode animCurveTU -n "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_scaleY_head_turn_inputB";
-	rename -uid "9734430C-460F-5E67-C227-D3A211F05470";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 1;
-	setAttr -l on ".ktv[0]";
-createNode animCurveTU -n "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_scaleZ_head_turn_inputB";
-	rename -uid "F3ECF587-4FB2-37FE-BD03-54870A58699F";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 1;
-	setAttr -l on ".ktv[0]";
-createNode animCurveTU -n "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_FollowTranslate_head_turn_inputB";
-	rename -uid "61778BEE-4224-2E20-D05A-E6968C0024EA";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
-	setAttr -l on ".ktv[0]";
-createNode animCurveTU -n "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_FollowRotate_head_turn_inputB";
-	rename -uid "B7ABEB5D-4551-16E6-A4DA-BAB2207C9756";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
-	setAttr -l on ".ktv[0]";
-createNode animCurveTU -n "Hair_Front_Bounce_CONTROL_Jnt_Ctrl___________________head_turn_inputB";
-	rename -uid "14ED384A-437D-8474-DE6E-318895A630AC";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
-	setAttr -l on ".ktv[0]";
-	setAttr ".kot[0]"  5;
-createNode animCurveTU -n "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_SimulationActive_head_turn_inputB";
-	rename -uid "63E262E3-4995-664E-BE2D-F699AAA7413A";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 -2.2204460492503131e-16;
-	setAttr -l on ".ktv[0]";
-createNode animCurveTU -n "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_SimulationEffect_head_turn_inputB";
-	rename -uid "8960962B-40A1-6A15-9865-529C6DEE7A2C";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 1.3281720407607365;
-	setAttr -l on ".ktv[0]";
-createNode animCurveTU -n "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_Drag_head_turn_inputB";
-	rename -uid "25B8999E-48A2-169B-91F3-4EB6A366C92B";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 -0.080000000000000071;
-	setAttr -l on ".ktv[0]";
-createNode animCurveTU -n "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_MatchControl_head_turn_inputB";
-	rename -uid "6141FDE9-41F8-094E-48A7-4DB1E742E527";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
-	setAttr -l on ".ktv[0]";
-createNode animCurveTU -n "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_Stretch_head_turn_inputB";
-	rename -uid "CCD127B6-45D2-A02B-F523-7D84996DAD60";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
-	setAttr -l on ".ktv[0]";
 createNode motionTrail -n "motionTrail1";
 	rename -uid "73EB5602-4005-6847-59F3-FABAF6841C21";
 	setAttr ".s" 1;
@@ -18641,79 +18536,79 @@ createNode animCurveTL -n "L_Arm_1_Jnt_FK_Ctrl_translateX_head_turn_inputB";
 	rename -uid "0EF3F18A-40B6-42A2-3D46-2BA2BE9AD820";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  60 -0.029868660919481104 64 0 109 0 112 0
-		 116 0 120 0 164 0 180 -0.029868660919481104;
-	setAttr -s 8 ".ktl[0:7]" no no no no no no no no;
+	setAttr -s 9 ".ktv[0:8]"  58 -0.029868660919481104 64 0 70 0 83 0
+		 108 0 112 0 116 0 164 0 180 -0.029868660919481104;
+	setAttr -s 9 ".ktl[1:8]" no yes yes yes no no no no;
 createNode animCurveTL -n "L_Arm_1_Jnt_FK_Ctrl_translateY_head_turn_inputB";
 	rename -uid "1012629E-4952-75E7-0E0F-70B322D5D0C8";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  60 -0.0018788619203741338 64 0 109 0 112 0
-		 116 0 120 0 164 0 180 -0.0018788619203741338;
-	setAttr -s 8 ".ktl[0:7]" no no no no no no no no;
+	setAttr -s 9 ".ktv[0:8]"  58 -0.0018788619203741338 64 0 70 0 83 0
+		 108 0 112 0 116 0 164 0 180 -0.0018788619203741338;
+	setAttr -s 9 ".ktl[1:8]" no yes yes yes no no no no;
 createNode animCurveTL -n "L_Arm_1_Jnt_FK_Ctrl_translateZ_head_turn_inputB";
 	rename -uid "BFD5E4FA-4E82-6C7C-521F-6C81CD77441B";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  60 -0.05379573428499388 64 0 109 0 112 0
-		 116 0 120 0 164 0 180 -0.05379573428499388;
-	setAttr -s 8 ".ktl[0:7]" no no no no no no no no;
+	setAttr -s 9 ".ktv[0:8]"  58 -0.05379573428499388 64 0 70 0 83 0 108 0
+		 112 0 116 0 164 0 180 -0.05379573428499388;
+	setAttr -s 9 ".ktl[1:8]" no yes yes yes no no no no;
 createNode animCurveTA -n "L_Arm_1_Jnt_FK_Ctrl_rotate_head_turn_inputBX";
 	rename -uid "7C89C58F-4F17-45DA-6880-638110F61409";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  60 54.209589141135297 64 61.37011709209547
-		 109 61.37011709209547 112 61.37011709209547 116 -38.517686795896211 120 -88.075202986559361
-		 164 -88.075202986559361 180 54.209589141135297;
-	setAttr -s 8 ".ktl[0:7]" no no no no no no no no;
+	setAttr -s 9 ".ktv[0:8]"  58 54.209589141135297 64 61.37011709209547
+		 70 62.260040636450746 83 59.474905696232781 108 62.260040636450746 112 -38.517686795896211
+		 116 -88.075202986559361 164 -88.075202986559361 180 54.209589141135297;
+	setAttr -s 9 ".ktl[1:8]" no yes yes yes no no no no;
 createNode animCurveTA -n "L_Arm_1_Jnt_FK_Ctrl_rotate_head_turn_inputBY";
 	rename -uid "4B42E49E-46E2-0539-C6DA-9CAC542FCE56";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  60 -8.7449060975008646 64 -19.904736435147143
-		 109 -19.904736435147143 112 -19.904736435147143 116 -7.780832006310832 120 -41.270416486215829
-		 164 -41.270416486215829 180 -8.7449060975008646;
-	setAttr -s 8 ".ktl[0:7]" no no no no no no no no;
+	setAttr -s 9 ".ktv[0:8]"  58 -8.7449060975008646 64 -19.904736435147143
+		 70 -12.946737217149884 83 -9.4685332872505743 108 -12.946737217149884 112 -7.780832006310832
+		 116 -41.270416486215829 164 -41.270416486215829 180 -8.7449060975008646;
+	setAttr -s 9 ".ktl[1:8]" no yes yes yes no no no no;
 createNode animCurveTA -n "L_Arm_1_Jnt_FK_Ctrl_rotate_head_turn_inputBZ";
 	rename -uid "1C8DD24C-4E93-D98B-2072-28B0D42C00D9";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  60 -13.776953817073023 64 3.1090313106304266
-		 109 3.1090313106304266 112 3.1090313106304266 116 -82.612428166794373 120 -122.72119791841725
-		 164 -122.72119791841725 180 -13.776953817073023;
-	setAttr -s 8 ".ktl[0:7]" no no no no no no no no;
+	setAttr -s 9 ".ktv[0:8]"  58 -13.776953817073023 64 3.1090313106304266
+		 70 5.9295806336893699 83 7.1920254622940387 108 5.9295806336893699 112 -82.612428166794373
+		 116 -122.72119791841725 164 -122.72119791841725 180 -13.776953817073023;
+	setAttr -s 9 ".ktl[1:8]" no yes yes yes no no no no;
 createNode animCurveTL -n "Head_Ctrl_translateX_head_turn_inputB";
 	rename -uid "1A7CB145-43CD-2FF7-65B8-ADA437AB4313";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  66 0 105 0 115 0 157 0 180 0;
+	setAttr -s 5 ".ktv[0:4]"  66 0 105 0 111 0 157 0 180 0;
 createNode animCurveTL -n "Head_Ctrl_translateY_head_turn_inputB";
 	rename -uid "C7195A25-444F-954F-AA69-80AA1BD0A12E";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  66 0 105 0 115 0 157 0 180 0;
+	setAttr -s 5 ".ktv[0:4]"  66 0 105 0 111 0 157 0 180 0;
 createNode animCurveTL -n "Head_Ctrl_translateZ_head_turn_inputB";
 	rename -uid "884ED03A-4AA4-5BC7-8D2F-F7B0D4458295";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  66 0 105 0 115 0 157 0 180 0;
+	setAttr -s 5 ".ktv[0:4]"  66 0 105 0 111 0 157 0 180 0;
 createNode animCurveTA -n "Head_Ctrl_rotate_head_turn_inputBX";
 	rename -uid "8DC1B88E-4D34-D7F4-C58C-68A67D28151E";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  66 0 105 0 115 7.3767793313989269 157 7.3767793313989269
+	setAttr -s 5 ".ktv[0:4]"  66 0 105 0 111 7.3767793313989269 157 7.3767793313989269
 		 180 0;
 createNode animCurveTA -n "Head_Ctrl_rotate_head_turn_inputBY";
 	rename -uid "9191AC26-41B4-E524-269D-8090C522E1AC";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  66 0 105 0 115 24.539635572687367 157 24.539635572687367
+	setAttr -s 5 ".ktv[0:4]"  66 0 105 0 111 24.539635572687367 157 24.539635572687367
 		 180 0;
 createNode animCurveTA -n "Head_Ctrl_rotate_head_turn_inputBZ";
 	rename -uid "F62AA043-425D-C800-7F87-75B0BCB91ADF";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  66 0 105 0 115 0 157 0 180 0;
+	setAttr -s 5 ".ktv[0:4]"  66 0 105 0 111 0 157 0 180 0;
 createNode animCurveTL -n "L_Arm_1_Jnt_FK_Ctrl_translateX_breathing_inputB";
 	rename -uid "40EEFEBE-4C6E-9073-9855-85885CC8845B";
 	setAttr ".tan" 18;
@@ -18920,7 +18815,7 @@ createNode animCurveTA -n "L_Clavicle_Jnt_Ctrl_rotate_head_turn_inputBZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 8 ".ktv[0:7]"  58 -0.51627667887331663 64 20.820110192623943
-		 109 20.820110192623943 112 20.820110192623943 116 -7.8498492593381979 120 -17.037049729579792
+		 105 20.820110192623943 108 20.820110192623943 112 -7.8498492593381979 116 -17.037049729579792
 		 164 -17.037049729579792 180 -0.51627667887331663;
 	setAttr -s 8 ".ktl[0:7]" no no no no no no no no;
 createNode animCurveTA -n "L_Clavicle_Jnt_Ctrl_rotate_head_turn_inputBY";
@@ -18928,7 +18823,7 @@ createNode animCurveTA -n "L_Clavicle_Jnt_Ctrl_rotate_head_turn_inputBY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 8 ".ktv[0:7]"  58 -38.970040416521982 64 -40.288836138225143
-		 109 -40.288836138225143 112 -40.288836138225143 116 -38.970040416521982 120 -8.5789815223347272
+		 105 -40.288836138225143 108 -40.288836138225143 112 -38.970040416521982 116 -8.5789815223347272
 		 164 -8.5789815223347272 180 -38.970040416521982;
 	setAttr -s 8 ".kit[4:7]"  1 18 18 18;
 	setAttr -s 8 ".kot[4:7]"  1 18 18 18;
@@ -18942,120 +18837,117 @@ createNode animCurveTA -n "L_Clavicle_Jnt_Ctrl_rotate_head_turn_inputBX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 8 ".ktv[0:7]"  58 69.597279587102335 64 48.70291597380988
-		 109 48.70291597380988 112 48.70291597380988 116 69.597279587102335 120 69.597279587102335
+		 105 48.70291597380988 108 48.70291597380988 112 69.597279587102335 116 69.597279587102335
 		 164 69.597279587102335 180 69.597279587102335;
 	setAttr -s 8 ".ktl[0:7]" no no no no no no no no;
 createNode animCurveTL -n "L_Clavicle_Jnt_Ctrl_translateZ_head_turn_inputB";
 	rename -uid "2928B0AB-47FF-297D-8093-B2AE10575ECF";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  58 0 64 0 109 0 112 0 116 0 120 0 164 0
+	setAttr -s 8 ".ktv[0:7]"  58 0 64 0 105 0 108 0 112 0 116 0 164 0
 		 180 0;
 	setAttr -s 8 ".ktl[0:7]" no no no no no no no no;
 createNode animCurveTL -n "L_Clavicle_Jnt_Ctrl_translateY_head_turn_inputB";
 	rename -uid "8DBC8B2B-4F03-2373-7F61-FABF73C45C74";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  58 0 64 0 109 0 112 0 116 0 120 0 164 0
+	setAttr -s 8 ".ktv[0:7]"  58 0 64 0 105 0 108 0 112 0 116 0 164 0
 		 180 0;
 	setAttr -s 8 ".ktl[0:7]" no no no no no no no no;
 createNode animCurveTL -n "L_Clavicle_Jnt_Ctrl_translateX_head_turn_inputB";
 	rename -uid "95B0311E-498E-9BC3-58F5-0689A3D6CE66";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  58 0 64 0 109 0 112 0 116 0 120 0 164 0
+	setAttr -s 8 ".ktv[0:7]"  58 0 64 0 105 0 108 0 112 0 116 0 164 0
 		 180 0;
 	setAttr -s 8 ".ktl[0:7]" no no no no no no no no;
 createNode animCurveTL -n "L_Arm_3_Jnt_FK_Ctrl_translateX_head_turn_inputB";
 	rename -uid "D9D676D3-4EE6-3532-014C-F49F5A335747";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  60 0 64 0 109 0 112 0 116 0 120 0 164 0
+	setAttr -s 9 ".ktv[0:8]"  58 0 64 0 70 0 83 0 108 0 112 0 116 0 164 0
 		 180 0;
-	setAttr -s 8 ".ktl[0:7]" no no no no no no no no;
+	setAttr -s 9 ".ktl[1:8]" no yes yes yes no yes yes no;
 createNode animCurveTL -n "L_Arm_3_Jnt_FK_Ctrl_translateY_head_turn_inputB";
 	rename -uid "F71F2ACF-460B-E9BE-4BEC-2DA6D2CB285A";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  60 0 64 0 109 0 112 0 116 0 120 0 164 0
+	setAttr -s 9 ".ktv[0:8]"  58 0 64 0 70 0 83 0 108 0 112 0 116 0 164 0
 		 180 0;
-	setAttr -s 8 ".ktl[0:7]" no no no no no no no no;
+	setAttr -s 9 ".ktl[1:8]" no yes yes yes no yes yes no;
 createNode animCurveTL -n "L_Arm_3_Jnt_FK_Ctrl_translateZ_head_turn_inputB";
 	rename -uid "8D5B057A-4FD2-F321-809D-19909E62DA84";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  60 0 64 0 109 0 112 0 116 0 120 0 164 0
+	setAttr -s 9 ".ktv[0:8]"  58 0 64 0 70 0 83 0 108 0 112 0 116 0 164 0
 		 180 0;
-	setAttr -s 8 ".ktl[0:7]" no no no no no no no no;
+	setAttr -s 9 ".ktl[1:8]" no yes yes yes no yes yes no;
 createNode animCurveTA -n "L_Arm_3_Jnt_FK_Ctrl_rotate_head_turn_inputBX";
 	rename -uid "66BCFD4D-434C-0309-E841-6C8FD71B564F";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  60 -32.876971878205424 64 -2.8686605247688326
-		 109 -2.8686605247688326 112 -2.8686605247688326 116 -2.8686605247688326 120 -22.771429148739546
-		 164 -22.771429148739546 180 -32.876971878205424;
-	setAttr -s 8 ".ktl[0:7]" no no no no no no no no;
+	setAttr -s 9 ".ktv[0:8]"  58 -39.055442483969927 64 -2.8686605247688326
+		 70 -4.6765184853757962 83 -4.9657760366609107 108 -6.293522257567016 112 -2.8686605247688326
+		 116 -33.789986516603321 164 -33.789986516603321 180 -32.876971878205424;
+	setAttr -s 9 ".ktl[1:8]" no yes yes yes no yes yes no;
 createNode animCurveTA -n "L_Arm_3_Jnt_FK_Ctrl_rotate_head_turn_inputBY";
 	rename -uid "A0DA297A-4CE2-2BA9-CA28-5296858945EE";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  60 -27.052582526025844 64 -10.971378407916808
-		 109 -10.971378407916808 112 -10.971378407916808 116 -10.971378407916808 120 -27.227873705373675
-		 164 -27.227873705373675 180 -27.052582526025844;
-	setAttr -s 8 ".ktl[0:7]" no no no no no no no no;
+	setAttr -s 9 ".ktv[0:8]"  58 -4.2634332697383019 64 -10.971378407916808
+		 70 -5.973855064393458 83 -3.8140918096127301 108 -5.973855064393458 112 -10.971378407916808
+		 116 -9.8293875756488074 164 -9.8293875756488074 180 -27.052582526025844;
+	setAttr -s 9 ".ktl[1:8]" no yes yes yes no yes yes no;
 createNode animCurveTA -n "L_Arm_3_Jnt_FK_Ctrl_rotate_head_turn_inputBZ";
 	rename -uid "9E3143B6-4F5B-E18B-C9C9-65B8B925C8C0";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  60 -14.659999513268144 64 -12.499721104617841
-		 109 -12.499721104617841 112 -12.499721104617841 116 -12.499721104617841 120 -7.4178854966988617
-		 164 -7.4178854966988617 180 -14.659999513268144;
-	setAttr -s 8 ".ktl[0:7]" no no no no no no no no;
+	setAttr -s 9 ".ktv[0:8]"  58 -23.761665171243994 64 -12.499721104617841
+		 70 -19.006130268992855 83 -16.707835802474548 108 -19.006130268992855 112 -12.499721104617841
+		 116 -41.392867803438982 164 -41.392867803438982 180 -14.659999513268144;
+	setAttr -s 9 ".ktl[1:8]" no yes yes yes no yes yes no;
 createNode animCurveTL -n "L_Arm_2_Jnt_FK_Ctrl_translateX_head_turn_inputB";
 	rename -uid "BF20983B-45EF-C7B3-D47D-CFACAD7DC100";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  60 0 64 0 109 0 112 0 116 0 120 0 164 0
-		 180 0;
-	setAttr -s 8 ".ktl[0:7]" no no no no no no no no;
+	setAttr -s 8 ".ktv[0:7]"  58 0 64 0 70 0 108 0 112 0 116 0 164 0 180 0;
+	setAttr -s 8 ".ktl[1:7]" no yes yes no no no no;
 createNode animCurveTL -n "L_Arm_2_Jnt_FK_Ctrl_translateY_head_turn_inputB";
 	rename -uid "91092125-48E0-65B2-9A4E-F79EF50A905C";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  60 0 64 0 109 0 112 0 116 0 120 0 164 0
-		 180 0;
-	setAttr -s 8 ".ktl[0:7]" no no no no no no no no;
+	setAttr -s 8 ".ktv[0:7]"  58 0 64 0 70 0 108 0 112 0 116 0 164 0 180 0;
+	setAttr -s 8 ".ktl[1:7]" no yes yes no no no no;
 createNode animCurveTL -n "L_Arm_2_Jnt_FK_Ctrl_translateZ_head_turn_inputB";
 	rename -uid "1E40C750-454A-7A2A-028F-6EB1B7CB518D";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  60 0 64 0 109 0 112 0 116 0 120 0 164 0
-		 180 0;
-	setAttr -s 8 ".ktl[0:7]" no no no no no no no no;
+	setAttr -s 8 ".ktv[0:7]"  58 0 64 0 70 0 108 0 112 0 116 0 164 0 180 0;
+	setAttr -s 8 ".ktl[1:7]" no yes yes no no no no;
 createNode animCurveTA -n "L_Arm_2_Jnt_FK_Ctrl_rotate_head_turn_inputBX";
 	rename -uid "85C24047-4454-6ECA-56F0-35856F30F23A";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  60 0 64 -16.63310500564403 109 -16.63310500564403
-		 112 -16.63310500564403 116 17.761857399569017 120 47.184958531182694 164 47.184958531182694
-		 180 0;
-	setAttr -s 8 ".ktl[0:7]" no no no no no no no no;
+	setAttr -s 8 ".ktv[0:7]"  58 0.70824736948686318 64 -16.63310500564403
+		 70 -16.151576011561122 108 -16.151576011561122 112 17.761857399569017 116 47.184958531182694
+		 164 47.184958531182694 180 0;
+	setAttr -s 8 ".ktl[1:7]" no yes yes no no no no;
 createNode animCurveTA -n "L_Arm_2_Jnt_FK_Ctrl_rotate_head_turn_inputBY";
 	rename -uid "046BBEA1-442B-4167-EF5A-04BD69CCFD8F";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  60 0 64 15.551477032378056 109 15.551477032378056
-		 112 15.551477032378056 116 77.556134769158547 120 64.454454139669863 164 64.454454139669863
-		 180 0;
-	setAttr -s 8 ".ktl[0:7]" no no no no no no no no;
+	setAttr -s 8 ".ktv[0:7]"  58 -7.4066390093307382 64 15.551477032378056
+		 70 22.876567928794444 108 22.876567928794444 112 77.556134769158547 116 64.454454139669863
+		 164 64.454454139669863 180 0;
+	setAttr -s 8 ".ktl[1:7]" no yes yes no no no no;
 createNode animCurveTA -n "L_Arm_2_Jnt_FK_Ctrl_rotate_head_turn_inputBZ";
 	rename -uid "3B74A903-43F2-7BA5-5B49-CF9895047781";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  60 0 64 -11.5210914307719 109 -11.5210914307719
-		 112 -11.5210914307719 116 -27.074196400322286 120 19.6227431182473 164 19.6227431182473
-		 180 0;
-	setAttr -s 8 ".ktl[0:7]" no no no no no no no no;
+	setAttr -s 8 ".ktv[0:7]"  58 -1.0548984639863606 64 -11.5210914307719
+		 70 -12.9860609317879 108 -12.9860609317879 112 -27.074196400322286 116 19.6227431182473
+		 164 19.6227431182473 180 0;
+	setAttr -s 8 ".ktl[1:7]" no yes yes no no no no;
 createNode animBlendNodeBoolean -n "CoG_Jnt_Ctrl_visibility_leg_bounce";
 	rename -uid "F1863C39-48B9-BFDF-8B37-1B869EBFFB2D";
 	setAttr ".ia" yes;
@@ -19510,7 +19402,7 @@ createNode animCurveTU -n "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_SimulationEffect_M
 	rename -uid "7B5B7186-41C5-2A98-A0DB-DDAFE85921D0";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -l on ".ktv[0]"  1 -1.0081720407607364;
+	setAttr -l on ".ktv[0]"  1 -1.3281720407607365;
 	setAttr -l on ".ktv";
 createNode animCurveTU -n "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_Stretch_Merged_Layer_inputB";
 	rename -uid "DB2DBF73-42F2-B383-703B-66B2DA8C65DA";
@@ -19564,19 +19456,19 @@ createNode animCurveTL -n "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_translateX_Merged_
 	rename -uid "62B65D15-4D81-2C20-959D-02B0047E4505";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -l on ".ktv[0]"  1 0;
+	setAttr -s 2 -l on ".ktv[0:1]"  1 0 193 0;
 	setAttr -l on ".ktv";
 createNode animCurveTL -n "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_translateY_Merged_Layer_inputB";
 	rename -uid "E2299A6F-49F1-251C-F8B0-F8870C7300D9";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -l on ".ktv[0]"  1 0;
+	setAttr -s 2 -l on ".ktv[0:1]"  1 0 193 0;
 	setAttr -l on ".ktv";
 createNode animCurveTL -n "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_translateZ_Merged_Layer_inputB";
 	rename -uid "984C0016-48FE-F7C9-AF17-FC95A61CF3E7";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -l on ".ktv[0]"  1 0;
+	setAttr -s 2 -l on ".ktv[0:1]"  1 0 193 0;
 	setAttr -l on ".ktv";
 createNode animCurveTU -n "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_visibility_Merged_Layer_inputB";
 	rename -uid "565098A1-4D5B-50CF-A344-7F988FBE5E8D";
@@ -24533,23 +24425,23 @@ createNode animCurveTA -n "L_Thumb_Jnt1_Ctrl_rotate_torch_arm_inputBZ";
 	rename -uid "DDDD929A-4FAD-DAEB-F720-DD91CCFFF9F3";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -l on ".ktv[0]"  1 -41.692300403690339;
+	setAttr -l on ".ktv[0]"  1 -36.808905748253487;
 	setAttr -l on ".ktv";
 createNode animCurveTA -n "L_Thumb_Jnt1_Ctrl_rotate_torch_arm_inputBY";
 	rename -uid "ED94B81E-4B21-F761-F98C-159BC41BBFDA";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -l on ".ktv[0]"  1 22.034284714241263;
+	setAttr -l on ".ktv[0]"  1 14.048541564947289;
 	setAttr -l on ".ktv";
 createNode animCurveTA -n "L_Thumb_Jnt1_Ctrl_rotate_torch_arm_inputBX";
 	rename -uid "F2252FDA-49D4-31C7-9008-1DA3F03EC483";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -l on ".ktv[0]"  1 30.567198867319892;
+	setAttr -l on ".ktv[0]"  1 42.31554548066201;
 	setAttr -l on ".ktv";
 createNode animBlendNodeAdditiveRotation -n "Caleb_Rig:L_Thumb_Jnt1_Ctrl_rotate_torch_arm";
 	rename -uid "B0904130-4BC5-626F-B83A-16A923E7CA03";
-	setAttr ".o" -type "double3" 53.99250123347624 15.010143730484334 -25.930698681280028 ;
+	setAttr ".o" -type "double3" 65.740847846818355 7.0244005811903607 -21.047304025843175 ;
 createNode animBlendNodeAdditive -n "Caleb_Rig:L_Thumb_Jnt1_Ctrl_FollowTranslate_torch_arm";
 	rename -uid "C18D3C16-4619-1E5A-6FE7-EA9495CFBE99";
 	setAttr ".o" 1;
@@ -25244,32 +25136,32 @@ createNode animCurveTL -n "R_Clavicle_Jnt_Ctrl_translateX_head_turn_inputB";
 	rename -uid "737EBAD1-4B03-7C98-6E86-3B9E2FD3374D";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  114 0 136 0;
+	setAttr -s 2 ".ktv[0:1]"  105 0 116 0;
 createNode animCurveTL -n "R_Clavicle_Jnt_Ctrl_translateY_head_turn_inputB";
 	rename -uid "DFD5EC8C-4718-94DB-0315-809C7E7828AE";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  114 0 136 0;
+	setAttr -s 2 ".ktv[0:1]"  105 0 116 0;
 createNode animCurveTL -n "R_Clavicle_Jnt_Ctrl_translateZ_head_turn_inputB";
 	rename -uid "DDCC5DF9-4B3F-4346-5932-A7BF12AC4383";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  114 0 136 0;
+	setAttr -s 2 ".ktv[0:1]"  105 0 116 0;
 createNode animCurveTA -n "R_Clavicle_Jnt_Ctrl_rotate_head_turn_inputBX";
 	rename -uid "9475E78D-40F1-3892-EB81-CF828909420B";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  114 0 136 0;
+	setAttr -s 2 ".ktv[0:1]"  105 0 116 0;
 createNode animCurveTA -n "R_Clavicle_Jnt_Ctrl_rotate_head_turn_inputBY";
 	rename -uid "451876BC-4F59-D34A-FAEC-9695147D7D70";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  114 0 136 30.907970505138351;
+	setAttr -s 2 ".ktv[0:1]"  105 0 116 30.907970505138351;
 createNode animCurveTA -n "R_Clavicle_Jnt_Ctrl_rotate_head_turn_inputBZ";
 	rename -uid "57262A9F-4331-1C89-D68D-40A15C9FA5C6";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  114 13.689045905268996 136 0;
+	setAttr -s 2 ".ktv[0:1]"  105 13.689045905268996 116 0;
 createNode animCurveTL -n "CoG_Jnt_Ctrl_translateX_head_turn_inputB";
 	rename -uid "EF5A0F92-45A3-946D-0941-F6AD5E5F3512";
 	setAttr ".tan" 18;
@@ -25376,9 +25268,39 @@ createNode animCurveTA -n "Backpack_2_Jnt_Ctrl_rotate_breathing_inputBZ";
 	setAttr ".wgt" no;
 	setAttr -l on ".ktv[0]"  1 0;
 	setAttr -l on ".ktv";
+createNode animCurveTL -n "L_Thumb_Jnt2_Ctrl_translateX_head_turn_inputB";
+	rename -uid "CA346B3F-44AC-091A-8C87-8B98E1A16D0A";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTL -n "L_Thumb_Jnt2_Ctrl_translateY_head_turn_inputB";
+	rename -uid "E52BB57F-42F0-BAD4-1446-20B710E7CBA0";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTL -n "L_Thumb_Jnt2_Ctrl_translateZ_head_turn_inputB";
+	rename -uid "5E3BA3D0-4BE8-F006-0F29-A28887822671";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "L_Thumb_Jnt2_Ctrl_rotate_head_turn_inputBX";
+	rename -uid "87E8ED72-4124-4B69-9433-FF82E2FF600E";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "L_Thumb_Jnt2_Ctrl_rotate_head_turn_inputBY";
+	rename -uid "524A03DF-4E5E-166C-55AA-058062D61C22";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 23.6674454253669;
+createNode animCurveTA -n "L_Thumb_Jnt2_Ctrl_rotate_head_turn_inputBZ";
+	rename -uid "B33F447D-4052-C4C2-D20C-F9AADAE7482A";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 -2.9971349710658153;
 select -ne :time1;
-	setAttr ".o" 65;
-	setAttr ".unw" 65;
+	setAttr ".o" 141;
+	setAttr ".unw" 141;
 select -ne :hardwareRenderingGlobals;
 	setAttr ".otfna" -type "stringArray" 22 "NURBS Curves" "NURBS Surfaces" "Polygons" "Subdiv Surface" "Particles" "Particle Instance" "Fluids" "Strokes" "Image Planes" "UI" "Lights" "Cameras" "Locators" "Joints" "IK Handles" "Deformers" "Motion Trails" "Components" "Hair Systems" "Follicles" "Misc. UI" "Ornaments"  ;
 	setAttr ".otfva" -type "Int32Array" 22 0 1 1 1 1 1
@@ -30921,13 +30843,19 @@ connectAttr "head_turn.bgwt" "L_Thumb_Jnt2_Ctrl_translateX_head_turn.wa";
 connectAttr "head_turn.fgwt" "L_Thumb_Jnt2_Ctrl_translateX_head_turn.wb";
 connectAttr "L_Thumb_Jnt2_Ctrl_translateX_breathing.o" "L_Thumb_Jnt2_Ctrl_translateX_head_turn.ia"
 		;
+connectAttr "L_Thumb_Jnt2_Ctrl_translateX_head_turn_inputB.o" "L_Thumb_Jnt2_Ctrl_translateX_head_turn.ib"
+		;
 connectAttr "head_turn.bgwt" "L_Thumb_Jnt2_Ctrl_translateY_head_turn.wa";
 connectAttr "head_turn.fgwt" "L_Thumb_Jnt2_Ctrl_translateY_head_turn.wb";
 connectAttr "L_Thumb_Jnt2_Ctrl_translateY_breathing.o" "L_Thumb_Jnt2_Ctrl_translateY_head_turn.ia"
 		;
+connectAttr "L_Thumb_Jnt2_Ctrl_translateY_head_turn_inputB.o" "L_Thumb_Jnt2_Ctrl_translateY_head_turn.ib"
+		;
 connectAttr "head_turn.bgwt" "L_Thumb_Jnt2_Ctrl_translateZ_head_turn.wa";
 connectAttr "head_turn.fgwt" "L_Thumb_Jnt2_Ctrl_translateZ_head_turn.wb";
 connectAttr "L_Thumb_Jnt2_Ctrl_translateZ_breathing.o" "L_Thumb_Jnt2_Ctrl_translateZ_head_turn.ia"
+		;
+connectAttr "L_Thumb_Jnt2_Ctrl_translateZ_head_turn_inputB.o" "L_Thumb_Jnt2_Ctrl_translateZ_head_turn.ib"
 		;
 connectAttr "head_turn.oram" "L_Thumb_Jnt2_Ctrl_rotate_head_turn.acm";
 connectAttr "head_turn.bgwt" "L_Thumb_Jnt2_Ctrl_rotate_head_turn.wa";
@@ -30937,6 +30865,12 @@ connectAttr "L_Thumb_Jnt2_Ctrl_rotate_breathing.ox" "L_Thumb_Jnt2_Ctrl_rotate_he
 connectAttr "L_Thumb_Jnt2_Ctrl_rotate_breathing.oy" "L_Thumb_Jnt2_Ctrl_rotate_head_turn.iay"
 		;
 connectAttr "L_Thumb_Jnt2_Ctrl_rotate_breathing.oz" "L_Thumb_Jnt2_Ctrl_rotate_head_turn.iaz"
+		;
+connectAttr "L_Thumb_Jnt2_Ctrl_rotate_head_turn_inputBX.o" "L_Thumb_Jnt2_Ctrl_rotate_head_turn.ibx"
+		;
+connectAttr "L_Thumb_Jnt2_Ctrl_rotate_head_turn_inputBY.o" "L_Thumb_Jnt2_Ctrl_rotate_head_turn.iby"
+		;
+connectAttr "L_Thumb_Jnt2_Ctrl_rotate_head_turn_inputBZ.o" "L_Thumb_Jnt2_Ctrl_rotate_head_turn.ibz"
 		;
 connectAttr "head_turn.sam" "L_Thumb_Jnt2_Ctrl_scaleX_head_turn.acm";
 connectAttr "head_turn.bgwt" "L_Thumb_Jnt2_Ctrl_scaleX_head_turn.wa";
@@ -33148,15 +33082,11 @@ connectAttr "head_turn.fgwt" "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_visibility_head
 		;
 connectAttr "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_visibility_breathing.o" "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_visibility_head_turn.ia"
 		;
-connectAttr "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_visibility_head_turn_inputB.o" "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_visibility_head_turn.ib"
-		;
 connectAttr "head_turn.bgwt" "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_translateX_head_turn.wa"
 		;
 connectAttr "head_turn.fgwt" "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_translateX_head_turn.wb"
 		;
 connectAttr "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_translateX_breathing.o" "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_translateX_head_turn.ia"
-		;
-connectAttr "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_translateX_head_turn_inputB.o" "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_translateX_head_turn.ib"
 		;
 connectAttr "head_turn.bgwt" "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_translateY_head_turn.wa"
 		;
@@ -33164,15 +33094,11 @@ connectAttr "head_turn.fgwt" "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_translateY_head
 		;
 connectAttr "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_translateY_breathing.o" "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_translateY_head_turn.ia"
 		;
-connectAttr "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_translateY_head_turn_inputB.o" "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_translateY_head_turn.ib"
-		;
 connectAttr "head_turn.bgwt" "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_translateZ_head_turn.wa"
 		;
 connectAttr "head_turn.fgwt" "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_translateZ_head_turn.wb"
 		;
 connectAttr "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_translateZ_breathing.o" "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_translateZ_head_turn.ia"
-		;
-connectAttr "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_translateZ_head_turn_inputB.o" "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_translateZ_head_turn.ib"
 		;
 connectAttr "head_turn.oram" "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_rotate_head_turn.acm"
 		;
@@ -33186,12 +33112,6 @@ connectAttr "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_rotate_breathing.oy" "Hair_Front
 		;
 connectAttr "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_rotate_breathing.oz" "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_rotate_head_turn.iaz"
 		;
-connectAttr "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_rotate_head_turn_inputBX.o" "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_rotate_head_turn.ibx"
-		;
-connectAttr "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_rotate_head_turn_inputBY.o" "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_rotate_head_turn.iby"
-		;
-connectAttr "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_rotate_head_turn_inputBZ.o" "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_rotate_head_turn.ibz"
-		;
 connectAttr "head_turn.sam" "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_scaleX_head_turn.acm"
 		;
 connectAttr "head_turn.bgwt" "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_scaleX_head_turn.wa"
@@ -33199,8 +33119,6 @@ connectAttr "head_turn.bgwt" "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_scaleX_head_tur
 connectAttr "head_turn.fgwt" "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_scaleX_head_turn.wb"
 		;
 connectAttr "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_scaleX_breathing.o" "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_scaleX_head_turn.ia"
-		;
-connectAttr "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_scaleX_head_turn_inputB.o" "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_scaleX_head_turn.ib"
 		;
 connectAttr "head_turn.sam" "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_scaleY_head_turn.acm"
 		;
@@ -33210,8 +33128,6 @@ connectAttr "head_turn.fgwt" "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_scaleY_head_tur
 		;
 connectAttr "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_scaleY_breathing.o" "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_scaleY_head_turn.ia"
 		;
-connectAttr "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_scaleY_head_turn_inputB.o" "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_scaleY_head_turn.ib"
-		;
 connectAttr "head_turn.sam" "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_scaleZ_head_turn.acm"
 		;
 connectAttr "head_turn.bgwt" "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_scaleZ_head_turn.wa"
@@ -33220,15 +33136,11 @@ connectAttr "head_turn.fgwt" "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_scaleZ_head_tur
 		;
 connectAttr "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_scaleZ_breathing.o" "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_scaleZ_head_turn.ia"
 		;
-connectAttr "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_scaleZ_head_turn_inputB.o" "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_scaleZ_head_turn.ib"
-		;
 connectAttr "head_turn.bgwt" "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_FollowTranslate_head_turn.wa"
 		;
 connectAttr "head_turn.fgwt" "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_FollowTranslate_head_turn.wb"
 		;
 connectAttr "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_FollowTranslate_breathing.o" "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_FollowTranslate_head_turn.ia"
-		;
-connectAttr "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_FollowTranslate_head_turn_inputB.o" "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_FollowTranslate_head_turn.ib"
 		;
 connectAttr "head_turn.bgwt" "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_FollowRotate_head_turn.wa"
 		;
@@ -33236,15 +33148,11 @@ connectAttr "head_turn.fgwt" "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_FollowRotate_he
 		;
 connectAttr "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_FollowRotate_breathing.o" "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_FollowRotate_head_turn.ia"
 		;
-connectAttr "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_FollowRotate_head_turn_inputB.o" "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_FollowRotate_head_turn.ib"
-		;
 connectAttr "head_turn.bgwt" "Hair_Front_Bounce_CONTROL_Jnt_Ctrl___________________head_turn.wa"
 		;
 connectAttr "head_turn.fgwt" "Hair_Front_Bounce_CONTROL_Jnt_Ctrl___________________head_turn.wb"
 		;
 connectAttr "Hair_Front_Bounce_CONTROL_Jnt_Ctrl___________________breathing.o" "Hair_Front_Bounce_CONTROL_Jnt_Ctrl___________________head_turn.ia"
-		;
-connectAttr "Hair_Front_Bounce_CONTROL_Jnt_Ctrl___________________head_turn_inputB.o" "Hair_Front_Bounce_CONTROL_Jnt_Ctrl___________________head_turn.ib"
 		;
 connectAttr "head_turn.bgwt" "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_SimulationActive_head_turn.wa"
 		;
@@ -33252,15 +33160,11 @@ connectAttr "head_turn.fgwt" "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_SimulationActiv
 		;
 connectAttr "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_SimulationActive_breathing.o" "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_SimulationActive_head_turn.ia"
 		;
-connectAttr "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_SimulationActive_head_turn_inputB.o" "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_SimulationActive_head_turn.ib"
-		;
 connectAttr "head_turn.bgwt" "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_SimulationEffect_head_turn.wa"
 		;
 connectAttr "head_turn.fgwt" "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_SimulationEffect_head_turn.wb"
 		;
 connectAttr "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_SimulationEffect_breathing.o" "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_SimulationEffect_head_turn.ia"
-		;
-connectAttr "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_SimulationEffect_head_turn_inputB.o" "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_SimulationEffect_head_turn.ib"
 		;
 connectAttr "head_turn.bgwt" "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_Drag_head_turn.wa"
 		;
@@ -33268,23 +33172,17 @@ connectAttr "head_turn.fgwt" "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_Drag_head_turn.
 		;
 connectAttr "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_Drag_breathing.o" "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_Drag_head_turn.ia"
 		;
-connectAttr "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_Drag_head_turn_inputB.o" "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_Drag_head_turn.ib"
-		;
 connectAttr "head_turn.bgwt" "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_MatchControl_head_turn.wa"
 		;
 connectAttr "head_turn.fgwt" "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_MatchControl_head_turn.wb"
 		;
 connectAttr "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_MatchControl_breathing.o" "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_MatchControl_head_turn.ia"
 		;
-connectAttr "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_MatchControl_head_turn_inputB.o" "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_MatchControl_head_turn.ib"
-		;
 connectAttr "head_turn.bgwt" "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_Stretch_head_turn.wa"
 		;
 connectAttr "head_turn.fgwt" "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_Stretch_head_turn.wb"
 		;
 connectAttr "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_Stretch_breathing.o" "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_Stretch_head_turn.ia"
-		;
-connectAttr "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_Stretch_head_turn_inputB.o" "Hair_Front_Bounce_CONTROL_Jnt_Ctrl_Stretch_head_turn.ib"
 		;
 connectAttr "head_turn.bgwt" "R_Foot_Reverse_Foot_Ball_Ctrl_visibility_head_turn.wa"
 		;
