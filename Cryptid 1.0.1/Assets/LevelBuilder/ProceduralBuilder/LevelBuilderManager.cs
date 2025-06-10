@@ -14,11 +14,17 @@ public class LevelBuilderManager : MonoBehaviour
     public GameObject player, basicCell;
     public TileLibrary tileLibrary;
     public string testString;
+    public List<NavMeshDataInstance> navMeshInstances;
+
+    private void Awake()
+    {
+        navMeshInstances= new List<NavMeshDataInstance>();
+    }
 
     public void CreateStartingCells()
     {
         startingCell.PopulateEmptyCells();
-        RebuildNavmesh();
+        //RebuildNavmesh();
     }
 
     private void Start()

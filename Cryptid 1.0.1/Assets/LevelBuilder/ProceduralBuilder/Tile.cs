@@ -1,14 +1,17 @@
 using System;
+using Unity.AI.Navigation;
 using UnityEngine;
+using UnityEngine.AI;
 using Random = UnityEngine.Random;
 
 public class Tile : MonoBehaviour
 {
     public int[] borderCode;// start at top move clockwise
-
+    public NavMeshData tileNavMeshData;
+    public NavMeshSurface navMesh;
     private void Awake()
     {
-        
+        tileNavMeshData = navMesh.navMeshData;
     }
 
     private void Start()

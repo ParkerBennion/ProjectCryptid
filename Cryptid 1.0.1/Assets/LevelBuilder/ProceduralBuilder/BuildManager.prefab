@@ -1,0 +1,77 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6469692870077160757
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5343376060981821704}
+  - component: {fileID: 1065188726205858137}
+  - component: {fileID: 5582022772246507781}
+  m_Layer: 0
+  m_Name: BuildManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5343376060981821704
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6469692870077160757}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 3.4335546, y: 0.56059283, z: -4.1786942}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1065188726205858137
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6469692870077160757}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0262180014b3cd9449be8018721b4ab9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activeCells: []
+  startingCell: {fileID: 0}
+  navMesh: {fileID: 0}
+  maxDistance: 96
+  player: {fileID: 0}
+  basicCell: {fileID: 5650620722496709884, guid: cc0d79fbfd62d7e45a4380a092125bc1, type: 3}
+  tileLibrary: {fileID: 5582022772246507781}
+  testString: 101
+--- !u!114 &5582022772246507781
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6469692870077160757}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5120e2d91cb2ff44286ba7d15854814a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tileLists:
+  - {fileID: 11400000, guid: 9f569a80636cfe441b39ae43e1c74a1f, type: 2}
+  - {fileID: 11400000, guid: 70273b89919fa654c948cd3862527517, type: 2}
+  - {fileID: 11400000, guid: 5448aa52a429f6140a662ef6da9f3e77, type: 2}
+  - {fileID: 11400000, guid: 43c96a18ce764ef4da30ef9373ac2d76, type: 2}
+  - {fileID: 11400000, guid: 06ed1c43b23267c49a47e9e5a1f9f94e, type: 2}
+  - {fileID: 11400000, guid: 1fa17ad1720cc1c458ca020257bdbf1d, type: 2}
+  - {fileID: 11400000, guid: 36aa83862a36f4f45ace995bd450c413, type: 2}
+  - {fileID: 11400000, guid: e2e5f1097cbdbc344b1c8eb63a3281c9, type: 2}
+  - {fileID: 11400000, guid: f1551391f88a1e14b862ceab3022a52d, type: 2}

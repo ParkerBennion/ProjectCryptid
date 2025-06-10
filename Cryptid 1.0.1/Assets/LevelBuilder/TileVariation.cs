@@ -1,4 +1,5 @@
 using System;
+using Unity.AI.Navigation;
 using UnityEngine;
 using Random = UnityEngine.Random;
 [CreateAssetMenu]
