@@ -1,10 +1,12 @@
 using System;
+using System.Collections;
 using UnityEngine;
 
 public class CharacterAnimationInputInterface : MonoBehaviour
 {
     [SerializeField] private CharacterInputController controller;
     private Animator animator;
+    private Coroutine currentRoutine;
 
     private void Awake()
     {
@@ -16,6 +18,18 @@ public class CharacterAnimationInputInterface : MonoBehaviour
         controller.EnableControls();
     }
 
+    public void EnableControlsDelay()
+    {
+        currentRoutine = StartCoroutine(EnableControlsDelayRoutine());
+    }
+
+    private IEnumerator EnableControlsDelayRoutine()
+    {
+        yield return new WaitForSeconds(.1f);
+        controller.EnableControls();
+    }
+    
+    
     public void DisableControls()
     {
         controller.DisableControls();

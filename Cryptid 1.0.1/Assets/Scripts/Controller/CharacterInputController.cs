@@ -114,7 +114,7 @@ public class CharacterInputController : MonoBehaviour
         inputs.PlayerMobile.Enable();
     }
 
-    public void DisableControls()
+public void DisableControls()
     {
         inputs.PlayerMobile.Disable();
     }
