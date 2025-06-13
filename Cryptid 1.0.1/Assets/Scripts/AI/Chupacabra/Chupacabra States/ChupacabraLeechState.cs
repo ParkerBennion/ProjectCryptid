@@ -64,6 +64,7 @@ public class ChupacabraLeechState : State
             tapUI.StopTracking();
             manager.transform.SetParent(null);
             stateMachine.SwitchToNextState(chaseState);
+            playerTarget.GetComponent<PlayerHealth>().canLatch = true;
             animator.Play("ChupaIdleChase");
         }
     }

@@ -115,12 +115,14 @@ public class ChupacabraPounceState : State
             }
         }
         Debug.Log("PLAYER FOUND IS "+foundPlayer);
-        if (foundPlayer)
+        if (foundPlayer && target.GetComponent<PlayerHealth>().canLatch)
         {
+            target.GetComponent<PlayerHealth>().canLatch = false;
             stateMachine.SwitchToNextState(LeechState);
         }
         else
         {
+            manager.GetComponent<SimpleAttack>().PerformSimpleAttack();
             stateMachine.SwitchToNextState(FumbleState);
         }
         //fumble and return to chasing
