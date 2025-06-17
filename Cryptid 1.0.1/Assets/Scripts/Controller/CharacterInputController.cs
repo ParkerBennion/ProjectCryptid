@@ -4,10 +4,12 @@ using System.Collections.Generic;
 using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.TextCore.Text;
 using UnityEngine.VFX;
 
 public class CharacterInputController : MonoBehaviour
 {
+    public static GameObject characterObject; //declares this instance in the scene, used for efficent method of getting this reference in other scripts. (interactionItemTotemEquip)
     private PlayerInputs inputs;
     private Rigidbody rb;
     [SerializeField] private VisualEffect heavyFrameFX;
@@ -17,22 +19,24 @@ public class CharacterInputController : MonoBehaviour
     private Vector3 moveVector, lookVector;
     
     public bool attackCharged, activelyCharging;
-    [SerializeField] private float playerSpeed,  heavyWindupStartDelay, heavyWindupChargeTime, perfectHeavyFrameTime;
+    [SerializeField] public float playerSpeed,  heavyWindupStartDelay, heavyWindupChargeTime, perfectHeavyFrameTime;
 
     [Range(0, 1)] 
     public float chargeMovementMultiplier;
-    private float activePlayerRunSpeed;
+    public float activePlayerRunSpeed,  totemRunSpeed;
 
     private Coroutine chargingAttack;
     private bool perfectAttack;
     public bool canAttack;
     private bool attackPressed;
+    
+    public TotemBase activeTotem;
 
     [SerializeField]private Animator animator;
     
     private static readonly int animSpeed = Animator.StringToHash("Speed");
     
-    private WaitForSeconds chargeStartDelayWFS, chargeTimeWFS, frameWFS;
+    private WaitForSeconds chargeStartDelayWFS, chargeTimeWFS, frameWFS, waitForTotemWFS;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     
     private void OnEnable() // Enables controls when the object is enabled
@@ -41,10 +45,12 @@ public class CharacterInputController : MonoBehaviour
     }
     private void Awake()
     {
+        characterObject = gameObject;
         canAttack = true;
         chargeStartDelayWFS = new WaitForSeconds(heavyWindupStartDelay);
         chargeTimeWFS = new WaitForSeconds(heavyWindupChargeTime);
         frameWFS = new WaitForSeconds(perfectHeavyFrameTime);
+        waitForTotemWFS = new WaitForSeconds(.05f);
         attackCharged = false;
         activelyCharging = false;
         activePlayerRunSpeed = playerSpeed;
@@ -60,8 +66,21 @@ public class CharacterInputController : MonoBehaviour
         inputs.PlayerMobile.Torch.started += StartTorchCallback;
         //inputs.PlayerMobile.Torch.canceled += ReleaseTorchCallback;
         
+        inputs.PlayerMobile.Totem.started += StartTotemCallback;
+        inputs.PlayerMobile.Totem.canceled += ReleaseTotemCallback;
+        
         inputs.PlayerMobile.Move.performed += ctx => moveAxis = ctx.ReadValue<Vector2>();
         inputs.PlayerMobile.Move.canceled += ctx => moveAxis = Vector2.zero;
+
+        totemRunSpeed = 0;
+        
+        //getTotem
+        if (TryGetComponent<TotemBase>(out TotemBase totem))
+        {
+            //Debug.Log("Totem found: " + totem.GetType().Name);
+            activeTotem = totem;
+            //totem.Initialize();
+        }
     }
     /// <summary>
     /// UPDATE contains/handles the player movement and rotation
@@ -71,7 +90,7 @@ public class CharacterInputController : MonoBehaviour
         moveVector.x = moveAxis.x; //Assigns the input values to a Vector3D
         moveVector.y = 0;
         moveVector.z = moveAxis.y;
-        transform.Translate(moveVector * (activePlayerRunSpeed * Time.deltaTime), Space.World);
+        transform.Translate(moveVector * ((totemRunSpeed+activePlayerRunSpeed) * Time.deltaTime), Space.World);
         if (moveAxis!=Vector2.zero)//Updates the players rotation if they are moving, and does nothing if the player is not moving
             transform.rotation = Quaternion.LookRotation(moveVector);
         animator.SetFloat(animSpeed, moveVector.magnitude*activePlayerRunSpeed);
@@ -102,8 +121,18 @@ public class CharacterInputController : MonoBehaviour
     }
     public void ReleaseTorch()
     {
-        Debug.Log("StartTorch");
+        Debug.Log("ReleaseTorch");
     }
+
+    private void StartTotemCallback(InputAction.CallbackContext ctx)
+    {
+        Debug.Log("StartTotem");
+    }
+    private void ReleaseTotemCallback(InputAction.CallbackContext ctx)
+    {
+        activeTotem.Activate();
+    }
+    
     
 /// <summary>
 /// Either enables or disables the controls
@@ -200,6 +229,8 @@ public void DisableControls()
         inputs.PlayerMobile.Attack.canceled -= ReleaseAttackCallback;
         inputs.PlayerMobile.Torch.started -= StartTorchCallback;
         inputs.PlayerMobile.Torch.canceled -= ReleaseTorchCallback;
+        inputs.PlayerMobile.Totem.started -= StartTotemCallback;
+        inputs.PlayerMobile.Totem.canceled -= ReleaseTotemCallback;
     }
     //for animation
     public void SetCanAttack()
