@@ -77,6 +77,8 @@ public class TotemBase : MonoBehaviour
             // No totem on character, just add this one
             Type newTotemType = this.GetType();
             character.AddComponent(newTotemType);
+            TotemBase newTotem = (TotemBase)character.AddComponent(newTotemType);
+            newTotem.Initialize();
             Destroy(this);
         }
     }
