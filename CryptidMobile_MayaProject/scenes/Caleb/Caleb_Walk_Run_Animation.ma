@@ -1,6 +1,6 @@
 //Maya ASCII 2026 scene
 //Name: Caleb_Walk_Run_Animation.ma
-//Last modified: Tue, Jun 17, 2025 05:16:43 AM
+//Last modified: Tue, Jun 17, 2025 05:33:35 PM
 //Codeset: 1252
 file -rdi 1 -ns "Caleb_Rig" -rfn "Caleb_RigRN" -op "v=0;" -typ "mayaAscii" "C:/Users/caris/Desktop/ProjectCryptid/CryptidMobile_MayaProject//scenes/Caleb/Caleb Rig.ma";
 file -r -ns "Caleb_Rig" -dr 1 -rfn "Caleb_RigRN" -op "v=0;" -typ "mayaAscii" "C:/Users/caris/Desktop/ProjectCryptid/CryptidMobile_MayaProject//scenes/Caleb/Caleb Rig.ma";
@@ -16,12 +16,12 @@ fileInfo "product" "Maya 2026";
 fileInfo "version" "2026";
 fileInfo "cutIdentifier" "202502240946-c910a8ba47";
 fileInfo "osv" "Windows 10 Pro for Workstations v2009 (Build: 19045)";
-fileInfo "UUID" "C5049D32-44AB-245E-D64F-AB845B6BE7AA";
+fileInfo "UUID" "89F979C0-4784-2E42-D331-F6AB61415F5A";
 createNode transform -s -n "persp";
 	rename -uid "994CFC71-4D15-C776-2D5B-4EBC89C0FDE0";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 692.78009871432494 2306.3794379048973 -1917.4563217086666 ;
-	setAttr ".r" -type "double3" -45.754197280431221 -44839.799999950636 0 ;
+	setAttr ".t" -type "double3" -1200.0251374529983 307.11922728643339 890.49935986233788 ;
+	setAttr ".r" -type "double3" -4.9541972871675428 -46494.199999992386 1.359309748755274e-15 ;
 	setAttr ".rp" -type "double3" 0 -2.8421709430404007e-14 0 ;
 	setAttr ".rpt" -type "double3" 1.1044742030334721e-15 2.1830436257455787e-17 1.434461536016818e-16 ;
 createNode camera -s -n "perspShape" -p "persp";
@@ -29,7 +29,7 @@ createNode camera -s -n "perspShape" -p "persp";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
 	setAttr ".ncp" 1;
-	setAttr ".coi" 2968.6033967599583;
+	setAttr ".coi" 1474.164819616462;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -2598,7 +2598,7 @@ createNode reference -n "Caleb_RigRN";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"Caleb_RigRN"
 		"Caleb_RigRN" 0
-		"Caleb_RigRN" 3076
+		"Caleb_RigRN" 3077
 		2 "|Caleb_Rig:CALEB|Caleb_Rig:Geometry|Caleb_Rig:Skinned_Geo|Caleb_Rig:Caleb_Geo_Export|Caleb_Rig:Caleb_Geo_ExportShape" 
 		"uvPivot" " -type \"double2\" 0.7576373815536499 0.85649567842483521"
 		2 "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:IKFK_Switches|Caleb_Rig:Spine_IKFK_Switch_Ctrl_Grp|Caleb_Rig:Spine_IKFK_Switch_Ctrl" 
@@ -4384,6 +4384,8 @@ createNode reference -n "Caleb_RigRN";
 		"overrideColorRGB" " -type \"float3\" 0 0 0"
 		2 "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Auxillary|Caleb_Rig:Backpack_2_Jnt_Ctrl_Grp|Caleb_Rig:Backpack_2_Jnt_Ctrl" 
 		"overrideColorA" " 1"
+		2 "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Auxillary|Caleb_Rig:Backpack_2_Jnt_Ctrl_Grp|Caleb_Rig:Backpack_2_Jnt_Ctrl" 
+		"rotatePivotTranslate" " -type \"double3\" 0 0 0"
 		2 "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Auxillary|Caleb_Rig:Backpack_1_Jnt_Ctrl_Grp|Caleb_Rig:Backpack_1_Jnt_Ctrl" 
 		"overrideDisplayType" " 0"
 		2 "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:Auxillary|Caleb_Rig:Backpack_1_Jnt_Ctrl_Grp|Caleb_Rig:Backpack_1_Jnt_Ctrl" 
@@ -4463,7 +4465,7 @@ createNode reference -n "Caleb_RigRN";
 		2 "Caleb_Rig:Geometry_Layer" "displayType" " 0"
 		2 "Caleb_Rig:Geometry_Layer" "visibility" " 1"
 		2 "Caleb_Rig:Joint_Layer" "visibility" " 0"
-		2 "Caleb_Rig:Controls_Layer" "visibility" " 1"
+		2 "Caleb_Rig:Controls_Layer" "visibility" " 0"
 		2 "Caleb_Rig:Deformer_Layer" "visibility" " 0"
 		5 3 "Caleb_RigRN" "|Caleb_Rig:CALEB|Caleb_Rig:Geometry|Caleb_Rig:Skinned_Geo|Caleb_Rig:Caleb_Geo_Export|Caleb_Rig:Caleb_Geo_ExportShape.worldMesh" 
 		"Caleb_RigRN.placeHolderList[1]" ""
@@ -8759,8 +8761,6 @@ createNode animLayer -n "BaseAnimation";
 	rename -uid "B5C7F777-4220-BEED-7114-FB82986138DD";
 	setAttr -s 2 ".cdly";
 	setAttr -s 2 ".chsl";
-	setAttr ".pref" yes;
-	setAttr ".slct" yes;
 	setAttr ".ovrd" yes;
 createNode animLayer -n "arms";
 	rename -uid "4D252ECE-4A0E-9178-111B-A7A765157F6D";
@@ -9591,6 +9591,8 @@ createNode animLayer -n "torso";
 	rename -uid "FB53B0DB-4EC4-95D5-68ED-E1880AB5E7DD";
 	setAttr -s 870 ".dsm";
 	setAttr -s 724 ".bnds";
+	setAttr ".pref" yes;
+	setAttr ".slct" yes;
 createNode animCurveTU -n "_R_Leg_IKFK_Switch_Ctrl_visibility_torso_inputA";
 	rename -uid "C908D657-417A-2005-7751-ECAACCFF4A54";
 	setAttr ".tan" 9;
@@ -17154,8 +17156,8 @@ createNode animCurveTL -n "Hat_Jnt_Ctrl_translateX_torso_inputB";
 	rename -uid "BD801F9D-4396-368D-62D8-B3B47610B72B";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  25 0 26 0 27 0 35 0 39 -3.1861551462422781
-		 42 0 45 -3.1861551462422781 50 0;
+	setAttr -s 8 ".ktv[0:7]"  25 0 26 0 27 0 35 0 39 -3.8183086374090727
+		 42 0 45 -3.8183086374090727 50 0;
 	setAttr -s 8 ".kit[1:7]"  1 18 18 18 18 18 18;
 	setAttr -s 8 ".kot[1:7]"  1 18 18 18 18 18 18;
 	setAttr -s 8 ".kix[1:7]"  1 1 1 1 1 1 1;
@@ -17189,8 +17191,8 @@ createNode animCurveTA -n "Hat_Jnt_Ctrl_rotate_torso_inputBY";
 	rename -uid "CAD94250-49B8-2CAB-C676-76A5936AB806";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 7 ".ktv[0:6]"  25 0 26 0 35 -1.4865205829855543 39 0 42 -1.4865205829855543
-		 45 0 50 -1.4865205829855543;
+	setAttr -s 7 ".ktv[0:6]"  25 0 26 0 35 -2.5934157899975068 39 0 42 -2.5934157899975068
+		 45 0 50 -2.5934157899975068;
 	setAttr -s 7 ".kit[1:6]"  1 18 18 18 18 18;
 	setAttr -s 7 ".kot[1:6]"  1 18 18 18 18 18;
 	setAttr -s 7 ".kix[1:6]"  1 1 1 1 1 1;
@@ -17210,7 +17212,7 @@ createNode animCurveTA -n "Hat_Jnt_Ctrl_rotate_torso_inputBX";
 	setAttr -s 7 ".koy[1:6]"  0 0 0 0 0 0;
 createNode animBlendNodeAdditiveRotation -n "Hat_Jnt_Ctrl_rotate_torso";
 	rename -uid "D2EAF091-46CC-05AF-92F3-84B4FB172BFD";
-	setAttr ".o" -type "double3" 0 -1.4865205829855543 0 ;
+	setAttr ".o" -type "double3" 0 -2.5934157899975068 0 ;
 createNode animBlendNodeAdditive -n "Hat_Jnt_Ctrl_FollowTranslate_torso";
 	rename -uid "6E91ED64-41BE-1844-58AF-6FB67FA1BFC0";
 	setAttr ".o" 1;
@@ -18079,39 +18081,42 @@ createNode animCurveTL -n "Backpack_2_Jnt_Ctrl_translateX_torso_inputB";
 	rename -uid "87E361B1-476E-D8FC-1B61-FBADCDE3358F";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 0 27 0 34.1 0 35 0;
+	setAttr -s 5 ".ktv[0:4]"  1 0 27 0 34.1 0 35 0 49 0;
 createNode animCurveTL -n "Backpack_2_Jnt_Ctrl_translateY_torso_inputB";
 	rename -uid "A17FFB10-4CC8-847F-176A-609435814E22";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 0 27 0 34.1 0 35 0;
+	setAttr -s 5 ".ktv[0:4]"  1 0 27 0 34.1 0 35 0 49 0;
 createNode animCurveTL -n "Backpack_2_Jnt_Ctrl_translateZ_torso_inputB";
 	rename -uid "4E34188B-45A9-5760-DDCB-64BF6C872B9F";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 0 27 0 34.1 0 35 0;
+	setAttr -s 5 ".ktv[0:4]"  1 0 27 0 34.1 0 35 0 49 0;
 createNode animCurveTA -n "Backpack_2_Jnt_Ctrl_rotate_torso_inputBY";
 	rename -uid "7A5C34A3-421D-A7E7-5BA4-199E654CD946";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  1 0 34.1 0 35 0;
+	setAttr -s 4 ".ktv[0:3]"  1 0 34.1 0 35 0 49 0;
 createNode animCurveTA -n "Backpack_2_Jnt_Ctrl_rotate_torso_inputBZ";
 	rename -uid "E2E31C30-463B-B186-686F-2296E3F6E7CE";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  1 0 34.1 0 35 0;
+	setAttr -s 4 ".ktv[0:3]"  1 0 34.1 0 35 0 49 0;
 createNode animCurveTA -n "Backpack_2_Jnt_Ctrl_rotate_torso_inputBX";
 	rename -uid "555708DC-4211-6EC0-40C6-5097FC04D857";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 7 ".ktv[0:6]"  1 -4.8125844999999998 6 -9.731298 11 -4.81242
-		 17 -9.731298 24 -4.81242 35 -4.8125844999999998 41 -4.8125844999999998;
-	setAttr -s 7 ".kit[0:6]"  1 18 18 18 18 18 1;
-	setAttr -s 7 ".kot[0:6]"  1 18 18 18 18 18 18;
-	setAttr -s 7 ".kix[0:6]"  0.73270005091342161 1 1 1 1 1 0.96854512834478912;
-	setAttr -s 7 ".kiy[0:6]"  -0.68055171397291292 0 0 0 0 0 0.24883796808279909;
-	setAttr -s 7 ".kox[0:6]"  0.73269999336207514 1 1 1 1 1 1;
-	setAttr -s 7 ".koy[0:6]"  -0.6805517759342159 0 0 0 0 0 0;
+	setAttr -s 10 ".ktv[0:9]"  1 -4.8125844999999998 6 -9.731298 11 -4.81242
+		 17 -9.731298 24 -4.81242 35 -4.8125844999999998 38 2.2139887460209042 42 -12.687739410492409
+		 45 2.2555244848891265 50 -4.8125844999999998;
+	setAttr -s 10 ".kit[0:9]"  1 18 18 18 18 18 18 18 
+		18 18;
+	setAttr -s 10 ".kot[0:9]"  1 18 18 18 18 18 18 18 
+		18 18;
+	setAttr -s 10 ".kix[0:9]"  0.73270005091342161 1 1 1 1 1 1 1 1 1;
+	setAttr -s 10 ".kiy[0:9]"  -0.68055171397291292 0 0 0 0 0 0 0 0 0;
+	setAttr -s 10 ".kox[0:9]"  0.73269999336207514 1 1 1 1 1 1 1 1 1;
+	setAttr -s 10 ".koy[0:9]"  -0.6805517759342159 0 0 0 0 0 0 0 0 0;
 createNode animCurveTL -n "Rope_Jnt_Ctrl_translateX_torso_inputB";
 	rename -uid "3C90769D-40D4-6CFF-10B0-65A3E3820718";
 	setAttr ".tan" 18;
