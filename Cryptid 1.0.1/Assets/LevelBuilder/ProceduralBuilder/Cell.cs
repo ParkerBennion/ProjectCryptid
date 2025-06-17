@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using Unity.Mathematics;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class Cell : MonoBehaviour
 {
@@ -10,7 +11,8 @@ public class Cell : MonoBehaviour
     public GameObject defaultCell, exampleTile;
     public Tile tileBrain;
     public TileLibrary tileLibrary;
-
+    private NavMeshDataInstance navMeshInstance;
+    
 
 
 
@@ -24,7 +26,8 @@ public class Cell : MonoBehaviour
     {
         cellManager.activeCells.Add(this);
         PopulateEmptyCells();
-        cellManager.RebuildNavmesh(); 
+        print("Player entered cell");
+        //cellManager.RebuildNavmesh(); 
         
         //find which direction you came from
     }
@@ -111,22 +114,22 @@ public class Cell : MonoBehaviour
         {
             case 1:
                 //createCell at position based on the direction
-                newCell = Instantiate(defaultCell, new Vector3(0, 0, 10)+transform.position, quaternion.identity);
+                newCell = Instantiate(defaultCell, new Vector3(0, 0, 60)+transform.position, quaternion.identity);
                 break;
             case 2:
-                newCell = Instantiate(defaultCell, new Vector3((5 / math.sqrt(3))*3, 0, 5)+transform.position, quaternion.identity);
+                newCell = Instantiate(defaultCell, new Vector3((30 / math.sqrt(3))*3, 0, 30)+transform.position, quaternion.identity);
                 break;
             case 3:
-                newCell = Instantiate(defaultCell, new Vector3((5 / math.sqrt(3))*3, 0, -5)+transform.position, quaternion.identity);
+                newCell = Instantiate(defaultCell, new Vector3((30 / math.sqrt(3))*3, 0, -30)+transform.position, quaternion.identity);
                 break;
             case 4:
-                newCell = Instantiate(defaultCell, new Vector3(0, 0, -10)+transform.position, quaternion.identity);
+                newCell = Instantiate(defaultCell, new Vector3(0, 0, -60)+transform.position, quaternion.identity);
                 break;
             case 5:
-                newCell = Instantiate(defaultCell, new Vector3(-(5 / math.sqrt(3)*3), 0, -5)+transform.position, quaternion.identity);
+                newCell = Instantiate(defaultCell, new Vector3(-(30 / math.sqrt(3)*3), 0, -30)+transform.position, quaternion.identity);
                 break;
             case 6:
-                newCell = Instantiate(defaultCell, new Vector3(-(5 / math.sqrt(3)*3), 0, 5)+transform.position, quaternion.identity);
+                newCell = Instantiate(defaultCell, new Vector3(-(30 / math.sqrt(3)*3), 0, 30)+transform.position, quaternion.identity);
                 break;
             default:
                 Debug.LogWarning("Direction Index was out of bounds when creating a new cell");
@@ -166,6 +169,7 @@ public class Cell : MonoBehaviour
         for (int i = 0; i < registeredCells.Length; i++)// get the border code from the registered cells
         {
             Tile neighborCell = adjacentCells[registeredCells[i] - '0'].GetComponent<Cell>().tileBrain;
+            //print(neighborCell.gameObject.name+" is neigbhor");
             if (neighborCell == null)
             {
                 borderCode += "N";
@@ -179,42 +183,25 @@ public class Cell : MonoBehaviour
         (GameObject, int) tileData = tileLibrary.GetTileFromCode(borderCode);
         int newRotation = directionFromOrigin + tileData.Item2;
         
-        print(registeredCells+"->"+borderCode);
+        //print(registeredCells+"->"+borderCode);
         tileBrain = Instantiate(tileData.Item1, gameObject.transform.position, quaternion.identity, gameObject.transform).GetComponent<Tile>();
         tileBrain.RotateTile(newRotation-1);
+        RegisterNavmeshWithManager();
     }
     private int RotateIndexClockwise(int originalIndex, int numRotations)
     {
         return ((originalIndex - 1 + numRotations) % 6) + 1;
     }
-    
-    
-/*using System.Collections.Generic;
-using UnityEngine;
 
-public class ManualDictSetup : MonoBehaviour
-{
-    Dictionary<int, int[]> myDict = new Dictionary<int, int[]>();
-
-    void Start()
+    public void RegisterNavmeshWithManager()
     {
-        // Manually assigning arrays to each key
-        myDict[1] = new int[] { 1, 3, 5 };
-        myDict[2] = new int[] { 0, 2 };
-        myDict[3] = new int[] { 4 };
-        myDict[4] = new int[] { 5, 0, 1 };
-        myDict[5] = new int[] { 2, 2, 3 };
-        myDict[6] = new int[] { 1, 4 };
-        myDict[7] = new int[] { 3, 5 };
-        myDict[8] = new int[] { 0 };
-        myDict[9] = new int[] { 2, 4, 0 };
-
-        // Print the dictionary to verify
-        foreach (var pair in myDict)
-        {
-            Debug.Log($"Key: {pair.Key} → Values: [{string.Join(", ", pair.Value)}]");
-        }
+        navMeshInstance = NavMesh.AddNavMeshData(tileBrain.navMesh.navMeshData, tileBrain.transform.position, tileBrain.transform.rotation);
+        cellManager.navMeshInstances.Add(navMeshInstance);
     }
-}
-*/
+
+    private void OnDestroy()
+    {
+        cellManager.navMeshInstances.Remove(navMeshInstance);
+        NavMesh.RemoveNavMeshData(navMeshInstance);
+    }
 }

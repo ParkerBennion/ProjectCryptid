@@ -523,6 +523,7 @@ GameObject:
   - component: {fileID: 8092153769489426385}
   - component: {fileID: 1325680683525032237}
   - component: {fileID: 662610038120273793}
+  - component: {fileID: 6245659497031701177}
   m_Layer: 7
   m_Name: Chupacabra
   m_TagString: Untagged
@@ -586,7 +587,7 @@ NavMeshAgent:
   avoidancePriority: 50
   m_AngularSpeed: 720
   m_StoppingDistance: 0
-  m_AutoTraverseOffMeshLink: 1
+  m_AutoTraverseOffMeshLink: 0
   m_AutoBraking: 1
   m_AutoRepath: 1
   m_Height: 2
@@ -682,6 +683,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  invulnerable: 0
 --- !u!135 &8092153769489426385
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -742,6 +744,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bdd46ac3441a17d458943c9252343a08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &6245659497031701177
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3520540915994562969}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6dfdf8528a1b22742af13a8a28f2e1cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  agent: {fileID: 5802046408941479511}
 --- !u!1 &4532192641804742592
 GameObject:
   m_ObjectHideFlags: 0
