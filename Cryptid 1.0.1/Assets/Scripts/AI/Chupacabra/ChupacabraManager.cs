@@ -23,7 +23,7 @@ public class ChupacabraManager : CryptidManager
 
     private void Update()
     {
-        animator.SetFloat("Speed", navAgent.velocity.magnitude);
+        //animator.SetFloat("Speed", navAgent.velocity.magnitude);
     }
 
     public void SetTarget(GameObject obj)

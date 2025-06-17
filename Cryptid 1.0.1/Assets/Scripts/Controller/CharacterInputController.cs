@@ -143,7 +143,7 @@ public class CharacterInputController : MonoBehaviour
         inputs.PlayerMobile.Enable();
     }
 
-    public void DisableControls()
+public void DisableControls()
     {
         inputs.PlayerMobile.Disable();
     }
@@ -169,6 +169,7 @@ public class CharacterInputController : MonoBehaviour
         if (!activelyCharging && !attackCharged)
         {
             attack.LightAttack();
+            canAttack = false;
             animator.SetTrigger("LightAttack");
         }
         else if (activelyCharging)

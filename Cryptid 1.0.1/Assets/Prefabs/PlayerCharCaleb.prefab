@@ -11,10 +11,9 @@ GameObject:
   - component: {fileID: 1642039911162146809}
   - component: {fileID: 3494001154833995361}
   - component: {fileID: 4478642146089535661}
-  - component: {fileID: 4616537664830774553}
   - component: {fileID: 7815587946520828593}
   - component: {fileID: 508374833058718248}
-  - component: {fileID: 6347257196576470344}
+  - component: {fileID: 7505922445188434151}
   m_Layer: 3
   m_Name: PlayerCharCaleb
   m_TagString: PlayerCharacter
@@ -84,26 +83,6 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   invulnerable: 0
---- !u!114 &4616537664830774553
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1102599369354472857}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4da55950bd9b1a848909f2ae459136c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  visualizeHitbox: {fileID: 6246669221546711009}
-  lightDamage: 4
-  heavyDamage: 10
-  attackRadius: 1.5
-  heavySwingRange: 3
-  validLayers:
-  - Enemy
-  - Destructible
 --- !u!136 &7815587946520828593
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -154,7 +133,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
---- !u!114 &6347257196576470344
+--- !u!114 &7505922445188434151
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -163,9 +142,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 1102599369354472857}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa042d6e0c5934849a2dc17c4a3a39ee, type: 3}
+  m_Script: {fileID: 11500000, guid: b529d52ffd98d024788c06c5f84f7511, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  entityCurrentHealth: 0
+  MaxHealth: 100
+  damageEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  deathEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  invulnerable: 0
+  canLatch: 0
 --- !u!1 &3764951206202661122
 GameObject:
   m_ObjectHideFlags: 0

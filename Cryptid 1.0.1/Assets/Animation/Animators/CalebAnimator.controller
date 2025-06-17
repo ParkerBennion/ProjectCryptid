@@ -17,9 +17,9 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.25
-  m_TransitionOffset: 0
-  m_ExitTime: 0.75
+  m_TransitionDuration: 0.0961197
+  m_TransitionOffset: 0.019412981
+  m_ExitTime: 0.9091864
   m_HasExitTime: 0
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
@@ -81,9 +81,9 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.25
+  m_TransitionDuration: 0.1561706
   m_TransitionOffset: 0
-  m_ExitTime: 0.75
+  m_ExitTime: 0.8470648
   m_HasExitTime: 0
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
@@ -436,14 +436,14 @@ AnimatorStateMachine:
     m_Position: {x: 260, y: 100, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1545052063901867714}
-    m_Position: {x: 520, y: -10, z: 0}
+    m_Position: {x: 320, y: -130, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions:
   - {fileID: 322324354844264354}
   m_EntryTransitions: []
   m_StateMachineTransitions: {}
   m_StateMachineBehaviours: []
-  m_AnyStatePosition: {x: 50, y: 20, z: 0}
+  m_AnyStatePosition: {x: 0, y: -100, z: 0}
   m_EntryPosition: {x: 50, y: 120, z: 0}
   m_ExitPosition: {x: 800, y: 120, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
@@ -567,7 +567,7 @@ AnimatorStateTransition:
   m_IsExit: 0
   serializedVersion: 3
   m_TransitionDuration: 0
-  m_TransitionOffset: 0
+  m_TransitionOffset: 0.04955223
   m_ExitTime: 0.9954347
   m_HasExitTime: 0
   m_HasFixedDuration: 1
@@ -624,16 +624,16 @@ AnimatorStateMachine:
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: 4167319172788380232}
-    m_Position: {x: 500, y: -220, z: 0}
+    m_Position: {x: 80, y: -280, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 7366369254013196637}
-    m_Position: {x: 330, y: 60, z: 0}
+    m_Position: {x: 390, y: -170, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -2573103261705607117}
-    m_Position: {x: 620, y: 40, z: 0}
+    m_Position: {x: 390, y: -110, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -1885912586021274016}
-    m_Position: {x: 580, y: -120, z: 0}
+    m_Position: {x: 390, y: -280, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -4332709782508186423}
     m_Position: {x: 80, y: -110, z: 0}
