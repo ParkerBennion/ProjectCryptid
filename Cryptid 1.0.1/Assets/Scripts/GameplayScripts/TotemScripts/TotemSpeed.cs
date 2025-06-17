@@ -5,16 +5,7 @@ public class TotemSpeed : TotemBase
 {
     public override void Awake()
     {
-        base.Awake();
-        if (TryGetComponent<CharacterInputController>(out CharacterInputController character))
-        {
-            character.activePlayerRunSpeed += 1;
-            playerCharacter = character;
-        }
-        else
-        {
-            //Debug.LogWarning("No Character Input Controller");
-        }
+        
     }
 
     public override void Activate()
@@ -22,21 +13,29 @@ public class TotemSpeed : TotemBase
         Debug.Log("Speed Totem Activated!");
     }
     
-    public override void OnDestroy()
+    public override void Initialize()
     {
-        if (playerCharacter != null)
+        base.Initialize();
+        if (TryGetComponent<CharacterInputController>(out CharacterInputController character))
         {
-            playerCharacter.playerSpeed -= 1;
-        }
-        else if (TryGetComponent<CharacterInputController>(out CharacterInputController character))
-        {
-            //Debug.LogWarning("rescanning for character");
-            playerCharacter = character;
-            playerCharacter.activePlayerRunSpeed -= 1;
+            character.totemRunSpeed += 1;
         }
         else
         {
-            //Debug.LogWarning("No Character Input Controller");
+            Debug.LogWarning("No Character Input Controller");
         }
+    }
+
+    public override void SelfDestruct()
+    {
+        if (TryGetComponent<CharacterInputController>(out CharacterInputController character))
+        {
+            character.totemRunSpeed -= 1;
+        }
+        else
+        {
+            Debug.LogWarning("No Character Input Controller");
+        }
+        base.SelfDestruct();
     }
 }

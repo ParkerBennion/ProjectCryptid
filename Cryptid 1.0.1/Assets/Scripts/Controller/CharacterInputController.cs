@@ -23,7 +23,7 @@ public class CharacterInputController : MonoBehaviour
 
     [Range(0, 1)] 
     public float chargeMovementMultiplier;
-    public float activePlayerRunSpeed;
+    public float activePlayerRunSpeed,  totemRunSpeed;
 
     private Coroutine chargingAttack;
     private bool perfectAttack;
@@ -42,7 +42,6 @@ public class CharacterInputController : MonoBehaviour
     private void OnEnable() // Enables controls when the object is enabled
     {
         EnableControls();
-        
     }
     private void Awake()
     {
@@ -72,13 +71,15 @@ public class CharacterInputController : MonoBehaviour
         
         inputs.PlayerMobile.Move.performed += ctx => moveAxis = ctx.ReadValue<Vector2>();
         inputs.PlayerMobile.Move.canceled += ctx => moveAxis = Vector2.zero;
-        
+
+        totemRunSpeed = 0;
         
         //getTotem
         if (TryGetComponent<TotemBase>(out TotemBase totem))
         {
             //Debug.Log("Totem found: " + totem.GetType().Name);
             activeTotem = totem;
+            //totem.Initialize();
         }
     }
     /// <summary>
@@ -89,25 +90,10 @@ public class CharacterInputController : MonoBehaviour
         moveVector.x = moveAxis.x; //Assigns the input values to a Vector3D
         moveVector.y = 0;
         moveVector.z = moveAxis.y;
-        transform.Translate(moveVector * (activePlayerRunSpeed * Time.deltaTime), Space.World);
+        transform.Translate(moveVector * ((totemRunSpeed+activePlayerRunSpeed) * Time.deltaTime), Space.World);
         if (moveAxis!=Vector2.zero)//Updates the players rotation if they are moving, and does nothing if the player is not moving
             transform.rotation = Quaternion.LookRotation(moveVector);
         animator.SetFloat(animSpeed, moveVector.magnitude*activePlayerRunSpeed);
-    }
-
-    public void GetTotem()
-    {
-        StartCoroutine(GettingTotem());
-    }
-
-    private IEnumerator GettingTotem()
-    {
-        yield return waitForTotemWFS;
-        if (TryGetComponent<TotemBase>(out TotemBase totem))
-        {
-            //Debug.Log("Totem found: " + totem.GetType().Name);
-            activeTotem = totem;
-        }
     }
     
     private void StartAttackCallback(InputAction.CallbackContext ctx)
@@ -146,6 +132,7 @@ public class CharacterInputController : MonoBehaviour
     {
         activeTotem.Activate();
     }
+    
     
 /// <summary>
 /// Either enables or disables the controls

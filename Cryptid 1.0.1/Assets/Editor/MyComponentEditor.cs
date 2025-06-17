@@ -1,22 +1,28 @@
-// MyComponentEditor.cs
 using UnityEditor;
 using UnityEngine;
 
-[CustomEditor(typeof(ReplaceTotem))]
+[CustomEditor(typeof(TotemBase), true)] // Applies to TotemBase and all subclasses
 public class MyComponentEditor : Editor
 {
+    SerializedProperty playerCharacterProp;
+
+    private void OnEnable()
+    {
+        playerCharacterProp = serializedObject.FindProperty("playerCharacter");
+    }
+
     public override void OnInspectorGUI()
     {
-        ReplaceTotem targetScript = (ReplaceTotem)target;
+        serializedObject.Update();
 
-        // Example condition: warn if importantValue is 0
-        if (targetScript.GetComponent<TotemBase>() == null)
+        EditorGUILayout.PropertyField(playerCharacterProp);
+
+        // This check is safe for multi-object editing
+        if (!playerCharacterProp.hasMultipleDifferentValues && playerCharacterProp.objectReferenceValue == null)
         {
-            EditorGUILayout.HelpBox("you must add a totem script also for this to work.", MessageType.Error);
-            EditorGUILayout.HelpBox("you must add a totem script also for this to work.", MessageType.Error);
-            EditorGUILayout.HelpBox("you must add a totem script also for this to work.", MessageType.Error);
+            //input warnings here.
         }
 
-        DrawDefaultInspector();
+        serializedObject.ApplyModifiedProperties();
     }
 }

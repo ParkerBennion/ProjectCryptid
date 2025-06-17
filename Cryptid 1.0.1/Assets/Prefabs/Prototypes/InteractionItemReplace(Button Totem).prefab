@@ -381,7 +381,6 @@ GameObject:
   - component: {fileID: 2129397338521460503}
   - component: {fileID: 3954135906876456728}
   - component: {fileID: 4474753098218743695}
-  - component: {fileID: 4986361183773273746}
   - component: {fileID: 1896138422394414915}
   m_Layer: 0
   m_Name: Player Detect Collider
@@ -488,26 +487,15 @@ MonoBehaviour:
   costs:
   - 2
   deductResources: 1
-  gameAction: []
+  gameAction:
+  - {fileID: 11400000, guid: a7489fb67a5207048a90be0ecce927ec, type: 2}
   insufficientResourceActions: []
   onSuccess:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4986361183773273746}
-        m_TargetAssemblyTypeName: ReplaceTotem, Assembly-CSharp
-        m_MethodName: ReplaceTotemObject
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: CharacterInputController, Assembly-CSharp
-        m_MethodName: GetTotem
+      - m_Target: {fileID: 1896138422394414915}
+        m_TargetAssemblyTypeName: TotemBase, Assembly-CSharp
+        m_MethodName: ReplaceCurrentTotemOnCharacter
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -519,14 +507,14 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 2291028337037911544}
         m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
-        m_MethodName: Play
+        m_MethodName: SetTrigger
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 1
           m_FloatArgument: 0
-          m_StringArgument: IdolInactive
+          m_StringArgument: Inactive
           m_BoolArgument: 0
         m_CallState: 2
   onInsufficient:
@@ -534,28 +522,16 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2291028337037911544}
         m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
-        m_MethodName: Play
+        m_MethodName: SetTrigger
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: IdolError
+          m_StringArgument: Error
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &4986361183773273746
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3439550363123026054}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 10e006e2795505b49acda88ded70a409, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1896138422394414915
 MonoBehaviour:
   m_ObjectHideFlags: 0
