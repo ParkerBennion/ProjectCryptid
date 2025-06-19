@@ -108,6 +108,24 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Torch"",
+                    ""type"": ""Button"",
+                    ""id"": ""e8354207-b6ea-4198-945f-7dbf5a3c972f"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Totem"",
+                    ""type"": ""Button"",
+                    ""id"": ""1d47d33b-1466-48ef-990b-2e2889f5b4ad"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -253,6 +271,50 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
                     ""action"": ""Attack"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""3c0f2b44-6e07-4677-b856-bab46eead038"",
+                    ""path"": ""<Keyboard>/r"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Torch"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""65fb6d8d-adba-4216-9bf8-081b0bcc0a7c"",
+                    ""path"": ""<Gamepad>/buttonNorth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Torch"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""47754e5e-f679-4e13-8f01-b25ac1c42d82"",
+                    ""path"": ""<Gamepad>/buttonEast"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Totem"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""1563cddb-c671-4d5e-8df4-72dca31f88ec"",
+                    ""path"": ""<Keyboard>/t"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Totem"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -263,6 +325,8 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
         m_PlayerMobile = asset.FindActionMap("PlayerMobile", throwIfNotFound: true);
         m_PlayerMobile_Move = m_PlayerMobile.FindAction("Move", throwIfNotFound: true);
         m_PlayerMobile_Attack = m_PlayerMobile.FindAction("Attack", throwIfNotFound: true);
+        m_PlayerMobile_Torch = m_PlayerMobile.FindAction("Torch", throwIfNotFound: true);
+        m_PlayerMobile_Totem = m_PlayerMobile.FindAction("Totem", throwIfNotFound: true);
     }
 
     ~@PlayerInputs()
@@ -345,6 +409,8 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
     private List<IPlayerMobileActions> m_PlayerMobileActionsCallbackInterfaces = new List<IPlayerMobileActions>();
     private readonly InputAction m_PlayerMobile_Move;
     private readonly InputAction m_PlayerMobile_Attack;
+    private readonly InputAction m_PlayerMobile_Torch;
+    private readonly InputAction m_PlayerMobile_Totem;
     /// <summary>
     /// Provides access to input actions defined in input action map "PlayerMobile".
     /// </summary>
@@ -364,6 +430,14 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
         /// Provides access to the underlying input action "PlayerMobile/Attack".
         /// </summary>
         public InputAction @Attack => m_Wrapper.m_PlayerMobile_Attack;
+        /// <summary>
+        /// Provides access to the underlying input action "PlayerMobile/Torch".
+        /// </summary>
+        public InputAction @Torch => m_Wrapper.m_PlayerMobile_Torch;
+        /// <summary>
+        /// Provides access to the underlying input action "PlayerMobile/Totem".
+        /// </summary>
+        public InputAction @Totem => m_Wrapper.m_PlayerMobile_Totem;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -396,6 +470,12 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
             @Attack.started += instance.OnAttack;
             @Attack.performed += instance.OnAttack;
             @Attack.canceled += instance.OnAttack;
+            @Torch.started += instance.OnTorch;
+            @Torch.performed += instance.OnTorch;
+            @Torch.canceled += instance.OnTorch;
+            @Totem.started += instance.OnTotem;
+            @Totem.performed += instance.OnTotem;
+            @Totem.canceled += instance.OnTotem;
         }
 
         /// <summary>
@@ -413,6 +493,12 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
             @Attack.started -= instance.OnAttack;
             @Attack.performed -= instance.OnAttack;
             @Attack.canceled -= instance.OnAttack;
+            @Torch.started -= instance.OnTorch;
+            @Torch.performed -= instance.OnTorch;
+            @Torch.canceled -= instance.OnTorch;
+            @Totem.started -= instance.OnTotem;
+            @Totem.performed -= instance.OnTotem;
+            @Totem.canceled -= instance.OnTotem;
         }
 
         /// <summary>
@@ -467,5 +553,19 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnAttack(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Torch" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnTorch(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Totem" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnTotem(InputAction.CallbackContext context);
     }
 }
