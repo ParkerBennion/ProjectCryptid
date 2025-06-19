@@ -7,6 +7,7 @@ using Random = UnityEngine.Random;
 public class TileLibrary: MonoBehaviour
 {
     public TileVariation[] tileLists;
+    public GameObject roadTile;
 
     private Dictionary<int, int[]> codeN0N;
     private Dictionary<int, int[]> codeN1N;
@@ -94,7 +95,7 @@ public class TileLibrary: MonoBehaviour
              {4, new[]{1,5}},
              {5, new[]{5}},
              {6, new[]{1,5}},
-             {7, new[]{3,5}},
+             {7, new[]{2,5}},
              {8, new[]{0,2,4}},
              {9, new[]{4}}
          };
@@ -221,11 +222,14 @@ public class TileLibrary: MonoBehaviour
          };
     }//end of initialize
 
-    
-    
+
+    public GameObject GetRoadTile()
+    {
+        return roadTile;
+    }
     public (GameObject, int) GetTileFromCode(string borderCode)
     {
-        Debug.Log("Recieved code "+borderCode);
+        //Debug.Log("Recieved code "+borderCode);
         switch (borderCode)
         {
             case "N0N":
@@ -280,7 +284,7 @@ public class TileLibrary: MonoBehaviour
         }
         */
         int randomKey = codeDictionary.Keys.ElementAt(Random.Range(0, codeDictionary.Keys.Count));
-        Debug.Log(randomKey+" randomkey");
+        //Debug.Log(randomKey+" randomkey");
         int randomRotation = codeDictionary[randomKey][Random.Range(0, codeDictionary[randomKey].Length)];
         return (tileLists[randomKey-1].PickRandom(), randomRotation);
         // THIS NEEDS TO BE IMPLEMENTED STILL
