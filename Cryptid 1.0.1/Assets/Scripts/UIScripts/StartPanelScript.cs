@@ -5,6 +5,7 @@ public class StartPanelScript : MonoBehaviour
 {
     public GameObject gamePanel;
     public GameObject startPanel;
+    public GameObject startCamera;
 
     // Tracks if the start panel has been shown this session
     public static bool hasShownStartPanel = false;
@@ -17,6 +18,8 @@ public class StartPanelScript : MonoBehaviour
             if (startPanel != null) startPanel.SetActive(true);
             if (gamePanel != null) gamePanel.SetActive(false);
             hasShownStartPanel = true;
+            
         }
+        else startCamera.SetActive(false);
     }
 }
