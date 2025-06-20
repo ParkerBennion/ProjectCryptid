@@ -10,11 +10,12 @@ public class LevelBuilderManager : MonoBehaviour
     public List<Cell> activeCells;
     public Cell startingCell;
     public NavMeshSurface navMesh;
-    public float maxDistance;
+    public float maxDistance, roadSpawnDistance;
     public GameObject player, basicCell;
     public TileLibrary tileLibrary;
     public string testString;
     public List<NavMeshDataInstance> navMeshInstances;
+    
 
     private void Awake()
     {
@@ -23,6 +24,7 @@ public class LevelBuilderManager : MonoBehaviour
 
     public void CreateStartingCells()
     {
+        activeCells.Add(startingCell);
         startingCell.PopulateEmptyCells();
         //RebuildNavmesh();
     }

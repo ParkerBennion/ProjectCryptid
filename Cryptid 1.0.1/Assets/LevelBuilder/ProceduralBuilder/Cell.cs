@@ -12,6 +12,7 @@ public class Cell : MonoBehaviour
     public Tile tileBrain;
     public TileLibrary tileLibrary;
     private NavMeshDataInstance navMeshInstance;
+    [SerializeField] private bool isRoadCell;
     
 
 
@@ -20,11 +21,11 @@ public class Cell : MonoBehaviour
     {
         adjacentCells = new GameObject[7];
         adjacentCells[0] = this.gameObject;
+        //isRoadCell = Vector3.Distance(transform.position, Vector3.zero) > cellManager.roadSpawnDistance;
     }
 
     public void EnterCell()
     {
-        cellManager.activeCells.Add(this);
         PopulateEmptyCells();
         print("Player entered cell");
         //cellManager.RebuildNavmesh(); 
@@ -99,12 +100,7 @@ public class Cell : MonoBehaviour
         cellManager.PurgeDistantCells();
         
     }
-    
-    
-    public void LeaveCell()
-    {
-        cellManager.activeCells.Remove(this);
-    }
+   
     
     public void PopulateCell(int directionIndex)
     {
@@ -154,7 +150,12 @@ public class Cell : MonoBehaviour
     {
         string borderCode = "";
         string registeredCells = "";
-
+        if(Vector3.Distance(cellManager.transform.position, gameObject.transform.position)>cellManager.roadSpawnDistance)
+        {
+            print("ROAD TILE ");
+            tileBrain = Instantiate(tileLibrary.roadTile, gameObject.transform.position, quaternion.identity, gameObject.transform).GetComponent<Tile>();
+            return;
+        }
         for (int i = 1; i < 7; i++)//get indexes of existing neighbor cells
         {
             if (adjacentCells[i] != null)

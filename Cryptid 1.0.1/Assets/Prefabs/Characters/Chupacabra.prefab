@@ -624,8 +624,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fleeState: {fileID: 761088540955871117}
+  flinchState: {fileID: 2290627368239795043}
   canPounce: 0
   playerTarget: {fileID: 0}
+  canStun: 0
 --- !u!114 &5636798512514614687
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -652,17 +654,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCurrentHealth: 0
-  MaxHealth: 10
+  MaxHealth: 20
   damageEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5636798512514614687}
-        m_TargetAssemblyTypeName: StateMachine, Assembly-CSharp
-        m_MethodName: SwitchToNextState
-        m_Mode: 2
+      - m_Target: {fileID: 4509567553487782231}
+        m_TargetAssemblyTypeName: ChupacabraManager, Assembly-CSharp
+        m_MethodName: BeginStunCoodlown
+        m_Mode: 1
         m_Arguments:
-          m_ObjectArgument: {fileID: 2290627368239795043}
-          m_ObjectArgumentAssemblyTypeName: State, Assembly-CSharp
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -699,7 +701,7 @@ SphereCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3

@@ -49,6 +49,7 @@ MonoBehaviour:
   startingCell: {fileID: 0}
   navMesh: {fileID: 0}
   maxDistance: 96
+  roadSpawnDistance: 500
   player: {fileID: 0}
   basicCell: {fileID: 5650620722496709884, guid: cc0d79fbfd62d7e45a4380a092125bc1, type: 3}
   tileLibrary: {fileID: 5582022772246507781}
@@ -75,3 +76,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 36aa83862a36f4f45ace995bd450c413, type: 2}
   - {fileID: 11400000, guid: e2e5f1097cbdbc344b1c8eb63a3281c9, type: 2}
   - {fileID: 11400000, guid: f1551391f88a1e14b862ceab3022a52d, type: 2}
+  roadTile: {fileID: 5650620722496709884, guid: f1f14e92b15919f43ab3a9d2b030aad3, type: 3}

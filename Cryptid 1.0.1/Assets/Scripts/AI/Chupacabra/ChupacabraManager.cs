@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.Events;
@@ -9,9 +10,10 @@ public class ChupacabraManager : CryptidManager
     private Animator animator;
     private NavMeshAgent navAgent;
     private StateMachine stateMachine;
-    public State fleeState;
+    public State fleeState, flinchState;
     public bool canPounce;
     public GameObject playerTarget;
+    [SerializeField] private bool canStun;
 
     private void Awake()
     {
@@ -19,6 +21,7 @@ public class ChupacabraManager : CryptidManager
         animator = GetComponent<Animator>();
         stateMachine = GetComponent<StateMachine>();
         canPounce = true;
+        canStun = true;
     }
 
     private void Update()
@@ -55,6 +58,22 @@ public class ChupacabraManager : CryptidManager
         if (Physics.Raycast(transform.position, Vector3.down, out hit, 10, 11))
         {
             transform.position = hit.point;
+        }
+    }
+
+    private IEnumerator StunCooldown()
+    {
+        canStun = false;
+        yield return new WaitForSeconds(1.5f);
+        canStun = true;
+    }
+
+    public void BeginStunCoodlown()
+    {
+        if (canStun)
+        {
+            stateMachine.SwitchToNextState(flinchState);
+            StartCoroutine(StunCooldown());
         }
     }
 }
