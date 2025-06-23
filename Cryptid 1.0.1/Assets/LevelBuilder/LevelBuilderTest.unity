@@ -942,6 +942,10 @@ PrefabInstance:
       propertyPath: startingCell
       value: 
       objectReference: {fileID: 1620638478767459964}
+    - target: {fileID: 1065188726205858137, guid: 636a92ac2cc616d45a2b6cbfc144cb28, type: 3}
+      propertyPath: roadSpawnDistance
+      value: 500
+      objectReference: {fileID: 0}
     - target: {fileID: 5343376060981821704, guid: 636a92ac2cc616d45a2b6cbfc144cb28, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.4335546
