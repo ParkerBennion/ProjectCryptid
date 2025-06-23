@@ -1,6 +1,6 @@
 //Maya ASCII 2026 scene
 //Name: Caleb_Idle_Animation.ma
-//Last modified: Mon, Jun 23, 2025 01:12:21 AM
+//Last modified: Mon, Jun 23, 2025 01:14:15 AM
 //Codeset: 1252
 file -rdi 1 -ns "Caleb_Rig" -rfn "Caleb_RigRN" -op "v=0;" -typ "mayaAscii" "E:/CryptidMobile/ProjectCryptid/CryptidMobile_MayaProject//scenes/Caleb/Caleb Rig.ma";
 file -rdi 1 -ns "Torch" -rfn "TorchRN" -op "v=0;" -typ "mayaAscii" "C:/Users/caris/Desktop/ProjectCryptid/CryptidMobile_MayaProject//scenes/Torch/Torch.ma";
@@ -18,12 +18,12 @@ fileInfo "product" "Maya 2026";
 fileInfo "version" "2026";
 fileInfo "cutIdentifier" "202502240946-c910a8ba47";
 fileInfo "osv" "Windows 10 Pro for Workstations v2009 (Build: 19045)";
-fileInfo "UUID" "8161E51A-459D-DE5B-6E44-F194C41B0798";
+fileInfo "UUID" "A623CA80-4AC8-11FA-B006-84966626F7F1";
 createNode transform -s -n "persp";
 	rename -uid "CBF88C2F-4AA7-20B4-1B3E-B9981C21D59C";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 1.0741451536456248 2.9694082606031227 10.778582323109561 ;
-	setAttr ".r" -type "double3" -4.5383518223116068 -41759 -1.2425934254440201e-16 ;
+	setAttr ".t" -type "double3" 0.95238549172877085 1.4875004943726113 15.709241404040922 ;
+	setAttr ".r" -type "double3" 2.6616481776897434 -41759.80000000001 -2.32952201558284e-18 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "BDE4A5E7-4F26-2D45-107D-84BDA17E4896";
 	setAttr -k off ".v" no;
@@ -31,7 +31,7 @@ createNode camera -s -n "perspShape" -p "persp";
 	setAttr ".fl" 34.999999999999993;
 	setAttr ".ncp" 1;
 	setAttr ".fcp" 100;
-	setAttr ".coi" 9.984631861941935;
+	setAttr ".coi" 14.898632687875534;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -431,7 +431,7 @@ createNode motionTrailShape -n "Caleb_Rig:L_Arm_3_Jnt_FK_Ctrl_motionTrailShape" 
 	setAttr ".ftc" -type "float3" 0.68599999 0.22 0.071000002 ;
 instanceable -a 0;
 createNode fosterParent -n "TorchRNfosterParent1";
-	rename -uid "DAF1591E-415B-86CF-BD5C-E7AD42836E85";
+	rename -uid "1F399A6C-405B-5DB2-4876-FB834F29F2C5";
 createNode parentConstraint -n "polySurface1_parentConstraint1" -p "TorchRNfosterParent1";
 	rename -uid "35F3890B-4676-24FA-F654-4C9A00DBA2C6";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "L_Arm_3_Jnt_FK_CtrlW0" -dv 1 -min 
@@ -27052,14 +27052,9 @@ createNode reference -n "TorchRN";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"TorchRN"
 		"TorchRN" 0
-		"TorchRN" 17
+		"TorchRN" 13
 		0 "|TorchRNfosterParent1|polySurface1_parentConstraint1" "|Torch:polySurface1" 
 		"-s -r "
-		2 "|Torch:polySurface1" "translate" " -type \"double3\" 0.75773099057208992 1.78615517875891561 0.5868081388837475"
-		
-		2 "|Torch:polySurface1" "translateX" " -av"
-		2 "|Torch:polySurface1" "translateY" " -av"
-		2 "|Torch:polySurface1" "translateZ" " -av"
 		2 "|Torch:polySurface1" "scale" " -type \"double3\" 1 1 1"
 		2 "|Torch:polySurface1" "rotatePivotTranslate" " -type \"double3\" 0 0 0"
 		

@@ -1,6 +1,6 @@
 //Maya ASCII 2026 scene
 //Name: Torch.ma
-//Last modified: Mon, Jun 23, 2025 01:12:45 AM
+//Last modified: Mon, Jun 23, 2025 01:42:29 AM
 //Codeset: 1252
 requires maya "2026";
 requires "stereoCamera" "10.0";
@@ -13,7 +13,7 @@ fileInfo "product" "Maya 2026";
 fileInfo "version" "2026";
 fileInfo "cutIdentifier" "202502240946-c910a8ba47";
 fileInfo "osv" "Windows 10 Pro for Workstations v2009 (Build: 19045)";
-fileInfo "UUID" "14B4A40F-44BD-60F8-280A-EF9B57A87982";
+fileInfo "UUID" "C9115F8C-45D4-2A2E-951C-EC898F5F1B36";
 createNode transform -s -n "persp";
 	rename -uid "138CB435-41F0-683D-1D52-1994BFDD7FC2";
 	setAttr ".v" no;
@@ -525,12 +525,6 @@ createNode shadingEngine -n "pasted__lambert1SG";
 	rename -uid "262058A1-4813-C5B2-A1C6-57825E1AFEAB";
 	setAttr ".ihi" 0;
 	setAttr ".ro" yes;
-createNode animLayer -n "BaseAnimation";
-	rename -uid "76C671CF-4E8C-26C4-D4BA-569D81DF28E8";
-	setAttr ".lo" yes;
-	setAttr ".pref" yes;
-	setAttr ".slct" yes;
-	setAttr ".ovrd" yes;
 createNode aiOptions -s -n "defaultArnoldRenderOptions";
 	rename -uid "663A2112-4103-916D-2E16-7A8B62774018";
 	setAttr ".version" -type "string" "5.5.0";
