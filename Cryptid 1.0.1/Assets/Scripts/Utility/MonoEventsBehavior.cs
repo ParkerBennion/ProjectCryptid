@@ -10,52 +10,52 @@ public class MonoEventsBehavior : MonoBehaviour
    
     void Start()
     {
-        startEvent.Invoke();
+        startEvent?.Invoke();
     }
 
     public void OnCollisionEnter(Collision other)
     {
-        collisionEvent.Invoke();
+        collisionEvent?.Invoke();
     }
 
    
     private void OnTriggerEnter(Collider other)
     {
-        triggerEnterEvent.Invoke();
+        triggerEnterEvent?.Invoke();
     }
 
     private void OnApplicationQuit()
     {
-        quitEvent.Invoke();
+        quitEvent?.Invoke();
     }
 
     private void OnDestroy()
     {
-        destroyEvent.Invoke();
+        destroyEvent?.Invoke();
     }
 
     private void OnEnable()
     {
-        enableEvent.Invoke();
+        enableEvent?.Invoke();
     }
 
     private void OnDisable()
     {
-        disableEvent.Invoke();
+        disableEvent?.Invoke();
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        triggerEnterEvent.Invoke();
+        triggerEnterEvent?.Invoke();
     }
 
     private void OnCollisionEnter2D(Collision2D other)
     {
-        collisionEvent.Invoke();
+        collisionEvent?.Invoke();
     }
 
     public void OnMouseDown()
     {
-        tapEvent.Invoke();
+        tapEvent?.Invoke();
     }
 }
