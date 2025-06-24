@@ -33,7 +33,7 @@ public class CharacterInputController : MonoBehaviour
     public TotemBase activeTotem;
 
     [SerializeField]private Animator animator;
-    
+    [SerializeField] private TorchSO torchSO;
     private static readonly int animSpeed = Animator.StringToHash("Speed");
     
     private WaitForSeconds chargeStartDelayWFS, chargeTimeWFS, frameWFS, waitForTotemWFS;
@@ -64,6 +64,8 @@ public class CharacterInputController : MonoBehaviour
         inputs.PlayerMobile.Attack.canceled += ReleaseAttackCallback;
         
         inputs.PlayerMobile.Torch.started += StartTorchCallback;
+        inputs.PlayerMobile.Torch.performed += ReleaseTorchCallback;
+        
         //inputs.PlayerMobile.Torch.canceled += ReleaseTorchCallback;
         
         inputs.PlayerMobile.Totem.started += StartTotemCallback;
@@ -112,8 +114,7 @@ public class CharacterInputController : MonoBehaviour
     }
     private void ReleaseTorchCallback(InputAction.CallbackContext ctx)
     {
-        //currently no funcionality needs release torch mechanics
-        //ReleaseTorch();
+        ReleaseTorch();
     }
     public void StartTorch()
     {
@@ -122,6 +123,7 @@ public class CharacterInputController : MonoBehaviour
     public void ReleaseTorch()
     {
         Debug.Log("ReleaseTorch");
+        torchSO.ToggleTorch();
     }
 
     private void StartTotemCallback(InputAction.CallbackContext ctx)
@@ -130,7 +132,9 @@ public class CharacterInputController : MonoBehaviour
     }
     private void ReleaseTotemCallback(InputAction.CallbackContext ctx)
     {
-        activeTotem.Activate();
+        if(activeTotem!=null)
+            activeTotem.Activate();
+        else print("No active totem");
     }
     
     
@@ -228,7 +232,7 @@ public void DisableControls()
         inputs.PlayerMobile.Attack.started -= StartAttackCallback;
         inputs.PlayerMobile.Attack.canceled -= ReleaseAttackCallback;
         inputs.PlayerMobile.Torch.started -= StartTorchCallback;
-        inputs.PlayerMobile.Torch.canceled -= ReleaseTorchCallback;
+        inputs.PlayerMobile.Torch.performed -= ReleaseTorchCallback;
         inputs.PlayerMobile.Totem.started -= StartTotemCallback;
         inputs.PlayerMobile.Totem.canceled -= ReleaseTotemCallback;
     }
