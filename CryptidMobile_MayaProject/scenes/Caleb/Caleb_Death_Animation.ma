@@ -1,6 +1,6 @@
 //Maya ASCII 2026 scene
 //Name: Caleb_Death_Animation.ma
-//Last modified: Sat, Jun 28, 2025 09:33:26 PM
+//Last modified: Sat, Jun 28, 2025 09:34:34 PM
 //Codeset: 1252
 file -rdi 1 -ns "Torch" -rfn "TorchRN" -op "v=0;" -typ "mayaAscii" "C:/Users/caris/Desktop/ProjectCryptid/CryptidMobile_MayaProject//scenes/Torch/Torch.ma";
 file -rdi 1 -ns "Caleb_Rig" -rfn "Caleb_RigRN1" -op "v=0;" -typ "mayaAscii"
@@ -19,12 +19,12 @@ fileInfo "product" "Maya 2026";
 fileInfo "version" "2026";
 fileInfo "cutIdentifier" "202502240946-c910a8ba47";
 fileInfo "osv" "Windows 10 Pro for Workstations v2009 (Build: 19045)";
-fileInfo "UUID" "4B34282B-4D50-831E-7ABF-929D2B1DB818";
+fileInfo "UUID" "F8F7A961-4E05-3755-E2F9-A7BFD4094652";
 createNode transform -s -n "persp";
 	rename -uid "CBF88C2F-4AA7-20B4-1B3E-B9981C21D59C";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -1396.6194403776376 457.66540053773718 249.90204998257366 ;
-	setAttr ".r" -type "double3" -15.338350152113344 -34642.199999959252 -1.1717721879301272e-14 ;
+	setAttr ".t" -type "double3" -882.7965177927606 105.89166120322309 1207.6160662944471 ;
+	setAttr ".r" -type "double3" 2.6616498479100175 -34597.399999959125 -5.004557125322675e-16 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "BDE4A5E7-4F26-2D45-107D-84BDA17E4896";
 	setAttr -k off ".v" no;
