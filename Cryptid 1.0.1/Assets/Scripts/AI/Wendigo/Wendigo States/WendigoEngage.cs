@@ -27,7 +27,7 @@ public class WendigoEngage : State
             if (engageInMelee)//if good to melee
             {
                 print("MeleeAttack");
-                //stateMachine.SwitchToNextState(meleeAttackState);
+                stateMachine.SwitchToNextState(meleeAttackState);
             }
             else if (distanceFromTarget <= rangeFleeDistance)//if ranged but too close
             {
@@ -48,7 +48,7 @@ public class WendigoEngage : State
     public override void OnEnterState()
     {
         print("Engaging Player");
-        ReEvaluateMelee(torchStatus.GetTorchStatus());
+        ReEvaluateMelee(!torchStatus.GetTorchStatus());
         playerTarget = manager.playerTarget;
         navAgent.enabled = true;
         navAgent.isStopped = false;
