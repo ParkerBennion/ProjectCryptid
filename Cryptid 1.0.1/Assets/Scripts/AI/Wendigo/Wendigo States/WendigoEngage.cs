@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class WendigoEngage : State
@@ -10,7 +11,7 @@ public class WendigoEngage : State
     private float distanceFromTarget;
     [SerializeField] private bool engageInMelee;
 
-    
+
     //flee math
     private Vector3 fleeDirection;
     
@@ -24,7 +25,7 @@ public class WendigoEngage : State
         distanceFromTarget = Vector3.Distance(manager.transform.position, playerTarget.transform.position);
         if (distanceFromTarget <= currentEngageDistance)//if close enough to attack
         {
-            if (engageInMelee)//if good to melee
+            if (engageInMelee&&manager.canMelee)//if good to melee
             {
                 print("MeleeAttack");
                 stateMachine.SwitchToNextState(meleeAttackState);
@@ -35,11 +36,11 @@ public class WendigoEngage : State
                 navAgent.SetDestination((fleeDirection * rangeFleeDistance * 1.1f)+manager.transform.position);
                 print("RUNAWAY");
             }//if ranged but not too close;
-            else
+            else if(manager.canRangeAttack)
             {
                 print("RangeAttack");
                 navAgent.SetDestination(transform.position);
-                //stateMachine.SwitchToNextState(rangeAttackState);
+                stateMachine.SwitchToNextState(rangeAttackState);
             }
         }
         else navAgent.SetDestination(playerTarget.transform.position);
@@ -66,5 +67,5 @@ public class WendigoEngage : State
         if (engageInMelee) currentEngageDistance = meleeDistance;
         else currentEngageDistance = rangeDistance;
     }
-    
+
 }

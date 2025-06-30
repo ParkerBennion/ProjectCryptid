@@ -42,6 +42,22 @@ public class SimpleAttack : MonoBehaviour
         
     }
     /// <summary>
+    /// Deploys an attack sphere at the specified WORLD COORDINATES and checks for valid hitboxes
+    /// </summary>
+    /// <param name="damage">Damage amount to deal</param>
+    /// <param name="radius">Radius of the attack from the center</param>
+    /// <param name="attackCenter">The world Space location for the attack</param>
+    public void AttackWorldPoint(float damage, float radius, Vector3 attackCenter)// this needs to be updated to avoid things attacking other things of the same type
+    {
+        Collider[] cols = Physics.OverlapSphere(attackCenter, radius, validLayers);
+        foreach (Collider thisCol in cols)
+        {
+            if (thisCol.TryGetComponent(out IDamageable target))
+                target.DealDamage(damage);
+        }
+        
+    }
+    /// <summary>
     /// Checks if the player is within the specified range of this object
     /// </summary>
     /// <param name="attackRange">The range threshold to return True</param>
