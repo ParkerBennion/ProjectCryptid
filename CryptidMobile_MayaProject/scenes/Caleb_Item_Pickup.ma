@@ -1,6 +1,6 @@
 //Maya ASCII 2026 scene
 //Name: Caleb_Item_Pickup.ma
-//Last modified: Sun, Jun 29, 2025 12:55:25 AM
+//Last modified: Sun, Jun 29, 2025 01:01:08 AM
 //Codeset: 1252
 file -rdi 1 -ns "Torch" -rfn "TorchRN" -op "v=0;" -typ "mayaAscii" "C:/Users/caris/Desktop/ProjectCryptid/CryptidMobile_MayaProject//scenes/Torch/Torch.ma";
 file -rdi 1 -ns "Caleb_Rig" -rfn "Caleb_RigRN1" -op "v=0;" -typ "mayaAscii"
@@ -18,12 +18,12 @@ fileInfo "product" "Maya 2026";
 fileInfo "version" "2026";
 fileInfo "cutIdentifier" "202502240946-c910a8ba47";
 fileInfo "osv" "Windows 10 Pro for Workstations v2009 (Build: 19045)";
-fileInfo "UUID" "4E837EED-4774-6C30-1583-A39022065DC4";
+fileInfo "UUID" "E750E850-4370-229A-5B36-738E631A3D01";
 createNode transform -s -n "persp";
 	rename -uid "CBF88C2F-4AA7-20B4-1B3E-B9981C21D59C";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -5.5027873480913421 3.7260073604746844 34.034759309238673 ;
-	setAttr ".r" -type "double3" -3.3383516345028617 -50769.399999977162 5.0372561509987699e-17 ;
+	setAttr ".t" -type "double3" -2.6480968027388032 49.763067171595189 -44.940731440383558 ;
+	setAttr ".r" -type "double3" -46.538351634238197 -50576.600000015525 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "BDE4A5E7-4F26-2D45-107D-84BDA17E4896";
 	setAttr -k off ".v" no;
@@ -31,7 +31,7 @@ createNode camera -s -n "perspShape" -p "persp";
 	setAttr ".fl" 34.999999999999993;
 	setAttr ".ncp" 1;
 	setAttr ".fcp" 100;
-	setAttr ".coi" 34.061261122207085;
+	setAttr ".coi" 66.159011924991177;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -120,11 +120,6 @@ createNode parentConstraint -n "polySurface1_parentConstraint1" -p "TorchRNfoste
 	setAttr ".rst" -type "double3" 0.75773099060000004 1.7861551787999996 0.58680813889999994 ;
 	setAttr ".rsrr" -type "double3" 21.595407651700032 -54.191206753099983 -39.953189363000007 ;
 	setAttr -k on ".w0";
-createNode transform -n "locator1";
-	rename -uid "E9759B92-4252-A599-88A4-8A9C8A57A418";
-createNode locator -n "locatorShape1" -p "locator1";
-	rename -uid "74DDD114-44EB-AA2A-FF2E-3DA38144B725";
-	setAttr -k off ".v";
 createNode lightLinker -s -n "lightLinker1";
 	rename -uid "2EF265F4-48D3-9764-019E-DB81CA6738B6";
 	setAttr -s 17 ".lnk";
@@ -8131,7 +8126,7 @@ createNode reference -n "Caleb_RigRN1";
 		"LocalSpace" " -k 1 1"
 		2 "Caleb_Rig:Geometry_Layer" "visibility" " 1"
 		2 "Caleb_Rig:Joint_Layer" "visibility" " 0"
-		2 "Caleb_Rig:Controls_Layer" "visibility" " 1"
+		2 "Caleb_Rig:Controls_Layer" "visibility" " 0"
 		2 "Caleb_Rig:Deformer_Layer" "visibility" " 0"
 		5 4 "Caleb_RigRN1" "|Caleb_Rig:CALEB|Caleb_Rig:Controls|Caleb_Rig:IKFK_Switches|Caleb_Rig:Spine_IKFK_Switch_Ctrl_Grp|Caleb_Rig:Spine_IKFK_Switch_Ctrl.translateX" 
 		"Caleb_RigRN1.placeHolderList[1]" ""
@@ -11282,21 +11277,6 @@ createNode animCurveTL -n "L_Foot_Reverse_Foot_ToeTap_Ctrl_translateZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr ".ktv[0]"  23 0;
-createNode animCurveTL -n "locator1_translateX";
-	rename -uid "C416CD80-4C0C-F348-6C89-24BE0289BF33";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  23 0.00033602055496828348;
-createNode animCurveTL -n "locator1_translateY";
-	rename -uid "DF836892-4024-394E-DCCC-E28DDA436570";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  23 1.8815077230854704;
-createNode animCurveTL -n "locator1_translateZ";
-	rename -uid "CE4BBBCA-4875-3AC1-A011-91821431F0D8";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  23 2.4217272376273842;
 createNode animCurveTA -n "R_Foot_Reverse_Foot_Ball_Ctrl_rotateX";
 	rename -uid "543625A3-4C9B-D113-2C17-4D9DFB2D4C57";
 	setAttr ".tan" 18;
@@ -11972,24 +11952,9 @@ createNode animCurveTA -n "L_Foot_Reverse_Foot_ToeTap_Ctrl_rotateZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr ".ktv[0]"  23 0;
-createNode animCurveTA -n "locator1_rotateX";
-	rename -uid "480FA7CF-4621-03AF-A713-C29EE27E7E30";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  23 10.195494204548378;
-createNode animCurveTA -n "locator1_rotateY";
-	rename -uid "97B2D1F3-4912-318C-1025-548CC1CD5AC5";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  23 0;
-createNode animCurveTA -n "locator1_rotateZ";
-	rename -uid "6FB2F27D-4092-B62E-3649-0094C876B968";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  23 0;
 select -ne :time1;
-	setAttr ".o" 47;
-	setAttr ".unw" 47;
+	setAttr ".o" 40;
+	setAttr ".unw" 40;
 select -ne :hardwareRenderingGlobals;
 	setAttr ".otfna" -type "stringArray" 22 "NURBS Curves" "NURBS Surfaces" "Polygons" "Subdiv Surface" "Particles" "Particle Instance" "Fluids" "Strokes" "Image Planes" "UI" "Lights" "Cameras" "Locators" "Joints" "IK Handles" "Deformers" "Motion Trails" "Components" "Hair Systems" "Follicles" "Misc. UI" "Ornaments"  ;
 	setAttr ".otfva" -type "Int32Array" 22 0 1 1 1 1 1
@@ -12579,12 +12544,6 @@ connectAttr "TorchRN.phl[9]" "polySurface1_parentConstraint1.cpim";
 connectAttr "TorchRN.phl[10]" "polySurface1_parentConstraint1.crp";
 connectAttr "polySurface1_parentConstraint1.w0" "polySurface1_parentConstraint1.tg[0].tw"
 		;
-connectAttr "locator1_translateX.o" "locator1.tx";
-connectAttr "locator1_translateY.o" "locator1.ty";
-connectAttr "locator1_translateZ.o" "locator1.tz";
-connectAttr "locator1_rotateX.o" "locator1.rx";
-connectAttr "locator1_rotateY.o" "locator1.ry";
-connectAttr "locator1_rotateZ.o" "locator1.rz";
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" "pasted__standardSurface1SG.message" ":defaultLightSet.message";
