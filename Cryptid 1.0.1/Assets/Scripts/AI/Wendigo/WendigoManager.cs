@@ -12,6 +12,7 @@ public class WendigoManager : CryptidManager
     private WaitForSeconds meleeWFS, rangedWFS;
     public bool canMelee, canRangeAttack;
     private bool canStun;
+    [SerializeField] private State flinchState;
     [SerializeField] private float rangeCD, meleeCD;
 
     private void Awake()
@@ -30,29 +31,23 @@ public class WendigoManager : CryptidManager
         canRangeAttack = true;
         canStun = true;
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     public void SetTarget(GameObject obj)
     {
         playerTarget = obj.gameObject;
     }
     public override void Disengage()
     {
-        
+        Debug.LogWarning("WENDIGO DISENGAGE NOT IMPLEMENTED YET");
     }
 
     public override void Despawn()
     {
-        
+        Destroy(gameObject);
     }
 
     public override void Die()
     {
-        
+        Destroy(gameObject);
     }
 
     public void StartMeleeCD()
@@ -80,6 +75,7 @@ public class WendigoManager : CryptidManager
     }
     private IEnumerator StunCooldown()
     {
+        stateMachine.SwitchToNextState(flinchState);
         canStun = false;
         yield return new WaitForSeconds(1.5f);
         canStun = true;

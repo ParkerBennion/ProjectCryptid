@@ -76,4 +76,12 @@ public class ChupacabraManager : CryptidManager
             StartCoroutine(StunCooldown());
         }
     }
+
+    public void Stun()
+    {
+        if (canStun)
+        {
+            stateMachine.SwitchToNextState(flinchState);
+        }
+    }
 }
