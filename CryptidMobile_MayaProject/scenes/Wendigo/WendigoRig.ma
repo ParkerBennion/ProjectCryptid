@@ -1,6 +1,6 @@
 //Maya ASCII 2025ff03 scene
 //Name: WendigoRig.ma
-//Last modified: Sun, Jul 06, 2025 03:56:45 PM
+//Last modified: Sun, Jul 06, 2025 06:22:39 PM
 //Codeset: 1252
 requires maya "2025ff03";
 requires -nodeType "ikSpringSolver" "ikSpringSolver" "1.0";
@@ -15,12 +15,12 @@ fileInfo "product" "Maya 2025";
 fileInfo "version" "2025";
 fileInfo "cutIdentifier" "202409190603-cbdc5a7e54";
 fileInfo "osv" "Windows 10 Home v2009 (Build: 19045)";
-fileInfo "UUID" "44C728CD-46CD-9589-EDA5-B9B42A85954B";
+fileInfo "UUID" "E70D242D-4C42-0D7B-8F11-51823FEC43B7";
 createNode transform -s -n "persp";
 	rename -uid "71326349-4237-AAA7-B5A1-E0BDDFF21F3A";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 8.7880713724019195 7.0218155399471804 8.6612574151676363 ;
-	setAttr ".r" -type "double3" -22.538352938825174 -676.5999999999658 0 ;
+	setAttr ".t" -type "double3" 3.0028520871269389 3.4064863891900217 3.7966166613009205 ;
+	setAttr ".r" -type "double3" -6.9383529373305999 758.59999999999638 0 ;
 	setAttr ".rp" -type "double3" 1.4210854715202004e-16 0 -5.6843418860808016e-16 ;
 	setAttr ".rpt" -type "double3" 2.7324633015786327e-16 9.7355521310831368e-17 9.7007394550145904e-16 ;
 createNode camera -s -n "perspShape" -p "persp";
@@ -29,7 +29,7 @@ createNode camera -s -n "perspShape" -p "persp";
 	setAttr ".fl" 34.999999999999993;
 	setAttr ".ncp" 0.001;
 	setAttr ".fcp" 100;
-	setAttr ".coi" 13.079964740713073;
+	setAttr ".coi" 4.5536348176411625;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -4783,7 +4783,7 @@ createNode parentConstraint -n "R_Arm_1_Jnt_IK_baseStretch_Loc_parentConstraint1
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" 180 -3.8268099970814431 41.911555461516386 ;
+	setAttr ".lr" -type "double3" 180 -3.8268099970814444 41.911555461516386 ;
 	setAttr ".rst" -type "double3" -0.46097899999999992 2.8478899952867289 -0.04139900025482815 ;
 	setAttr ".rsrr" -type "double3" 180 -3.8268099970814422 41.911555461516386 ;
 	setAttr -k on ".w0";
@@ -4836,7 +4836,7 @@ createNode parentConstraint -n "L_Arm_1_Jnt_IK_baseStretch_Loc_parentConstraint1
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" -1.8433189145537086e-06 3.8268099970814138 -41.911555461516407 ;
+	setAttr ".lr" -type "double3" -1.8433189145537086e-06 3.8268099970814142 -41.911555461516407 ;
 	setAttr ".rst" -type "double3" 0.46097900390625024 2.8478893995836052 -0.041399016635138342 ;
 	setAttr ".rsrr" -type "double3" -1.8433189145537086e-06 3.8268099970814151 -41.9115554615164 ;
 	setAttr -k on ".w0";
@@ -4865,7 +4865,7 @@ createNode parentConstraint -n "L_Eye_Up_Loc_parentConstraint1" -p "L_Eye_Up_Loc
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" 0.49054499528902912 -0.20256229400634795 0.11188365066581128 ;
 	setAttr ".tg[0].tor" -type "double3" -25.287619752315837 0 -90 ;
-	setAttr ".lr" -type "double3" 8.1104144377319682e-14 1.5902773407317491e-15 1.3119788061037007e-14 ;
+	setAttr ".lr" -type "double3" 2.5762492919854486e-13 -2.9495928836720185e-29 1.3119788061037007e-14 ;
 	setAttr ".rst" -type "double3" 0.20256229400634765 3.6745710258140236 0.32839378356933596 ;
 	setAttr ".rsrr" -type "double3" 0 0 7.1562480332929135e-15 ;
 	setAttr -k on ".w0";
@@ -4892,7 +4892,7 @@ createNode parentConstraint -n "R_Eye_Up_Loc_parentConstraint1" -p "R_Eye_Up_Loc
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" 0.49054178187149772 0.20256200790405265 0.11188542193082171 ;
 	setAttr ".tg[0].tor" -type "double3" -25.287619752315837 0 -90 ;
-	setAttr ".lr" -type "double3" 8.1104144377319682e-14 1.5902773407317491e-15 1.3119788061037007e-14 ;
+	setAttr ".lr" -type "double3" 2.5762492919854486e-13 -2.9495928836720185e-29 1.3119788061037007e-14 ;
 	setAttr ".rst" -type "double3" -0.20256200790405274 3.6745673637046492 0.328394012451172 ;
 	setAttr ".rsrr" -type "double3" 0 0 7.1562480332929135e-15 ;
 	setAttr -k on ".w0";
@@ -5361,7 +5361,7 @@ createNode transform -n "R_Thigh_IK_Joint_Grp" -p "R_Thigh_IK_Jnt_System";
 createNode joint -n "R_Thigh_IK_Joint_1" -p "R_Thigh_IK_Joint_Grp";
 	rename -uid "96A8FE25-4F92-26C2-4BF2-72B48B6FE406";
 	setAttr ".t" -type "double3" 0 3.5527136788005011e-16 -7.105427357601002e-17 ;
-	setAttr ".r" -type "double3" 180 -1.9428052179663527e-15 -6.5777154076573169e-14 ;
+	setAttr ".r" -type "double3" 180 1.2074182677804407e-06 2.3847132875994431e-12 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" -3.1805546814635183e-15 -3.1805546814635168e-15 8.9453100416161403e-15 ;
@@ -5549,7 +5549,7 @@ createNode parentConstraint -n "R_Shoulder_Twist_Loc_Grp_Upper_parentConstraint1
 	setAttr ".tg[0].tot" -type "double3" 0 2.8421709430404008e-16 0 ;
 	setAttr ".tg[0].tor" -type "double3" -1.0083420207555482e-14 7.9513867036587899e-16 
 		-8.7591374749744585e-15 ;
-	setAttr ".lr" -type "double3" -179.99966165904439 -3.8268119000358585 41.911465541876289 ;
+	setAttr ".lr" -type "double3" 180.00000000000003 -3.8268099970814595 41.911555461516386 ;
 	setAttr ".rst" -type "double3" -0.46097899999999981 2.8478899952867285 -0.041399000254828143 ;
 	setAttr ".rsrr" -type "double3" -179.99966165195261 -3.8268116990442391 41.911465555262275 ;
 	setAttr -k on ".w0";
@@ -5641,7 +5641,7 @@ createNode transform -n "R_Shoulder_IK_Joint_Grp" -p "R_Shoulder_IK_Jnt_System";
 createNode joint -n "R_Shoulder_IK_Joint_1" -p "R_Shoulder_IK_Joint_Grp";
 	rename -uid "D852D148-4DD6-69EE-B38C-30AD6EC3A4CD";
 	setAttr ".t" -type "double3" 2.8421709430404008e-16 0 -2.8421709430404008e-16 ;
-	setAttr ".r" -type "double3" -1.7075473065366062e-06 9.7658889120779004e-22 -4.5808979904669292e-22 ;
+	setAttr ".r" -type "double3" -1.4787796640182892e-06 -5.2577551531372874e-07 6.3676981943655434e-05 ;
 	setAttr ".s" -type "double3" 1 0.99999999999999978 0.99999999999999978 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
@@ -5714,7 +5714,7 @@ createNode parentConstraint -n "R_Shoulder_Master_Grp_parentConstraint1" -p "R_S
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" -0.68639198403091872 -0.25542092704281688 0.57672136304695143 ;
 	setAttr ".tg[0].tor" -type "double3" 179.99999999999994 2.1204590255752195e-16 -1.2720451479553722e-14 ;
-	setAttr ".lr" -type "double3" 4.174478019420866e-15 1.987846675914698e-16 1.5530052155583651e-18 ;
+	setAttr ".lr" -type "double3" 1.0634979716143635e-14 9.9392333795734899e-17 7.7650260777918824e-19 ;
 	setAttr ".rst" -type "double3" 1.4210854715202004e-16 0 1.4210854715202004e-16 ;
 	setAttr ".rsrr" -type "double3" -2.3854160110976376e-15 9.9392333795734899e-17 7.7650260777917688e-19 ;
 	setAttr -k on ".w0";
@@ -5828,7 +5828,7 @@ createNode parentConstraint -n "L_Shoulder_Twist_Loc_Grp_Upper_parentConstraint1
 	setAttr ".tg[0].tot" -type "double3" 0 0 1.7763568394002505e-17 ;
 	setAttr ".tg[0].tor" -type "double3" -3.975693351829396e-16 -2.3854160110976376e-15 
 		3.1411506239873354e-15 ;
-	setAttr ".lr" -type "double3" 2.1139291395160312e-05 3.826803724455349 -41.911549722115495 ;
+	setAttr ".lr" -type "double3" 0 3.8268099970814169 -41.911555461516386 ;
 	setAttr ".rst" -type "double3" 0.46097900390625074 2.8478893995836034 -0.041399016635137884 ;
 	setAttr ".rsrr" -type "double3" 0 3.8268099970814169 -41.911555461516386 ;
 	setAttr -k on ".w0";
@@ -5920,7 +5920,7 @@ createNode transform -n "L_Shoulder_IK_Joint_Grp" -p "L_Shoulder_IK_Jnt_System";
 createNode joint -n "L_Shoulder_IK_Joint_1" -p "L_Shoulder_IK_Joint_Grp";
 	rename -uid "CFE1D869-43FC-5BF4-EF92-3BBD99050DD8";
 	setAttr ".t" -type "double3" 0 7.105427357601002e-17 -2.8421709430404008e-16 ;
-	setAttr ".r" -type "double3" 89.999999999999758 3.9130178140877984e-06 -4.0040297577749601e-06 ;
+	setAttr ".r" -type "double3" 90.000000000000028 -1.3352655815279793e-13 2.6460235167359484e-13 ;
 	setAttr ".s" -type "double3" 0.99999999999999889 1.0000000000000011 1 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
@@ -5994,7 +5994,7 @@ createNode parentConstraint -n "L_Shoulder_Master_Grp_parentConstraint1" -p "L_S
 	setAttr ".tg[0].tot" -type "double3" 0.68638760581418856 0.25542572892500232 -0.57672362122171861 ;
 	setAttr ".tg[0].tor" -type "double3" 2.8733586583863604e-36 -9.9378527184013463e-17 
 		-1.6566086137307365e-18 ;
-	setAttr ".lr" -type "double3" 6.7586786981099735e-15 2.981770013872047e-16 1.5530052155583753e-18 ;
+	setAttr ".lr" -type "double3" 1.3219180394832742e-14 1.987846675914698e-16 2.3295078233375602e-18 ;
 	setAttr ".rst" -type "double3" 1.4210854715202004e-16 3.4106051316484808e-15 0 ;
 	setAttr ".rsrr" -type "double3" 1.987846675914698e-16 1.987846675914698e-16 2.3295078233375375e-18 ;
 	setAttr -k on ".w0";
@@ -6368,7 +6368,7 @@ createNode parentConstraint -n "R_Forearm_Twist_Loc_Grp_Lower_parentConstraint1"
 	setAttr ".tg[0].tot" -type "double3" -0.93349182405849018 4.6989473304392961e-07 
 		3.5692755279370658e-07 ;
 	setAttr ".tg[0].tor" -type "double3" 4.1983554746100754e-15 0 -4.0181826038988122e-15 ;
-	setAttr ".lr" -type "double3" -179.99963633693835 22.600931109436743 41.911616683464523 ;
+	setAttr ".lr" -type "double3" 179.99999799460392 22.60093037513764 41.911543491788166 ;
 	setAttr ".rst" -type "double3" -1.626210005417724 1.8019600013223949 0.27026099974513623 ;
 	setAttr ".rsrr" -type "double3" -179.99963632927313 22.600931310428223 41.911616700269398 ;
 	setAttr -k on ".w0";
@@ -6420,7 +6420,7 @@ createNode parentConstraint -n "R_Forearm_Up_Target_Upper_Lower_parentConstraint
 	setAttr ".tg[0].tot" -type "double3" 0.04985627693546521 0.00073795394943488191 
 		0.69822188956957221 ;
 	setAttr ".tg[0].tor" -type "double3" -0.07083003205739663 4.0840848532764937 -0.14641103332946148 ;
-	setAttr ".lr" -type "double3" 1.206675085522794e-09 8.1216818133444558e-15 -1.5512956346096965e-08 ;
+	setAttr ".lr" -type "double3" 0.00033754134883725629 -9.3530561988711816e-07 -6.758636119554003e-05 ;
 	setAttr ".rst" -type "double3" -3.3750779948604759e-16 -1.1368683772161603e-15 0.70000000000000007 ;
 	setAttr ".rsrr" -type "double3" -1.603963199193866e-17 1.1596579494316354e-16 7.5709029359484749e-17 ;
 	setAttr -k on ".w0";
@@ -6516,7 +6516,7 @@ createNode parentConstraint -n "L_Forearm_Twist_Loc_Grp_Lower_parentConstraint1"
 		-9.6831303508793103e-09 ;
 	setAttr ".tg[0].tor" -type "double3" -1.5301789204422958e-14 -6.3611093629270335e-15 
 		-2.5939628671991972e-14 ;
-	setAttr ".lr" -type "double3" 2.0841295288025191e-05 -22.600925621819631 -41.911547943455247 ;
+	setAttr ".lr" -type "double3" -2.0053961531932627e-06 -22.600930375137672 -41.911543491788173 ;
 	setAttr ".rst" -type "double3" 1.6262089538574183 1.8019642592027412 0.27026077245025099 ;
 	setAttr ".rsrr" -type "double3" -2.0053961497481353e-06 -22.600930375137661 -41.911543491787462 ;
 	setAttr -k on ".w0";
@@ -6569,7 +6569,7 @@ createNode parentConstraint -n "L_Forearm_Up_Target_Upper_Lower_parentConstraint
 	setAttr ".tg[0].tot" -type "double3" -0.049856298477281839 -0.00074206558979625467 
 		-0.69822188367366067 ;
 	setAttr ".tg[0].tor" -type "double3" -0.071161766627009501 4.0840858722814994 -0.14634347630792505 ;
-	setAttr ".lr" -type "double3" -2.1135869923959182e-05 -4.7533166914305362e-06 4.1097991327800096e-06 ;
+	setAttr ".lr" -type "double3" 5.5488574547175619e-13 7.0415439688777187e-16 -3.2225010793167969e-17 ;
 	setAttr ".rst" -type "double3" 1.7763568394002505e-17 1.4210854715202005e-15 -0.69999999999999973 ;
 	setAttr ".rsrr" -type "double3" -3.3404778201062881e-17 7.0415439688777147e-16 -3.2225010793174785e-17 ;
 	setAttr -k on ".w0";
@@ -6615,7 +6615,7 @@ createNode transform -n "Spine_IK_FK_Switch_Ctrl" -p "Spine_IK_FK_Switch_Ctrl_Gr
 		0 -max 1 -at "double";
 	addAttr -ci true -k true -sn "FollowRotate" -ln "FollowRotate" -dv 1 -min 0 -max 
 		1 -at "double";
-	setAttr -k on ".Spine_IKFK";
+	setAttr -k on ".Spine_IKFK" 1;
 	setAttr -k on ".FollowTranslate";
 	setAttr -k on ".FollowRotate";
 createNode nurbsCurve -n "Spine_IK_Shape" -p "Spine_IK_FK_Switch_Ctrl";
@@ -6761,7 +6761,7 @@ createNode transform -n "L_Leg_IK_FK_Switch_Ctrl" -p "L_Leg_IK_FK_Switch_Ctrl_Gr
 		0 -max 1 -at "double";
 	addAttr -ci true -k true -sn "FollowRotate" -ln "FollowRotate" -dv 1 -min 0 -max 
 		1 -at "double";
-	setAttr -k on ".L_Leg_IKFK";
+	setAttr -k on ".L_Leg_IKFK" 1;
 	setAttr -k on ".FollowTranslate";
 	setAttr -k on ".FollowRotate";
 createNode nurbsCurve -n "Spine_IK_Shape" -p "L_Leg_IK_FK_Switch_Ctrl";
@@ -6907,7 +6907,7 @@ createNode transform -n "R_Leg_IK_FK_Switch_Ctrl" -p "R_Leg_IK_FK_Switch_Ctrl_Gr
 		0 -max 1 -at "double";
 	addAttr -ci true -k true -sn "FollowRotate" -ln "FollowRotate" -dv 1 -min 0 -max 
 		1 -at "double";
-	setAttr -k on ".R_Leg_IKFK";
+	setAttr -k on ".R_Leg_IKFK" 1;
 	setAttr -k on ".FollowTranslate";
 	setAttr -k on ".FollowRotate";
 createNode nurbsCurve -n "Spine_IK_Shape" -p "R_Leg_IK_FK_Switch_Ctrl";
@@ -7053,7 +7053,7 @@ createNode transform -n "L_Arm_IK_FK_Switch_Ctrl" -p "L_Arm_IK_FK_Switch_Ctrl_Gr
 		0 -max 1 -at "double";
 	addAttr -ci true -k true -sn "FollowRotate" -ln "FollowRotate" -dv 1 -min 0 -max 
 		1 -at "double";
-	setAttr -k on ".L_Arm_IKFK";
+	setAttr -k on ".L_Arm_IKFK" 1;
 	setAttr -k on ".FollowTranslate";
 	setAttr -k on ".FollowRotate";
 createNode nurbsCurve -n "Spine_IK_Shape" -p "L_Arm_IK_FK_Switch_Ctrl";
@@ -7199,7 +7199,7 @@ createNode transform -n "R_Arm_IK_FK_Switch_Ctrl" -p "R_Arm_IK_FK_Switch_Ctrl_Gr
 		0 -max 1 -at "double";
 	addAttr -ci true -k true -sn "FollowRotate" -ln "FollowRotate" -dv 1 -min 0 -max 
 		1 -at "double";
-	setAttr -k on ".R_Arm_IKFK";
+	setAttr -k on ".R_Arm_IKFK" 1;
 	setAttr -k on ".FollowTranslate";
 	setAttr -k on ".FollowRotate";
 createNode nurbsCurve -n "Spine_IK_Shape" -p "R_Arm_IK_FK_Switch_Ctrl";
@@ -7600,6 +7600,7 @@ createNode transform -n "Spine2_Jnt_FK_Ctrl" -p "Spine2_Jnt_FK_Ctrl_Grp";
 	addAttr -ci true -k true -sn "FollowRotate" -ln "FollowRotate" -dv 1 -min 0 -max 
 		1 -at "double";
 	setAttr ".rp" -type "double3" 2.8421709430404008e-16 -1.2621774483536189e-31 -1.7763568394002505e-17 ;
+	setAttr ".rpt" -type "double3" -1.7986028639039071e-30 1.67632942359465e-31 2.662405555120915e-31 ;
 	setAttr ".sp" -type "double3" 2.8421709430404008e-16 -1.2621774483536189e-31 -1.7763568394002505e-17 ;
 	setAttr -k on ".FollowTranslate";
 	setAttr -k on ".FollowRotate";
@@ -7682,13 +7683,10 @@ createNode transform -n "Torso_FK_Ctrl" -p "Torso_FK_Ctrl_Grp";
 		0 -max 1 -at "double";
 	addAttr -ci true -k true -sn "FollowRotate" -ln "FollowRotate" -dv 1 -min 0 -max 
 		1 -at "double";
-	setAttr ".t" -type "double3" 0 2.3633398437499999 -0.12966243743896486 ;
-	setAttr ".r" -type "double3" 0 -0.95501406856032645 90 ;
 	setAttr ".s" -type "double3" 1 1.0000000000000004 0.99999999999999989 ;
-	setAttr ".rp" -type "double3" 5.6843418860808016e-16 0 -1.4210854715201999e-16 ;
-	setAttr ".rpt" -type "double3" -5.6843418860808016e-16 5.7072380275109003e-16 9.494042193025868e-18 ;
-	setAttr ".sp" -type "double3" 5.6843418860808016e-16 0 -1.4210854715202004e-16 ;
-	setAttr ".spt" -type "double3" 0 0 4.7331654313260701e-32 ;
+	setAttr ".rp" -type "double3" 0 2.3633398437500008 -0.12966243743896499 ;
+	setAttr ".sp" -type "double3" 0 2.3633398437499995 -0.12966243743896499 ;
+	setAttr ".spt" -type "double3" 0 1.1368683772161609e-15 3.5527136788005004e-17 ;
 	setAttr -k on ".FollowTranslate";
 	setAttr -k on ".FollowRotate";
 createNode nurbsCurve -n "Torso_FK_CtrlShape" -p "Torso_FK_Ctrl";
@@ -7700,22 +7698,22 @@ createNode nurbsCurve -n "Torso_FK_CtrlShape" -p "Torso_FK_Ctrl";
 		1 15 0 no 3
 		16 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15
 		16
-		1.1368683772161603e-15 -0.40470928684052332 -0.33347661341723739
-		1.1368683772161603e-15 0.40470928684052354 -0.33347661341723739
-		0.67501049818448222 0.40470928684052354 -0.33347661341723706
-		0.67501049818448222 -0.40470928684052332 -0.33347661341723706
-		0.67501049818448222 -0.40470928684052332 0.47594196026381058
-		0.67501049818448222 0.40470928684052354 0.47594196026381058
-		1.1368683772161603e-15 0.40470928684052354 0.47594196026381058
-		1.1368683772161603e-15 -0.40470928684052332 0.47594196026381058
-		2.2737367544323206e-15 -0.40470928684052332 -0.33347661341723739
-		0.67501049818448222 -0.40470928684052332 -0.33347661341723706
-		0.67501049818448222 -0.40470928684052332 0.47594196026381058
-		2.2737367544323206e-15 -0.40470928684052332 0.47594196026381058
-		1.1368683772161603e-15 0.40470928684052354 0.47594196026381058
-		2.2737367544323206e-15 0.40470928684052354 -0.33347661341723739
-		0.67501049818448222 0.40470928684052354 -0.33347661341723706
-		0.67501049818448222 0.40470928684052354 0.47594196026381058
+		0.40470928684052354 2.3688980212186976 -0.4630927275438923
+		-0.40470928684052376 2.3688980212186976 -0.4630927275438923
+		-0.40470928684052376 3.0438147535411604 -0.45184207909902091
+		0.40470928684052354 3.0438147535411604 -0.45184207909902091
+		0.40470928684052354 3.0303238762263227 0.35746405806363368
+		-0.40470928684052376 3.0303238762263227 0.35746405806363368
+		-0.40470928684052376 2.35540714390386 0.34621340961876262
+		0.40470928684052354 2.35540714390386 0.34621340961876262
+		0.40470928684052354 2.368898021218699 -0.4630927275438923
+		0.40470928684052354 3.0438147535411604 -0.45184207909902091
+		0.40470928684052354 3.0303238762263227 0.35746405806363368
+		0.40470928684052354 2.3554071439038609 0.34621340961876274
+		-0.40470928684052376 2.35540714390386 0.34621340961876262
+		-0.40470928684052376 2.368898021218699 -0.4630927275438923
+		-0.40470928684052376 3.0438147535411604 -0.45184207909902091
+		-0.40470928684052376 3.0303238762263227 0.35746405806363368
 		;
 createNode parentConstraint -n "Torso_FK_Ctrl_Grp_parentConstraint1" -p "Torso_FK_Ctrl_Grp";
 	rename -uid "3275D293-4827-AD61-3EBE-FFB01879280F";
@@ -10418,7 +10416,7 @@ createNode parentConstraint -n "L_Clav_Jnt_Ctrl_Grp_parentConstraint2" -p "L_Cla
 	setAttr ".tg[0].tot" -type "double3" 0.38941743096435683 -0.10242217112026912 0.22117367109472039 ;
 	setAttr ".tg[0].tor" -type "double3" -0.95501406856032489 -2.120459025575345e-16 
 		-90.000000000000014 ;
-	setAttr ".lr" -type "double3" 3.2923710569837194e-15 1.739365841425361e-16 2.4265706493099851e-19 ;
+	setAttr ".lr" -type "double3" 6.174748737060032e-15 1.739365841425361e-16 2.4265706493100284e-19 ;
 	setAttr ".rst" -type "double3" 0.10242217112026902 2.7490167976600923 0.097971074037330408 ;
 	setAttr ".rsrr" -type "double3" -3.3544912656060532e-16 1.6151254241806922e-16 2.6692277142409234e-19 ;
 	setAttr -k on ".w0";
@@ -10851,7 +10849,7 @@ createNode parentConstraint -n "L_Hand_Jnt_Ctrl_Grp_parentConstraint2" -p "L_Han
 	setAttr ".tg[0].tot" -type "double3" 0.93349035701575012 -5.2064497246817207e-08 
 		-9.6831287522711404e-09 ;
 	setAttr ".tg[0].tor" -type "double3" 0.060893551753864641 -4.0842515945696229 0.1416348930351885 ;
-	setAttr ".lr" -type "double3" -2.8975640243502816e-05 -26.685106858237987 -41.753426817636068 ;
+	setAttr ".lr" -type "double3" -2.8975640247062509e-05 -26.685106858237983 -41.753426817636061 ;
 	setAttr ".rst" -type "double3" 1.6262089538574207 1.8019642639160136 0.27026077270507926 ;
 	setAttr ".rsrr" -type "double3" -2.8975640248842363e-05 -26.685106858237983 -41.753426817636068 ;
 	setAttr -k on ".w0";
@@ -10936,7 +10934,7 @@ createNode parentConstraint -n "L_Arm_2_Jnt_FK_Ctrl_Grp_parentConstraint2" -p "L
 	setAttr ".tg[0].tot" -type "double3" 0.705568154778203 -3.9079850466805303e-16 -4.9737991020542907e-16 ;
 	setAttr ".tg[0].tor" -type "double3" -2.897492588475811e-06 -26.427740372218988 
 		1.2340084879575586e-05 ;
-	setAttr ".lr" -type "double3" -2.0053961514706988e-06 -22.600930375137672 -41.911543491787469 ;
+	setAttr ".lr" -type "double3" -2.0053961531932622e-06 -22.600930375137668 -41.911543491787469 ;
 	setAttr ".rst" -type "double3" 0.98487576742232508 2.3776329660352626 -0.088489190387242941 ;
 	setAttr ".rsrr" -type "double3" -2.0053961531932622e-06 -22.600930375137668 -41.911543491787469 ;
 	setAttr -k on ".w0";
@@ -11106,7 +11104,7 @@ createNode parentConstraint -n "R_Thumb_1_Jnt_Ctrl_Grp_parentConstraint2" -p "R_
 		-0.15145502683859682 ;
 	setAttr ".tg[0].tor" -type "double3" 7.7160184503156656e-15 -6.3611093629270335e-15 
 		-2.2662818568024453e-14 ;
-	setAttr ".lr" -type "double3" -180.00002786069328 26.685106659992503 41.753427120168553 ;
+	setAttr ".lr" -type "double3" 179.99997213868664 26.685106860984135 41.75342711989186 ;
 	setAttr ".rst" -type "double3" -1.6825100056092097 1.8164900018808703 0.45601799964341694 ;
 	setAttr ".rsrr" -type "double3" -180.00002786131338 26.685106860983414 41.753427119891192 ;
 	setAttr -k on ".w0";
@@ -11194,7 +11192,7 @@ createNode parentConstraint -n "R_Thumb_2_Jnt_Ctrl_Grp_parentConstraint2" -p "R_
 	setAttr ".tg[0].tot" -type "double3" -0.069249025232324984 -0.02294409120332834 
 		-0.20105156273758756 ;
 	setAttr ".tg[0].tor" -type "double3" 27.87281685768475 22.632738277383709 40.837751239956702 ;
-	setAttr ".lr" -type "double3" -169.21284535329409 -1.7327050320001613 4.6082174924600849 ;
+	setAttr ".lr" -type "double3" -169.21284547515762 -1.7327048721227294 4.6082174961466205 ;
 	setAttr ".rst" -type "double3" -1.6765900057333227 1.8525300021821256 0.66675399959538284 ;
 	setAttr ".rsrr" -type "double3" -169.21284547515717 -1.732704872123296 4.6082174961459499 ;
 	setAttr -k on ".w0";
@@ -11276,7 +11274,7 @@ createNode parentConstraint -n "R_Outer_Finger_1_Jnt_Ctrl_Grp_parentConstraint2"
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" -0.3822498374964019 -0.08478538977237611 0.19111199874451149 ;
 	setAttr ".tg[0].tor" -type "double3" 9.4657757971334799 28.864910639854351 25.12142770297655 ;
-	setAttr ".lr" -type "double3" 178.44314340214669 -4.314853126781947 19.861926336776094 ;
+	setAttr ".lr" -type "double3" 178.44314332647843 -4.3148529404900566 19.861926342470927 ;
 	setAttr ".rst" -type "double3" -2.0014900064729479 1.5806200031107733 0.27116799956452992 ;
 	setAttr ".rsrr" -type "double3" 178.44314332647866 -4.3148529404907388 19.861926342470227 ;
 	setAttr -k on ".w0";
@@ -11360,7 +11358,7 @@ createNode parentConstraint -n "R_MIddle_Finger_1_Jnt_Ctrl_Grp_parentConstraint2
 	setAttr ".tg[0].tot" -type "double3" -0.39257821807448501 -0.084784512007275964 
 		0.022128604048867188 ;
 	setAttr ".tg[0].tor" -type "double3" 3.1154130835953347e-15 1.3352542502100833 -1.9386141318229585e-14 ;
-	setAttr ".lr" -type "double3" -180.0000275455503 25.349852409782574 41.753427838565827 ;
+	setAttr ".lr" -type "double3" 179.9999724538367 25.349852610774214 41.753427838305136 ;
 	setAttr ".rst" -type "double3" -1.9517600064799618 1.625010003117261 0.42679099956492089 ;
 	setAttr ".rsrr" -type "double3" -180.00002754616332 25.349852610773485 41.753427838304461 ;
 	setAttr -k on ".w0";
@@ -11446,7 +11444,7 @@ createNode parentConstraint -n "R_Inner_Finger_1_Jnt_Ctrl_Grp_parentConstraint2"
 		-0.12126707960780074 ;
 	setAttr ".tg[0].tor" -type "double3" 1.2074182965319557e-06 -20.211559818602531 
 		1.4819192828499734e-15 ;
-	setAttr ".lr" -type "double3" -180.00003522256452 46.896666478591975 41.753413033686186 ;
+	setAttr ".lr" -type "double3" 179.99996477662464 46.89666667958361 41.753413033095939 ;
 	setAttr ".rst" -type "double3" -1.905950006467108 1.6659100031017684 0.55641399956526683 ;
 	setAttr ".rsrr" -type "double3" -180.00003522337539 46.896666679582879 41.753413033095235 ;
 	setAttr -k on ".w0";
@@ -11532,7 +11530,7 @@ createNode parentConstraint -n "R_Inner_Finger_2_Jnt_Ctrl_Grp_parentConstraint2"
 	setAttr ".tg[0].tot" -type "double3" -0.20651965748738335 -0.06468220926958855 -5.4644721991792267e-07 ;
 	setAttr ".tg[0].tor" -type "double3" 1.70754724034485e-06 -2.2263882770244624e-14 
 		-9.7795559312089639e-15 ;
-	setAttr ".lr" -type "double3" 179.99996648498276 46.896666478591982 41.753413033686186 ;
+	setAttr ".lr" -type "double3" 179.99996648417189 46.89666667958361 41.753413033095931 ;
 	setAttr ".rst" -type "double3" -2.0543000068964061 1.6201900040438855 0.70719899942856235 ;
 	setAttr ".rsrr" -type "double3" 179.99996648417192 46.896666679582871 41.753413033095235 ;
 	setAttr -k on ".w0";
@@ -11620,7 +11618,7 @@ createNode parentConstraint -n "R_MIddle_Finger_2_Jnt_Ctrl_Grp_parentConstraint2
 		-1.2997913323076205e-06 ;
 	setAttr ".tg[0].tor" -type "double3" -7.454719256371347e-15 3.1805546814635176e-15 
 		-1.5256603425719499e-14 ;
-	setAttr ".lr" -type "double3" 179.99997245444973 25.349852409782574 41.753427838565827 ;
+	setAttr ".lr" -type "double3" 179.9999724538367 25.349852610774228 41.75342783830515 ;
 	setAttr ".rst" -type "double3" -2.2089200071763493 1.5157100045377712 0.55216499937491792 ;
 	setAttr ".rsrr" -type "double3" 179.9999724538367 25.349852610773485 41.753427838304468 ;
 	setAttr -k on ".w0";
@@ -11707,7 +11705,7 @@ createNode parentConstraint -n "R_Outer_Finger_2_Jnt_Ctrl_Grp_parentConstraint2"
 	setAttr ".tg[0].tot" -type "double3" -0.26076852042482562 4.0365023366026549e-06 
 		-3.9214159393201203e-07 ;
 	setAttr ".tg[0].tor" -type "double3" -2.7045720414033307 1.8963010796944473 -35.185572633725478 ;
-	setAttr ".lr" -type "double3" 173.52837327412556 -4.5218409385258367 55.199854728744967 ;
+	setAttr ".lr" -type "double3" 173.5283733204688 -4.5218407429150052 55.199854725093076 ;
 	setAttr ".rst" -type "double3" -2.2460500068661111 1.49227000424462 0.25154899935945724 ;
 	setAttr ".rsrr" -type "double3" 173.52837332046863 -4.5218407429157077 55.199854725092408 ;
 	setAttr -k on ".w0";
@@ -11797,7 +11795,7 @@ createNode parentConstraint -n "L_Thumb_2_Jnt_Ctrl_Grp_parentConstraint2" -p "L_
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" 0.06925036550357283 0.022940055302032324 0.20105066490349946 ;
 	setAttr ".tg[0].tor" -type "double3" 27.872816857684768 22.63273827738373 40.837751239956688 ;
-	setAttr ".lr" -type "double3" 10.787153732507548 1.7327054755149542 -4.6082177182780297 ;
+	setAttr ".lr" -type "double3" 10.78715373250774 1.7327054755149034 -4.6082177182786799 ;
 	setAttr ".rst" -type "double3" 1.6765863312480236 1.8525254229536006 0.66675389060001589 ;
 	setAttr ".rsrr" -type "double3" 10.787153732507708 1.7327054755148223 -4.6082177182779755 ;
 	setAttr -k on ".w0";
@@ -11879,7 +11877,7 @@ createNode parentConstraint -n "L_Outer_Finger_1_Jnt_Ctrl_Grp_parentConstraint2"
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" 0.38225397645656162 0.084782297695310496 -0.19111332358278887 ;
 	setAttr ".tg[0].tor" -type "double3" 9.4657757971331353 28.864910639854436 25.121427702976458 ;
-	setAttr ".lr" -type "double3" -1.556857598965198 4.314853314262054 -19.861926610272555 ;
+	setAttr ".lr" -type "double3" -1.5568575989649931 4.3148533142620611 -19.861926610273184 ;
 	setAttr ".rst" -type "double3" 2.0014900977736518 1.5806190940867648 0.27116844580216393 ;
 	setAttr ".rsrr" -type "double3" -1.5568575989650071 4.3148533142619856 -19.861926610272462 ;
 	setAttr -k on ".w0";
@@ -11963,7 +11961,7 @@ createNode parentConstraint -n "L_Inner_Finger_1_Jnt_Ctrl_Grp_parentConstraint2"
 	setAttr ".tg[0].tot" -type "double3" 0.39592220069508843 0.084782297695311065 0.12126657432128159 ;
 	setAttr ".tg[0].tor" -type "double3" 6.3957093118133444e-15 -20.211559818602534 
 		-8.1188218829322655e-15 ;
-	setAttr ".lr" -type "double3" -3.7887861414372313e-05 -46.896666676837214 -41.753412167431676 ;
+	setAttr ".lr" -type "double3" -3.7887861130442485e-05 -46.896666676837143 -41.753412167432536 ;
 	setAttr ".rst" -type "double3" 1.9059452875264284 1.665906576653029 0.55641440198861492 ;
 	setAttr ".rsrr" -type "double3" -3.7887861116478753e-05 -46.896666676837206 -41.753412167431819 ;
 	setAttr -k on ".w0";
@@ -12045,7 +12043,7 @@ createNode parentConstraint -n "L_MIddle_Finger_1_Jnt_Ctrl_Grp_parentConstraint2
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" 0.39257980782266727 0.084782297695311343 -0.022129587690822527 ;
 	setAttr ".tg[0].tor" -type "double3" -4.962028230059885e-15 1.3352542502099618 -1.8423558133798126e-14 ;
-	setAttr ".lr" -type "double3" -2.8647885856979678e-05 -25.349852608028204 -41.753427564782612 ;
+	setAttr ".lr" -type "double3" -2.8647885654611835e-05 -25.349852608028112 -41.753427564783337 ;
 	setAttr ".rst" -type "double3" 1.9517588707606621 1.6250113699177302 0.42679060584287543 ;
 	setAttr ".rsrr" -type "double3" -2.8647885638774379e-05 -25.349852608028193 -41.753427564782641 ;
 	setAttr -k on ".w0";
@@ -12131,7 +12129,7 @@ createNode parentConstraint -n "L_Inner_Finger_2_Jnt_Ctrl_Grp_parentConstraint2"
 	setAttr ".tg[0].tot" -type "double3" 0.20651970501225619 0.064685751447142878 6.2172489379008772e-16 ;
 	setAttr ".tg[0].tor" -type "double3" 5.6282941264753685e-15 -2.2263882770244617e-14 
 		1.1728798901306449e-15 ;
-	setAttr ".lr" -type "double3" -3.7887861419026901e-05 -46.896666676837206 -41.753412167431684 ;
+	setAttr ".lr" -type "double3" -3.7887861135097073e-05 -46.896666676837143 -41.75341216743255 ;
 	setAttr ".rst" -type "double3" 2.0542979709876144 1.6201889335825843 0.70719906109085695 ;
 	setAttr ".rsrr" -type "double3" -3.7887861116478767e-05 -46.896666676837199 -41.753412167431819 ;
 	setAttr -k on ".w0";
@@ -12216,7 +12214,7 @@ createNode parentConstraint -n "L_MIddle_Finger_2_Jnt_Ctrl_Grp_parentConstraint2
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" 0.29283182304381172 0.089707224194116239 -4.263256414560601e-16 ;
 	setAttr ".tg[0].tor" -type "double3" 5.9774746096977571e-15 0 -3.6370548014716036e-15 ;
-	setAttr ".lr" -type "double3" -2.8647885855219961e-05 -25.349852608028211 -41.753427564782633 ;
+	setAttr ".lr" -type "double3" -2.8647885654611835e-05 -25.349852608028115 -41.753427564783337 ;
 	setAttr ".rst" -type "double3" 2.2089197511030738 1.5157070118251637 0.55216485193537801 ;
 	setAttr ".rsrr" -type "double3" -2.8647885638774382e-05 -25.349852608028201 -41.753427564782641 ;
 	setAttr -k on ".w0";
@@ -12301,7 +12299,7 @@ createNode parentConstraint -n "L_Outer_Finger_2_Jnt_Ctrl_Grp_parentConstraint2"
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" 0.26077167063996565 2.406636995843112e-16 -4.2381243486102843e-16 ;
 	setAttr ".tg[0].tor" -type "double3" -2.7045720414031824 1.8963010796945334 -35.185572633725478 ;
-	setAttr ".lr" -type "double3" -6.4716276515408699 4.5218405140640625 -55.199854999899273 ;
+	setAttr ".lr" -type "double3" -6.4716276515407074 4.5218405140641869 -55.199854999899912 ;
 	setAttr ".rst" -type "double3" 2.2460543838534268 1.4922718246436772 0.25154870664489903 ;
 	setAttr ".rsrr" -type "double3" -6.4716276515406745 4.521840514064114 -55.199854999899188 ;
 	setAttr -k on ".w0";
@@ -12384,7 +12382,7 @@ createNode parentConstraint -n "L_Thumb_1_Jnt_Ctrl_Grp_parentConstraint2" -p "L_
 	setAttr ".tg[0].tot" -type "double3" 0.11230512912655843 0.048326901647858966 0.15145426752927041 ;
 	setAttr ".tg[0].tor" -type "double3" -3.3704035026389029e-15 9.5416640443905503e-15 
 		-2.3175521097483866e-14 ;
-	setAttr ".lr" -type "double3" -2.8975640457085128e-05 -26.685106858237994 -41.753426817636047 ;
+	setAttr ".lr" -type "double3" -2.8975640254181879e-05 -26.685106858237894 -41.753426817636779 ;
 	setAttr ".rst" -type "double3" 1.6825078220002352 1.8164894967223799 0.45601809134961069 ;
 	setAttr ".rsrr" -type "double3" -2.8975640234603549e-05 -26.685106858237994 -41.753426817636068 ;
 	setAttr -k on ".w0";
@@ -12863,7 +12861,6 @@ createNode parentConstraint -n "Head_Ctrl_Grp_parentConstraint2" -p "Head_Ctrl_G
 	setAttr ".tg[0].tot" -type "double3" 0.32053798567623687 -5.4150619509384879e-17 
 		-1.7829225384957682e-09 ;
 	setAttr ".tg[0].tor" -type "double3" -25.287619752315834 0 -90 ;
-	setAttr ".lr" -type "double3" -3.180554681463516e-15 0 0 ;
 	setAttr ".rst" -type "double3" -7.7409711068816063e-18 3.2788250732421864 0.017688970565795489 ;
 	setAttr -k on ".w0";
 createNode scaleConstraint -n "Head_Ctrl_Grp_scaleConstraint1" -p "Head_Ctrl_Grp";
@@ -12945,7 +12942,7 @@ createNode parentConstraint -n "Neck_Jnt_Ctrl_Grp_parentConstraint2" -p "Neck_Jn
 		1.5276668818842154e-15 ;
 	setAttr ".tg[0].tor" -type "double3" -2.1908515161417923e-16 -24.332605683755503 
 		-1.2637558150363354e-14 ;
-	setAttr ".lr" -type "double3" 1.7588161237921539e-15 -25.28761975231583 90 ;
+	setAttr ".lr" -type "double3" 0 -25.287619752315837 90 ;
 	setAttr ".rst" -type "double3" 9.1626831082017183e-18 2.9890026808336052 -0.11923283602448155 ;
 	setAttr ".rsrr" -type "double3" 0 -25.28761975231583 90.000000000000014 ;
 	setAttr -k on ".w0";
@@ -12970,6 +12967,7 @@ createNode transform -n "Skeleton" -p "WENDIGO";
 	rename -uid "B0234BD3-4064-C661-E481-AC89777279BF";
 createNode joint -n "ROOT_Jnt" -p "Skeleton";
 	rename -uid "7C109AB9-4C10-ABA3-3802-5391F440AC30";
+	setAttr ".v" no;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" 89.999999999999986 3.0715350694662531 90.000000000000014 ;
@@ -13123,7 +13121,7 @@ createNode parentConstraint -n "Head_Jnt_parentConstraint1" -p "Head_Jnt";
 	setAttr ".tg[0].tot" -type "double3" -7.1054273405470532e-17 -4.7132692770901489e-09 
 		-2.5482838950097176e-10 ;
 	setAttr ".tg[0].tor" -type "double3" 0 -25.287619752315823 90 ;
-	setAttr ".lr" -type "double3" 1.238100716603069e-29 -1.0813885916975955e-13 -1.3119788061037004e-14 ;
+	setAttr ".lr" -type "double3" 1.9509465837381692e-29 -3.3077768687220572e-13 -6.7586786981099719e-15 ;
 	setAttr ".rst" -type "double3" 0.32053798130576466 -5.9592193732226678e-17 0 ;
 	setAttr ".rsrr" -type "double3" 0 0 -7.1562480332929135e-15 ;
 	setAttr -k on ".w0";
@@ -13158,7 +13156,7 @@ createNode parentConstraint -n "Neck_Jnt_parentConstraint1" -p "Neck_Jnt";
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" 0 8.5874976399514962e-14 0 ;
+	setAttr ".lr" -type "double3" 0 2.5126381983561782e-13 0 ;
 	setAttr ".rst" -type "double3" 0.62574976483920519 -7.6927354982423866e-17 1.3500311979441904e-15 ;
 	setAttr -k on ".w0";
 createNode scaleConstraint -n "Neck_Jnt_scaleConstraint1" -p "Neck_Jnt";
@@ -13330,7 +13328,7 @@ createNode parentConstraint -n "L_Thumb_2_Jnt_parentConstraint1" -p "L_Thumb_2_J
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" 27.872816857684331 22.632738277383972 40.83775123995806 ;
+	setAttr ".lr" -type "double3" 27.872816857683897 22.632738277384341 40.837751239959005 ;
 	setAttr ".rst" -type "double3" 0.069250365503572026 0.022940055302031796 0.20105066490349871 ;
 	setAttr ".rsrr" -type "double3" 27.872816857684782 22.632738277383716 40.837751239956731 ;
 	setAttr -k on ".w0";
@@ -13472,7 +13470,7 @@ createNode parentConstraint -n "L_Inner_Finger_1_Jnt_parentConstraint1" -p "L_In
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" 0 -2.8943047601318001e-13 0 ;
+	setAttr ".lr" -type "double3" 0 -6.4565260033709394e-13 0 ;
 	setAttr ".rst" -type "double3" 0.39592220069508782 0.08478229769531169 0.12126657432128156 ;
 	setAttr ".rsrr" -type "double3" 0 -5.0888874903416268e-14 0 ;
 	setAttr -k on ".w0";
@@ -13579,7 +13577,7 @@ createNode parentConstraint -n "L_MIddle_Finger_1_Jnt_parentConstraint1" -p "L_M
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" 0 -2.8823776800763118e-14 0 ;
+	setAttr ".lr" -type "double3" 0 -5.7249984266343308e-14 0 ;
 	setAttr ".rst" -type "double3" 0.39257980782266677 0.08478229769531169 -0.022129587690822631 ;
 	setAttr ".rsrr" -type "double3" 0 1.3119788061037007e-14 0 ;
 	setAttr -k on ".w0";
@@ -13651,7 +13649,7 @@ createNode parentConstraint -n "L_Outer_Finger_2_Jnt_parentConstraint1" -p "L_Ou
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" 3.7669694508578787e-14 5.0918692603555047e-13 -1.0696478722679747e-12 ;
+	setAttr ".lr" -type "double3" 7.1164910997729042e-14 9.6629226916213589e-13 -2.0323558053925997e-12 ;
 	setAttr ".rst" -type "double3" 0.26077167063996681 0 0 ;
 	setAttr ".rsrr" -type "double3" -3.2799470152592526e-15 5.1684013573782151e-15 -1.9033631921883233e-14 ;
 	setAttr -k on ".w0";
@@ -13688,7 +13686,7 @@ createNode parentConstraint -n "L_Outer_Finger_1_Jnt_parentConstraint1" -p "L_Ou
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" -5.2956235446367455e-13 3.4697863728091212e-13 3.3465398789023788e-13 ;
+	setAttr ".lr" -type "double3" -1.0384511034978359e-12 6.6920858344668749e-13 4.7807712555747891e-13 ;
 	setAttr ".rst" -type "double3" 0.3822539764565609 0.084782297695310829 -0.19111332358278929 ;
 	setAttr ".rsrr" -type "double3" 2.7034714792439888e-14 7.7824197362060434e-14 -1.6200950408704776e-14 ;
 	setAttr -k on ".w0";
@@ -13733,7 +13731,7 @@ createNode parentConstraint -n "L_Hand_Jnt_parentConstraint1" -p "L_Hand_Jnt";
 		3.1974423109204507e-16 ;
 	setAttr ".tg[1].tor" -type "double3" -8.6968292071268e-17 -7.9513867036587899e-16 
 		2.5003383970489556e-16 ;
-	setAttr ".lr" -type "double3" -2.0801136068012644e-05 -4.6950939888213187e-06 5.6105532802690897e-06 ;
+	setAttr ".lr" -type "double3" -2.2538764693398541e-13 -1.8141158649632103e-13 6.4174368620953378e-13 ;
 	setAttr ".rst" -type "double3" 4.9193923423729301e-09 -4.7482227500950106e-08 -8.716004664677257e-09 ;
 	setAttr ".rsrr" -type "double3" -2.0800963577882206e-05 -4.7534435668854696e-06 
 		5.6117713922347592e-06 ;
@@ -13815,7 +13813,7 @@ createNode parentConstraint -n "L_Arm_2_Jnt_parentConstraint1" -p "L_Arm_2_Jnt";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
 	setAttr -s 2 ".tg";
-	setAttr ".lr" -type "double3" -3.7915134034622436e-22 1.1025946636460641e-05 3.3632302551178601e-21 ;
+	setAttr ".lr" -type "double3" -2.5256574428845347e-37 -9.5416640443905487e-15 3.0332133116374168e-21 ;
 	setAttr ".rst" -type "double3" 0.70556815477820367 -1.9895196601282807e-15 -2.8421709430404008e-16 ;
 	setAttr ".rsrr" -type "double3" -2.5256574428845347e-37 -9.5416640443905487e-15 
 		3.0332133116374168e-21 ;
@@ -13921,7 +13919,7 @@ createNode parentConstraint -n "L_Arm_1_Jnt_parentConstraint1" -p "L_Arm_1_Jnt";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
 	setAttr -s 2 ".tg";
-	setAttr ".lr" -type "double3" 2.0756239261679312e-05 -6.2726260504234311e-06 5.7266040745988782e-06 ;
+	setAttr ".lr" -type "double3" -4.6337395218788289e-34 -8.5477407064332019e-15 6.2120208622334312e-18 ;
 	setAttr ".rst" -type "double3" 0.35855683278598144 0.098872606636783197 -0.054421876824962807 ;
 	setAttr ".rsrr" -type "double3" 0 -4.0750856856251317e-15 0 ;
 	setAttr -k on ".w0";
@@ -13975,7 +13973,6 @@ createNode parentConstraint -n "L_Shoulder_Mid_Twist_Jnt_1_parentConstraint1" -p
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" -1.0378119441156743e-05 0 0 ;
 	setAttr ".rst" -type "double3" 0.35278407738910206 -2.8421709430404008e-16 -2.1316282072803005e-16 ;
 	setAttr -k on ".w0";
 createNode joint -n "L_Shoulder_End_Twist_Jnt" -p "L_Arm_1_Jnt";
@@ -14015,7 +14012,7 @@ createNode joint -n "L_Arm_1_Jnt_IK" -p "L_Clav_Jnt";
 	setAttr ".v" no;
 	setAttr ".ove" yes;
 	setAttr ".ovc" 13;
-	setAttr ".r" -type "double3" 2.0756239261463045e-05 -6.2726260421276073e-06 5.7266040702108571e-06 ;
+	setAttr ".r" -type "double3" 2.0772886186804142e-05 -6.2142747508342724e-06 5.7298594062190109e-06 ;
 	setAttr ".s" -type "double3" 1 1.0000000000000002 1 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
@@ -14024,7 +14021,7 @@ createNode joint -n "L_Arm_1_Jnt_IK" -p "L_Clav_Jnt";
 createNode joint -n "L_Arm_2_Jnt_IK" -p "L_Arm_1_Jnt_IK";
 	rename -uid "C0A6010D-4309-FAA0-485A-28890C183396";
 	setAttr ".t" -type "double3" 0.70556813478469849 -1.4210854715202005e-15 -3.7303493627405258e-16 ;
-	setAttr ".r" -type "double3" 9.5797960116247888e-14 1.1025946650779779e-05 -5.2308956767157529e-12 ;
+	setAttr ".r" -type "double3" 9.5797954051880234e-14 1.1025945952796294e-05 -5.2308953455805751e-12 ;
 	setAttr ".s" -type "double3" 0.99999999999999989 0.99999999999999944 0.99999999999999978 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
@@ -14100,7 +14097,7 @@ createNode parentConstraint -n "L_Arm_2_Jnt_FK_parentConstraint1" -p "L_Arm_2_Jn
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" 1.4862233372276987e-13 -9.5416649244920601e-14 2.4427904455380781e-13 ;
+	setAttr ".lr" -type "double3" 3.8450999034271481e-13 -7.63333346134639e-14 6.5457067111119038e-13 ;
 	setAttr ".rst" -type "double3" 0.70556815477820378 -1.9895196601282807e-15 -4.0856207306205762e-16 ;
 	setAttr ".rsrr" -type "double3" 1.5635198495031484e-15 9.5416637562149632e-15 -6.0680831510766121e-15 ;
 	setAttr -k on ".w0";
@@ -14137,7 +14134,7 @@ createNode parentConstraint -n "L_Arm_1_Jnt_FK_parentConstraint1" -p "L_Arm_1_Jn
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" -1.7493050748049334e-14 3.776908684237967e-15 2.6687462826241043e-13 ;
+	setAttr ".lr" -type "double3" -4.7708320221952742e-14 2.7829853462808765e-15 7.1801021934038897e-13 ;
 	setAttr ".rst" -type "double3" 0.35855683278598155 0.098872606636783197 -0.054421876824962821 ;
 	setAttr ".rsrr" -type "double3" -5.9635400277440979e-16 -6.3611093629270335e-15 
 		6.3548973420648005e-15 ;
@@ -14178,7 +14175,7 @@ createNode parentConstraint -n "L_Clav_Jnt_parentConstraint1" -p "L_Clav_Jnt";
 		-0.084948213592677332 ;
 	setAttr ".tg[0].tor" -type "double3" -1.9878466759146985e-16 2.2069531490250799e-32 
 		3.4483642953516873e-34 ;
-	setAttr ".lr" -type "double3" -2.9817700138720472e-15 -9.9392333795734899e-17 -7.7650260777917639e-19 ;
+	setAttr ".lr" -type "double3" -1.987846675914698e-15 -9.9392333795734899e-17 -7.7650260777917726e-19 ;
 	setAttr ".rst" -type "double3" 0.38800156781893691 -0.10242217112026905 0.1362372576777377 ;
 	setAttr -k on ".w0";
 createNode scaleConstraint -n "L_Clav_Jnt_scaleConstraint1" -p "L_Clav_Jnt";
@@ -14307,7 +14304,7 @@ createNode parentConstraint -n "R_Thumb_2_Jnt_parentConstraint1" -p "R_Thumb_2_J
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" 27.872816857684345 22.632738277383883 40.837751239957882 ;
+	setAttr ".lr" -type "double3" 27.872816857683908 22.632738277384203 40.837751239958735 ;
 	setAttr ".rst" -type "double3" -0.069249025232325179 -0.022944091203329436 -0.20105156273758745 ;
 	setAttr ".rsrr" -type "double3" 27.872816857684747 22.63273827738373 40.837751239956731 ;
 	setAttr -k on ".w0";
@@ -14416,7 +14413,7 @@ createNode parentConstraint -n "R_Inner_Finger_2_Jnt_parentConstraint1" -p "R_In
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" 1.2074179193192221e-06 0 0 ;
+	setAttr ".lr" -type "double3" 1.20741724427514e-06 0 0 ;
 	setAttr ".rst" -type "double3" -0.20651965748738349 -0.064682209269589355 -5.4644721966923273e-07 ;
 	setAttr ".rsrr" -type "double3" 2.7355532456288488e-14 0 0 ;
 	setAttr -k on ".w0";
@@ -14453,7 +14450,7 @@ createNode parentConstraint -n "R_Inner_Finger_1_Jnt_parentConstraint1" -p "R_In
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" -1.2074182739595174e-06 -2.0355549961366507e-13 4.3012307977070613e-21 ;
+	setAttr ".lr" -type "double3" -1.2074182739595174e-06 -4.7072209285660034e-13 9.9125318123891518e-21 ;
 	setAttr ".rst" -type "double3" -0.39591978986961046 -0.084790476481732074 -0.12126707960780024 ;
 	setAttr ".rsrr" -type "double3" 2.4267055218507457e-14 -9.5416640443905487e-15 1.6587885095953304e-22 ;
 	setAttr -k on ".w0";
@@ -14562,7 +14559,7 @@ createNode parentConstraint -n "R_MIddle_Finger_1_Jnt_parentConstraint1" -p "R_M
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" 0 -2.6040791454482544e-14 0 ;
+	setAttr ".lr" -type "double3" 0 -7.3749111676435292e-14 0 ;
 	setAttr ".rst" -type "double3" -0.39257821807448418 -0.08478451200727477 0.02212860404886733 ;
 	setAttr ".rsrr" -type "double3" 0 -1.1927080055488188e-15 0 ;
 	setAttr -k on ".w0";
@@ -14634,7 +14631,7 @@ createNode parentConstraint -n "R_Outer_Finger_2_Jnt_parentConstraint1" -p "R_Ou
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" 6.6891040644526416e-14 3.8027506910248229e-13 -9.5761407601759444e-13 ;
+	setAttr ".lr" -type "double3" 1.3080031127517491e-13 7.4246073345414186e-13 -1.8838574466809097e-12 ;
 	setAttr ".rst" -type "double3" -0.26076852042482501 4.0365023374988598e-06 -3.9214159436085083e-07 ;
 	setAttr ".rsrr" -type "double3" 4.2738703532166017e-15 5.3671860249696843e-15 -6.1747487370600304e-15 ;
 	setAttr -k on ".w0";
@@ -14671,7 +14668,7 @@ createNode parentConstraint -n "R_Outer_Finger_1_Jnt_parentConstraint1" -p "R_Ou
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" -4.5163876476781882e-13 2.0753119296549563e-13 3.0384236441356077e-13 ;
+	setAttr ".lr" -type "double3" -9.3190252166880851e-13 4.4597340174146577e-13 4.067134298921435e-13 ;
 	setAttr ".rst" -type "double3" -0.38224983749640068 -0.084785389772375763 0.19111199874451118 ;
 	setAttr ".rsrr" -type "double3" 6.3611093629270351e-15 1.8089404750823747e-14 1.4113711398994352e-14 ;
 	setAttr -k on ".w0";
@@ -14716,7 +14713,7 @@ createNode parentConstraint -n "R_Hand_Jnt_parentConstraint1" -p "R_Hand_Jnt";
 		-3.1974423109204507e-16 ;
 	setAttr ".tg[1].tor" -type "double3" -8.6968292071268197e-17 7.1562480332929151e-15 
 		-6.4449716445671876e-17 ;
-	setAttr ".lr" -type "double3" -0.00033186696901302412 1.8673439479114627e-06 9.143778329697623e-05 ;
+	setAttr ".lr" -type "double3" -2.4408117071366122e-13 -1.5835588945750014e-13 5.9950543860808156e-13 ;
 	setAttr ".rst" -type "double3" 1.9989467858749776e-09 -4.5756166855426276e-09 1.008311301120557e-10 ;
 	setAttr ".rsrr" -type "double3" -0.00033186808816510984 1.8673663210562633e-06 9.1453624306057446e-05 ;
 	setAttr -k on ".w0";
@@ -14799,7 +14796,7 @@ createNode parentConstraint -n "R_Arm_2_Jnt_parentConstraint1" -p "R_Arm_2_Jnt";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
 	setAttr -s 2 ".tg";
-	setAttr ".lr" -type "double3" 2.2749098999208861e-21 -2.6376635033435007e-06 3.6409478110006916e-21 ;
+	setAttr ".lr" -type "double3" 2.2749099837280632e-21 -1.1267228261231775e-28 2.7732064017663323e-21 ;
 	setAttr ".rst" -type "double3" -0.70557070598119498 2.4925960653376935e-06 -1.4459858492799072e-07 ;
 	setAttr ".rsrr" -type "double3" 2.2749099837280632e-21 -1.1267228261231775e-28 2.7732064017663323e-21 ;
 	setAttr -k on ".w0";
@@ -14907,7 +14904,7 @@ createNode parentConstraint -n "R_Arm_1_Jnt_parentConstraint1" -p "R_Arm_1_Jnt";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
 	setAttr -s 2 ".tg";
-	setAttr ".lr" -type "double3" 0.00033233964799839275 1.9029590959982421e-06 8.9719150385193352e-05 ;
+	setAttr ".lr" -type "double3" 0 9.9392333795734899e-17 0 ;
 	setAttr ".rst" -type "double3" -0.358557 -0.098870000000000569 0.054421886407322678 ;
 	setAttr ".rsrr" -type "double3" -3.1010408144269288e-14 -4.0750856856251317e-15 
 		-1.0311954631307484e-15 ;
@@ -14962,7 +14959,7 @@ createNode parentConstraint -n "R_Shoulder_Mid_Twist_Jnt_1_parentConstraint1" -p
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" 0.00016617781436985396 1.7019674924229648e-06 8.9705794271563135e-05 ;
+	setAttr ".lr" -type "double3" 0.00033234763320984359 1.7019674924229653e-06 8.9705794271563148e-05 ;
 	setAttr ".rst" -type "double3" -0.3527853488922118 1.2462980325267381e-06 -7.2299292490640716e-08 ;
 	setAttr ".rsrr" -type "double3" 0.00016617381259316619 1.701967492422965e-06 8.9705794271563148e-05 ;
 	setAttr -k on ".w0";
@@ -15005,7 +15002,7 @@ createNode joint -n "R_Arm_1_Jnt_IK" -p "R_Clav_Jnt";
 	setAttr ".v" no;
 	setAttr ".ove" yes;
 	setAttr ".ovc" 13;
-	setAttr ".r" -type "double3" 0.0003323396479985066 1.902959096173356e-06 8.9719150380331125e-05 ;
+	setAttr ".r" -type "double3" 0.00033234763319081861 1.7019674708113904e-06 8.9705794331723955e-05 ;
 	setAttr ".s" -type "double3" 1.0000000000000004 1.0000000000000002 1.0000000000000009 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
@@ -15014,7 +15011,7 @@ createNode joint -n "R_Arm_1_Jnt_IK" -p "R_Clav_Jnt";
 createNode joint -n "R_Arm_2_Jnt_IK" -p "R_Arm_1_Jnt_IK";
 	rename -uid "F5E62864-42A3-1249-B1CF-2CBDF830EAFC";
 	setAttr ".t" -type "double3" -0.70557069778442383 2.4925960659061276e-06 -1.4459858494575428e-07 ;
-	setAttr ".r" -type "double3" -1.340650419662831e-12 -2.6376635054320408e-06 1.938205655119393e-11 ;
+	setAttr ".r" -type "double3" -1.3406505583190078e-12 -2.6376637782312225e-06 1.9382058555774557e-11 ;
 	setAttr ".s" -type "double3" 1.0000000000000002 1.0000000000000004 1.0000000000000007 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
@@ -15090,7 +15087,7 @@ createNode parentConstraint -n "R_Arm_2_Jnt_FK_parentConstraint1" -p "R_Arm_2_Jn
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" 1.3740167539810221e-13 -7.6333320628441859e-14 2.1979668351050307e-13 ;
+	setAttr ".lr" -type "double3" 3.7189971235412682e-13 -6.9972224732867212e-14 6.2372720745068508e-13 ;
 	setAttr ".rst" -type "double3" -0.70557070598119553 2.4925960656219103e-06 -1.4459858512338998e-07 ;
 	setAttr ".rsrr" -type "double3" 8.5037193024897422e-15 2.2263881762566628e-14 -8.2865474353965393e-15 ;
 	setAttr -k on ".w0";
@@ -15127,7 +15124,7 @@ createNode parentConstraint -n "R_Arm_1_Jnt_FK_parentConstraint1" -p "R_Arm_1_Jn
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" -1.5505204072134615e-14 1.5107634736951742e-14 2.414612509150135e-13 ;
+	setAttr ".lr" -type "double3" -4.5521688878446509e-14 1.2821611059650077e-14 6.8624194465092724e-13 ;
 	setAttr ".rst" -type "double3" -0.35855700000000029 -0.098870000000000569 0.054421886407322671 ;
 	setAttr ".rsrr" -type "double3" -1.987846675914698e-16 3.776908684237926e-15 -6.5518921611682039e-33 ;
 	setAttr -k on ".w0";
@@ -15359,8 +15356,8 @@ createNode joint -n "Spine3_Jnt_FK" -p "Spine2_Jnt_FK";
 	setAttr ".jo" -type "double3" 0 -0.77399948574074462 0 ;
 	setAttr ".ssc" no;
 createNode parentConstraint -n "Spine3_Jnt_FK_parentConstraint1" -p "Spine3_Jnt_FK";
-	rename -uid "A8230EAE-4A3B-D19C-B274-C995B96B83D6";
-	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "Spine_FKW0" -dv 1 -min 0 -at "double";
+	rename -uid "B4D1E1E5-4E7C-35B2-E072-D8B4734DD342";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "Torso_FK_CtrlW0" -dv 1 -min 0 -at "double";
 	setAttr -k on ".nds";
 	setAttr -k off ".v";
 	setAttr -k off ".tx";
@@ -15373,18 +15370,17 @@ createNode parentConstraint -n "Spine3_Jnt_FK_parentConstraint1" -p "Spine3_Jnt_
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".tg[0].tot" -type "double3" 8.5265128291212019e-16 1.2806761862943478e-16 
-		5.3290705182007512e-16 ;
-	setAttr ".tg[0].tor" -type "double3" 1.7185718291198395e-16 1.7890620083232284e-15 
-		1.2720865631707155e-14 ;
-	setAttr ".lr" -type "double3" -1.8532061817493103e-16 1.5902773407317584e-15 -1.2721257186810138e-14 ;
-	setAttr ".rst" -type "double3" 0.24643189390195119 -6.5586621136299741e-17 -8.8817841970012528e-17 ;
-	setAttr ".rsrr" -type "double3" -1.8532127377301131e-16 -8.9453100416161419e-16 
-		-1.2721354247422006e-14 ;
+	setAttr ".tg[0].tot" -type "double3" -1.2806761862943478e-16 5.6843418860808016e-16 
+		5.5067062021407764e-16 ;
+	setAttr ".tg[0].tor" -type "double3" -2.7773122914706493e-17 -0.95501406856032844 
+		90.000000000000014 ;
+	setAttr ".lr" -type "double3" -6.555980805841976e-22 -2.981770013872047e-16 -9.7060611871678578e-20 ;
+	setAttr ".rst" -type "double3" 0.24643189390195147 -6.5586621136299556e-17 -8.8817841970012528e-17 ;
+	setAttr ".rsrr" -type "double3" -6.555980805841976e-22 -2.981770013872047e-16 -9.7060611871678578e-20 ;
 	setAttr -k on ".w0";
 createNode scaleConstraint -n "Spine3_Jnt_FK_scaleConstraint1" -p "Spine3_Jnt_FK";
-	rename -uid "0FF3AE34-41C0-5AA7-AE31-E493868ED40B";
-	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "Spine_FKW0" -dv 1 -min 0 -at "double";
+	rename -uid "BDA73296-4AE9-0B1D-AE04-73A3113FE260";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "Torso_FK_CtrlW0" -dv 1 -min 0 -at "double";
 	setAttr -k on ".nds";
 	setAttr -k off ".v";
 	setAttr -k off ".tx";
@@ -15995,7 +15991,7 @@ createNode parentConstraint -n "L_Foot_Jnt_parentConstraint1" -p "L_Foot_Jnt";
 		0 ;
 	setAttr ".tg[1].tor" -type "double3" 9.8597195125369017e-13 -6.9972202992197363e-14 
 		2.8624992133171654e-14 ;
-	setAttr ".lr" -type "double3" -7.5061090482539e-13 4.1667275453593499e-29 6.3611093629270335e-15 ;
+	setAttr ".lr" -type "double3" -8.0468033441026973e-13 3.1805546814636059e-15 1.2722218725854045e-14 ;
 	setAttr ".rst" -type "double3" 1.0658141036401502e-16 7.105427357601002e-17 -3.552713678800501e-17 ;
 	setAttr ".rsrr" -type "double3" -9.8279139657222665e-13 6.3611093629270083e-14 -2.8624992133172197e-14 ;
 	setAttr -k on ".w0";
@@ -16812,7 +16808,7 @@ createNode parentConstraint -n "R_Foot_Jnt_parentConstraint1" -p "R_Foot_Jnt";
 	setAttr ".tg[1].tot" -type "double3" 0 -3.552713678800501e-17 3.552713678800501e-17 ;
 	setAttr ".tg[1].tor" -type "double3" -7.3360816838703515e-08 8.5061584446318349e-07 
 		2.3854160110976384e-14 ;
-	setAttr ".lr" -type "double3" 1.8447217152488398e-13 1.2404163257707715e-13 -3.1805546814633168e-15 ;
+	setAttr ".lr" -type "double3" 1.4630551534732177e-13 1.0813885916975958e-13 -3.1805546814633787e-15 ;
 	setAttr ".rst" -type "double3" -1.7763568394002506e-16 0 3.552713678800501e-17 ;
 	setAttr ".rsrr" -type "double3" 7.3360823199813071e-08 -8.5061584207776666e-07 -2.9169551251940415e-14 ;
 	setAttr -k on ".w0";
@@ -17123,7 +17119,7 @@ createNode parentConstraint -n "R_Thigh_End_Twist_Jnt_parentConstraint1" -p "R_T
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" -180 -0.00017283189836076577 0 ;
+	setAttr ".lr" -type "double3" -180 -0.00017283189072372961 -1.347017302877881e-36 ;
 	setAttr ".rst" -type "double3" 2.8421709430404008e-16 -7.105427357601002e-17 7.105427357601002e-17 ;
 	setAttr ".rsrr" -type "double3" -180 -0.00017283189833415446 0 ;
 	setAttr -k on ".w0";
@@ -18408,7 +18404,7 @@ createNode parentConstraint -n "R_Eye_Skin_Jnt_parentConstraint1" -p "R_Eye_Skin
 	setAttr ".tg[0].tot" -type "double3" 0 5.6843418860808016e-16 5.6843418860808016e-16 ;
 	setAttr ".tg[0].tor" -type "double3" 3.1805546814635168e-15 -4.2398951413371187e-15 
 		5.2111813239859698e-16 ;
-	setAttr ".lr" -type "double3" -4.7708320028809665e-15 1.5902773986746841e-15 1.3917425884049396e-06 ;
+	setAttr ".lr" -type "double3" -3.1805546042061396e-15 6.3611094015557235e-15 1.3917451817497131e-06 ;
 	setAttr ".rst" -type "double3" 0.19632565303645436 0.20256200000000005 0.25088296473870303 ;
 	setAttr ".rsrr" -type "double3" -4.7708320028809665e-15 1.5902773986746841e-15 1.3917425884049396e-06 ;
 	setAttr -k on ".w0";
@@ -18672,7 +18668,7 @@ createNode parentConstraint -n "L_Thumb_2_Skin_Jnt_parentConstraint1" -p "L_Thum
 		-8.5265128291212019e-16 ;
 	setAttr ".tg[0].tor" -type "double3" 3.1805546814635168e-15 -3.1805546814635176e-15 
 		-3.1805546814635176e-15 ;
-	setAttr ".lr" -type "double3" 27.872816857684334 22.632738277383982 40.837751239958067 ;
+	setAttr ".lr" -type "double3" 27.872816857683905 22.632738277384345 40.837751239959005 ;
 	setAttr ".rst" -type "double3" 0.069250365503572622 0.0229400553020335 0.20105066490349977 ;
 	setAttr ".rsrr" -type "double3" 27.872816857684342 22.632738277383986 40.837751239958024 ;
 	setAttr -k on ".w0";
@@ -19221,7 +19217,7 @@ createNode parentConstraint -n "L_Hand_Skin_Jnt_parentConstraint1" -p "L_Hand_Sk
 	setAttr ".tg[0].tot" -type "double3" -1.4921397450962103e-15 5.1159076974727211e-15 
 		7.1054273576010023e-16 ;
 	setAttr ".tg[0].tor" -type "double3" 0 -3.975693351829396e-15 -1.3977046940025222e-17 ;
-	setAttr ".lr" -type "double3" -2.0801136068044483e-05 -4.6950939848455781e-06 5.6105532802675371e-06 ;
+	setAttr ".lr" -type "double3" -3.1060104311167144e-17 4.7708805536082607e-15 -1.5530052155583588e-18 ;
 	setAttr ".rst" -type "double3" 4.5995808939380824e-09 -4.7515352150639958e-08 -1.0310151701276027e-08 ;
 	setAttr ".rsrr" -type "double3" -2.0801136070741273e-05 -4.6950939816714314e-06 
 		5.6105532645390873e-06 ;
@@ -19301,7 +19297,7 @@ createNode parentConstraint -n "L_Arm_2_Skin_Jnt_parentConstraint1" -p "L_Arm_2_
 		5.6843418860808016e-16 ;
 	setAttr ".tg[0].tor" -type "double3" 7.583033279093542e-22 -1.2722218725854067e-14 
 		4.5498199674561264e-21 ;
-	setAttr ".lr" -type "double3" 3.5438965118465093e-15 1.1025946795488421e-05 3.3789272087521357e-16 ;
+	setAttr ".lr" -type "double3" -9.2935683930834686e-06 2.5331303884023773e-12 4.6189771218767228e-06 ;
 	setAttr ".rst" -type "double3" 0.7055681347846986 -1.7053025658242404e-15 -2.6645352591003756e-16 ;
 	setAttr ".rsrr" -type "double3" -4.3722455033784699e-28 1.1025946642821755e-05 -4.5440309563211705e-21 ;
 	setAttr -k on ".w0";
@@ -19341,7 +19337,6 @@ createNode parentConstraint -n "L_Shoulder_Mid_Twist_Skin_Jnt_2_parentConstraint
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" 0 0 1.7763568394002505e-17 ;
 	setAttr ".tg[0].tor" -type "double3" 1.3081202554499663e-15 0 -1.2327645257543862e-15 ;
-	setAttr ".lr" -type "double3" -1.0378119441156745e-05 0 0 ;
 	setAttr ".rst" -type "double3" 0.7229274037128911 2.6127612116334769 -0.064944064435440971 ;
 	setAttr ".rsrr" -type "double3" -1.0378119440793988e-05 9.9391727876630653e-17 -6.6903464776269622e-15 ;
 	setAttr -k on ".w0";
@@ -19383,7 +19378,7 @@ createNode parentConstraint -n "L_Arm_1_Skin_Jnt_parentConstraint1" -p "L_Arm_1_
 		-1.2434497875801754e-16 ;
 	setAttr ".tg[0].tor" -type "double3" 3.3666241188526031e-16 3.180554681463516e-15 
 		4.4644482830417708e-15 ;
-	setAttr ".lr" -type "double3" 2.0756239261480527e-05 -6.2726260470440932e-06 5.7266040809724124e-06 ;
+	setAttr ".lr" -type "double3" -1.987846675914698e-16 2.7829853462805772e-15 -4.827710013492361e-33 ;
 	setAttr ".rst" -type "double3" 0.35855683278598144 0.098872606636786597 -0.0544218768249633 ;
 	setAttr ".rsrr" -type "double3" 2.0756239261480527e-05 -6.2726260470440932e-06 5.7266040809724124e-06 ;
 	setAttr -k on ".w0";
@@ -19618,7 +19613,7 @@ createNode parentConstraint -n "R_Thumb_2_Skin_Jnt_parentConstraint1" -p "R_Thum
 		-5.6843418860808016e-16 ;
 	setAttr ".tg[0].tor" -type "double3" 3.1805546814635176e-15 6.3611093629270335e-15 
 		0 ;
-	setAttr ".lr" -type "double3" 27.872816857684345 22.632738277383883 40.837751239957882 ;
+	setAttr ".lr" -type "double3" 27.872816857683915 22.632738277384199 40.837751239958735 ;
 	setAttr ".rst" -type "double3" -0.069249025232324721 -0.02294409120333029 -0.20105156273758845 ;
 	setAttr ".rsrr" -type "double3" 27.872816857684345 22.632738277383883 40.837751239957882 ;
 	setAttr -k on ".w0";
@@ -20176,7 +20171,7 @@ createNode parentConstraint -n "R_Hand_Skin_Jnt_parentConstraint1" -p "R_Hand_Sk
 		-6.039613253960852e-16 ;
 	setAttr ".tg[0].tor" -type "double3" -2.4848083448933731e-17 2.3854160110976372e-15 
 		-7.5320752954580329e-17 ;
-	setAttr ".lr" -type "double3" -0.00033186696901301241 1.8673439463211971e-06 9.1437783297026293e-05 ;
+	setAttr ".lr" -type "double3" 2.4071580841154548e-17 -1.590289473585005e-15 4.9696166897867449e-17 ;
 	setAttr ".rst" -type "double3" 8.9734486508064037e-10 -4.1584044652154263e-09 -5.3902980923226097e-09 ;
 	setAttr ".rsrr" -type "double3" -0.00033186696901301159 1.8673439463212094e-06 9.1437783297051135e-05 ;
 	setAttr -k on ".w0";
@@ -20255,7 +20250,7 @@ createNode parentConstraint -n "R_Arm_2_Skin_Jnt_parentConstraint1" -p "R_Arm_2_
 		-3.1974423109204507e-16 ;
 	setAttr ".tg[0].tor" -type "double3" 1.5166066558187084e-21 3.1805546814635168e-15 
 		2.2749099837280632e-21 ;
-	setAttr ".lr" -type "double3" -0.00018873566997264796 -4.5409872425724133e-06 -6.3861500228030983e-06 ;
+	setAttr ".lr" -type "double3" -0.00033754014372001213 -1.9029520377687995e-06 6.7570842424488923e-05 ;
 	setAttr ".rst" -type "double3" -0.70557069778442438 2.4925960661903448e-06 -1.4459858496351785e-07 ;
 	setAttr ".rsrr" -type "double3" -2.2749098711383224e-21 -2.6376635033435007e-06 
 		-4.891387380199085e-21 ;
@@ -20297,7 +20292,7 @@ createNode parentConstraint -n "R_Shoulder_Mid_Twist_Skin_Jnt_2_parentConstraint
 	setAttr ".tg[0].tot" -type "double3" 1.4210854715202004e-16 0 -1.7763568394002505e-17 ;
 	setAttr ".tg[0].tor" -type "double3" -4.4929322578735022e-15 -2.385416011097638e-15 
 		-7.0421523141293057e-15 ;
-	setAttr ".lr" -type "double3" 0.00016617781433028305 1.7019674967002144e-06 8.9705794258885599e-05 ;
+	setAttr ".lr" -type "double3" 0.00033234763329344447 1.7019674967001888e-06 8.9705794257727726e-05 ;
 	setAttr ".rst" -type "double3" -0.72292749999999517 2.6127599952867309 -0.064944100254851492 ;
 	setAttr ".rsrr" -type "double3" 0.00033234763321414429 1.701967493378374e-06 8.9705794270980064e-05 ;
 	setAttr -k on ".w0";
@@ -20340,7 +20335,7 @@ createNode parentConstraint -n "R_Arm_1_Skin_Jnt_parentConstraint1" -p "R_Arm_1_
 		6.5725203057809266e-16 ;
 	setAttr ".tg[0].tor" -type "double3" 0.00033233964799855642 1.9029590955597954e-06 
 		8.9719150386684293e-05 ;
-	setAttr ".lr" -type "double3" 0.00066467929897722324 3.8053977875995983e-06 0.00017943831182033008 ;
+	setAttr ".lr" -type "double3" 0.00033233964793895625 1.9029590968902218e-06 8.9719151281122082e-05 ;
 	setAttr ".rst" -type "double3" -0.35855700000000013 -0.098870000000000569 0.05442188640732331 ;
 	setAttr ".rsrr" -type "double3" 0.0003323396479977965 1.9029591006696457e-06 8.9719150397915611e-05 ;
 	setAttr -k on ".w0";
@@ -21198,7 +21193,7 @@ createNode parentConstraint -n "R_Leg_1_Skin_Jnt_parentConstraint1" -p "R_Leg_1_
 	setAttr ".tg[0].tot" -type "double3" 8.5265128291212019e-16 1.0658141036401502e-16 
 		2.1316282072803005e-16 ;
 	setAttr ".tg[0].tor" -type "double3" 180 -0.00017283189835859349 2.1165803108301327e-20 ;
-	setAttr ".lr" -type "double3" -7.9513867036587919e-16 -2.3854160110976376e-15 1.65521486176881e-32 ;
+	setAttr ".lr" -type "double3" -1.5902773407317584e-15 7.6357166515235372e-12 -1.059668554504392e-28 ;
 	setAttr ".rst" -type "double3" -0.31748800000000021 -0.12890735107421933 0.098739280700683635 ;
 	setAttr ".rsrr" -type "double3" -7.9513867036587919e-16 -2.3854160110976376e-15 
 		1.65521486176881e-32 ;
@@ -22031,16 +22026,16 @@ createNode nurbsCurve -n "Box_ControlShape" -p "Box_Control";
 		6.0000000000000062 2 2.0000000000000004
 		;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "3272771C-4713-02C9-AEF5-BEB6AEE82C18";
+	rename -uid "D37BCCB5-4125-81E5-3A5A-4C87993E9F1C";
 	setAttr -s 23 ".lnk";
 	setAttr -s 23 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "F787B5FD-4811-2615-252D-77AD96E7FF18";
+	rename -uid "AFE815A6-4334-19B0-2635-FB9EB9BB2B1F";
 	setAttr ".bsdt[0].bscd" -type "Int32Array" 0 ;
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "8CD20486-4058-384B-4D85-58AD8C272CC9";
+	rename -uid "9CA3608C-44EC-8BEA-3E53-208F6579392C";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "22BD9842-48DB-5EF7-3A99-79B2EA9D8291";
+	rename -uid "3BE463A8-497D-1EF5-500A-129F3A5F549A";
 	setAttr ".cdl" 2;
 	setAttr -s 5 ".dli[1:4]"  4 1 2 3;
 	setAttr -s 5 ".dli";
@@ -22048,7 +22043,7 @@ createNode displayLayer -n "defaultLayer";
 	rename -uid "5F676440-491E-776E-05EC-0DB6EA6B34D3";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "533AA55D-4ACC-E1E2-1863-DFBEFC5A0212";
+	rename -uid "063F2782-4D25-E5D2-0FF8-4C9626163765";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "E5275CA7-4793-A59F-CD6E-EF8E08D10F5B";
 	setAttr ".g" yes;
@@ -22135,7 +22130,7 @@ createNode script -n "uiConfigurationScriptNode";
 	setAttr ".st" 3;
 createNode script -n "sceneConfigurationScriptNode";
 	rename -uid "240C55D2-41C5-248D-273E-ADACBBEDCB17";
-	setAttr ".b" -type "string" "playbackOptions -min 0 -max 500 -ast 0 -aet 500 ";
+	setAttr ".b" -type "string" "playbackOptions -min 0 -max 50 -ast 0 -aet 50 ";
 	setAttr ".st" 6;
 createNode phong -n "CalebSIZEREFERENCE:M_PineLeaf_01";
 	rename -uid "678A96F9-4388-B284-7EE3-9B85C54ED42D";
@@ -24150,1216 +24145,1214 @@ createNode objectSet -n "Skin_and_Export_Joints";
 createNode skinCluster -n "skinCluster2";
 	rename -uid "A85B0920-4FCB-5D4C-31C9-81B5BB640644";
 	setAttr -s 1205 ".wl";
-	setAttr ".wl[0:249].w"
-		2 0 0.5 7 0.5
-		2 0 0.5 7 0.5
-		2 0 0.5 7 0.5
-		2 0 0.5 7 0.5
-		2 7 0.5 8 0.5
-		2 7 0.5 8 0.5
-		2 7 0.5 8 0.5
-		2 7 0.5 8 0.5
-		2 0 0.5 7 0.5
-		2 0 0.5 7 0.5
-		2 7 0.5 8 0.5
-		2 7 0.5 8 0.5
-		2 0 0.5 7 0.5
-		2 0 0.5 7 0.5
-		2 7 0.5 8 0.5
-		2 7 0.5 8 0.5
-		2 0 0.5 7 0.5
-		2 0 0.5 7 0.5
-		2 0 0.5 7 0.5
-		2 0 0.5 7 0.5
-		2 7 0.5 8 0.5
-		2 7 0.5 8 0.5
-		2 7 0.5 8 0.5
-		2 7 0.5 8 0.5
-		2 0 0.5 7 0.5
-		2 0 0.5 7 0.5
-		2 7 0.5 8 0.5
-		2 7 0.5 8 0.5
-		2 0 0.5 7 0.5
-		2 0 0.5 7 0.5
-		2 7 0.5 8 0.5
-		2 7 0.5 8 0.5
-		2 0 0.5 7 0.5
-		2 0 0.5 7 0.5
-		2 0 0.5 7 0.5
-		2 0 0.5 7 0.5
-		2 7 0.5 8 0.5
-		2 7 0.5 8 0.5
-		2 7 0.5 8 0.5
-		2 7 0.5 8 0.5
-		2 0 0.5 7 0.5
-		2 0 0.5 7 0.5
-		2 7 0.5 8 0.5
-		2 7 0.5 8 0.5
-		2 0 0.5 7 0.5
-		2 0 0.5 7 0.5
-		2 7 0.5 8 0.5
-		2 7 0.5 8 0.5
-		2 0 0.5 7 0.5
-		2 7 0.5 8 0.5
-		2 0 0.5 7 0.5
-		2 7 0.5 8 0.5
-		2 0 0.5 7 0.5
-		2 7 0.5 8 0.5
-		2 0 0.5 7 0.5
-		2 0 0.5 7 0.5
-		2 0 0.5 7 0.5
-		2 0 0.5 7 0.5
-		2 0 0.5 7 0.5
-		2 0 0.5 7 0.5
-		2 0 0.5 7 0.5
-		2 0 0.5 7 0.5
-		2 0 0.5 7 0.5
-		2 0 0.5 7 0.5
-		2 0 0.5 7 0.5
-		2 6 0.5 10 0.5
-		2 6 0.5 10 0.5
-		2 7 0.5 8 0.5
-		2 7 0.5 8 0.5
-		2 7 0.5 8 0.5
-		2 7 0.5 8 0.5
-		2 7 0.5 8 0.5
-		2 7 0.5 8 0.5
-		2 7 0.5 8 0.5
-		2 7 0.5 8 0.5
-		2 7 0.5 8 0.5
-		2 7 0.5 8 0.5
-		2 7 0.5 8 0.5
-		2 7 0.5 8 0.5
-		2 7 0.5 8 0.5
-		2 0 0.5 7 0.5
-		2 0 0.5 7 0.5
-		2 0 0.5 7 0.5
-		2 0 0.5 7 0.5
-		2 7 0.5 8 0.5
-		2 7 0.5 8 0.5
-		2 7 0.5 8 0.5
-		2 0 0.5 7 0.5
-		2 0 0.5 7 0.5
-		2 7 0.5 8 0.5
-		2 7 0.5 8 0.5
-		2 0 0.5 7 0.5
-		2 0 0.5 7 0.5
-		2 7 0.5 8 0.5
-		2 7 0.5 8 0.5
-		2 0 0.5 7 0.5
-		2 0 0.5 7 0.5
-		2 7 0.5 8 0.5
-		2 7 0.5 8 0.5
-		2 0 0.5 7 0.5
-		2 0 0.5 7 0.5
-		2 7 0.5 8 0.5
-		2 7 0.5 8 0.5
-		2 0 0.5 7 0.5
-		2 0 0.5 7 0.5
-		2 7 0.5 8 0.5
-		2 7 0.5 8 0.5
-		2 0 0.47595590999999998 7 0.52404409000000007
-		2 0 0.46004190700000003 7 0.53995809299999997
-		2 7 0.53995638400000001 8 0.46004361599999999
-		2 7 0.52404223300000008 8 0.47595776699999998
-		2 0 0.49755333000000002 7 0.50244666999999998
-		2 0 0.41371961299999999 7 0.58628038700000007
-		2 7 0.50244592300000002 8 0.49755407699999998
-		2 7 0.58627769500000004 8 0.41372230500000001
-		2 0 0.5 7 0.5
-		2 0 0.5 7 0.5
-		2 7 0.5 8 0.5
-		2 7 0.5 8 0.5
-		2 0 0.5 7 0.5
-		2 7 0.5 8 0.5
-		2 7 0.5 8 0.5
-		2 7 0.5 8 0.5
-		2 7 0.5 8 0.5
-		2 7 0.5 8 0.5
-		2 0 0.5 7 0.5
-		2 7 0.5 8 0.5
-		2 0 0.5 7 0.5
-		2 7 0.5 8 0.5
-		2 0 0.5 7 0.5
-		2 0 0.30935232899999998 7 0.69064767100000002
-		2 7 0.69064587 8 0.30935413
-		2 0 0.38640545999999998 7 0.61359454000000002
-		2 7 0.53060331700000007 8 0.46939668299999998
-		2 7 0.50959841700000008 8 0.49040158299999997
-		2 0 0.49040232 7 0.50959768000000005
-		2 0 0.46939800500000001 7 0.53060199500000005
-		2 4 0.43422385200000002 7 0.56577614799999998
-		2 4 0.43422055900000001 7 0.56577944099999999
-		2 0 0.45379344900000002 7 0.54620655100000004
-		2 4 0.32792671400000001 7 0.67207328600000005
-		2 7 0.54620616300000002 8 0.45379383699999998
-		2 4 0.32792589700000002 7 0.67207410300000003
-		2 4 0.35210077699999998 7 0.64789922300000002
-		2 4 0.35209582900000003 7 0.64790417099999997
-		2 0 0.47570876899999998 7 0.52429123100000008
-		2 7 0.52429146100000001 8 0.47570853899999999
-		2 4 0.42154340699999998 7 0.57845659300000007
-		2 0 0.41114667900000001 7 0.58885332099999999
-		2 7 0.58885497399999998 8 0.41114502600000002
-		2 4 0.42154518000000002 7 0.57845482000000004
-		2 4 0.5 7 0.5
-		2 4 0.5 7 0.5
-		2 4 0.5 7 0.5
-		2 4 0.5 7 0.5
-		2 4 0.5 7 0.5
-		2 4 0.5 7 0.5
-		2 4 0.49172364000000002 7 0.50827635999999998
-		2 4 0.5 7 0.5
-		2 4 0.43982581999999998 7 0.56017418000000008
-		2 4 0.43982664599999999 7 0.56017335400000001
-		2 4 0.51219379399999998 7 0.48780620600000002
-		2 4 0.51219379399999998 7 0.48780620600000002
-		2 4 0.45522304800000002 7 0.54477695199999998
-		2 4 0.455222931 7 0.544777069
-		2 4 0.59538053099999999 7 0.40461946900000001
-		2 4 0.59537986600000004 7 0.40462013400000002
-		2 4 0.56393798900000003 7 0.43606201100000003
-		2 4 0.56393798900000003 7 0.43606201100000003
-		2 4 0.5 7 0.5
-		2 4 0.5 7 0.5
-		2 4 0.5 7 0.5
-		2 4 0.336558576 7 0.66344142400000006
-		2 4 0.48442611600000002 7 0.51557388400000004
-		2 4 0.32968821500000001 7 0.67031178499999999
-		2 7 0.55435838599999998 8 0.44564161400000002
-		2 7 0.5 8 0.5
-		2 4 0.5 7 0.5
-		2 4 0.50505263 7 0.49494737
-		2 4 0.625408246 7 0.374591754
-		2 4 0.777339208 7 0.222660792
-		2 4 0.77133755100000001 7 0.22866244899999999
-		2 4 0.77133755100000001 7 0.22866244899999999
-		2 4 0.56141595100000008 6 0.43858404899999998
-		2 4 0.54730345000000002 6 0.45269654999999998
-		2 4 0.54730345000000002 6 0.45269654999999998
-		2 4 0.56141595100000008 6 0.43858404899999998
-		2 4 0.57322893900000005 6 0.42677106100000001
-		2 4 0.5 6 0.5
-		2 4 0.5 6 0.5
-		2 4 0.5 6 0.5
-		2 4 0.81153380200000003 6 0.188466198
-		2 4 0.80713390299999999 6 0.19286609699999999
-		2 4 0.66853084800000007 6 0.33146915199999999
-		2 4 0.60506239100000003 6 0.39493760900000002
-		2 4 0.66853084800000007 6 0.33146915199999999
-		2 4 0.80713390299999999 6 0.19286609699999999
-		2 4 0.81153380200000003 6 0.188466198
-		2 4 0.838815058 6 0.161184942
-		2 10 0.77820499500000007 11 0.22179500499999999
-		2 10 0.68887571300000006 11 0.311124287
-		2 27 0.31111892699999999 31 0.68888107300000001
-		2 27 0.22178969700000001 31 0.77821030300000005
-		2 10 0.60808751800000005 11 0.39191248200000001
-		2 27 0.39190941200000001 31 0.60809058800000004
-		2 4 0.35615206300000002 6 0.64384793699999998
-		2 4 0.34112726399999999 6 0.65887273600000007
-		2 4 0.34112726399999999 6 0.65887273600000007
-		2 10 0.625704496 11 0.374295504
-		2 27 0.37429495400000001 31 0.62570504599999999
-		2 4 0.193242266 6 0.80675773400000006
-		2 6 0.72762025299999999 31 0.27237974700000001
-		2 6 0.72761898000000003 10 0.27238101999999997
-		2 10 0.62451572200000005 11 0.375484278
-		2 27 0.375485913 31 0.624514087
-		2 6 0.46549500100000002 31 0.53450499900000004
-		2 6 0.5 31 0.5
-		2 6 0.46549366599999997 10 0.53450633400000003
-		2 10 0.79082453500000005 11 0.209175465
-		2 27 0.20917354199999999 31 0.79082645800000007
-		2 10 0.5 11 0.5
-		2 10 0.5 11 0.5
-		2 27 0.5 31 0.5
-		2 27 0.5 31 0.5
-		2 10 0.52051163499999997 11 0.47948836500000003
-		2 27 0.479487253 31 0.52051274700000005
-		2 10 0.63658273100000007 11 0.36341726899999999
-		2 27 0.36341785799999998 31 0.63658214200000007
-		2 10 0.45244727200000001 11 0.54755272799999999
-		2 27 0.54755353100000004 31 0.45244646900000002
-		2 10 0.40869671499999999 11 0.59130328500000007
-		2 27 0.59130642200000005 31 0.408693578
-		2 6 0.48619666900000003 31 0.51380333099999997
-		2 6 0.5 31 0.5
-		2 6 0.48619619600000002 10 0.51380380400000003
-		2 6 0.29603453800000001 10 0.70396546199999999
-		2 6 0.29603570499999998 31 0.70396429500000002
-		2 10 0.61827964499999999 11 0.38172035500000001
-		2 27 0.38172484499999998 31 0.61827515500000008
-		2 6 0.50855549900000008 10 0.49144450099999998
-		2 6 0.492975043 10 0.50702495700000005
-		2 6 0.49297501900000001 31 0.50702498100000004
-		2 10 0.415940582 11 0.58405941800000005
-		2 27 0.58406413400000001 31 0.41593586599999999
-		2 10 0.14578150000000001 11 0.85421849999999999
-		2 11 0.89944897800000001 14 0.100551022
-		2 24 0.100549337 27 0.89945066299999998
-		2 27 0.85421894100000006 31 0.14578105899999999
-		2 10 0.1866526 11 0.81334740000000005
-		2 27 0.81334803899999997 31 0.18665196100000001;
-	setAttr ".wl[250:499].w"
-		2 10 0.185558264 11 0.81444173600000003
-		2 27 0.81444267300000006 31 0.18555732699999999
-		2 11 0.89668803799999997 14 0.10331196199999999
-		2 24 0.103310744 27 0.89668925600000005
-		2 11 0.80444700999999996 14 0.19555299000000001
-		2 24 0.19555197799999999 27 0.80444802199999998
-		2 10 0.185100872 11 0.81489912799999997
-		2 27 0.81490057199999999 31 0.18509942800000001
-		2 11 0.78926817599999999 14 0.21073182400000001
-		2 24 0.21073098100000001 27 0.78926901900000002
-		2 12 0.22125637300000001 14 0.77874362699999999
-		2 12 0.30718688199999999 14 0.69281311800000001
-		2 24 0.69282023999999998 32 0.30717976000000002
-		2 24 0.77875002100000001 32 0.22124997900000001
-		2 12 0.38411436300000001 14 0.61588563699999999
-		2 24 0.61589215200000003 32 0.38410784799999997
-		2 12 0.36912225199999998 14 0.63087774800000007
-		2 24 0.63088519100000007 32 0.36911480899999999
-		2 12 0.421371363 14 0.578628637
-		2 24 0.57863480099999998 32 0.42136519900000002
-		2 12 0.35390530599999998 14 0.64609469400000008
-		2 24 0.64610330100000002 32 0.35389669899999998
-		2 12 0.28849811800000003 14 0.71150188199999997
-		2 24 0.71150929400000007 32 0.28849070599999999
-		2 12 0.34942339 14 0.65057661
-		2 24 0.65058401900000007 32 0.34941598099999999
-		2 11 0.35113655500000002 14 0.64886344500000004
-		2 11 0.33103988699999998 14 0.66896011300000002
-		2 11 0.40150081599999998 14 0.59849918400000002
-		2 11 0.40050547399999997 14 0.59949452600000008
-		2 11 0.44303630900000002 14 0.55696369099999998
-		2 11 0.49125580800000002 14 0.50874419199999998
-		2 11 0.428769012 14 0.57123098800000005
-		2 11 0.37452249799999998 14 0.62547750200000007
-		2 24 0.64885732699999998 27 0.35114267300000002
-		2 24 0.66895445799999997 27 0.33104554200000003
-		2 24 0.59849597700000001 27 0.40150402299999999
-		2 24 0.59949305100000005 27 0.400506949
-		2 24 0.55696265099999998 27 0.44303734900000002
-		2 24 0.50874340900000004 27 0.49125659100000002
-		2 24 0.57122785500000006 27 0.42877214499999999
-		2 24 0.625472268 27 0.374527732
-		2 2 0.47683282900000001 6 0.52316717099999999
-		2 2 0.514650206 6 0.485349794
-		2 2 0.514650791 6 0.485349209
-		2 2 0.521426905 5 0.478573095
-		2 2 0.521426905 5 0.478573095
-		2 2 0.52168403100000005 5 0.47831596900000001
-		2 2 0.52168403100000005 5 0.47831596900000001
-		2 2 0.58180988300000003 5 0.41819011699999997
-		2 2 0.58180988300000003 5 0.41819011699999997
-		2 2 0.54930955999999997 6 0.45069044000000003
-		2 2 0.54930955999999997 6 0.45069044000000003
-		2 2 0.50039525699999998 6 0.49960474300000002
-		2 2 0.50039525699999998 6 0.49960474300000002
-		2 2 0.50769160300000005 6 0.49230839700000001
-		2 2 0.39931974199999998 6 0.60068025800000002
-		2 2 0.43865773699999999 6 0.56134226300000001
-		2 6 0.55032427400000006 11 0.449675726
-		2 2 0.450233402 6 0.54976659800000005
-		2 2 0.39580648800000001 6 0.60419351200000004
-		2 2 0.39963516399999999 6 0.60036483600000001
-		2 2 0.39580648800000001 6 0.60419351200000004
-		2 2 0.450233402 6 0.54976659800000005
-		2 6 0.550323648 27 0.449676352
-		2 2 0.43865862900000002 6 0.56134137100000003
-		2 2 0.39932120199999999 6 0.60067879800000001
-		2 2 0.54711075799999997 6 0.45288924200000003
-		2 2 0.54711105199999999 6 0.45288894800000001
-		2 2 0.51783161700000002 6 0.48216838299999998
-		2 2 0.60020930000000006 5 0.3997907
-		2 2 0.58226134500000004 5 0.41773865500000001
-		2 2 0.58226134500000004 5 0.41773865500000001
-		2 2 0.55603162299999997 5 0.44396837700000003
-		2 2 0.55603162299999997 5 0.44396837700000003
-		2 2 0.55610765800000006 5 0.443892342
-		2 2 0.55610765800000006 5 0.443892342
-		2 2 0.546269263 5 0.453730737
-		2 2 0.51338294400000006 5 0.48661705599999999
-		2 2 0.546269263 5 0.453730737
-		2 1 0.492992123 3 0.50700787700000005
-		2 3 0.458157969 44 0.54184203100000006
-		2 3 0.45815801299999998 44 0.54184198700000008
-		2 3 0.17876986 44 0.82123014000000005
-		2 3 0.178771808 44 0.82122819199999997
-		2 5 0.128291194 44 0.871708806
-		2 5 0.128296829 44 0.87170317100000005
-		2 5 0.54289855399999998 44 0.45710144600000002
-		2 5 0.35776999900000001 44 0.64223000100000005
-		2 5 0.357774594 44 0.642225406
-		2 6 0.62353363699999997 31 0.37646636300000003
-		2 6 0.62352978999999997 10 0.37647021000000003
-		2 6 0.62404102700000008 10 0.37595897299999997
-		2 44 0.83552834300000001 59 0.16447165699999999
-		2 44 0.83552801200000004 46 0.16447198800000001
-		2 2 0.45828025100000003 5 0.54171974899999997
-		2 2 0.450964802 5 0.549035198
-		2 2 0.41228034899999999 5 0.58771965100000001
-		2 2 0.39355441699999999 5 0.60644558300000007
-		2 2 0.421345197 5 0.57865480300000005
-		2 2 0.49616699800000003 5 0.50383300200000003
-		2 2 0.50281480200000006 5 0.49718519799999999
-		2 2 0.49616699800000003 5 0.50383300200000003
-		2 2 0.421345197 5 0.57865480300000005
-		2 2 0.39355441699999999 5 0.60644558300000007
-		2 2 0.41228034899999999 5 0.58771965100000001
-		2 2 0.45481914299999998 5 0.54518085700000007
-		2 44 0.5 46 0.5
-		2 44 0.55108295400000007 46 0.44891704599999999
-		2 44 0.55108499100000008 59 0.44891500899999998
-		2 44 0.5 59 0.5
-		2 44 0.5 46 0.5
-		2 44 0.5 59 0.5
-		2 44 0.83871917900000004 59 0.16128082099999999
-		2 3 0.22681040899999999 44 0.77318959100000006
-		2 3 0.226808747 44 0.77319125300000002
-		2 44 0.83871656400000005 46 0.161283436
-		2 44 0.49111589999999999 46 0.50888410000000006
-		2 44 0.493923744 59 0.50607625600000006
-		2 3 0.46114543200000002 44 0.53885456799999998
-		2 3 0.45085990300000001 44 0.54914009699999999
-		2 44 0.52199637799999998 46 0.47800362200000002
-		2 44 0.52106274699999999 59 0.47893725300000001
-		2 3 0.450856747 44 0.549143253
-		2 3 0.57772548200000007 44 0.42227451799999999
-		2 1 0.38351793000000001 3 0.61648206999999999
-		2 3 0.57772397600000003 44 0.42227602400000003
-		2 5 0.69055699599999998 44 0.30944300400000002
-		2 5 0.662542996 44 0.337457004
-		2 1 0.40505878699999998 5 0.59494121300000002
-		2 5 0.66254288500000003 44 0.33745711499999997
-		2 5 0.69055512000000008 44 0.30944487999999998
-		2 5 0.66250472199999999 44 0.33749527800000001
-		2 5 0.60013771800000004 44 0.39986228200000001
-		2 5 0.80630984400000005 44 0.193690156
-		2 2 0.22924861399999999 5 0.77075138600000004
-		2 5 0.80631064799999996 44 0.19368935200000001
-		2 5 0.60014308999999999 44 0.39985691000000001
-		2 5 0.66250901600000001 44 0.33749098399999999
-		2 3 0.23080356799999999 44 0.76919643199999999
-		2 44 0.418210796 46 0.581789204
-		2 44 0.41822445899999999 59 0.58177554100000006
-		2 3 0.23079659899999999 44 0.76920340100000006
-		2 3 0.61669901500000002 46 0.38330098499999998
-		2 3 0.88436146000000004 44 0.11563854
-		2 3 0.88435905700000006 44 0.115640943
-		2 3 0.61669659700000001 59 0.38330340299999999
-		2 3 0.53290965000000001 46 0.46709034999999999
-		2 3 0.74937688800000002 44 0.25062311199999998
-		2 3 0.74936727000000003 44 0.25063273000000003
-		2 3 0.53290800300000007 59 0.46709199699999998
-		2 3 0.99965766099999998 44 0.00034233899999999999
-		2 3 0.24365594099999999 44 0.75634405900000001
-		2 3 0.24365550499999999 44 0.75634449500000001
-		2 3 0.48052582199999999 44 0.51947417800000006
-		2 3 0.71906349300000005 44 0.280936507
-		2 3 0.71723221500000001 44 0.28276778499999999
-		2 3 0.75254672700000003 44 0.247453273
-		2 3 0.71723060500000002 44 0.28276939499999998
-		2 3 0.95652830099999997 44 0.043471699000000003
-		2 48 0.5 49 0.5
-		2 48 0.5 49 0.5
-		2 53 0.5 65 0.5
-		2 53 0.5 65 0.5
-		2 48 0.5 49 0.5
-		2 53 0.5 65 0.5
-		2 48 0.538743741 49 0.461256259
-		2 53 0.53874902700000005 65 0.46125097300000001
-		2 48 0.64010869500000001 49 0.35989130499999999
-		2 53 0.64011578000000002 65 0.35988421999999998
-		2 48 0.70263252799999998 49 0.29736747200000002
-		2 48 0.72722837100000004 49 0.27277162900000002
-		2 53 0.72723540800000008 65 0.27276459199999997
-		2 53 0.70264343400000007 65 0.29735656599999999
-		2 48 0.79026942700000002 49 0.209730573
-		2 53 0.79027462100000001 65 0.20972537899999999
-		2 48 0.5 49 0.5
-		2 48 0.5 49 0.5
-		2 53 0.5 65 0.5
-		2 53 0.5 65 0.5
-		2 48 0.49436321599999999 49 0.50563678400000001
-		2 53 0.49436360899999998 65 0.50563639100000002
-		2 48 0.16003134099999999 49 0.83996865900000006
-		2 53 0.16003255399999999 65 0.83996744600000006
-		2 48 0.15296865900000001 49 0.84703134099999999
-		2 53 0.15297156000000001 65 0.84702843999999999
-		2 48 0.290679676 49 0.709320324
-		2 48 0.27138724600000003 49 0.72861275400000003
-		2 53 0.27138818199999998 65 0.72861181800000008
-		2 53 0.29068621100000003 65 0.70931378899999997
-		2 48 0.159005648 49 0.84099435200000006
-		2 53 0.15900920099999999 65 0.84099079900000007
-		2 42 0.45739297200000001 49 0.54260702800000005
-		2 42 0.5 49 0.5
-		2 64 0.5 65 0.5
-		2 64 0.45739687699999998 65 0.54260312300000002
-		2 42 0.5 49 0.5
-		2 64 0.5 65 0.5
-		2 42 0.5 49 0.5
-		2 64 0.5 65 0.5
-		2 42 0.49506255700000001 49 0.50493744299999999
-		2 64 0.49506305499999997 65 0.50493694500000008
-		2 42 0.42788398999999999 49 0.57211601000000001
-		2 64 0.42788975000000001 65 0.57211025000000004
-		2 42 0.52774368800000004 49 0.47225631200000001
-		2 64 0.52774960100000001 65 0.47225039899999999
-		2 42 0.45411917800000001 49 0.54588082199999999
-		2 64 0.45412483799999998 65 0.54587516200000008
-		2 42 0.57984603499999998 56 0.42015396500000002
-		2 42 0.52483445400000006 56 0.47516554599999999
-		2 63 0.475165165 64 0.52483483500000006
-		2 63 0.42015308600000001 64 0.57984691399999999
-		2 42 0.526599869 56 0.473400131
-		2 63 0.47339970100000001 64 0.52660029900000005
-		2 42 0.24596003599999999 57 0.75403996400000006
-		2 42 0.44256915200000002 57 0.55743084799999998
-		2 64 0.44257107400000001 67 0.55742892600000005
-		2 64 0.24596236299999999 67 0.75403763700000004
-		2 42 0.52357644700000006 56 0.476423553
-		2 63 0.47642278399999999 64 0.52357721600000007
-		2 42 0.235157217 57 0.76484278299999997
-		2 64 0.235159012 67 0.764840988
-		2 42 0.16989563099999999 57 0.83010436900000006
-		2 64 0.169897519 67 0.83010248100000006
-		2 42 0.93100775599999996 49 0.068992243999999994
-		2 42 0.90055197900000006 49 0.099448020999999998
-		2 42 0.94265501699999998 49 0.057344983000000002
-		2 42 0.99164611499999999 49 0.0083538850000000001
-		2 42 0.99108452599999997 49 0.0089154739999999996
-		2 42 0.98451481600000001 49 0.015485184000000001
-		2 42 0.97132481599999998 49 0.028675183999999999
-		2 42 0.95404116100000003 49 0.045958839000000001
-		2 64 0.93100846299999995 65 0.068991537000000006
-		2 64 0.90055288 65 0.09944712
-		2 64 0.94265564199999996 65 0.057344357999999998
-		2 64 0.99164627400000005 65 0.0083537260000000006
-		2 64 0.99108473900000005 65 0.0089152610000000007
-		2 64 0.98451515300000003 65 0.015484847
-		2 64 0.97132534299999995 65 0.028674656999999999
-		2 64 0.954041837 65 0.045958163000000003
-		2 42 0.70829737999999998 49 0.29170262000000002
-		2 42 0.56488559400000005 49 0.43511440600000001
-		2 42 0.55847847800000006 49 0.441521522
-		2 42 0.88061663499999998 49 0.11938336500000001
-		2 42 0.93977843299999997 49 0.060221566999999997
-		2 42 0.94886501000000001 49 0.051134989999999998
-		2 42 0.90295078600000001 49 0.097049213999999995
-		2 42 0.836836672 49 0.163163328
-		2 64 0.708301666 65 0.291698334
-		2 64 0.56488821200000006 65 0.435111788;
-	setAttr ".wl[500:749].w"
-		2 64 0.55848143000000006 65 0.44151857
-		2 64 0.88062014200000005 65 0.11937985800000001
-		2 64 0.93978021600000006 65 0.060219783999999998
-		2 64 0.94886643900000001 65 0.051133561000000001
-		2 64 0.90295317399999997 65 0.097046826000000003
-		2 64 0.83684001699999999 65 0.16315998300000001
-		2 42 0.047893795000000003 49 0.95210620499999998
-		2 42 0.19177034500000001 49 0.80822965499999999
-		2 42 0.44771322000000002 49 0.55228677999999998
-		2 42 0.18892763200000001 49 0.81107236800000004
-		2 42 0.030413287000000001 49 0.96958671299999999
-		2 48 0.038904943999999997 49 0.961095056
-		2 48 0.063705987000000006 49 0.93629401300000004
-		2 48 0.048250229999999998 49 0.95174977000000005
-		2 64 0.047894260000000001 65 0.95210574000000003
-		2 64 0.19177154399999999 65 0.80822845600000004
-		2 64 0.44771523800000002 65 0.55228476199999998
-		2 64 0.188928964 65 0.81107103599999997
-		2 64 0.030413412000000001 65 0.96958658799999997
-		2 53 0.038904765000000001 65 0.96109523500000005
-		2 53 0.063705643000000006 65 0.93629435699999997
-		2 53 0.048250165999999997 65 0.95174983400000002
-		2 3 0.050883141999999999 42 0.94911685800000001
-		2 3 0.015921692000000001 42 0.98407830799999996
-		2 42 0.97071163100000002 56 0.029288369000000002
-		2 42 0.95938543200000004 56 0.040614567999999997
-		2 42 0.97253980900000003 56 0.027460190999999998
-		2 42 0.97912755799999995 56 0.020872442000000001
-		2 42 0.983614973 56 0.016385027
-		2 3 0.029135102999999999 42 0.970864897
-		2 3 0.050882696999999998 64 0.94911730299999997
-		2 3 0.015921675999999999 64 0.98407832399999995
-		2 63 0.029288391 64 0.97071160899999998
-		2 63 0.040614610000000002 64 0.95938539
-		2 63 0.027460185000000002 64 0.97253981499999997
-		2 63 0.020872358000000001 64 0.97912764200000002
-		2 63 0.016384876999999999 64 0.98361512299999998
-		2 3 0.029134824 64 0.970865176
-		2 10 0.40781044500000002 11 0.59218955500000003
-		2 10 0.5 11 0.5
-		2 10 0.49703597399999999 11 0.50296402600000001
-		2 10 0.42876671999999999 11 0.57123328000000007
-		2 10 0.36579228200000002 11 0.63420771799999998
-		2 10 0.31281519000000002 11 0.68718480999999998
-		2 10 0.27648616199999998 11 0.72351383800000002
-		2 10 0.228564357 11 0.771435643
-		2 27 0.59219042100000008 31 0.40780957899999998
-		2 27 0.5 31 0.5
-		2 27 0.50296414 31 0.49703586
-		2 27 0.57123467700000008 31 0.42876532299999998
-		2 27 0.63421113900000003 31 0.36578886100000002
-		2 27 0.68718831800000002 31 0.31281168199999998
-		2 27 0.723515927 31 0.276484073
-		2 27 0.77143677700000002 31 0.22856322300000001
-		2 12 0.55283583300000005 14 0.447164167
-		2 12 0.53726611800000001 14 0.46273388199999999
-		2 24 0.46273632199999998 32 0.53726367800000008
-		2 24 0.447168173 32 0.552831827
-		2 12 0.57134604 14 0.42865396
-		2 24 0.42865608300000002 32 0.57134391699999998
-		2 12 0.74046940900000002 14 0.25953059099999998
-		2 24 0.25953177399999999 32 0.74046822600000006
-		2 12 0.76334516900000005 14 0.23665483100000001
-		2 24 0.236658434 32 0.76334156600000003
-		2 12 0.80320334800000004 14 0.19679665199999999
-		2 24 0.19680312999999999 32 0.80319687000000006
-		2 12 0.701637442 14 0.298362558
-		2 24 0.29837043600000002 32 0.70162956399999998
-		2 12 0.62431641500000001 14 0.37568358499999999
-		2 24 0.37569140499999998 32 0.62430859500000002
-		2 12 0.97751838000000002 16 0.022481620000000001
-		2 12 0.77565163100000001 13 0.22434836899999999
-		2 32 0.775654815 33 0.224345185
-		2 25 0.022480979000000002 32 0.97751902099999999
-		2 12 0.82117353500000001 16 0.17882646499999999
-		2 25 0.178822746 32 0.82117725399999997
-		2 12 0.69328601300000003 16 0.30671398700000002
-		2 25 0.30670230999999998 32 0.69329769000000008
-		2 12 0.90889998100000002 13 0.091100019000000004
-		2 25 0.091092628999999994 32 0.90890737099999996
-		2 12 0.922670561 13 0.077329439
-		2 25 0.077320597000000005 32 0.92267940299999995
-		2 12 0.94906204699999996 13 0.050937953000000001
-		2 25 0.050930659000000003 32 0.94906934099999996
-		2 12 0.96148581700000002 13 0.038514183
-		2 25 0.038510269999999999 32 0.96148973000000004
-		2 12 0.96983012899999999 14 0.030169871000000001
-		2 12 0.928325599 14 0.071674400999999999
-		2 12 0.89729403799999996 14 0.102705962
-		2 12 0.83289665300000004 14 0.16710334700000001
-		2 12 0.83367652800000003 14 0.166323472
-		2 12 0.82668452999999997 14 0.17331547
-		2 12 0.933733484 14 0.066266515999999998
-		2 12 0.96153535199999995 14 0.038464647999999997
-		2 24 0.030171323 32 0.96982867699999997
-		2 24 0.071677890999999994 32 0.92832210900000001
-		2 24 0.102710515 32 0.89728948500000005
-		2 24 0.167107283 32 0.832892717
-		2 24 0.16632501999999999 32 0.83367498000000007
-		2 24 0.173315677 32 0.82668432300000005
-		2 24 0.066265769000000002 32 0.93373423099999997
-		2 24 0.038465030999999997 32 0.96153496900000002
-		2 12 0.99202357699999999 14 0.0079764229999999998
-		2 12 0.99645306199999995 16 0.0035469379999999999
-		2 12 0.994584998 16 0.0054150020000000004
-		2 12 0.99808886399999996 16 0.0019111359999999999
-		2 12 0.99588491599999995 13 0.0041150839999999998
-		2 12 0.99267222700000002 13 0.0073277730000000001
-		2 12 0.98166579499999995 13 0.018334204999999999
-		2 12 0.98421826199999995 14 0.015781738
-		2 24 0.0079766139999999999 32 0.99202338599999995
-		2 25 0.0035470369999999998 32 0.99645296299999997
-		2 25 0.0054151609999999999 32 0.99458483900000005
-		2 25 0.00191113 32 0.99808887000000002
-		2 25 0.0041148240000000004 32 0.99588517600000004
-		2 25 0.0073271580000000003 32 0.99267284200000006
-		2 25 0.018333133000000001 32 0.98166686700000005
-		2 24 0.015781658 32 0.98421834200000002
-		2 48 0.79782149999999996 49 0.20217850000000001
-		2 48 0.70538851700000005 49 0.29461148300000001
-		2 48 0.79251583400000003 49 0.207484166
-		2 46 0.15915948799999999 48 0.84084051199999998
-		2 46 0.398567903 48 0.601432097
-		2 46 0.45072387699999999 48 0.54927612300000006
-		2 46 0.30621596099999998 48 0.69378403900000007
-		2 46 0.041232630999999999 48 0.95876736900000004
-		2 53 0.79782586 65 0.20217414
-		2 53 0.70539213099999998 65 0.29460786900000002
-		2 53 0.79251885300000002 65 0.207481147
-		2 53 0.840832621 59 0.159167379
-		2 53 0.60142366800000002 59 0.39857633199999998
-		2 53 0.54926976900000002 59 0.45073023099999998
-		2 53 0.693774102 59 0.306225898
-		2 53 0.95876496600000005 59 0.041235033999999997
-		2 46 0.50578428900000005 48 0.494215711
-		2 46 0.56393960399999998 48 0.43606039600000002
-		2 46 0.69815792600000004 48 0.30184207400000002
-		2 44 0.194187216 46 0.805812784
-		2 44 0.28413777200000001 46 0.71586222799999999
-		2 46 0.62685407000000004 48 0.37314593000000001
-		2 46 0.53812853900000002 48 0.46187146099999998
-		2 46 0.506752906 48 0.493247094
-		2 53 0.49421322299999998 59 0.50578677700000008
-		2 53 0.43605508399999998 59 0.56394491600000007
-		2 53 0.30183578 59 0.69816422
-		2 44 0.194196114 59 0.80580388599999997
-		2 44 0.28414535200000002 59 0.71585464799999998
-		2 53 0.37313878 59 0.62686122
-		2 53 0.46186611100000002 59 0.53813388900000003
-		2 53 0.49324390899999998 59 0.50675609100000008
-		2 12 0.21756313999999999 13 0.78243686000000001
-		2 12 0.45156999799999997 13 0.54843000200000003
-		2 12 0.37294886700000002 13 0.62705113300000004
-		2 12 0.47968109199999998 13 0.52031890800000002
-		2 13 0.5 16 0.5
-		2 12 0.30446205799999998 13 0.69553794200000008
-		2 13 0.98578992300000001 26 0.014210077
-		2 13 0.97980025900000001 19 0.020199741
-		2 13 0.95348445599999998 16 0.046515543999999999
-		2 13 0.89878585700000002 16 0.10121414300000001
-		2 9 0.12694818199999999 13 0.87305181799999998
-		2 9 0.076039425999999993 13 0.92396057399999998
-		2 9 0.44100466599999999 13 0.55899533400000001
-		2 9 0.74370370000000008 13 0.25629629999999998
-		2 9 0.34466512199999999 13 0.65533487800000001
-		2 9 0.352099569 13 0.64790043100000005
-		2 19 0.492911445 20 0.50708855500000005
-		2 13 0.42632137199999998 20 0.57367862800000002
-		2 13 0.49782683599999999 19 0.50217316400000001
-		2 13 0.50052175300000001 26 0.49947824699999999
-		2 13 0.68086601499999999 26 0.31913398500000001
-		2 13 0.51961349000000001 19 0.48038650999999999
-		2 13 0.49850213300000001 19 0.50149786699999999
-		2 13 0.505196439 20 0.494803561
-		2 9 0.56133011100000008 21 0.43866988899999998
-		2 9 0.520088098 21 0.479911902
-		2 9 0.5 21 0.5
-		2 9 0.50001000200000001 21 0.49998999799999999
-		2 18 0.49996373100000002 20 0.50003626899999998
-		2 18 0.5 20 0.5
-		2 18 0.427083455 20 0.572916545
-		2 18 0.47513571399999999 20 0.52486428600000001
-		2 19 0.51044628700000005 23 0.489553713
-		2 19 0.53743468599999999 23 0.46256531400000001
-		2 19 0.55733632700000002 23 0.44266367299999998
-		2 19 0.52587750900000008 23 0.47412249099999998
-		2 26 0.60326651200000003 30 0.39673348800000002
-		2 26 0.55561821500000008 30 0.44438178499999997
-		2 26 0.59722171000000002 30 0.40277828999999998
-		2 26 0.50236377100000007 30 0.49763622899999999
-		2 17 0.5 23 0.5
-		2 17 0.5 23 0.5
-		2 17 0.5 23 0.5
-		2 17 0.5 23 0.5
-		2 15 0.5 18 0.5
-		2 15 0.351247531 18 0.64875246900000005
-		2 15 0.094918636000000001 18 0.90508136400000005
-		2 15 0.49739974999999997 18 0.50260025000000008
-		2 12 0.81549676100000001 13 0.18450323900000001
-		2 25 0.18448469200000001 32 0.81551530800000005
-		2 12 0.74718113600000002 13 0.25281886399999998
-		2 32 0.74720005099999998 33 0.25279994900000002
-		2 12 0.78632505100000005 13 0.213674949
-		2 25 0.21364731300000001 32 0.78635268700000005
-		2 21 0.5 22 0.5
-		2 21 0.5 22 0.5
-		2 21 0.5 22 0.5
-		2 21 0.5 22 0.5
-		2 29 0.133414589 30 0.86658541099999997
-		2 29 0.30437912700000003 30 0.69562087299999997
-		2 29 0.37158351699999997 30 0.62841648300000008
-		2 29 0.12311752300000001 30 0.87688247699999999
-		2 9 0.42479690399999998 21 0.57520309600000008
-		2 9 0.43587641900000001 21 0.56412358100000004
-		2 9 0.32397714700000002 21 0.67602285299999998
-		2 9 0.31959294799999999 21 0.68040705200000007
-		2 18 0.77399860200000004 20 0.22600139799999999
-		2 18 0.75588320900000006 20 0.244116791
-		2 18 0.63944549400000006 20 0.360554506
-		2 18 0.72404787999999998 20 0.27595212000000002
-		2 19 0.41092357899999998 23 0.58907642100000002
-		2 19 0.239481262 23 0.76051873800000003
-		2 19 0.26838765199999998 23 0.73161234800000008
-		2 19 0.381045205 23 0.61895479500000006
-		2 26 0.353347672 30 0.64665232800000005
-		2 26 0.49233394000000003 30 0.50766606000000003
-		2 26 0.49957090300000001 30 0.50042909700000004
-		2 26 0.263291359 30 0.736708641
-		2 19 0.73050140100000005 20 0.26949859900000001
-		2 13 0.42835400299999998 19 0.57164599700000007
-		2 13 0.43549605499999999 19 0.56450394500000001
-		2 13 0.33032282600000001 19 0.66967717400000004
-		2 13 0.412248108 26 0.587751892
-		2 13 0.32416595799999998 26 0.67583404200000008
-		2 13 0.53766286299999999 26 0.46233713700000001
-		2 13 0.495944041 26 0.504055959
-		2 13 0.28835603999999998 20 0.71164396000000008
-		2 13 0.45570849400000002 19 0.54429150599999998
-		2 13 0.44777786600000002 20 0.55222213399999998
-		2 13 0.20084120499999999 20 0.79915879499999998
-		2 9 0.56799426600000003 13 0.43200573399999997
-		2 9 0.50010702500000004 13 0.49989297500000002
-		2 9 0.53349272199999997 13 0.46650727800000003
-		2 9 0.85060480999999999 21 0.14939519000000001
-		2 7 0.51168875400000002 8 0.48831124599999998
-		2 7 0.50742321700000004 8 0.49257678300000002
-		2 0 0.49257758499999998 7 0.50742241500000007
-		2 0 0.488312356 7 0.511687644
-		2 7 0.52938883300000006 8 0.470611167
-		2 7 0.54147587900000005 8 0.45852412100000001;
-	setAttr ".wl[750:999].w"
-		2 0 0.458526023 7 0.541473977
-		2 0 0.47061264899999999 7 0.52938735100000001
-		2 7 0.50927087300000007 8 0.49072912699999999
-		2 7 0.51086295900000001 8 0.48913704099999999
-		2 0 0.489138085 7 0.510861915
-		2 0 0.49073016200000003 7 0.50926983800000003
-		2 4 0.47022661999999998 7 0.52977338000000007
-		2 4 0.47022881700000002 7 0.52977118300000003
-		2 4 0.47415360200000001 7 0.52584639799999999
-		2 4 0.47415554500000001 7 0.52584445499999999
-		2 7 0.51643736200000001 8 0.48356263799999999
-		2 7 0.51509224399999998 8 0.48490775600000002
-		2 0 0.48356365499999998 7 0.51643634500000002
-		2 0 0.48490885 7 0.51509115000000005
-		2 4 0.48988844399999998 7 0.51011155600000002
-		2 4 0.47886821099999999 7 0.52113178900000001
-		2 4 0.478869665 7 0.52113033500000006
-		2 4 0.48988950599999997 7 0.51011049400000008
-		2 7 0.51197393200000008 8 0.48802606799999998
-		2 7 0.50945043099999998 8 0.49054956900000002
-		2 0 0.488026878 7 0.511973122
-		2 0 0.490550345 7 0.50944965500000006
-		2 4 0.48371341299999998 7 0.51628658700000007
-		2 4 0.480119458 7 0.519880542
-		2 4 0.48012074300000002 7 0.51987925700000004
-		2 4 0.48371459999999999 7 0.51628540000000001
-		2 7 0.50166455900000007 8 0.49833544099999999
-		2 7 0.50134013600000005 8 0.49865986400000001
-		2 0 0.49833570300000002 7 0.50166429700000004
-		2 0 0.49866011500000001 7 0.50133988500000004
-		2 0 0.49424483899999999 7 0.50575516100000006
-		2 0 0.49519836099999998 7 0.50480163900000008
-		2 7 0.50480205300000003 8 0.49519794700000003
-		2 7 0.50575564900000003 8 0.49424435100000003
-		2 7 0.50348395899999998 8 0.49651604100000002
-		2 7 0.50720853600000004 8 0.49279146400000001
-		2 0 0.49279240000000002 7 0.50720759999999998
-		2 0 0.49651672600000002 7 0.50348327400000004
-		2 0 0.49048901499999997 7 0.50951098500000003
-		2 7 0.50951198399999997 8 0.49048801600000003
-		2 0 0.48411761199999997 7 0.51588238800000008
-		2 0 0.48690238899999999 7 0.51309761100000006
-		2 0 0.49140879399999998 7 0.50859120600000007
-		2 7 0.5158836 8 0.4841164
-		2 7 0.51309881499999999 8 0.48690118500000001
-		2 7 0.50859223600000003 8 0.49140776400000002
-		2 7 0.51510102700000004 8 0.48489897300000001
-		2 0 0.48490008099999998 7 0.51509991900000007
-		2 0 0.49114864400000002 7 0.50885135599999998
-		2 7 0.50885225200000006 8 0.491147748
-		2 4 0.49633365400000001 7 0.50366634600000004
-		2 4 0.49207229099999999 7 0.50792770900000006
-		2 4 0.49207322399999998 7 0.50792677600000002
-		2 4 0.49633433399999999 7 0.50366566600000007
-		2 4 0.49320386100000002 7 0.50679613899999998
-		2 4 0.49320486099999999 7 0.50679513900000006
-		2 4 0.48385861400000002 7 0.51614138600000004
-		2 4 0.48386023500000003 7 0.51613976500000003
-		2 4 0.49549157300000002 7 0.50450842699999998
-		2 4 0.49207730799999999 7 0.50792269200000006
-		2 4 0.49207826700000001 7 0.50792173299999999
-		2 4 0.49549235800000002 7 0.50450764199999998
-		2 4 0.49367825399999998 7 0.50632174600000002
-		2 4 0.49367923600000002 7 0.50632076400000003
-		2 4 0.48827986699999998 7 0.51172013300000008
-		2 4 0.48828124899999997 7 0.51171875100000008
-		2 7 0.50037579700000001 8 0.49962420299999999
-		2 0 0.49962432000000001 7 0.50037567999999999
-		2 0 0.49735133500000001 7 0.50264866500000005
-		2 0 0.49995212100000003 7 0.50004787900000003
-		2 7 0.50264927800000003 8 0.49735072200000002
-		2 7 0.50004796299999998 8 0.49995203700000002
-		2 7 0.50043157199999999 8 0.49956842800000001
-		2 0 0.49956866999999999 7 0.50043133000000006
-		2 0 0.49618277199999999 7 0.50381722800000006
-		2 7 0.50381793800000008 8 0.49618206199999998
-		2 0 0.49785988599999997 7 0.50214011400000003
-		2 7 0.50214062700000006 8 0.49785937299999999
-		2 0 0.49526810700000001 7 0.50473189299999999
-		2 7 0.504732654 8 0.495267346
-		2 7 0.5 8 0.5
-		2 7 0.5 8 0.5
-		2 0 0.5 7 0.5
-		2 0 0.5 7 0.5
-		2 7 0.5 8 0.5
-		2 0 0.5 7 0.5
-		2 0 0.5 7 0.5
-		2 7 0.5 8 0.5
-		2 0 0.49603633000000003 7 0.50396366999999997
-		2 7 0.50396430400000003 8 0.49603569600000003
-		2 0 0.49910958700000002 7 0.50089041300000003
-		2 7 0.50089071600000001 8 0.49910928399999999
-		2 0 0.499211607 7 0.500788393
-		2 0 0.49940562399999999 7 0.50059437600000001
-		2 7 0.50059463500000001 8 0.49940536499999999
-		2 7 0.500788703 8 0.499211297
-		2 0 0.49999649099999999 7 0.50000350900000001
-		2 0 0.49996644099999998 7 0.50003355900000002
-		2 7 0.50003362299999998 8 0.49996637700000002
-		2 7 0.500003529 8 0.499996471
-		2 0 0.5 7 0.5
-		2 0 0.5 7 0.5
-		2 7 0.5 8 0.5
-		2 7 0.5 8 0.5
-		2 0 0.5 7 0.5
-		2 7 0.5 8 0.5
-		2 0 0.5 7 0.5
-		2 7 0.5 8 0.5
-		2 0 0.5 7 0.5
-		2 0 0.5 7 0.5
-		2 7 0.5 8 0.5
-		2 7 0.5 8 0.5
-		2 0 0.5 7 0.5
-		2 7 0.5 8 0.5
-		2 0 0.5 7 0.5
-		2 7 0.5 8 0.5
-		2 0 0.5 7 0.5
-		2 7 0.5 8 0.5
-		2 7 0.5 8 0.5
-		2 7 0.5 8 0.5
-		2 0 0.5 7 0.5
-		2 0 0.5 7 0.5
-		2 7 0.5 8 0.5
-		2 0 0.5 7 0.5
-		2 0 0.5 7 0.5
-		2 7 0.5 8 0.5
-		2 7 0.5 8 0.5
-		2 0 0.5 7 0.5
-		2 0 0.49883285700000002 7 0.50116714299999998
-		2 0 0.49516065500000001 7 0.50483934500000005
-		2 7 0.50483995599999998 8 0.49516004400000002
-		2 7 0.50116745500000004 8 0.49883254500000002
-		2 0 0.49784539999999999 7 0.50215460000000001
-		2 0 0.49981221100000001 7 0.50018778900000005
-		2 7 0.50018791600000001 8 0.49981208399999999
-		2 7 0.50215501400000007 8 0.49784498599999999
-		2 0 0.499955753 7 0.50004424700000005
-		2 7 0.50004429500000003 8 0.49995570499999997
-		2 0 0.499999996 7 0.500000004
-		2 0 0.49966804100000001 7 0.50033195900000005
-		2 0 0.498868005 7 0.50113199500000005
-		2 0 0.49968686099999998 7 0.50031313900000007
-		2 7 0.50000000500000008 8 0.49999999499999997
-		2 7 0.50033210800000005 8 0.499667892
-		2 7 0.50113226399999999 8 0.49886773600000001
-		2 7 0.50031328000000008 8 0.49968671999999997
-		2 52 0.26083283499999999 57 0.73916716500000001
-		2 52 0.36723749300000003 57 0.63276250700000003
-		2 67 0.63276148200000004 68 0.36723851800000001
-		2 67 0.73916654400000004 68 0.26083345600000002
-		2 52 0.29864960600000001 57 0.70135039399999999
-		2 67 0.70135085100000005 68 0.298649149
-		2 51 0.483511513 52 0.51648848700000005
-		2 68 0.51648852300000003 70 0.48351147700000002
-		2 42 0.5 56 0.5
-		2 63 0.5 67 0.5
-		2 42 0.5 56 0.5
-		2 63 0.5 67 0.5
-		2 42 0.5 56 0.5
-		2 63 0.5 67 0.5
-		2 42 0.49280082800000002 57 0.50719917199999998
-		2 63 0.492801129 67 0.50719887100000005
-		2 51 0.43586533 52 0.56413467000000006
-		2 42 0.45490962699999998 57 0.54509037300000007
-		2 63 0.45491041100000001 67 0.54508958900000004
-		2 68 0.56413475000000002 70 0.43586524999999998
-		2 42 0.35898778599999998 57 0.64101221400000008
-		2 52 0.50501216100000001 55 0.49498783899999999
-		2 61 0.49498806899999997 68 0.50501193100000008
-		2 63 0.35898899299999998 67 0.64101100700000002
-		2 42 0.5 56 0.5
-		2 63 0.5 67 0.5
-		2 42 0.5 56 0.5
-		2 63 0.5 67 0.5
-		2 52 0.53267088600000001 55 0.46732911399999999
-		2 52 0.57756945599999998 54 0.42243054400000002
-		2 66 0.42242960699999998 68 0.57757039300000002
-		2 61 0.46733015999999999 68 0.53266984000000006
-		2 51 0.5 52 0.5
-		2 68 0.5 70 0.5
-		2 52 0.5 55 0.5
-		2 61 0.5 68 0.5
-		2 52 0.5 55 0.5
-		2 61 0.5 68 0.5
-		2 51 0.5 52 0.5
-		2 68 0.5 70 0.5
-		2 51 0.53171896800000007 52 0.46828103199999999
-		2 51 0.52482968600000002 52 0.47517031399999998
-		2 68 0.47517036099999999 70 0.52482963900000001
-		2 68 0.46828106899999999 70 0.53171893100000001
-		2 52 0.40580397299999998 54 0.59419602700000007
-		2 52 0.404392372 54 0.595607628
-		2 66 0.59560765999999998 68 0.40439234000000002
-		2 66 0.59419611300000008 68 0.40580388699999997
-		2 52 0.439317825 55 0.56068217500000006
-		2 52 0.41954994699999998 55 0.58045005300000008
-		2 61 0.58045044300000004 68 0.41954955700000002
-		2 61 0.56068254699999998 68 0.43931745300000002
-		2 52 0.16783477099999999 55 0.83216522900000001
-		2 61 0.83216520599999999 68 0.16783479400000001
-		2 51 0.72073284199999998 52 0.27926715800000002
-		2 68 0.279267561 70 0.72073243900000006
-		2 52 0.53118735700000008 54 0.46881264299999997
-		2 51 0.83721393499999996 52 0.16278606500000001
-		2 68 0.16278619599999999 70 0.83721380400000001
-		2 66 0.46881040400000001 68 0.53118959600000004
-		2 51 0.164812978 54 0.83518702200000006
-		2 66 0.83518549900000005 70 0.164814501
-		2 54 0.52580960900000007 55 0.47419039099999999
-		2 54 0.81453410900000001 55 0.18546589099999999
-		2 61 0.18546562799999999 66 0.81453437200000001
-		2 61 0.47419053900000002 66 0.52580946100000003
-		2 54 0.20591257199999999 55 0.79408742799999998
-		2 61 0.79408787700000005 66 0.205912123
-		2 54 0.5 58 0.5
-		2 54 0.5 58 0.5
-		2 62 0.5 66 0.5
-		2 62 0.5 66 0.5
-		2 51 0.5 60 0.5
-		2 51 0.5 60 0.5
-		2 70 0.5 71 0.5
-		2 70 0.5 71 0.5
-		2 50 0.5 55 0.5
-		2 50 0.5 55 0.5
-		2 61 0.5 69 0.5
-		2 61 0.5 69 0.5
-		2 50 0.48979995199999998 55 0.51020004800000007
-		2 50 0.48575769699999999 55 0.51424230300000007
-		2 61 0.51020072500000002 69 0.48979927499999998
-		2 61 0.51424320300000004 69 0.48575679700000002
-		2 54 0.5 58 0.5
-		2 54 0.5 58 0.5
-		2 62 0.5 66 0.5
-		2 62 0.5 66 0.5
-		2 51 0.63531352600000002 60 0.36468647399999998
-		2 51 0.66280021300000003 60 0.33719978699999997
-		2 70 0.63530730300000005 71 0.36469269700000001
-		2 70 0.66279452400000005 71 0.337205476
-		2 52 0.169830498 57 0.83016950200000006
-		2 52 0.21636644799999999 57 0.78363355200000007
-		2 52 0.36480616900000001 57 0.63519383100000004
-		2 42 0.500828834 56 0.499171166
-		2 42 0.5 56 0.5
-		2 42 0.5 56 0.5
-		2 42 0.5 56 0.5
-		2 52 0.183701858 57 0.81629814200000006
-		2 67 0.83016890200000004 68 0.16983109800000001
-		2 67 0.78363263800000005 68 0.21636736200000001
-		2 67 0.63519296600000008 68 0.36480703399999997
-		2 63 0.49917105499999997 64 0.50082894500000008;
-	setAttr ".wl[1000:1204].w"
-		2 63 0.5 67 0.5
-		2 63 0.5 67 0.5
-		2 63 0.5 67 0.5
-		2 67 0.81629818399999998 68 0.18370181599999999
-		2 0 0.5 7 0.5
-		2 0 0.5 7 0.5
-		2 7 0.5 8 0.5
-		2 7 0.5 8 0.5
-		2 0 0.5 7 0.5
-		2 7 0.5 8 0.5
-		2 0 0.49933006000000002 7 0.50066993999999998
-		2 7 0.50066962100000001 8 0.49933037899999999
-		2 0 0.49974600200000002 7 0.50025399800000003
-		2 0 0.5 7 0.5
-		2 7 0.50025371000000007 8 0.49974628999999998
-		2 7 0.5 8 0.5
-		2 0 0.5 7 0.5
-		2 7 0.5 8 0.5
-		2 0 0.49702347099999999 7 0.50297652900000001
-		2 0 0.493033043 7 0.50696695700000005
-		2 7 0.50297585900000008 8 0.49702414099999997
-		2 7 0.50696494199999997 8 0.49303505800000003
-		2 0 0.47812479699999999 7 0.52187520300000001
-		2 7 0.52186956400000006 8 0.47813043599999999
-		2 0 0.382093513 7 0.61790648700000006
-		2 7 0.61791217600000004 8 0.38208782400000002
-		2 0 0.47069262000000001 7 0.52930737999999999
-		2 0 0.49998436899999998 7 0.50001563100000002
-		2 7 0.52930572200000003 8 0.47069427800000002
-		2 7 0.50001557299999999 8 0.49998442700000001
-		2 0 0.49843217299999998 7 0.50156782700000002
-		2 7 0.501567455 8 0.498432545
-		2 0 0.47929123400000001 7 0.52070876600000005
-		2 7 0.52070558600000005 8 0.479294414
-		2 0 0.5 7 0.5
-		2 0 0.5 7 0.5
-		2 0 0.5 7 0.5
-		2 0 0.5 7 0.5
-		2 0 0.5 7 0.5
-		2 0 0.5 7 0.5
-		2 0 0.5 7 0.5
-		2 0 0.5 7 0.5
-		2 0 0.5 7 0.5
-		2 0 0.5 7 0.5
-		2 0 0.5 7 0.5
-		2 0 0.5 7 0.5
-		2 7 0.5 8 0.5
-		2 7 0.5 8 0.5
-		2 7 0.5 8 0.5
-		2 7 0.5 8 0.5
-		2 7 0.5 8 0.5
-		2 7 0.5 8 0.5
-		2 7 0.5 8 0.5
-		2 7 0.5 8 0.5
-		2 7 0.5 8 0.5
-		2 7 0.5 8 0.5
-		2 7 0.5 8 0.5
-		2 7 0.5 8 0.5
-		2 7 0.5 8 0.5
-		2 7 0.5 8 0.5
-		2 7 0.5 8 0.5
-		2 12 0.5 14 0.5
-		2 12 0.5 14 0.5
-		2 12 0.5 14 0.5
-		2 12 0.53821080300000002 14 0.46178919699999998
-		2 12 0.54680144900000005 14 0.45319855100000001
-		2 12 0.59317408100000002 14 0.40682591899999998
-		2 12 0.55855930399999998 14 0.44144069600000002
-		2 12 0.49891094699999999 14 0.50108905300000006
-		2 24 0.5 32 0.5
-		2 24 0.50109123900000008 32 0.49890876099999998
-		2 24 0.44144691600000002 32 0.55855308400000003
-		2 24 0.40683287800000001 32 0.59316712199999999
-		2 24 0.45320281800000001 32 0.54679718200000005
-		2 24 0.46179187900000002 32 0.53820812100000004
-		2 24 0.5 32 0.5
-		2 24 0.5 32 0.5
-		2 32 0.21756152200000001 33 0.78243847799999999
-		2 25 0.45157916199999998 33 0.54842083800000008
-		2 25 0.37295951799999999 33 0.62704048200000007
-		2 33 0.97979949899999996 37 0.020200500999999999
-		2 33 0.98578916800000005 47 0.014210832
-		2 25 0.101214657 33 0.89878534300000001
-		2 25 0.5 32 0.5
-		2 32 0.47968900599999997 33 0.52031099400000003
-		2 25 0.046516577000000003 33 0.953483423
-		2 33 0.873049988 34 0.126950012
-		2 32 0.30447256299999997 33 0.69552743700000008
-		2 33 0.92396158800000006 34 0.076038412
-		2 33 0.55898950400000003 34 0.44101049599999997
-		2 33 0.25628848700000001 34 0.74371151300000005
-		2 33 0.655336959 34 0.344663041
-		2 33 0.64788836400000005 34 0.35211163600000001
-		2 33 0.42633119200000003 36 0.57366880799999997
-		2 36 0.50713552000000006 37 0.49286447999999999
-		2 33 0.497826818 37 0.50217318200000005
-		2 33 0.50052112199999998 47 0.49947887800000002
-		2 33 0.68086671799999998 47 0.31913328200000002
-		2 33 0.51960035100000002 37 0.48039964899999998
-		2 33 0.50519927600000003 36 0.49480072400000003
-		2 33 0.49850332800000002 37 0.50149667200000003
-		2 33 0.43199895500000002 34 0.56800104500000004
-		2 33 0.49989621699999998 34 0.50010378300000002
-		2 33 0.46650161899999998 34 0.53349838100000002
-		2 34 0.850614388 35 0.149385612
-		2 33 0.200848312 36 0.79915168800000003
-		2 33 0.28835671499999999 36 0.71164328500000007
-		2 33 0.455714334 37 0.54428566600000006
-		2 33 0.44778665000000001 36 0.55221335000000005
-		2 37 0.53742752000000005 40 0.46257248000000001
-		2 37 0.51044381400000005 40 0.489556186
-		2 36 0.26952346500000002 37 0.73047653499999998
-		2 33 0.42836159299999998 37 0.57163840700000002
-		2 37 0.55733311200000002 40 0.44266688799999998
-		2 33 0.33033015999999998 37 0.66966984000000007
-		2 33 0.435504903 37 0.564495097
-		2 37 0.52587013400000004 40 0.47412986600000001
-		2 33 0.41224981799999999 47 0.58775018200000007
-		2 33 0.32416733599999997 47 0.67583266400000008
-		2 33 0.53766264600000002 47 0.46233735399999998
-		2 33 0.49594269699999999 47 0.50405730300000007
-		2 37 0.41091312299999999 40 0.58908687700000006
-		2 37 0.239467451 40 0.760532549
-		2 37 0.26837129199999998 40 0.73162870800000002
-		2 37 0.38103368599999998 40 0.61896631400000002
-		2 36 0.52486233700000007 39 0.47513766299999999
-		2 36 0.226009193 39 0.773990807
-		2 36 0.244112779 39 0.75588722100000005
-		2 36 0.5 39 0.5
-		2 36 0.36054825499999998 39 0.63945174500000002
-		2 36 0.27595850100000002 39 0.72404149900000003
-		2 36 0.57291444800000002 39 0.42708555199999998
-		2 36 0.50003656400000007 39 0.49996343599999998
-		2 34 0.52008976500000004 35 0.47991023500000002
-		2 34 0.42479926600000001 35 0.57520073400000005
-		2 34 0.43587769900000001 35 0.56412230100000005
-		2 34 0.5 35 0.5
-		2 34 0.32396119499999998 35 0.67603880500000002
-		2 34 0.31958983400000002 35 0.68041016600000004
-		2 34 0.56133333900000004 35 0.43866666100000001
-		2 34 0.50000999700000004 35 0.49999000300000002
-		2 28 0.5 35 0.5
-		2 28 0.5 35 0.5
-		2 28 0.5 35 0.5
-		2 28 0.5 35 0.5
-		2 41 0.69569024200000007 43 0.30430975799999999
-		2 41 0.646662124 47 0.353337876
-		2 41 0.50766826500000006 47 0.49233173499999999
-		2 41 0.86661086700000001 43 0.13338913299999999
-		2 41 0.50042988500000007 47 0.49957011499999998
-		2 41 0.73672080400000006 47 0.26327919599999999
-		2 41 0.62852188399999998 43 0.37147811600000002
-		2 41 0.87691561699999998 43 0.12308438300000001
-		2 40 0.5 45 0.5
-		2 40 0.5 45 0.5
-		2 40 0.5 45 0.5
-		2 40 0.5 45 0.5
-		2 38 0.35122886599999997 39 0.64877113400000008
-		2 38 0.5 39 0.5
-		2 38 0.49739987099999999 39 0.50260012900000006
-		2 38 0.094888419000000002 39 0.905111581
-		2 41 0.40279204499999999 47 0.59720795500000001
-		2 41 0.444397549 47 0.55560245100000005
-		2 41 0.396756157 47 0.603243843
-		2 41 0.49764962699999998 47 0.50235037300000007
-		2 48 0.5 49 0.5
-		2 48 0.52831637200000003 49 0.47168362800000002
-		2 48 0.53328014700000004 49 0.46671985300000002
-		2 48 0.67236951900000008 49 0.32763048099999997
-		2 48 0.64396773299999999 49 0.35603226700000001
-		2 48 0.62615435699999999 49 0.37384564300000001
-		2 48 0.5 49 0.5
-		2 48 0.5 49 0.5
-		2 53 0.5 65 0.5
-		2 53 0.5 65 0.5
-		2 53 0.5 65 0.5
-		2 53 0.62616504000000006 65 0.37383495999999999
-		2 53 0.64397569500000007 65 0.35602430499999999
-		2 53 0.67237619999999998 65 0.32762380000000002
-		2 53 0.533287505 65 0.466712495
-		2 53 0.52832124899999999 65 0.47167875100000001
-		2 42 0.335738394 49 0.66426160600000006
-		2 42 0.5 49 0.5
-		2 42 0.5 49 0.5
-		2 42 0.5 49 0.5
-		2 42 0.39233986999999998 49 0.60766013000000008
-		2 42 0.27432009200000002 49 0.72567990800000004
-		2 42 0.27617285600000002 49 0.72382714400000003
-		2 42 0.34923019100000002 49 0.65076980900000003
-		2 64 0.33574143400000001 65 0.66425856599999999
-		2 64 0.34923428200000001 65 0.65076571800000005
-		2 64 0.27617596999999999 65 0.72382403000000006
-		2 64 0.27432358299999998 65 0.72567641700000007
-		2 64 0.39234137499999999 65 0.60765862500000001
-		2 64 0.5 65 0.5
-		2 64 0.5 65 0.5
-		2 64 0.5 65 0.5
-		2 4 0.70225168199999999 7 0.29774831800000001
-		2 4 0.50846392600000001 7 0.49153607399999999
-		2 4 0.613921567 7 0.386078433
-		2 4 0.50846813899999999 7 0.49153186100000001
-		2 4 0.70225204400000008 7 0.29774795599999998
-		2 4 0.81024800399999997 6 0.18975199600000001
-		2 4 0.82067057799999998 6 0.17932942199999999
-		2 4 0.81024800399999997 6 0.18975199600000001;
+	setAttr ".wl[0:406].w"
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		3 4 0.47888470300000008 6 0.105113242 7 0.41600205499999998
+		3 4 0.47888470300000008 6 0.105113242 7 0.41600205499999998
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		3 4 0.50863407500000002 6 0.12705413099999999 7 0.36431179400000002
+		3 4 0.50863407500000002 6 0.12705413099999999 7 0.36431179400000002
+		3 4 0.240497866 6 0.037043169000000001 7 0.72245896500000006
+		3 4 0.240497866 6 0.037043169000000001 7 0.72245896500000006
+		1 7 1
+		1 7 1
+		1 7 1
+		3 4 0.00050434999999999998 6 2.4507000000000001e-05 7 0.99947114299999995
+		3 4 0.44937469099999999 6 0.070548269999999996 7 0.48007703899999993
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		3 4 0.23398903400000001 6 0.037583288999999999 7 0.728427677
+		3 4 0.54658806500000001 6 0.087792907000000003 7 0.36561902800000001
+		3 4 0.61139721599999997 6 0.093434078000000004 7 0.295168706
+		3 4 0.61139721599999997 6 0.093434078000000004 7 0.295168706
+		2 4 0.29038691500000002 6 0.70961308499999998
+		2 4 0.22060966900000001 6 0.77939033099999999
+		2 4 0.22060966900000001 6 0.77939033099999999
+		2 4 0.29038691500000002 6 0.70961308499999998
+		2 4 0.32394091800000002 6 0.67605908199999998
+		2 4 0.27934015499999998 6 0.72065984500000002
+		2 4 0.27171280799999997 6 0.72828719200000003
+		2 4 0.27171280799999997 6 0.72828719200000003
+		2 4 0.64688322399999998 6 0.35311677600000002
+		2 4 0.63890313700000001 6 0.36109686299999999
+		2 4 0.74238099300000004 6 0.25761900700000001
+		2 4 0.74557868900000002 6 0.25442131099999998
+		2 4 0.74238099300000004 6 0.25761900700000001
+		2 4 0.63890313700000001 6 0.36109686299999999
+		2 4 0.64688322399999998 6 0.35311677600000002
+		2 4 0.76611933900000007 6 0.23388066099999999
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		3 2 0.151735337 5 0.30894805600000003 6 0.53931660699999995
+		3 2 0.151735337 5 0.30894805600000003 6 0.53931660699999995
+		3 2 0.13105133599999999 5 0.32564842500000002 6 0.54330023900000002
+		3 2 0.046856756999999999 5 0.105195759 6 0.84794748399999997
+		3 2 0.21595115400000001 5 0.30981203699999998 6 0.47423680899999993
+		3 2 0.21595115400000001 5 0.30981203699999998 6 0.47423680899999993
+		3 2 0.228059337 5 0.350526422 6 0.42141424100000008
+		3 2 0.228059337 5 0.350526422 6 0.42141424100000008
+		3 2 0.13263043499999999 5 0.35208994300000002 6 0.51527962199999999
+		3 2 0.13263043499999999 5 0.35208994300000002 6 0.51527962199999999
+		3 2 0.13040164200000001 5 0.34297590700000002 6 0.52662245099999994
+		3 2 0.135673183 5 0.304667295 6 0.55965952200000002
+		3 2 0.13040164200000001 5 0.34297590700000002 6 0.52662245099999994
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 5 1
+		1 5 1
+		3 2 0.203425888 5 0.65917445399999997 6 0.13739965800000001
+		3 2 0.15451602 5 0.70536837699999999 6 0.14011560300000001
+		3 2 0.14524965300000001 5 0.73792688899999992 6 0.11682345800000001
+		3 2 0.15490518 5 0.73381219900000005 6 0.111282621
+		3 2 0.183651229 5 0.70252973699999999 6 0.113819034
+		3 2 0.203458846 5 0.678448626 6 0.118092528
+		3 2 0.17200179099999999 5 0.67875343199999993 6 0.149244777
+		3 2 0.203458846 5 0.678448626 6 0.118092528
+		3 2 0.183651229 5 0.70252973699999999 6 0.113819034
+		3 2 0.15490518 5 0.73381219900000005 6 0.111282621
+		3 2 0.14524965300000001 5 0.73792688899999992 6 0.11682345800000001
+		3 2 0.15479331299999999 5 0.70402491199999995 6 0.14118177500000001
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		2 2 0.049311305 5 0.95068869499999997
+		1 5 1
+		1 5 1
+		1 5 1
+		3 2 1.0000000000000001e-09 5 0.99999999800000006 6 1.0000000000000001e-09
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1;
+	setAttr ".wl[407:906].w"
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1;
+	setAttr ".wl[907:1204].w"
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 7 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 6 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		1 5 1
+		3 4 0.57754383900000006 6 0.182999095 7 0.239457066
+		3 4 0.60509023100000003 6 0.160212348 7 0.23469742099999999
+		3 4 0.57165465300000007 6 0.125375823 7 0.30296952399999999
+		3 4 0.60509023100000003 6 0.160212348 7 0.23469742099999999
+		3 4 0.57754383900000006 6 0.182999095 7 0.239457066
+		3 4 0.69101652599999996 6 0.137193541 7 0.17178993300000001
+		3 4 0.63520579300000002 6 0.136306922 7 0.22848728500000001
+		3 4 0.69101652599999996 6 0.137193541 7 0.17178993300000001;
 	setAttr -s 72 ".pm";
 	setAttr ".pm[0]" -type "matrix" 0.99999999999997058 -1.6999987185035226e-16 1.1359640224157811e-16 0
 		 2.4359894726214606e-16 1.0000000000000253 1.05471187339393e-14 0 4.3056832209363324e-17 1.049160758270804e-14 1.0000000000000044 0
@@ -25586,6 +25579,7 @@ createNode skinCluster -n "skinCluster2";
 	setAttr -s 72 ".lw";
 	setAttr ".mmi" yes;
 	setAttr ".ucm" yes;
+	setAttr ".nw" 2;
 	setAttr -s 72 ".ifcl";
 	setAttr -s 72 ".ifcl";
 createNode dagPose -n "bindPose3";
@@ -26089,55 +26083,11 @@ createNode dagPose -n "bindPose3";
 	setAttr ".bp" yes;
 createNode ngst2SkinLayerData -n "ngSkinToolsData_skinCluster2";
 	rename -uid "B909E60A-404E-0817-B277-15B70BC905F0";
-	setAttr ".ld" -type "ngst2SkinLayerDataStorage" 16 48829 {
-"lLYqXLUEAAABAAAADAAAAEJhc2Ugd2VpZ2h0cwEUCQEE8D8JCAQAAAEsAEgRDQUBAOANHF4IAH4BAD44AD4BAL4gAH4wAD4BAH4wAL4gAH4wAD4BAH4wAJ4gABEBETARAV4QABEY/ggAEQj+AQDeAQB+wABeAQA+OAA+AQD+IADmIAA4EBKKxw923j9y2mKcU3HdbWAZAThL40Ls6dffP1uDYdRhetpCIAAJAZ7AAJ4BABFQEQFGEAAYamrUtm3M0xWQGHRjvPfdutgVEBEBOPaubmrAYt8/IFGD7p0K3kIgABTKXmCu8wpG+ABeAQAUhZOxMQNyRkgAGBz9ESk6UNpCYAD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQBeAQA4RCZ7I2SG3z/o7Tx4gkDfQrgSNOBpCYl9WN0/BhHRhIQeRvASNFaUeNQJTt8/B2QEfB9oRkAAfgEANJy3YPm08t4/e8YgIr8IxkAANHAFXBbVO98/Ede5Ri1lxkAAdKyW6W675N8/aDiOHQzq3z9N4osbtaHfP3jNnHdUsYZQAFR5R30j6YnfPyO5mhfuxt8/vLSpCixkGThUQRKpcMj73j+uq06kaCnfP/0dY989cxkgXgEANI4/vVmaCN8/z1DmufpuhjAA/gEAvgEAVIJ2fUnY+d8/oPOfsZrU3z8HaKQuN/9mqAA0zs1m3+743z/XfwdjdcEZKBSOwbm279wZEBTZenwBebIZEFYBAB4IFhEIEQEREBEIHAAAsB24Kg+/GVAUVvN8VmnxGRA0jIG+PRXz3z99SYYCQ/YZGBEBMCdKaEjx/98/wKMkP3Ni4AARcBEIPgEAPhgAXhAAPhgAEQE+GAB+EAA+AQARMBEIEQEREBEIPgEAPOA/CQVMpuDs3z+vlN5RtrBGIAE0Q66Q9LLc3z8Uk4Jb7PxGIAAQcoLnakY9OHg1tDv8///fP7h2sqqP+t8/ncTaEXTt3z9Vx5ya3vrfQoAE/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA1gEAkRARCD4BABkYFLq3NxIG9Xm4FObxRKjW+xEQGSg2AQAZGDRNrlCJOw==",
-"z98/KhLLd9qNETgZARQBjnrAmJkmeAgUqDdqWjh0JuAbMGeUzvDTH94/GVmkcL6daBEBFIIypQ5Q5hlYFMU/QCS1rBlQCQERkP4IAF4IAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAMYBAAAB/vME/vME/vME/vME/vME/vME/vME/vME/vME/vME/vME/vME/vME/vME/vME/vME/vME/vME/vMExvME/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEAggEAEI4jmtUuSiQQ/gEA/gEA/gEA/gEA/gEAPgEAFPkpKMqOiyZkET4BABjIJeSwe+zZ/qwV/qwV/qwV/qwV/qwV/qwV/qwV/qwV/qwV/qwV/qwV/qwV/qwV/qwVGqwV/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA7gEACQEAAv5DFv5DFv5DFv5DFv5DFv5DFv5DFv5DFv5DFv5DFv5DFv5DFv5DFv5DFv5DFv5DFv5DFv5DFv5DFv5DFv5DFv5DFv5DFv5DFv5DFv5DFv5DFv5DFv5DFv5DFv5DFv5DFv5DFv5DFv5DFv5DFopDFnTSapXYbYTeP4UwXrUDeOA/evdn7wR44D8s6YZ5h68ZCBjd+km1orHgFQgYUtARwi+e4hUIGBZHS6Txk+EVCCCA6IPpPAPgP4ENCFiXt8B1Aj/gP9SggGR0jtk/F1AV5/cS3CJsI1jrBpPCn9DcPxw9I73kVNk/mtdoXp+T2RUQESAe0wnYsYQKpfsS3D+cX/uDeo7ZPwiRVGvugeE/2UxuCe+B4T8O5PWbE5LgPyMJzCHqNOM/85/ziuKh4hUIGL0pSdQCy+EVCCBZu3NJosvhP1cNCDgwJwOtCXvhP4HzABGibeAVEBGA/gEAvgEA2PRwI7F2VN0/d2QGepvc3D/9HcoezWLaP/p1dt7+L9k/znkH2VH32j+vtg==",
-"XTozwd8/KmcBEQ8X4BUQESARMBFAFDl98cDBG6YgUv4BAP4BAN4BABip6PXDBFjN/sAB4sAB/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEAfgEAAAP+IRn+IRn+IRn+IRn+IRn+IRn+IRn+IRn+IRn+IRn+IRn+IRn+IRn+IRn+IRn+IRn+IRn+IRn+IRn+IRn+IRn+IRn+IRn+IRn+IRn+IRn+IRn+IRn+IRn+IRn+IRn+IRn+IRn+IRn+IRn+IRn+IRn+IRn+IRn+IRn+IRlKIRlMOe4ylWg54D/knXvNdVLdP8052PwBCDgnUFlI7uHGPyE+jp/+4cb+FCT+FCT+FCSiFCQ0MCNLnh8IzT8MBaOsEQhmDCU03QHFIWiD3T8L1O9+49ompCcRAXjs3fBC1trcPw5tJSa6fOI/BOvrmji64z/oYcP9tnzi/lABglABFEUG1aj4ikbAAPCQR2DsMr6KzT9qslGS/7vjPwaMaWewTOw/NTcWXatM7D/q+VaA+rvjPyjdjomYDeE/+PARPeX65z/kBJAR0frnPyWmUxWVDeE/ylD2DzL97z8mQSwuHjDPPxM07oUaMM8/NSHwYO/A3j/A1gRxkQLnP0Dt7/iQ8+Y/oq4z39wU6D/uisqYjfPmPylpDj3hm+4/ADEx/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA2gEAOGuLhO5aDao/9+7JuMZNkKKYBFDE5ri2l9WdP5LLKgFMDao/vbf+l8WqQAAYz6uj/4TVnaJwAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAA==",
-"/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEAvgEAAAT+sRT+sRT+sRT+sRT+sRT+sRT+sRT+sRT+sRT+sRT+sRT+sRT+sRT+sRT+sRT+sRT+sRQqsRQ4PFd311LK2z+jjhAHRcrbIjQZGBWFaVTA/NQVEFiQW33nvPzUPyRgd7PRiNY/wuat8byI1hUgEQEYYHHQMpH62kIYABBK1KWimBUYphB7FDkryG5meB5oe2jgPwWWDjMbJtw/MquNqR4m3D9xQ+I85GPgP3MNCCz81IbaXyLdPwdwyFwBCFiO2SJ4Ww3jP0g9nxNaDeM/h6J1rscL4hUICbhGkABYeoh1+yyK1T947QZm1gDfP32T0ZmcGdUNMD4BAIjgP0LE5yFkKeA/c0kkJ1gD5D/cu4R59t/oP01kIxbMrug/Sw0INKvXmJUe9+E/BSfchYKDGQgArg0YFDb/9TbkVx7EH0aYAIBWlSq8FfjpP3jRinoK1Ok/vGeqzZpk5T/Q9KrNq1zjP78NEAB7DSAAWA0wGIxu7qyS1+pawABmAQBAVmOwBjLL1j+GVR5zB9XVP4QNCD4yABjN+/efKbzIQhgA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA3gEAdIuFb2UxGN4/I2S2nDoY3j/li4JZiFjeP16yd4CQWD4ojkYBAHQ8eT4QVVrfP/oOWdvGpd4/Es5z9Myl3j8B1vmDWVoeEBNmAQB0O2pXGyn13j8L+IP3RrreP1yTN1tMut4/m4b6FC71hoAA/gEA/gEAfgEA8H3nm1Q77sPfPxvQ88ccft8/Yt3JsSB+3z+8EHEV8cPfP7ksJO6mkN8/n7FfH6uQ3z8faTEfivfePyCkSuuQ994/PbZNSiK23z9eOPbSMX7fP7/BXdg1ft8/jOu0lCW23z+4o12tbJjfP4pT68twmN8/4TOuM/o/3z+gKyf//z+GgAH+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQ==",
-"AP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BABEB6CBfeITYeOY/VhhkI1ZF4D+Cuo/XPqXjP5xsC/leReA/An/WRtl45j//ra44je3pP0OcNvHuQuo/BK6uBRAABf4JDP4JDP4JDP4JDP4JDP4JDP4JDP4JDP4JDP4JDP4JDP4JDP4JDP4JDP4JDP4JDP4JDP4JDP4JDP4JDP4JDP4JDP4JDP4JDP4JDP4JDP4JDP4JDP4JDP4JDP4JDP4JDP4JDP4JDP4JDP4JDOoJDBypLfIM8aDePxEIGEcKbJW6nN4VCBhcX9x7oMPaFQj+awn+awleawk4uu1nvCuW2T8awBjqOrzaFQgYhqxtV/pp3BUIIE+JGG27aNw/Uw0IOJ+x+aXsCd0//xj+3bsk3xUQnugAmH88nIrYa8A/8ept0AdswD9TeFzJbF/hPy/zniO05dY/V0M2asfl1qJQANiGR26nxFXhP8XN/EKykeE/AfGacJnO4j8DxcSQAGjjPxpDfBNXhOI/qSTRYmYf4D+sMf3d4dHfFRARIBEwEUAYY0GHHx9y4aKIAP4BAN4BAGz2ZDX8ChnmP1w7Fl6NM+U/He2NJ8IJ4z+d3XIiARDwPj29jQwHGeY/TTQUGj0z5T+IZNwDVDTjP5nz+UxKzek/1oUCz/6p6D/r3HT8S83pP2F2xkdfNOM/KmaSG0Yz5f4AAf4AAYIAAf4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAH4BAAAG/uEY/uEY/uEY/uEY/uEY/uEY/uEY/uEYQuEYPoBH/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEAZgEAQKxQztTCEdw/97FH9Pr43D/2DQgApQ0YFJMBFJI3UB7gTD7YA4jgP6mqVQ+pH8g/IbrUFdavyD+IMKtkyjbVPw==",
-"YRaqZKhG2T+BDRAAFA0gAKANMBjPRUZMtaHEwrwfQFbOp/xmmuQ/PtVwRnwV5T8/DQg+YgRYDQECmPXQ6T9zu8BEqkjnP1C3UZmnSOdCKAAYjONjjKvK3Q0YGOA/1xGr8qUVEP4BAKYBABQQt2Ki2B0eIDlg4D+hB/qm1h3fP7Z079g68tI//UnwvT/y0g2oGQFM8ex1LhZG4D/oWV0y54zfP/jLZxgBCBki/gEA/gEA/gEA/gEA/gEA/gEACQFUmEq1E8m94D/3nkOV+A/fPw0RMCH2DzHwpgEAHNRxabcc2Nw/EQgkAS/4LIb53z//LgkI2NGQfhT7gd8/lq+/zcU44z/0V3UMhPbhPwNTWKZBnOE/iny2HrCX4T9yYW6hjVXjPzOUy1AwNuMVEBEguLSWyFZAnOE/qL16LYL24T8yUAK+wjjjP/HdVikj/Nw/TWYj7SH83D/kNxTI2Nve/nAC/nACgnACWOVWAtD88+M/xpnyvvTz4z+/EPXiJPjj/rgA/rgAgrgA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEAngEAAAD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQA6AQBEA0hFHctJyD/0jiU7RPTGP/RHCRAAB/XoBOA/CQv+CAD+CAD+CAD+CAD+CAD+CAD+CAD+CAA+AQD+EAL+EAL+EAL+EALmEALwPvj2Ohz4xOA/x5LOMVZH4T8lWQ2cUkfhP+y1ezf0xOA/W47eCQsU4D9TPs8Vz8LiPz/TiXgJFOA/iPGqcMnC4v6QA+KQA/Cwy8qVJMkZ5j81ydVdxRnmP0bOIQSRouM/oVFszrP64D/51H1WoU7gP4WoyMqfTuA/cFe+CLH64D9iVESU1hriP664d3zdGuI/nNDPKIZ64T91PcvVn4HlPw9d2FiFeuE/OFJBjKGB5T/uT0Qml7vkP58MKYehu+Q/PTYnZ/7G4D+Mh9Hi/sbgP1HHl2a3guI/cwF36+LX4j/shJRi5tfiP9sVra6zgg==",
-"4j8AAAAAAADgPwBFs4aoAhRj6pvIzEMZKGD+tHhm8uzhP2cqOavw7OE/Hnk7hjc43z8aDQgsgpW8EtBu4T/9x5tRAQhg5Uy6D0nl2T9whcHYS+XZP/O6FKNw6Ns/8g0IBYdKiAB4wztFguk65T9EifzMlH/gP0E2F7Mxc+U/G5g+zE294UI4AIB+dzC8N63fPxttt7FP+dc/kBDtGSaAzD/QbnKnz0TNP9YNCAlw/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA7gEACQH0wgJSurMXwV/gPyD4PZ3PPOA/3mxC7s084D8NieHDvl/gP25BJNnA8OA/CHehOMVT4T8RS3s7wVPhP313l7298OA/TG4JbvJL4D9ZMy1G/VjgP9W1wxX7WOA//c39QfBL4D87PUhN5/PgP+7NpLHi8+A/Dro+07vT4D/RJsS/t9PgP09jUqWnhuA/NN9QuqJ74D8zpE+DpYbgP8Oc726ge+A/YsPgd9VS4D+DeFOSHK3gP/cYxoUZreA/ABUDPtNS4D+Yqo0nF2LgP3MsTv1qTeA/SP3RdBVi4D94FKNcaU3gP+JKVHJrheA/+gM+hNyi4D9TNmTS2aLgP7O8gvVoheA/oyst1aIN4D/TUfl3+grgP6o0i0iiDeA/zeM48fkK4D/aDjpyJS/gP0WZMcRVJ+A/krpkolYn4D+bQnd4Ji/gP+Zp12OKHOA/2WYUZQ074D9DXEFuCzvgP2+jMvSIHOA/oiWr+ulN4D8R9FQT7E3gP992q8cbguA/KqrYrUtr4D8BcU4QYUbgPzO+rFIeguA/KviJNE5r4D+5Az85Y0bgP+gr6SW1e+A/OmAh07J74D+Z1wyjgkjgPw2cVoSESOA/DLJV4gge4D/zFwac8UDgP08RG6fvQOA/ondHdQce4D+j6e2IrDfgPzAnUHCqN+A/cUtn8DqE4D/wrVqKN4TgP+Ek2druJOA/0uOEFudA4D8hH9ET5UDgPzuKpTXtJOA/JS5Rqckz4D88VgqaxzPgPxDmKOYCYOA/MGpsAABg4D9Z6TIaFAPgP79EQdsTA+A/MQYwp7IV4D/8y61oZADgP+MtNPCzFeA/iBqSlWQA4D/Prl0SiQPgPxmZTA==",
-"kIgD4D8UQHxORR/gP06roMtGH+A/OR+jJIgR4D/cjd03iRHgP5PCQX/DJuA/vv7hF8Um4D8AAAAAAADgPwAAAAAAAOA/AAAAskgVbCjxo2p4IOA/DFw0v3kg4D9VhsFUSwfgP03WFfcBCPA8Or8gYXUG4D9B27x+3gTgPxFmHgrfBOA//KY8B3YG4D/s2stbBwDgPyCubWBGAOA/xTvggkYA4D/Zg4BmB0pAFRbiFCa4Ff4QAP4QAP4QAPCQfP3ZrI8J4D+otRDXpCfgP0pZNx+mJ+A/P647VJAJ4D/fqLeFphHgP3a2PtKJAeA/ZQ97FooB4D+GyjVkpxHgP8c+jMpcAOA/WwtE5FwA4D/mJeIBAADgP6TEpiq4AuA/sp0S90UJ4D9WnLGykALgP37mJwIAAOA/Qe+0ergC4D8deHWHRgngPwkUqf6QAuA/AClR/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEAegEApsAELCQk5PZ8BeA/FlTTSwEIFA2H3asUAhlADOtgdxEuEABpuRkg8H3aqFc7YhjgP+t2GsQSOeA/dsSw02AY4D+7iViKDjngP/+4wp8zs+A/hFiizCez4D8s5MrS48XjP1MTasHvxeM/zbWYBxbw4D90063HIADgPxLBfY0S8OA/zVZbqCAA4D+/Zq341wzgPzU69zDXDOA/HuDfbaWp4D86xoXCnqkZiD6YAP4QAP4QAP4QAAkQ/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA5gEAcMFBD/dODtM/U883uVN13z/7iuBQgrXYP8cm6Q1CARAUAVNyTQ7TrShGAQAACEYTAFoBAH6EBT4BAD4wAD4BAH4gAD4BAD4wAD4QAD4BAP4gAD4BAD5QAD4QAD4BAN4gABE4EQF+EAD+AQB+AQARgP4IAH4IAH4BAF6AAD4BAD4oAD4BAP4gAOYgADi3TeXHWnHdPyiUCJEXdt5ClAM4g1nsDu3X3z/vHKoebXraQiAACQFewAA+GABeEAARAREgEQE+EAAcAACXbVREdcyZPDi/XCdjmArePw1WBFO9Yt9aoABmAQAY4kVPTvUK3YI4ABTn8Fw6AnJGIAEUJ/bWOjNQXhgB/gEA/gEAxgEAGMvPgmdkhdwtEEaAAf4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAA==",
-"/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEAngEANF2LmNB9QN8/wA+ExWCGRhgTNCV9t01+Ht4/7xG9jnVYRgATNGcj7SMbaN8/TZmlcwVORkAAfgEANGE5W7Ww8t4/l0Fei7oIxkAANM+q5LDRO98/GadjBSplxkAANLqopVW65N8/WlwNEAvqhkAAdNyKNrtSsd8/ynoRD7Oh3z81LFE468bfP1Ay1zXliWZAABTdF1bZJ2RmIABwmYOmWsP73j+tD+yWYynfP474gY05c98/MqgttJVKGAEU5cdS9/ZuZlAA/gEAngEAFE4tmsvX+WaIAFQ6pJcfmNTfP/LK29Q2/98/YqJE2+34RjAAFGWpvmhywRkYFEfkRJDt3BkQFIQCPNB1shEQHnAUEQg+AQCGGAAU50eXgQy/EVAcAABmU9QRaPEZEBEBNN8zw+tB9t8/CLKG8RPzRiAANHaIP/py/98/UPj+MvH/RiAACQERkBEIEQF+EAARAREoEQgRAZ4QABEoEQg+AQB+GABeIAA8AABrTZHBs7DfP4GjiFff7EYAATA24QnT6/zfP/RqlDexPdAQTOl3N0ZiMAEZAXgDM7D7///fP34hlgqP+t8/xg8V8XLt3z/t160C3vrfGoAW/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEAvgEAkRARCBEBGRAU1FdZaAf1RqADFCk+Ed3X+xEYGTAJAT4QADwAABN3nlg+z98/i+xO6+KNETggAAD4TrtmsJnelQAYW9krfSB02BUQEQEw230E5dof3j9oUkmvvp1wFJeLEZ5R5hlQFIxz9HrCrBlQ/gEAdgEAEej+CAC+CAD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQDmAQAACf57BP57BP57BP57BP57BP57BP57BP57BP57BP57BP57BP57BP57BP57BP57BP57BP57BOZ7BP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAKIBALhFaEyK1j/APw5QouNRdw==",
-"sz/tk2GjazncP7iEX7NrzOc/Wu5fTf4O1j8ahtKhzIjWQmwavgEANECpjpBq9uE/xVELy4+kJgwaEDCNmfkUIhwa/gEA/gEA/gEA/gEAGQF41c9wW98v2z/nN8Q1ZuXbP8+EqKUKvNQ/gd5S+zV01O6QASWQ/gEA/gEAeBy7Zk8CLeI/BV2OcuAA4D+xgwdUXxLhP1Zl8pMnOOv+4AD+4ADu4AAF4P4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAJ4BAAAK/qkN/qkN/qkN/qkN/qkN/qkN/qkN/qkNQqkNJpwS/hsC/hsC/hsC/hsC/hsC/hsC/hsC/hsCQhsC/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEAOgEAOJkxNCkO5+g/i/vxE0UL5kIwBBhwWwv0c3XjQhgAPgEAGKkJ9m7FBeRiKAA0YJFczbBu0T9jkQtlCPxmUAA4FXeqBq0a4T9qJUBBb07pOlAAAOANEBEIGQEUAzDbAwioGRgULKwev+JeGZAUvqw0Z+X0HgBNIAAAD2U8RBYo2g1QRgEANDD8gqwUceA/pUWIk+KGORgUt3BiZPLIGcA0HiYUo9Nz3z8NU9FmjDkZgBRRtYs/xZ4ZYBgxMKPc96jCYnAAGCLX7X475McVIBSC7FGLX8AZEH4BABRcxu+oYrGmMAD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQDeAQA0dcwaghYY2D+D3hU6tg9GADb+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQARARTnNE77kBkeQAnA4D9RT1X5b8/fP5kvzfjpcNs/RZwtCCRp1z/+KvAAKgXUP4+qBQTzsdE/6MZpy5hBzSJICf4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAA==",
-"/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEAPgEAAAv+kRT+kRT+kRT+kRT+kRT+kRT+kRT+kRT+kRT+kRT+kRT+kRT+kRT+kRT+kRT+kRT+kRT+kRT+kRT+kRT+kRT+kRT+kRT+kRTqkRQ0nTkvW8djzD/rCBzYdekmLHMRARgfSekXGBXZgvwaGK7sEyJ19NeCKAAUO93oNe8HhqQhGFpq//pCxso6UAAeDCURCBkBFPqfSfjvrya8VxSnp8KBOkIZkBShqWVMjYUeWJggAAB5zeHd9OviOmAAhgEAFJMeOzcbbobAABRXJTpgnbAZYDj0M9cIwlXrP9I1/DhJyOxCeAAYOIpEIPEG6hUYFN+EKx3oDxkQFG58qxyrsRk4FG0xx6cHvibMJhRpDsRVpxMZMBRk0PpUr0EZIP4BAP4BAPA+fNkUdgV51j/K7ZHswS/VP8anaHswstk/zrvXtuGh2T/kUwf3tFrcP9kDgDO8cN8/R1E0lfNw2z/S6rg2LfjXNRj+AQD+AQDeAQAU+VlPs3zHJiwo/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEAfgEAFI3lWII38x5ACcDgP1dYVQNIGOA/NGiZA4tH4j/eMen7bUvkP4Hqh/9q/eU/uSr9fQYn5z9GjiXNma/o/jAI/jAI7jAIEjAI/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEAXgEAAAz+2RP+2RP+2RP+2RP+2RP+2RP+2RP+2RP+2RP+2RP+2RP+2RP+2RP+2RP+2RP+2RP+2RP+2RP+2RP+2RP+2RP+2RP+2RP+2RP+2RP+2RP+2RP+2RP+2RP+2RP+2RP+2ROK2RM0ncu9/CBSzD/KcUMr86hGlCcUDD4laVSVJoQmFJ4shfCynybsJhTVPZKYv/ce6EIgAACebIVxYqbWIhQdGCwvhs/AdtIVEBSNtyzt81wZIP4BAP4BAP4BAP4BAA==",
-"/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEAvgEANOywZcXUsOE/yCphtkgxJuQvEQEUqzx4fXdIHkwmIAAAQo635uyx5yIACRi7bbvYUm3oFRAUSp9tgdezJjwvFM8221zQcyawVRhLrp5qZvrjFTA00/PNn9RH7z+oMRJeI9IZSBEBFAXNWLgNRyacLxRuu7clZi8ZUBgxd4pptRXtFVAUdJc0aYSGGRAYsxFkXrde7hUgFJ7ID+d9xBkQ8DzPUGMx2QjvP2okuuLXtO0/tyJc/KG27D9MTVHhFqfqP3bKwGV6reo/JA1JHTN06j/GtLkKJeHtP5grT8nlHUjeAQDwPgVUYjqovu8/6A3sh/Hi7z/pfGjqo9PvP2/4kg5Y8O8/57/nCkre7z8AFLCL+MPvP507fmLOae8/NnjSS7d+7xXY/gEA/gEA/gEA/gEA3gEAdJiqIucb2cs/GhfC2YXm3D9SdbjsZN7XPz1bO1MYsyYUMxTnJ9dtTnxGUAz+AQD+AQD+AQD+AQD+AQAUcXFxqYwYeeAU5WyjaejomWAU67XMJpMpmVD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQC2AQAe7D8ZCJhQxj/cBTnhP9VsgcBlf+E/bKXCNUj74j9P8anCt9/hP4nyUi4o7t/+WA7+WA7+WA7+WA7uWA4SWA7+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQAADf4BA/4BA/4BA/4BA/4BA/4BA/4BA/4BA/4BA/4BA/4BA/4BA/4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAGoBABhfObeHcrfMwiQWGHpGrLNUUrcVOBheRFu23MuzFRAY1OS+GYoUqhUQGCl2A48huKMVEP4BAP4BAH4BAFi2DCCM+tpwP+z/9Se6A34/ZYw4sDPGkg==",
-"/sAA/sAAosAA/gEA/gEAfgEAdFpVNwa5Cek/c/QeE72M4T9XxaOJzRDkP2FSYtZzpibkGPBVDGwUydhB5j94QLFOl4vvP+12NBKGWu8/bLZL1fGC7j+C7EeO2sLsP+/lbF0K8Os//rWLwxWR7T8JNk8uSuPhP5L2QJkoZ9A/0whQ2YD45D/zvBavmbsmvH7Y9qGScNlI2z9l3rQXZdzfPxv/lzFGBOA/brXmhafJ5T8JGR54rKDgP74SXn51598/syaVuJEq4P4IAv4IAu4IAkUIFD06OlrNnSbUfhg1JrksLy7QFdgYUijNZLNZyxUQLAAAAAAAAAAAAAAAAAAA/gEA/gEA6gEA8HHG8wrpJmrbPwtap9gq39s/Gk+OWgIk1T9evODjRWLaP8x63ZMiv9Q/kG9Cv4g04T9uKHsTjL3fP4+zWuVsdNI/9qNZ9lMq3T+nhJV/ZKjcP1psdSUqtck/x4kyYful2z/4ReMaP/7fP5748FdB290/AAD+LQH+LQHqLQH+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQDKAQAADv60Df60Df60Df60Df60Df60Df60Df60Df60Df60Df60Df60Df60Df60Df60Df60Df60Df60Df60Df60Df60Df60Df60Df60Df60Df60Df60Df60Df60Df60Daq0DRxwUR44tr25P76zBxiPHKQap3K6FTgYTDrjYOEHyRUQPgEAGHO+FKxC+coVIDgZjdDAd+voPxtHXmqGK+YVGBEBGPtgbctVteMVGBixab2HJjDkFRAYFuG2MyCE4hUQFLJJPcfOrBkgFGroPJifxBlYFDqkaQmG0Rkg8D5Ck/VEfcPkPxsJtwkfaOU/HaxLwucm4z8aIpQkDy/jPw9WfISl0uE/FP4/5qFH4D9d12U1hkfiP5eKo2TpA+QVeP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAJ4BADQpnjR1Vp7cP3CqPZNunUbUHxiphg8FEW/bIpgIGHzjkDImnNAVEBgXSRKdtErOFRAU2IJJ+qEwJrAJGGOSSUZfGNMVIBhro8IqMwvYFRD+AQD+AQ==",
-"APA+J+aV09nknj+w3C7qQFmyP1PqHh3wSro/0Mq6eqRjxT8m1vxoFkrFP3HL24ozL8Y/11kyqtf2sD+BRg1ro7Gj7sgABcgY5P5qZ/FVgMJIABhN+bCFFimQwjgA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEAtgEAAOAaIA4ZCJhgc4BH9I3dP1Ym/X40Ad0/J7V6lG8J2j9jHax6kEDcP7yG1ujrCOANOP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAOYBAAAP/jsE/jsE/jsE/jsE/jsE/jsE/jsE/jsE/jsE/jsE/jsE/jsE/jsE/jsE/jsE/jsE5jsE/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA+gEAYOA//Nfx7NZ61j8wZIl2lky4P0uyssNl1d/+FBr+FBr+FBr+FBr+FBr+FBr+FBr+FBr+FBr+FBr+FBr+FBr+FBr+FBr+FBr+FBruFBoSFBr+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQBeAQAAEP6ZC/6ZC/6ZC/6ZC/6ZC/6ZC/6ZC/6ZC/6ZC/6ZC/6ZC/6ZC/6ZC/6ZC/6ZC/6ZC/6ZC/6ZC/6ZC/6ZC/6ZC/6ZC/6ZC/6ZC/6ZC/6ZC/6ZC/6ZC/6ZC/6ZC/6ZC/6ZC/6ZC/6ZC/6ZC/6ZC/6ZC/6ZC/6ZC/6ZC/6ZC/6ZC/6ZC/6ZC/6ZC/6ZC16ZC/4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAA==",
-"/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA6gEAGK6FQQZsBZditCEY68ucHsnjxhUgFCSJkLQzoSaoS/4BAP4BAP4BABEBWHAY8hN4Dm0/V4vBywoudj+yIg/a4k9fFfj+AQD+AQD+AQD+AQD+AQD2AQAemD5GAQA4SZlEq+LQpz/wm8CNK+m5/rAB/rAB/rAB/rAB/rAB/rABLbD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQDuAQAJAQAR/oMP/oMP/oMP/oMP/oMP/oMP/oMP/oMP/oMP/oMP/oMP/oMP/oMP/oMP/oMP/oMP/oMP/oMP/oMP/oMP/oMP/oMP/oMP/oMP/oMP/oMP/oMP/oMP/oMP/oMP/oMP/oMP/oMP/oMP/oMP/oMP/oMP/oMP/oMP/oMP/oMP/oMP/oMP/oMP/oMP/oMP/oMP/oMP/oMP/oMP/oMP/oMP/oMP/oMP/oMP/oMP/oMP/oMP/oMP/oMP/oMP7oMPFoMP/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEAWgEAHswmXggA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEAxgEAABL+8w/+8w/+8w/+8w/+8w/+8w/+8w/+8w/+8w/+8w/+8w/+8w/+8w/+8w/+8w/+8w/+8w/+8w/+8w/+8w/+8w/+8w/+8w/+8w/+8w/+8w/+8w/+8w/+8w/+8w/+8w/+8w/+8w/+8w/+8w/+8w/+8w/+8w/+8w/+8w/+8w/+8w/+8w/+8w/+8w/+8w/+8w/+8w/+8w/+8w/+8w/+8w/+8w/+8w/+8w/+8w/+8w/+8w/+8w/+8w/+8w/+8w/+8w/G8w/+AQD+AQD+AQD+AQ==",
-"AP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAO4BAAUBFN/Ym+Bn/x5scEDgP8jbWthVVds/X79GoJ9o3v4ITJoITFzgPwIUh4mUwuQ/etMuMW327D/bpiYeTRUe3CX+AQD+AQAZAXhJc/W2mMToP+7Qx/sxMOg/Pf5bZVZ25D8MKi51Zivn/jABmjAB/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA7gEACQEAE/7DDv7DDv7DDv7DDv7DDv7DDv7DDv7DDv7DDv7DDv7DDv7DDv7DDv7DDv7DDv7DDv7DDv7DDv7DDv7DDv7DDv7DDv7DDv7DDv7DDv7DDv7DDv7DDv7DDv7DDv7DDv7DDv7DDv7DDv7DDv7DDv7DDv7DDv7DDv7DDv7DDv7DDv7DDv7DDv7DDv7DDv7DDv7DDv7DDv7DDv7DDv7DDv7DDv7DDv7DDv7DDv7DDv7DDu7DDhbDDv4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BABUBGGcicbk9r5TuvCMSvCMUoccnctyLHkwlHAAAzZAldM0RRsQkNO/Nww+nvt4/ofbQQEUMRiAA3gEAdKZGWHOTVeA/wJrNOaoy4T8PcNL9stXhPycJaRH90/5oABlo/gEA/gEA/gEAEQF0zrBtaZJM2j+h1N5vUqfOP7nG1mdDLdE/HQ94bQtjhjTBeL9LInlEYOc/HYZ6i+xK4j/6UqyTahDiP3PYuNL+beWiUAIYBS7TBNZq4aIwAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAL4BAAAU/nEO/nEO/nEO/nEO/nEO/nEO/nEO/nEO/nEO/nEO/nEO/nEO/nEO/nEO/nEO/nEO/nEO/nEO/nEO/nEO/nEO/nEO/nEO/g==",
-"cQ7+cQ7+cQ7+cQ7+cQ7+cQ7+cQ7+cQ7+cQ7+cQ7+cQ7+cQ7+cQ7+cQ7+cQ7+cQ7+cQ7+cQ7+cQ7+cQ7+cQ7+cQ7+cQ7+cQ7+cQ7+cQ7+cQ7+cQ7+cQ7+cQ7+cQ7+cQ7+cQ7+cQ5qcQ4AAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BANoBADwwHOzGETrgPwWvtkeTW+I/nocGGJmy1Y7cqt+CMAAYkROyD0wA4A0oPOA/HZLSE1VV4j9QoNwvsMsRGP4BAP4BAP4BAP4BABkBeN4yKiSd7cw/RrzgEDg/zz+FA0g1UxPXP+iroxUzqdEtSOYBABSCaLsNdz/mSAAYOKZSjcnF5hWIOKw9NcDNq+E/6aSidrWS6RUY/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEAABX+gQ7+gQ7+gQ7+gQ7+gQ7+gQ7+gQ7+gQ7+gQ7+gQ7+gQ7+gQ7+gQ7+gQ7+gQ7+gQ7+gQ7+gQ7+gQ7+gQ7+gQ7+gQ7+gQ7+gQ7+gQ7+gQ7+gQ7+gQ7+gQ7+gQ7+gQ7+gQ7+gQ7+gQ7+gQ7+gQ7+gQ7+gQ7+gQ7+gQ7+gQ7+gQ7+gQ7+gQ7+gQ7+gQ7+gQ7+gQ7+gQ7+gQ7+gQ7+gQ7+gQ7+gQ7+gQ7+gQ7+gQ7+gQ7+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQBKAQA4gK3i3ioT3D94XOlp4LbeGqwjHOA/oeXMDNb/hswl/gEA/gEA1gEAHmQmXggAZgEAeBWYR1IQaOI/DeQd5UwN4j+ZvSut+qHlP8CQVgLlxeUtQP4BAP4BAP4BAEYBABinajawYR/D/uAA/uAA/uAAYuAA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/g==",
-"AQD+AQD+AQD+AQD+AQD+AQA+AQAAFv6RDf6RDf6RDf6RDf6RDf6RDf6RDf6RDf6RDf6RDf6RDf6RDf6RDf6RDf6RDf6RDf6RDf6RDf6RDf6RDf6RDf6RDf6RDf6RDf6RDf6RDf6RDf6RDf6RDf6RDf6RDf6RDf6RDf6RDf6RDf6RDf6RDf6RDf6RDf6RDf6RDf6RDf6RDf6RDf6RDf6RDf6RDf6RDf6RDf6RDf6RDf6RDf6RDf6RDT6RDf4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAOIBAF6kJREY/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA7gEACQEAF/6DD/6DD/6DD/6DD/6DD/6DD/6DD/6DD/6DD/6DD/6DD/6DD/6DD/6DD/6DD/6DD/6DD/6DD/6DD/6DD/6DD/6DD/6DD/6DD/6DD/6DD/6DD/6DD/6DD/6DD/6DD/6DD/6DD/6DD/6DD/6DD/6DD/6DD/6DD/6DD/6DD/6DD/6DD/6DD/6DD/6DD/6DD/6DD/6DD/6DD/6DD/6DD/6DD/6DD/6DD/6DD/6DD/6DD/6DD/6DD/6DD+6DDxaDD/4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAEIBAHS2ck8Z2VTfP4DKZIyrmt0/4x9bBJpU3D+x7S3dBVgeqEt+AQAeJCVeCAD+AQD+AQD+AQAZAXiZJ0nLttniP9hKCGQrVug/pJwUTF5p5z9x+ENJes7j/rhK/rhK/rhK/rhK/rhK/rhK/rhK/rhK/rhK/rhK/rhK/rhK/rhK/rhK/rhK/rhK/rhK/rhK/rhK/rhK/rhK/rhK/rhK/rhK/rhK/rhK/rhK/rhK/rhK/rhK/rhK/rhK/rhK/rhK/rhK/rhK/rhK/rhK/rhK/rhK/rhK/rhK/rhK/rhK/rhK/rhK/rhK/rhK/rhK/rhK/rhK/rhK/rhK/rhK/rhK/rhK/rhKorhK/gEA/gEAfgEAABj+oQD+oQB+oQ==",
-"AP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAEoBABgEAz/1mb25wsQWGG/hU6yScroVOBhmU2/j2AfJFRA+AQAYkS8smTv5ykYgADTLy1mVK+Y/9xjAKYXr6BUgFKbrDHVjtSZcFxgFMZ0jNjDkFSAUjzX3IC2EJkCKFLGQRNTgrBkgFNanVyOvxCY4iBRkwVmTldEZIN4BAPA+sBSkcHDD5D/AW6ItE2jlP5IRzAjhJuM/dmfvDAwv4z8D6w9Wo9LhPzWihkGgR+A/gG8lo39H4j8NCaNq3gPkFcD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQDeAQA4sIkXz3id3T9ff5VCZ57cIlAIGLpmRu0Zb9sVEBh21booK5zQFRAYXk5K1tJKzhUQFKf2wFDYMCawCRhqQmZQgBjTFSAYq2J49lML2BUQ/gEA/gEA3gEA8D43SWo6O+WeP8+zJ3d7WbI/yHuOgjxLuj+2xF5/xWPFP0j6k2UjSsU/jTX2RjUvxj9O3dMhy/awP/R3/0SwsaPuAAElABiRCGwSC1aAwkgAGH0ROSkRKZDCOAD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQC2AQCg4D+rg0V+8AjgPxGAZZGqQNw/uMzIxIwJ2j/6iPFkRgHdP6lHl4b/jd0aSA4+rDH+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQDmAQAAGf77A/77A/77A/77A/77A/77A/77A/77A/77A/77A/77A/77A/77A/77A/77A+b7A/4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAA==",
-"/gEA/gEA/gEA/gEAwgEAGBHif/tABZcaBBYgAAD8qvzrqePGFRAUenpGugKhJvwlGH3qA7fYUbcVIBghKVRdSMuzFRAYw2ddV5UTqhUQGAmLgT+et6MVEP4BAP4BAP4BALi7Ns0urQ5tPwlZNkY1LnY/oCC46dxPXz+Zk1/ntNpwP1YcXwsVA34/lElhyevFkv74AP74AP74ABX4/gEA/gEA/gEA/gEA/gEA/gEA/gEAEQEYngoFxDGdx2KYAhjgaByQy1jLYiAA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEAXgEAOKB9/0ms5tw/ZoAnmZHe10LACxTqib0qNOkezD8e7CUgAAAnm4xZBdGnQjAA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEAngEAABr+qQP+qQP+qQP+qQP+qQP+qQP+qQP+qQP+qQP+qQP+qQP+qQP+qQP+qQOeqQP+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQBqAQAYKOKvUywajf5EGIJEGDjLAdCcc/ffPyOVMvSwbNT+cACCcABeAQB0E0vykfVN4z/MuabZn8fhP4+6qLNwHOM/Du6kL10TJlwZ/gEA/gEA/gEA/gEAEQF03oOmjj+d1j9Nnas3ZoLfP0CH4jz4+N8/cxg9AMTZJohQXgEAdNGhDw7dzuI/mkIRtm6g5T/gIHuB7pbdP8lrQvY5If5wAf5wAf5wAf5wAUZwAf4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAF4BAAAb/pkN/g==",
-"mQ3+mQ3+mQ3+mQ3+mQ3+mQ3+mQ3+mQ3+mQ3+mQ3+mQ3+mQ3+mQ3+mQ3+mQ3+mQ3+mQ3+mQ3+mQ3+mQ3+mQ3+mQ3+mQ3+mQ0qmQ04eoteXF/p0z83QVPVmmPMIgwXGGdwiDcLFdkVEF4BABTsYuTScvRGKDAMAAAAAAAAHQEcEt4pEvYH2D8dE1IBABiS+/bZMsbKWigAAOANGBEIIAAA1QDITeuv3g0YIAAA/qEA+jxC1xUQGKp1NPuOheEVEBjEc8Rx++viFRCeAQAUAptoCy5uhsAAFA7O/EOnsEZgADigH1jBTMjsP7kkp/XCVesVgBjCcCN38gbqFRAUMe43FOoPGRAY0oN1qq2x7BUgGCYrJMcJvukVEBQ080NdqhMZMBQc9LQZsUEZIP4BAP4BAN4BAPA+n9a3Hh951j9/SLuk2S/VP9zcZ+49stk/FTEh5ueh2T/6KeBTuVrcP5a78ny/cN8//yC1uQBx2z/l7bkqQ/jXNSD+AQD+AQCeAQAYl9JuUn/H3P64AP64AMK4AP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BABEBFLcdEVM58x54CcDgP4v2ZEBIGOA/q/fZ8Y1H4j/G0xsodUvkP1TopFpy/eU/qfQh3won5z91GLstnK/o/ngH/ngH/ngH/ngH/ngH/ngH/ngH/ngH/ngH/ngH/ngH/ngH/ngH/ngH/ngH/ngH/ngH/ngH/ngH/ngH/ngH/ngH/ngH/ngH/ngH/ngH/ngH/ngH4ngH/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEAfgEAABz+IQ3+IQ3+IQ3+IQ3+IQ3+IQ3+IQ3+IQ3+IQ3+IQ3+IQ3+IQ3+IQ3+IQ3+IQ3+IQ3+IQ3+IQ3+IQ3+IQ3+IQ3+IQ3+IQ3+IQ3+IQ3+IQ3+IQ3+IQ3+IQ3+IQ3+IQ3+IQ3+IQ3+IQ3+IQ3+IQ3+IQ3+IQ3+IQ3+IQ3+IQ3+IQ3+IQ3+IQ3+IQ3+IQ3+IQ3+IQ3+IQ3+IQ3+IQ3+IQ1+IQ3+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQ==",
-"AP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAEIBAB5cQl4IAP4BAP4BAP4BAP4BAP4BAP4BAP4BAGYBAAAd/tsB/tsB/tsB/tsB/tsB/tsB/tsBZtsB/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEAFQF4iPlXsboTwT+S6eiX8nrTP6ttAjwGyNc/JnipR6GEv/5IUP5IUP5IUP5IUP5IUP5IUP5IUP5IUP5IUP5IUP5IUP5IUP5IUP5IUP5IUP5IUP5IUP5IUP5IUP5IUP5IUP5IUP5IUP5IUP5IUP5IUP5IUP5IUP5IUP5IUP5IUP5IUP5IUP5IUP5IUP5IUP5IUP5IUP5IUP5IUP5IUP5IUP5IUP5IUP5IUP5IUP5IUP5IUP5IUP5IUP5IUP5IUP5IUP5IUP5IUP5IUP5IUP5IUP5IUP5IUP5IUKJIUAAe/tIj/tIj/tIj/tIj/tIj/tIj/tIj/tIj/tIj/tIj/tIj/tIj/tIj/tIj/tIj/tIj/tIj/tIj/tIj/tIj/tIj/tIj/tIj/tIj/tIj/tIj/tIj/tIj/tIj/tIj/tIj/tIj/tIj/tIj/tIj/tIj/tIj/tIj/tIj/tIj/tIj/tIj/tIj/tIj/tIj/tIj/tIj/tIj/tIj/tIj/tIj/tIj/tIj/tIj/tIj/tIj/tIj/tIj/tIj/tIj/tIj/tIj/tIj/tIj/tIj/tIj/tIj/tIj/tIj/tIj/tIj/tIj/tIj/tIj/tIj/tIj/tIj/tIj/tIj/tIj/tIjItIj/gEA/gEA/gEA/gEApgEAeNtpG9wUZNk/aIyyTMBw3D/kiq6YHsfZP+QjtqBF2d/+/CT+/CRC/CR0ngGqUw==",
-"EbvrPzeLC7SGQuY/K8n+4fwb5D/80ArXaw8mVH/+AQBeAQB4Eb6sOGCx5D9ZMSrkzD7gP2C8juGDA+A/x3Ph/x2T5/4wAf4wAUIwAf4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAF4BAAAf/lkO/lkO/lkO/lkO/lkO/lkO/lkO/lkO/lkO/lkO/lkO/lkO/lkO/lkO/lkO/lkO/lkO/lkO/lkO/lkO/lkO/lkO/lkO/lkO/lkOKlkOOEO60FFQC+Y/si+rShnn6CJEFRjMxztkenXjFRBeAQAYi86NlsYF5BUoGBuJfnarbtEVEBEBNPcQ6/YE/OM/Og7OOaoaHkCWHhRUGQEYG0GCSXNO6UJAAAkBETARCBwAAJb/G1kKqBkQFAGv/4LhXhmQFK0Ulwni9CYIlDR6GHccCSjaP3ikzq4TcRE4EQgZARgC2wch4IbmFYgUgLJL+ujIRhABFAQazHOMORlAGORjBnixntoVOD4BABgfbWMp9KjCFSAY+TxyIzbkxxUQFDtHIK9XwBkQfgEAFDEz8IpWsaYwAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAJ4BABQ2UvtfBhiG4Jn+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQARARSTxN1ZjRkeeAnA4D/rEjZ/b8/fP6kQTBzkcNs/dljIrxVp1z9XL7ZKGwXUP60WvEHqsdE/L54TSY9BzSKACf4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAD4BAAAg/lEU/lEU/lEU/lEU/lEU/lEU/lEU/lEU/lEU/lEU/lEU/lEU/g==",
-"URT+URT+URT+URT+URT+URT+URT+URT+URT+URT+URT+URT+URT+URT+URT+URT+URT+URT+URT+URTOURQ0amhM1ajTPyic/1jrUcwinBwUtCjmFTmVJlQjFPWdxbiTnyacvRTilBG+pfceBB0gAACd3nZXPqbWFUAYVbBQuaF20hUQFDh9TNnUXBkg/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA3gEANCg7dJhDMeE/UEC1XsywHlwwHAAAo8xcCXNIHsS8HAAARZWia+qxJihGFGhsbUpLbSb0MBRXws/rybMmfDAUy97M179zJgQwFKvOwwRW+kYEMDhVh4ELKtLoP+8AJPjVR+8iYAkUQdUAhRVHJkzGFMPC3KJ+LxlQGLCCH+nEFe0VMBTcelX0loYZEBiEKYqqxl7uFSAUUOcHHIbEGRDeAQDwPLatLCbWCO8/hgkbkdC07T+HMK5vmLbsP9NOKKAOp+o/bwGbJnet6j+dckKuMnTqP1aExZsm4e0/gQiw++TugAANgPA+3k+206e+7z/JMtFS8eLvP06Tc5Wj0+8/8COLEVjw7z/ZQDGWSt7vP8dB6dX5w+8/tPW0odBp7z90N7Z2t37vNRD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQAUWb3+jrMYeeAUyJmuFBDpmWAUyOX4G80pmVD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQCWAQCg4D+q+HQDH+7fP/c/Tbeq3+E/pJmbnTn74j+EO4fNXH/hPytctDwAOeEaSA4evD8g4D8EA4tUDtnLDRieAQAc4D+fP82EObMmNNcRARhoFhV+enzTulAA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA5gEAACH+ewP+ewP+ewP+ewP+ewP+ewP+ewP+ewP+ewP+ewP+ewP+ewP+ewPmewP+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQ==",
-"AP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAKIBABSs4vnRV7cmVC/+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQDeAQAYcMyi1t8t0P6cGf6cGf6cGf6cGf6cGf6cGf6cGf6cGf6cGf6cGf6cGf6cGf6cGf6cGaKcGf4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAD4BALhAP91qvAnpPzBBANupjOE/zj9sM7cQ5D+65jB6hFrvP6zPlrmVi+8/w06oetnC7CLoC/BPMGCZPWOm4D9ONmeq74LuP7MDL4cG8Os/zHT1wMJB5j//ikvkF5HtP0t5b/Q94+E/Vi/H0wdn0D8HWKo2hfjkP/ZjqmCAu+Q/mhWKoAJJ2z8emAjwRvinVgRl3N8/mw4+30QE4D/ycK7/qMnlP1ClR+qQoOA/UHmKq5cq4D/lPhmBeuffP0FxbfLepds/c85QtEz+3z8l656bKdvdFah0HAlWwmW1yT/HmG25b3TSPzXeEXVsKt0/DYPwVomoJtBmPgEAGL/PN75GatsVSDSNBg4dISTVP1NfGvVP3xkYdGWFlBBNYto/4TfuWii/1D+7B5JKiDThP6JxV3CGvf58fv58fkZ8fv4BAP4BAP4BAP4BAAEBAAD+AQD+AQD+AQD+AQAdAQAi/gwB/gwB/gwB/gwBPQz+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQ==",
-"AJ4BABw08UPj5T/APx7wIJgLqKPdQHezP2sNIReEOdw/VWgcFnzM5z/xT6uS9Q7WPxU4qz7/iNYVMN4BAHhfR8mGEC3iP8eY16XZAOA/boowMmsS4T81Iv6pOzjr7mAABWD+AQD+AQB+AQBYU5pVSpOk4D9m+L9D6S/bP8QNKJRr5dsN+IDgP2PmtbzHu9Q/q+hZ7Ch01D+QnoVVcfbhP0Dcy/YUAOANKP4BAP4BAP4BAP4BAP4BAP4BAP4BAOYBAAAj/vsB/vsB/vsB/vsB/vsB/vsB/vsB5vsB/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEAFQEYLHcHWBEfw/6MJP6MJP6MJIKMJFhay1Rr2bbeP80DIF4LaOI/HvnrNUoN4g34gOA/zgylIRyi5T+rC9OJ68XlP+HC9FQdE9w/gEdoEtb/3xUoFrkhHrwlPggA/gEA/gEA/gEA/gEA/gEA/gEA/gEAZgEAACT+2wH+2wH+2wH+2wH+2wH+2wH+2wFm2wH+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQ==",
-"AP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAEIBADQz9bqvflviP6LcFEV0Oh4kJGYBABRgDeuo0KoeZCSGAQA4un1qj6aS6T+dM0kjyMXmGpQkIAAAeb6HVLur4RUQEQEYwDpIWd8/0UIYAP4BAF4BAFjXTn4ZrMvgP2o62ofe7cw/vSGgahY/zw2AeOA/7OyT/TgT1z8vS/3YTanRP5FQFK5QVeI/JhXArUwiVCX+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQDmAQAAJf47Av47Av47Av47Av47Av47Av47Av47AuY7Av4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BABUBGLso47lwr5QaNCT+AQCGAQA0vUbWdReL3z8ErNR9zRFGtCUYYbVwK96+3hWQFI5gc79CDEYoAH4BABTmEHfFyWompCXwPt00UzKbMuE/KrFzQ45V4D+h4ltTEGDnPyEY5KDcSuI/U4/HP6zV4T+6/Hhx723lP1bQcgVYEOI/S3IPmu3T4BWQXgEAeHKht45mTNo/gzF7k96mzj/rh0nJ/izRP8MACR7bYtiCQAD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQB+AQAAJv5hAv5hAv5hAv5hAv5hAv5hAv5hAv5hAv5hAn5hAv4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAA==",
-"/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEAHQEYHPbBo4h61hq0JkDgP750wkRm1d8/FWB9g5tKuA0Y/gEA/gEA/gEA/gEA/gEAZgEAACf+WwH+WwH+WwH+WwH+WwFmWwH+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQBCAQBYUmIDzado3j9lcQleiMToP5H3V2U6MOgapCR44D+LCTaBY3bkP2hagRNZK+c/3l7Xo15V2z+01X+kZiJwlv4BAP4BAOYBABjyBB+uu8LkFfA4ocWe3UwV4D/9U5CPrPbsDRj+AQD+AQD+AQD+AQD+AQBmAQAAKP5bAf5bAf5bAf5bAf5bAWZbAf4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAA==",
-"/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEAQgEAAAD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD6AQA8RpZZm8ma3T+tnRh541TfPz7PBRhZ4XCAp1TcQhgAGGob4cskWN5CGAA+AQB4SC+kuMzZ4j+fMyFbSFboPwo8W5uAaec/nn/7cJLO44JAAP4BAP4BAP4BAAkBAOAN6F4IAP4BAP4BAP4BAP4BAP4BAOYBAAAp/nsB/nsB/nsB/nsB/nsB5nsB/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEAQgEA8D6AWXsuGEPmPx4KPcR0seQ//9I8hNE+4D9JajW2RrvrP4AhWYiFA+A/T0WfgTeT5z8M9abs2RzkP8JjhlaxD+wapCXmAQB0F+FySVjH2T+h1FlrAnHcP5LU0+9zZNk/yHRD0n3ZRlwn/gEA/gEA/gEA/gEAvgEAACr+MQH+MQH+MQH+MQG+MQH+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQ==",
-"AP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAIoBABjj+XIs7UXdGnwPHiA1PgEAPhgAGRAU8Y4A3hqvKlwPFOIaiHNi2w1QHAAAYcuSukbjGTAUFmEh40kQEXA8AAAaw0BFGY7iP+et159xyxkoEQEUJ4LS9+fZGRg09wfQU557zz+ND1aRDVNGGDcU+h1fZCPBGTAYKup5tqEZzhWQGJrnedsjv8UVEPA+VInhxtDK7T+vHt1hUtHsP/VIXto6Ku4/AWDqoZC77z+Nnznl9rbvPx4eGzclge8/GiVVxxcV7z8SwbZTgYfuFUjeAQDwPj1VIkRfquY/NnaK84oT4j9CosVBDt/hP8h4l+8CLuw/YswOOKoS7j/zDgAnGl3uPzKE0Qv55Ow/f0o4s13H6u6AAAWAmG+ydRaJhag/rMwJQu6LyD8LhjVaVafcP/FjR9rHLsg/L0qxKqkkn+5oAAVoXgEA8D5JtxdRKl/uP4iwOcqRfe8/+KYs1hEQ7z+3zmgTSbPuP/FHG84LH+8/8e2FUANV7z+0ESsbxnnvP8o4SkJTEe/+mABimAD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQB2AQAmoA0JAWYQABSLMjp8DIoqYA4NARSxm15FPR0mSA4RARgcvcXop/nWehgMZnAA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEAXgEAFE++ZzDKBlE4XggA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEAGQEYz6Qh5Lx81RpICEbwBXQuoHywGBzZP4TNrNx1jtE//YeU6tCs0T8uyCiXyVl+gAj+AQCGAQAAK/5jAIZjAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAA==",
-"/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEAogEAGAJNCaPPedMajCQZARjbVion5RLBQhgAOOkVsiZMxtc/8uHMS3WCv0IgAP4BAP4BAP4BAP4BAP4BAP4BAD4BAAAs/pEB/pEB/pEB/pEB/pEB/pEBPpEB/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEAHQEsDjFCGcVW4T8Z45MBAQjY96vpbYRH6j94cBxYgEfqP+DwWN0J5es/RIXkC/7k6z9ZD0dtJkHdP2mGMO4ljeQ/Vd7kShyN5GJEDCx7+/zupbzqP82rlD0BCP47CZY7CUDgPwEj+Ld4ouE/CduU/Xyi4Q14Rqgx8F5qNWuaydbqPzU3bRj4veg/vT7XlPu96D8sz44exNbqPyE2S2Jxbt8/6WTxVXKc3z8Sfx3vSz7hP/oViECOkuE/ypErvzG04D+r8q3Hi6zgPwqRh96UkuE/5CW1s4sG2w14XAAAMTx5BJIG2z8UNpUH6s3TP0qJ00PlmB5AMhQAAMZEGrsBEHiGheTm8c3TP2aX18uFmdU/7zZH+FeX2T+dMRjM1srIFVDYUowsDtDKyD89E3NwQZfZP6wz28hzmdU/b77K1UGd6D/xWJQ398PaP/9eAYYwxNo/7udEc1Cd6BVAONSfs8R8mr0/VEZOF6WavRUYEQE4ER7chTUK0D859t/cXQrQFSDwRpSveU2AbzY/tu90dPgz6D/7coRe+TPoP2bvh0+In+A/gFL2Hd360T+BJSAO3hjSP3hFMYOMrM8/JepqzuQY0j9xbRkv7EGmFVD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQA+AQA4jw==",
-"fg1wINvIP7O+lzFQL9LCKAcwXRVKFGvbyD9eafj8b8pAAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAAAt/kER/kER/kER/kER/kER/kER/kER/kER/kER/kER/kER/kER/kER/kER/kER/kER/kER/kER/kER/kER/kER/kER/kER/kER/kER/kER/kER/kER/kER/kER/kER/kER/kER/kER/kER/kER/kER/kER/kER/kER/kER/kER/kER/kER/kER/kER/kER/kER/kER/kER/kER/kER/kER/kER/kER/kER/kER/kER/kER/kER/kER/kER/kER/kER/kER/kER/kER/kER/kER/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEAQgEARnQ+FuMSERj+AQD+AQD+AQD+AQD+AQDmAQAALv57Af57Af57Af57Af57AeZ7Af4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BABUBFMxQrQlrDSawkv4BAHYBABzgP/+5D5AOu0ZYkwkBhtQMNE7DxIXvpMQ/72TaTsdIZjAAFG3cqIGcl4bAyv4BAL4BABiI0zVkBJ7iGsQNGQEYLZtc2wCI2EIYABEBFK9F4uzO5EaQhv4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAJ4BAA==",
-"mPGMfo9WX8Q/twjX8yKC2T/JkTn2qNjcP1DVeNUKmdM//vPohXEcpWJAB54BAPA+pqQ5iGIv4D/oMVoRywviP1cuG0pPV+Y/XaD84zfJ6T+mIDTnV+jmPw0+0UMwD+Q/kIo+V1k44T9Fp4XeUTfg7oAABYD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQBeAQAAL/5ZEf5ZEf5ZEf5ZEf5ZEf5ZEf5ZEf5ZEf5ZEf5ZEf5ZEf5ZEf5ZEf5ZEf5ZEf5ZEf5ZEf5ZEf5ZEf5ZEf5ZEf5ZEf5ZEf5ZEf5ZEf5ZEf5ZEf5ZEf5ZEf5ZEf5ZEf5ZEf5ZEf5ZEf5ZEf5ZEf5ZEf5ZEf5ZEf5ZEf5ZEf5ZEf5ZEf5ZEf5ZEf5ZEf5ZEf5ZEf5ZEf5ZEf5ZEf5ZEf5ZEf5ZEf5ZEf5ZEf5ZEf5ZEf5ZEf5ZEf5ZEf5ZEf5ZEf5ZEf5ZEf5ZEf5ZEf5ZEf5ZEV5ZEf4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAHoBAAAA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEASgEAHB8VTJqRGo0//psMvpsMOMvig0F2998/Gx6jAK5s1P6AAMKAAJ4BAHhOvbV32c7iPxDkiNJroOU/ivDbau+W3T8vR9THPCHg/rgA/rgAYrgAvgEAOMPrhXcWndY/AlqG91yC3xnYNL1N7/T43z9jdcH8kNnQGRj+AQANAXR0j0bbUxzjP7AVU8p+x+E/txUWCMZN4z+cRd4WQRP+YAH+YAH+YAE5YP4BAN4BAAAw/nkA3nkA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/g==",
-"AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQCCAQAeHA4RCD4BABkYGINbFoNjPeEivA4YKYVfOsV75BUQOE52BDb3e+Y/eLY8bnRF5xUYEQEYVLjvG+NJ6ToYABFgEQgZARTmFN6dpaMmRA8YO16MMOh7xBVAGGHTlh56lMMVEDip8GjufprSPx5xo5xoXtEVGBEBFMjKVA5MWhlA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEAngEAWIEvW01Z66M/pa7IHAlPsD+gaOEXQbSoQmAC/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEAvgEA8D6HnPzzwIfpP9gVYvCKkuY/uwxsKkpc6T/EXCBcKujqP6R7FIbuPuM/HDfjhKuT4T9ZlUOVejPmP8Bwoec4ru7ugANlgFiztozvOqHfPzGcS91p6Ns/UqPJa2FR00JYAFTlg114n+HXP+LqglFNj90/dbH0QlyR2Zj+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQBWAQCg4D++djW89+fgPzSGhYahEOE/zjyLFA2E5T+VeAw4YpvkP3ejTNx0CeQasBAeQBcRCP4BAP4BAP4BAOYBAAAx/vsA/vsA/vsA5vsA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEAegEAHtwNEQg+AQAZGBj6SNP5OIXdGhwOIAAAr/VAi3UI1xUQNGMT95MRCNM/EJOGIxd1RiwlGLAeQZBz2MoVMAkBEWARCBkBFI31EDEtLhkYGHLo3PMF4eoVQBgoS1p44RrrFRA0rIfLiMCy5j9xR66xy1BGLCYUTs1q/GzpGUAUDoPGaQldHnwmGWg2AQA+GAAZEBSIuP+QcigZEBgAj/I7xk7iFZAYPWnainI53hUQFHZPbw7bdxFw/gEA7gEACQHwPmG188h5qbE/hgoX8Wx1uT+tcBtaUlytPw==",
-"uv9nhdcbgT+7HJixRkKCP6h4ODmyto8/wFxbFQddnT/g7pPE6oenFdjeAQDwPodVu3dBq9I/lBPrGOrY2z97u3R840HcP745RIPoj74/2jkTf1zVrj/OEP+PXS6qP3Lec6E32Lg/A9YeM4nixO6AAAWA8D7ZpJhup3fuP9WMfW8E3ek/+jzlUlWs4T8EJ24JTvTpP691qrbaBu8/CE0qa0rB7j8r6mbcHvbtP3bpge67dO7ugAAFgP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAFTkjQ0w/ODJP1HUOx/q2tI/Fs1PVteOPiAG/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA3gEAoOA/hRKVhxAw3j+X8/TyvN7dP2SG6dbl99Q/1w7njzvJ1j8SuWZHFu3XGogUHogWEQjmAQAYmS3vjaFB5VpYAIDgP+mvwafzceM/PpmpEcU45z8CvLWKlynnP+mbazQb0+QNOP4BAOYBAAAy/nsA5nsA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEAugEAHmwfEQgZATQBWqLm4VjfPzoevHOnFv7YVf7YVf7YVf7YVf7YVf7YVf7YVf7YVf7YVf7YVf7YVf7YVf7YVf7YVf7YVf7YVf7YVf7YVf7YVf7YVf7YVf7YVf7YVf7YVf7YVf7YVQ==",
-"/thV/thVZthVADP5M/4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAKIBABRSvThG2vEmWFn+AQAYRC92sjfl2/64Qvq4QkZEJHYBABkwNJUKJX/XA+E/3Sbcn2fLGRj+AQBeAQAULEkTUj4QRmBbFCeGwuB0yiZgWxEBGM4Bw3eXGMX+YAF6YAER+BEI/gEApgEANGLsuAd9VOQ/Bki8yqg1HjhF/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEARgEAADT+0wb+0wb+0wb+0wb+0wb+0wb+0wb+0wb+0wb+0wb+0wb+0wb+0wb+0wb+0wb+0wb+0wb+0wb+0wb+0wb+0wb+0wb+0wb+0wb+0wb+0wb+0wZG0wb+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQDCAQA0nUXHNHyx0D+97Daw0YAm/H8RARQUWrY8Ex0m8J4UWKHj3BKH/pQjJpQjFF7oxCZkDSZkf14BABRm32tDDynGeAA0W5vsz6ML4T8E5DnwcnteaAA+WACmEAA02Oq1AVH43T9GskfAMGlGxCY4xJeZOrH42T+0WumLkOHZQg==",
-"NCU4vH8eg8gd3D9ySWgG6NnaQiAAFLBqxxqceyZsJRSnbdlbg98mjIE0ze1hoHz/4D9j5/V8LNb+uKb+uKb+uKb+uKZGuKZUFjBSewG9xT/nhh9T5bHLP6CxPPr7WEboAj4BABjonM7hioPHQpAB/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA3gEAADX+eQb+eQb+eQb+eQb+eQb+eQb+eQb+eQb+eQb+eQb+eQb+eQb+eQb+eQb+eQb+eQb+eQb+eQb+eQb+eQb+eQb+eQb+eQb+eQb+eQbeeQb+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQDCAQAefBURCBEBGRAQ/XUomW4qZLwQMbaOFtQqZLwRATgcJkgwg0XnPxCEwRQOfOYizBMQ7BMgAO5CZLwRARFoEQgYAAAc9IFDpypkvBDigild8ipkvBCEoPNzkipkvBEBODPKHYpsXtE/tDVyV5qa0hWAEBlv6dtp/mS8/mS8/mS8/mS8/mS8/mS8/mS8/mS8ymS83gEAUDT7xVFT66M/j4S1WANPsD8PsbXwPv6cvP6cvP6cvP6cvP6cvP6cvP6cvP6cvP6cvP6cvP6cvP6cvO6cvBqcvPA8ipDvGMqH6T/hfEaEkpLmP9iJH39QXOk/B0iezxno6j/9i/XY3D7jP3ILoDGek+E/nIO2vmUz5j8F0ZTdM+6cvBqcvFCWGFSAMKHfP34UzJVT6Ns/Fe1IBUdKnLxQE+I/e4Hh1z9AuRLhNo/dP2VUo+ZO/py8/py8/py8/py8/py8/py8/py8/py8/py8/py8/py8/py8/py8/py8/py8/py8/py8/py8/py8/py8/py8/py8/py8/py8/py8/py8/py8/py8/py8/py8/py8/py8/py8/py8/py8/py8/py8/py8/py8/py8/py8/py8/py8/py8/py8/py8/py8/py8/py8/py8/py8/py8/py8/py8/py8/py8/py8/py8/py8/py8/py8/py8/py8/py8/py8ipy8FrAUHkgXoOA/bSfnQ4sJ5D8HVXLqcpvkP2m+nxcbhOU/RiAN9bAQ4T8stcH2AejgDTj+AQD+AQDmAQAANv67AP67AOa7AP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAA==",
-"/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEAFQEAAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAJoBABz4N4wfGgnbP/5vD75vDzgeNLNipwPjP6dSC7o3D+P+gABCgAAYZyQ8vwYB3mJYABiMPw8i2rnqFSA0rBHqq27T4D/zWKHVqRAZGBEBGI6cY9tXW8oVMAkBAOANEBEI/gEAvgEAEXgRCP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAMYBAAA3/vMG/vMG/vMG/vMG/vMG/vMG/vMG/vMG/vMG/vMG/vMG/vMG/vMG/vMG/vMG/vMG/vMG/vMG/vMG/vMG/vMG/vMG/vMG/vMG/vMG/vMG/vMGxvMG/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA4gEAGDNBKHnhrd8aNCSmAQAYTMkmYLjo3bo4AD4UJD4QAP4BABkBOCLAcL4b8eE/R9vL/AuT4kKoABRUJU75GKFGVCXeAQA4qNwrqCJZ3j8znHqpWL3HQnAAGNwYJwkqaelCGAD2AQAxQBEIGQE0/9KuDI9T4D/j8CFGrHRGIAD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQARAQA4/gkH/gkH/gkH/gkH/g==",
-"CQf+CQf+CQf+CQf+CQf+CQf+CQf+CQf+CQf+CQf+CQf+CQf+CQf+CQf+CQf+CQf+CQf+CQf+CQf+CQf+CQf+CQf+CQf+CQfxCf4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAB0BNMt5fnXN49o/NKRQwBxpRvA7FLL7WhAwTEYYAF4BABQLxEE3uX2mMAD+AQD+AQD+AQD+AQD+AQD+AQA+AQCYFCFrOsX9nT+TFHPJbsukP+IBlzyGHpw/7EFC75VflT94yZ2aPMeQ/hwYOhwY/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEAvgEAPmQjfhAA/gEAPgEA/nAAvnAA/gEA/gEA/gEA/gEA/gEA/gEA7gEACQEUZIMwn2vyHvwnUUA+CAD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQAZAQA5/osG/osG/osG/osG/osG/osG/osG/osG/osG/osG/osG/osG/osG/osG/osG/osG/osG/osG/osG/osG/osG/osG/osG/osG/osG/osG2Yv+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQDiAQA4Av4Laxgh6D86+FQ3edbhgrQjGHWFYZKXeegVKBQZhiEJN5D+eDwmeDz+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQC+AQA4MV2c5UGn5z+iieQnlz/kIlgNEQEY9tKkYXZx5kIYAN4BABS65uLB+ToeFCMZARQnslBdYXFGAA4UciGdCyyDRpgA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEAngEAVPtzK6G/kOo/Rg==",
-"HjirhhPpPzCn4QKCU4ZQAhTGWIxHHR/+WBD+WBD+WBD+WBD+WBD+WBD+WBD+WBD+WBD+WBD+WBD+WBD+WBD+WBD+WBD+WBD+WBD+WBD+WBD+WBD+WBD+WBD+WBD+WBD+WBD+WBAmWBAAOv7xCP7xCP7xCP7xCP7xCP7xCP7xCP7xCJ7xCP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAO4BAAUBHlwnEQj+AQC+AQAReBEI/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEAxgEAADv+8wb+8wb+8wb+8wb+8wb+8wb+8wb+8wb+8wb+8wb+8wb+8wb+8wb+8wb+8wb+8wb+8wb+8wb+8wb+8wb+8wb+8wb+8wb+8wb+8wb+8wb+8wbG8wb+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQAVARgVEgxEaA3F/vA5IvA5vgEAGO9J1gQGu9wNgD5EEiDgP1oqU5bZpMQNIGYBABSLTQfVxjE+QAAZARSpGqRw6Kb+BG7+BG5GBG4UgVD/vOedRmCFPgEAGCwMUv8KiNhiCAEUtbNY1dXkvlCG/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEAxgEAmOTfhsGYX8Q/BugUTkaC2T8d6b+cw9jcP8f4koI0mdM/te+yJsIcpWJoB54BAPA+tvPVv2cv4D/C9Rk11gviP3aJW31cV+Y/qXrtOiXJ6T9Ry4MBSOjmP/YOYEI/D+Q/YaN2j2Q44T/OVa6MWDfg7oAABYD+AQD+AQD+AQD+AQD+AQ==",
-"AP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAF4BAAA8/hkR/hkR/hkR/hkR/hkR/hkR/hkR/hkR/hkR/hkR/hkR/hkR/hkR/hkR/hkR/hkR/hkR/hkR/hkR/hkR/hkR/hkR/hkR/hkR/hkR/hkR/hkR/hkR/hkR/hkR/hkR/hkR/hkR/hkR/hkR/hkR/hkR/hkR/hkR/hkR/hkR/hkR/hkR/hkR/hkR/hkR/hkR/hkR/hkR/hkR/hkR/hkR/hkR/hkR/hkR/hkR/hkR/hkR/hkR/hkR/hkR/hkR/hkR/hkR/hkR/hkR/hkR/hkRXhkR/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEAwgEAHmw4EQj+AQCmAQA4PCeO8AVX1z/1b4dqrpTV/iww/iww/iww/iww/iww/iww/iww/iww/iww/iww/iww/iww/iww/iww/iww/iww/iww/iww/iww/iww/iww/iww/iww/iww/iww/iww/iwwYiwwAD3+UwemUwf+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQCSAQAAAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAIoBAA==",
-"HNUjinDird8//usWGG7KQ8O86N16SAAA4DogAD4QAP4BAEYBADiXj3TODJPiPywCVoYc8eEVgBjqJdLsGKHqFRD+AQARATi/kgx1Vr3HP/eo60YjWd4VYBhMk4P6KmnpFRD+AQA2AQAxSBEIGQE0diNReJBT4D85ZDkprnRGIAD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQDeAQAAPv75Bv75Bv75Bv75Bv75Bv75Bv75Bv75Bv75Bv75Bv75Bv75Bv75Bv75Bv75Bv75Bv75Bv75Bv75Bv75Bv75Bv75Bv75Bv75Bv75Bv75Bv75Bt75Bv4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAO4BAAUBHkQlEQj+AQC+AQAReBEI/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEAhgEA/jUtWjUt/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEAMgEAOAoJAygbad4/2mPoxcnj2iJzDhT7AolCLkwmyDt+AQAUFbjc/bV9pjAA/gEA/gEA/gEA/gEA/gEA/gEA/gEAEQGY7Wsytcb9nT9jgMAucMukP5M8deKFHpw/6QcNRpBflT+XnPWBMseQVVj+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQ==",
-"AP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAPYBAD48I2YQABRY1ybADYpGIEsUdQwDj0AdfvBKIAAAiFHW+Kz51jr4C2ZwAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAD4BABTb1x0oa/JRwFF4PggA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEAGQEAQP5LBv5LBv5LBv5LBv5LBv5LBv5LBv5LBv5LBv5LBv5LBv5LBv5LBv5LBv5LBv5LBv5LBv5LBv5LBv5LBv5LBv5LBv5LBv5LBv5LBtlL/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEAegEAHOA/CYinjf1FPgQXHlwUEQEZEBTEmIX0HK8ejBQgAABLooqxi2LbIhwXFDbcQSFT4xkwFL5IIaBhED5gAEAAAHx7/mtyy+A/E84LHRuO4hVAFIJ+u97o2RlAEQE4iY3uoBVT3D9azI/ZsXvPFTAU9qMRASXBGTAY3J//xrAZzhUgGNcdurEzv8UVEN4BAPA+klxgQtLK7T+DqPpFVNHsP6OZuSk8Ku4/nHNy95C77z8Tr1BX97bvP0oQ0eslge8/kiJH4hgV7z9N6NS+gofu7oAACYDwPM4zQWiq5j+EnGFxkBPiP02ybHIU3+E/vtK6Sgou7D/8UVP1rRLuPyGRICYdXe4//3XnDf7k7D99QRm3ZMfuJGMWJGOY/EVctZiFqD/uTeVO+IvIPzL0GtFdp9w/fAR9BdMuyD+9e12KsSSf7ugABeheAQDwPkdT7T8rX+4/QgpA05F97z+hbFbKERDvP/r3E/1Is+4/HFbs0Asf7z/Bl899A1XvPxtT8GvGee8/ouIC2FMR7/6YAGKYAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAD4BABQSFPFrygYmkBD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQ==",
-"AP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAH4BAJgmx6qkyXzVP/YSiL/aWdY/+HAB+t2s0T/NLXSAhI7RP+8YnQAfHNkagBTRGD4IAOYBAABB5jsA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEAugEAXjQNERgcAAAFFK/NIoUmbCQYn5Pi0lcI1xp8DRkBOMezb5/5dNE/3/d81uMH0xUgGFGwf/9H2MoVEDYBABFoEQgcAADyBT9eLC4ZEBRHn7VoA+EmbCMY3xcDY9sa60JQADjnGvG6yVDnPyblRtSysuYVIBQ6pAWJZekZQDYBABzgP/w7LDkBXSYAhwkBGYAJARkQFJ8zvYVxKBkQFNuuOie6TiZsJRSWR3y9WTkm6EoUoVvvL893PmAA/gEA/gEAxgEA8D5tG/3sbamxP+i7KtBddbk/y2VmZD1crT8cGWMjwhuBP0Y71CsqQoI/ju27C4W2jz/ArRu341ydPzZ7sRLUh6c1kN4BAPA+3WKYfS+r0j/5xjwd39jbP2ebJhvXQdw/F2opqq2Pvj9C4MqqINWuP/rt9p0tLqo/DlDEkA/YuD8L+pojbeLE7oAABYDwPqA7qnSmd+4/hKxG7AHd6T/ohXIXUazhP+G+oD5L9Ok/IhStc9oG7z9OoOPKSsHuP25P6ZQf9u0/8KT0ELx07u6AAAWA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEAVNa9QZzX4Mk/PgZz99ra0j+e2IEDvo5eWAb+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQC+AQAekBYZCJgmsTF46ezXP/JVGysaydY/MIPA0Mn31D91v+UVnt7dP6eVfBL8L97umBQSmBSYbZyqLZtB5T+G9jugEtPkP4RH/wKRKec/GunFv7045z+Ic7F/8HHjDWgZoBaiEREQ5gEAAA==",
-"QuY7AP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAOIBABRQk0cxFgkmIFr+AQC+AQA4CuAsyzcP4z9ox66QpwPjGswd/gEARgEAFDJPDFv9ACZMNRRwfnHw1rlGzDU0UNu8YqoQ6j+EK4pcbtMmVB4U0rLxFVRbXiQwESgRCP4BAL4BABF4EQj+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQCGAQAAQ/7jBv7jBv7jBv7jBv7jBv7jBv7jBv7jBv7jBv7jBv7jBv7jBv7jBv7jBv7jBv7jBv7jBv7jBv7jBv7jBv7jBv7jBv7jBv7jBv7jBv7jBv7jBobjBv4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAMIBADg8uYgvddbhP+kMnIkTIehizBYUCRhAzpN5GSAUiniREzOQRowW/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEAvgEAOIHHjwGVP+Q/QNNkmECn5yKADRTw38FWd3EmyFlWAQA+PCNmEAAUVJTsH/k6PiAAHAAAxXl+uF9xhqBZGDzXlIMpg+QVoAkBPlAAPhAA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEAxgEAVFkaHV++kA==",
-"6j+AcLHAhBPpP+LHnTKAU154AlFwHOA/BMtlXh0f/pAQ/pAQ/pAQ/pAQ/pAQ/pAQ/pAQ/pAQ/pAQ/pAQ/pAQ/pAQ/pAQ/pAQ/pAQ/pAQ/pAQlpAQAAD+AQD+AQD+AQD+AQD+AQD+AQD+AQCKAQAARP7kAf7kAf7kAf7kAf7kAf7kAf7kAYrkAf4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAL4BADz+cOD81YDXP4BZNs9+sdA/HkAaGCFAfFIRHdMVEBgYqdjvEofgFRD+AQA+AQAYICl8UWQN4kJgABQW7rrHDinmeAA4WTZc53R74j/KGl6eoQvhOmAAPlgAvhAAQAAAzw0i8zBp3j8kkGMpUfjdOmAAQAAA7T+maZDh2T8vcaLesPjZQiAAONLgFmPm2do/qftT88Yd3BUgGFZot0yce8UVEBgoDnoMhd/RFRARATQjKv+XLdbEP2fYeVKB/z7AAP4BAP4BAP4BAP4BAMYBAFielouDBr3FP/49Ov3sscs/PXDEmv9Y10J4AT4BABju02iGioPHgigA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEAngEAAEX+KQb+KQb+KQb+KQb+KQb+KQb+KQb+KQb+KQb+KQb+KQb+KQb+KQb+KQb+KQb+KQb+KQb+KQb+KQb+KQb+KQb+KQb+KQb+KQaeKQb+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQ==",
-"AP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAEIBAB5EJhEIGQE4FLldD99Y3z+ON42toxbf/uwk/uwk/uwk/uwk/uwk/uwk/uwk/uwk/uwk/uwk/uwk/uwk/uwk/uwk/uwk/uwk/uwk/uwk/uwk/uwk/uwk/uwk/uwk/uwk/uwkIuwk/gEA/gEA/gEAAEb+wQD+wQD+wQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQDqAQAYz61OINrx3v5MI2JMIxjCrQddN+Xb/mAAYmAAVgEARjwkdgEARjAANBn5boZny+A/7zdOa9cDPrhL/gEAGQEY7PjCeT0Q50IgARh4NQCadMrqQhgAFEAGOj6kGCaYS/4BAHYBADEYEQj+AQCmAQA4j1Lc+m9U5D9Q8ljcnDXlQggB/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA/gEA3gEAAEf+uQb+uQb+uQb+uQb+uQb+uQb+uQb+uQb+uQb+uQb+uQb+uQb+uQb+uQb+uQb+uQb+uQb+uQb+uQb+uQb+uQb+uQb+uQb+uQb+uQb+uQbeuQb+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQD+AQ==",
-"AP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAIIBAB6kJREI/gEApgEAOOFaRwogV9c/XxtOR8aU1f6sJf6sJf6sJf6sJf6sJf6sJf6sJf6sJf6sJf6sJf6sJf6sJf6sJf6sJf6sJf6sJf6sJf6sJf6sJf6sJf6sJf6sJf6sJf6sJf6sJf6sJf6sJSKsJQwAAAABAQVaAQAEmpkBAQS5PwEkRHgMAAAAY2xvc2VzdFBvaW50SA01AAgNRQElCAIAAAUECAMAAAUECAQAAAUECAUAAAUECAYAAAUECAcAAAUEATwBAVwJAAAAIgAAAAoAAAAfAAAACwAAABsAAAABdPBYIAAAAA0AAAAhAAAADgAAABgAAAAPAAAAJgAAABAAAAAZAAAAEQAAAC0AAAASAAAAJwAAABMAAAAlAAAAFAAAACQAAAAVAAAAIwAAABYAAAAcAAAAFwAAACgNTAFUAUQBTBAaAAAALw18AYQBLEAWAAAAHQAAACsAAAAeAAAAKQ2kAawBnAGkAZwBpAHEAcwAIw10ACQNhAAlDZQBtAG8ACcNrAgoAAAFjAFUAVwQKgAAAEANbAF0CCwAAAUEAC0N5BAuAAAAOw2kAaxIMAAAADUAAAAxAAAAQQAAADIAABLYcggzAAASNE0INAAAEpSYASQBLEw2AAAAQgAAADcAAAA9AAAAOAAAAA7NCDA5AAAAQwAAADoAAAA+DWQBbAg8AAAS0CcBLAE0ARwBJAE0ATwBrAG0AXwBhAFcAWQBTAFUDhCZAYQObHMBnA7ITSwzAAAARwAAADwAAAA="};
+	setAttr ".ld" -type "ngst2SkinLayerDataStorage" 16 3846 {
+"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"};
 	setAttr ".imo" -type "string" "{}";
 select -ne :time1;
 	setAttr ".o" 0;
@@ -26187,7 +26137,7 @@ select -ne :hardwareRenderGlobals;
 	setAttr ".ctrs" 256;
 	setAttr ".btrs" 512;
 select -ne :ikSystem;
-	setAttr -s 3 ".sol";
+	setAttr -s 4 ".sol";
 connectAttr "Geometry.di" "WendigoGeo.do";
 connectAttr "Geometry.di" "Wendigo_Geo.do";
 connectAttr "groupId1.id" "Wendigo_GeoShape.iog.og[0].gid";
