@@ -97,7 +97,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4812107839568789579}
   - component: {fileID: 8290342248238802728}
-  - component: {fileID: 5094065452762860943}
   - component: {fileID: 3792112216007601891}
   m_Layer: 0
   m_Name: HomeCell
@@ -168,14 +167,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &5094065452762860943
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6586174714791004746}
-  m_Mesh: {fileID: 8781743164358531737, guid: ee2c4c3a74969db42bbb45a58713d246, type: 3}
 --- !u!114 &3792112216007601891
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -207,6 +198,10 @@ PrefabInstance:
       propertyPath: m_NavMeshData
       value: 
       objectReference: {fileID: 23800000, guid: dceca0fd578f3084a8ed6e4ed52eb3a7, type: 2}
+    - target: {fileID: 89865414451715240, guid: 105402a6082d8dc4ba695ad60fe39bed, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: -5843487310387925994, guid: ee2c4c3a74969db42bbb45a58713d246, type: 3}
     - target: {fileID: 3750810787237639891, guid: 105402a6082d8dc4ba695ad60fe39bed, type: 3}
       propertyPath: m_Mesh
       value: 
