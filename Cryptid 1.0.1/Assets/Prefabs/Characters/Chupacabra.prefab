@@ -623,6 +623,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1d9a52a5d0377b4cb7e38e1a04412c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  popManager: {fileID: 11400000, guid: 8cfbbcd5f43851e4fb1562ff70c77476, type: 2}
   fleeState: {fileID: 761088540955871117}
   flinchState: {fileID: 2290627368239795043}
   canPounce: 0

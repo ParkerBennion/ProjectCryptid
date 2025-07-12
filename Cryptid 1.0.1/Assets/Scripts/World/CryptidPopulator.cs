@@ -6,7 +6,7 @@ public class CryptidPopulator : MonoBehaviour
 {
     public int difficultyLevel;
     [SerializeField] private GameObject[] cryptidList;
-    private float spawnRadius = 48;
+    [SerializeField] private float spawnRadiusFromTileCenter = 24;
     private Vector3 randomSpawnLocation;
     private Vector2 spawnLocationCached;
     public void SpawnCryptids()
@@ -24,7 +24,7 @@ public class CryptidPopulator : MonoBehaviour
 
     private void SpawnCryptidAtRandomSpot()
     {
-        spawnLocationCached = Random.insideUnitCircle*24;
+        spawnLocationCached = Random.insideUnitCircle*spawnRadiusFromTileCenter;
         randomSpawnLocation.x = spawnLocationCached.x;
         randomSpawnLocation.z = spawnLocationCached.y;
         Instantiate(cryptidList[Random.Range(0, cryptidList.Length)], randomSpawnLocation+transform.position, quaternion.identity);

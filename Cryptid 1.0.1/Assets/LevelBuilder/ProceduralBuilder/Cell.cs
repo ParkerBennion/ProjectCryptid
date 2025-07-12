@@ -101,7 +101,7 @@ public class Cell : MonoBehaviour
             }
         }
         cellManager.PurgeDistantCells();
-        
+
     }
    
     
@@ -191,6 +191,7 @@ public class Cell : MonoBehaviour
         tileBrain = Instantiate(tileData.Item1, gameObject.transform.position, quaternion.identity, gameObject.transform).GetComponent<Tile>();
         tileBrain.RotateTile(newRotation-1);
         RegisterNavmeshWithManager();
+        
         enemySpawner.SpawnRandomCryptids(3);
     }
     private int RotateIndexClockwise(int originalIndex, int numRotations)

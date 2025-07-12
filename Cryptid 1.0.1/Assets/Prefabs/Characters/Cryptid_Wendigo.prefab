@@ -422,7 +422,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bd3ec16154e00a4ca7dc2d0996324b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stateMachine: {fileID: 0}
+  popManager: {fileID: 11400000, guid: 8cfbbcd5f43851e4fb1562ff70c77476, type: 2}
+  stateMachine: {fileID: 8601654369842533651}
   playerTarget: {fileID: 0}
   canMelee: 0
   canRangeAttack: 0
