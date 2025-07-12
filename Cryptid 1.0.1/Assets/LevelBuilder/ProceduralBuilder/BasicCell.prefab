@@ -102,6 +102,7 @@ GameObject:
   - component: {fileID: 5084290003078939522}
   - component: {fileID: 5668663707068220045}
   - component: {fileID: 7357468244183108833}
+  - component: {fileID: 4047633725637233077}
   m_Layer: 0
   m_Name: BasicCell
   m_TagString: Untagged
@@ -144,6 +145,8 @@ MonoBehaviour:
   exampleTile: {fileID: 5650620722496709884, guid: 4a08b145f714ed248aea62c5ca157d72, type: 3}
   tileBrain: {fileID: 0}
   tileLibrary: {fileID: 0}
+  isRoadCell: 0
+  enemySpawner: {fileID: 0}
 --- !u!114 &7357468244183108833
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -156,6 +159,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bdd46ac3441a17d458943c9252343a08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &4047633725637233077
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5650620722496709884}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fa21cd09e355004f84a3c887c053329, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  difficultyLevel: 1
+  cryptidList:
+  - {fileID: 3520540915994562969, guid: f86aac56c33017442b4890484c377c2b, type: 3}
+  - {fileID: 5305199578427489480, guid: 35377ac6911f46342bb84f66644a00c9, type: 3}
 --- !u!1 &6235436440806723735
 GameObject:
   m_ObjectHideFlags: 0
@@ -267,7 +286,7 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 1
   m_CookingOptions: 30
-  m_Mesh: {fileID: -1799501131822033171, guid: 8ec57db6640f7e24db684c88cefe4e09, type: 3}
+  m_Mesh: {fileID: -1799501131822033171, guid: ee2c4c3a74969db42bbb45a58713d246, type: 3}
 --- !u!114 &2392983892601036629
 MonoBehaviour:
   m_ObjectHideFlags: 0

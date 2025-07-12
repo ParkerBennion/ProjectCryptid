@@ -3,6 +3,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.Events;
+using Random = UnityEngine.Random;
 
 [RequireComponent(typeof(Animator), typeof(NavMeshAgent))]
 public class ChupacabraManager : CryptidManager
@@ -67,7 +68,7 @@ public class ChupacabraManager : CryptidManager
         yield return new WaitForSeconds(1.5f);
         canStun = true;
     }
-
+    
     public void BeginStunCoodlown()
     {
         if (canStun)
