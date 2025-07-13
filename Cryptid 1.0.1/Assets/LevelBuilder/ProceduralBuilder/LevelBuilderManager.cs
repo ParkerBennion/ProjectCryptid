@@ -17,6 +17,7 @@ public class LevelBuilderManager : MonoBehaviour
     public string testString;
     public List<NavMeshDataInstance> navMeshInstances;
     private LayerMask enemyMask;
+    private Collider[] bufferCols;
     
 
     private void Awake()
@@ -58,13 +59,11 @@ public class LevelBuilderManager : MonoBehaviour
         foreach (Cell cell in tempList)
         {
             //remove cryptids in area
-            Collider[] cols = Physics.OverlapSphere(cell.transform.position, 36, enemyMask);
-            foreach (Collider col in cols)
+            bufferCols= Physics.OverlapSphere(cell.transform.position, 36, enemyMask);
+            foreach (Collider col in bufferCols)
             {
-                print(col.gameObject.name);
                 if (col.TryGetComponent(out CryptidManager cryptid))
                 {
-                    print("Despawning cryptid");
                     cryptid.Despawn();
                 }
             }
@@ -73,22 +72,6 @@ public class LevelBuilderManager : MonoBehaviour
         }
         tempList.Clear();
     }
-
-    public void PurgeDistantCryptids()
-    {
-        List<CryptidManager> deathRow = new List<CryptidManager>();
-        foreach (CryptidManager cryptid in cryptidPopulationManager.activeCryptids)
-        {
-            if (Vector3.Distance(player.transform.position, cryptid.transform.position) >= 60)
-            {
-                deathRow.Add(cryptid);
-            }
-        }
-        foreach (CryptidManager cryptid in deathRow)
-        {
-            cryptidPopulationManager.activeCryptids.Remove(cryptid);
-            cryptid.Despawn();
-        }
-    }
+    
 
 }
