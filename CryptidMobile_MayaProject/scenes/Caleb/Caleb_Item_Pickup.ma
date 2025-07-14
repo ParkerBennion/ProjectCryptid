@@ -1,6 +1,6 @@
 //Maya ASCII 2026 scene
 //Name: Caleb_Item_Pickup.ma
-//Last modified: Thu, Jul 03, 2025 03:45:27 AM
+//Last modified: Thu, Jul 03, 2025 03:47:49 AM
 //Codeset: 1252
 file -rdi 1 -ns "Torch" -rfn "TorchRN" -op "v=0;" -typ "mayaAscii" "C:/Users/caris/Desktop/ProjectCryptid/CryptidMobile_MayaProject//scenes/Torch/Torch.ma";
 file -rdi 1 -ns "Caleb_Rig" -rfn "Caleb_RigRN1" -op "v=0;" -typ "mayaAscii"
@@ -18,7 +18,7 @@ fileInfo "product" "Maya 2026";
 fileInfo "version" "2026";
 fileInfo "cutIdentifier" "202502240946-c910a8ba47";
 fileInfo "osv" "Windows 10 Pro for Workstations v2009 (Build: 19045)";
-fileInfo "UUID" "E2DD9CA5-49C6-7769-8677-5B9F3876B8B8";
+fileInfo "UUID" "61438A8B-4324-34EB-76B0-D9BEDB6BA183";
 createNode transform -s -n "persp";
 	rename -uid "CBF88C2F-4AA7-20B4-1B3E-B9981C21D59C";
 	setAttr ".v" no;
@@ -11953,8 +11953,8 @@ createNode animCurveTA -n "L_Foot_Reverse_Foot_ToeTap_Ctrl_rotateZ";
 	setAttr ".wgt" no;
 	setAttr ".ktv[0]"  23 0;
 select -ne :time1;
-	setAttr ".o" 49;
-	setAttr ".unw" 49;
+	setAttr ".o" 54;
+	setAttr ".unw" 54;
 select -ne :hardwareRenderingGlobals;
 	setAttr ".otfna" -type "stringArray" 22 "NURBS Curves" "NURBS Surfaces" "Polygons" "Subdiv Surface" "Particles" "Particle Instance" "Fluids" "Strokes" "Image Planes" "UI" "Lights" "Cameras" "Locators" "Joints" "IK Handles" "Deformers" "Motion Trails" "Components" "Hair Systems" "Follicles" "Misc. UI" "Ornaments"  ;
 	setAttr ".otfva" -type "Int32Array" 22 0 1 1 1 1 1
