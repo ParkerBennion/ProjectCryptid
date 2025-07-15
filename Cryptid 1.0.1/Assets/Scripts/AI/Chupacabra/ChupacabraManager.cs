@@ -8,26 +8,16 @@ using Random = UnityEngine.Random;
 [RequireComponent(typeof(Animator), typeof(NavMeshAgent))]
 public class ChupacabraManager : CryptidManager
 {
-    private Animator animator;
-    private NavMeshAgent navAgent;
-    private StateMachine stateMachine;
     public State fleeState, flinchState;
     public bool canPounce;
     public GameObject playerTarget;
     [SerializeField] private bool canStun;
 
-    private void Awake()
+    protected override void Awake()
     {
-        navAgent = GetComponent<NavMeshAgent>();
-        animator = GetComponent<Animator>();
-        stateMachine = GetComponent<StateMachine>();
+        base.Awake();
         canPounce = true;
         canStun = true;
-    }
-
-    private void Update()
-    {
-        //animator.SetFloat("Speed", navAgent.velocity.magnitude);
     }
 
     public void SetTarget(GameObject obj)
@@ -53,6 +43,12 @@ public class ChupacabraManager : CryptidManager
         base.Die();
         gameObject.SetActive(false);
     }
+
+    public override void ResetAI()
+    {
+        stateMachine.InitializeStateMachine();
+    }
+
     public void GroundChupa()
     {
         RaycastHit hit;

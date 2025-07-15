@@ -7,7 +7,6 @@ public class CryptidDeathCall:ScriptableObject
 
     public void RaiseAction(CryptidManager thisCryptid)
     {
-        Debug.Log("a cryptid has died");
         raiseDeath?.Invoke(thisCryptid);
     }
 }

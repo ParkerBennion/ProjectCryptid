@@ -4,6 +4,7 @@ using UnityEngine;
 public class StateMachine : MonoBehaviour
 
 {
+    public State StartState;
     public State currentState;
 
     private void Start()
@@ -16,8 +17,9 @@ public class StateMachine : MonoBehaviour
         currentState.LogicUpdate();
     }
 
-    private void InitializeStateMachine()
+    public void InitializeStateMachine()
     {
+        currentState = StartState;
         currentState.OnEnterState();
     }
 

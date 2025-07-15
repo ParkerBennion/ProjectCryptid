@@ -30,7 +30,7 @@ public class LevelBuilderManager : MonoBehaviour
     {
         activeCells.Add(startingCell);
         startingCell.PopulateEmptyCells();
-        cryptidPopulator.SpawnInitialCryptids();
+        //cryptidPopulator.SpawnInitialCryptids();
         //RebuildNavmesh();
     }
 
@@ -58,15 +58,6 @@ public class LevelBuilderManager : MonoBehaviour
 
         foreach (Cell cell in tempList)
         {
-            //remove cryptids in area
-            bufferCols= Physics.OverlapSphere(cell.transform.position, 36, enemyMask);
-            foreach (Collider col in bufferCols)
-            {
-                if (col.TryGetComponent(out CryptidManager cryptid))
-                {
-                    cryptid.Despawn();
-                }
-            }
             activeCells.Remove(cell);
             Destroy(cell.gameObject);
         }

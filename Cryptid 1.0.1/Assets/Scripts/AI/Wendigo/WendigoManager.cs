@@ -5,9 +5,6 @@ using UnityEngine.AI;
 
 public class WendigoManager : CryptidManager
 {
-    public StateMachine stateMachine;
-    private Animator animator;
-    private NavMeshAgent navAgent;
     public GameObject playerTarget;
     private WaitForSeconds meleeWFS, rangedWFS;
     public bool canMelee, canRangeAttack;
@@ -15,11 +12,9 @@ public class WendigoManager : CryptidManager
     [SerializeField] private State flinchState;
     [SerializeField] private float rangeCD, meleeCD;
 
-    private void Awake()
+    protected override void Awake()
     {
-        navAgent = GetComponent<NavMeshAgent>();
-        animator = GetComponent<Animator>();
-        stateMachine = GetComponent<StateMachine>();
+        base.Awake();
         meleeWFS = new WaitForSeconds(meleeCD);
         rangedWFS = new WaitForSeconds(rangeCD);
     }
@@ -49,6 +44,11 @@ public class WendigoManager : CryptidManager
     {
         base.Die();
         gameObject.SetActive(false);
+    }
+
+    public override void ResetAI()
+    {
+        stateMachine.InitializeStateMachine();
     }
 
     public void StartMeleeCD()
