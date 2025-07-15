@@ -3,15 +3,14 @@ using UnityEngine;
 
 public abstract class CryptidManager : MonoBehaviour
 {
-    [SerializeField] private CryptidPopulationManager popManager;
-
-    protected virtual void Start()
-    {
-        popManager.activeCryptids.Add(this);
-    }
-
+    [SerializeField] private CryptidDeathCall deathCall;
     public abstract void Disengage();
 
     public abstract void Despawn();
-    public abstract void Die();
+
+    public virtual void Die()
+    {
+        deathCall.RaiseAction(this);
+        print("sent the death call");
+    }
 }

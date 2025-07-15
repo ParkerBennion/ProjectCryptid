@@ -14,8 +14,6 @@ public class Cell : MonoBehaviour
     private NavMeshDataInstance navMeshInstance;
     [SerializeField] private bool isRoadCell;
 
-    [SerializeField] private CryptidPopulator enemySpawner;
-    
 
 
 
@@ -23,7 +21,6 @@ public class Cell : MonoBehaviour
     {
         adjacentCells = new GameObject[7];
         adjacentCells[0] = this.gameObject;
-        enemySpawner = GetComponent<CryptidPopulator>();
         //isRoadCell = Vector3.Distance(transform.position, Vector3.zero) > cellManager.roadSpawnDistance;
     }
 
@@ -191,8 +188,6 @@ public class Cell : MonoBehaviour
         tileBrain = Instantiate(tileData.Item1, gameObject.transform.position, quaternion.identity, gameObject.transform).GetComponent<Tile>();
         tileBrain.RotateTile(newRotation-1);
         RegisterNavmeshWithManager();
-        
-        enemySpawner.SpawnRandomCryptids(3);
     }
     private int RotateIndexClockwise(int originalIndex, int numRotations)
     {

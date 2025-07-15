@@ -9,7 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f2f7889fb4f2134a86c6014f9441d26, type: 3}
-  m_Name: ActiveCryptidListSO
+  m_Script: {fileID: 11500000, guid: b79e759795000c346991e5081e8f866d, type: 3}
+  m_Name: CryptidDeath
   m_EditorClassIdentifier: 
-  activeCryptids: []

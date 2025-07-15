@@ -25,9 +25,8 @@ public class WendigoManager : CryptidManager
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    protected override void Start()
+    private void Start()
     {
-        base.Start();
         canMelee = true;
         canRangeAttack = true;
         canStun = true;
@@ -48,7 +47,8 @@ public class WendigoManager : CryptidManager
 
     public override void Die()
     {
-        Destroy(gameObject);
+        base.Die();
+        gameObject.SetActive(false);
     }
 
     public void StartMeleeCD()

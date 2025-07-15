@@ -13,24 +13,24 @@ public class LevelBuilderManager : MonoBehaviour
     public float maxDistance, roadSpawnDistance;
     public GameObject player, basicCell;
     [SerializeField] private TileLibrary tileLibrary;
-    [SerializeField] private CryptidPopulationManager cryptidPopulationManager;
     public string testString;
     public List<NavMeshDataInstance> navMeshInstances;
     private LayerMask enemyMask;
     private Collider[] bufferCols;
+    [SerializeField]private CryptidPopulator cryptidPopulator;
     
 
     private void Awake()
     {
         enemyMask = LayerMask.GetMask("Enemy");
         navMeshInstances= new List<NavMeshDataInstance>();
-        cryptidPopulationManager.activeCryptids.Clear();
     }
 
     public void CreateStartingCells()
     {
         activeCells.Add(startingCell);
         startingCell.PopulateEmptyCells();
+        cryptidPopulator.SpawnInitialCryptids();
         //RebuildNavmesh();
     }
 

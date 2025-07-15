@@ -50,8 +50,8 @@ public class ChupacabraManager : CryptidManager
 
     public override void Die()
     {
-        //die
-        Destroy(gameObject);
+        base.Die();
+        gameObject.SetActive(false);
     }
     public void GroundChupa()
     {
