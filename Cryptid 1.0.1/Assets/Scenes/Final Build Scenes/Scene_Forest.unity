@@ -1563,6 +1563,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4497335193005307498, guid: f4d98c96c6bfc4041a617bf0a4c893cd, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5130815005333572820, guid: f4d98c96c6bfc4041a617bf0a4c893cd, type: 3}
       propertyPath: m_Name
       value: InWorldMenuCanvas
@@ -2878,7 +2882,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1855542035
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2926,9 +2930,9 @@ MonoBehaviour:
   activeCryptids: []
   playerCharacter: {fileID: 114873689}
   minSpawnRange: 10
-  maxSpawnRange: 60
+  maxSpawnRange: 50
   wrangleFrequency: 3
-  frontalConeSize: 90
+  frontalConeSize: 10
 --- !u!4 &1855542037
 Transform:
   m_ObjectHideFlags: 0
@@ -2963,7 +2967,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!135 &1973335299
 SphereCollider:
   m_ObjectHideFlags: 0

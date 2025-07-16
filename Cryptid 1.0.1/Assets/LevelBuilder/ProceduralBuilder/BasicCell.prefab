@@ -146,7 +146,6 @@ MonoBehaviour:
   tileBrain: {fileID: 0}
   tileLibrary: {fileID: 0}
   isRoadCell: 0
-  enemySpawner: {fileID: 0}
 --- !u!114 &7357468244183108833
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -175,6 +174,12 @@ MonoBehaviour:
   cryptidList:
   - {fileID: 3520540915994562969, guid: f86aac56c33017442b4890484c377c2b, type: 3}
   - {fileID: 5305199578427489480, guid: 35377ac6911f46342bb84f66644a00c9, type: 3}
+  activeCryptids: []
+  playerCharacter: {fileID: 0}
+  minSpawnRange: 0
+  maxSpawnRange: 0
+  wrangleFrequency: 0
+  frontalConeSize: 10
 --- !u!1 &6235436440806723735
 GameObject:
   m_ObjectHideFlags: 0

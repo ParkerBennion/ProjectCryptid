@@ -31,11 +31,17 @@ public abstract class CryptidManager : MonoBehaviour
     public void MoveToLocation(Vector3 newLocation)
     {
         navAgent.isStopped = true;
-        navAgent.Warp(newLocation);
-        navAgent.SetDestination(transform.position);
-        navAgent.isStopped = false;
-        ResetAI();
-        
+        if (NavMesh.SamplePosition(newLocation, out NavMeshHit hit, 20f, NavMesh.AllAreas))
+        {
+            navAgent.Warp(hit.position);
+            navAgent.SetDestination(hit.position);
+            navAgent.isStopped = false;
+            ResetAI();
+        }
+        else Debug.LogWarning("NO NAVMESH FOUND, ABORTING TELEPORT");
+
+
+
     }
 
 }

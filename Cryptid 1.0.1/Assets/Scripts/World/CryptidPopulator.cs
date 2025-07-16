@@ -90,10 +90,8 @@ public class CryptidPopulator : MonoBehaviour
                     cryptid.MoveToLocation(FindSpawnInFrontOfPlayer());
                 }
             }
-
             yield return new WaitForSeconds(3);
         }
-        
     }
     // create a system that checks periodically if cryptids are out of range and relocate them
 }
