@@ -474,7 +474,7 @@
     "m_Type": "UnityEditor.ShaderGraph.Texture2DMaterialSlot",
     "m_ObjectId": "3184e010dbba4d1fb271e86617cbb99c",
     "m_Id": 0,
-    "m_DisplayName": "TrailMap",
+    "m_DisplayName": "PathMask",
     "m_SlotType": 1,
     "m_Hidden": false,
     "m_ShaderOutputName": "Out",
@@ -1680,10 +1680,10 @@
     "m_Guid": {
         "m_GuidSerialized": "92bb2406-1f96-4d2c-8996-24652614356a"
     },
-    "m_Name": "TrailMap",
+    "m_Name": "PathMask",
     "m_DefaultRefNameVersion": 1,
-    "m_RefNameGeneratedByDisplayName": "TrailMap",
-    "m_DefaultReferenceName": "_TrailMap",
+    "m_RefNameGeneratedByDisplayName": "PathMask",
+    "m_DefaultReferenceName": "_PathMask",
     "m_OverrideReferenceName": "",
     "m_GeneratePropertyBlock": true,
     "m_UseCustomSlotLabel": false,

@@ -27,7 +27,6 @@ public class Cell : MonoBehaviour
     public void EnterCell()
     {
         PopulateEmptyCells();
-        print("Player entered cell");
         //cellManager.RebuildNavmesh(); 
         
         //find which direction you came from
@@ -53,7 +52,6 @@ public class Cell : MonoBehaviour
     {
         //string printString = "";//Print which spots are new empty cells
         List<int> newCellSpots = new List<int>();
-        print("Filling empty spots with code");
         for (int i = 1; i < 7; i++)//Create new EMPTY CELLS in empty spots
         {
             if (adjacentCells[i] == null)

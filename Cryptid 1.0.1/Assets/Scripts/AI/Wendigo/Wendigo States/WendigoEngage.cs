@@ -25,30 +25,37 @@ public class WendigoEngage : State
         distanceFromTarget = Vector3.Distance(manager.transform.position, playerTarget.transform.position);
         if (distanceFromTarget <= currentEngageDistance)//if close enough to attack
         {
-            if (engageInMelee&&manager.canMelee)//if good to melee
+            if (engageInMelee)
             {
-                print("MeleeAttack");
-                stateMachine.SwitchToNextState(meleeAttackState);
+                if (manager.canMelee)
+                {
+                    
+                    stateMachine.SwitchToNextState(meleeAttackState);
+                }
             }
-            else if (distanceFromTarget <= rangeFleeDistance)//if ranged but too close
+            else
             {
-                fleeDirection = (manager.transform.position - playerTarget.transform.position).normalized;
-                navAgent.SetDestination((fleeDirection * rangeFleeDistance * 1.1f)+manager.transform.position);
-                print("RUNAWAY");
-            }//if ranged but not too close;
-            else if(manager.canRangeAttack)
-            {
-                print("RangeAttack");
-                navAgent.SetDestination(transform.position);
-                stateMachine.SwitchToNextState(rangeAttackState);
+                if (distanceFromTarget <= rangeFleeDistance)//if ranged but too close, run away
+                {
+                    fleeDirection = (manager.transform.position - playerTarget.transform.position).normalized;
+                    navAgent.SetDestination((fleeDirection * rangeFleeDistance * 1.1f)+manager.transform.position);
+                    print("RUNAWAY");
+                }//if ranged but not too close;
+                else if (manager.canRangeAttack)
+                {
+                    navAgent.SetDestination(transform.position);
+                    stateMachine.SwitchToNextState(rangeAttackState);
+                }
             }
         }
-        else navAgent.SetDestination(playerTarget.transform.position);
+        else
+        {
+            navAgent.SetDestination(playerTarget.transform.position);
+        }
     }
 
     public override void OnEnterState()
     {
-        print("Engaging Player");
         ReEvaluateMelee(!torchStatus.GetTorchStatus());
         playerTarget = manager.playerTarget;
         navAgent.enabled = true;

@@ -10,7 +10,7 @@ public class WendigoFlinch : State
 
     public override void OnEnterState()
     {
-        
+        animator.SetTrigger("Flinch");
     }
 
     public override void OnExitState()
