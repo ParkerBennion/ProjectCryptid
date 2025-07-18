@@ -102,7 +102,6 @@ GameObject:
   - component: {fileID: 5084290003078939522}
   - component: {fileID: 5668663707068220045}
   - component: {fileID: 7357468244183108833}
-  - component: {fileID: 4047633725637233077}
   m_Layer: 0
   m_Name: BasicCell
   m_TagString: Untagged
@@ -158,28 +157,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bdd46ac3441a17d458943c9252343a08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &4047633725637233077
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5650620722496709884}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6fa21cd09e355004f84a3c887c053329, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  difficultyLevel: 1
-  cryptidList:
-  - {fileID: 3520540915994562969, guid: f86aac56c33017442b4890484c377c2b, type: 3}
-  - {fileID: 5305199578427489480, guid: 35377ac6911f46342bb84f66644a00c9, type: 3}
-  activeCryptids: []
-  playerCharacter: {fileID: 0}
-  minSpawnRange: 0
-  maxSpawnRange: 0
-  wrangleFrequency: 0
-  frontalConeSize: 10
 --- !u!1 &6235436440806723735
 GameObject:
   m_ObjectHideFlags: 0

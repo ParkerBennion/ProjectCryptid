@@ -39,7 +39,6 @@ public class WendigoEngage : State
                 {
                     fleeDirection = (manager.transform.position - playerTarget.transform.position).normalized;
                     navAgent.SetDestination((fleeDirection * rangeFleeDistance * 1.1f)+manager.transform.position);
-                    print("RUNAWAY");
                 }//if ranged but not too close;
                 else if (manager.canRangeAttack)
                 {
