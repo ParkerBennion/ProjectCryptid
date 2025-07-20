@@ -29,7 +29,6 @@ public class EntityHealth : MonoBehaviour, IDamageable
         }
         damageEvent.Invoke();
         //damage animation
-        print("OUCH");
     }
 
 /// <summary>

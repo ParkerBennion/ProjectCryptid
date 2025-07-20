@@ -51,7 +51,7 @@ public class ChupacabraPatrolState : State
         while (isPatrolling)
         {
             startTime = Time.time;
-            destinationPoint = findNearbyPatrolPoint(startPoint);
+            destinationPoint = FindNearbyPatrolPoint(startPoint);
             navAgent.SetDestination(destinationPoint);
             while (Vector3.Distance(manager.transform.position, destinationPoint) >= 1f && (Time.time - startTime)<maxPatrolTime)//while the object has not reached it's destination and less time has passed than the maximum patrol time
             {
@@ -65,7 +65,7 @@ public class ChupacabraPatrolState : State
     /// </summary>
     /// <param name="origin"></param>
     /// <returns></returns>
-    private Vector3 findNearbyPatrolPoint(Vector3 origin)
+    private Vector3 FindNearbyPatrolPoint(Vector3 origin)
     {
         return origin + new Vector3(Random.Range(-patrolRadius, patrolRadius), 0, Random.Range(-patrolRadius, patrolRadius));
     }

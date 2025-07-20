@@ -21,7 +21,7 @@ public class PlayerAttack : MonoBehaviour
 /// </summary>
     public void LightAttack()
     { 
-        print("lightAttack");
+        //print("lightAttack");
         DisplayHitBox(attackRadius, attackOffset);//Debugging
         attackCenter = gameObject.transform.TransformPoint(attackOffset);
         cols= Physics.OverlapSphere(attackCenter, attackRadius, validLayerList);
@@ -37,7 +37,7 @@ public class PlayerAttack : MonoBehaviour
 /// <param name="isPerfectAttack"></param>
     public void HeavyAttack(bool isPerfectAttack)
     {
-        print("heavyAttack "+isPerfectAttack);
+        //print("heavyAttack "+isPerfectAttack);
         DisplayHitBox(heavySwingRange, Vector3.zero);//Debugging
         cols= Physics.OverlapSphere(transform.position, heavySwingRange, validLayerList);
         foreach (Collider thisCol in cols)
