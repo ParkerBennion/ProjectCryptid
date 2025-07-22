@@ -96,9 +96,7 @@ public class ChupacabraPounceState : State
     /// </summary>
     private void PounceHitCheck()
     {
-        Debug.Log("Hitbox "+hitboxHalfExtents);
         bool foundPlayer=false;
-        Debug.Log("FOUND PLAYER?");
         Vector3 attackCenter = gameObject.transform.TransformPoint(0f,.5f, 1f);
         Collider[] cols = Physics.OverlapBox(attackCenter, hitboxHalfExtents, quaternion.identity, LayerMask.GetMask("PlayerLayer"));
         foreach (Collider thisCol in cols)
@@ -109,7 +107,6 @@ public class ChupacabraPounceState : State
                 foundPlayer = true;
             }
         }
-        Debug.Log("PLAYER FOUND IS "+foundPlayer);
         if (foundPlayer && target.GetComponent<PlayerHealth>().canLatch)
         {
             target.GetComponent<PlayerHealth>().canLatch = false;

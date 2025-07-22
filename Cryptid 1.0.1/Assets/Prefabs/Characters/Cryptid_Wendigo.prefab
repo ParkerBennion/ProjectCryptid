@@ -423,6 +423,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deathCall: {fileID: 11400000, guid: 775e1f38c2b7d3d4c885ce7f1510a4bd, type: 2}
+  animator: {fileID: 3806275233138044880}
+  navAgent: {fileID: 4467649302048103906}
   stateMachine: {fileID: 8601654369842533651}
   playerTarget: {fileID: 0}
   canMelee: 0

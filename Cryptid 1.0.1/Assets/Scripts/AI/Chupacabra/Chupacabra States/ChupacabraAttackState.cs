@@ -32,7 +32,7 @@ public class ChupacabraAttackState : State
     public override void OnEnterState()
     {
         navAgent.isStopped = true;
-        StartCoroutine(TurnToPlayer(.4f));
+        StartCoroutine(TurnToPlayer(.25f));
         animator.SetTrigger("Melee Attack");//this plays the animation, which will notify the state machine when it is finished
     }
 
