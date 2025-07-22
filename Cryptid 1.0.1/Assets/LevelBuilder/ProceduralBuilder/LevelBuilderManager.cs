@@ -8,17 +8,21 @@ using UnityEngine.AI;
 public class LevelBuilderManager : MonoBehaviour
 {
     public List<Cell> activeCells;
-    public Cell startingCell;
+    [SerializeField] private Cell startingCell;
     public NavMeshSurface navMesh;
     public float maxDistance, roadSpawnDistance;
     public GameObject player, basicCell;
-    public TileLibrary tileLibrary;
+    [SerializeField] private TileLibrary tileLibrary;
     public string testString;
     public List<NavMeshDataInstance> navMeshInstances;
+    private LayerMask enemyMask;
+    private Collider[] bufferCols;
+    [SerializeField]private CryptidPopulator cryptidPopulator;
     
 
     private void Awake()
     {
+        enemyMask = LayerMask.GetMask("Enemy");
         navMeshInstances= new List<NavMeshDataInstance>();
     }
 
@@ -26,6 +30,7 @@ public class LevelBuilderManager : MonoBehaviour
     {
         activeCells.Add(startingCell);
         startingCell.PopulateEmptyCells();
+        cryptidPopulator.SpawnInitialCryptids();
         //RebuildNavmesh();
     }
 
@@ -41,10 +46,11 @@ public class LevelBuilderManager : MonoBehaviour
 
     public void PurgeDistantCells()
     {
+        Vector3 playerPosition = player.transform.position;
         List<Cell> tempList = new List<Cell>();
         foreach (Cell cell in activeCells)
         {
-            if (Vector3.Distance(player.transform.position, cell.transform.position) > maxDistance)
+            if (Vector3.Distance(playerPosition, cell.transform.position) > maxDistance)
             {
                 tempList.Add(cell);
             }
@@ -57,5 +63,6 @@ public class LevelBuilderManager : MonoBehaviour
         }
         tempList.Clear();
     }
+    
 
 }

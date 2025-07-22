@@ -527,7 +527,7 @@ GameObject:
   m_Layer: 7
   m_Name: Chupacabra
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -623,6 +623,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1d9a52a5d0377b4cb7e38e1a04412c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deathCall: {fileID: 11400000, guid: 775e1f38c2b7d3d4c885ce7f1510a4bd, type: 2}
   fleeState: {fileID: 761088540955871117}
   flinchState: {fileID: 2290627368239795043}
   canPounce: 0
@@ -640,6 +641,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f78aa1b233a49ef4bbdfddcb7a41001b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  StartState: {fileID: 8827765422006068648}
   currentState: {fileID: 8827765422006068648}
 --- !u!114 &5187591641670002765
 MonoBehaviour:
@@ -673,9 +675,9 @@ MonoBehaviour:
   deathEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 662610038120273793}
-        m_TargetAssemblyTypeName: DestroyBehavior, Assembly-CSharp
-        m_MethodName: DestroyObject
+      - m_Target: {fileID: 4509567553487782231}
+        m_TargetAssemblyTypeName: ChupacabraManager, Assembly-CSharp
+        m_MethodName: Die
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1533,10 +1535,39 @@ PrefabInstance:
     - {fileID: -7419018893672107648, guid: e59f8a00e918be2419bc38be3af45b95, type: 3}
     - {fileID: 5177392578346165731, guid: e59f8a00e918be2419bc38be3af45b95, type: 3}
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3739945848567997755, guid: e59f8a00e918be2419bc38be3af45b95, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3297655796922736435}
   m_SourcePrefab: {fileID: 100100000, guid: e59f8a00e918be2419bc38be3af45b95, type: 3}
+--- !u!137 &507172229204657985 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -7536492286674188306, guid: e59f8a00e918be2419bc38be3af45b95, type: 3}
+  m_PrefabInstance: {fileID: 1180178700956565679}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1723312110630528836 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: e59f8a00e918be2419bc38be3af45b95, type: 3}
   m_PrefabInstance: {fileID: 1180178700956565679}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2559771550520190356 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3739945848567997755, guid: e59f8a00e918be2419bc38be3af45b95, type: 3}
+  m_PrefabInstance: {fileID: 1180178700956565679}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3297655796922736435
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2559771550520190356}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a03a7e8c57bb8bb40a90d4790fae0bb8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mRenderer: {fileID: 507172229204657985}
+  variations:
+  - {fileID: 2100000, guid: cc2245ce4fa4e5544bca8ad6ce68dc8b, type: 2}
+  - {fileID: 2100000, guid: 45eb89dde7923784d871b60bcee6b885, type: 2}

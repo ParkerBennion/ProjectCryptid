@@ -20,7 +20,7 @@ public class ChupacabraChaseState : State
     public override void LogicUpdate()
     {
         distanceFromTarget = Vector3.Distance(manager.transform.position, playerTarget.transform.position);
-        if (distanceFromTarget < meleeDistance)
+        if (distanceFromTarget < meleeDistance)//if in melee range, melee attack regardless
         {
             stateMachine.SwitchToNextState(AttackState);
         }

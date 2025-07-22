@@ -118,7 +118,7 @@ public class CharacterInputController : MonoBehaviour
     }
     public void StartTorch()
     {
-        Debug.Log("StartTorch");
+        
     }
     public void ReleaseTorch()
     {
@@ -178,7 +178,7 @@ public void DisableControls()
         }
         else if (activelyCharging)
         {
-            print("Heavy Charge Interrupted => ");
+            //print("Heavy Charge Interrupted => ");
             animator.SetTrigger("HeavyRelease");
             attack.LightAttack();
         }
@@ -202,12 +202,12 @@ public void DisableControls()
     {
         yield return chargeStartDelayWFS;
         animator.SetBool("HeavyCharged", false);
-        print("Charging Heavy attack");
+        //print("Charging Heavy attack");
         activelyCharging = true;
         animator.SetBool("HeavyCharging", true);
         activePlayerRunSpeed *= chargeMovementMultiplier;
         yield return chargeTimeWFS;
-        print("Heavy attack is Charged");
+        //print("Heavy attack is Charged");
         StartCoroutine(PerfectHeavyAttackFrame());
         activelyCharging = false;
         attackCharged = true;
