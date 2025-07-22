@@ -32,7 +32,7 @@ public class ChupacabraAttackState : State
     public override void OnEnterState()
     {
         navAgent.isStopped = true;
-        manager.transform.LookAt(manager.playerTarget.transform);
+        StartCoroutine(TurnToPlayer(.4f));
         animator.SetTrigger("Melee Attack");//this plays the animation, which will notify the state machine when it is finished
     }
 
@@ -51,10 +51,11 @@ public class ChupacabraAttackState : State
     {
         elapsedTime = 0;
         startRotation = chupaTransform.rotation;
-        endRotation = Quaternion.LookRotation(manager.playerTarget.transform.position, chupaTransform.position);
+        endRotation = Quaternion.LookRotation(manager.playerTarget.transform.position-chupaTransform.position, Vector3.up);
         while (elapsedTime <= turnTime)
         {
             chupaTransform.rotation = Quaternion.Lerp(startRotation, endRotation, elapsedTime/turnTime);
+            elapsedTime += Time.deltaTime;
             yield return WFF;
         }
     }

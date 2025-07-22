@@ -18,7 +18,7 @@ public class ChupacabraManager : CryptidManager
     protected override void Awake()
     {
         base.Awake();
-        canPounce = true;
+        //canPounce = true;
         canStun = true;
         skillCDWFS = new WaitForSeconds(pounceCooldown);
     }
