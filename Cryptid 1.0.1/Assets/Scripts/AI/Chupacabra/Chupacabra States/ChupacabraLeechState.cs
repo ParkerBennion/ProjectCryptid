@@ -36,7 +36,7 @@ public class ChupacabraLeechState : State
         animator.SetTrigger("PounceHit");
         currentTaps = 0;
         playerTarget = manager.playerTarget;
-        gameObject.transform.rotation = playerTarget.transform.rotation;
+        manager.transform.rotation = playerTarget.transform.rotation;
         manager.gameObject.transform.SetParent(playerTarget.transform);
         manager.transform.localPosition=Vector3.zero;
         tappableButton.gameObject.SetActive(true);
@@ -63,9 +63,8 @@ public class ChupacabraLeechState : State
         {
             tapUI.StopTracking();
             manager.transform.SetParent(null);
-            stateMachine.SwitchToNextState(chaseState);
             playerTarget.GetComponent<PlayerHealth>().canLatch = true;
-            animator.Play("ChupaIdleChase");
+            animator.SetTrigger("Fumble");
         }
     }
 
@@ -85,7 +84,7 @@ public class ChupacabraLeechState : State
     
     public override void OnAnimationFinish()
     {
-        base.OnAnimationFinish();
+        manager.StartPounceCD();
         stateMachine.SwitchToNextState(chaseState);
     }
 }

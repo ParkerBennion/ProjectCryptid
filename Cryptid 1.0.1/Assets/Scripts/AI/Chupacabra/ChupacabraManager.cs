@@ -11,6 +11,8 @@ public class ChupacabraManager : CryptidManager
     public State fleeState, flinchState;
     public bool canPounce;
     public GameObject playerTarget;
+    private WaitForSeconds skillCDWFS;
+    [SerializeField] private float pounceCooldown;
     [SerializeField] private bool canStun;
 
     protected override void Awake()
@@ -18,6 +20,7 @@ public class ChupacabraManager : CryptidManager
         base.Awake();
         canPounce = true;
         canStun = true;
+        skillCDWFS = new WaitForSeconds(pounceCooldown);
     }
 
     public void SetTarget(GameObject obj)
@@ -58,6 +61,7 @@ public class ChupacabraManager : CryptidManager
         }
     }
 
+    
     private IEnumerator StunCooldown()
     {
         canStun = false;
@@ -80,5 +84,26 @@ public class ChupacabraManager : CryptidManager
         {
             stateMachine.SwitchToNextState(flinchState);
         }
+    }
+    
+    
+    /// <summary>
+    /// puts the pounce ability on CD for (POUNCECOOLDOWN) seconds, barring it's use until it is off cooldown
+    /// </summary>
+    /// <returns></returns>
+    private IEnumerator PounceCD()
+    {
+        canPounce = false;
+        yield return skillCDWFS;
+        canPounce = true;
+    }
+    
+    public void StartPounceCD()
+    {
+        StartCoroutine(PounceCD());
+    }
+    public void RecenterChupacabra()
+    {
+        gameObject.transform.Translate(new Vector3(0,0,7));
     }
 }
