@@ -1719,7 +1719,7 @@ MonoBehaviour:
   - PlayerLayer
   damageAmt: 5
   damageRadius: 2.25
-  AttackOrigin: {x: 0, y: 0, z: 0.15}
+  AttackOrigin: {x: 0, y: 1.25, z: 1.5}
 --- !u!114 &4509567553487782231
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1740,6 +1740,7 @@ MonoBehaviour:
   flinchState: {fileID: 2290627368239795043}
   canPounce: 0
   playerTarget: {fileID: 0}
+  pounceCooldown: 8
   canStun: 0
 --- !u!114 &5636798512514614687
 MonoBehaviour:
@@ -2109,7 +2110,7 @@ MonoBehaviour:
   playerTarget: {fileID: 0}
   AttackState: {fileID: 614764581453281319}
   PounceState: {fileID: 5729968972149388393}
-  meleeDistance: 3
+  meleeDistance: 2
   pounceDistance: 8
 --- !u!1 &4559120898427030219
 GameObject:

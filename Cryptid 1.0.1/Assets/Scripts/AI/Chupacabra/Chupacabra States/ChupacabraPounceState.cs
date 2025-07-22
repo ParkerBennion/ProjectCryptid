@@ -60,8 +60,6 @@ public class ChupacabraPounceState : State
 
         jumpDestinationPos = target.transform.position;
         jumpDestinationPos.y = .5f;
-        jumpFinalRotation.y = manager.gameObject.transform.eulerAngles.y;
-        manager.transform.eulerAngles = jumpFinalRotation;
         yield return timeBeforeLaunchWFS;//also need to update this so the chupacabra sets it's destination a little bit before it jumps
         currentRoutine = StartCoroutine(JumpAndPounce());
     }
