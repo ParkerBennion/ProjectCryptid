@@ -52,7 +52,10 @@ public class ChupacabraLeechState : State
     {
         chupaHealth.invulnerable = false;
         manager.GroundChupa();
-        StopCoroutine(damageRoutine);
+        //StopCoroutine(damageRoutine);
+        manager.transform.SetParent(null);
+        if(tapUI.enabled)
+            tapUI.StopTracking();
     }
     /// <summary>
     /// Reciever of the ui control to attack the chupacabra off your back.
@@ -63,7 +66,6 @@ public class ChupacabraLeechState : State
         if (currentTaps >= requiredTaps)
         {
             tapUI.StopTracking();
-            manager.transform.SetParent(null);
             playerTarget.GetComponent<PlayerHealth>().canLatch = true;
             animator.SetTrigger("Fumble");
             isLeeching = false;

@@ -30,8 +30,6 @@ public class ChupacabraManager : CryptidManager
 
     public override void Disengage()
     {
-        print(fleeState.gameObject);
-        print(stateMachine);
         stateMachine.SwitchToNextState(fleeState);
     }
 
