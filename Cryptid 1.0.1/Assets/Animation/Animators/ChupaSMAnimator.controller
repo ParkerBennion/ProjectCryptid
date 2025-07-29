@@ -260,9 +260,9 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.25
+  m_TransitionDuration: 0.24999994
   m_TransitionOffset: 0
-  m_ExitTime: 0.75
+  m_ExitTime: 0.30325207
   m_HasExitTime: 1
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
@@ -288,7 +288,7 @@ AnimatorStateMachine:
     m_Position: {x: 610, y: 200, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 8045067277580077198}
-    m_Position: {x: 190, y: -30, z: 0}
+    m_Position: {x: 190, y: -10, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -2353767986600516177}
     m_Position: {x: 210, y: -150, z: 0}
@@ -440,7 +440,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 5adf8bca73108c74c8958ad511ef2177, type: 2}
+  m_Motion: {fileID: 7400000, guid: eafc6b9e3234f9349b6a6f92d500d067, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -604,9 +604,9 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.031523943
-  m_TransitionOffset: 0.10796368
-  m_ExitTime: 0.9774216
+  m_TransitionDuration: 0.11612058
+  m_TransitionOffset: 0.079699226
+  m_ExitTime: 0.9450209
   m_HasExitTime: 1
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
@@ -749,7 +749,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Flinching
-  m_Speed: 1
+  m_Speed: 0.6
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: -1591648987749698190}
@@ -762,7 +762,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 2ada1950924247746b691047098ec128, type: 2}
+  m_Motion: {fileID: 7400000, guid: 943cf6f42ae5cd04f842a0dbef3d55a4, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -783,8 +783,8 @@ AnimatorStateTransition:
   m_IsExit: 0
   serializedVersion: 3
   m_TransitionDuration: 0.25
-  m_TransitionOffset: 0
-  m_ExitTime: 0.7457627
+  m_TransitionOffset: 0.08896463
+  m_ExitTime: 0.87246966
   m_HasExitTime: 1
   m_HasFixedDuration: 1
   m_InterruptionSource: 0

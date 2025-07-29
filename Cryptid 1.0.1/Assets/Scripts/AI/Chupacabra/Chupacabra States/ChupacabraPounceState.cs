@@ -122,6 +122,7 @@ public class ChupacabraPounceState : State
 
     public override void OnAnimationFinish()
     {
+        print("Fumble animation finished");
         manager.StartPounceCD();
         stateMachine.SwitchToNextState(FumbleState);
     }
