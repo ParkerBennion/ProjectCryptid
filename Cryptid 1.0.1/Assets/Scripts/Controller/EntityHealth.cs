@@ -1,16 +1,17 @@
 using System;
+using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.Events;
 
 public class EntityHealth : MonoBehaviour, IDamageable
 {
-    public float entityCurrentHealth, MaxHealth;
+    public float entityCurrentHealth, maxHealth;
     public UnityEvent damageEvent, deathEvent;
     public bool invulnerable;
 
     private void Awake()
     {
-        entityCurrentHealth = MaxHealth;
+        entityCurrentHealth = maxHealth;
         invulnerable = false;
     }
     
@@ -21,13 +22,13 @@ public class EntityHealth : MonoBehaviour, IDamageable
     public void DealDamage(float damage)
     {
         if (invulnerable) return;
-        changeHealth(damage*-1);
+        ChangeHealth(damage*-1);
         if(entityCurrentHealth<=0)//if the entity runs out of health, do not proceed and instead execute the death function
         {
             Death();
             return;
         }
-        damageEvent.Invoke();
+        damageEvent?.Invoke();
         //damage animation
     }
 
@@ -35,9 +36,9 @@ public class EntityHealth : MonoBehaviour, IDamageable
 /// Updates the health value of the entity
 /// </summary>
 /// <param name="changeAmount">The amount by which to change the health. Positive values increase the health, negative values decrease the health</param>
-    public void changeHealth(float changeAmount)
+    public virtual void ChangeHealth(float changeAmount)
     {
-        entityCurrentHealth += changeAmount;
+        entityCurrentHealth = Mathf.Clamp(entityCurrentHealth += changeAmount, 0f, maxHealth);
     }
 
 /// <summary>

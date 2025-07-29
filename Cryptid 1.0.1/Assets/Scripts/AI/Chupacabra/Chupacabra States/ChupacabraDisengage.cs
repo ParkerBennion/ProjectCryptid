@@ -54,7 +54,7 @@ public class ChupacabraDisengage : State
                 manager.Despawn();
                 yield break;
             }
-            else if (Vector3.Distance(manager.transform.position, homePoint) < 3f)
+            if (Vector3.Distance(manager.transform.position, homePoint) < 3f)
             {
                 isfleeing = false;
                 stateMachine.SwitchToNextState(patrolState);
