@@ -20,4 +20,9 @@ public class GameActionResponse : MonoBehaviour
     {
         responseEvent.Invoke();
     }
+
+    private void OnDestroy()
+    {
+        callerAction.raise -= RespondWithEvent;
+    }
 }
