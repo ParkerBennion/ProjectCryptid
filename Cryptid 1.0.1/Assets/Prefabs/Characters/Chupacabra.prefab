@@ -1067,7 +1067,7 @@ MonoBehaviour:
   stateMachine: {fileID: 5636798512514614687}
   windUpTime: 1.5
   timeAfterLockToLaunch: 0.25
-  pounceAirTime: 0.75
+  pounceAirTime: 0.5
   pounceHeight: 2
   pounceCooldown: 5
   FumbleState: {fileID: 2047149379273544929}
@@ -1695,7 +1695,7 @@ NavMeshAgent:
   m_Speed: 3.5
   m_Acceleration: 8
   avoidancePriority: 50
-  m_AngularSpeed: 720
+  m_AngularSpeed: 1080
   m_StoppingDistance: 0
   m_AutoTraverseOffMeshLink: 0
   m_AutoBraking: 1
@@ -1770,7 +1770,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCurrentHealth: 0
-  maxHealth: 0
+  maxHealth: 10
   damageEvent:
     m_PersistentCalls:
       m_Calls:

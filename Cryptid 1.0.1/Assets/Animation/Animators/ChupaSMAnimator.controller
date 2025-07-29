@@ -60,7 +60,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: ChupacabraLeeching
-  m_Speed: 1
+  m_Speed: 1.25
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: -2485703846305839154}
@@ -560,7 +560,7 @@ BlendTree:
   m_Name: IdleChaseBlend
   m_Childs:
   - serializedVersion: 2
-    m_Motion: {fileID: 7400000, guid: 7e6b87d3a4d3bf34e8cc42ed5dbc829b, type: 2}
+    m_Motion: {fileID: 7400000, guid: bf5adf7f0fcdf574ea6c7c0954484a17, type: 2}
     m_Threshold: 0
     m_Position: {x: 0, y: 0}
     m_TimeScale: 1
@@ -568,15 +568,15 @@ BlendTree:
     m_DirectBlendParameter: Blend
     m_Mirror: 0
   - serializedVersion: 2
-    m_Motion: {fileID: 7400000, guid: 28cc65c2984992848bb273a1dbd9149c, type: 2}
+    m_Motion: {fileID: 7400000, guid: 3a8d108048e325847badc35adba9c2b7, type: 2}
     m_Threshold: 3
     m_Position: {x: 0, y: 0}
-    m_TimeScale: 0.5
+    m_TimeScale: 1.25
     m_CycleOffset: 0
     m_DirectBlendParameter: Blend
     m_Mirror: 0
   - serializedVersion: 2
-    m_Motion: {fileID: 7400000, guid: 28cc65c2984992848bb273a1dbd9149c, type: 2}
+    m_Motion: {fileID: 7400000, guid: 84a96df0f800f67409c42a03e1dcb23c, type: 2}
     m_Threshold: 6
     m_Position: {x: 0, y: 0}
     m_TimeScale: 1
@@ -604,9 +604,9 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.25
-  m_TransitionOffset: 0
-  m_ExitTime: 0.85365856
+  m_TransitionDuration: 0.031523943
+  m_TransitionOffset: 0.10796368
+  m_ExitTime: 0.9774216
   m_HasExitTime: 1
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
