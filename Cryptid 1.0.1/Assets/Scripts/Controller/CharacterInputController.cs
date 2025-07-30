@@ -247,5 +247,29 @@ public void DisableControls()
         canAttack = false;
     }
 
-    
+    /// <summary>
+    /// Turns the player's transform towards yDegrees direction. 0 is forward from the camera, 180 is facing the camera
+    /// </summary>
+    /// <param name="yDegrees">the y rotation value of the player to be set</param>
+    public void LookInDirection(float yDegrees)
+    {
+        if (yDegrees > 360 || yDegrees < 0)
+        {
+            Debug.LogWarning("Player look direction was out of bounds(0-360)");
+            return;
+        }
+        transform.eulerAngles = new Vector3(0, yDegrees, 0);
+    }
+
+    public void EnterPauseState()
+    {
+        LookInDirection(180);
+        animator.SetTrigger("Death");// CHANGE THIS TO PAUSE BEHAVIOR
+    }
+
+    public void ExitPauseState()
+    {
+        animator.SetTrigger("Death");///change this to default
+    }
+
 }
