@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 637716929903981655}
   - component: {fileID: 6546253544367696655}
   m_Layer: 9
-  m_Name: Test Tree
+  m_Name: Tree 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28,9 +28,9 @@ Transform:
   m_GameObject: {fileID: 4129359857749734878}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.87, y: 4.86, z: 5.54}
-  m_LocalScale: {x: 0.5669, y: 0.5669, z: 0.5669}
-  m_ConstrainProportionsScale: 0
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -86,7 +86,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4129359857749734878}
-  m_Mesh: {fileID: -6198525040401489066, guid: 840a672a66a56714eb91f41d61a01099, type: 3}
+  m_Mesh: {fileID: -3456135434659019865, guid: 4baaa74196757864bad9b905827c781d, type: 3}
 --- !u!208 &6546253544367696655
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -97,9 +97,9 @@ NavMeshObstacle:
   m_Enabled: 1
   serializedVersion: 3
   m_Shape: 0
-  m_Extents: {x: 1, y: 7.9560003, z: 1}
+  m_Extents: {x: 0.5, y: 2, z: 0.5}
   m_MoveThreshold: 0.1
   m_Carve: 0
   m_CarveOnlyStationary: 1
-  m_Center: {x: 0.06, y: 0, z: 0.23}
+  m_Center: {x: -0.09, y: 2, z: -0.42}
   m_TimeToStationary: 0.5

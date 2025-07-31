@@ -15,6 +15,7 @@ public class ChupacabraLeechState : State
     private InteractableUI tapUI;
     private WaitForSeconds wfs;
     private EntityHealth chupaHealth;
+    private bool isLeeching;
     [SerializeField] private float requiredTaps, currentTaps, damageIntervalTime, damagePerInterval;
     protected override void Awake()
     {
@@ -23,6 +24,7 @@ public class ChupacabraLeechState : State
         tapUI = tappableButton.gameObject.GetComponentInChildren<InteractableUI>();
         wfs = new WaitForSeconds(damageIntervalTime);
         chupaHealth = manager.GetComponent<EntityHealth>();
+        isLeeching = false;
     }
 
     public override void LogicUpdate()
@@ -36,7 +38,7 @@ public class ChupacabraLeechState : State
         animator.SetTrigger("PounceHit");
         currentTaps = 0;
         playerTarget = manager.playerTarget;
-        gameObject.transform.rotation = playerTarget.transform.rotation;
+        manager.transform.rotation = playerTarget.transform.rotation;
         manager.gameObject.transform.SetParent(playerTarget.transform);
         manager.transform.localPosition=Vector3.zero;
         tappableButton.gameObject.SetActive(true);
@@ -50,8 +52,9 @@ public class ChupacabraLeechState : State
     {
         chupaHealth.invulnerable = false;
         manager.GroundChupa();
-        manager.transform.LookAt(playerTarget.transform);
-        StopCoroutine(damageRoutine);
+        //StopCoroutine(damageRoutine);
+        if(tapUI.enabled)
+            tapUI.StopTracking();
     }
     /// <summary>
     /// Reciever of the ui control to attack the chupacabra off your back.
@@ -62,10 +65,10 @@ public class ChupacabraLeechState : State
         if (currentTaps >= requiredTaps)
         {
             tapUI.StopTracking();
-            manager.transform.SetParent(null);
-            stateMachine.SwitchToNextState(chaseState);
             playerTarget.GetComponent<PlayerHealth>().canLatch = true;
-            animator.Play("ChupaIdleChase");
+            manager.transform.SetParent(null);
+            animator.SetTrigger("Fumble");
+            isLeeching = false;
         }
     }
 
@@ -76,7 +79,8 @@ public class ChupacabraLeechState : State
     /// <returns></returns>
     private IEnumerator DealDamageOverTime(EntityHealth playerHealth)
     {
-        while (true)
+        isLeeching = true;
+        while (isLeeching)
         {
             playerHealth.DealDamage(damagePerInterval);
             yield return wfs;
@@ -85,7 +89,7 @@ public class ChupacabraLeechState : State
     
     public override void OnAnimationFinish()
     {
-        base.OnAnimationFinish();
+        manager.StartPounceCD();
         stateMachine.SwitchToNextState(chaseState);
     }
 }

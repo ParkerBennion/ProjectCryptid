@@ -29,6 +29,7 @@ public class ChupacabraPatrolState : State
         isPatrolling = true;
         patrolRoutine = StartCoroutine(PatrolAroundArea());
         patrolSpeed = 3f;
+        canSeePlayer = false;
     }
 
     protected override void Awake()

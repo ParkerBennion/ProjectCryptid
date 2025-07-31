@@ -9,18 +9,19 @@ public class ChupacabraPounceState : State
     private Coroutine currentRoutine;
     private ChupacabraManager manager;
     private GameObject target;
-    private WaitForSeconds skillCDWFS, timeBeforeLaunchWFS;
+    private WaitForSeconds timeBeforeLaunchWFS;
     private WaitForEndOfFrame WFF;
-    private Vector3 startPosition, jumpDestinationPos, currentArcPos;
+    private Vector3 startPosition, jumpDestinationPos, currentArcPos, jumpFinalRotation, jumpYOffset;
     public State FumbleState, LeechState;
     protected override void Awake()
     {
         base.Awake();
         manager = stateMachine.GetComponent<ChupacabraManager>();
         WFF = new WaitForEndOfFrame();
-        skillCDWFS = new WaitForSeconds(pounceCooldown);
         timeBeforeLaunchWFS = new WaitForSeconds(timeAfterLockToLaunch);
         hitboxHalfExtents = new Vector3(1, .5f, 1.5f);
+        jumpFinalRotation = Vector3.zero;
+        jumpYOffset = new Vector3(0, .5f, 0);
     }
 
     public override void OnEnterState()
@@ -33,7 +34,6 @@ public class ChupacabraPounceState : State
     {
         StopCoroutine(currentRoutine);
         navAgent.enabled = true;
-        StartCoroutine(PounceCD());
     }
 
     public override void LogicUpdate()
@@ -53,11 +53,13 @@ public class ChupacabraPounceState : State
         animator.SetTrigger("PounceWindup");
         while (elapsedTime < windUpTime)
         {
-            manager.gameObject.transform.LookAt(target.transform);
+            manager.gameObject.transform.LookAt(target.transform.position);
             elapsedTime += Time.deltaTime;
             yield return WFF;
         }
+
         jumpDestinationPos = target.transform.position;
+        jumpDestinationPos.y = .5f;
         yield return timeBeforeLaunchWFS;//also need to update this so the chupacabra sets it's destination a little bit before it jumps
         currentRoutine = StartCoroutine(JumpAndPounce());
     }
@@ -68,7 +70,6 @@ public class ChupacabraPounceState : State
     /// <returns></returns>
     private IEnumerator JumpAndPounce()
     {
-        
         float elapsedTime = 0;
         float t = 0;
         startPosition = manager.transform.position;
@@ -82,28 +83,20 @@ public class ChupacabraPounceState : State
             elapsedTime += Time.deltaTime;
             yield return WFF;
         }
+        /*reset the x rotation
+         
+        */
         //check if hit
         PounceHitCheck();
     }
-    /// <summary>
-    /// puts the pounce ability on CD for (POUNCECOOLDOWN) seconds, barring it's use until it is off cooldown
-    /// </summary>
-    /// <returns></returns>
-    private IEnumerator PounceCD()
-    {
-        manager.canPounce = false;
-        yield return skillCDWFS;
-        manager.canPounce = true;
-    }
+    
     /// <summary>
     /// Checks if the player is within the specified hitbox. If so, then attaches itself to the player and goes to leech
     /// state. If not, (will) play an animation and return to chasing the player
     /// </summary>
     private void PounceHitCheck()
     {
-        Debug.Log("Hitbox "+hitboxHalfExtents);
         bool foundPlayer=false;
-        Debug.Log("FOUND PLAYER?");
         Vector3 attackCenter = gameObject.transform.TransformPoint(0f,.5f, 1f);
         Collider[] cols = Physics.OverlapBox(attackCenter, hitboxHalfExtents, quaternion.identity, LayerMask.GetMask("PlayerLayer"));
         foreach (Collider thisCol in cols)
@@ -114,7 +107,6 @@ public class ChupacabraPounceState : State
                 foundPlayer = true;
             }
         }
-        Debug.Log("PLAYER FOUND IS "+foundPlayer);
         if (foundPlayer && target.GetComponent<PlayerHealth>().canLatch)
         {
             target.GetComponent<PlayerHealth>().canLatch = false;
@@ -123,9 +115,15 @@ public class ChupacabraPounceState : State
         else
         {
             manager.GetComponent<SimpleAttack>().PerformSimpleAttack();
-            stateMachine.SwitchToNextState(FumbleState);
+            animator.SetTrigger("Fumble");
         }
         //fumble and return to chasing
     }
-    
+
+    public override void OnAnimationFinish()
+    {
+        print("Fumble animation finished");
+        manager.StartPounceCD();
+        stateMachine.SwitchToNextState(FumbleState);
+    }
 }
