@@ -264,12 +264,15 @@ public void DisableControls()
     public void EnterPauseState()
     {
         LookInDirection(180);
-        animator.SetTrigger("Death");// CHANGE THIS TO PAUSE BEHAVIOR
+        animator.updateMode = AnimatorUpdateMode.UnscaledTime;
+        animator.SetBool("Paused", true);
+        animator.SetTrigger("EnterPause");
     }
 
     public void ExitPauseState()
     {
-        animator.SetTrigger("Death");///change this to default
+        animator.SetBool("Paused", false);
+        animator.updateMode = AnimatorUpdateMode.Normal;
     }
 
 }
