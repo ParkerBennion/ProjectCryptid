@@ -18,7 +18,8 @@ public class WendigoIdle : State
 
     public override void OnEnterState()
     {
-        
+        canSeePlayer = false;
+        animator.Play("Idle");
     }
 
     public override void OnExitState()

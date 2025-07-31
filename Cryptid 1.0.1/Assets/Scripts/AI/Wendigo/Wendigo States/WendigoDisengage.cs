@@ -1,12 +1,8 @@
-using System.Collections;
 using UnityEngine;
-using UnityEngine.Events;
-/// <summary>
-/// This state disengages the chupacabra from the player and returns to the location in which it was instantiated
-/// </summary>
-public class ChupacabraDisengage : State
+using System.Collections;
+public class WendigoDisengage : State
 {
-    private ChupacabraManager manager;
+    private WendigoManager manager;
     [SerializeField] private float despawnRange;
     private Vector3 fleePoint, homePoint;
     private Coroutine fleeRoutine;
@@ -16,8 +12,8 @@ public class ChupacabraDisengage : State
     protected override void Awake()
     {
         base.Awake(); 
-        manager = stateMachine.GetComponent<ChupacabraManager>();
-        homePoint = manager.transform.position;// this records where the chupacabra's spawn point is on creation
+        manager = stateMachine.GetComponent<WendigoManager>();
+        homePoint = manager.transform.position;// this records where the cryptid's spawn point is on creation
     }
 
     public override void LogicUpdate()
@@ -38,10 +34,9 @@ public class ChupacabraDisengage : State
     /// <returns></returns>
     private IEnumerator Flee()
     {
-        manager.GroundChupa();
         navAgent.enabled = true;
         navAgent.SetDestination(homePoint);
-        animator.Play("ChupaIdleChase");
+        //animator.Play("ChupaIdleChase");
         bool isfleeing = true;
         while (isfleeing)
         {
@@ -57,17 +52,6 @@ public class ChupacabraDisengage : State
                 isfleeing = false;
                 stateMachine.SwitchToNextState(patrolState);
             }
-        }
-    }
-    /// <summary>
-    /// Ensures the chupacabra is grounded on the navmesh
-    /// </summary>
-    private void GroundChupa()
-    {
-        RaycastHit hit;
-        if (Physics.Raycast(transform.position, Vector3.down, out hit, 10))
-        {
-            manager.transform.position = hit.point;
         }
     }
     public override void OnExitState()
