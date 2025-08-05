@@ -223,6 +223,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 3494001154833995361}
+        m_TargetAssemblyTypeName: CharacterInputController, Assembly-CSharp
+        m_MethodName: EnterPauseState
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   callerAction: {fileID: 11400000, guid: d3b02b5e88387f642a1dd3674069f962, type: 2}
 --- !u!114 &882038372797051415
 MonoBehaviour:
@@ -242,6 +254,18 @@ MonoBehaviour:
       - m_Target: {fileID: 3494001154833995361}
         m_TargetAssemblyTypeName: CharacterInputController, Assembly-CSharp
         m_MethodName: EnableControls
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 3494001154833995361}
+        m_TargetAssemblyTypeName: CharacterInputController, Assembly-CSharp
+        m_MethodName: ExitPauseState
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1536,6 +1560,10 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 9c53302dcbf1d0943a8fddb27f88d25e, type: 2}
+    - target: {fileID: 5866666021909216657, guid: ece4eccb5c1a32144934f4dbef3b1526, type: 3}
+      propertyPath: m_UpdateMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5866666021909216657, guid: ece4eccb5c1a32144934f4dbef3b1526, type: 3}
       propertyPath: m_ApplyRootMotion
       value: 0
