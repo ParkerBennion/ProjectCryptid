@@ -9,7 +9,7 @@ public class WendigoManager : CryptidManager
     private WaitForSeconds meleeWFS, rangedWFS;
     public bool canMelee, canRangeAttack;
     private bool canStun;
-    [SerializeField] private State flinchState;
+    [SerializeField] private State flinchState, disengageState;
     [SerializeField] private float rangeCD, meleeCD;
 
     protected override void Awake()
@@ -32,7 +32,7 @@ public class WendigoManager : CryptidManager
     }
     public override void Disengage()
     {
-        Debug.LogWarning("WENDIGO DISENGAGE NOT IMPLEMENTED YET");
+        stateMachine.SwitchToNextState(disengageState);
     }
 
     public override void Despawn()

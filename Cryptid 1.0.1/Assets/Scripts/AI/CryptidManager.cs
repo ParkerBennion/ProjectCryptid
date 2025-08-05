@@ -12,9 +12,7 @@ public abstract class CryptidManager : MonoBehaviour
 
     protected virtual void Awake()
     {
-        navAgent = GetComponent<NavMeshAgent>();
-        animator = GetComponent<Animator>();
-        stateMachine = GetComponent<StateMachine>();
+        
     }
 
     public abstract void Disengage();

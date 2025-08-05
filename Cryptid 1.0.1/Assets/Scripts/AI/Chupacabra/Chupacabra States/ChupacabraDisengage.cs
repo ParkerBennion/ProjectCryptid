@@ -12,7 +12,6 @@ public class ChupacabraDisengage : State
     private Coroutine fleeRoutine;
     private WaitForSeconds wfs = new WaitForSeconds(2f);
     public State patrolState;
-    [SerializeField]private UnityEvent disengageEvent;
 
     protected override void Awake()
     {
@@ -28,7 +27,6 @@ public class ChupacabraDisengage : State
 
     public override void OnEnterState()
     {
-        disengageEvent?.Invoke();
         fleeRoutine = StartCoroutine(Flee());
         navAgent.speed = 8;
     }
@@ -54,7 +52,7 @@ public class ChupacabraDisengage : State
                 manager.Despawn();
                 yield break;
             }
-            else if (Vector3.Distance(manager.transform.position, homePoint) < 3f)
+            if (Vector3.Distance(manager.transform.position, homePoint) < 3f)
             {
                 isfleeing = false;
                 stateMachine.SwitchToNextState(patrolState);
