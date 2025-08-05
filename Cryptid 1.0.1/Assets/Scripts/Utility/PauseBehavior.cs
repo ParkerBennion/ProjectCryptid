@@ -15,7 +15,7 @@ public class PauseBehavior : MonoBehaviour
     public void SetPause(bool setBool)
     {
         Time.timeScale = setBool ? 0 : 1;
-        (setBool ?   disableCall : enableCall).RaiseAction();
+        (setBool ?   disableCall : enableCall)?.RaiseAction();
         isPaused = setBool;
         print(isPaused);
     }
