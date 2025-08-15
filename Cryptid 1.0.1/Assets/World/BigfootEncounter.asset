@@ -9,8 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f82eed55c2643dc4c891572935fa761f, type: 3}
-  m_Name: WildlifeEncounter
+  m_Script: {fileID: 11500000, guid: ef8e7ad1fcdb0394299ff79e1bf032a0, type: 3}
+  m_Name: BigfootEncounter
   m_EditorClassIdentifier: 
   enterEvent:
     m_PersistentCalls:
@@ -19,5 +19,10 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   encounterManager: {fileID: 0}
-  wildlifePrefab: {fileID: 8794485894536896370, guid: 6ac90ab03b076f7458e5f92dc4fdc5e7, type: 3}
-  wildlifeSpeed: 5
+  bigfootPrefab: {fileID: 919132149155446097, guid: ece4eccb5c1a32144934f4dbef3b1526, type: 3}
+  bigfootInstance: {fileID: 0}
+  detectionRange: 3
+  despawnRange: 18
+  detectedEvent:
+    m_PersistentCalls:
+      m_Calls: []
