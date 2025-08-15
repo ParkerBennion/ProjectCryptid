@@ -1,6 +1,6 @@
 //Maya ASCII 2025ff03 scene
 //Name: WendigoRig.ma
-//Last modified: Fri, Aug 15, 2025 03:12:46 PM
+//Last modified: Fri, Aug 15, 2025 03:13:13 PM
 //Codeset: 1252
 requires maya "2025ff03";
 requires -nodeType "ikSpringSolver" "ikSpringSolver" "1.0";
@@ -14,12 +14,12 @@ fileInfo "product" "Maya 2025";
 fileInfo "version" "2025";
 fileInfo "cutIdentifier" "202409190603-cbdc5a7e54";
 fileInfo "osv" "Windows 10 Home v2009 (Build: 19045)";
-fileInfo "UUID" "BABF5F1B-4759-884A-5D9A-6E8EC65BB8CA";
+fileInfo "UUID" "EADD986C-40F8-FED7-CEDD-69AC48644220";
 createNode transform -s -n "persp";
 	rename -uid "71326349-4237-AAA7-B5A1-E0BDDFF21F3A";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -5.0034426869432362 3.1834467207239756 -1.8527573515354161 ;
-	setAttr ".r" -type "double3" -29.738351655074371 2764.6000000000768 0 ;
+	setAttr ".t" -type "double3" -5.2069594302039972 8.1953124232276746 8.1448963841231805 ;
+	setAttr ".r" -type "double3" -40.538351655084924 2849.4000000000447 -5.542696734350585e-15 ;
 	setAttr ".rp" -type "double3" 1.4210854715202004e-16 0 -5.6843418860808016e-16 ;
 	setAttr ".rpt" -type "double3" 2.7324633015786327e-16 9.7355521310831368e-17 9.7007394550145904e-16 ;
 createNode camera -s -n "perspShape" -p "persp";
@@ -28,7 +28,7 @@ createNode camera -s -n "perspShape" -p "persp";
 	setAttr ".fl" 34.999999999999993;
 	setAttr ".ncp" 0.001;
 	setAttr ".fcp" 100;
-	setAttr ".coi" 5.6827755987776607;
+	setAttr ".coi" 12.048106196919731;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
