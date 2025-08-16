@@ -263,9 +263,10 @@ public void DisableControls()
 
     public void EnterPauseState()
     {
+        print("Pause state called");
         LookInDirection(180);
         animator.updateMode = AnimatorUpdateMode.UnscaledTime;
-        animator.SetBool("Paused", true);
+        animator.SetBool("Paused", true); 
         animator.SetTrigger("EnterPause");
     }
 

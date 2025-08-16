@@ -52,7 +52,7 @@ public class ChupacabraLeechState : State
     {
         chupaHealth.invulnerable = false;
         manager.GroundChupa();
-        //StopCoroutine(damageRoutine);
+        StopCoroutine(damageRoutine);
         if(tapUI.enabled)
             tapUI.StopTracking();
     }

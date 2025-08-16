@@ -19,7 +19,7 @@ public class EntityHealth : MonoBehaviour, IDamageable
 /// Deducts the health of the entity by the given amount
 /// </summary>
 /// <param name="damage">The amount of health to deduct</param>
-    public void DealDamage(float damage)
+    public virtual void DealDamage(float damage)
     {
         if (invulnerable) return;
         ChangeHealth(damage*-1);
