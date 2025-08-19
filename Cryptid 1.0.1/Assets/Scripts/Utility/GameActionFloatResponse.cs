@@ -18,4 +18,9 @@ public class GameActionFloatResponse : MonoBehaviour
     {
         
     }
+
+    private void OnDestroy()
+    {
+        floatAction.raise -= responseEvent.Invoke;
+    }
 }

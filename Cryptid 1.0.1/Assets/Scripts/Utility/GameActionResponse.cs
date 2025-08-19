@@ -18,7 +18,7 @@ public class GameActionResponse : MonoBehaviour
 /// </summary>
     public void RespondWithEvent()
     {
-        responseEvent.Invoke();
+        responseEvent?.Invoke();
     }
 
     private void OnDestroy()
