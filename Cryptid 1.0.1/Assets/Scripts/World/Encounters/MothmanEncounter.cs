@@ -7,20 +7,14 @@ using UnityEngine.Events;
 public class MothmanEncounter : Encounter
 {
     [SerializeField] private GameAction uiToggleEvent;
-    [SerializeField] private float tickFrequency;
+    [SerializeField] private GameActionFloat updateAggressionStatus;
+    [SerializeField] private float tickFrequency, tickAmount;
     private WaitForSeconds wfs;
     [SerializeField] private TorchSO torchData;
     [SerializeField] private float aggressionRatingMaximum, startingAgressionRating, currentAggressionRating;
     public UnityEvent summonMothmanEvent;
     [SerializeField] private GameObject mothManPrefab;
     private GameObject mothManInstance;
-
-
-    private void Awake()
-    {
-        wfs = new WaitForSeconds(tickFrequency);
-        uiToggleEvent.RaiseAction();
-    }
 
     public override void OnExitEncounter()
     {
@@ -29,21 +23,37 @@ public class MothmanEncounter : Encounter
 
     public override IEnumerator EncounterRoutine()
     {
+        wfs = new WaitForSeconds(tickFrequency);
         bool mothManIsPatrolling=true;
         currentAggressionRating = startingAgressionRating;
+        uiToggleEvent.RaiseAction();
         while (mothManIsPatrolling)
         {
+            if (torchData.GetTorchStatus())
+            {
+                currentAggressionRating += tickAmount;
+            }
+            else
+            {
+                currentAggressionRating -= tickAmount;
+            }
+            updateAggressionStatus.RaiseAction(currentAggressionRating/aggressionRatingMaximum);
             if (currentAggressionRating >= aggressionRatingMaximum)//if the player has pissed off mothman enough to summon
             {
+                mothManIsPatrolling = false;
                 //summon mothman
+                Debug.Log("Mothman is SUMMONED");
                 uiToggleEvent.RaiseAction();
             }
             else if (currentAggressionRating <= 0)//if mothman loses interest, close the encounter
             {
+                mothManIsPatrolling = false;
+                Debug.Log("Mothman LEAVES");
+                uiToggleEvent.RaiseAction();
                 encounterManager.CloseCurrentEncounter();
             }
-            yield return wfs;
-            
+            else
+                yield return wfs;
         }
     }
 }

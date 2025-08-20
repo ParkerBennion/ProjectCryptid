@@ -1895,7 +1895,7 @@ MonoBehaviour:
   intermissionMin: 1
   intermissionMax: 3
   encounterList:
-  - {fileID: 11400000, guid: e0e617b398f08ea44bd3cafa3fa5ec3f, type: 2}
+  - {fileID: 11400000, guid: 1e2ce2d150515c14397ae38fe71e09a1, type: 2}
   player: {fileID: 114873689}
 --- !u!4 &140217392
 Transform:
@@ -2126,6 +2126,22 @@ PrefabInstance:
     - target: {fileID: 2342332908455677491, guid: f4d98c96c6bfc4041a617bf0a4c893cd, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[4].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 2852265789997368775, guid: f4d98c96c6bfc4041a617bf0a4c893cd, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2852265789997368775, guid: f4d98c96c6bfc4041a617bf0a4c893cd, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2926018481223648871, guid: f4d98c96c6bfc4041a617bf0a4c893cd, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3502667539152846576, guid: f4d98c96c6bfc4041a617bf0a4c893cd, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3634004227943578002, guid: f4d98c96c6bfc4041a617bf0a4c893cd, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -2379,6 +2395,10 @@ PrefabInstance:
       propertyPath: disableCall
       value: 
       objectReference: {fileID: 11400000, guid: d3b02b5e88387f642a1dd3674069f962, type: 2}
+    - target: {fileID: 7369830285417812285, guid: f4d98c96c6bfc4041a617bf0a4c893cd, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

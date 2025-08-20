@@ -14,6 +14,12 @@ public class MothManUIScript : MonoBehaviour
     // Update is called once per frame
     public void UpdateSlider(float percentage)
     {
-        slider.value = percentage;
+        if(slider!=null&&slider.gameObject.activeSelf)
+            slider.value = percentage;
+    }
+
+    public void ToggleUI()
+    {
+        slider.gameObject.SetActive(!slider.gameObject.activeSelf);
     }
 }
