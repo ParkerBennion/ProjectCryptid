@@ -1,6 +1,6 @@
 //Maya ASCII 2025ff03 scene
 //Name: Wendigo range attack.ma
-//Last modified: Wed, Aug 20, 2025 08:47:12 PM
+//Last modified: Wed, Aug 20, 2025 08:49:07 PM
 //Codeset: 1252
 file -rdi 1 -ns "WendigoRig" -rfn "WendigoRigRN" -op "v=0;" -typ "mayaAscii"
 		 "E:/CryptidMobile/ProjectCryptid/CryptidMobile_MayaProject//scenes/Wendigo/WendigoRig.ma";
@@ -16,19 +16,19 @@ fileInfo "product" "Maya 2025";
 fileInfo "version" "2025";
 fileInfo "cutIdentifier" "202409190603-cbdc5a7e54";
 fileInfo "osv" "Windows 10 Home v2009 (Build: 19045)";
-fileInfo "UUID" "22776346-49F3-06A4-6BBF-DBB67CA48EC5";
+fileInfo "UUID" "67891A97-4AAC-CDEC-1429-EBBC71C9EF40";
 createNode transform -s -n "persp";
 	rename -uid "0EBC61DF-43FB-C97A-9A82-62AB712734D9";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 26.977120954416471 13.802084612189233 4.3900260770475823 ;
-	setAttr ".r" -type "double3" -22.538352729495735 -280.99999999992093 0 ;
+	setAttr ".t" -type "double3" 12.328948393453295 5.8791264751709704 12.851943660951056 ;
+	setAttr ".r" -type "double3" -9.938352729528777 -319.79999999990224 -5.2051767785989338e-16 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "E9156CDD-4EDE-14C0-80FE-C18DCB8305A0";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
 	setAttr ".ncp" 0.001;
 	setAttr ".fcp" 100;
-	setAttr ".coi" 28.769152066968584;
+	setAttr ".coi" 17.986768159471207;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -463,9 +463,9 @@ createNode reference -n "WendigoRigRN";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"WendigoRigRN"
 		"WendigoRigRN" 0
-		"WendigoRigRN" 378
+		"WendigoRigRN" 379
 		2 "|WendigoRig:WENDIGO|WendigoRig:Deformers|WendigoRig:IK_Handles|WendigoRig:Spine_Spline_Handle" 
-		"translate" " -type \"double3\" 0.0027538514036083671 2.35803566322049774 -0.3325880482907414"
+		"translate" " -type \"double3\" -0.013123198093960311 2.11793949713179819 -0.30968876101575143"
 		
 		2 "|WendigoRig:WENDIGO|WendigoRig:Controls|WendigoRig:IKFK_Switches|WendigoRig:L_Leg_IK_FK_Switch_Ctrl_Grp|WendigoRig:L_Leg_IK_FK_Switch_Ctrl" 
 		"L_Leg_IKFK" " -k 1 0"
@@ -524,6 +524,7 @@ createNode reference -n "WendigoRigRN";
 		2 "|WendigoRig:WENDIGO|WendigoRig:Controls|WendigoRig:Neck_Head_Ctrls|WendigoRig:Neck_Jnt_Ctrl_Grp|WendigoRig:Neck_Jnt_Ctrl" 
 		"rotatePivotTranslate" " -type \"double3\" 0 0 0"
 		2 "WendigoRig:Geometry" "displayType" " 2"
+		2 "WendigoRig:Controls_Layer" "visibility" " 1"
 		5 4 "WendigoRigRN" "|WendigoRig:WENDIGO|WendigoRig:Controls|WendigoRig:IKFK_Switches|WendigoRig:Spine_IK_FK_Switch_Ctrl_Grp|WendigoRig:Spine_IK_FK_Switch_Ctrl.translateX" 
 		"WendigoRigRN.placeHolderList[1]" ""
 		5 4 "WendigoRigRN" "|WendigoRig:WENDIGO|WendigoRig:Controls|WendigoRig:IKFK_Switches|WendigoRig:Spine_IK_FK_Switch_Ctrl_Grp|WendigoRig:Spine_IK_FK_Switch_Ctrl.translateY" 
@@ -3595,17 +3596,18 @@ createNode animCurveTA -n "Neck_Jnt_Ctrl_rotateX";
 	rename -uid "13DBB8A4-4981-A58A-AF59-34A3D0B6D8A1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 23 0;
+	setAttr -s 3 ".ktv[0:2]"  0 0 17 0 23 0;
 createNode animCurveTA -n "Neck_Jnt_Ctrl_rotateY";
 	rename -uid "B3730CC2-4794-0F79-42AF-7683071D05D2";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 -17.986817029696599 23 -17.986817029696599;
+	setAttr -s 3 ".ktv[0:2]"  0 -17.986817029696599 17 -17.986817029696599
+		 23 -17.986817029696599;
 createNode animCurveTA -n "Neck_Jnt_Ctrl_rotateZ";
 	rename -uid "11C8DC7C-4B66-FDEB-9056-D3B91CDF6117";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 23 0;
+	setAttr -s 3 ".ktv[0:2]"  0 0 17 0 23 0;
 createNode animCurveTA -n "Eye_Aim_Master_Ctrl_rotateX";
 	rename -uid "42A9A966-49A4-3EB6-BB75-0A80E193FAF0";
 	setAttr ".tan" 18;
@@ -3735,20 +3737,20 @@ createNode animCurveTA -n "Head_Ctrl_rotateX";
 	rename -uid "F742B637-442B-F554-356A-35AE0EB54B58";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  0 -79.789696352476284 8 -54.575459444428226
-		 11 -37.02859409444541 23 -0.57519390516735591 35 8.598324103768574;
+	setAttr -s 4 ".ktv[0:3]"  0 -79.789696352476284 11 -37.02859409444541
+		 23 -0.57519390516735591 35 8.598324103768574;
 createNode animCurveTA -n "Head_Ctrl_rotateY";
 	rename -uid "04E4A94B-489D-918F-59DB-F8B14829BC02";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  0 16.504991351429833 8 -4.9467158180979727
-		 11 -10.177972742581055 23 0 35 0;
+	setAttr -s 4 ".ktv[0:3]"  0 16.504991351429833 11 -10.177972742581055
+		 23 0 35 0;
 createNode animCurveTA -n "Head_Ctrl_rotateZ";
 	rename -uid "9367399E-41C6-89AF-A5D9-9CB38FB9E60B";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  0 -9.5579184356529385 8 3.286022174624065
-		 11 2.8801598701191966 23 0 35 0;
+	setAttr -s 4 ".ktv[0:3]"  0 -9.5579184356529385 11 2.8801598701191966
+		 23 0 35 0;
 createNode animCurveTA -n "R_Leg_Pole_Vector_IK_Ctrl_rotateX";
 	rename -uid "207795BE-46D6-61A7-7A1B-76822418D2D4";
 	setAttr ".tan" 18;
@@ -3909,8 +3911,8 @@ createNode script -n "sceneConfigurationScriptNode";
 	setAttr ".b" -type "string" "playbackOptions -min 0 -max 35 -ast 0 -aet 35 ";
 	setAttr ".st" 6;
 select -ne :time1;
-	setAttr ".o" 35;
-	setAttr ".unw" 35;
+	setAttr ".o" 4;
+	setAttr ".unw" 4;
 select -ne :hardwareRenderingGlobals;
 	setAttr ".otfna" -type "stringArray" 22 "NURBS Curves" "NURBS Surfaces" "Polygons" "Subdiv Surface" "Particles" "Particle Instance" "Fluids" "Strokes" "Image Planes" "UI" "Lights" "Cameras" "Locators" "Joints" "IK Handles" "Deformers" "Motion Trails" "Components" "Hair Systems" "Follicles" "Misc. UI" "Ornaments"  ;
 	setAttr ".otfva" -type "Int32Array" 22 0 1 1 1 1 1
