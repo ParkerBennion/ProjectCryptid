@@ -25,7 +25,7 @@ public class EncounterManager : MonoBehaviour
 
     private void Start()
     {
-        StartNewRandomEncounter();
+        StartCoroutine(Intermission());
     }
 
     private IEnumerator Intermission()

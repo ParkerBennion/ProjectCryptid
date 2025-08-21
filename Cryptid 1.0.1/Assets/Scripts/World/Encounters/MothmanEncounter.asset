@@ -21,13 +21,13 @@ MonoBehaviour:
   encounterManager: {fileID: 0}
   uiToggleEvent: {fileID: 11400000, guid: 070c63458b3672549b10502fbe57c8ff, type: 2}
   updateAggressionStatus: {fileID: 11400000, guid: a48d5bfc580bcdf489c07c81d939abcd, type: 2}
-  tickFrequency: 0.5
+  tickFrequency: 0.1
   tickAmount: 0.25
   torchData: {fileID: 11400000, guid: 5d112b78f37dda646a93d2fd7ed1babe, type: 2}
   aggressionRatingMaximum: 10
   startingAgressionRating: 5
-  currentAggressionRating: 4.5
+  currentAggressionRating: 2
   summonMothmanEvent:
     m_PersistentCalls:
       m_Calls: []
-  mothManPrefab: {fileID: 8794485894536896370, guid: 6ac90ab03b076f7458e5f92dc4fdc5e7, type: 3}
+  mothManPrefab: {fileID: 4155475361554094443, guid: f8d684a2d829e734a89d3b37d20a334b, type: 3}

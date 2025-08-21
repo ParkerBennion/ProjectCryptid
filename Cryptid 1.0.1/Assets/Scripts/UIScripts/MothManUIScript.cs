@@ -20,6 +20,7 @@ public class MothManUIScript : MonoBehaviour
 
     public void ToggleUI()
     {
+        print("Slider is turning "+!slider.gameObject.activeSelf);
         slider.gameObject.SetActive(!slider.gameObject.activeSelf);
     }
 }

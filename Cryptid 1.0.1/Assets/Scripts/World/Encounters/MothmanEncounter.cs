@@ -18,7 +18,7 @@ public class MothmanEncounter : Encounter
 
     public override void OnExitEncounter()
     {
-        uiToggleEvent.RaiseAction();
+       uiToggleEvent.RaiseAction();
     }
 
     public override IEnumerator EncounterRoutine()
@@ -27,6 +27,7 @@ public class MothmanEncounter : Encounter
         bool mothManIsPatrolling=true;
         currentAggressionRating = startingAgressionRating;
         uiToggleEvent.RaiseAction();
+        Debug.Log("Starting slider Fresh");
         while (mothManIsPatrolling)
         {
             if (torchData.GetTorchStatus())
@@ -41,15 +42,18 @@ public class MothmanEncounter : Encounter
             if (currentAggressionRating >= aggressionRatingMaximum)//if the player has pissed off mothman enough to summon
             {
                 mothManIsPatrolling = false;
-                //summon mothman
+                mothManInstance = Instantiate(mothManPrefab,
+                    new Vector3(-6, 6, 0) + encounterManager.player.transform.position, Quaternion.identity);
+                mothManInstance.GetComponent<MothmanBehavior>().playerTarget = encounterManager.player;
+                mothManInstance.GetComponent<MothmanBehavior>().BeginAttack();
                 Debug.Log("Mothman is SUMMONED");
+                summonMothmanEvent.Invoke();
                 uiToggleEvent.RaiseAction();
             }
             else if (currentAggressionRating <= 0)//if mothman loses interest, close the encounter
             {
                 mothManIsPatrolling = false;
                 Debug.Log("Mothman LEAVES");
-                uiToggleEvent.RaiseAction();
                 encounterManager.CloseCurrentEncounter();
             }
             else
