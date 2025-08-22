@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 258456683302770951}
   - component: {fileID: 8999185161065583829}
   m_Layer: 8
-  m_Name: WhackableTreePlaceholder
+  m_Name: Whackable stump
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -43,7 +43,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7209809948753722333}
-  m_Mesh: {fileID: -5251650146771844918, guid: 43d6d633d99bb334cb38e6e257be1ad9, type: 3}
+  m_Mesh: {fileID: -3873167238202432063, guid: 43d6d633d99bb334cb38e6e257be1ad9, type: 3}
 --- !u!23 &4462055345112288274
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -124,7 +124,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7680b0c86c9e99f41a327b5764dae1a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHits: 5
+  maxHits: 2
   woodChunkPrefab: {fileID: 7835740818892888821, guid: 822471273de72e84f851d2676261c548, type: 3}
   wispsPerHit: 3
 --- !u!208 &8999185161065583829
