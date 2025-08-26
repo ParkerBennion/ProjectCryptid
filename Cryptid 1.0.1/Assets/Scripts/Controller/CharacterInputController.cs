@@ -12,7 +12,7 @@ public class CharacterInputController : MonoBehaviour
     public static GameObject characterObject; //declares this instance in the scene, used for efficent method of getting this reference in other scripts. (interactionItemTotemEquip)
     private PlayerInputs inputs;
     private Rigidbody rb;
-    [SerializeField] private VisualEffect heavyFrameFX;
+    [SerializeField] private VisualEffect heavyFrameFX, heavyChargeFX;
     private PlayerAttack attack;
     
     private Vector2 moveAxis;
@@ -191,6 +191,7 @@ public void DisableControls()
         animator.SetBool("HeavyCharging", false);
         attackCharged = false;
         activelyCharging = false;
+        heavyChargeFX.Stop();
         activePlayerRunSpeed = playerSpeed;
     }
     
@@ -204,12 +205,14 @@ public void DisableControls()
         animator.SetBool("HeavyCharged", false);
         //print("Charging Heavy attack");
         activelyCharging = true;
+        heavyChargeFX.Play();
         animator.SetBool("HeavyCharging", true);
         activePlayerRunSpeed *= chargeMovementMultiplier;
         yield return chargeTimeWFS;
         //print("Heavy attack is Charged");
         StartCoroutine(PerfectHeavyAttackFrame());
         activelyCharging = false;
+        heavyChargeFX.Stop();
         attackCharged = true;
         animator.SetBool("HeavyCharged", true);
     }

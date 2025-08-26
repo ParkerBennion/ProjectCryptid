@@ -4,7 +4,7 @@ using UnityEngine.VFX;
 
 public class PlayerAttack : MonoBehaviour
 {
-    [SerializeField] private VisualEffect visualizeHitbox;
+    [SerializeField] private VisualEffect visualizeHitbox, lightAttackFX;
     private Collider[] cols;
     [SerializeField] private float lightDamage, heavyDamage, attackRadius, heavySwingRange;
     private Vector3 attackCenter, attackOffset;
@@ -22,6 +22,7 @@ public class PlayerAttack : MonoBehaviour
     public void LightAttack()
     { 
         //print("lightAttack");
+        lightAttackFX.enabled = true;
         DisplayHitBox(attackRadius, attackOffset);//Debugging
         attackCenter = gameObject.transform.TransformPoint(attackOffset);
         cols= Physics.OverlapSphere(attackCenter, attackRadius, validLayerList);
