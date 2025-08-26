@@ -1,14 +1,26 @@
 using System;
 using UnityEngine;
-
+using System.Collections;
 public class TotemBase : MonoBehaviour
 {
-    //public CharacterInputController playerCharacter;
-    [SerializeField] public GameObject playerCharacter = CharacterInputController.characterObject;
+    
+    //[SerializeField] public GameObject playerCharacter = CharacterInputController.characterObject;
+    public GameObject playerCharacter;
+
+    public int randomint;
+    //[SerializeField] public CharacterController characterAnimator;
     
 
     public virtual void Awake()
     {
+        if (playerCharacter == null)
+        {
+            playerCharacter = CharacterInputController.characterObject;
+            if (playerCharacter == null)
+            {
+                Debug.LogWarning("TotemBase could not find the characterObject!");
+            }
+        }
         
     }
 
@@ -19,20 +31,29 @@ public class TotemBase : MonoBehaviour
             playerCharacter = CharacterInputController.characterObject;
             if (playerCharacter == null)
             {
-                Debug.LogWarning("TotemBase could not find the characterObject!");
+                Debug.LogWarning("TotemBase could not find the characterObject!d");
             }
         }
     }
     
     public virtual void Initialize()
     {
-        
-        //swaps out the players totems active ability with this one.
+        if (playerCharacter == null)
+        {
+            playerCharacter = CharacterInputController.characterObject;
+            if (playerCharacter == null)
+            {
+                Debug.LogWarning("TotemBase.Initialize() called before characterObject was assigned.");
+                return;
+            }
+        }
+
         if (playerCharacter.TryGetComponent<CharacterInputController>(out CharacterInputController controller))
         {
             controller.activeTotem = this;
         }
     }
+
 
     public virtual void Activate()
     {
@@ -76,7 +97,7 @@ public class TotemBase : MonoBehaviour
         {
             // No totem on character, just add this one
             Type newTotemType = this.GetType();
-            character.AddComponent(newTotemType);
+            //character.AddComponent(newTotemType);
             TotemBase newTotem = (TotemBase)character.AddComponent(newTotemType);
             newTotem.Initialize();
             Destroy(this);
@@ -87,4 +108,5 @@ public class TotemBase : MonoBehaviour
     {
         Destroy(this);
     }
+    
 }
