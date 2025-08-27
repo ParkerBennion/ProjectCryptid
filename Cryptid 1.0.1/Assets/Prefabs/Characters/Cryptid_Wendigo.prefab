@@ -1322,7 +1322,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4392109646623571610
 Transform:
   m_ObjectHideFlags: 0
@@ -1770,10 +1770,12 @@ MonoBehaviour:
   animator: {fileID: 3806275233138044880}
   navAgent: {fileID: 4467649302048103906}
   stateMachine: {fileID: 8601654369842533651}
+  splatterFX: {fileID: 7734269430591865215, guid: a073ef43914650c4680253a6e567f3c1, type: 3}
   playerTarget: {fileID: 0}
   canMelee: 0
   canRangeAttack: 0
   flinchState: {fileID: 727476613970794385}
+  disengageState: {fileID: 0}
   rangeCD: 2
   meleeCD: 2
 --- !u!114 &8601654369842533651

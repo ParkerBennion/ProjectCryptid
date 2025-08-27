@@ -9,6 +9,7 @@ public abstract class CryptidManager : MonoBehaviour
     public Animator animator;
     public NavMeshAgent navAgent;
     public StateMachine stateMachine;
+    [SerializeField] private GameObject splatterFX;
 
     protected virtual void Awake()
     {
@@ -22,6 +23,7 @@ public abstract class CryptidManager : MonoBehaviour
     public virtual void Die()
     {
         deathCall.RaiseAction(this);
+        Instantiate(splatterFX, transform.position, Quaternion.identity);
     }
 
     public abstract void ResetAI();

@@ -21,7 +21,7 @@ public class CacheScript : MonoBehaviour
             lootSpawnOffset + gameObject.transform.position, Quaternion.identity);
         if (lootInstance.TryGetComponent(out Rigidbody rigidbody))
         {
-            rigidbody.AddForce(lootTrajectoryForce);
+            rigidbody.AddForce(transform.TransformPoint(lootTrajectoryForce));
         }
     }
 }
