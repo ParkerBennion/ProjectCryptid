@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class TotemMegaSpeed : TotemBase
 {
-    public override void Awake()
+    protected override void Awake()
     {
         
     }

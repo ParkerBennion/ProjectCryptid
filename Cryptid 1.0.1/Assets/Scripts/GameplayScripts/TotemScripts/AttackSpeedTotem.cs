@@ -6,7 +6,7 @@ public class AttackSpeedTotoem : TotemBase
     private int totemActiveDuration=3;
     private Animator characterAnimator;
     private WaitForSeconds totemDuration;
-    public override void Awake()
+    protected override void Awake()
     {
         
     }

@@ -5,13 +5,12 @@ public class TotemBase : MonoBehaviour
 {
     
     //[SerializeField] public GameObject playerCharacter = CharacterInputController.characterObject;
-    public GameObject playerCharacter;
-
+    [SerializeField] protected GameObject playerCharacter;
     public int randomint;
     //[SerializeField] public CharacterController characterAnimator;
     
 
-    public virtual void Awake()
+    protected virtual void Awake()
     {
         if (playerCharacter == null)
         {
@@ -24,7 +23,7 @@ public class TotemBase : MonoBehaviour
         
     }
 
-    public virtual void Start()
+    protected virtual void Start()
     {
         if (playerCharacter == null)
         {

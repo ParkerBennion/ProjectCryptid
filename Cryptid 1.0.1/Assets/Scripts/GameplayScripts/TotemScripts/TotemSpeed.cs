@@ -3,7 +3,7 @@ using UnityEngine;
 public class TotemSpeed : TotemBase
 {
     
-    public override void Awake()
+    protected override void Awake()
     {
         
     }
