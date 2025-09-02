@@ -35,7 +35,7 @@ public class CharacterInputController : MonoBehaviour
     
     public TotemBase activeTotem;
 
-    [SerializeField]private Animator animator;
+    public Animator animator;
     [SerializeField] private TorchSO torchSO;
     private static readonly int animSpeed = Animator.StringToHash("Speed");
     

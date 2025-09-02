@@ -1,12 +1,13 @@
 using System;
 using UnityEngine;
 using System.Collections;
-public class TotemBase : MonoBehaviour
+public abstract class TotemBase : MonoBehaviour
 {
     
     //[SerializeField] public GameObject playerCharacter = CharacterInputController.characterObject;
     [SerializeField] protected GameObject playerCharacter;
-    public int randomint;
+
+    [SerializeField] protected int chargeUsesTotal, chargeUsesRemaining;
     //[SerializeField] public CharacterController characterAnimator;
     
 
@@ -57,6 +58,10 @@ public class TotemBase : MonoBehaviour
     public virtual void Activate()
     {
         Debug.Log("Default Totem does nothing");
+        chargeUsesRemaining--;
+        if (chargeUsesRemaining <= 0)
+            SelfDestruct();
+        print(chargeUsesRemaining+" out of "+chargeUsesTotal+" remaining");
     }
     
     public virtual void ReplaceCurrentTotemOnCharacter()
@@ -105,7 +110,10 @@ public class TotemBase : MonoBehaviour
 
     public virtual void SelfDestruct()
     {
+        playerCharacter.GetComponent<CharacterInputController>().activeTotem = null;
         Destroy(this);
     }
+
     
+
 }

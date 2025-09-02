@@ -26,6 +26,7 @@ public class TotemSpeed : TotemBase
         }
     }
 
+
     public override void SelfDestruct()
     {
         if (TryGetComponent<CharacterInputController>(out CharacterInputController character))
