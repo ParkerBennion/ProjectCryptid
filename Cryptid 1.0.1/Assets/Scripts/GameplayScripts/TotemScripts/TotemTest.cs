@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 using System.Collections;
-public abstract class TotemBase : MonoBehaviour
+public class TotemTest : MonoBehaviour
 {
     [SerializeField] protected GameObject playerCharacter;
     [SerializeField] protected bool canUseAbility;
@@ -48,7 +48,7 @@ public abstract class TotemBase : MonoBehaviour
 
         if (playerCharacter.TryGetComponent<CharacterInputController>(out CharacterInputController controller))
         {
-            controller.activeTotem = this;
+            //controller.activeTotem = this;
         }
     }
 

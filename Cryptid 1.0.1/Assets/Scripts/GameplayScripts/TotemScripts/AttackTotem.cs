@@ -6,7 +6,6 @@ public class AttackTotem :TotemBase
 {
     private float multiplier = 2f;
     private float placeholderFloat;
-    private bool canUseAbility;
     private Animator animator;
     public override void Activate()
     {
@@ -17,14 +16,16 @@ public class AttackTotem :TotemBase
         print("Crazy flame ability");
         animator.Play("Heavy Release");
         animator.Play("LurchForward");
+        if (chargeUsesRemaining <= 0)
+            SelfDestruct();
     }
 
     public override void Initialize()
     {
         base.Initialize();
-        chargeUsesTotal = 3;
+        chargeUsesTotal = 3;// start here
         chargeUsesRemaining = 3;
-        canUseAbility = true;
+        canUseAbility = true;//end here
         animator = playerCharacter.GetComponent<CharacterInputController>().animator;
         if (TryGetComponent(out PlayerAttack atk))
         {
@@ -38,14 +39,5 @@ public class AttackTotem :TotemBase
     {
         GetComponent<PlayerAttack>().damageMultiplier = placeholderFloat;
         base.SelfDestruct();
-    }
-
-    private IEnumerator ActivateCooldown()
-    {
-        canUseAbility = false;
-        if(chargeUsesRemaining<=0)
-            yield break;
-        yield return new WaitForSeconds(2);//here is the cooldown for the ability
-        canUseAbility = true;
     }
 }
