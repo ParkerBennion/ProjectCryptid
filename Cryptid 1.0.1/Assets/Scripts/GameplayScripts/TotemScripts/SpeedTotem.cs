@@ -16,7 +16,7 @@ public class SpeedTotem : TotemBase
         canUseAbility = true;//end here
         totemDuration = new WaitForSeconds(totemActiveDuration);
         characterAnimator = GetComponent<CharacterInputController>().animator;
-        characterAnimator.SetFloat("AttackSpeed", 3f);
+        characterAnimator.SetFloat("AttackSpeed", 2f);
     }
 
     public override void Activate()
