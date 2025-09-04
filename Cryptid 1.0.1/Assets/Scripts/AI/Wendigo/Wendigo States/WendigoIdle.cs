@@ -43,6 +43,7 @@ public class WendigoIdle : State
 
     public override void OnAnimationFinish()
     {
+        print("howl finish event called");
         base.OnAnimationFinish();
         navAgent.isStopped = false;
         canSeePlayer = true;
