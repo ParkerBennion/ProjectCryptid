@@ -17,6 +17,7 @@ public class SpeedTotem : TotemBase
         totemDuration = new WaitForSeconds(totemActiveDuration);
         characterAnimator = GetComponent<CharacterInputController>().animator;
         characterAnimator.SetFloat("AttackSpeed", 2f);
+        abilityCooldown = 3.1f;
     }
 
     public override void Activate()

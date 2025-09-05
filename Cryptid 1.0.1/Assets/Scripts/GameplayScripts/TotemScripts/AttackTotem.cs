@@ -31,6 +31,7 @@ public class AttackTotem :TotemBase
             placeholderFloat = atk.damageMultiplier;
             atk.damageMultiplier *= multiplier;
         }
+        abilityCooldown = 1.5f;
     }
 
 

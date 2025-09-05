@@ -4,6 +4,7 @@ using System.Collections;
 public abstract class TotemBase : MonoBehaviour
 {
     [SerializeField] protected GameObject playerCharacter;
+    [SerializeField] protected float abilityCooldown;
     [SerializeField] protected bool canUseAbility;
     [SerializeField] protected int chargeUsesTotal, chargeUsesRemaining;
     //[SerializeField] public CharacterController characterAnimator;
@@ -114,7 +115,7 @@ public abstract class TotemBase : MonoBehaviour
         canUseAbility = false;
         if(chargeUsesRemaining<=0)
             yield break;
-        yield return new WaitForSeconds(2);//here is the cooldown for the ability
+        yield return new WaitForSeconds(abilityCooldown);//here is the cooldown for the ability
         canUseAbility = true;
     }
 
