@@ -3,12 +3,13 @@ using UnityEngine;
 using System.Collections;
 public abstract class TotemBase : MonoBehaviour
 {
+    [SerializeField] private GameActionTotemType typeAction;
+    [SerializeField] private TotemType type;
     [SerializeField] protected GameObject playerCharacter;
     [SerializeField] protected float abilityCooldown;
     [SerializeField] protected bool canUseAbility;
     [SerializeField] protected int chargeUsesTotal, chargeUsesRemaining;
     //[SerializeField] public CharacterController characterAnimator;
-    
 
     protected virtual void Awake()
     {
@@ -46,11 +47,11 @@ public abstract class TotemBase : MonoBehaviour
                 return;
             }
         }
-
-        if (playerCharacter.TryGetComponent<CharacterInputController>(out CharacterInputController controller))
+        if (playerCharacter.TryGetComponent(out CharacterInputController controller))
         {
             controller.activeTotem = this;
         }
+        
     }
 
 
@@ -72,10 +73,10 @@ public abstract class TotemBase : MonoBehaviour
 
         GameObject character = playerCharacter.gameObject;
 
-        if (character.TryGetComponent<TotemBase>(out TotemBase currentTotem))
+        if (character.TryGetComponent(out TotemBase currentTotem))
         {
             // Don't replace with the same type to avoid infinite loop
-            if (currentTotem.GetType() == this.GetType())
+            if (currentTotem.GetType() == GetType())
             {
                 Debug.Log("Totem is already of this type.");
                 return;
@@ -83,14 +84,15 @@ public abstract class TotemBase : MonoBehaviour
 
             //Destroy(currentTotemOnThePlayer);
             currentTotem.SelfDestruct();
-
             // Get the type of this totem (the one calling the method)
-            Type newTotemType = this.GetType();
+            Type newTotemType = GetType();
 
             // Add the new totem to the character
             TotemBase newTotem = (TotemBase)character.AddComponent(newTotemType);
             newTotem.Initialize();
-
+            print("SHOWUP");
+            newTotem.typeAction = typeAction;
+            typeAction.RaiseAction(type);
             // Destroy the source totem
             Destroy(this);
         }
@@ -101,6 +103,9 @@ public abstract class TotemBase : MonoBehaviour
             //character.AddComponent(newTotemType);
             TotemBase newTotem = (TotemBase)character.AddComponent(newTotemType);
             newTotem.Initialize();
+            print("SHOWUP");
+            newTotem.typeAction = typeAction;
+            typeAction.RaiseAction(type);
             Destroy(this);
         }
     }
@@ -108,6 +113,7 @@ public abstract class TotemBase : MonoBehaviour
     public virtual void SelfDestruct()
     {
         playerCharacter.GetComponent<CharacterInputController>().activeTotem = null;
+        typeAction.RaiseAction(TotemType.Empty);
         Destroy(this);
     }
     protected IEnumerator ActivateCooldown()

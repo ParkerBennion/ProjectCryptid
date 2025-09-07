@@ -32,6 +32,7 @@ public class AttackTotem :TotemBase
             atk.damageMultiplier *= multiplier;
         }
         abilityCooldown = 1.5f;
+        
     }
 
 

@@ -1,11 +1,13 @@
 using System.Collections;
 using UnityEngine;
 
-public class HealthTotem : TotemBase
+public class DefenseTotem : TotemBase
 {
     private PlayerHealth playerHealth;
     [SerializeField] private float invulnerabilityDuration;
     private Coroutine currentRoutine;
+    
+    
     public override void Initialize()
     {
         base.Initialize();
@@ -16,6 +18,7 @@ public class HealthTotem : TotemBase
         playerHealth.damageTakenModifier = .6f;
         invulnerabilityDuration = 5;
         abilityCooldown = 5.1f;
+        
     }
 
     public override void Activate()
