@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Serialization;
 using UnityEngine.TextCore.Text;
 using UnityEngine.VFX;
 
@@ -23,7 +24,9 @@ public class CharacterInputController : MonoBehaviour
 
     [Range(0, 1)] 
     public float chargeMovementMultiplier;
-    public float activePlayerRunSpeed,  totemRunSpeed;
+
+    public float activePlayerRunSpeed;
+    [FormerlySerializedAs("totemRunSpeed")] public float totemRunSpeedBonus;
 
     private Coroutine chargingAttack;
     private bool perfectAttack;
@@ -74,7 +77,7 @@ public class CharacterInputController : MonoBehaviour
         inputs.PlayerMobile.Move.performed += ctx => moveAxis = ctx.ReadValue<Vector2>();
         inputs.PlayerMobile.Move.canceled += ctx => moveAxis = Vector2.zero;
 
-        totemRunSpeed = 0;
+        totemRunSpeedBonus = 0;
         
         //getTotem
         if (TryGetComponent<TotemBase>(out TotemBase totem))
@@ -92,7 +95,7 @@ public class CharacterInputController : MonoBehaviour
         moveVector.x = moveAxis.x; //Assigns the input values to a Vector3D
         moveVector.y = 0;
         moveVector.z = moveAxis.y;
-        transform.Translate(moveVector * ((totemRunSpeed+activePlayerRunSpeed) * Time.deltaTime), Space.World);
+        transform.Translate(moveVector * ((totemRunSpeedBonus+activePlayerRunSpeed) * Time.deltaTime), Space.World);
         if (moveAxis!=Vector2.zero)//Updates the players rotation if they are moving, and does nothing if the player is not moving
             transform.rotation = Quaternion.LookRotation(moveVector);
         animator.SetFloat(animSpeed, moveVector.magnitude*activePlayerRunSpeed);

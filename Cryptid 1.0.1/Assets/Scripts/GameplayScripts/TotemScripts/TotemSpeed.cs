@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class TotemSpeed : TotemBase
 {
+    
     public override void Awake()
     {
         
@@ -17,7 +18,7 @@ public class TotemSpeed : TotemBase
         base.Initialize();
         if (TryGetComponent<CharacterInputController>(out CharacterInputController character))
         {
-            character.totemRunSpeed += 1;
+            character.totemRunSpeedBonus += 1;
         }
         else
         {
@@ -29,7 +30,7 @@ public class TotemSpeed : TotemBase
     {
         if (TryGetComponent<CharacterInputController>(out CharacterInputController character))
         {
-            character.totemRunSpeed -= 1;
+            character.totemRunSpeedBonus -= 1;
         }
         else
         {
@@ -37,4 +38,5 @@ public class TotemSpeed : TotemBase
         }
         base.SelfDestruct();
     }
+    
 }

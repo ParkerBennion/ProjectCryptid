@@ -12,6 +12,8 @@ public class DataBlockSO : ScriptableObject
 
     [Header("Stats")]
     public int logs = 0;
+
+    public int Coins = 0;
     //public float playerHealth;
     //public float speedMultiplier = 1f;
     //public bool vulnerable;
