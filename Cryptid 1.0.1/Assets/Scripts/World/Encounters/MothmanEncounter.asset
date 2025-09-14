@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a607c7c86b419ac4d8ef14f463a55256, type: 3}
+  m_Name: MothmanEncounter
+  m_EditorClassIdentifier: 
+  enterEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  exitEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  encounterManager: {fileID: 0}
+  uiToggleEvent: {fileID: 11400000, guid: 070c63458b3672549b10502fbe57c8ff, type: 2}
+  updateAggressionStatus: {fileID: 11400000, guid: a48d5bfc580bcdf489c07c81d939abcd, type: 2}
+  tickFrequency: 0.1
+  tickAmount: 0.25
+  torchData: {fileID: 11400000, guid: 5d112b78f37dda646a93d2fd7ed1babe, type: 2}
+  aggressionRatingMaximum: 10
+  startingAgressionRating: 5
+  currentAggressionRating: 2
+  summonMothmanEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  mothManPrefab: {fileID: 4155475361554094443, guid: f8d684a2d829e734a89d3b37d20a334b, type: 3}
