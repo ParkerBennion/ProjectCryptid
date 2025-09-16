@@ -1,0 +1,1 @@
+E:\CryptidMobile\ProjectCryptid\Cryptid 1.0.1\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\build\intermediates\cxx\RelWithDebInfo\4z6d3s3q\obj\arm64-v8a

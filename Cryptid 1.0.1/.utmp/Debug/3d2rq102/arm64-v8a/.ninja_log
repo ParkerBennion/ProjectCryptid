@@ -1,12 +1,23 @@
 # ninja log v5
-29	132	7685319561062307	FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o	3293967e32814893
-132	201	7685319561712314	E:/CryptidMobile/ProjectCryptid/Cryptid 1.0.1/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/Debug/3d2rq102/obj/arm64-v8a/libswappywrapper.so	89e8e978162ce431
-0	716	7685319566867305	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	cae77fc587ce8641
-9	728	7685319566972298	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	5586e24fbfeb6c0a
-21	736	7685319567067295	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	28f9ff0c1eb864fc
-17	748	7685319567202298	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	879f68687d1e7ae4
-6	749	7685319567212300	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	53d7450eed62177b
-25	772	7685319567442300	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	5b636ddea1d3f5ca
-12	843	7685319568137298	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	c9350cb9025eb254
-4	861	7685319568317295	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	1cef1f02b670c3cd
-861	906	7685319568787299	E:/CryptidMobile/ProjectCryptid/Cryptid 1.0.1/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/Debug/3d2rq102/obj/arm64-v8a/libgame.so	69862c9d2de0c89c
+339	1052	7796907816650390	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	1cef1f02b670c3cd
+356	439	7796907810570395	FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o	3293967e32814893
+439	509	7796907811240397	E:/CryptidMobile/ProjectCryptid/Cryptid 1.0.1/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/Debug/3d2rq102/obj/arm64-v8a/libswappywrapper.so	89e8e978162ce431
+3	634	7796907812490399	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	879f68687d1e7ae4
+6	931	7796907815460394	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	cae77fc587ce8641
+353	977	7796907815910391	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	28f9ff0c1eb864fc
+345	944	7796907815600395	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	5586e24fbfeb6c0a
+336	954	7796907815690394	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	53d7450eed62177b
+342	949	7796907815640395	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	5b636ddea1d3f5ca
+349	1031	7796907816455390	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	c9350cb9025eb254
+1052	1608	7796907822220384	E:/CryptidMobile/ProjectCryptid/Cryptid 1.0.1/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/Debug/3d2rq102/obj/arm64-v8a/libgame.so	69862c9d2de0c89c
+32	104	7796936893688548	FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o	3293967e32814893
+104	163	7796936894253549	E:/CryptidMobile/ProjectCryptid/Cryptid 1.0.1/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/Debug/3d2rq102/obj/arm64-v8a/libswappywrapper.so	89e8e978162ce431
+9	592	7796936898533545	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	cae77fc587ce8641
+18	595	7796936898563546	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	5586e24fbfeb6c0a
+3	600	7796936898593543	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	879f68687d1e7ae4
+15	618	7796936898763543	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	53d7450eed62177b
+21	619	7796936898778544	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	5b636ddea1d3f5ca
+28	651	7796936899108542	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	28f9ff0c1eb864fc
+24	719	7796936899798546	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	c9350cb9025eb254
+5	733	7796936899913547	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	1cef1f02b670c3cd
+733	778	7796936900398546	E:/CryptidMobile/ProjectCryptid/Cryptid 1.0.1/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/Debug/3d2rq102/obj/arm64-v8a/libgame.so	69862c9d2de0c89c
