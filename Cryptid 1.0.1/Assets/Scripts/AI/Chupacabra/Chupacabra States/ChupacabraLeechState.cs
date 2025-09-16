@@ -16,6 +16,7 @@ public class ChupacabraLeechState : State
     private WaitForSeconds wfs;
     private EntityHealth chupaHealth;
     private bool isLeeching;
+    private SpeedNavMeshHandler navMeshHandler;
     [SerializeField] private float requiredTaps, currentTaps, damageIntervalTime, damagePerInterval;
     protected override void Awake()
     {
@@ -25,6 +26,7 @@ public class ChupacabraLeechState : State
         wfs = new WaitForSeconds(damageIntervalTime);
         chupaHealth = manager.GetComponent<EntityHealth>();
         isLeeching = false;
+        navMeshHandler = manager.GetComponent<SpeedNavMeshHandler>();
     }
 
     public override void LogicUpdate()
@@ -46,6 +48,8 @@ public class ChupacabraLeechState : State
         {
             damageRoutine = StartCoroutine(DealDamageOverTime(playerHealth));
         }
+        navMeshHandler.enabled = false;
+        navAgent.enabled = false;
     }
 
     public override void OnExitState()
@@ -55,6 +59,8 @@ public class ChupacabraLeechState : State
         StopCoroutine(damageRoutine);
         if(tapUI.enabled)
             tapUI.StopTracking();
+        navMeshHandler.enabled = true;
+        navAgent.enabled = true;
     }
     /// <summary>
     /// Reciever of the ui control to attack the chupacabra off your back.

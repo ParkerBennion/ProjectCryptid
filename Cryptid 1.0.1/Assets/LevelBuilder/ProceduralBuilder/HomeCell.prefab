@@ -99,7 +99,7 @@ GameObject:
   - component: {fileID: 495133601668374338}
   - component: {fileID: 5336161694848478022}
   m_Layer: 0
-  m_Name: HomeCell1
+  m_Name: HomeCell
   m_TagString: Untagged
   m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -197,11 +197,31 @@ PrefabInstance:
     - target: {fileID: -5312986275006407769, guid: 105402a6082d8dc4ba695ad60fe39bed, type: 3}
       propertyPath: m_NavMeshData
       value: 
-      objectReference: {fileID: 23800000, guid: dceca0fd578f3084a8ed6e4ed52eb3a7, type: 2}
+      objectReference: {fileID: 23800000, guid: 5772450d7b60a5944a6c50a5d4624d70, type: 2}
+    - target: {fileID: 2496641436676712851, guid: 105402a6082d8dc4ba695ad60fe39bed, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.57357645
+      objectReference: {fileID: 0}
+    - target: {fileID: 2496641436676712851, guid: 105402a6082d8dc4ba695ad60fe39bed, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2496641436676712851, guid: 105402a6082d8dc4ba695ad60fe39bed, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.81915206
+      objectReference: {fileID: 0}
+    - target: {fileID: 2496641436676712851, guid: 105402a6082d8dc4ba695ad60fe39bed, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2496641436676712851, guid: 105402a6082d8dc4ba695ad60fe39bed, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 110
+      objectReference: {fileID: 0}
     - target: {fileID: 3750810787237639891, guid: 105402a6082d8dc4ba695ad60fe39bed, type: 3}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: -1799501131822033171, guid: 8ec57db6640f7e24db684c88cefe4e09, type: 3}
+      objectReference: {fileID: -5843487310387925994, guid: ee2c4c3a74969db42bbb45a58713d246, type: 3}
     - target: {fileID: 5084290003078939522, guid: 105402a6082d8dc4ba695ad60fe39bed, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -245,6 +265,10 @@ PrefabInstance:
     - target: {fileID: 5650620722496709884, guid: 105402a6082d8dc4ba695ad60fe39bed, type: 3}
       propertyPath: m_Name
       value: 'HOMETILE '
+      objectReference: {fileID: 0}
+    - target: {fileID: 7360829965727196326, guid: 105402a6082d8dc4ba695ad60fe39bed, type: 3}
+      propertyPath: m_RenderingLayerMask
+      value: 129
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
