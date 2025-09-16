@@ -4,6 +4,7 @@ using UnityEngine;
 public class PlayerHealth : EntityHealth
 {
     public bool canLatch;
+    public float damageTakenModifier;
     
     [SerializeField] private GameActionFloat healthUpdate;
 
@@ -11,5 +12,10 @@ public class PlayerHealth : EntityHealth
     {
         base.ChangeHealth(changeAmount);
         healthUpdate.RaiseAction(entityCurrentHealth/maxHealth);
+    }
+
+    public override void DealDamage(float damage)
+    {
+        base.DealDamage(damage*damageTakenModifier);
     }
 }

@@ -4,7 +4,7 @@ public class HarvestableTree : MonoBehaviour, IDamageable
 {
     public int maxHits = 3;
     public GameObject woodChunkPrefab;
-
+    [SerializeField] private int wispsPerHit;
     private int currentHits = 0;
     private Collider treeCollider;
 
@@ -24,7 +24,10 @@ public class HarvestableTree : MonoBehaviour, IDamageable
             return;
 
         currentHits++;
-        SpawnWoodChunk();
+        for(int i =0; i<wispsPerHit; i++)
+        {
+            SpawnWoodChunk();
+        }
 
         if (currentHits >= maxHits)
         {

@@ -1,17 +1,17 @@
 using System;
 using UnityEngine;
 using System.Collections;
-public class TotemBase : MonoBehaviour
+public abstract class TotemBase : MonoBehaviour
 {
-    
-    //[SerializeField] public GameObject playerCharacter = CharacterInputController.characterObject;
-    public GameObject playerCharacter;
-
-    public int randomint;
+    [SerializeField] private GameActionTotemType typeAction;
+    [SerializeField] private TotemType type;
+    [SerializeField] protected GameObject playerCharacter;
+    [SerializeField] protected float abilityCooldown;
+    [SerializeField] protected bool canUseAbility;
+    [SerializeField] protected int chargeUsesTotal, chargeUsesRemaining;
     //[SerializeField] public CharacterController characterAnimator;
-    
 
-    public virtual void Awake()
+    protected virtual void Awake()
     {
         if (playerCharacter == null)
         {
@@ -21,10 +21,10 @@ public class TotemBase : MonoBehaviour
                 Debug.LogWarning("TotemBase could not find the characterObject!");
             }
         }
-        
+        canUseAbility = true;
     }
 
-    public virtual void Start()
+    protected virtual void Start()
     {
         if (playerCharacter == null)
         {
@@ -47,17 +47,19 @@ public class TotemBase : MonoBehaviour
                 return;
             }
         }
-
-        if (playerCharacter.TryGetComponent<CharacterInputController>(out CharacterInputController controller))
+        if (playerCharacter.TryGetComponent(out CharacterInputController controller))
         {
             controller.activeTotem = this;
         }
+        
     }
 
 
     public virtual void Activate()
     {
-        Debug.Log("Default Totem does nothing");
+        //Debug.Log("Default Totem does nothing");
+        chargeUsesRemaining--;
+        print(chargeUsesRemaining+" out of "+chargeUsesTotal+" remaining");
     }
     
     public virtual void ReplaceCurrentTotemOnCharacter()
@@ -71,10 +73,10 @@ public class TotemBase : MonoBehaviour
 
         GameObject character = playerCharacter.gameObject;
 
-        if (character.TryGetComponent<TotemBase>(out TotemBase currentTotem))
+        if (character.TryGetComponent(out TotemBase currentTotem))
         {
             // Don't replace with the same type to avoid infinite loop
-            if (currentTotem.GetType() == this.GetType())
+            if (currentTotem.GetType() == GetType())
             {
                 Debug.Log("Totem is already of this type.");
                 return;
@@ -82,14 +84,15 @@ public class TotemBase : MonoBehaviour
 
             //Destroy(currentTotemOnThePlayer);
             currentTotem.SelfDestruct();
-
             // Get the type of this totem (the one calling the method)
-            Type newTotemType = this.GetType();
+            Type newTotemType = GetType();
 
             // Add the new totem to the character
             TotemBase newTotem = (TotemBase)character.AddComponent(newTotemType);
             newTotem.Initialize();
-
+            print("SHOWUP");
+            newTotem.typeAction = typeAction;
+            typeAction.RaiseAction(type);
             // Destroy the source totem
             Destroy(this);
         }
@@ -100,13 +103,28 @@ public class TotemBase : MonoBehaviour
             //character.AddComponent(newTotemType);
             TotemBase newTotem = (TotemBase)character.AddComponent(newTotemType);
             newTotem.Initialize();
+            print("SHOWUP");
+            newTotem.typeAction = typeAction;
+            typeAction.RaiseAction(type);
             Destroy(this);
         }
     }
 
     public virtual void SelfDestruct()
     {
+        playerCharacter.GetComponent<CharacterInputController>().activeTotem = null;
+        typeAction.RaiseAction(TotemType.Empty);
         Destroy(this);
     }
+    protected IEnumerator ActivateCooldown()
+    {
+        canUseAbility = false;
+        if(chargeUsesRemaining<=0)
+            yield break;
+        yield return new WaitForSeconds(abilityCooldown);//here is the cooldown for the ability
+        canUseAbility = true;
+    }
+
     
+
 }

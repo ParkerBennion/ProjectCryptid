@@ -1,0 +1,12 @@
+# ninja log v5
+28	131	7796926303936539	FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o	6d51fe0e194d01f9
+132	208	7796926304676531	E:/CryptidMobile/ProjectCryptid/Cryptid 1.0.1/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/4z6d3s3q/obj/arm64-v8a/libswappywrapper.so	49f026e770200bfd
+16	940	7796926311956523	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	6a9d2a373627b2e5
+12	977	7796926312326536	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	1e020083d5bc3fa0
+24	985	7796926312406522	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	1b91d9470568d85e
+6	989	7796926312426528	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	ea6f72e0f8155b7
+0	1038	7796926312946534	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	5533b234b1a4388b
+19	1071	7796926313311521	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	f025ed66f5d98a94
+8	1211	7796926314696522	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	2059d8cfe2b5687a
+3	1303	7796926315616523	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	1aed4672550a84ea
+1303	1361	7796926316196526	E:/CryptidMobile/ProjectCryptid/Cryptid 1.0.1/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/4z6d3s3q/obj/arm64-v8a/libgame.so	545b173dfaabaea5
