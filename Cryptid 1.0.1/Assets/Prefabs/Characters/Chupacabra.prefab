@@ -1718,7 +1718,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layerList:
   - PlayerLayer
-  damageAmt: 5
+  damageAmt: 15
   damageRadius: 2.25
   AttackOrigin: {x: 0, y: 1.25, z: 1.5}
 --- !u!114 &4509567553487782231

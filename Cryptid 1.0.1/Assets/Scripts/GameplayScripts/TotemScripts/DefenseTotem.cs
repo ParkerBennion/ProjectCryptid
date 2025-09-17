@@ -49,10 +49,10 @@ public class DefenseTotem : TotemBase
     private IEnumerator InvulnerabilityRoutine()
     {
         playerHealth.invulnerable = true;
-        print("invulnerable");
+        Debug.Log("invulnerable");
         yield return new WaitForSeconds(invulnerabilityDuration);
         playerHealth.invulnerable = false;
-        print("no longer invulnerable");
+        Debug.Log("no longer invulnerable");
         if(chargeUsesRemaining<=0)
             SelfDestruct();
     }
