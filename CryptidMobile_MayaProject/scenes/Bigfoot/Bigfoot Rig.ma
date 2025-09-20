@@ -1,6 +1,6 @@
 //Maya ASCII 2025ff03 scene
 //Name: Bigfoot Rig.ma
-//Last modified: Fri, Sep 19, 2025 07:37:24 PM
+//Last modified: Fri, Sep 19, 2025 07:41:34 PM
 //Codeset: 1252
 file -rdi 1 -ns "CalebSIZEREFERENCE" -dr 1 -rfn "CalebSIZEREFERENCERN" -op "v=0;"
 		 -typ "mayaAscii" "C:/Users/caris/Desktop/ProjectCryptid/CryptidMobile_MayaProject//scenes/CalebSIZEREFERENCE.ma";
@@ -19,12 +19,12 @@ fileInfo "product" "Maya 2025";
 fileInfo "version" "2025";
 fileInfo "cutIdentifier" "202409190603-cbdc5a7e54";
 fileInfo "osv" "Windows 10 Home v2009 (Build: 19045)";
-fileInfo "UUID" "43A253D4-4C7B-97D8-37C6-61A37A5B3ACA";
+fileInfo "UUID" "BFB05108-45EC-8669-5401-CBB699654A6B";
 createNode transform -s -n "persp";
 	rename -uid "3D0F75CB-4C87-7285-5167-249D0AD18EA2";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 6.6549702168932052 2.6572398059533242 -1.3183779456011029 ;
-	setAttr ".r" -type "double3" 1085.8458022082903 -1336.1999999998936 0 ;
+	setAttr ".t" -type "double3" 7.0040729628575447 5.616485746450258 7.698020286337222 ;
+	setAttr ".r" -type "double3" 1067.8458022082689 -1394.9999999998788 1.1244958916011149e-15 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "252E71D5-4E46-B1E7-E040-2588AD9641C8";
 	setAttr -k off ".v" no;
@@ -32,7 +32,7 @@ createNode camera -s -n "perspShape" -p "persp";
 	setAttr ".ncp" 0.001;
 	setAttr ".fcp" 100;
 	setAttr ".fd" 0.05;
-	setAttr ".coi" 7.2024773303923704;
+	setAttr ".coi" 10.571038936062788;
 	setAttr ".ow" 0.1;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
