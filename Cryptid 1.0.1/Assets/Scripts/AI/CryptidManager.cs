@@ -23,7 +23,7 @@ public abstract class CryptidManager : MonoBehaviour
     public virtual void Die()
     {
         deathCall.RaiseAction(this);
-        //Instantiate(splatterFX, transform.position, Quaternion.identity);
+        Instantiate(splatterFX, transform.position, Quaternion.identity);
     }
 
     public abstract void ResetAI();
