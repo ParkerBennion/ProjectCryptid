@@ -1737,7 +1737,7 @@ MonoBehaviour:
   animator: {fileID: 6587335968660136068}
   navAgent: {fileID: 5802046408941479511}
   stateMachine: {fileID: 5636798512514614687}
-  splatterFX: {fileID: 7734269430591865215, guid: a073ef43914650c4680253a6e567f3c1, type: 3}
+  splatterFX: {fileID: 472526503852951626, guid: a1fa0cfc504c03949a631a1d626da7bb, type: 3}
   fleeState: {fileID: 761088540955871117}
   flinchState: {fileID: 2290627368239795043}
   canPounce: 0

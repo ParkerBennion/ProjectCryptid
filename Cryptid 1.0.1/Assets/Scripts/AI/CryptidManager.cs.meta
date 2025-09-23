@@ -8,7 +8,7 @@ MonoImporter:
   - animator: {instanceID: 0}
   - navAgent: {instanceID: 0}
   - stateMachine: {instanceID: 0}
-  - splatterFX: {fileID: 7734269430591865215, guid: a073ef43914650c4680253a6e567f3c1, type: 3}
+  - splatterFX: {fileID: 472526503852951626, guid: a1fa0cfc504c03949a631a1d626da7bb, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

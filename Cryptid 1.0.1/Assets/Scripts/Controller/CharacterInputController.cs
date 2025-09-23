@@ -13,7 +13,7 @@ public class CharacterInputController : MonoBehaviour
     public static GameObject characterObject; //declares this instance in the scene, used for efficent method of getting this reference in other scripts. (interactionItemTotemEquip)
     private PlayerInputs inputs;
     private Rigidbody rb;
-    [SerializeField] private VisualEffect heavyFrameFX, heavyChargeFX;
+    [SerializeField] private ParticleSystem heavyFrameFX, heavyChargingFX, heavyChargedFX;
     private PlayerAttack attack;
     
     private Vector2 moveAxis;
@@ -61,7 +61,7 @@ public class CharacterInputController : MonoBehaviour
         perfectAttack = false;
         attack = GetComponent<PlayerAttack>();
         
-        heavyFrameFX.SetFloat("FrameTime", perfectHeavyFrameTime);
+        //heavyFrameFX.SetFloat("FrameTime", perfectHeavyFrameTime);
 
         inputs.PlayerMobile.Attack.started += StartAttackCallback;
         inputs.PlayerMobile.Attack.canceled += ReleaseAttackCallback;
@@ -194,7 +194,8 @@ public void DisableControls()
         animator.SetBool("HeavyCharging", false);
         attackCharged = false;
         activelyCharging = false;
-        heavyChargeFX.Stop();
+        heavyChargingFX.Stop();
+        heavyChargedFX.Stop();
         activePlayerRunSpeed = playerSpeed;
     }
     
@@ -208,16 +209,17 @@ public void DisableControls()
         animator.SetBool("HeavyCharged", false);
         //print("Charging Heavy attack");
         activelyCharging = true;
-        heavyChargeFX.Play();
+        heavyChargingFX.Play();
         animator.SetBool("HeavyCharging", true);
         activePlayerRunSpeed *= chargeMovementMultiplier;
         yield return chargeTimeWFS;
         //print("Heavy attack is Charged");
         StartCoroutine(PerfectHeavyAttackFrame());
         activelyCharging = false;
-        heavyChargeFX.Stop();
+        heavyChargingFX.Stop();
         attackCharged = true;
         animator.SetBool("HeavyCharged", true);
+        heavyChargedFX.Play();
     }
 
     private IEnumerator PerfectHeavyAttackFrame()
