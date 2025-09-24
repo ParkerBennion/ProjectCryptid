@@ -117,6 +117,7 @@ namespace HoudiniEngineUnity
         HAPI_RESULT_DISALLOWED_NC_ASSET_WITH_LC_LICENSE = 140,        
         HAPI_RESULT_DISALLOWED_LC_ASSET_WITH_C_LICENSE = 150,        
         HAPI_RESULT_DISALLOWED_HENGINEINDIE_W_3PARTY_PLUGIN = 160,        
+        HAPI_RESULT_SHARED_MEMORY_BUFFER_OVERFLOW = 170,        
         HAPI_RESULT_ASSET_INVALID = 200,        
         HAPI_RESULT_NODE_INVALID = 210,        
         HAPI_RESULT_USER_INTERRUPTED = 300,        
@@ -293,10 +294,11 @@ namespace HoudiniEngineUnity
         HAPI_NODETYPE_CHOP = 1 << 2,        
         HAPI_NODETYPE_ROP = 1 << 3,        
         HAPI_NODETYPE_SHOP = 1 << 4,        
-        HAPI_NODETYPE_COP = 1 << 5,        
+        HAPI_NODETYPE_COP2 = 1 << 5,        
         HAPI_NODETYPE_VOP = 1 << 6,        
         HAPI_NODETYPE_DOP = 1 << 7,        
         HAPI_NODETYPE_TOP = 1 << 8,        
+        HAPI_NODETYPE_COP = 1 << 9,        
     };
 
     [Flags]
@@ -624,6 +626,7 @@ namespace HoudiniEngineUnity
         HAPI_PDG_EVENT_SERVICE_MANAGER_ALL,        //Deprecated
         HAPI_PDG_EVENT_NODE_COOKED,        //Sent when a node finishes cooking
         HAPI_PDG_EVENT_NODE_GENERATED,        //Sent when a node finished generating
+        HAPI_PDG_EVENT_WORKITEM_FRAME,        //Sent when a work item frame changes
         HAPI_PDG_CONTEXT_EVENTS,        
     };
 

@@ -299,7 +299,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d24bf60e336d9df4d8a8dcd23130a4ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  typeAction: {fileID: 0}
+  type: 0
   playerCharacter: {fileID: 261832310}
+  abilityCooldown: 0
+  canUseAbility: 0
+  chargeUsesTotal: 0
+  chargeUsesRemaining: 0
+  totemActiveDuration: 3
 --- !u!1 &489810632
 GameObject:
   m_ObjectHideFlags: 0
@@ -536,7 +543,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d24bf60e336d9df4d8a8dcd23130a4ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  typeAction: {fileID: 0}
+  type: 0
   playerCharacter: {fileID: 0}
+  abilityCooldown: 0
+  canUseAbility: 0
+  chargeUsesTotal: 0
+  chargeUsesRemaining: 0
+  totemActiveDuration: 3
 --- !u!114 &545842061
 MonoBehaviour:
   m_ObjectHideFlags: 0
