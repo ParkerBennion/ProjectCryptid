@@ -39,17 +39,17 @@ namespace HoudiniEngineUnity
 
         public class HEU_HoudiniVersion
         {
-                public const int HOUDINI_MAJOR			= 20;
-                public const int HOUDINI_MINOR			= 5;
-                public const int HOUDINI_BUILD			= 613;
+                public const int HOUDINI_MAJOR			= 21;
+                public const int HOUDINI_MINOR			= 0;
+                public const int HOUDINI_BUILD			= 440;
                 public const int HOUDINI_PATCH			= 0;
 
-                public const string HOUDINI_VERSION_STRING = "20.5.613";
+                public const string HOUDINI_VERSION_STRING = "21.0.440";
 
-                public const int HOUDINI_ENGINE_MAJOR	= 7;
+                public const int HOUDINI_ENGINE_MAJOR	= 8;
                 public const int HOUDINI_ENGINE_MINOR	= 0;
 
-                public const int HOUDINI_ENGINE_API		= 10;
+                public const int HOUDINI_ENGINE_API		= 0;
 
                 public const int UNITY_PLUGIN_VERSION	= 2;
 
@@ -57,31 +57,21 @@ namespace HoudiniEngineUnity
 
                 public const string HAPI_BIN_PATH		= "/bin";
 
-                #if UNITY_EDITOR_64 || UNITY_64
-                        public const string HAPI_LIBRARY	= "libHAPIL";
-                        public const string HARC_LIBRARY        = "libHARC";
-                #else
-                        public const string HAPI_LIBRARY	= "libHARC32";
-                        public const string HARC_LIBRARY        = "libHARC32";
-                #endif // UNITY_EDITOR_64
+                public const string HAPI_LIBRARY	= "libHAPIL";
+                public const string HARC_LIBRARY        = "libHARC";
 
                 public const string SIDEFX_SOFTWARE_REGISTRY = "SOFTWARE\\Side Effects Software\\";
 
 #elif UNITY_EDITOR_OSX || (!UNITY_EDITOR && UNITY_STANDALONE_OSX)
 
-                public const string HOUDINI_INSTALL_PATH = "/Applications/Houdini/Houdini" + HOUDINI_VERSION_STRING;
+                public const string HOUDINI_INSTALL_PATH = "C:/cygwin/home/prisms/builder-new/Nightly21.0.440CMake/dev/hfs/Applications";
                 public const string HOUDINI_FRAMEWORKS_PATH = "/Frameworks/Houdini.framework/Versions/Current";
 
                 public const string HAPI_BIN_PATH		= HOUDINI_FRAMEWORKS_PATH + "/Resources/bin";
                 public const string HAPI_LIBRARY_PATH		= HOUDINI_FRAMEWORKS_PATH + "/Libraries";
 
-                #if UNITY_EDITOR_64 || UNITY_64
-                        public const string HAPI_LIBRARY	= HOUDINI_INSTALL_PATH + HAPI_LIBRARY_PATH + "/libHAPIL.dylib";
-                        public const string HARC_LIBRARY        = HOUDINI_INSTALL_PATH + HAPI_LIBRARY_PATH + "/libHARC.dylib";
-                #else
-                        public const string HAPI_LIBRARY	= HOUDINI_INSTALL_PATH + HAPI_LIBRARY_PATH + "/libHARC32.dylib";
-                        public const string HARC_LIBRARY        = HOUDINI_INSTALL_PATH + HAPI_LIBRARY_PATH + "/libHARC32.dylib";
-                #endif // UNITY_EDITOR_64
+                public const string HAPI_LIBRARY	= HOUDINI_INSTALL_PATH + HAPI_LIBRARY_PATH + "/libHAPIL.dylib";
+                public const string HARC_LIBRARY        = HOUDINI_INSTALL_PATH + HAPI_LIBRARY_PATH + "/libHoudiniHARC.dylib";
 
 #elif UNITY_EDITOR_LINUX || (!UNITY_EDITOR && UNITY_STANDALONE_LINUX)
 
