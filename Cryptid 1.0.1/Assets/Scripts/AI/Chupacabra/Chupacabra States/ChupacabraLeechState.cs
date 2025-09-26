@@ -61,6 +61,8 @@ public class ChupacabraLeechState : State
             tapUI.StopTracking();
         navMeshHandler.enabled = true;
         navAgent.enabled = true;
+        manager.gameObject.transform.parent = null;
+        playerTarget.GetComponent<PlayerHealth>().canLatch = true;
     }
     /// <summary>
     /// Reciever of the ui control to attack the chupacabra off your back.
