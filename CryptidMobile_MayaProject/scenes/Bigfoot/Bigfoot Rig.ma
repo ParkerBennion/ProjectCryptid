@@ -1,6 +1,6 @@
 //Maya ASCII 2025ff03 scene
 //Name: Bigfoot Rig.ma
-//Last modified: Fri, Sep 26, 2025 03:20:43 PM
+//Last modified: Fri, Sep 26, 2025 03:56:38 PM
 //Codeset: 1252
 file -rdi 1 -ns "CalebSIZEREFERENCE" -dr 1 -rfn "CalebSIZEREFERENCERN" -op "v=0;"
 		 -typ "mayaAscii" "C:/Users/caris/Desktop/ProjectCryptid/CryptidMobile_MayaProject//scenes/CalebSIZEREFERENCE.ma";
@@ -18,12 +18,12 @@ fileInfo "product" "Maya 2025";
 fileInfo "version" "2025";
 fileInfo "cutIdentifier" "202409190603-cbdc5a7e54";
 fileInfo "osv" "Windows 10 Home v2009 (Build: 19045)";
-fileInfo "UUID" "C142CAAB-4020-8D6F-6FAD-29B38AC874F4";
+fileInfo "UUID" "11633430-4682-8DA4-801F-FA8342BF6BD3";
 createNode transform -s -n "persp";
 	rename -uid "3D0F75CB-4C87-7285-5167-249D0AD18EA2";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -0.74684874489353326 5.2976777073467929 11.536360357954937 ;
-	setAttr ".r" -type "double3" 1066.0458021478516 6478.1999999993977 4.9720701062431662e-17 ;
+	setAttr ".t" -type "double3" -0.15343424759930552 3.9484959531037811 1.8653533428668294 ;
+	setAttr ".r" -type "double3" 1076.245802147735 6473.3999999990974 5.0027712273671592e-17 ;
 	setAttr ".rp" -type "double3" -5.6843418860808016e-16 -2.8421709430404008e-16 0 ;
 	setAttr ".rpt" -type "double3" 2.4706768993492904e-16 1.2586478560967356e-17 3.9070448008163872e-16 ;
 createNode camera -s -n "perspShape" -p "persp";
@@ -33,7 +33,7 @@ createNode camera -s -n "perspShape" -p "persp";
 	setAttr ".ncp" 0.001;
 	setAttr ".fcp" 100;
 	setAttr ".fd" 0.05;
-	setAttr ".coi" 10.816825064429604;
+	setAttr ".coi" 1.1910887278892901;
 	setAttr ".ow" 0.1;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
@@ -4214,7 +4214,7 @@ createNode joint -n "R_Arm_1_Jnt_IK" -p "R_Clav_Jnt";
 createNode joint -n "R_Arm_2_Jnt_IK" -p "R_Arm_1_Jnt_IK";
 	rename -uid "1F4FD41D-4529-547E-DB38-318CB1DA5A9B";
 	setAttr ".t" -type "double3" -0.80107337236404419 6.6561964607103618e-06 -8.4419588702644438e-07 ;
-	setAttr ".r" -type "double3" 1.3142963147831169e-11 -2.2236609764460064e-06 4.4615220172892998e-11 ;
+	setAttr ".r" -type "double3" 1.3142963147831143e-11 -2.2236609764460017e-06 4.4615220172892894e-11 ;
 	setAttr ".s" -type "double3" 1.0000000000000002 0.99999999999999989 0.99999999999999967 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
@@ -22487,16 +22487,16 @@ createNode scaleConstraint -n "R_Leg_1_Jnt_IK_Ctrl_Grp_scaleConstraint1" -p "R_L
 	setAttr ".erp" yes;
 	setAttr -k on ".w0";
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "4E5E4933-4CD8-A320-2C76-EC9057083F35";
+	rename -uid "A76747D0-40CD-DD51-65DB-6AB358424198";
 	setAttr -s 60 ".lnk";
 	setAttr -s 60 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "BCAFF3B1-4169-3BB5-D43F-CA8A25E628CF";
+	rename -uid "3DC56061-4B50-D018-F5D9-95987B93C832";
 	setAttr ".bsdt[0].bscd" -type "Int32Array" 0 ;
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "889B41C1-4266-3006-BDA1-FEB1EF79110A";
+	rename -uid "B073D20A-460C-3677-6B41-25954235D05F";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "D458D65C-45CA-1993-EAD9-6E93DB160E79";
+	rename -uid "4EA33878-4B68-C97A-31B4-A8BE7A8DA002";
 	setAttr ".cdl" 6;
 	setAttr -s 8 ".dli[1:7]"  1 6 7 3 0 4 5;
 	setAttr -s 5 ".dli";
@@ -22504,7 +22504,7 @@ createNode displayLayer -n "defaultLayer";
 	rename -uid "C7628F2B-4779-9D1F-0FCE-FDBF3ED18615";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "A6BC1F4A-482B-BF2E-FA33-9AB6074336E0";
+	rename -uid "0634AC8B-4841-7608-F0CD-53BD8E870847";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "016D4A58-41E9-4FAD-71FA-4CB0E49AD04B";
 	setAttr ".g" yes;
@@ -22557,7 +22557,7 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n"
 		+ "            -camera \"|persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 1\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 1\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n"
 		+ "            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n"
-		+ "            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 2502\n            -height 765\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n"
+		+ "            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 2502\n            -height 886\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n"
 		+ "\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 0\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n"
 		+ "            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -isSet 0\n            -isSetMember 0\n            -showUfeItems 1\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n"
 		+ "            -longNames 0\n            -niceNames 1\n            -selectCommand \"print(\\\"\\\")\" \n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -renderFilterIndex 0\n            -selectionOrder \"chronological\" \n            -expandAttribute 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n            -showAttributes 0\n            -showConnected 0\n"
@@ -22584,8 +22584,8 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "                -maxConstantTransparency 1\n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 4 4 \n                -bumpResolution 4 4 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -controllers 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n"
 		+ "                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -bluePencil 1\n                -greasePencils 0\n                -excludeObjectPreset \"All\" \n                -shadows 0\n                -captureSequenceNumber -1\n                -width 0\n                -height 0\n                -sceneRenderFilter 0\n"
 		+ "                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n            stereoCameraView -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName; };\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
-		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 1\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 1\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 2502\\n    -height 765\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
-		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 1\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 1\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 2502\\n    -height 765\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 1\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 1\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 2502\\n    -height 886\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 1\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 1\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 2502\\n    -height 886\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
 		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 2 -size 10 -divisions 1 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
 	setAttr ".st" 3;
 createNode script -n "sceneConfigurationScriptNode";
@@ -23078,7 +23078,6 @@ createNode groupId -n "groupId84";
 	setAttr ".ihi" 0;
 createNode displayLayer -n "Geometry_Layer";
 	rename -uid "107DF304-4B96-5F40-8CA8-E79CE79C6BBA";
-	setAttr ".dt" 2;
 	setAttr ".c" 14;
 	setAttr ".ufem" -type "stringArray" 0  ;
 	setAttr ".do" 1;
@@ -23802,7 +23801,6 @@ createNode displayLayer -n "Controls_Layer";
 	setAttr ".do" 3;
 createNode displayLayer -n "Joint_Layer";
 	rename -uid "DDEB8A22-4E03-B342-0597-E893E667757C";
-	setAttr ".v" no;
 	setAttr ".c" 5;
 	setAttr ".ufem" -type "stringArray" 0  ;
 	setAttr ".do" 4;
@@ -25037,7 +25035,7 @@ createNode skinCluster -n "skinCluster2";
 		7 0.53221987100000001 12 0.058464378999999997
 		5 1 1.141e-06 4 9.0729999999999994e-06 5 0.36935858300000002 
 		7 0.57590829899999996 12 0.054722904000000003
-		5 1 4.0539999999999996e-06 4 2.3889999999999997e-05 5 0.44107700399999999 
+		5 1 4.0539999999999996e-06 4 2.389e-05 5 0.44107700399999999 
 		7 0.47135779 12 0.087537262000000005
 		7 1 1.7599999999999999e-07 4 1.3799999999999999e-06 5 0.015645473999999999 
 		6 0.51529045200000001 7 0.020616345000000001 9 0.44619744099999997 
@@ -25134,7 +25132,7 @@ createNode skinCluster -n "skinCluster2";
 		39 0.00016478099999999999 40 0.010371342
 		8 24 8.9999999999999995e-09 32 0.00094130099999999996 34 3.3099999999999999e-07 
 		35 0.011489891 36 0.97431225900000007 38 0.011280137000000001 39 
-		1.3117000000000002e-05 40 0.0019629550000000002
+		1.3117e-05 40 0.0019629550000000002
 		7 24 5.2000000000000002e-08 32 0.012165960999999999 34 1.7680000000000001e-06 
 		35 0.064033412999999997 36 0.85955410500000007 39 7.0046e-05 40 0.064174654999999997
 		7 24 2.4600000000000001e-07 32 0.043003922 34 8.3040000000000005e-06 
@@ -25212,16 +25210,16 @@ createNode skinCluster -n "skinCluster2";
 		5 16 0.42538298699999999 29 1.0999999999999999e-08 30 3.3099999999999999e-07 
 		31 0.00073311399999999999 76 0.57388355700000004
 		1 16 1
-		4 16 0.99926654400000003 29 0.00073311399999999999 30 3.3099999999999999e-07 
-		31 1.0999999999999999e-08
+		5 16 0.42538298699999999 29 0.00073311399999999999 30 3.3099999999999999e-07 
+		31 1.0999999999999999e-08 75 0.57388355700000004
 		5 16 0.19931359200000001 29 4.8e-08 30 1.4640000000000001e-06 
 		31 0.0032408340000000002 76 0.79744406199999995
-		4 16 0.99675765400000005 29 0.0032408340000000002 30 1.4640000000000001e-06 
-		31 4.8e-08
+		5 16 0.19931359200000001 29 0.0032408340000000002 30 1.4640000000000001e-06 
+		31 4.8e-08 75 0.79744406199999995
 		1 76 1
 		1 76 1
-		2 16 0.96671565299999995 76 0.033284346999999999
-		2 16 0.97119850100000005 76 0.028801499000000001
+		3 16 0.96671565399999992 75 0.016642173 76 0.016642173
+		3 16 0.97119850200000002 75 0.014400748999999999 76 0.014400748999999999
 		1 76 1
 		1 76 1
 		3 16 0.92098913799999993 27 0.0032460520000000001 30 0.075764810000000002
@@ -25235,13 +25233,13 @@ createNode skinCluster -n "skinCluster2";
 		3 16 0.55229874800000001 26 2.9500000000000001e-06 27 0.44769830199999999
 		1 16 1
 		6 0 5.2429999999999996e-06 16 0.99326048099999997 17 0.0049431639999999999 
-		19 2.0384000000000003e-05 22 6.6950000000000003e-06 23 0.0017640329999999999
+		19 2.0384e-05 22 6.6950000000000003e-06 23 0.0017640329999999999
 		1 76 1
 		1 76 1
 		5 16 0.53151516300000001 29 1.5820000000000001e-06 30 4.7406e-05 
 		31 0.070083404000000002 76 0.398352445
-		4 16 0.92986760800000001 29 0.070083404000000002 30 4.7406e-05 
-		31 1.5820000000000001e-06
+		5 16 0.53151516300000001 29 0.070083404000000002 30 4.7406e-05 
+		31 1.5820000000000001e-06 75 0.398352445
 		7 16 0.33801398700000002 17 0.297620785 19 0.012642232999999999 
 		22 0.0040953589999999998 23 0.17663387699999999 24 0.028114394000000001 
 		26 0.14287936500000001
@@ -25252,8 +25250,8 @@ createNode skinCluster -n "skinCluster2";
 		26 0.76759043299999996
 		6 16 0.25111626199999998 17 0.0018643360000000001 19 0.00016853500000000001 
 		22 5.9027000000000003e-05 23 0.0036001380000000001 26 0.74319170200000007
-		6 16 0.18037677599999999 17 0.186918582 19 0.026670181000000001 
-		22 0.010316482 23 0.166929035 26 0.42878894399999989
+		6 16 0.18037679200000001 17 0.186918574 19 0.026670180000000002 
+		22 0.010316482 23 0.16692902800000001 26 0.42878894400000001
 		6 16 0.23638553900000001 17 0.055926995 19 0.0064027540000000001 
 		22 0.0022086269999999999 23 0.054055909999999999 26 0.64502017499999997
 		8 0 0.00075041799999999998 16 0.39975050099999987 17 0.37814843100000001 
@@ -25295,7 +25293,7 @@ createNode skinCluster -n "skinCluster2";
 		6 0 1.5519999999999999e-06 16 0.99525426000000006 17 0.0036483790000000002 
 		19 6.0390000000000001e-06 22 1.9810000000000002e-06 23 0.001087789
 		6 0 8.3189999999999995e-06 16 0.92309354099999996 17 0.056115832999999997 
-		19 3.2378000000000001e-05 22 1.0613999999999999e-05 23 0.020739315000000001
+		19 3.2378000000000001e-05 22 1.0614e-05 23 0.020739315000000001
 		6 0 3.9099999999999999e-07 16 0.99696722500000001 17 0.0018360690000000001 
 		19 1.5239999999999999e-06 22 4.9999999999999998e-07 23 0.0011942910000000001
 		6 0 2.5110000000000002e-06 16 0.95133502700000006 17 0.027076863999999999 
@@ -25306,13 +25304,14 @@ createNode skinCluster -n "skinCluster2";
 		19 1e-08 22 3e-09 23 0.000156568
 		6 0 4.7100000000000002e-07 16 0.96047881200000007 17 0.014014074 
 		19 1.8369999999999999e-06 22 6.0200000000000002e-07 23 0.025504203999999999
-		6 0 4.7100000000000002e-07 16 0.96047881200000007 17 0.014014074 
-		19 1.8369999999999999e-06 22 6.0200000000000002e-07 23 0.025504203999999999;
-	setAttr ".wl[346:501].w"
+		1 0 4.7100000000000002e-07;
+	setAttr ".wl[345:501].w"
+		5 16 0.96047881200000007 17 0.014014074 19 1.8369999999999999e-06 
+		22 6.0200000000000002e-07 23 0.025504203999999999
 		6 0 5.5160000000000002e-06 16 0.96800367800000009 17 0.023643094999999999 
 		19 2.1464999999999999e-05 22 7.0380000000000002e-06 23 0.0083192079999999998
 		6 0 1.0203999999999999e-05 16 0.95888763100000007 17 0.032721761000000002 
-		19 3.9703999999999998e-05 22 1.3018000000000001e-05 23 0.0083276819999999994
+		19 3.9703999999999998e-05 22 1.3018e-05 23 0.0083276819999999994
 		6 0 2.858e-06 16 0.98945116399999999 17 0.0080010399999999992 
 		19 1.112e-05 22 3.6480000000000001e-06 23 0.00253017
 		6 0 7.1369999999999996e-06 16 0.97854346299999995 17 0.016984596000000001 
@@ -25341,15 +25340,15 @@ createNode skinCluster -n "skinCluster2";
 		6 0 3.3599999999999999e-07 16 0.60665014599999989 17 0.32104694299999997 
 		19 1.311e-06 22 4.3000000000000001e-07 23 0.072300833999999994
 		6 0 8.3000000000000002e-08 16 0.92526775299999997 17 0.052595773999999998 
-		19 3.2300000000000002e-07 22 1.0600000000000001e-07 23 0.022135960999999999
+		19 3.2300000000000002e-07 22 1.06e-07 23 0.022135960999999999
 		6 0 8.3000000000000002e-08 16 0.92526775299999997 17 0.052595773999999998 
-		19 3.2300000000000002e-07 22 1.0600000000000001e-07 23 0.022135960999999999
-		6 0 3.3599999999999999e-07 16 0.60665014599999989 17 0.32104694299999997 
+		19 3.2300000000000002e-07 22 1.06e-07 23 0.022135960999999999
+		6 0 3.3599999999999999e-07 16 0.60665014399999995 17 0.32104694499999997 
 		19 1.311e-06 22 4.3000000000000001e-07 23 0.072300833999999994
 		6 0 5.2999999999999998e-08 16 0.89597486999999998 17 0.075195988000000005 
 		19 2.0800000000000001e-07 22 6.8e-08 23 0.028828812999999998
 		6 0 2.7999999999999999e-08 16 0.569742254 17 0.319789828 19 
-		1.1200000000000001e-07 22 3.5999999999999998e-08 23 0.11046774199999999
+		1.12e-07 22 3.5999999999999998e-08 23 0.11046774199999999
 		2 24 0.067906976999999993 34 0.93209302299999996
 		2 24 0.031256983000000002 34 0.96874301699999998
 		2 24 0.047525949999999997 34 0.95247404999999996
@@ -25460,8 +25459,8 @@ createNode skinCluster -n "skinCluster2";
 		35 0.044526478000000001 39 0.047791420000000001
 		1 32 1
 		1 32 1
-		6 24 1.0089999999999998e-05 32 0.328994907 34 0.00033948499999999999 
-		35 0.35480119599999999 39 0.012550754000000001 40 0.30330356800000002
+		6 24 1.009e-05 32 0.328994907 34 0.00033948499999999999 35 
+		0.35480119599999999 39 0.012550754000000001 40 0.30330356800000002
 		7 24 9.7059999999999999e-06 32 0.30744104 34 0.00032906999999999999 
 		35 0.315607784 36 0.079577523999999997 39 0.012793284 40 0.28424159199999999
 		6 24 5.7969999999999997e-06 32 0.28653126299999998 34 0.00019624200000000001 
@@ -25470,7 +25469,7 @@ createNode skinCluster -n "skinCluster2";
 		39 0.0047442170000000002 40 0.235805919
 		6 24 1.649e-06 32 0.33091311800000001 34 5.5739000000000003e-05 
 		35 0.43003901999999994 39 0.0022259139999999998 40 0.23676456000000001
-		6 24 1.3440000000000002e-06 32 0.34832009800000002 34 4.5287000000000002e-05 
+		6 24 1.344e-06 32 0.34832009800000002 34 4.5287000000000002e-05 
 		35 0.37407661599999997 39 0.0017327029999999999 40 0.27582395199999998
 		6 24 2.6079999999999998e-06 32 0.38796505599999997 34 8.7647999999999998e-05 
 		35 0.42338915000000005 39 0.0032236890000000001 40 0.18533184899999999
@@ -25524,16 +25523,16 @@ createNode skinCluster -n "skinCluster2";
 		7 24 5.7999999999999995e-07 32 0.050771281000000001 34 1.9627999999999999e-05 
 		35 0.68533831499999998 36 0.19124966400000001 39 0.00077764299999999995 
 		40 0.071842888999999993
-		7 24 3.5699999999999998e-07 32 0.054968337999999999 34 1.2063999999999998e-05 
+		7 24 3.5699999999999998e-07 32 0.054968337999999999 34 1.2064e-05 
 		35 0.61655084900000001 36 0.25619885199999998 39 0.00047606999999999999 
 		40 0.071793469999999998
 		7 24 5.8800000000000002e-07 32 0.105028569 34 1.9820999999999999e-05 
 		35 0.16413267600000001 36 0.56904676499999995 39 0.00075588999999999995 
 		40 0.16101569099999999
-		7 24 1.2839999999999999e-06 32 0.13372643400000001 34 4.3201000000000002e-05 
-		35 0.227027321 36 0.36231048500000007 39 0.0015979779999999999 40 
-		0.27529329699999999;
-	setAttr ".wl[502:680].w"
+		2 24 1.2839999999999999e-06 32 0.13372643400000001;
+	setAttr ".wl[501:679].w"
+		5 34 4.3201000000000002e-05 35 0.227027321 36 0.36231048500000007 
+		39 0.0015979779999999999 40 0.27529329699999999
 		8 24 2.7439999999999999e-06 32 0.14774290000000001 34 9.2337999999999996e-05 
 		35 0.227521686 36 0.25151782899999997 38 0.123989421 39 0.0034147679999999999 
 		40 0.24571831399999999
@@ -25544,7 +25543,7 @@ createNode skinCluster -n "skinCluster2";
 		2 33 0.583494717 37 0.416505283
 		1 33 1
 		1 48 1
-		12 32 9.0999999999999994e-08 35 1.2030000000000002e-06 36 0.015743511000000002 
+		12 32 9.0999999999999994e-08 35 1.203e-06 36 0.015743511000000002 
 		37 1.8133000000000001e-05 38 2.2011e-05 39 2.0000000000000001e-09 40 
 		1.7800000000000001e-07 43 2.0000000000000001e-09 44 3.5600000000000001e-07 
 		45 0.31392585299999998 46 2.1925000000000001e-05 48 0.670266735
@@ -25591,7 +25590,7 @@ createNode skinCluster -n "skinCluster2";
 		1 49 1
 		6 36 5.4267000000000001e-05 42 0.387960362 43 9.5000000000000001e-07 
 		44 0.0031520950000000002 46 1.5939000000000001e-05 50 0.60881638699999996
-		6 36 0.00015271499999999999 42 0.40656992600000003 43 1.2488999999999999e-05 
+		6 36 0.00015271499999999999 42 0.40656992600000003 43 1.2489e-05 
 		44 0.0067271789999999998 46 2.8480000000000001e-06 50 0.58653484300000003
 		1 50 1
 		1 50 1
@@ -25768,11 +25767,12 @@ createNode skinCluster -n "skinCluster2";
 		15 0.0018820060000000001 18 0.476529074 20 0.52131809299999998
 		5 10 6.6300000000000005e-07 13 5.2599999999999996e-06 14 0.020016050000000001 
 		15 0.20464012300000001 18 0.77533790400000002
-		6 10 9.2000000000000003e-08 13 7.1399999999999996e-07 14 0.0027108810000000001 
-		15 0.026653777 18 0.53839270299999997 20 0.43224183300000002
-		3 10 7.7000000000000001e-08 13 4.7599999999999997e-07 14 0.0017572969999999999;
-	setAttr ".wl[680:841].w"
-		3 15 0.010784510000000001 18 0.76865046100000001 20 0.21880717899999999
+		4 10 9.2000000000000003e-08 13 7.1399999999999996e-07 14 0.0027108810000000001 
+		15 0.026653777;
+	setAttr ".wl[679:840].w"
+		2 18 0.53839270299999997 20 0.43224183300000002
+		6 10 7.7000000000000001e-08 13 4.7599999999999997e-07 14 0.0017572969999999999 
+		15 0.010784510000000001 18 0.76865046100000001 20 0.21880717899999999
 		5 10 1.2279999999999999e-06 13 7.5290000000000003e-06 14 0.027747731000000001 
 		15 0.170287459 18 0.80195605300000006
 		2 18 0.46076450499999999 20 0.53923549500000001
@@ -25816,7 +25816,7 @@ createNode skinCluster -n "skinCluster2";
 		15 0.224855782 18 0.75372403599999993
 		5 10 1.5699999999999999e-07 13 8.6600000000000005e-07 14 0.00029879499999999997 
 		15 0.0054970729999999999 18 0.99420310899999997
-		5 10 4.0539999999999996e-06 13 2.3889999999999997e-05 14 0.087537262000000005 
+		5 10 4.0539999999999996e-06 13 2.389e-05 14 0.087537262000000005 
 		15 0.47135779 18 0.44107700399999999
 		5 10 2.6321000000000001e-05 13 0.000144783 14 0.090422986999999996 
 		15 0.27496553800000001 18 0.63444037100000006
@@ -25949,22 +25949,22 @@ createNode skinCluster -n "skinCluster2";
 		2 16 0.83706059099999996 29 0.16293940900000001
 		4 16 0.65209670200000003 29 0.064243238999999994 30 0.27449422400000001 
 		31 0.0091658350000000006
-		4 16 0.72654483299999995 29 0.23203710799999999 30 0.040079728000000002 
-		31 0.0013383309999999999
+		5 16 0.46407591799999992 29 0.23203710799999999 30 0.040079728000000002 
+		31 0.0013383309999999999 75 0.26246891500000002
 		2 16 0.270500676 29 0.72949932400000006
 		1 29 1
-		4 16 0.68819092999999998 29 0.306054139 30 0.005568974 31 
-		0.000185957
+		5 16 0.12463247 29 0.306054139 30 0.005568974 31 0.000185957 
+		75 0.56355845999999998
 		1 29 1
-		4 16 0.73033728200000003 29 0.26946853999999998 30 0.000187904 
-		31 6.2740000000000004e-06
+		5 16 0.64490386900000007 29 0.26946853999999998 30 0.000187904 
+		31 6.2740000000000004e-06 75 0.085433413
 		1 30 1
 		3 16 0.81754250000000006 27 0.010491433 30 0.171966067
 		3 16 0.70082260799999996 27 0.0044823119999999996 30 0.29469508
-		1 16 1
-		1 16 1
-		1 16 1
-		1 16 1
+		1 75 1
+		1 75 1
+		1 75 1
+		1 75 1
 		3 16 0.92098913799999993 27 0.0032460520000000001 30 0.075764810000000002
 		1 16 1
 		1 16 1
@@ -25974,9 +25974,9 @@ createNode skinCluster -n "skinCluster2";
 		19 5.9999999999999995e-08 22 2e-08 23 6.5520000000000001e-06 27 0.070939685000000002
 		1 16 1
 		6 0 5.2429999999999996e-06 16 0.99326048099999997 17 0.0049431639999999999 
-		19 2.0384000000000003e-05 22 6.6950000000000003e-06 23 0.0017640329999999999
-		1 16 1
-		1 16 1
+		19 2.0384e-05 22 6.6950000000000003e-06 23 0.0017640329999999999
+		1 75 1
+		1 75 1
 		6 0 1.173e-06 16 0.99788956899999992 17 0.0015660019999999999 
 		19 4.5619999999999997e-06 22 1.4980000000000001e-06 23 0.00053719599999999998
 		6 0 5.0000000000000001e-09 16 0.99998915099999997 17 8.1450000000000008e-06 
@@ -25991,13 +25991,13 @@ createNode skinCluster -n "skinCluster2";
 		26 0.83077832200000001
 		6 16 0.23638553900000001 17 0.055926995 19 0.0064027540000000001 
 		22 0.0022086269999999999 23 0.054055909999999999 26 0.64502017499999997
-		7 0 0.00044453899999999998 16 0.6694492190000001 17 0.095912490000000003 
-		19 0.001721651 22 0.00056745999999999999 23 0.060057793999999998 26 
-		0.171846847
-		5 0 0.00017516400000000001 16 0.82979959100000011 17 0.077925206999999996 
-		19 0.00067988 22 0.00022355300000000001;
-	setAttr ".wl[841:960].w"
-		2 23 0.034682552999999998 26 0.056514052000000002
+		4 0 0.00044453899999999998 16 0.6694492190000001 17 0.095912490000000003 
+		19 0.001721651;
+	setAttr ".wl[840:957].w"
+		3 22 0.00056745999999999999 23 0.060057793999999998 26 0.171846847
+		7 0 0.00017516400000000001 16 0.82979959100000011 17 0.077925206999999996 
+		19 0.00067988 22 0.00022355300000000001 23 0.034682552999999998 26 
+		0.056514052000000002
 		8 0 0.00075041799999999998 16 0.39975050099999987 17 0.37814843100000001 
 		19 0.0029273599999999999 22 0.00095544900000000003 23 0.21070562800000001 
 		26 0.000195377 54 0.0065668360000000004
@@ -26037,9 +26037,9 @@ createNode skinCluster -n "skinCluster2";
 		6 0 1.5519999999999999e-06 16 0.99525426000000006 17 0.0036483790000000002 
 		19 6.0390000000000001e-06 22 1.9810000000000002e-06 23 0.001087789
 		6 0 8.3189999999999995e-06 16 0.92309354099999996 17 0.056115832999999997 
-		19 3.2378000000000001e-05 22 1.0613999999999999e-05 23 0.020739315000000001
+		19 3.2378000000000001e-05 22 1.0614e-05 23 0.020739315000000001
 		6 0 1.0203999999999999e-05 16 0.95888763100000007 17 0.032721761000000002 
-		19 3.9703999999999998e-05 22 1.3018000000000001e-05 23 0.0083276819999999994
+		19 3.9703999999999998e-05 22 1.3018e-05 23 0.0083276819999999994
 		6 0 5.5160000000000002e-06 16 0.96800367800000009 17 0.023643094999999999 
 		19 2.1464999999999999e-05 22 7.0380000000000002e-06 23 0.0083192079999999998
 		6 0 2.858e-06 16 0.98945116399999999 17 0.0080010399999999992 
@@ -26072,7 +26072,7 @@ createNode skinCluster -n "skinCluster2";
 		60 0.61295850399999996
 		4 53 0.50620211400000004 54 0.001508517 55 0.035312880999999997 
 		60 0.45697648800000001
-		6 53 0.012550754000000001 54 1.0089999999999998e-05 55 0.00033948499999999999 
+		6 53 0.012550754000000001 54 1.009e-05 55 0.00033948499999999999 
 		56 0.35480119599999999 57 0.30330356800000002 60 0.328994907
 		7 53 0.012793284 54 9.7059999999999999e-06 55 0.00032906999999999999 
 		56 0.315607784 57 0.28424159199999999 60 0.30744104 65 0.079577523999999997
@@ -26082,7 +26082,7 @@ createNode skinCluster -n "skinCluster2";
 		0.43784655599999994 57 0.235805919 60 0.32148080800000001
 		6 53 0.0022259139999999998 54 1.649e-06 55 5.5739000000000003e-05 
 		56 0.43003901999999994 57 0.23676456000000001 60 0.33091311800000001
-		6 53 0.0017327029999999999 54 1.3440000000000002e-06 55 4.5287000000000002e-05 
+		6 53 0.0017327029999999999 54 1.344e-06 55 4.5287000000000002e-05 
 		56 0.37407661599999997 57 0.27582395199999998 60 0.34832009800000002
 		6 53 0.0032236890000000001 54 2.6079999999999998e-06 55 8.7647999999999998e-05 
 		56 0.42338915000000005 57 0.18533184899999999 60 0.38796505599999997
@@ -26100,7 +26100,7 @@ createNode skinCluster -n "skinCluster2";
 		7 53 0.00077764299999999995 54 5.7999999999999995e-07 55 1.9627999999999999e-05 
 		56 0.68533831499999998 57 0.071842888999999993 60 0.050771281000000001 
 		65 0.19124966400000001
-		7 53 0.00047606999999999999 54 3.5699999999999998e-07 55 1.2063999999999998e-05 
+		7 53 0.00047606999999999999 54 3.5699999999999998e-07 55 1.2064e-05 
 		56 0.61655084900000001 57 0.071793469999999998 60 0.054968337999999999 
 		65 0.25619885199999998
 		7 53 0.00075588999999999995 54 5.8800000000000002e-07 55 1.9820999999999999e-05 
@@ -26179,7 +26179,7 @@ createNode skinCluster -n "skinCluster2";
 		2 62 0.583494717 63 0.416505283
 		1 62 1
 		1 64 1
-		12 53 2.0000000000000001e-09 56 1.2030000000000002e-06 57 1.7800000000000001e-07 
+		12 53 2.0000000000000001e-09 56 1.203e-06 57 1.7800000000000001e-07 
 		58 0.31392585299999998 59 2.1925000000000001e-05 60 9.0999999999999994e-08 
 		61 2.2011e-05 63 1.8133000000000001e-05 64 0.670266735 65 0.015743511000000002 
 		73 3.5600000000000001e-07 74 2.0000000000000001e-09
@@ -26196,13 +26196,13 @@ createNode skinCluster -n "skinCluster2";
 		1 62 1
 		6 59 0.66231373100000013 64 0.001651432 65 0.0050324819999999996 
 		71 0.33097537199999999 73 2.6772999999999999e-05 74 2.1e-07
-		6 59 0.66166914899999985 64 9.9026999999999999e-05 65 0.0041831569999999998 
-		71 0.33282713899999999 73 0.001212014 74 9.5140000000000007e-06
+		3 59 0.66166914899999985 64 9.9026999999999999e-05 65 0.0041831569999999998;
+	setAttr ".wl[957:1121].w"
+		3 71 0.33282713899999999 73 0.001212014 74 9.5140000000000007e-06
 		1 59 1
 		1 59 1
-		3 59 0.0026667520000000001 65 0.0079344959999999992 68 0.51131162600000002;
-	setAttr ".wl[960:1122].w"
-		2 73 0.47802677500000001 74 6.0350999999999999e-05
+		5 59 0.0026667520000000001 65 0.0079344959999999992 68 0.51131162600000002 
+		73 0.47802677500000001 74 6.0350999999999999e-05
 		5 59 0.000106439 65 0.011037095 68 0.50681635199999997 73 
 		0.48111420999999999 74 0.00092590399999999996
 		1 73 1
@@ -26228,7 +26228,7 @@ createNode skinCluster -n "skinCluster2";
 		6 59 1.5939000000000001e-05 65 5.4267000000000001e-05 68 0.387960362 
 		69 0.60881638699999996 73 0.0031520950000000002 74 9.5000000000000001e-07
 		6 59 2.8480000000000001e-06 65 0.00015271499999999999 68 0.40656992600000003 
-		69 0.58653484300000003 73 0.0067271789999999998 74 1.2488999999999999e-05
+		69 0.58653484300000003 73 0.0067271789999999998 74 1.2489e-05
 		1 69 1
 		1 69 1
 		4 65 1.0999999999999999e-08 67 0.69382280800000007 70 0.29275622000000001 
@@ -26253,13 +26253,13 @@ createNode skinCluster -n "skinCluster2";
 		1 67 1
 		1 67 1
 		1 67 1
-		6 16 0.25111625500000001 17 0.001864339 19 0.000168536 22 
-		5.9027999999999998e-05 23 0.0036001420000000002 26 0.74319170000000001
+		6 16 0.25111625799999998 17 0.0018643380000000001 19 0.000168536 
+		22 5.9027999999999998e-05 23 0.0036001399999999999 26 0.74319170000000001
 		6 16 0.14026602299999999 17 0.027013477000000001 19 0.0027643210000000001 
 		22 0.001004317 23 0.046513277999999998 26 0.78243858399999999
 		6 16 0.18928226500000001 17 0.010015879 19 0.00092224099999999997 
 		22 0.00033794100000000002 23 0.030670487 26 0.76877118700000002
-		8 53 1.3117000000000002e-05 54 8.9999999999999995e-09 55 3.3099999999999999e-07 
+		8 53 1.3117e-05 54 8.9999999999999995e-09 55 3.3099999999999999e-07 
 		56 0.011489891 57 0.0019629550000000002 60 0.00094130099999999996 61 
 		0.011280137000000001 65 0.97431225900000007
 		1 27 1
@@ -26305,7 +26305,7 @@ createNode skinCluster -n "skinCluster2";
 		2 16 0.69104772400000003 27 0.30895227600000003
 		2 16 0.73130819499999999 27 0.26869180500000001
 		2 16 0.73130819499999999 27 0.26869180500000001
-		2 16 0.69104773200000003 27 0.30895226799999997
+		2 16 0.69104772400000003 27 0.30895227600000003
 		11 32 2.04e-07 35 2.7010000000000001e-06 36 0.37445393700000001 
 		37 4.0711999999999999e-05 38 4.9416999999999998e-05 39 5.0000000000000001e-09 
 		40 4.01e-07 43 1.4168000000000001e-05 44 0.001804922 46 0.11105751 
@@ -26438,14 +26438,13 @@ createNode skinCluster -n "skinCluster2";
 		9 53 2.7212999999999998e-05 54 2.0999999999999999e-08 55 7.3499999999999995e-07 
 		56 0.002618254 57 0.0032943080000000001 60 0.001355827 61 0.55288913100000003 
 		63 0.42540640299999999 65 0.014408107999999999
-		9 53 0.00023065600000000001 54 1.85e-07 55 6.2360000000000001e-06 
-		56 0.020366782999999999 57 0.027396754999999998 60 0.01147024 61 
-		0.38994618199999997 63 0.43491704900000006 65 0.11566591399999999
-		2 53 3.3460999999999997e-05 54 2.6000000000000001e-08;
-	setAttr ".wl[1122:1265].w"
-		7 55 9.0299999999999997e-07 56 0.0036680189999999998 57 0.0040179940000000004 
-		60 0.0016572729999999999 61 0.22983882899999999 63 0.51103817100000004 
-		65 0.24974532399999999
+		3 53 0.00023065600000000001 54 1.85e-07 55 6.2360000000000001e-06;
+	setAttr ".wl[1121:1265].w"
+		6 56 0.020366782999999999 57 0.027396754999999998 60 0.01147024 
+		61 0.38994618199999997 63 0.43491704900000006 65 0.11566591399999999
+		9 53 3.3460999999999997e-05 54 2.6000000000000001e-08 55 9.0299999999999997e-07 
+		56 0.0036680189999999998 57 0.0040179940000000004 60 0.0016572729999999999 
+		61 0.22983882899999999 63 0.51103817100000004 65 0.24974532399999999
 		9 53 1.0057999999999999e-05 54 6.9999999999999998e-09 55 2.6199999999999999e-07 
 		56 0.0047449370000000003 57 0.00089995799999999996 60 0.00042171800000000002 
 		61 0.282975588 63 0.46611382899999998 65 0.24483364299999999
@@ -26471,9 +26470,8 @@ createNode skinCluster -n "skinCluster2";
 		7 1 2e-08 4 1.2800000000000001e-07 5 0.0025131469999999999 
 		6 0.33814250699999998 7 0.0029029279999999999 9 0.65596824899999995 
 		12 0.00047302100000000001
-		7 1 1.3000000000000001e-08 4 1.0300000000000001e-07 5 0.002570124 
-		6 0.156149591 7 0.0037471800000000001 9 0.83714148700000002 12 
-		0.00039150200000000001
+		7 1 1.3000000000000001e-08 4 1.03e-07 5 0.002570124 6 
+		0.156149591 7 0.0037471800000000001 9 0.83714148700000002 12 0.00039150200000000001
 		7 1 6.9999999999999998e-09 4 5.4e-08 5 0.00057863700000000001 
 		6 0.059953431000000001 7 0.00076471899999999997 9 0.93861958099999998 
 		12 8.3571000000000003e-05
@@ -26481,7 +26479,7 @@ createNode skinCluster -n "skinCluster2";
 		15 0.00077881000000000001 18 0.23458831499999999 20 0.76452080199999994
 		6 10 6.9999999999999998e-09 13 5.4e-08 14 8.3571000000000003e-05 
 		15 0.00076471899999999997 18 0.060532068000000001 20 0.93861958099999998
-		6 10 1.3000000000000001e-08 13 1.0300000000000001e-07 14 0.00039150200000000001 
+		6 10 1.3000000000000001e-08 13 1.03e-07 14 0.00039150200000000001 
 		15 0.0037471800000000001 18 0.15871971500000001 20 0.83714148700000002
 		6 10 2e-08 13 1.2800000000000001e-07 14 0.00047302100000000001 
 		15 0.0029029279999999999 18 0.340655655 20 0.65596824799999998
@@ -26547,8 +26545,8 @@ createNode skinCluster -n "skinCluster2";
 		22 0.0011078800000000001 23 0.046474957999999997 26 0.49985579200000002
 		6 16 0.25411307500000002 17 0.143484005 19 0.015556240000000001 
 		22 0.0051253740000000002 23 0.10702349999999999 26 0.474697806
-		6 16 0.228101041 17 0.012498697 19 0.00098119000000000006 22 
-		0.00033452699999999999 23 0.011387586 26 0.74669695899999999
+		6 16 0.228101046 17 0.012498693999999999 19 0.00098119000000000006 
+		22 0.00033452699999999999 23 0.011387583999999999 26 0.74669695899999999
 		7 16 0.29610076699999999 17 0.14194246399999999 19 0.004215023 
 		22 0.001378142 23 0.10066805299999999 26 0.45302379500000001 54 0.002671756
 		7 0 0.00044453899999999998 16 0.6694492190000001 17 0.095912490000000003 
@@ -26647,10 +26645,11 @@ createNode skinCluster -n "skinCluster2";
 		38 1.7800000000000001e-07 40 1.0000000000000001e-09 41 0.28006268099999998 
 		44 1.6000000000000001e-08 45 0.70625004899999999 46 1.0049999999999999e-06 
 		48 0.013555484
-		10 56 1.0000000000000001e-09 58 0.75777559399999994 59 3.2160999999999999e-05 
-		61 2.7e-08 63 2.1999999999999998e-08 64 0.014272679 65 0.000118108 
-		66 0.22780088200000001 73 5.2200000000000004e-07 74 4.0000000000000002e-09;
-	setAttr ".wl[1266:1284].w"
+		2 56 1.0000000000000001e-09 58 0.75777559399999994;
+	setAttr ".wl[1265:1284].w"
+		8 59 3.2160999999999999e-05 61 2.7e-08 63 2.1999999999999998e-08 
+		64 0.014272679 65 0.000118108 66 0.22780088200000001 73 5.2200000000000004e-07 
+		74 4.0000000000000002e-09
 		10 56 8.9999999999999995e-09 57 1.0000000000000001e-09 58 0.70625004899999999 
 		59 1.0049999999999999e-06 61 1.7800000000000001e-07 63 1.4700000000000001e-07 
 		64 0.013555484 65 0.00013043000000000001 66 0.28006268099999998 73 
@@ -27467,8 +27466,8 @@ createNode dagPose -n "bindPose3";
 	setAttr ".bp" yes;
 createNode ngst2SkinLayerData -n "ngSkinToolsData_skinCluster2";
 	rename -uid "78DCCE6E-45E5-DE15-2D85-49A8208FFB49";
-	setAttr ".ld" -type "ngst2SkinLayerDataStorage" 16 64434 {
-"h4IxZAUFAAAFAAAADAAAAEJhc2Ugd2VpZ2h0cwEAEQEE8D8RCgEsAAgRDf4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BALoBAJiGoaga0uznP8JAi+nTweg/U2qqEv6J5z+9Qx/2o9CWP8KN9y1CnORV7DjMhPVGNnLlP7Nse/+T/5INGHEM/ggA/ggAxggAOOJM6cGlIe8/wQNzb9BL7/7QAP7QAO7QAAXQiX/+iAH+iAHGiAH+uABeuAAcxgpd8wZm5zsJYP4BABkBeKA/Ohwc7do/HAjY74mG2T8UFqJIf4/XP/RUCkpLv9cN0KYBABy2h0OoufH2NxEyOBqY2nQwS5Y/1tzuHBKOoBVQHGdWIyQYB44+ESg+AQA4Dr9KNwMrlz5N5w4pH9rkYigAXgEAGIC2olnzwtLCOAD+AQB+AQAcDdqZN//XwD4RCDgS7CwTkMXXPvIiN+VHxvoVsBimOgEjoKbxFRD+AQCeAQAYAaRRui8M8kJ4ABjYaSrWcX25QhgA/gEA/gEA/gEA/gEA/gEAFCdctoyQGUaoAhhd4HtJ/70QdTD+AQA+AQBYmnvXkHgHUD99exBpkoZBP3Chq7Y2H0FCcAA4lzjY9HnWTz8k3LVBEOUlQiAAPgEAGAy9exqEDVdVKJiNe2xAEN5WO+9ltw5bWS8/lAcUVLdeMj8jdiEbVTYQP+jUY8U/WRIVWDjJ7w090HxZPjGC59coqR0VCJjnLnELxqL3Pp7S1dYidf8+xAkKW+3Y3T5vVBwJ8N/nPkOu2GuF9IkVCBg2LzWvpunDFQi4OtKKlksrAD9CgCHf9WIKPxbfiTvCL/0+wwROAzWMCT8WuMHn03DyPkx29RPIiPAVwP4BAD4BABxrlcMdQTBHPhEIGPEqnDOD2aAVCDjN5Zvs//+hPiQL/3kyYZQVCBEYOJTU+hE9PIY+dFt7gPePZ4KoAFgfUrtn2ex1P5gtMDmnEXc/4NDp7ZVvVDVwPP+BmWN9I3c+7cVut3tXbj4+EAAYy8eBHwP9QoJoAP4BAP4BALYBAP5YCP5YCP5YCP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAP4BAOYBABixsyR2gUb4tZAYlTtpBQzHSeIYDBjjRSEpMbxsFVD+AQD+AQD+AQAJAX7gBeYBAB5QEDY4EEYBAB6IEAkafpAA/iAAxiAAPjAQHjARHhgR/rgA/rgAXrgA/pgA/pgA/pgA/pgA/pgA/pgA/pgA/pgAdpgAGQEe0BAZEgkBHuAQCQ5GAQAesBBGGgC2AQAeeAsRNh6ACz6YED6QC/4BAP4BAP4BAH4BAB7QER7gER4AEf7wEA==",
+	setAttr ".ld" -type "ngst2SkinLayerDataStorage" 16 64953 {
+"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",
@@ -27523,14 +27522,15 @@ createNode ngst2SkinLayerData -n "ngSkinToolsData_skinCluster2";
 "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",
-"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"};
+"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"};
 	setAttr ".imo" -type "string" "{}";
 createNode makeNurbCircle -n "makeNurbCircle83";
 	rename -uid "F305B3A6-4400-754B-9BCE-B5B2A807F143";
