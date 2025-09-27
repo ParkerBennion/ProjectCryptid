@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
@@ -6,7 +7,17 @@ public class DelayedEventBehavior : MonoBehaviour
 {
     public UnityEvent thisEvent;
     public float delay;
-/// <summary>
+    public bool startOnAwake;
+
+    private void Start()
+    {
+        if (startOnAwake)
+        {
+            StartCountdown();
+        }
+    }
+
+    /// <summary>
 /// Begins the countdown coroutine
 /// </summary>
     public void StartCountdown()

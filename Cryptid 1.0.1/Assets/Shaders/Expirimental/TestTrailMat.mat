@@ -42,7 +42,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _GrassTexture:
-        m_Texture: {fileID: 2800000, guid: 184c6348fd25aa0439e4867cc8811363, type: 3}
+        m_Texture: {fileID: 2800000, guid: 83976e1f8db5044408c9d53ca92feeae, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _PathMask:
+        m_Texture: {fileID: 2800000, guid: 4ffaaf83583bf354087f5668bdb4b4d9, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _TrailMap:
@@ -66,7 +70,7 @@ Material:
     - _Dirt_Inverse_Scale: 0.05
     - _Dirt_tile_density: 0.05
     - _Grass_Inverse_Scale: 0.05
-    - _Grass_tile_density: 0.05
+    - _Grass_tile_density: 0.44
     - _QueueControl: 0
     - _QueueOffset: 0
     m_Colors:

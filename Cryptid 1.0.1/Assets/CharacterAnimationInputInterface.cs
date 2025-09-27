@@ -1,12 +1,15 @@
 using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.VFX;
 
 public class CharacterAnimationInputInterface : MonoBehaviour
 {
     [SerializeField] private CharacterInputController controller;
     private Animator animator;
     private Coroutine currentRoutine;
+
+    [SerializeField] private VisualEffect axeSwingHeavy, axeSwingLight;
 
     private void Awake()
     {
@@ -66,5 +69,23 @@ public class CharacterAnimationInputInterface : MonoBehaviour
     public void RecenterPlayer()
     {
         transform.parent.Translate(0,0,1.2318f);
+    }
+
+    public void PlayAxeFXHeavy()
+    {
+        axeSwingHeavy.enabled = true;
+    }
+    public void StopAxeFXHeavy()
+    {
+        axeSwingHeavy.enabled=false;
+    }
+    
+    public void PlayAxeFXLight()
+    {
+        axeSwingLight.enabled = true;
+    }
+    public void StopAxeFXLight()
+    {
+        axeSwingLight.enabled=false;
     }
 }

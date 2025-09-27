@@ -8,6 +8,8 @@ public class CollectibleWoodChunk : MonoBehaviour
     [Tooltip("GameAction to trigger when logs are updated")]
     public GameAction updateDisplayAction; // Reference to the GameAction
 
+    [SerializeField] private Rigidbody rb;
+    
     public void CollectChunk()
     {
         // Get the current player data
@@ -32,4 +34,11 @@ public class CollectibleWoodChunk : MonoBehaviour
 
         Destroy(gameObject);
     }
+
+    public void Halt()
+    {
+        rb.linearVelocity=Vector3.zero;
+        rb.angularVelocity = Vector3.zero;
+    }
+
 }
