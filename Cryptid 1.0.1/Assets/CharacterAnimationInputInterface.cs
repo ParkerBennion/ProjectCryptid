@@ -9,7 +9,7 @@ public class CharacterAnimationInputInterface : MonoBehaviour
     private Animator animator;
     private Coroutine currentRoutine;
 
-    [SerializeField] private VisualEffect axeSwingHeavy, axeSwingLight;
+    [SerializeField] private ParticleSystem axeHeavyParticles, axeLightParticles;
 
     private void Awake()
     {
@@ -73,19 +73,20 @@ public class CharacterAnimationInputInterface : MonoBehaviour
 
     public void PlayAxeFXHeavy()
     {
-        axeSwingHeavy.enabled = true;
+        //axeSwingHeavy.enabled = true;
+        axeHeavyParticles.Play();
     }
     public void StopAxeFXHeavy()
     {
-        axeSwingHeavy.enabled=false;
+        axeHeavyParticles.Stop();
     }
     
     public void PlayAxeFXLight()
     {
-        axeSwingLight.enabled = true;
+        axeLightParticles.Play();
     }
     public void StopAxeFXLight()
     {
-        axeSwingLight.enabled=false;
+        axeLightParticles.Stop();
     }
 }
