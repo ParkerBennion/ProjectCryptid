@@ -68,7 +68,7 @@ Material:
     m_Ints: []
     m_Floats:
     - _Dirt_Inverse_Scale: 0.05
-    - _Dirt_tile_density: 0.18
+    - _Dirt_tile_density: 0.36
     - _Grass_Inverse_Scale: 0.05
     - _Grass_tile_density: 0.44
     - _QueueControl: 0
