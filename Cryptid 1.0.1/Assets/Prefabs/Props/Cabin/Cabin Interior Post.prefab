@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6315763662151679929}
   - component: {fileID: 433109852197157805}
   - component: {fileID: 5720466044551180525}
+  - component: {fileID: 7558898798374696019}
   m_Layer: 0
   m_Name: Cabin Interior Post
   m_TagString: Untagged
@@ -86,3 +87,26 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!136 &7558898798374696019
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2447449391493152382}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1.2080021
+  m_Height: 6.311535
+  m_Direction: 1
+  m_Center: {x: 0.08795011, y: 3.1557674, z: 0.062710226}
