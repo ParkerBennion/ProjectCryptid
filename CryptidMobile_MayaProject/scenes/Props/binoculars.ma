@@ -1,6 +1,6 @@
 //Maya ASCII 2026 scene
 //Name: binoculars.ma
-//Last modified: Fri, Oct 10, 2025 10:53:07 PM
+//Last modified: Tue, Oct 14, 2025 03:06:44 AM
 //Codeset: 1252
 file -rdi 1 -ns "Bigfoot_Rig" -dr 1 -rfn "Bigfoot_RigRN" -op "v=0;" -typ "mayaAscii"
 		 "C:/Users/caris/Desktop/ProjectCryptid/CryptidMobile_MayaProject//scenes/Bigfoot/Bigfoot Rig.ma";
@@ -22,12 +22,12 @@ fileInfo "product" "Maya 2026";
 fileInfo "version" "2026";
 fileInfo "cutIdentifier" "202504040659-cfc1e8923b";
 fileInfo "osv" "Windows 10 Home v2009 (Build: 19045)";
-fileInfo "UUID" "F138EAB1-41D7-8976-9CCC-DE8F344CD1C0";
+fileInfo "UUID" "180DE8CE-4F97-5B1F-9AB4-08BC0240BB1D";
 createNode transform -s -n "persp";
 	rename -uid "9AEBD35C-49A1-A7A4-937F-F189EB649B65";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -6.4161132102711189 66.490119115688756 99.887228753749554 ;
-	setAttr ".r" -type "double3" 327.26164727052117 -361.39999999996411 1.9884402456475002e-16 ;
+	setAttr ".t" -type "double3" -20.75608852154399 83.114957655721241 85.141514440930493 ;
+	setAttr ".r" -type "double3" 316.46164727050405 -371.79999999994442 -8.1230479173650593e-16 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "29904EEE-447B-A94D-9693-2B9A8899300C";
 	setAttr -k off ".v" no;
