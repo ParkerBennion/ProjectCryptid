@@ -1,6 +1,6 @@
 //Maya ASCII 2025ff03 scene
-//Name: Jackalope.ma
-//Last modified: Mon, Oct 13, 2025 06:19:47 PM
+//Name: JackalopeRIG.ma
+//Last modified: Mon, Oct 13, 2025 06:20:04 PM
 //Codeset: 1252
 file -rdi 1 -ns "CalebSIZEREFERENCE" -dr 1 -rfn "CalebSIZEREFERENCERN" -op "v=0;"
 		 -typ "mayaAscii" "C:/Users/caris/Desktop/ProjectCryptid/CryptidMobile_MayaProject//scenes/CalebSIZEREFERENCE.ma";
@@ -17,12 +17,12 @@ fileInfo "product" "Maya 2025";
 fileInfo "version" "2025";
 fileInfo "cutIdentifier" "202409190603-cbdc5a7e54";
 fileInfo "osv" "Windows 10 Home v2009 (Build: 19045)";
-fileInfo "UUID" "E6CE5CC5-4629-F67F-A805-809C0A95D4A8";
+fileInfo "UUID" "4C4DF491-4688-0277-A4BD-C49A2B30BDC3";
 createNode transform -s -n "persp";
 	rename -uid "C0EB1D46-4A5F-6D27-45A7-BDB4D9099663";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 5.8508715917990406 1.4173968529192116 3.7584565016157145 ;
-	setAttr ".r" -type "double3" -4.9541995853298229 -8582.5999999999076 -1.4758385059014176e-15 ;
+	setAttr ".t" -type "double3" 5.4331599925218717 0.64558812725821213 3.2847352826288132 ;
+	setAttr ".r" -type "double3" 1.645800414695652 -8580.9999999995889 0 ;
 	setAttr ".rp" -type "double3" 3.552713678800501e-17 7.105427357601002e-17 0 ;
 	setAttr ".rpt" -type "double3" -4.2024788517521801e-17 -4.0948712884773849e-19 -3.5748872871810077e-17 ;
 createNode camera -s -n "perspShape" -p "persp";
@@ -32,7 +32,7 @@ createNode camera -s -n "perspShape" -p "persp";
 	setAttr ".ncp" 0.001;
 	setAttr ".fcp" 100;
 	setAttr ".fd" 0.05;
-	setAttr ".coi" 6.8633832168684146;
+	setAttr ".coi" 6.2356151751021667;
 	setAttr ".ow" 0.1;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
@@ -7076,4 +7076,4 @@ connectAttr "groupId117.msg" ":initialShadingGroup.gn" -na;
 connectAttr "groupId118.msg" ":initialShadingGroup.gn" -na;
 connectAttr "groupId120.msg" ":initialShadingGroup.gn" -na;
 connectAttr "ikRPsolver.msg" ":ikSystem.sol" -na;
-// End of Jackalope.ma
+// End of JackalopeRIG.ma
