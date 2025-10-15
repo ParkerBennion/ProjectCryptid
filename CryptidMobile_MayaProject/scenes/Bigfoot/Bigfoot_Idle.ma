@@ -1,6 +1,6 @@
 //Maya ASCII 2026 scene
 //Name: Bigfoot_Idle.ma
-//Last modified: Tue, Oct 14, 2025 05:29:14 AM
+//Last modified: Tue, Oct 14, 2025 10:43:58 PM
 //Codeset: 1252
 file -rdi 1 -ns "Bigfoot_Rig" -rfn "Bigfoot_RigRN" -op "v=0;" -typ "mayaAscii"
 		 "C:/Users/caris/Desktop/ProjectCryptid/CryptidMobile_MayaProject//scenes/Bigfoot/Bigfoot Rig.ma";
@@ -21,12 +21,12 @@ fileInfo "product" "Maya 2026";
 fileInfo "version" "2026";
 fileInfo "cutIdentifier" "202504040659-cfc1e8923b";
 fileInfo "osv" "Windows 10 Home v2009 (Build: 19045)";
-fileInfo "UUID" "1275517B-4FDF-3116-A5BC-B8AC460AE7D1";
+fileInfo "UUID" "0B34C63F-46DE-A12A-6DA5-6E9CC5556EB7";
 createNode transform -s -n "persp";
 	rename -uid "543D5786-4096-4665-7CE5-FA8567DA3670";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -148.74760520824412 360.11319179616589 1155.2470567003531 ;
-	setAttr ".r" -type "double3" -3.9383526759994156 -1090.999999998776 5.0626314893928025e-17 ;
+	setAttr ".t" -type "double3" -345.9732326267042 574.3939175197786 1057.8828937151998 ;
+	setAttr ".r" -type "double3" -15.338352675999577 -1102.5999999987728 8.612758563757127e-16 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "72903CCC-465F-9CEB-271B-82954C2A9B42";
 	setAttr -k off ".v" no;
@@ -109,12 +109,12 @@ createNode parentConstraint -n "locator1_parentConstraint1" -p "locator1";
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" 57.983190957010812 -24.508549467791454 68.586833281298212 ;
 	setAttr ".tg[0].tor" -type "double3" -178.98072309101047 -14.794886637284103 124.37443450114516 ;
-	setAttr ".lr" -type "double3" 0.92422889748718395 -160.2384640318659 -46.19912886305093 ;
+	setAttr ".lr" -type "double3" -0.72173403865019459 -157.77206163629327 -46.957312513774475 ;
 	setAttr ".rst" -type "double3" 53.910869139145397 303.88401308063283 94.708599778192692 ;
 	setAttr ".rsrr" -type "double3" 4.4735770614751074 -163.1831117107638 -56.95641767848241 ;
 	setAttr -k on ".w0";
 createNode fosterParent -n "BinocularsRNfosterParent1";
-	rename -uid "FA8464DF-4697-C669-7441-43BA75BA200B";
+	rename -uid "11E5A6A5-440F-BBB0-5AE3-D28817A040FA";
 createNode parentConstraint -n "pCylinder3_parentConstraint1" -p "BinocularsRNfosterParent1";
 	rename -uid "DA64F1C6-486D-8481-5502-DF82C5F51B9D";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "L_Arm_3_Jnt_IK_CtrlW0" -dv 1 -min 
@@ -133,7 +133,7 @@ createNode parentConstraint -n "pCylinder3_parentConstraint1" -p "BinocularsRNfo
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" 45.890505592334819 -35.222647673303129 27.980314709504245 ;
 	setAttr ".tg[0].tor" -type "double3" 168.20680702383606 12.865256813867987 122.37091193007109 ;
-	setAttr ".lr" -type "double3" 8.2367363287128974 -1.1914462974417257 8.1741724051954119 ;
+	setAttr ".lr" -type "double3" 7.2210163887670857 -1.0453907567732075 8.1939986215261911 ;
 	setAttr ".rst" -type "double3" -13.404657944581494 348.24706117147366 68.605391998557877 ;
 	setAttr ".rsrr" -type "double3" -1.590277340731758e-15 -5.5659706925611528e-15 5.9635400277440939e-16 ;
 	setAttr -k on ".w0";
@@ -9533,7 +9533,7 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 98\n            -height 0\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n"
 		+ "            -camera \"|persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 1\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n"
 		+ "            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 0\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n"
-		+ "            -imagePlane 1\n            -joints 1\n            -ikHandles 0\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1290\n            -height 695\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n"
+		+ "            -imagePlane 1\n            -joints 1\n            -ikHandles 0\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1286\n            -height 695\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n"
 		+ "\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 0\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n"
 		+ "            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 0\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -isSet 0\n            -isSetMember 0\n            -showUfeItems 1\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n"
 		+ "            -longNames 0\n            -niceNames 1\n            -selectCommand \"print(\\\"\\\")\" \n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -renderFilterIndex 0\n            -selectionOrder \"chronological\" \n            -expandAttribute 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n            -showAttributes 0\n            -showConnected 0\n"
@@ -9560,8 +9560,8 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "                -maxConstantTransparency 1\n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 4 4 \n                -bumpResolution 4 4 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -controllers 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n"
 		+ "                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -bluePencil 1\n                -greasePencils 0\n                -shadows 0\n                -captureSequenceNumber -1\n                -width 0\n                -height 0\n                -sceneRenderFilter 0\n                -displayMode \"centerEye\" \n"
 		+ "                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n            stereoCameraView -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName; };\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
-		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 0\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 0\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1290\\n    -height 695\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
-		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 0\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 0\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1290\\n    -height 695\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 0\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 0\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1286\\n    -height 695\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 0\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 0\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1286\\n    -height 695\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
 		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 5 -size 12 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
 	setAttr ".st" 3;
 createNode script -n "sceneConfigurationScriptNode";
@@ -13098,7 +13098,7 @@ createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:L_Finger_2_Jnt_1_Ctrl_transla
 	rename -uid "D34EAF56-4316-EF88-5FD6-23A7D42D048B";
 createNode animBlendNodeAdditiveRotation -n "Bigfoot_Rig:L_Finger_2_Jnt_1_Ctrl_rotate_AnimLayer1";
 	rename -uid "D6B47F60-407F-8020-54E2-679AD7C5B7A1";
-	setAttr ".o" -type "double3" 0.078680680437535927 0.044729347023972112 4.4714036079190391 ;
+	setAttr ".o" -type "double3" 0.052369860899223915 0.029771853379155801 4.7233519361537262 ;
 createNode animBlendNodeAdditiveScale -n "Bigfoot_Rig:L_Finger_2_Jnt_1_Ctrl_scaleX_AnimLayer1";
 	rename -uid "5447C368-42C9-07A5-88E1-27AAF61A32DA";
 	setAttr ".ia" 1;
@@ -13165,13 +13165,13 @@ createNode animBlendNodeBoolean -n "Bigfoot_Rig:Spine_3_Jnt_FK_Ctrl_visibility_A
 	setAttr ".o" yes;
 createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:Spine_3_Jnt_FK_Ctrl_translateX_AnimLayer1";
 	rename -uid "C2FE55C8-4A18-E575-3074-7F9FBA9D9B67";
-	setAttr ".o" -0.012131522990636245;
+	setAttr ".o" -0.38024201729817014;
 createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:Spine_3_Jnt_FK_Ctrl_translateY_AnimLayer1";
 	rename -uid "8EDAA31E-4A1C-D0BB-B8C8-FBB229B36F82";
-	setAttr ".o" -0.0084373898257799063;
+	setAttr ".o" -0.26445567721067276;
 createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:Spine_3_Jnt_FK_Ctrl_translateZ_AnimLayer1";
 	rename -uid "EB5C996F-47E7-DE01-F988-5D83BB863523";
-	setAttr ".o" 0.0031505130280559679;
+	setAttr ".o" 0.098747488690149154;
 createNode animBlendNodeAdditiveRotation -n "Bigfoot_Rig:Spine_3_Jnt_FK_Ctrl_rotate_AnimLayer1";
 	rename -uid "6347E895-49F5-84B7-B2CC-28879C28394E";
 	setAttr ".o" -type "double3" 0 0 -7.6330931508722131 ;
@@ -13285,7 +13285,7 @@ createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:R_Finger_4_Jnt_1_Ctrl_transla
 	rename -uid "FA4D2DEE-47D8-2546-5296-BCB5DEE20B8B";
 createNode animBlendNodeAdditiveRotation -n "Bigfoot_Rig:R_Finger_4_Jnt_1_Ctrl_rotate_AnimLayer1";
 	rename -uid "C6CAD215-417C-36C5-11AB-6190C8F3660C";
-	setAttr ".o" -type "double3" -0.17058725836102837 0.47968517328634902 -1.3727329716051164 ;
+	setAttr ".o" -type "double3" -0.031972926138524212 0.089906706764527194 -0.25728937982084515 ;
 createNode animBlendNodeAdditiveScale -n "Bigfoot_Rig:R_Finger_4_Jnt_1_Ctrl_scaleX_AnimLayer1";
 	rename -uid "EF2F1EA1-44C2-D7C0-9252-38AE8EB210BC";
 	setAttr ".ia" 1;
@@ -13386,7 +13386,7 @@ createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:R_Finger_1_Jnt_3_Ctrl_transla
 	rename -uid "EF908E2E-403B-C51C-8B1F-FE86B64B5E3F";
 createNode animBlendNodeAdditiveRotation -n "Bigfoot_Rig:R_Finger_1_Jnt_3_Ctrl_rotate_AnimLayer1";
 	rename -uid "B9B22CCE-4FC4-0E33-EDEE-F1A2EA77D7ED";
-	setAttr ".o" -type "double3" -0.49982218520422111 -0.11704102424748809 -1.366429587479919 ;
+	setAttr ".o" -type "double3" -0.093680958141134127 -0.0219368319732435 -0.25610794553909372 ;
 createNode animBlendNodeAdditiveScale -n "Bigfoot_Rig:R_Finger_1_Jnt_3_Ctrl_scaleX_AnimLayer1";
 	rename -uid "8175A7EC-4AF3-9C8C-3B2C-AB9ECB190DDD";
 	setAttr ".ia" 1;
@@ -13417,10 +13417,13 @@ createNode animBlendNodeBoolean -n "Bigfoot_Rig:Head_Ctrl_visibility_AnimLayer1"
 	setAttr ".o" yes;
 createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:Head_Ctrl_translateX_AnimLayer1";
 	rename -uid "D40DC411-4791-FA8E-3EBA-DC8403589538";
+	setAttr ".o" -0.0041686733948082784;
 createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:Head_Ctrl_translateY_AnimLayer1";
 	rename -uid "B737C4D3-48CE-FB53-7D15-5B943B64140D";
+	setAttr ".o" -0.017146973374658762;
 createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:Head_Ctrl_translateZ_AnimLayer1";
 	rename -uid "4C860DFB-4451-DA57-2991-E4BE069CC095";
+	setAttr ".o" 0.0093962218504067638;
 createNode animBlendNodeAdditiveRotation -n "Bigfoot_Rig:Head_Ctrl_rotate_AnimLayer1";
 	rename -uid "4C02470E-498C-0733-7C26-18A005F74E30";
 	setAttr ".o" -type "double3" -20.778610599911566 7.0728036520080844 -8.0204497288476997 ;
@@ -13460,7 +13463,7 @@ createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:R_Finger_1_Jnt_2_Ctrl_transla
 	rename -uid "30429BDE-4029-8080-BE6D-DD918D84ADB4";
 createNode animBlendNodeAdditiveRotation -n "Bigfoot_Rig:R_Finger_1_Jnt_2_Ctrl_rotate_AnimLayer1";
 	rename -uid "1576F29E-44E5-BE21-A214-3C89335E308D";
-	setAttr ".o" -type "double3" -0.49982218520422111 -0.11704102424748769 -1.3664295874799199 ;
+	setAttr ".o" -type "double3" -0.093680958141134169 -0.021936831973243431 -0.256107945539094 ;
 createNode animBlendNodeAdditiveScale -n "Bigfoot_Rig:R_Finger_1_Jnt_2_Ctrl_scaleX_AnimLayer1";
 	rename -uid "B3DFDF99-4E61-BAA8-84B2-F2B5BEF9691D";
 	setAttr ".ia" 1;
@@ -13561,7 +13564,7 @@ createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:R_Finger_3_Jnt_3_Ctrl_transla
 	rename -uid "860F4790-4BC9-12DF-1B3B-E38D32F198B4";
 createNode animBlendNodeAdditiveRotation -n "Bigfoot_Rig:R_Finger_3_Jnt_3_Ctrl_rotate_AnimLayer1";
 	rename -uid "CACBFDA1-4BDF-4C51-B2D5-7C88EEFDEA5C";
-	setAttr ".o" -type "double3" -0.36937463066949394 0.37690377246927859 -1.3676155436922006 ;
+	setAttr ".o" -type "double3" -0.069231359348339544 0.070642535639956358 -0.25633022761773877 ;
 createNode animBlendNodeAdditiveScale -n "Bigfoot_Rig:R_Finger_3_Jnt_3_Ctrl_scaleX_AnimLayer1";
 	rename -uid "1D09F390-48DE-877B-3E74-FB86F07459AD";
 	setAttr ".ia" 1;
@@ -13630,7 +13633,7 @@ createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:CoG_Jnt_Ctrl_translateX_AnimL
 	rename -uid "BCD3085D-4FC1-34B7-5F2A-0ABC0DAA6660";
 createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:CoG_Jnt_Ctrl_translateY_AnimLayer1";
 	rename -uid "A25C29C7-4809-D4D5-8117-669E3E9C57F6";
-	setAttr ".o" -30.534584085194204;
+	setAttr ".o" -38.386990787625898;
 createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:CoG_Jnt_Ctrl_translateZ_AnimLayer1";
 	rename -uid "FFA52612-4FF2-3623-0ACB-789B6353BD58";
 	setAttr ".o" 5.3629332716244491;
@@ -13776,7 +13779,7 @@ createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:R_Finger_2_Jnt_2_Ctrl_transla
 	rename -uid "945AE88A-482C-F51F-061B-2AACB6E131DD";
 createNode animBlendNodeAdditiveRotation -n "Bigfoot_Rig:R_Finger_2_Jnt_2_Ctrl_rotate_AnimLayer1";
 	rename -uid "4B1D3EDD-418C-A491-50AE-698C5EC938F4";
-	setAttr ".o" -type "double3" -0.92310339128000762 0.80894479856592416 -2.8586730245364955 ;
+	setAttr ".o" -type "double3" -0.021386554862629598 0.018741716777119704 -0.066230032357257246 ;
 createNode animBlendNodeAdditiveScale -n "Bigfoot_Rig:R_Finger_2_Jnt_2_Ctrl_scaleX_AnimLayer1";
 	rename -uid "72D74254-422E-C1FE-9FF3-A590D65DDF58";
 	setAttr ".ia" 1;
@@ -13813,7 +13816,7 @@ createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:R_Finger_2_Jnt_1_Ctrl_transla
 	rename -uid "8B6337C6-4A19-4F02-9036-4A945FC8B9B7";
 createNode animBlendNodeAdditiveRotation -n "Bigfoot_Rig:R_Finger_2_Jnt_1_Ctrl_rotate_AnimLayer1";
 	rename -uid "83CCE0DB-4F65-F233-30CE-5B93D78254AC";
-	setAttr ".o" -type "double3" -0.64626406384152391 1.0434652731153462 -2.8575242094105975 ;
+	setAttr ".o" -type "double3" -0.014972712685983597 0.024175111392219568 -0.066203416489577227 ;
 createNode animBlendNodeAdditiveScale -n "Bigfoot_Rig:R_Finger_2_Jnt_1_Ctrl_scaleX_AnimLayer1";
 	rename -uid "8D1AF6E4-43CA-E8FC-4B6B-A3B89D877041";
 	setAttr ".ia" 1;
@@ -13940,7 +13943,7 @@ createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:Jaw_Ctrl_Ctrl_translateZ_Anim
 	setAttr ".o" -15.968155488877606;
 createNode animBlendNodeAdditiveRotation -n "Bigfoot_Rig:Jaw_Ctrl_Ctrl_rotate_AnimLayer1";
 	rename -uid "3B487F78-46B2-1862-4DCC-648E26945D68";
-	setAttr ".o" -type "double3" 0.016454691614417007 -0.0022940937510410788 0.0010850665725543891 ;
+	setAttr ".o" -type "double3" 0.71023041014785915 -0.099019488417028817 0.046834501364208019 ;
 createNode animBlendNodeAdditiveScale -n "Bigfoot_Rig:Jaw_Ctrl_Ctrl_scaleX_AnimLayer1";
 	rename -uid "17764065-4FF6-F16C-E4F8-938BB0B26F2B";
 	setAttr ".ia" 1;
@@ -14040,10 +14043,13 @@ createNode animBlendNodeBoolean -n "Bigfoot_Rig:Spine_2_Jnt_FK_Ctrl_visibility_A
 	setAttr ".o" yes;
 createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:Spine_2_Jnt_FK_Ctrl_translateX_AnimLayer1";
 	rename -uid "46F897D2-469F-1E0E-2C38-E9B2C3199897";
+	setAttr ".o" -0.74994783984050328;
 createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:Spine_2_Jnt_FK_Ctrl_translateY_AnimLayer1";
 	rename -uid "A0BDEC36-4AFA-3D90-F6C3-39827D202385";
+	setAttr ".o" -0.49124185520467517;
 createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:Spine_2_Jnt_FK_Ctrl_translateZ_AnimLayer1";
 	rename -uid "94BD498F-491D-B172-529E-DFA587B2C852";
+	setAttr ".o" -0.016886664029965529;
 createNode animBlendNodeAdditiveRotation -n "Bigfoot_Rig:Spine_2_Jnt_FK_Ctrl_rotate_AnimLayer1";
 	rename -uid "8A7F2E06-4307-E171-A744-A483B90F13C6";
 	setAttr ".o" -type "double3" 6.5335528236382849 -11.541744626276097 -4.4303322709665842 ;
@@ -14083,7 +14089,7 @@ createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:L_Finger_3_Jnt_1_Ctrl_transla
 	rename -uid "5B3657C2-44CC-EFB6-AB33-5180E411AF1B";
 createNode animBlendNodeAdditiveRotation -n "Bigfoot_Rig:L_Finger_3_Jnt_1_Ctrl_rotate_AnimLayer1";
 	rename -uid "6929AB53-4E74-30E1-5465-6A9255B335AE";
-	setAttr ".o" -type "double3" 0.14876615703676929 0.049902371599083721 2.4855573784005141 ;
+	setAttr ".o" -type "double3" 0.0990187541236736 0.033215018536350067 2.7336834084166495 ;
 createNode animBlendNodeAdditiveScale -n "Bigfoot_Rig:L_Finger_3_Jnt_1_Ctrl_scaleX_AnimLayer1";
 	rename -uid "15EC4921-4B12-E0CA-911C-46921B9FB621";
 	setAttr ".ia" 1;
@@ -14148,7 +14154,7 @@ createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:R_Finger_3_Jnt_2_Ctrl_transla
 	rename -uid "01C74059-41EA-19D5-8C51-7AA48C8CC9BB";
 createNode animBlendNodeAdditiveRotation -n "Bigfoot_Rig:R_Finger_3_Jnt_2_Ctrl_rotate_AnimLayer1";
 	rename -uid "2526CE68-4B59-D3B5-9B71-DC83784B1043";
-	setAttr ".o" -type "double3" -0.369374630669489 0.37690377246928158 -1.3676155436922119 ;
+	setAttr ".o" -type "double3" -0.069231359348338573 0.070642535639956858 -0.25633022761774038 ;
 createNode animBlendNodeAdditiveScale -n "Bigfoot_Rig:R_Finger_3_Jnt_2_Ctrl_scaleX_AnimLayer1";
 	rename -uid "E6BA0A5B-4EEF-0F13-D86F-D0A7EF5DACE6";
 	setAttr ".ia" 1;
@@ -14328,7 +14334,7 @@ createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:L_Finger_4_Jnt_3_Ctrl_transla
 	rename -uid "E8AF957A-4B85-A71B-EF06-AA8441787E1C";
 createNode animBlendNodeAdditiveRotation -n "Bigfoot_Rig:L_Finger_4_Jnt_3_Ctrl_rotate_AnimLayer1";
 	rename -uid "F2A223E1-40F5-8E36-4F11-869069BD59A4";
-	setAttr ".o" -type "double3" 0.18102315009047004 0.036669791288822931 22.277395210666043 ;
+	setAttr ".o" -type "double3" 0.12048900870021664 0.024407413081840544 22.523413917080028 ;
 createNode animBlendNodeAdditiveScale -n "Bigfoot_Rig:L_Finger_4_Jnt_3_Ctrl_scaleX_AnimLayer1";
 	rename -uid "646B245B-4582-D3A8-FA2D-97AF77E70196";
 	setAttr ".ia" 1;
@@ -14365,7 +14371,7 @@ createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:R_Finger_4_Jnt_3_Ctrl_transla
 	rename -uid "E0B3EA43-4248-E04E-5ADA-948091320165";
 createNode animBlendNodeAdditiveRotation -n "Bigfoot_Rig:R_Finger_4_Jnt_3_Ctrl_rotate_AnimLayer1";
 	rename -uid "D92C0A0F-479D-4BBD-C4E4-EEBC167D6551";
-	setAttr ".o" -type "double3" -0.35734998833386644 0.36264875618542552 -1.3743408732640061 ;
+	setAttr ".o" -type "double3" -0.066977597813433321 0.06797073830218274 -0.2575907465317685 ;
 createNode animBlendNodeAdditiveScale -n "Bigfoot_Rig:R_Finger_4_Jnt_3_Ctrl_scaleX_AnimLayer1";
 	rename -uid "6F3C6E24-4527-FF9D-61ED-A196631ABACC";
 	setAttr ".ia" 1;
@@ -14402,7 +14408,7 @@ createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:L_Finger_4_Jnt_2_Ctrl_transla
 	rename -uid "C9D73236-4709-A9C6-F324-43BB4086523C";
 createNode animBlendNodeAdditiveRotation -n "Bigfoot_Rig:L_Finger_4_Jnt_2_Ctrl_rotate_AnimLayer1";
 	rename -uid "717A941B-4F8A-042C-B06D-5D9B0E3F3131";
-	setAttr ".o" -type "double3" 0.15230550643929425 0.10450542870357041 -0.73455026389561129 ;
+	setAttr ".o" -type "double3" 0.10137454508599412 0.069558813345096476 -0.48891665564891901 ;
 createNode animBlendNodeAdditiveScale -n "Bigfoot_Rig:L_Finger_4_Jnt_2_Ctrl_scaleX_AnimLayer1";
 	rename -uid "D0A8954B-4028-215F-599F-5EBDA008FF87";
 	setAttr ".ia" 1;
@@ -14433,13 +14439,13 @@ createNode animBlendNodeBoolean -n "Bigfoot_Rig:L_Arm_3_Jnt_IK_Ctrl_visibility_A
 	setAttr ".o" yes;
 createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:L_Arm_3_Jnt_IK_Ctrl_translateX_AnimLayer1";
 	rename -uid "ECF3C761-4EE8-49D5-04BA-E1A15D4645CE";
-	setAttr ".o" -134.24852411061269;
+	setAttr ".o" -133.02816143034258;
 createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:L_Arm_3_Jnt_IK_Ctrl_translateY_AnimLayer1";
 	rename -uid "86584529-4AD4-E3AC-2011-D0B6FCE21C91";
-	setAttr ".o" -30.783000140702313;
+	setAttr ".o" -31.526208548519339;
 createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:L_Arm_3_Jnt_IK_Ctrl_translateZ_AnimLayer1";
 	rename -uid "C603C0F2-446D-AB0B-61C0-12ACBE80F7A7";
-	setAttr ".o" 182.30392603643935;
+	setAttr ".o" 182.11119114976609;
 createNode animBlendNodeAdditiveRotation -n "Bigfoot_Rig:L_Arm_3_Jnt_IK_Ctrl_rotate_AnimLayer1";
 	rename -uid "440FB317-43ED-CD43-3F8B-27A82CD53AE8";
 	setAttr ".o" -type "double3" -0.41592876896184516 -146.98951963278765 12.069213626093518 ;
@@ -14723,7 +14729,7 @@ createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:L_Finger_4_Jnt_1_Ctrl_transla
 	rename -uid "FD5855A1-4A0B-5A8E-D38B-988DDE393062";
 createNode animBlendNodeAdditiveRotation -n "Bigfoot_Rig:L_Finger_4_Jnt_1_Ctrl_rotate_AnimLayer1";
 	rename -uid "882D7DB1-4490-5D32-590F-3E99B267C7F7";
-	setAttr ".o" -type "double3" 0.18218457865698712 0.030373635088932715 13.876495915757186 ;
+	setAttr ".o" -type "double3" 0.1212620555540906 0.020216691515193608 14.122560461775736 ;
 createNode animBlendNodeAdditiveScale -n "Bigfoot_Rig:L_Finger_4_Jnt_1_Ctrl_scaleX_AnimLayer1";
 	rename -uid "E1615FC5-40BC-6BF4-5593-47B09DFE3606";
 	setAttr ".ia" 1;
@@ -14760,7 +14766,7 @@ createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:L_Finger_2_Jnt_3_Ctrl_transla
 	rename -uid "2B9040FD-401B-0EB3-1FDA-67B3247C31C6";
 createNode animBlendNodeAdditiveRotation -n "Bigfoot_Rig:L_Finger_2_Jnt_3_Ctrl_rotate_AnimLayer1";
 	rename -uid "FF33C809-408D-C6D2-57FF-D0AB55B46FDA";
-	setAttr ".o" -type "double3" 0.039693317361888511 0.081337348294409514 -0.75347008164925622 ;
+	setAttr ".o" -type "double3" 0.02641987203607301 0.054138139024758891 -0.50150968634574522 ;
 createNode animBlendNodeAdditiveScale -n "Bigfoot_Rig:L_Finger_2_Jnt_3_Ctrl_scaleX_AnimLayer1";
 	rename -uid "9BC49354-40A2-881F-B07A-EB973C270CAD";
 	setAttr ".ia" 1;
@@ -15007,7 +15013,7 @@ createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:L_Finger_2_Jnt_2_Ctrl_transla
 	rename -uid "B932F1AB-4D1D-2B35-79C0-8B9710C754BE";
 createNode animBlendNodeAdditiveRotation -n "Bigfoot_Rig:L_Finger_2_Jnt_2_Ctrl_rotate_AnimLayer1";
 	rename -uid "351A912A-4479-6838-737A-57BBF84E6D8E";
-	setAttr ".o" -type "double3" 0.039693317361888136 0.081337348294409306 -18.123668757146746 ;
+	setAttr ".o" -type "double3" 0.026419872036072763 0.054138139024758752 -17.871708361843236 ;
 createNode animBlendNodeAdditiveScale -n "Bigfoot_Rig:L_Finger_2_Jnt_2_Ctrl_scaleX_AnimLayer1";
 	rename -uid "0840BB6C-40C2-2EF0-3C19-49B87D165301";
 	setAttr ".ia" 1;
@@ -15109,7 +15115,7 @@ createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:R_Finger_2_Jnt_3_Ctrl_transla
 	rename -uid "2A27CC7A-422F-DE36-DD7A-40A29772147E";
 createNode animBlendNodeAdditiveRotation -n "Bigfoot_Rig:R_Finger_2_Jnt_3_Ctrl_rotate_AnimLayer1";
 	rename -uid "E7AB69C4-4746-A15D-DE0F-0299902C39A5";
-	setAttr ".o" -type "double3" -0.43519152336746447 0.3813721437204598 -1.3477041468046382 ;
+	setAttr ".o" -type "double3" -0.081567325522587761 0.071480036080177653 -0.2525982629439556 ;
 createNode animBlendNodeAdditiveScale -n "Bigfoot_Rig:R_Finger_2_Jnt_3_Ctrl_scaleX_AnimLayer1";
 	rename -uid "B1EDCF61-4FAD-3617-E916-F3834490D106";
 	setAttr ".ia" 1;
@@ -15183,7 +15189,7 @@ createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:L_Finger_3_Jnt_3_Ctrl_transla
 	rename -uid "67DD2B29-4A76-DB45-D9E6-01B514523FF3";
 createNode animBlendNodeAdditiveRotation -n "Bigfoot_Rig:L_Finger_3_Jnt_3_Ctrl_rotate_AnimLayer1";
 	rename -uid "2C2A1F52-4257-0B79-24CD-1F82E2DD0D0F";
-	setAttr ".o" -type "double3" 0.059084251864991666 0.14536523108069835 -0.74185909149667073 ;
+	setAttr ".o" -type "double3" 0.039326478041338479 0.096755097807312826 -0.49378141130018416 ;
 createNode animBlendNodeAdditiveScale -n "Bigfoot_Rig:L_Finger_3_Jnt_3_Ctrl_scaleX_AnimLayer1";
 	rename -uid "65879A62-47E1-B08A-82CF-B592E96E1513";
 	setAttr ".ia" 1;
@@ -15334,15 +15340,15 @@ createNode animBlendNodeAdditiveRotation -n "Bigfoot_Rig:Beard_Jnt_Ctrl_rotate_A
 createNode animBlendNodeAdditiveScale -n "Bigfoot_Rig:Beard_Jnt_Ctrl_scaleX_AnimLayer1";
 	rename -uid "7DF7C3F2-4E0D-B1A0-AC0D-4A8744045699";
 	setAttr ".ib" 1;
-	setAttr ".o" 0.99999999999999845;
+	setAttr ".o" 0.99999999999999878;
 createNode animBlendNodeAdditiveScale -n "Bigfoot_Rig:Beard_Jnt_Ctrl_scaleY_AnimLayer1";
 	rename -uid "6C43F94B-443C-5BC5-8622-57B25DE07088";
 	setAttr ".ib" 1;
-	setAttr ".o" 1;
+	setAttr ".o" 1.0000000000000004;
 createNode animBlendNodeAdditiveScale -n "Bigfoot_Rig:Beard_Jnt_Ctrl_scaleZ_AnimLayer1";
 	rename -uid "195D20A7-494E-DD0A-8040-BB933334259C";
 	setAttr ".ib" 1;
-	setAttr ".o" 1.0000000000000016;
+	setAttr ".o" 1.0000000000000007;
 createNode animBlendNodeAdditive -n "Bigfoot_Rig:Beard_Jnt_Ctrl_FollowTranslate_AnimLayer1";
 	rename -uid "876C31AA-4578-1EF3-C931-4CBE6AB43A5A";
 	setAttr ".ia" 1;
@@ -15366,7 +15372,7 @@ createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:R_Finger_3_Jnt_1_Ctrl_transla
 	rename -uid "C33FC204-45E8-8DD9-5F1A-AFB49805171E";
 createNode animBlendNodeAdditiveRotation -n "Bigfoot_Rig:R_Finger_3_Jnt_1_Ctrl_rotate_AnimLayer1";
 	rename -uid "2EE20F86-4A43-A8CF-39BC-A88535FD24AB";
-	setAttr ".o" -type "double3" -0.37217165754063086 1.0556618610865631 -2.8972023242554523 ;
+	setAttr ".o" -type "double3" -0.0086225114624177493 0.024457683204052841 -0.067122683158936811 ;
 createNode animBlendNodeAdditiveScale -n "Bigfoot_Rig:R_Finger_3_Jnt_1_Ctrl_scaleX_AnimLayer1";
 	rename -uid "EB9F8ACF-4711-EED0-EA92-E9AC2BC43DA8";
 	setAttr ".ia" 1;
@@ -15503,7 +15509,7 @@ createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:R_Finger_4_Jnt_2_Ctrl_transla
 	rename -uid "58E6DCA0-49A2-674A-E30D-CFAB68CF3782";
 createNode animBlendNodeAdditiveRotation -n "Bigfoot_Rig:R_Finger_4_Jnt_2_Ctrl_rotate_AnimLayer1";
 	rename -uid "28381A7D-4C01-D23B-7284-AFA628960685";
-	setAttr ".o" -type "double3" -0.35734998833386467 0.36264875618542652 -1.374340873264015 ;
+	setAttr ".o" -type "double3" -0.066977597813433085 0.067970738302182837 -0.25759074653177017 ;
 createNode animBlendNodeAdditiveScale -n "Bigfoot_Rig:R_Finger_4_Jnt_2_Ctrl_scaleX_AnimLayer1";
 	rename -uid "E3311DD4-4841-E99C-FC64-37BBA540C03C";
 	setAttr ".ia" 1;
@@ -15598,16 +15604,16 @@ createNode animBlendNodeBoolean -n "Bigfoot_Rig:R_Arm_3_Jnt_IK_Ctrl_visibility_A
 	setAttr ".o" yes;
 createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:R_Arm_3_Jnt_IK_Ctrl_translateX_AnimLayer1";
 	rename -uid "265952D0-432A-D54C-76B3-DDAEFAF9045F";
-	setAttr ".o" 2.3902736336349681;
+	setAttr ".o" 2.1826445529961536;
 createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:R_Arm_3_Jnt_IK_Ctrl_translateY_AnimLayer1";
 	rename -uid "8854EFB6-44CB-A9D9-52E5-4C8C6FBEF9DC";
-	setAttr ".o" 12.037854884624355;
+	setAttr ".o" 12.164302276715338;
 createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:R_Arm_3_Jnt_IK_Ctrl_translateZ_AnimLayer1";
 	rename -uid "B2501BAF-40BC-4675-C34B-919ECC9BA8CF";
-	setAttr ".o" -63.236456961908864;
+	setAttr ".o" -63.203665590317144;
 createNode animBlendNodeAdditiveRotation -n "Bigfoot_Rig:R_Arm_3_Jnt_IK_Ctrl_rotate_AnimLayer1";
 	rename -uid "19F3F8AB-46CF-5D97-043E-428F050AA98F";
-	setAttr ".o" -type "double3" 34.485706540929584 -67.945727210974439 5.914311957081031 ;
+	setAttr ".o" -type "double3" 35.033430104526118 -67.613039045060205 5.359672357410914 ;
 createNode animBlendNodeAdditiveScale -n "Bigfoot_Rig:R_Arm_3_Jnt_IK_Ctrl_scaleX_AnimLayer1";
 	rename -uid "74E09BCD-4407-84A2-C7D6-C5B67153FB3E";
 	setAttr ".ia" 1;
@@ -15795,7 +15801,7 @@ createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:L_Finger_3_Jnt_2_Ctrl_transla
 	rename -uid "A53C28EE-47B9-FCF6-693D-48B8E3A4416B";
 createNode animBlendNodeAdditiveRotation -n "Bigfoot_Rig:L_Finger_3_Jnt_2_Ctrl_rotate_AnimLayer1";
 	rename -uid "EEA4FABA-40C6-7ACF-4A46-6987CCDC29D3";
-	setAttr ".o" -type "double3" 0.059084251864991319 0.14536523108069835 -25.08336771801206 ;
+	setAttr ".o" -type "double3" 0.039326478041338209 0.096755097807312826 -24.835290037815572 ;
 createNode animBlendNodeAdditiveScale -n "Bigfoot_Rig:L_Finger_3_Jnt_2_Ctrl_scaleX_AnimLayer1";
 	rename -uid "C4FC8AF3-4CAD-87CC-2DE8-66827F718578";
 	setAttr ".ia" 1;
@@ -15826,16 +15832,16 @@ createNode animBlendNodeBoolean -n "locator1_visibility_AnimLayer1";
 	setAttr ".o" yes;
 createNode animBlendNodeAdditiveDL -n "locator1_translateX_AnimLayer1";
 	rename -uid "30B8FC66-470B-369F-7031-40B4CA0B0E06";
-	setAttr ".o" 35.518255766261049;
+	setAttr ".o" 36.520666098980229;
 createNode animBlendNodeAdditiveDL -n "locator1_translateY_AnimLayer1";
 	rename -uid "EF4419E3-4E86-CCCE-026B-24A2D59618E0";
-	setAttr ".o" 291.06538806054482;
+	setAttr ".o" 275.03676489045517;
 createNode animBlendNodeAdditiveDL -n "locator1_translateZ_AnimLayer1";
 	rename -uid "3570302F-48A8-1EE5-AD36-B1B424A37024";
-	setAttr ".o" 137.63242906203567;
+	setAttr ".o" 131.06407887331738;
 createNode animBlendNodeAdditiveRotation -n "locator1_rotate_AnimLayer1";
 	rename -uid "A64E83E2-41E7-CA8C-A153-F993E7A38890";
-	setAttr ".o" -type "double3" 0.92422889748718395 -160.2384640318659 -46.19912886305093 ;
+	setAttr ".o" -type "double3" -0.72173403865019459 -157.77206163629327 -46.957312513774475 ;
 createNode animBlendNodeAdditiveScale -n "locator1_scaleX_AnimLayer1";
 	rename -uid "FE242F4C-4E21-BA6B-9771-B9996183CF8B";
 	setAttr ".ia" 1.0000000000000013;
@@ -15973,6 +15979,8 @@ createNode animLayer -n "AnimLayer2";
 	rename -uid "1DAECE4E-4E47-C153-B0A2-AFBC9D1DD73A";
 	setAttr -s 938 ".dsm";
 	setAttr -s 778 ".bnds";
+	setAttr ".mt" yes;
+	setAttr ".lo" yes;
 	setAttr ".pref" yes;
 	setAttr ".slct" yes;
 createNode animBlendNodeBoolean -n "Bigfoot_Rig:L_Finger_1_Jnt_2_Ctrl_visibility_AnimLayer2";
@@ -16049,7 +16057,7 @@ createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:L_Finger_2_Jnt_1_Ctrl_transla
 	rename -uid "9FCA7D3E-45D8-FD46-479A-E68150194FAC";
 createNode animBlendNodeAdditiveRotation -n "Bigfoot_Rig:L_Finger_2_Jnt_1_Ctrl_rotate_AnimLayer2";
 	rename -uid "394ED418-4CA8-91D7-5C64-498CF007C783";
-	setAttr ".o" -type "double3" 0.078680680437535927 0.044729347023972112 4.4714036079190391 ;
+	setAttr ".o" -type "double3" 0.052369860899223915 0.029771853379155801 4.7233519361537262 ;
 createNode animBlendNodeAdditiveScale -n "Bigfoot_Rig:L_Finger_2_Jnt_1_Ctrl_scaleX_AnimLayer2";
 	rename -uid "B2B5437B-4E51-0407-7BAF-9DB4E0A986AE";
 	setAttr ".ib" 1;
@@ -16104,16 +16112,16 @@ createNode animBlendNodeBoolean -n "Bigfoot_Rig:Spine_3_Jnt_FK_Ctrl_visibility_A
 	setAttr ".o" yes;
 createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:Spine_3_Jnt_FK_Ctrl_translateX_AnimLayer2";
 	rename -uid "C7273BCC-4A92-357A-5914-259523541FA8";
-	setAttr ".o" 0.029021673655937386;
+	setAttr ".o" -0.38024201729817014;
 createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:Spine_3_Jnt_FK_Ctrl_translateY_AnimLayer2";
 	rename -uid "8F12D248-4717-7725-D901-6CAEE83EBEAE";
-	setAttr ".o" 0.020184372087552957;
+	setAttr ".o" -0.26445567721067276;
 createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:Spine_3_Jnt_FK_Ctrl_translateZ_AnimLayer2";
 	rename -uid "4E2BD830-4341-389F-FA7B-13B39D9DFDDE";
-	setAttr ".o" -0.0075368246031095286;
+	setAttr ".o" 0.098747488690149154;
 createNode animBlendNodeAdditiveRotation -n "Bigfoot_Rig:Spine_3_Jnt_FK_Ctrl_rotate_AnimLayer2";
 	rename -uid "15BE0BB5-4A30-AB8F-9E61-02B6BD9573A5";
-	setAttr ".o" -type "double3" 0.85166974346011659 -1.1085663426320709 -7.164323565961138 ;
+	setAttr ".o" -type "double3" 0 0 -7.6330931508722131 ;
 createNode animBlendNodeAdditiveScale -n "Bigfoot_Rig:Spine_3_Jnt_FK_Ctrl_scaleX_AnimLayer2";
 	rename -uid "ABCBF2AE-4BF4-4B83-A2C3-F2801766A546";
 	setAttr ".ib" 1;
@@ -16175,7 +16183,7 @@ createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:Spine_1_Jnt_FK_Ctrl_translate
 	rename -uid "9E976592-430F-D60C-B2A5-CC9F6D23AC97";
 createNode animBlendNodeAdditiveRotation -n "Bigfoot_Rig:Spine_1_Jnt_FK_Ctrl_rotate_AnimLayer2";
 	rename -uid "0D9C44F0-4FBF-352E-2DEA-D8A82087B7A1";
-	setAttr ".o" -type "double3" 6.0055095850661111 -5.4937067024489661 -0.67743615110843514 ;
+	setAttr ".o" -type "double3" 6.4130462849896599 -5.5019582216418126 -0.61743820531321969 ;
 createNode animBlendNodeAdditiveScale -n "Bigfoot_Rig:Spine_1_Jnt_FK_Ctrl_scaleX_AnimLayer2";
 	rename -uid "CFD53AC3-4E91-6394-C9C8-768EFEA5B1C1";
 	setAttr ".ib" 1;
@@ -16206,7 +16214,7 @@ createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:R_Finger_4_Jnt_1_Ctrl_transla
 	rename -uid "E68EBD3E-4189-6018-9ECB-348E8294F18D";
 createNode animBlendNodeAdditiveRotation -n "Bigfoot_Rig:R_Finger_4_Jnt_1_Ctrl_rotate_AnimLayer2";
 	rename -uid "5D49A534-4A22-0EE3-9C73-3FB859E70E73";
-	setAttr ".o" -type "double3" -0.17058725836102837 0.47968517328634902 -1.3727329716051164 ;
+	setAttr ".o" -type "double3" -0.031972926138524212 0.089906706764527194 -0.25728937982084515 ;
 createNode animBlendNodeAdditiveScale -n "Bigfoot_Rig:R_Finger_4_Jnt_1_Ctrl_scaleX_AnimLayer2";
 	rename -uid "DEED3742-4845-B63B-7F21-5FB16169C3E9";
 	setAttr ".ib" 1;
@@ -16291,7 +16299,7 @@ createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:R_Finger_1_Jnt_3_Ctrl_transla
 	rename -uid "1447A10F-4C49-3B67-4D23-1098B95F24F0";
 createNode animBlendNodeAdditiveRotation -n "Bigfoot_Rig:R_Finger_1_Jnt_3_Ctrl_rotate_AnimLayer2";
 	rename -uid "FBB6A27C-4E1B-4559-69C1-E5A945742E4A";
-	setAttr ".o" -type "double3" -0.49982218520422111 -0.11704102424748809 -1.366429587479919 ;
+	setAttr ".o" -type "double3" -0.093680958141134127 -0.0219368319732435 -0.25610794553909372 ;
 createNode animBlendNodeAdditiveScale -n "Bigfoot_Rig:R_Finger_1_Jnt_3_Ctrl_scaleX_AnimLayer2";
 	rename -uid "B872D5D7-4311-DB80-3A2A-2884DC11BB5A";
 	setAttr ".ib" 1;
@@ -16316,14 +16324,17 @@ createNode animBlendNodeBoolean -n "Bigfoot_Rig:Head_Ctrl_visibility_AnimLayer2"
 	setAttr ".o" yes;
 createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:Head_Ctrl_translateX_AnimLayer2";
 	rename -uid "BBFD238D-4B4C-E200-294C-2EB822E96B50";
+	setAttr ".o" -0.0041686733948082784;
 createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:Head_Ctrl_translateY_AnimLayer2";
 	rename -uid "920EF0D1-459B-8EFD-1CBA-4588FC7F48E5";
+	setAttr ".o" -0.017146973374658762;
 createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:Head_Ctrl_translateZ_AnimLayer2";
 	rename -uid "B1EC68DC-45F2-E8EC-E8B6-998ACC6B9939";
+	setAttr ".o" 0.0093962218504067638;
 createNode animBlendNodeAdditiveRotation -n "Bigfoot_Rig:Head_Ctrl_rotate_AnimLayer2";
 	rename -uid "F27B01B9-4BD6-33D6-21DE-2D9856E11C00";
 	setAttr ".ib" -type "double3" -2.3235957541261363 -0.019799782970185021 0.018726060162025947 ;
-	setAttr ".o" -type "double3" -23.102206354037701 7.0530038690378989 -8.0017236686856741 ;
+	setAttr ".o" -type "double3" -20.778610599911566 7.0728036520080844 -8.0204497288476997 ;
 createNode animBlendNodeAdditiveScale -n "Bigfoot_Rig:Head_Ctrl_scaleX_AnimLayer2";
 	rename -uid "A7D6AF55-4AA1-D2FA-1EC0-7DA643162B18";
 	setAttr ".ib" 1;
@@ -16354,7 +16365,7 @@ createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:R_Finger_1_Jnt_2_Ctrl_transla
 	rename -uid "E82F8859-4A97-D19A-A51C-03A6681D9A6A";
 createNode animBlendNodeAdditiveRotation -n "Bigfoot_Rig:R_Finger_1_Jnt_2_Ctrl_rotate_AnimLayer2";
 	rename -uid "28823ABE-4965-7E2E-CB3F-48B51F3FB205";
-	setAttr ".o" -type "double3" -0.49982218520422111 -0.11704102424748769 -1.3664295874799199 ;
+	setAttr ".o" -type "double3" -0.093680958141134169 -0.021936831973243431 -0.256107945539094 ;
 createNode animBlendNodeAdditiveScale -n "Bigfoot_Rig:R_Finger_1_Jnt_2_Ctrl_scaleX_AnimLayer2";
 	rename -uid "10873B99-4723-E741-601D-CC8B15DDD67F";
 	setAttr ".ib" 1;
@@ -16439,7 +16450,7 @@ createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:R_Finger_3_Jnt_3_Ctrl_transla
 	rename -uid "4B2DE6F3-416B-0324-3814-1F8394E0AD7E";
 createNode animBlendNodeAdditiveRotation -n "Bigfoot_Rig:R_Finger_3_Jnt_3_Ctrl_rotate_AnimLayer2";
 	rename -uid "036C8680-4227-D95C-5841-69B6FEE0F698";
-	setAttr ".o" -type "double3" -0.36937463066949394 0.37690377246927859 -1.3676155436922006 ;
+	setAttr ".o" -type "double3" -0.069231359348339544 0.070642535639956358 -0.25633022761773877 ;
 createNode animBlendNodeAdditiveScale -n "Bigfoot_Rig:R_Finger_3_Jnt_3_Ctrl_scaleX_AnimLayer2";
 	rename -uid "B91534C5-4AA6-D9F4-4CE6-D9B370BAA700";
 	setAttr ".ib" 1;
@@ -16497,13 +16508,13 @@ createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:CoG_Jnt_Ctrl_translateX_AnimL
 	rename -uid "21B96EF6-424F-C27A-03F9-42BD6DD1ACEC";
 createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:CoG_Jnt_Ctrl_translateY_AnimLayer2";
 	rename -uid "4B66CC2E-4EAF-B470-4931-C1883AD84781";
-	setAttr ".o" -28.56384929839826;
+	setAttr ".o" -38.386990787625898;
 createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:CoG_Jnt_Ctrl_translateZ_AnimLayer2";
 	rename -uid "42BCB702-408A-2131-D9D1-0997C0460585";
-	setAttr ".o" 10.064718435955811;
+	setAttr ".o" 5.3629332716244491;
 createNode animBlendNodeAdditiveRotation -n "Bigfoot_Rig:CoG_Jnt_Ctrl_rotate_AnimLayer2";
 	rename -uid "3CEB46BD-4140-67AD-0A59-CFB63546569E";
-	setAttr ".o" -type "double3" 5.8990373851160571 0 0 ;
+	setAttr ".o" -type "double3" 4.8730619515226845 0 0 ;
 createNode animBlendNodeAdditiveScale -n "Bigfoot_Rig:CoG_Jnt_Ctrl_scaleX_AnimLayer2";
 	rename -uid "FC5CC609-4106-B4BD-E17A-279B41B42507";
 	setAttr ".ib" 1;
@@ -16626,7 +16637,7 @@ createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:R_Finger_2_Jnt_2_Ctrl_transla
 	rename -uid "CA502FA4-4B2A-130E-D152-23956C4F6E97";
 createNode animBlendNodeAdditiveRotation -n "Bigfoot_Rig:R_Finger_2_Jnt_2_Ctrl_rotate_AnimLayer2";
 	rename -uid "CA4652B1-487C-75CC-60F9-E8835A1BE0FF";
-	setAttr ".o" -type "double3" -0.92310339128000762 0.80894479856592416 -2.8586730245364955 ;
+	setAttr ".o" -type "double3" -0.021386554862629598 0.018741716777119704 -0.066230032357257246 ;
 createNode animBlendNodeAdditiveScale -n "Bigfoot_Rig:R_Finger_2_Jnt_2_Ctrl_scaleX_AnimLayer2";
 	rename -uid "92C0CEC8-43D4-863C-4726-CA9BA6523146";
 	setAttr ".ib" 1;
@@ -16657,7 +16668,7 @@ createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:R_Finger_2_Jnt_1_Ctrl_transla
 	rename -uid "E225292A-483A-E43A-096B-4C88FAE4EFBD";
 createNode animBlendNodeAdditiveRotation -n "Bigfoot_Rig:R_Finger_2_Jnt_1_Ctrl_rotate_AnimLayer2";
 	rename -uid "948B38B3-469F-63C1-2DB4-21A0D7FBE3B1";
-	setAttr ".o" -type "double3" -0.64626406384152391 1.0434652731153462 -2.8575242094105975 ;
+	setAttr ".o" -type "double3" -0.014972712685983597 0.024175111392219568 -0.066203416489577227 ;
 createNode animBlendNodeAdditiveScale -n "Bigfoot_Rig:R_Finger_2_Jnt_1_Ctrl_scaleX_AnimLayer2";
 	rename -uid "AEDF5A75-4D9F-191B-BAD0-9CA9F92DE000";
 	setAttr ".ib" 1;
@@ -16765,7 +16776,7 @@ createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:Jaw_Ctrl_Ctrl_translateZ_Anim
 	setAttr ".o" -15.968155488877606;
 createNode animBlendNodeAdditiveRotation -n "Bigfoot_Rig:Jaw_Ctrl_Ctrl_rotate_AnimLayer2";
 	rename -uid "B7034574-4E7A-A9DE-CC75-DAAAC24B5B70";
-	setAttr ".o" -type "double3" 1.8018150366319954 -0.010378069155014885 0.0049086467903302197 ;
+	setAttr ".o" -type "double3" 0.71023041014785915 -0.099019488417028817 0.046834501364208019 ;
 createNode animBlendNodeAdditiveScale -n "Bigfoot_Rig:Jaw_Ctrl_Ctrl_scaleX_AnimLayer2";
 	rename -uid "5D88B817-45B3-E8AB-7960-0797B6E872CC";
 	setAttr ".ib" 1;
@@ -16849,16 +16860,16 @@ createNode animBlendNodeBoolean -n "Bigfoot_Rig:Spine_2_Jnt_FK_Ctrl_visibility_A
 	setAttr ".o" yes;
 createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:Spine_2_Jnt_FK_Ctrl_translateX_AnimLayer2";
 	rename -uid "FDAF16FA-45A6-73C9-84A3-8585457C100B";
-	setAttr ".o" -0.051535483904721624;
+	setAttr ".o" -0.74994783984050328;
 createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:Spine_2_Jnt_FK_Ctrl_translateY_AnimLayer2";
 	rename -uid "47AFF07E-4690-1E83-9AD7-41B669A270CE";
-	setAttr ".o" -0.03375753002716872;
+	setAttr ".o" -0.49124185520467517;
 createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:Spine_2_Jnt_FK_Ctrl_translateZ_AnimLayer2";
 	rename -uid "39D08D88-43FE-705C-FDBA-D695C673FD5C";
-	setAttr ".o" -0.0011604305740860786;
+	setAttr ".o" -0.016886664029965529;
 createNode animBlendNodeAdditiveRotation -n "Bigfoot_Rig:Spine_2_Jnt_FK_Ctrl_rotate_AnimLayer2";
 	rename -uid "46E2F24C-4F51-2C8D-859F-288B7DBE59A3";
-	setAttr ".o" -type "double3" 6.5527493483341086 -11.592585268169126 -3.8749395532109285 ;
+	setAttr ".o" -type "double3" 6.5335528236382849 -11.541744626276097 -4.4303322709665842 ;
 createNode animBlendNodeAdditiveScale -n "Bigfoot_Rig:Spine_2_Jnt_FK_Ctrl_scaleX_AnimLayer2";
 	rename -uid "FAAC3E7C-4AAE-D2DF-FD01-B8AF5AD2229D";
 	setAttr ".ib" 1;
@@ -16889,7 +16900,7 @@ createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:L_Finger_3_Jnt_1_Ctrl_transla
 	rename -uid "0B8D37C0-434C-220E-E165-6382F8BEC0DD";
 createNode animBlendNodeAdditiveRotation -n "Bigfoot_Rig:L_Finger_3_Jnt_1_Ctrl_rotate_AnimLayer2";
 	rename -uid "7F914B95-4FA5-9360-C34E-A2A518005E30";
-	setAttr ".o" -type "double3" 0.14876615703676929 0.049902371599083721 2.4855573784005141 ;
+	setAttr ".o" -type "double3" 0.0990187541236736 0.033215018536350067 2.7336834084166495 ;
 createNode animBlendNodeAdditiveScale -n "Bigfoot_Rig:L_Finger_3_Jnt_1_Ctrl_scaleX_AnimLayer2";
 	rename -uid "F80E9F12-407A-09B3-70EC-0AA7B247EB9D";
 	setAttr ".ib" 1;
@@ -16944,7 +16955,7 @@ createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:R_Finger_3_Jnt_2_Ctrl_transla
 	rename -uid "27CCF71A-472C-CF54-8660-4ABCCCC7557F";
 createNode animBlendNodeAdditiveRotation -n "Bigfoot_Rig:R_Finger_3_Jnt_2_Ctrl_rotate_AnimLayer2";
 	rename -uid "86B2CAD3-475E-C283-A233-F7B66EBDDB13";
-	setAttr ".o" -type "double3" -0.369374630669489 0.37690377246928158 -1.3676155436922119 ;
+	setAttr ".o" -type "double3" -0.069231359348338573 0.070642535639956858 -0.25633022761774038 ;
 createNode animBlendNodeAdditiveScale -n "Bigfoot_Rig:R_Finger_3_Jnt_2_Ctrl_scaleX_AnimLayer2";
 	rename -uid "D3F0D424-4F7E-1A53-06CE-B6B77D0BB6BD";
 	setAttr ".ib" 1;
@@ -16969,13 +16980,13 @@ createNode animBlendNodeBoolean -n "Bigfoot_Rig:L_Arm_IK_PV_Ctrl_visibility_Anim
 	setAttr ".o" yes;
 createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:L_Arm_IK_PV_Ctrl_translateX_AnimLayer2";
 	rename -uid "9B0BA52C-4A9A-20C3-FC3A-C89FD7C2A1B6";
-	setAttr ".o" 58.404572668292516;
+	setAttr ".o" 55.613360596884277;
 createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:L_Arm_IK_PV_Ctrl_translateY_AnimLayer2";
 	rename -uid "E0092E0A-4CD0-88B3-8E1F-2585D886B680";
-	setAttr ".o" 47.189078856844155;
+	setAttr ".o" 48.933258420615211;
 createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:L_Arm_IK_PV_Ctrl_translateZ_AnimLayer2";
 	rename -uid "EC4D7177-4CB8-E06F-6C41-C8AA6EA77212";
-	setAttr ".o" 60.39548686888687;
+	setAttr ".o" 61.125875315347074;
 createNode animBlendNodeAdditiveRotation -n "Bigfoot_Rig:L_Arm_IK_PV_Ctrl_rotate_AnimLayer2";
 	rename -uid "68FC0A09-4D37-5FCC-B6DF-69B003966A35";
 createNode animBlendNodeAdditiveScale -n "Bigfoot_Rig:L_Arm_IK_PV_Ctrl_scaleX_AnimLayer2";
@@ -16998,13 +17009,10 @@ createNode animBlendNodeBoolean -n "Bigfoot_Rig:R_Eyebrow_Ctrl_visibility_AnimLa
 	setAttr ".o" yes;
 createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:R_Eyebrow_Ctrl_translateX_AnimLayer2";
 	rename -uid "BED0C9AB-4639-34C9-BA48-949F43530CC9";
-	setAttr ".o" -0.0039922091156522344;
 createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:R_Eyebrow_Ctrl_translateY_AnimLayer2";
 	rename -uid "4B00072C-4517-6E9D-B945-66A46A5EA854";
-	setAttr ".o" 0.032306783707544806;
 createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:R_Eyebrow_Ctrl_translateZ_AnimLayer2";
 	rename -uid "C7C19BE0-4655-59EE-0A20-8289627D0884";
-	setAttr ".o" 0.00066332387221108846;
 createNode animBlendNodeAdditiveRotation -n "Bigfoot_Rig:R_Eyebrow_Ctrl_rotate_AnimLayer2";
 	rename -uid "F0C72C17-4A4E-DE65-6938-808D247EE60F";
 createNode animBlendNodeAdditiveScale -n "Bigfoot_Rig:R_Eyebrow_Ctrl_scaleX_AnimLayer2";
@@ -17099,7 +17107,7 @@ createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:L_Finger_4_Jnt_3_Ctrl_transla
 	rename -uid "BBC8CADF-426D-1D37-D0EA-8D81384D4091";
 createNode animBlendNodeAdditiveRotation -n "Bigfoot_Rig:L_Finger_4_Jnt_3_Ctrl_rotate_AnimLayer2";
 	rename -uid "0012CE62-41DE-FD9D-C746-149888AFD276";
-	setAttr ".o" -type "double3" 0.18102315009047004 0.036669791288822931 22.277395210666043 ;
+	setAttr ".o" -type "double3" 0.12048900870021664 0.024407413081840544 22.523413917080028 ;
 createNode animBlendNodeAdditiveScale -n "Bigfoot_Rig:L_Finger_4_Jnt_3_Ctrl_scaleX_AnimLayer2";
 	rename -uid "D83D7A70-4753-6E88-0FF8-5DA71DD73FF4";
 	setAttr ".ib" 1;
@@ -17130,7 +17138,7 @@ createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:R_Finger_4_Jnt_3_Ctrl_transla
 	rename -uid "8E495FC4-4FBF-00DE-58D9-50AB76CF61A9";
 createNode animBlendNodeAdditiveRotation -n "Bigfoot_Rig:R_Finger_4_Jnt_3_Ctrl_rotate_AnimLayer2";
 	rename -uid "E43C28BC-4819-712B-21E7-8ABD324D99DA";
-	setAttr ".o" -type "double3" -0.35734998833386644 0.36264875618542552 -1.3743408732640061 ;
+	setAttr ".o" -type "double3" -0.066977597813433321 0.06797073830218274 -0.2575907465317685 ;
 createNode animBlendNodeAdditiveScale -n "Bigfoot_Rig:R_Finger_4_Jnt_3_Ctrl_scaleX_AnimLayer2";
 	rename -uid "DE8877A6-4FD7-F5F9-0386-F8BBE55C85CE";
 	setAttr ".ib" 1;
@@ -17161,7 +17169,7 @@ createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:L_Finger_4_Jnt_2_Ctrl_transla
 	rename -uid "4F21A34B-460D-829B-ECC8-9D8696601095";
 createNode animBlendNodeAdditiveRotation -n "Bigfoot_Rig:L_Finger_4_Jnt_2_Ctrl_rotate_AnimLayer2";
 	rename -uid "19EF84DC-4C27-D267-2EBC-4B98CDB13B6B";
-	setAttr ".o" -type "double3" 0.15230550643929425 0.10450542870357041 -0.73455026389561129 ;
+	setAttr ".o" -type "double3" 0.10137454508599412 0.069558813345096476 -0.48891665564891901 ;
 createNode animBlendNodeAdditiveScale -n "Bigfoot_Rig:L_Finger_4_Jnt_2_Ctrl_scaleX_AnimLayer2";
 	rename -uid "5C9B99CE-404E-4FDD-7FA9-E3B4C2754379";
 	setAttr ".ib" 1;
@@ -17186,13 +17194,13 @@ createNode animBlendNodeBoolean -n "Bigfoot_Rig:L_Arm_3_Jnt_IK_Ctrl_visibility_A
 	setAttr ".o" yes;
 createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:L_Arm_3_Jnt_IK_Ctrl_translateX_AnimLayer2";
 	rename -uid "2967C7B4-4756-958C-79A0-549881C68A66";
-	setAttr ".o" -133.79437532935961;
+	setAttr ".o" -133.02816143034258;
 createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:L_Arm_3_Jnt_IK_Ctrl_translateY_AnimLayer2";
 	rename -uid "AD938245-4AFE-EBC6-D0CC-CC9A594469B5";
-	setAttr ".o" -31.059579552777112;
+	setAttr ".o" -31.526208548519339;
 createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:L_Arm_3_Jnt_IK_Ctrl_translateZ_AnimLayer2";
 	rename -uid "0B729A6C-404F-66F6-8507-CB81F15C55BD";
-	setAttr ".o" 182.23220119979632;
+	setAttr ".o" 182.11119114976609;
 createNode animBlendNodeAdditiveRotation -n "Bigfoot_Rig:L_Arm_3_Jnt_IK_Ctrl_rotate_AnimLayer2";
 	rename -uid "B1BD8975-48CA-6176-613B-66832155F17A";
 	setAttr ".o" -type "double3" -0.41592876896184516 -146.98951963278765 12.069213626093518 ;
@@ -17230,7 +17238,7 @@ createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:L_Clav_Jnt_Ctrl_translateZ_An
 	rename -uid "4BA28CB3-4CDD-E857-4BF4-AAABF575C0A0";
 createNode animBlendNodeAdditiveRotation -n "Bigfoot_Rig:L_Clav_Jnt_Ctrl_rotate_AnimLayer2";
 	rename -uid "FE783A2D-496A-DCF9-A6FE-F0AAF269C95F";
-	setAttr ".o" -type "double3" -3.7038595873432603 -24.59273834911987 30.234636124493793 ;
+	setAttr ".o" -type "double3" -3.5950663022205958 -24.308197006661477 31.326619326681381 ;
 createNode animBlendNodeAdditiveScale -n "Bigfoot_Rig:L_Clav_Jnt_Ctrl_scaleX_AnimLayer2";
 	rename -uid "E0968D31-438C-8D0F-8DFF-0095986038EF";
 	setAttr ".ib" 1;
@@ -17434,7 +17442,7 @@ createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:L_Finger_4_Jnt_1_Ctrl_transla
 	rename -uid "A3DC0D60-419F-3858-4A85-9DA9E183BB84";
 createNode animBlendNodeAdditiveRotation -n "Bigfoot_Rig:L_Finger_4_Jnt_1_Ctrl_rotate_AnimLayer2";
 	rename -uid "50607BF3-400D-943D-B8CC-E793DB1E3A25";
-	setAttr ".o" -type "double3" 0.18218457865698712 0.030373635088932715 13.876495915757186 ;
+	setAttr ".o" -type "double3" 0.1212620555540906 0.020216691515193608 14.122560461775736 ;
 createNode animBlendNodeAdditiveScale -n "Bigfoot_Rig:L_Finger_4_Jnt_1_Ctrl_scaleX_AnimLayer2";
 	rename -uid "B27191F3-4684-43F0-A0CB-2C8E0489ADA0";
 	setAttr ".ib" 1;
@@ -17465,7 +17473,7 @@ createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:L_Finger_2_Jnt_3_Ctrl_transla
 	rename -uid "A9369C76-4F18-BD20-EB76-D99DAB75AB10";
 createNode animBlendNodeAdditiveRotation -n "Bigfoot_Rig:L_Finger_2_Jnt_3_Ctrl_rotate_AnimLayer2";
 	rename -uid "57AC3B22-4F9F-BC6D-2641-35B2AA7351F5";
-	setAttr ".o" -type "double3" 0.039693317361888511 0.081337348294409514 -0.75347008164925622 ;
+	setAttr ".o" -type "double3" 0.02641987203607301 0.054138139024758891 -0.50150968634574522 ;
 createNode animBlendNodeAdditiveScale -n "Bigfoot_Rig:L_Finger_2_Jnt_3_Ctrl_scaleX_AnimLayer2";
 	rename -uid "528CB353-4E8C-4B29-F746-02B1BB3B59E2";
 	setAttr ".ib" 1;
@@ -17618,7 +17626,7 @@ createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:R_Clav_Jnt_Ctrl_translateZ_An
 	rename -uid "821C7BF6-4028-B561-5A5E-EABE2C2EB573";
 createNode animBlendNodeAdditiveRotation -n "Bigfoot_Rig:R_Clav_Jnt_Ctrl_rotate_AnimLayer2";
 	rename -uid "A5203187-47A6-8273-4715-5790AB693343";
-	setAttr ".o" -type "double3" -0.54200615109601813 -6.9902294348538785 11.372825538839018 ;
+	setAttr ".o" -type "double3" -0.86971804848749534 -6.5966486745698889 12.781619612745793 ;
 createNode animBlendNodeAdditiveScale -n "Bigfoot_Rig:R_Clav_Jnt_Ctrl_scaleX_AnimLayer2";
 	rename -uid "7FEC5C7F-4EBE-979A-5533-968EFB8DC574";
 	setAttr ".ib" 1;
@@ -17673,7 +17681,7 @@ createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:L_Finger_2_Jnt_2_Ctrl_transla
 	rename -uid "698ECE7A-4930-2CC4-08D5-BE83FB839A4D";
 createNode animBlendNodeAdditiveRotation -n "Bigfoot_Rig:L_Finger_2_Jnt_2_Ctrl_rotate_AnimLayer2";
 	rename -uid "0DC99E7B-48C7-7CAE-295E-C7B3FCB0951E";
-	setAttr ".o" -type "double3" 0.039693317361888136 0.081337348294409306 -18.123668757146746 ;
+	setAttr ".o" -type "double3" 0.026419872036072763 0.054138139024758752 -17.871708361843236 ;
 createNode animBlendNodeAdditiveScale -n "Bigfoot_Rig:L_Finger_2_Jnt_2_Ctrl_scaleX_AnimLayer2";
 	rename -uid "E4CBC566-4585-814B-6561-868243003ACB";
 	setAttr ".ib" 1;
@@ -17759,7 +17767,7 @@ createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:R_Finger_2_Jnt_3_Ctrl_transla
 	rename -uid "10FB6F79-4257-696A-111F-C4A62EE2E925";
 createNode animBlendNodeAdditiveRotation -n "Bigfoot_Rig:R_Finger_2_Jnt_3_Ctrl_rotate_AnimLayer2";
 	rename -uid "87A26C71-4B46-608E-2328-669AC6940772";
-	setAttr ".o" -type "double3" -0.43519152336746447 0.3813721437204598 -1.3477041468046382 ;
+	setAttr ".o" -type "double3" -0.081567325522587761 0.071480036080177653 -0.2525982629439556 ;
 createNode animBlendNodeAdditiveScale -n "Bigfoot_Rig:R_Finger_2_Jnt_3_Ctrl_scaleX_AnimLayer2";
 	rename -uid "5309A4E3-48D2-0BAD-3460-299D43040F24";
 	setAttr ".ib" 1;
@@ -17821,7 +17829,7 @@ createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:L_Finger_3_Jnt_3_Ctrl_transla
 	rename -uid "A27C5E7D-4E2C-C4A5-3A38-1D85BF168764";
 createNode animBlendNodeAdditiveRotation -n "Bigfoot_Rig:L_Finger_3_Jnt_3_Ctrl_rotate_AnimLayer2";
 	rename -uid "F3AB5BC6-4B6C-A1BE-379A-3DBBCF7A9D7E";
-	setAttr ".o" -type "double3" 0.059084251864991666 0.14536523108069835 -0.74185909149667073 ;
+	setAttr ".o" -type "double3" 0.039326478041338479 0.096755097807312826 -0.49378141130018416 ;
 createNode animBlendNodeAdditiveScale -n "Bigfoot_Rig:L_Finger_3_Jnt_3_Ctrl_scaleX_AnimLayer2";
 	rename -uid "40C2F237-4A39-DA9F-89D1-5A849F893CD3";
 	setAttr ".ib" 1;
@@ -17950,15 +17958,15 @@ createNode animBlendNodeAdditiveRotation -n "Bigfoot_Rig:Beard_Jnt_Ctrl_rotate_A
 createNode animBlendNodeAdditiveScale -n "Bigfoot_Rig:Beard_Jnt_Ctrl_scaleX_AnimLayer2";
 	rename -uid "4949F136-4FD3-8251-3B2B-1E89319192FD";
 	setAttr ".ib" 1;
-	setAttr ".o" 0.99999999999999845;
+	setAttr ".o" 0.99999999999999878;
 createNode animBlendNodeAdditiveScale -n "Bigfoot_Rig:Beard_Jnt_Ctrl_scaleY_AnimLayer2";
 	rename -uid "670F5BD6-41ED-FEF7-5FA8-82AC04903A27";
 	setAttr ".ib" 1;
-	setAttr ".o" 1;
+	setAttr ".o" 1.0000000000000004;
 createNode animBlendNodeAdditiveScale -n "Bigfoot_Rig:Beard_Jnt_Ctrl_scaleZ_AnimLayer2";
 	rename -uid "B68AA555-474C-BB0C-E4E4-9BA7CC8613C6";
 	setAttr ".ib" 1;
-	setAttr ".o" 1.0000000000000016;
+	setAttr ".o" 1.0000000000000007;
 createNode animBlendNodeAdditive -n "Bigfoot_Rig:Beard_Jnt_Ctrl_FollowTranslate_AnimLayer2";
 	rename -uid "FAE1F827-4AA2-B19D-405D-C890DF9543B4";
 	setAttr ".o" 1;
@@ -17979,7 +17987,7 @@ createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:R_Finger_3_Jnt_1_Ctrl_transla
 	rename -uid "B186766C-4F48-E6C8-C7A9-8EA4FB731135";
 createNode animBlendNodeAdditiveRotation -n "Bigfoot_Rig:R_Finger_3_Jnt_1_Ctrl_rotate_AnimLayer2";
 	rename -uid "E9B473DF-41E7-4B8D-11A7-1BA8F79627C0";
-	setAttr ".o" -type "double3" -0.37217165754063086 1.0556618610865631 -2.8972023242554523 ;
+	setAttr ".o" -type "double3" -0.0086225114624177493 0.024457683204052841 -0.067122683158936811 ;
 createNode animBlendNodeAdditiveScale -n "Bigfoot_Rig:R_Finger_3_Jnt_1_Ctrl_scaleX_AnimLayer2";
 	rename -uid "5C812ABB-4817-89EE-5B69-73B2B3A7324F";
 	setAttr ".ib" 1;
@@ -18094,7 +18102,7 @@ createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:R_Finger_4_Jnt_2_Ctrl_transla
 	rename -uid "BAAAD21B-4DD2-ED4E-A414-339A6CCEBC6D";
 createNode animBlendNodeAdditiveRotation -n "Bigfoot_Rig:R_Finger_4_Jnt_2_Ctrl_rotate_AnimLayer2";
 	rename -uid "537A79CA-4504-6B4B-F9D7-DA9A67D10E68";
-	setAttr ".o" -type "double3" -0.35734998833386467 0.36264875618542652 -1.374340873264015 ;
+	setAttr ".o" -type "double3" -0.066977597813433085 0.067970738302182837 -0.25759074653177017 ;
 createNode animBlendNodeAdditiveScale -n "Bigfoot_Rig:R_Finger_4_Jnt_2_Ctrl_scaleX_AnimLayer2";
 	rename -uid "350EE325-4B39-D157-68C0-D5951CA88FD1";
 	setAttr ".ib" 1;
@@ -18174,16 +18182,16 @@ createNode animBlendNodeBoolean -n "Bigfoot_Rig:R_Arm_3_Jnt_IK_Ctrl_visibility_A
 	setAttr ".o" yes;
 createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:R_Arm_3_Jnt_IK_Ctrl_translateX_AnimLayer2";
 	rename -uid "86D84BBD-415E-3E93-9F04-799367B030B8";
-	setAttr ".o" 0.10965641742295329;
+	setAttr ".o" 2.1826445529961536;
 createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:R_Arm_3_Jnt_IK_Ctrl_translateY_AnimLayer2";
 	rename -uid "459AC4F7-4BD4-0481-6706-14A2D3F5D9CE";
-	setAttr ".o" 13.390956463413342;
+	setAttr ".o" 12.164302276715338;
 createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:R_Arm_3_Jnt_IK_Ctrl_translateZ_AnimLayer2";
 	rename -uid "0179D695-494E-9F82-3881-B68CF04826F1";
-	setAttr ".o" -63.110258901984487;
+	setAttr ".o" -63.203665590317144;
 createNode animBlendNodeAdditiveRotation -n "Bigfoot_Rig:R_Arm_3_Jnt_IK_Ctrl_rotate_AnimLayer2";
 	rename -uid "F96266FB-4F0D-F984-388C-6D88D769A1C6";
-	setAttr ".o" -type "double3" 34.889789932702904 -66.894816101231598 4.3484559093445005 ;
+	setAttr ".o" -type "double3" 35.033430104526118 -67.613039045060205 5.359672357410914 ;
 createNode animBlendNodeAdditiveScale -n "Bigfoot_Rig:R_Arm_3_Jnt_IK_Ctrl_scaleX_AnimLayer2";
 	rename -uid "FD792248-4F27-58FB-22A8-F1A4B29E2586";
 	setAttr ".ib" 1;
@@ -18340,7 +18348,7 @@ createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:L_Finger_3_Jnt_2_Ctrl_transla
 	rename -uid "B98001C5-413B-1B47-F3A5-BDA490E8FB8C";
 createNode animBlendNodeAdditiveRotation -n "Bigfoot_Rig:L_Finger_3_Jnt_2_Ctrl_rotate_AnimLayer2";
 	rename -uid "C13A742E-4C23-3008-F02B-A3A4555AA1B8";
-	setAttr ".o" -type "double3" 0.059084251864991319 0.14536523108069835 -25.08336771801206 ;
+	setAttr ".o" -type "double3" 0.039326478041338209 0.096755097807312826 -24.835290037815572 ;
 createNode animBlendNodeAdditiveScale -n "Bigfoot_Rig:L_Finger_3_Jnt_2_Ctrl_scaleX_AnimLayer2";
 	rename -uid "974CACC7-450E-6D4E-0A65-91A830056FA4";
 	setAttr ".ib" 1;
@@ -18365,16 +18373,16 @@ createNode animBlendNodeBoolean -n "locator1_visibility_AnimLayer2";
 	setAttr ".o" yes;
 createNode animBlendNodeAdditiveDL -n "locator1_translateX_AnimLayer2";
 	rename -uid "2922F97B-4575-086A-7E43-9CA29F456223";
-	setAttr ".o" 35.518255766261049;
+	setAttr ".o" 36.520666098980229;
 createNode animBlendNodeAdditiveDL -n "locator1_translateY_AnimLayer2";
 	rename -uid "6B82C8B9-4C2B-2A6B-7B3E-5B89032170FD";
-	setAttr ".o" 291.06538806054482;
+	setAttr ".o" 275.03676489045517;
 createNode animBlendNodeAdditiveDL -n "locator1_translateZ_AnimLayer2";
 	rename -uid "4D660C33-4E48-0CD6-8D13-D8B6819B3062";
-	setAttr ".o" 137.63242906203567;
+	setAttr ".o" 131.06407887331738;
 createNode animBlendNodeAdditiveRotation -n "locator1_rotate_AnimLayer2";
 	rename -uid "63400C4B-4D3E-CE69-C68F-0BB30B281C36";
-	setAttr ".o" -type "double3" 0.92422889748718395 -160.2384640318659 -46.19912886305093 ;
+	setAttr ".o" -type "double3" -0.72173403865019459 -157.77206163629327 -46.957312513774475 ;
 createNode animBlendNodeAdditiveScale -n "locator1_scaleX_AnimLayer2";
 	rename -uid "53234511-433B-32B5-5569-3986B980F94A";
 	setAttr ".ib" 1;
@@ -18391,494 +18399,584 @@ createNode animCurveTL -n "CoG_Jnt_Ctrl_translateX_AnimLayer2_inputB";
 	rename -uid "50AF2696-47F1-69A1-3AF7-6CB1397602F0";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  5 0 60 0 70 0;
+	setAttr -s 3 -l on ".ktv[0:2]"  5 0 60 0 70 0;
+	setAttr -l on ".ktv";
 createNode animCurveTL -n "CoG_Jnt_Ctrl_translateY_AnimLayer2_inputB";
 	rename -uid "3B463E2A-4085-0756-0AEA-DE934836B473";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  5 0 14 8.3947196644965629 60 -1.6532177636859302
+	setAttr -s 4 -l on ".ktv[0:3]"  5 0 14 8.3947196644965629 60 -1.6532177636859302
 		 70 2.9691706935613595;
+	setAttr -l on ".ktv";
 createNode animCurveTL -n "CoG_Jnt_Ctrl_translateZ_AnimLayer2_inputB";
 	rename -uid "2408D499-4EDB-E2C7-8D7F-1C8642C1DB24";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  5 0 10 16.576936233301524 14 21.767523908941481
+	setAttr -s 5 -l on ".ktv[0:4]"  5 0 10 16.576936233301524 14 21.767523908941481
 		 60 21.767523908941481 70 0;
+	setAttr -l on ".ktv";
 createNode animCurveTA -n "CoG_Jnt_Ctrl_rotate_AnimLayer2_inputBX";
 	rename -uid "0ED864A8-4773-1BE6-3149-F4A94AA52D17";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  5 0 10 1.9127477385371763 14 4.7498862666359836
+	setAttr -s 5 -l on ".ktv[0:4]"  5 0 10 1.9127477385371763 14 4.7498862666359836
 		 60 4.7498862666359836 70 0;
+	setAttr -l on ".ktv";
 createNode animCurveTA -n "CoG_Jnt_Ctrl_rotate_AnimLayer2_inputBY";
 	rename -uid "87D3FD98-43F3-FFA9-E797-F395A6EA4C48";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  5 0 14 0 60 0 70 0;
+	setAttr -s 4 -l on ".ktv[0:3]"  5 0 14 0 60 0 70 0;
+	setAttr -l on ".ktv";
 createNode animCurveTA -n "CoG_Jnt_Ctrl_rotate_AnimLayer2_inputBZ";
 	rename -uid "BC0A7071-4547-3E52-2B61-E28623C0901F";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  5 0 14 0 60 0 70 0;
+	setAttr -s 4 -l on ".ktv[0:3]"  5 0 14 0 60 0 70 0;
+	setAttr -l on ".ktv";
 createNode animCurveTL -n "Spine_1_Jnt_FK_Ctrl_translateX_AnimLayer2_inputB";
 	rename -uid "E13B79B8-48FD-6A4D-8D5A-1BB6923E0158";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  6 0 60 0 70 0;
+	setAttr -s 3 -l on ".ktv[0:2]"  6 0 60 0 70 0;
+	setAttr -l on ".ktv";
 createNode animCurveTL -n "Spine_1_Jnt_FK_Ctrl_translateY_AnimLayer2_inputB";
 	rename -uid "FAF3A308-44DF-DB3D-89B2-BBB226ECFFCD";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  6 0 60 0 70 0;
+	setAttr -s 3 -l on ".ktv[0:2]"  6 0 60 0 70 0;
+	setAttr -l on ".ktv";
 createNode animCurveTL -n "Spine_1_Jnt_FK_Ctrl_translateZ_AnimLayer2_inputB";
 	rename -uid "B5074C2F-4497-B6D2-1AD3-738DF700F664";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  6 0 60 0 70 0;
+	setAttr -s 3 -l on ".ktv[0:2]"  6 0 60 0 70 0;
+	setAttr -l on ".ktv";
 createNode animCurveTA -n "Spine_1_Jnt_FK_Ctrl_rotate_AnimLayer2_inputBX";
 	rename -uid "169E7DF3-4905-45D4-6251-E98DB973D1B5";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  6 0 13 -1.8867439811275395 60 -1.8867439811275395
+	setAttr -s 4 -l on ".ktv[0:3]"  6 0 13 -1.8867439811275395 60 -1.8867439811275395
 		 70 0;
+	setAttr -l on ".ktv";
 createNode animCurveTA -n "Spine_1_Jnt_FK_Ctrl_rotate_AnimLayer2_inputBY";
 	rename -uid "D58D1869-4FC0-3232-A281-1CA61E78F4EB";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  6 0 13 0.038201477744657361 60 0.038201477744657361
+	setAttr -s 4 -l on ".ktv[0:3]"  6 0 13 0.038201477744657361 60 0.038201477744657361
 		 70 0;
+	setAttr -l on ".ktv";
 createNode animCurveTA -n "Spine_1_Jnt_FK_Ctrl_rotate_AnimLayer2_inputBZ";
 	rename -uid "6E9B9D1F-42F8-E714-08F0-B58C40E4B7DF";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  6 0 13 -0.27776826757044237 60 -0.27776826757044237
+	setAttr -s 4 -l on ".ktv[0:3]"  6 0 13 -0.27776826757044237 60 -0.27776826757044237
 		 70 0;
+	setAttr -l on ".ktv";
 createNode animCurveTL -n "Spine_2_Jnt_FK_Ctrl_translateX_AnimLayer2_inputB";
 	rename -uid "0FB894C9-495E-7F26-129B-6D862484DBCC";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  6 0 60 -0.23859020326260028 70 0;
+	setAttr -s 3 -l on ".ktv[0:2]"  6 0 60 -0.23859020326260028 70 0;
+	setAttr -l on ".ktv";
 createNode animCurveTL -n "Spine_2_Jnt_FK_Ctrl_translateY_AnimLayer2_inputB";
 	rename -uid "98A5F22C-4F05-4DCD-3B7B-A183643C6D7E";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  6 0 60 -0.15628486123689211 70 0;
+	setAttr -s 3 -l on ".ktv[0:2]"  6 0 60 -0.15628486123689211 70 0;
+	setAttr -l on ".ktv";
 createNode animCurveTL -n "Spine_2_Jnt_FK_Ctrl_translateZ_AnimLayer2_inputB";
 	rename -uid "058248DD-4C60-0237-DE86-32AD8EA72F00";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  6 0 60 -0.0053723637689170323 70 0;
+	setAttr -s 3 -l on ".ktv[0:2]"  6 0 60 -0.0053723637689170323 70 0;
+	setAttr -l on ".ktv";
 createNode animCurveTA -n "Spine_2_Jnt_FK_Ctrl_rotate_AnimLayer2_inputBX";
 	rename -uid "0DC0CA24-46F7-D915-1DD2-898A3C49849E";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  6 0 13 0.094327359913795678 60 0.024866824412888212
+	setAttr -s 4 -l on ".ktv[0:3]"  6 0 13 0.094327359913795678 60 0.024866824412888212
 		 70 0.018700467854630306;
+	setAttr -l on ".ktv";
 createNode animCurveTA -n "Spine_2_Jnt_FK_Ctrl_rotate_AnimLayer2_inputBY";
 	rename -uid "B09503DB-4DE6-35BB-B606-AAB070A4854E";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  6 0 13 -0.24981936064373811 60 -0.065858030816773994
+	setAttr -s 4 -l on ".ktv[0:3]"  6 0 13 -0.24981936064373811 60 -0.065858030816773994
 		 70 -0.04952687033170379;
+	setAttr -l on ".ktv";
 createNode animCurveTA -n "Spine_2_Jnt_FK_Ctrl_rotate_AnimLayer2_inputBZ";
 	rename -uid "3390F643-4E05-4282-CB45-148797125F36";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  6 0 13 2.7290736011523218 60 0.7194454939873326
+	setAttr -s 4 -l on ".ktv[0:3]"  6 0 13 2.7290736011523218 60 0.7194454939873326
 		 70 0.54104083054914798;
+	setAttr -l on ".ktv";
 createNode animCurveTL -n "Spine_3_Jnt_FK_Ctrl_translateX_AnimLayer2_inputB";
 	rename -uid "4AF459AD-4EB7-E6AE-1592-CA8C8BABDC0D";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  6 0 60 0 70 0.052491322253282721;
+	setAttr -s 3 -l on ".ktv[0:2]"  6 0 60 0 70 0.052491322253282721;
+	setAttr -l on ".ktv";
 createNode animCurveTL -n "Spine_3_Jnt_FK_Ctrl_translateY_AnimLayer2_inputB";
 	rename -uid "58C4D8C8-4B34-87F8-094F-C488BE3B107E";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  6 0 60 0 70 0.036507349379251111;
+	setAttr -s 3 -l on ".ktv[0:2]"  6 0 60 0 70 0.036507349379251111;
+	setAttr -l on ".ktv";
 createNode animCurveTL -n "Spine_3_Jnt_FK_Ctrl_translateZ_AnimLayer2_inputB";
 	rename -uid "0C8DE431-4BF0-6E91-AA7C-EA9CA22D6FA3";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  6 0 60 0 70 -0.013631808203017218;
+	setAttr -s 3 -l on ".ktv[0:2]"  6 0 60 0 70 -0.013631808203017218;
+	setAttr -l on ".ktv";
 createNode animCurveTA -n "Spine_3_Jnt_FK_Ctrl_rotate_AnimLayer2_inputBX";
 	rename -uid "E6E23581-4C86-45F2-9FFA-4F9E0DB1C3E5";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  6 0 12 3.9429154789820213 60 3.9429154789820213
+	setAttr -s 4 -l on ".ktv[0:3]"  6 0 12 3.9429154789820213 60 3.9429154789820213
 		 70 0;
+	setAttr -l on ".ktv";
 createNode animCurveTA -n "Spine_3_Jnt_FK_Ctrl_rotate_AnimLayer2_inputBY";
 	rename -uid "316BF2FA-4984-290F-001E-7D880BB1D58C";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  6 0 12 -5.132251586259585 60 -5.132251586259585
+	setAttr -s 4 -l on ".ktv[0:3]"  6 0 12 -5.132251586259585 60 -5.132251586259585
 		 70 0;
+	setAttr -l on ".ktv";
 createNode animCurveTA -n "Spine_3_Jnt_FK_Ctrl_rotate_AnimLayer2_inputBZ";
 	rename -uid "A822AB6D-4AFD-B816-CE55-50B9A53471B4";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  6 0 12 2.1702295597734902 60 2.1702295597734902
+	setAttr -s 4 -l on ".ktv[0:3]"  6 0 12 2.1702295597734902 60 2.1702295597734902
 		 70 0;
+	setAttr -l on ".ktv";
 createNode animCurveTL -n "L_Arm_3_Jnt_IK_Ctrl_translateX_AnimLayer2_inputB";
 	rename -uid "DB7B1750-4338-9B5C-93C0-25B9CBCEAA9C";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  10 0 15 19.2162495 56 20.831692789245679
+	setAttr -s 5 -l on ".ktv[0:4]"  10 0 15 19.2162495 56 20.831692789245679
 		 60 14.891981532809311 66 0.45414878125308178;
+	setAttr -l on ".ktv";
 createNode animCurveTL -n "L_Arm_3_Jnt_IK_Ctrl_translateY_AnimLayer2_inputB";
 	rename -uid "BD24F7C8-4285-887F-DCD5-A9A0D91FDAC7";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  10 0 15 19.259863500000002 56 18.515247150977235
+	setAttr -s 5 -l on ".ktv[0:4]"  10 0 15 19.259863500000002 56 18.515247150977235
 		 60 13.706081711069452 66 -0.27657941207479908;
+	setAttr -l on ".ktv";
 createNode animCurveTL -n "L_Arm_3_Jnt_IK_Ctrl_translateZ_AnimLayer2_inputB";
 	rename -uid "605474BA-4A4F-A26E-E7DD-D6A62932C4BB";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  10 0 15 -4.420074 56 -4.6752049412469034
+	setAttr -s 5 -l on ".ktv[0:4]"  10 0 15 -4.420074 56 -4.6752049412469034
 		 60 -3.3780046475366419 66 -0.071724836643028311;
+	setAttr -l on ".ktv";
 createNode animCurveTA -n "L_Arm_3_Jnt_IK_Ctrl_rotate_AnimLayer2_inputBX";
 	rename -uid "B5BA6DCF-4920-246D-6DA5-7AB2E82B1767";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  10 0 15 -0.12559659997055581 19 4.4391085559176142
+	setAttr -s 6 -l on ".ktv[0:5]"  10 0 15 -0.12559659997055581 19 4.4391085559176142
 		 56 4.4391085559176142 60 4.4391085559176142 66 0;
+	setAttr -l on ".ktv";
 createNode animCurveTA -n "L_Arm_3_Jnt_IK_Ctrl_rotate_AnimLayer2_inputBY";
 	rename -uid "AFB3B261-49E7-0529-9DE5-538A4F13AB66";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  10 0 15 16.892477158420824 19 25.618692469350361
+	setAttr -s 6 -l on ".ktv[0:5]"  10 0 15 16.892477158420824 19 25.618692469350361
 		 56 25.618692469350361 60 25.618692469350361 66 0;
+	setAttr -l on ".ktv";
 createNode animCurveTA -n "L_Arm_3_Jnt_IK_Ctrl_rotate_AnimLayer2_inputBZ";
 	rename -uid "889D4600-4278-8E78-55AD-C7839588B8E5";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  10 0 15 0.18764982029457289 19 -3.4346944026050705
+	setAttr -s 6 -l on ".ktv[0:5]"  10 0 15 0.18764982029457289 19 -3.4346944026050705
 		 56 -3.4346944026050705 60 -3.4346944026050705 66 0;
+	setAttr -l on ".ktv";
 createNode animCurveTL -n "R_Eyelid_Jnt_Ctrl_translateX_AnimLayer2_inputB";
 	rename -uid "09FDED07-4DFF-1E98-AB60-4A803519ABDC";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  6 0 21 0 24 0 26 0 27 0 29 0;
+	setAttr -s 6 -l on ".ktv[0:5]"  6 0 21 0 24 0 26 0 27 0 29 0;
+	setAttr -l on ".ktv";
 createNode animCurveTL -n "R_Eyelid_Jnt_Ctrl_translateY_AnimLayer2_inputB";
 	rename -uid "09277514-4C9D-3D55-614B-13BAB419F6C8";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  6 0 21 0 24 0 26 0 27 0 29 0;
+	setAttr -s 6 -l on ".ktv[0:5]"  6 0 21 0 24 0 26 0 27 0 29 0;
+	setAttr -l on ".ktv";
 createNode animCurveTL -n "R_Eyelid_Jnt_Ctrl_translateZ_AnimLayer2_inputB";
 	rename -uid "C5918683-4656-B09E-41B2-6F9341CD2CA3";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  6 0 21 0 24 0 26 0 27 0 29 0;
+	setAttr -s 6 -l on ".ktv[0:5]"  6 0 21 0 24 0 26 0 27 0 29 0;
+	setAttr -l on ".ktv";
 createNode animCurveTA -n "R_Eyelid_Jnt_Ctrl_rotate_AnimLayer2_inputBX";
 	rename -uid "A2A29336-42E9-BEE6-930C-AAB5428C1412";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 7 ".ktv[0:6]"  6 0 21 0 22 72.639790797266684 24 0 26 0
-		 27 72.639790797266684 29 0;
+	setAttr -s 7 -l on ".ktv[0:6]"  6 0 21 0 22 72.639790797266684 24 0
+		 26 0 27 72.639790797266684 29 0;
+	setAttr -l on ".ktv";
 createNode animCurveTA -n "R_Eyelid_Jnt_Ctrl_rotate_AnimLayer2_inputBY";
 	rename -uid "9F172C7B-43A0-406B-0530-9C878C4FCAA6";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  6 0 21 0 24 0 26 0 27 0 29 0;
+	setAttr -s 6 -l on ".ktv[0:5]"  6 0 21 0 24 0 26 0 27 0 29 0;
+	setAttr -l on ".ktv";
 createNode animCurveTA -n "R_Eyelid_Jnt_Ctrl_rotate_AnimLayer2_inputBZ";
 	rename -uid "5A813C18-4431-E39A-90DE-489AF6AEA4C5";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  6 0 21 0 24 0 26 0 27 0 29 0;
+	setAttr -s 6 -l on ".ktv[0:5]"  6 0 21 0 24 0 26 0 27 0 29 0;
+	setAttr -l on ".ktv";
 createNode animCurveTL -n "Jaw_Ctrl_Ctrl_translateX_AnimLayer2_inputB";
 	rename -uid "92E0E149-4815-1FD5-A92E-A3AB4FF5146A";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  6 0 47 0 60 0 70 0;
+	setAttr -s 4 -l on ".ktv[0:3]"  6 0 47 0 60 0 70 0;
+	setAttr -l on ".ktv";
 createNode animCurveTL -n "Jaw_Ctrl_Ctrl_translateY_AnimLayer2_inputB";
 	rename -uid "F44790BD-4642-C51E-2C11-A3A98A16C949";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  6 0 47 0 60 0 70 0;
+	setAttr -s 4 -l on ".ktv[0:3]"  6 0 47 0 60 0 70 0;
+	setAttr -l on ".ktv";
 createNode animCurveTL -n "Jaw_Ctrl_Ctrl_translateZ_AnimLayer2_inputB";
 	rename -uid "41EBCB33-4BAC-861F-D62C-9FA82654AD40";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  6 0 47 0 60 0 70 0;
+	setAttr -s 4 -l on ".ktv[0:3]"  6 0 47 0 60 0 70 0;
+	setAttr -l on ".ktv";
 createNode animCurveTA -n "Jaw_Ctrl_Ctrl_rotate_AnimLayer2_inputBX";
 	rename -uid "4C8E1EE5-4590-836E-3372-9E9F15FD396F";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  6 0 19 4.4472708136823513 47 8.1717397277625885
+	setAttr -s 5 -l on ".ktv[0:4]"  6 0 19 4.4472708136823513 47 8.1717397277625885
 		 60 8.860023634405314 70 -0.16378158165047607;
+	setAttr -l on ".ktv";
 createNode animCurveTA -n "Jaw_Ctrl_Ctrl_rotate_AnimLayer2_inputBY";
 	rename -uid "F82040D0-4A56-3B14-47C4-53AC00763F0F";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  6 0 47 0 60 -0.1203056297071714 70 0.02283423547547862;
+	setAttr -s 4 -l on ".ktv[0:3]"  6 0 47 0 60 -0.1203056297071714 70 0.02283423547547862;
+	setAttr -l on ".ktv";
 createNode animCurveTA -n "Jaw_Ctrl_Ctrl_rotate_AnimLayer2_inputBZ";
 	rename -uid "76264637-492D-A33E-A1BF-87B6078E07CD";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  6 0 47 0 60 0.056902477166034734 70 -0.010800197512866932;
+	setAttr -s 4 -l on ".ktv[0:3]"  6 0 47 0 60 0.056902477166034734 70 -0.010800197512866932;
+	setAttr -l on ".ktv";
 createNode animCurveTL -n "L_Eyelid_Jnt_Ctrl_translateX_AnimLayer2_inputB";
 	rename -uid "DC775E29-4108-E2CE-AFCB-F2AF19EFFDC0";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  21 0 24 0 26 0 27 0 29 0;
+	setAttr -s 5 -l on ".ktv[0:4]"  21 0 24 0 26 0 27 0 29 0;
+	setAttr -l on ".ktv";
 createNode animCurveTL -n "L_Eyelid_Jnt_Ctrl_translateY_AnimLayer2_inputB";
 	rename -uid "03412AE2-46D3-6F18-7244-51A397B5EFCD";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  21 0 24 0 26 0 27 0 29 0;
+	setAttr -s 5 -l on ".ktv[0:4]"  21 0 24 0 26 0 27 0 29 0;
+	setAttr -l on ".ktv";
 createNode animCurveTL -n "L_Eyelid_Jnt_Ctrl_translateZ_AnimLayer2_inputB";
 	rename -uid "61A52157-414E-120E-004C-E7AA912E4A90";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  21 0 24 0 26 0 27 0 29 0;
+	setAttr -s 5 -l on ".ktv[0:4]"  21 0 24 0 26 0 27 0 29 0;
+	setAttr -l on ".ktv";
 createNode animCurveTA -n "L_Eyelid_Jnt_Ctrl_rotate_AnimLayer2_inputBX";
 	rename -uid "88CAF7AD-49FA-D67B-820D-3E89838CB209";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  21 0 22 69.976643649052235 24 0 26 0 27 69.976643649052235
-		 29 0;
+	setAttr -s 6 -l on ".ktv[0:5]"  21 0 22 69.976643649052235 24 0 26 0
+		 27 69.976643649052235 29 0;
+	setAttr -l on ".ktv";
 createNode animCurveTA -n "L_Eyelid_Jnt_Ctrl_rotate_AnimLayer2_inputBY";
 	rename -uid "5A5B00F0-471B-A0E1-B2FB-EB9969685E55";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  21 0 24 0 26 0 27 0 29 0;
+	setAttr -s 5 -l on ".ktv[0:4]"  21 0 24 0 26 0 27 0 29 0;
+	setAttr -l on ".ktv";
 createNode animCurveTA -n "L_Eyelid_Jnt_Ctrl_rotate_AnimLayer2_inputBZ";
 	rename -uid "7160180A-4D6B-003A-701E-F9BDF4AED82B";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  21 0 24 0 26 0 27 0 29 0;
+	setAttr -s 5 -l on ".ktv[0:4]"  21 0 24 0 26 0 27 0 29 0;
+	setAttr -l on ".ktv";
 createNode animCurveTL -n "R_Eyebrow_Ctrl_translateX_AnimLayer2_inputB";
 	rename -uid "10CBE98E-4C50-1A32-8CFE-18B923731440";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  6 0 13 -0.4978647695319664 70 0;
+	setAttr -s 3 -l on ".ktv[0:2]"  6 0 13 -0.4978647695319664 70 0;
+	setAttr -l on ".ktv";
 createNode animCurveTL -n "R_Eyebrow_Ctrl_translateY_AnimLayer2_inputB";
 	rename -uid "93A3973E-4AEE-5C1B-20B4-778EE709A8AD";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  6 0 13 4.028949626364418 70 0;
+	setAttr -s 3 -l on ".ktv[0:2]"  6 0 13 4.028949626364418 70 0;
+	setAttr -l on ".ktv";
 createNode animCurveTL -n "R_Eyebrow_Ctrl_translateZ_AnimLayer2_inputB";
 	rename -uid "8D0F2EB1-4387-A1B8-C4A9-07ADD4B2D48E";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  6 0 13 0.082722517081744648 70 0;
+	setAttr -s 3 -l on ".ktv[0:2]"  6 0 13 0.082722517081744648 70 0;
+	setAttr -l on ".ktv";
 createNode animCurveTA -n "R_Eyebrow_Ctrl_rotate_AnimLayer2_inputBX";
 	rename -uid "A47EB01C-4F95-D663-4890-CF9688186E9B";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  6 0 70 0;
+	setAttr -s 2 -l on ".ktv[0:1]"  6 0 70 0;
+	setAttr -l on ".ktv";
 createNode animCurveTA -n "R_Eyebrow_Ctrl_rotate_AnimLayer2_inputBY";
 	rename -uid "75546E76-4510-29F3-D3BE-C999161C2A75";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  6 0 70 0;
+	setAttr -s 2 -l on ".ktv[0:1]"  6 0 70 0;
+	setAttr -l on ".ktv";
 createNode animCurveTA -n "R_Eyebrow_Ctrl_rotate_AnimLayer2_inputBZ";
 	rename -uid "5ECE4053-4BDD-1CFC-DB52-79A324292440";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  6 0 70 0;
+	setAttr -s 2 -l on ".ktv[0:1]"  6 0 70 0;
+	setAttr -l on ".ktv";
 createNode animCurveTL -n "Neck_Jnt_Ctrl_translateX_AnimLayer2_inputB";
 	rename -uid "6B953D81-4D3B-8291-6E8F-E7A8AC34AF83";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  6 0 9 0 20 0 60 0 66 0;
+	setAttr -s 5 -l on ".ktv[0:4]"  6 0 9 0 20 0 60 0 66 0;
+	setAttr -l on ".ktv";
 createNode animCurveTL -n "Neck_Jnt_Ctrl_translateY_AnimLayer2_inputB";
 	rename -uid "B65BB48F-4CF7-F01D-2579-70B8885FFCDC";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  6 0 9 0 20 0 60 0 66 0;
+	setAttr -s 5 -l on ".ktv[0:4]"  6 0 9 0 20 0 60 0 66 0;
+	setAttr -l on ".ktv";
 createNode animCurveTL -n "Neck_Jnt_Ctrl_translateZ_AnimLayer2_inputB";
 	rename -uid "32DE9F44-4066-5895-803C-DFA9FF675D54";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  6 0 9 0 20 0 60 0 66 0;
+	setAttr -s 5 -l on ".ktv[0:4]"  6 0 9 0 20 0 60 0 66 0;
+	setAttr -l on ".ktv";
 createNode animCurveTA -n "Neck_Jnt_Ctrl_rotate_AnimLayer2_inputBX";
 	rename -uid "4F1ADFC2-453B-F77D-3EC2-93B939A0BF2B";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  6 0 9 -1.0961453638665328 14 1.8248491889060665
+	setAttr -s 6 -l on ".ktv[0:5]"  6 0 9 -1.0961453638665328 14 1.8248491889060665
 		 20 0.90706977933800392 60 0.90706977933800392 66 0;
+	setAttr -l on ".ktv";
 createNode animCurveTA -n "Neck_Jnt_Ctrl_rotate_AnimLayer2_inputBY";
 	rename -uid "622E6E05-46F1-4234-9440-2E8232AE145D";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  6 0 9 -1.7753663307593353 14 1.7820587835459467
+	setAttr -s 6 -l on ".ktv[0:5]"  6 0 9 -1.7753663307593353 14 1.7820587835459467
 		 20 1.408897774841521 60 1.408897774841521 66 0;
+	setAttr -l on ".ktv";
 createNode animCurveTA -n "Neck_Jnt_Ctrl_rotate_AnimLayer2_inputBZ";
 	rename -uid "53A03523-4052-4254-3A3E-2CB6644EC4F4";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  6 0 9 -8.4469509456989442 14 10.575071223807354
+	setAttr -s 6 -l on ".ktv[0:5]"  6 0 9 -8.4469509456989442 14 10.575071223807354
 		 20 8.0526500177689417 60 8.0526500177689417 66 0;
+	setAttr -l on ".ktv";
 createNode animCurveTL -n "R_Clav_Jnt_Ctrl_translateX_AnimLayer2_inputB";
 	rename -uid "86F8B5C1-4571-1872-5580-728A51C971DB";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  8 0 60 0 70 0;
+	setAttr -s 3 -l on ".ktv[0:2]"  8 0 60 0 70 0;
+	setAttr -l on ".ktv";
 createNode animCurveTL -n "R_Clav_Jnt_Ctrl_translateY_AnimLayer2_inputB";
 	rename -uid "E767302B-43BC-CCEA-3B3E-5FBFE769AF1F";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  8 0 60 0 70 0;
+	setAttr -s 3 -l on ".ktv[0:2]"  8 0 60 0 70 0;
+	setAttr -l on ".ktv";
 createNode animCurveTL -n "R_Clav_Jnt_Ctrl_translateZ_AnimLayer2_inputB";
 	rename -uid "248876C1-47CD-3B1B-9265-E9A06ED4152D";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  8 0 60 0 70 0;
+	setAttr -s 3 -l on ".ktv[0:2]"  8 0 60 0 70 0;
+	setAttr -l on ".ktv";
 createNode animCurveTA -n "R_Clav_Jnt_Ctrl_rotate_AnimLayer2_inputBX";
 	rename -uid "DB0335B7-4B60-5A0A-B532-AF98EA839E91";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  8 0 14 1.517184710145727 60 1.517184710145727
+	setAttr -s 4 -l on ".ktv[0:3]"  8 0 14 1.517184710145727 60 1.517184710145727
 		 70 0;
+	setAttr -l on ".ktv";
 createNode animCurveTA -n "R_Clav_Jnt_Ctrl_rotate_AnimLayer2_inputBY";
 	rename -uid "B1F736AE-4B08-03A7-A7E0-3593314B8FE0";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  8 0 14 -1.8221331494629167 60 -1.8221331494629167
+	setAttr -s 4 -l on ".ktv[0:3]"  8 0 14 -1.8221331494629167 60 -1.8221331494629167
 		 70 0;
+	setAttr -l on ".ktv";
 createNode animCurveTA -n "R_Clav_Jnt_Ctrl_rotate_AnimLayer2_inputBZ";
 	rename -uid "34D10D4D-4F64-8B3C-7B8E-F58F4AB88FD8";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  8 0 14 -6.5221947866054251 60 -6.5221947866054251
+	setAttr -s 4 -l on ".ktv[0:3]"  8 0 14 -6.5221947866054251 60 -6.5221947866054251
 		 70 0;
+	setAttr -l on ".ktv";
 createNode animCurveTL -n "L_Clav_Jnt_Ctrl_translateX_AnimLayer2_inputB";
 	rename -uid "F0A3C339-4E23-60BD-7096-CD9E147A0123";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  8 0 60 0 70 0;
+	setAttr -s 3 -l on ".ktv[0:2]"  8 0 60 0 70 0;
+	setAttr -l on ".ktv";
 createNode animCurveTL -n "L_Clav_Jnt_Ctrl_translateY_AnimLayer2_inputB";
 	rename -uid "531953B2-43CA-8286-90F6-90903C6CDB6A";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  8 0 60 0 70 0;
+	setAttr -s 3 -l on ".ktv[0:2]"  8 0 60 0 70 0;
+	setAttr -l on ".ktv";
 createNode animCurveTL -n "L_Clav_Jnt_Ctrl_translateZ_AnimLayer2_inputB";
 	rename -uid "74A9C4D6-44ED-AEEC-92E0-638A5B140FC1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  8 0 60 0 70 0;
+	setAttr -s 3 -l on ".ktv[0:2]"  8 0 60 0 70 0;
+	setAttr -l on ".ktv";
 createNode animCurveTA -n "L_Clav_Jnt_Ctrl_rotate_AnimLayer2_inputBX";
 	rename -uid "A3A290C4-46B4-0D2A-49A0-A1BA78781703";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  8 0 14 -0.50367261630863092 60 -0.50367261630863092
+	setAttr -s 4 -l on ".ktv[0:3]"  8 0 14 -0.50367261630863092 60 -0.50367261630863092
 		 70 0;
+	setAttr -l on ".ktv";
 createNode animCurveTA -n "L_Clav_Jnt_Ctrl_rotate_AnimLayer2_inputBY";
 	rename -uid "0E51057F-482F-F733-95C8-0E8726070126";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  8 0 14 -1.3173210298999674 60 -1.3173210298999674
+	setAttr -s 4 -l on ".ktv[0:3]"  8 0 14 -1.3173210298999674 60 -1.3173210298999674
 		 70 0;
+	setAttr -l on ".ktv";
 createNode animCurveTA -n "L_Clav_Jnt_Ctrl_rotate_AnimLayer2_inputBZ";
 	rename -uid "1CF0AD61-49A4-7648-38F6-70B31BD928EF";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  8 0 14 -5.0554777879055042 60 -5.0554777879055042
+	setAttr -s 4 -l on ".ktv[0:3]"  8 0 14 -5.0554777879055042 60 -5.0554777879055042
 		 70 0;
+	setAttr -l on ".ktv";
 createNode animCurveTL -n "L_Arm_IK_PV_Ctrl_translateX_AnimLayer2_inputB";
 	rename -uid "0B84AD91-4FF1-329F-C137-9581F82A704C";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  8 0 16 12.922278108371458 60 12.922278108371458
+	setAttr -s 4 -l on ".ktv[0:3]"  8 0 16 12.922278108371458 60 12.922278108371458
 		 70 0;
+	setAttr -l on ".ktv";
 createNode animCurveTL -n "L_Arm_IK_PV_Ctrl_translateY_AnimLayer2_inputB";
 	rename -uid "62690F5B-4D70-C8F0-21AA-899114EF0762";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  8 0 16 -8.0749053878289487 60 -8.0749053878289487
+	setAttr -s 4 -l on ".ktv[0:3]"  8 0 16 -8.0749053878289487 60 -8.0749053878289487
 		 70 0;
+	setAttr -l on ".ktv";
 createNode animCurveTL -n "L_Arm_IK_PV_Ctrl_translateZ_AnimLayer2_inputB";
 	rename -uid "B9651D82-412B-4E8A-3B8A-7B9070FE4167";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  8 0 16 -3.3814279928713233 60 -3.3814279928713233
+	setAttr -s 4 -l on ".ktv[0:3]"  8 0 16 -3.3814279928713233 60 -3.3814279928713233
 		 70 0;
+	setAttr -l on ".ktv";
 createNode animCurveTA -n "L_Arm_IK_PV_Ctrl_rotate_AnimLayer2_inputBX";
 	rename -uid "36740E44-4B27-8632-D44D-F9A903F9BFB5";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  8 0 60 0 70 0;
+	setAttr -s 3 -l on ".ktv[0:2]"  8 0 60 0 70 0;
+	setAttr -l on ".ktv";
 createNode animCurveTA -n "L_Arm_IK_PV_Ctrl_rotate_AnimLayer2_inputBY";
 	rename -uid "B8572282-4859-C7CA-2D48-5CA082DE7889";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  8 0 60 0 70 0;
+	setAttr -s 3 -l on ".ktv[0:2]"  8 0 60 0 70 0;
+	setAttr -l on ".ktv";
 createNode animCurveTA -n "L_Arm_IK_PV_Ctrl_rotate_AnimLayer2_inputBZ";
 	rename -uid "D74C6188-452E-9597-42E3-CCA128F6FDC3";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  8 0 60 0 70 0;
+	setAttr -s 3 -l on ".ktv[0:2]"  8 0 60 0 70 0;
+	setAttr -l on ".ktv";
 createNode animCurveTL -n "R_Arm_3_Jnt_IK_Ctrl_translateX_AnimLayer2_inputB";
 	rename -uid "F90D6909-4129-FC83-2A6B-DB98C8628AA1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  9 0 17 -18.73436567804217 60 -11.193915354267673
+	setAttr -s 4 -l on ".ktv[0:3]"  9 0 17 -18.73436567804217 60 -11.193915354267673
 		 70 -0.10733061165300262;
+	setAttr -l on ".ktv";
 createNode animCurveTL -n "R_Arm_3_Jnt_IK_Ctrl_translateY_AnimLayer2_inputB";
 	rename -uid "E76E8B9E-482D-74E7-BDDA-3C84142F8D3E";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  9 0 17 11.129768717678488 60 6.6359985428654973
+	setAttr -s 4 -l on ".ktv[0:3]"  9 0 17 11.129768717678488 60 6.6359985428654973
 		 70 0.065365005197230985;
+	setAttr -l on ".ktv";
 createNode animCurveTL -n "R_Arm_3_Jnt_IK_Ctrl_translateZ_AnimLayer2_inputB";
 	rename -uid "00C859BE-41D7-A531-C5B3-E4BEFB57E4B0";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  9 0 17 1.1319123244677627 60 0.58408240581353965
+	setAttr -s 4 -l on ".ktv[0:3]"  9 0 17 1.1319123244677627 60 0.58408240581353965
 		 70 0.016950987593126854;
+	setAttr -l on ".ktv";
 createNode animCurveTA -n "R_Arm_3_Jnt_IK_Ctrl_rotate_AnimLayer2_inputBX";
 	rename -uid "C6678C7F-421D-8936-C938-6483FA223BE2";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  9 0 17 5.6038532360840136 60 1.1358801760189945
+	setAttr -s 4 -l on ".ktv[0:3]"  9 0 17 5.6038532360840136 60 1.1358801760189945
 		 70 0.28313714493512371;
+	setAttr -l on ".ktv";
 createNode animCurveTA -n "R_Arm_3_Jnt_IK_Ctrl_rotate_AnimLayer2_inputBY";
 	rename -uid "CB5946B8-4F99-386D-8559-C9B05391A024";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  9 0 17 9.6925356380853795 60 4.7650429980397737
+	setAttr -s 4 -l on ".ktv[0:3]"  9 0 17 9.6925356380853795 60 4.7650429980397737
 		 70 0.17197795331669521;
+	setAttr -l on ".ktv";
 createNode animCurveTA -n "R_Arm_3_Jnt_IK_Ctrl_rotate_AnimLayer2_inputBZ";
 	rename -uid "F08F0140-4CA0-447A-A935-3E82D0569A27";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  9 0 17 -14.705370041143007 60 -7.0021537547822952
+	setAttr -s 4 -l on ".ktv[0:3]"  9 0 17 -14.705370041143007 60 -7.0021537547822952
 		 70 -0.28671228180760561;
+	setAttr -l on ".ktv";
 createNode animCurveTL -n "L_Eyebrow_Ctrl_translateX_AnimLayer2_inputB";
 	rename -uid "0D89EAA9-4242-191F-21F3-D88AFCF84349";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  70 0;
+	setAttr -l on ".ktv[0]"  70 0;
+	setAttr -l on ".ktv";
 createNode animCurveTL -n "L_Eyebrow_Ctrl_translateY_AnimLayer2_inputB";
 	rename -uid "85FE4B27-4692-6097-DDC7-529DA9D541A8";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  70 0;
+	setAttr -l on ".ktv[0]"  70 0;
+	setAttr -l on ".ktv";
 createNode animCurveTL -n "L_Eyebrow_Ctrl_translateZ_AnimLayer2_inputB";
 	rename -uid "3DE634EF-45FC-D8BD-9F1E-95BDAAE8235B";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  70 0;
+	setAttr -l on ".ktv[0]"  70 0;
+	setAttr -l on ".ktv";
 createNode animCurveTA -n "L_Eyebrow_Ctrl_rotate_AnimLayer2_inputBX";
 	rename -uid "E0D2E4F1-4466-4C6F-8425-EB98DFD13461";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  70 0;
+	setAttr -l on ".ktv[0]"  70 0;
+	setAttr -l on ".ktv";
 createNode animCurveTA -n "L_Eyebrow_Ctrl_rotate_AnimLayer2_inputBY";
 	rename -uid "15A87015-4CA0-285B-5B08-43AD5336D545";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  70 0;
+	setAttr -l on ".ktv[0]"  70 0;
+	setAttr -l on ".ktv";
 createNode animCurveTA -n "L_Eyebrow_Ctrl_rotate_AnimLayer2_inputBZ";
 	rename -uid "61B602DB-497F-EF3B-9AB7-2AB433F9A46B";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  70 0;
+	setAttr -l on ".ktv[0]"  70 0;
+	setAttr -l on ".ktv";
 select -ne :time1;
-	setAttr ".o" 67;
-	setAttr ".unw" 67;
+	setAttr ".o" 74;
+	setAttr ".unw" 74;
 select -ne :hardwareRenderingGlobals;
 	setAttr ".otfna" -type "stringArray" 22 "NURBS Curves" "NURBS Surfaces" "Polygons" "Subdiv Surface" "Particles" "Particle Instance" "Fluids" "Strokes" "Image Planes" "UI" "Lights" "Cameras" "Locators" "Joints" "IK Handles" "Deformers" "Motion Trails" "Components" "Hair Systems" "Follicles" "Misc. UI" "Ornaments"  ;
 	setAttr ".otfva" -type "Int32Array" 22 0 1 1 1 1 1
