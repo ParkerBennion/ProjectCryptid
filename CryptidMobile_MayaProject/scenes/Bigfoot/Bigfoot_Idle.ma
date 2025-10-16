@@ -1,6 +1,6 @@
 //Maya ASCII 2026 scene
 //Name: Bigfoot_Idle.ma
-//Last modified: Tue, Oct 14, 2025 10:43:58 PM
+//Last modified: Thu, Oct 16, 2025 03:59:01 AM
 //Codeset: 1252
 file -rdi 1 -ns "Bigfoot_Rig" -rfn "Bigfoot_RigRN" -op "v=0;" -typ "mayaAscii"
 		 "C:/Users/caris/Desktop/ProjectCryptid/CryptidMobile_MayaProject//scenes/Bigfoot/Bigfoot Rig.ma";
@@ -15,23 +15,24 @@ requires -nodeType "ikSpringSolver" "ikSpringSolver" "1.0";
 requires "stereoCamera" "10.0";
 requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" -nodeType "aiImagerDenoiserOidn"
 		 "mtoa" "5.5.0";
+requires "stereoCamera" "10.0";
 currentUnit -l centimeter -a degree -t film;
 fileInfo "application" "maya";
 fileInfo "product" "Maya 2026";
 fileInfo "version" "2026";
-fileInfo "cutIdentifier" "202504040659-cfc1e8923b";
-fileInfo "osv" "Windows 10 Home v2009 (Build: 19045)";
-fileInfo "UUID" "0B34C63F-46DE-A12A-6DA5-6E9CC5556EB7";
+fileInfo "cutIdentifier" "202502240946-c910a8ba47";
+fileInfo "osv" "Windows 10 Pro for Workstations v2009 (Build: 19045)";
+fileInfo "UUID" "26C6C033-4F9D-A616-A3C0-8A9004BFF703";
 createNode transform -s -n "persp";
 	rename -uid "543D5786-4096-4665-7CE5-FA8567DA3670";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -345.9732326267042 574.3939175197786 1057.8828937151998 ;
-	setAttr ".r" -type "double3" -15.338352675999577 -1102.5999999987728 8.612758563757127e-16 ;
+	setAttr ".t" -type "double3" 14.776715928808514 271.9206144572903 1046.6137650398064 ;
+	setAttr ".r" -type "double3" -0.33835267599487934 -1080.5999999986223 -1.1648177793663808e-18 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "72903CCC-465F-9CEB-271B-82954C2A9B42";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 1094.1871158059664;
+	setAttr ".coi" 953.56946101288111;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -109,12 +110,12 @@ createNode parentConstraint -n "locator1_parentConstraint1" -p "locator1";
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" 57.983190957010812 -24.508549467791454 68.586833281298212 ;
 	setAttr ".tg[0].tor" -type "double3" -178.98072309101047 -14.794886637284103 124.37443450114516 ;
-	setAttr ".lr" -type "double3" -0.72173403865019459 -157.77206163629327 -46.957312513774475 ;
+	setAttr ".lr" -type "double3" 7.3240790420939534 -168.30009487477147 -43.855388057586161 ;
 	setAttr ".rst" -type "double3" 53.910869139145397 303.88401308063283 94.708599778192692 ;
 	setAttr ".rsrr" -type "double3" 4.4735770614751074 -163.1831117107638 -56.95641767848241 ;
 	setAttr -k on ".w0";
 createNode fosterParent -n "BinocularsRNfosterParent1";
-	rename -uid "11E5A6A5-440F-BBB0-5AE3-D28817A040FA";
+	rename -uid "21C4729D-4CCB-0188-2608-4B878A28D6D0";
 createNode parentConstraint -n "pCylinder3_parentConstraint1" -p "BinocularsRNfosterParent1";
 	rename -uid "DA64F1C6-486D-8481-5502-DF82C5F51B9D";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "L_Arm_3_Jnt_IK_CtrlW0" -dv 1 -min 
@@ -133,26 +134,26 @@ createNode parentConstraint -n "pCylinder3_parentConstraint1" -p "BinocularsRNfo
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" 45.890505592334819 -35.222647673303129 27.980314709504245 ;
 	setAttr ".tg[0].tor" -type "double3" 168.20680702383606 12.865256813867987 122.37091193007109 ;
-	setAttr ".lr" -type "double3" 7.2210163887670857 -1.0453907567732075 8.1939986215261911 ;
+	setAttr ".lr" -type "double3" 32.242759352720704 14.375555824671634 11.49758199553832 ;
 	setAttr ".rst" -type "double3" -13.404657944581494 348.24706117147366 68.605391998557877 ;
 	setAttr ".rsrr" -type "double3" -1.590277340731758e-15 -5.5659706925611528e-15 5.9635400277440939e-16 ;
 	setAttr -k on ".w0";
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "04CD16ED-438D-94FF-BF7E-AF887D0B4BA6";
-	setAttr -s 74 ".lnk";
-	setAttr -s 74 ".slnk";
+	rename -uid "C9529EF8-43BC-1C4D-324D-3788F61FD7CE";
+	setAttr -s 61 ".lnk";
+	setAttr -s 61 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "983BF967-42DE-EF0C-1B36-09B6F67FD265";
+	rename -uid "B8EDC049-41D3-845A-CC7B-1091A418EFE0";
 	setAttr ".bsdt[0].bscd" -type "Int32Array" 1 0 ;
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "3ADC17BC-4545-CD99-843B-E8B188D71579";
+	rename -uid "8534AE9F-441B-A8C1-F1D6-A9B2A3E49053";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "D32E7870-47B0-9EB0-E960-98A8A0ABB8A5";
+	rename -uid "FB2F7181-4E16-5E9A-787D-FFA6AF7B8165";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "5EF91AB4-458A-B9C4-1B73-A5956D73A6F1";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "632FD8B8-414B-F7D5-1795-D1B42FECF275";
+	rename -uid "FE3301CD-49A0-4571-A14D-1B9E59B3C8CE";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "1581DA4D-4381-A33E-55B6-30A2CAA39AD8";
 	setAttr ".g" yes;
@@ -3147,59 +3148,11 @@ createNode reference -n "Bigfoot_RigRN";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"Bigfoot_RigRN"
 		"Bigfoot_RigRN" 0
-		"Bigfoot_RigRN" 3177
+		"Bigfoot_RigRN" 3040
 		1 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:HEAD_ctrls|Bigfoot_Rig:Face_Ctrls|Bigfoot_Rig:Beard_Jnt_Ctrl_Grp|Bigfoot_Rig:Beard_Jnt_Ctrl" 
 		"blendParent1" "blendParent1" " -ci 1 -k 1 -dv 1 -smn 0 -smx 1 -at \"double\""
-		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:IKFK_Ctrls|Bigfoot_Rig:R_Arm_IKFK_Control_Grp|Bigfoot_Rig:R_Arm_IKFK_Control" 
-		"R_Arm_IKFK" " -k 1"
-		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:IKFK_Ctrls|Bigfoot_Rig:R_Arm_IKFK_Control_Grp|Bigfoot_Rig:R_Arm_IKFK_Control" 
-		"FollowTranslate" " -k 1"
-		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:IKFK_Ctrls|Bigfoot_Rig:R_Arm_IKFK_Control_Grp|Bigfoot_Rig:R_Arm_IKFK_Control" 
-		"FollowRotate" " -k 1"
-		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:IKFK_Ctrls|Bigfoot_Rig:L_Arm_IKFK_Control_Grp|Bigfoot_Rig:L_Arm_IKFK_Control" 
-		"L_Arm_IKFK" " -k 1"
-		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:IKFK_Ctrls|Bigfoot_Rig:L_Arm_IKFK_Control_Grp|Bigfoot_Rig:L_Arm_IKFK_Control" 
-		"FollowTranslate" " -k 1"
-		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:IKFK_Ctrls|Bigfoot_Rig:L_Arm_IKFK_Control_Grp|Bigfoot_Rig:L_Arm_IKFK_Control" 
-		"FollowRotate" " -k 1"
-		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:IKFK_Ctrls|Bigfoot_Rig:L_Leg_IKFK_Control_Grp|Bigfoot_Rig:L_Leg_IKFK_Control" 
-		"L_Leg_IKFK" " -k 1"
-		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:IKFK_Ctrls|Bigfoot_Rig:L_Leg_IKFK_Control_Grp|Bigfoot_Rig:L_Leg_IKFK_Control" 
-		"FollowTranslate" " -k 1"
-		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:IKFK_Ctrls|Bigfoot_Rig:L_Leg_IKFK_Control_Grp|Bigfoot_Rig:L_Leg_IKFK_Control" 
-		"FollowRotate" " -k 1"
-		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:IKFK_Ctrls|Bigfoot_Rig:R_Leg_IKFK_Control_Grp|Bigfoot_Rig:R_Leg_IKFK_Control" 
-		"R_Leg_IKFK" " -k 1"
-		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:IKFK_Ctrls|Bigfoot_Rig:R_Leg_IKFK_Control_Grp|Bigfoot_Rig:R_Leg_IKFK_Control" 
-		"FollowTranslate" " -k 1"
-		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:IKFK_Ctrls|Bigfoot_Rig:R_Leg_IKFK_Control_Grp|Bigfoot_Rig:R_Leg_IKFK_Control" 
-		"FollowRotate" " -k 1"
-		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:IKFK_Ctrls|Bigfoot_Rig:Spine_IKFK_Control_Grp|Bigfoot_Rig:Spine_IKFK_Control" 
-		"Spine_IKFK" " -k 1"
-		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:IKFK_Ctrls|Bigfoot_Rig:Spine_IKFK_Control_Grp|Bigfoot_Rig:Spine_IKFK_Control" 
-		"FollowTranslate" " -k 1"
-		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:IKFK_Ctrls|Bigfoot_Rig:Spine_IKFK_Control_Grp|Bigfoot_Rig:Spine_IKFK_Control" 
-		"FollowRotate" " -k 1"
-		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:CoG_Jnt_Ctrl_Grp|Bigfoot_Rig:CoG_Jnt_Ctrl" 
-		"FollowTranslate" " -k 1"
-		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:CoG_Jnt_Ctrl_Grp|Bigfoot_Rig:CoG_Jnt_Ctrl" 
-		"FollowRotate" " -k 1"
-		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:Transform_Ctrl_Grp|Bigfoot_Rig:Transform_Ctrl" 
-		"MasterScale" " -k 1"
 		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:Spine_Ctrls|Bigfoot_Rig:Spine_FK_Ctrls|Bigfoot_Rig:Spine_3_Jnt_FK_Ctrl_Grp|Bigfoot_Rig:Spine_3_Jnt_FK_Ctrl" 
 		"rotatePivotTranslate" " -type \"double3\" 0 0 0"
-		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:Spine_Ctrls|Bigfoot_Rig:Spine_FK_Ctrls|Bigfoot_Rig:Spine_3_Jnt_FK_Ctrl_Grp|Bigfoot_Rig:Spine_3_Jnt_FK_Ctrl" 
-		"FollowTranslate" " -k 1"
-		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:Spine_Ctrls|Bigfoot_Rig:Spine_FK_Ctrls|Bigfoot_Rig:Spine_3_Jnt_FK_Ctrl_Grp|Bigfoot_Rig:Spine_3_Jnt_FK_Ctrl" 
-		"FollowRotate" " -k 1"
-		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:Spine_Ctrls|Bigfoot_Rig:Spine_FK_Ctrls|Bigfoot_Rig:Spine_1_Jnt_FK_Ctrl_Grp|Bigfoot_Rig:Spine_1_Jnt_FK_Ctrl" 
-		"FollowTranslate" " -k 1"
-		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:Spine_Ctrls|Bigfoot_Rig:Spine_FK_Ctrls|Bigfoot_Rig:Spine_1_Jnt_FK_Ctrl_Grp|Bigfoot_Rig:Spine_1_Jnt_FK_Ctrl" 
-		"FollowRotate" " -k 1"
-		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:Spine_Ctrls|Bigfoot_Rig:Spine_FK_Ctrls|Bigfoot_Rig:Spine_2_Jnt_FK_Ctrl_Grp|Bigfoot_Rig:Spine_2_Jnt_FK_Ctrl" 
-		"FollowTranslate" " -k 1"
-		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:Spine_Ctrls|Bigfoot_Rig:Spine_FK_Ctrls|Bigfoot_Rig:Spine_2_Jnt_FK_Ctrl_Grp|Bigfoot_Rig:Spine_2_Jnt_FK_Ctrl" 
-		"FollowRotate" " -k 1"
 		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:Spine_Ctrls|Bigfoot_Rig:Spine_IK_Ctrls|Bigfoot_Rig:Spine_IK_Mid_Ctrl|Bigfoot_Rig:Spine_IK_Mid_Ctrl" 
 		"translate" " -type \"double3\" 0 0 0"
 		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:Spine_Ctrls|Bigfoot_Rig:Spine_IK_Ctrls|Bigfoot_Rig:Torso_IK_Ctrl_Grp|Bigfoot_Rig:Torso_IK_Ctrl" 
@@ -3208,322 +3161,112 @@ createNode reference -n "Bigfoot_RigRN";
 		"rotate" " -type \"double3\" 0 0 -11.47683379963829431"
 		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:Spine_Ctrls|Bigfoot_Rig:Spine_IK_Ctrls|Bigfoot_Rig:Torso_IK_Ctrl_Grp|Bigfoot_Rig:Torso_IK_Ctrl" 
 		"rotatePivotTranslate" " -type \"double3\" 0 0 0"
-		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:Pelvis_Ctrl_Grp|Bigfoot_Rig:Pelvis_Ctrl" 
-		"FollowTranslate" " -k 1"
-		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:Pelvis_Ctrl_Grp|Bigfoot_Rig:Pelvis_Ctrl" 
-		"FollowRotate" " -k 1"
-		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:HEAD_ctrls|Bigfoot_Rig:Neck_Jnt_Ctrl_Grp|Bigfoot_Rig:Neck_Jnt_Ctrl" 
-		"FollowTranslate" " -k 1"
-		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:HEAD_ctrls|Bigfoot_Rig:Neck_Jnt_Ctrl_Grp|Bigfoot_Rig:Neck_Jnt_Ctrl" 
-		"FollowRotate" " -k 1"
-		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:HEAD_ctrls|Bigfoot_Rig:Head_Ctrl_Grp|Bigfoot_Rig:Head_Ctrl" 
-		"FollowTranslate" " -k 1"
-		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:HEAD_ctrls|Bigfoot_Rig:Head_Ctrl_Grp|Bigfoot_Rig:Head_Ctrl" 
-		"FollowRotate" " -k 1"
-		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:HEAD_ctrls|Bigfoot_Rig:Face_Ctrls|Bigfoot_Rig:Nose_Jnt_Ctrl_Grp|Bigfoot_Rig:Nose_Jnt_Ctrl" 
-		"FollowTranslate" " -k 1"
-		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:HEAD_ctrls|Bigfoot_Rig:Face_Ctrls|Bigfoot_Rig:Nose_Jnt_Ctrl_Grp|Bigfoot_Rig:Nose_Jnt_Ctrl" 
-		"FollowRotate" " -k 1"
 		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:HEAD_ctrls|Bigfoot_Rig:Face_Ctrls|Bigfoot_Rig:R_Eyelid_Jnt_Ctrl_Grp|Bigfoot_Rig:R_Eyelid_Jnt_Ctrl" 
 		"rotatePivotTranslate" " -type \"double3\" 0 0 0"
-		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:HEAD_ctrls|Bigfoot_Rig:Face_Ctrls|Bigfoot_Rig:R_Eyelid_Jnt_Ctrl_Grp|Bigfoot_Rig:R_Eyelid_Jnt_Ctrl" 
-		"FollowTranslate" " -k 1"
-		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:HEAD_ctrls|Bigfoot_Rig:Face_Ctrls|Bigfoot_Rig:R_Eyelid_Jnt_Ctrl_Grp|Bigfoot_Rig:R_Eyelid_Jnt_Ctrl" 
-		"FollowRotate" " -k 1"
 		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:HEAD_ctrls|Bigfoot_Rig:Face_Ctrls|Bigfoot_Rig:L_Eyelid_Jnt_Ctrl_Grp|Bigfoot_Rig:L_Eyelid_Jnt_Ctrl" 
 		"rotatePivotTranslate" " -type \"double3\" 0 0 0"
-		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:HEAD_ctrls|Bigfoot_Rig:Face_Ctrls|Bigfoot_Rig:L_Eyelid_Jnt_Ctrl_Grp|Bigfoot_Rig:L_Eyelid_Jnt_Ctrl" 
-		"FollowTranslate" " -k 1"
-		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:HEAD_ctrls|Bigfoot_Rig:Face_Ctrls|Bigfoot_Rig:L_Eyelid_Jnt_Ctrl_Grp|Bigfoot_Rig:L_Eyelid_Jnt_Ctrl" 
-		"FollowRotate" " -k 1"
 		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:HEAD_ctrls|Bigfoot_Rig:Face_Ctrls|Bigfoot_Rig:Beard_Jnt_Ctrl_Grp|Bigfoot_Rig:Beard_Jnt_Ctrl" 
 		"rotatePivotTranslate" " -type \"double3\" 0 0 0"
-		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:HEAD_ctrls|Bigfoot_Rig:Face_Ctrls|Bigfoot_Rig:Beard_Jnt_Ctrl_Grp|Bigfoot_Rig:Beard_Jnt_Ctrl" 
-		"FollowTranslate" " -k 1"
-		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:HEAD_ctrls|Bigfoot_Rig:Face_Ctrls|Bigfoot_Rig:Beard_Jnt_Ctrl_Grp|Bigfoot_Rig:Beard_Jnt_Ctrl" 
-		"FollowRotate" " -k 1"
 		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:HEAD_ctrls|Bigfoot_Rig:Face_Ctrls|Bigfoot_Rig:Beard_Jnt_Ctrl_Grp|Bigfoot_Rig:Beard_Jnt_Ctrl" 
 		"blendParent1" " -k 1"
 		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:HEAD_ctrls|Bigfoot_Rig:Face_Ctrls|Bigfoot_Rig:Jaw_Ctrl_Ctrl_Grp|Bigfoot_Rig:Jaw_Ctrl_Ctrl" 
 		"rotatePivotTranslate" " -type \"double3\" 0 0 0"
-		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:HEAD_ctrls|Bigfoot_Rig:Face_Ctrls|Bigfoot_Rig:Jaw_Ctrl_Ctrl_Grp|Bigfoot_Rig:Jaw_Ctrl_Ctrl" 
-		"FollowTranslate" " -k 1"
-		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:HEAD_ctrls|Bigfoot_Rig:Face_Ctrls|Bigfoot_Rig:Jaw_Ctrl_Ctrl_Grp|Bigfoot_Rig:Jaw_Ctrl_Ctrl" 
-		"FollowRotate" " -k 1"
-		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:HEAD_ctrls|Bigfoot_Rig:Face_Ctrls|Bigfoot_Rig:R_Eye_Jnt_Ctrl_Grp|Bigfoot_Rig:R_Eye_Jnt_Ctrl" 
-		"FollowTranslate" " -k 1"
-		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:HEAD_ctrls|Bigfoot_Rig:Face_Ctrls|Bigfoot_Rig:R_Eye_Jnt_Ctrl_Grp|Bigfoot_Rig:R_Eye_Jnt_Ctrl" 
-		"FollowRotate" " -k 1"
-		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:HEAD_ctrls|Bigfoot_Rig:Face_Ctrls|Bigfoot_Rig:L_Eye_Jnt_Ctrl_Grp|Bigfoot_Rig:L_Eye_Jnt_Ctrl" 
-		"FollowTranslate" " -k 1"
-		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:HEAD_ctrls|Bigfoot_Rig:Face_Ctrls|Bigfoot_Rig:L_Eye_Jnt_Ctrl_Grp|Bigfoot_Rig:L_Eye_Jnt_Ctrl" 
-		"FollowRotate" " -k 1"
-		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:HEAD_ctrls|Bigfoot_Rig:Face_Ctrls|Bigfoot_Rig:Eye_Aim_Meta_Ctrl_Ctrl_Grp|Bigfoot_Rig:Eye_Aim_Meta_Ctrl_Ctrl" 
-		"Local_Space" " -k 1"
-		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:HEAD_ctrls|Bigfoot_Rig:Face_Ctrls|Bigfoot_Rig:R_Eyebrow_Ctrl_Grp|Bigfoot_Rig:R_Eyebrow_Ctrl" 
-		"FollowTranslate" " -k 1"
-		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:HEAD_ctrls|Bigfoot_Rig:Face_Ctrls|Bigfoot_Rig:R_Eyebrow_Ctrl_Grp|Bigfoot_Rig:R_Eyebrow_Ctrl" 
-		"FollowRotate" " -k 1"
-		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:HEAD_ctrls|Bigfoot_Rig:Face_Ctrls|Bigfoot_Rig:L_Eyebrow_Ctrl_Grp|Bigfoot_Rig:L_Eyebrow_Ctrl" 
-		"FollowTranslate" " -k 1"
-		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:HEAD_ctrls|Bigfoot_Rig:Face_Ctrls|Bigfoot_Rig:L_Eyebrow_Ctrl_Grp|Bigfoot_Rig:L_Eyebrow_Ctrl" 
-		"FollowRotate" " -k 1"
 		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:Arm_Ctrls|Bigfoot_Rig:R_Arm_IK_Ctrls|Bigfoot_Rig:R_Arm_2_Jnt_IK_Ctrl_Grp|Bigfoot_Rig:R_Arm_IK_PV_OFFSET|Bigfoot_Rig:R_Arm_IK_PV_Ctrl" 
 		"rotatePivotTranslate" " -type \"double3\" 0 0 0"
-		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:Arm_Ctrls|Bigfoot_Rig:R_Arm_IK_Ctrls|Bigfoot_Rig:R_Arm_2_Jnt_IK_Ctrl_Grp|Bigfoot_Rig:R_Arm_IK_PV_OFFSET|Bigfoot_Rig:R_Arm_IK_PV_Ctrl" 
-		"Local_Space" " -k 1"
 		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:Arm_Ctrls|Bigfoot_Rig:R_Arm_IK_Ctrls|Bigfoot_Rig:R_Arm_3_Jnt_IK_Ctrl_Grp|Bigfoot_Rig:R_Arm_3_Jnt_IK_Ctrl" 
 		"rotatePivotTranslate" " -type \"double3\" 0 0 0"
-		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:Arm_Ctrls|Bigfoot_Rig:R_Arm_IK_Ctrls|Bigfoot_Rig:R_Arm_3_Jnt_IK_Ctrl_Grp|Bigfoot_Rig:R_Arm_3_Jnt_IK_Ctrl" 
-		"Stretch" " -k 1"
-		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:Arm_Ctrls|Bigfoot_Rig:R_Arm_IK_Ctrls|Bigfoot_Rig:R_Arm_3_Jnt_IK_Ctrl_Grp|Bigfoot_Rig:R_Arm_3_Jnt_IK_Ctrl" 
-		"Max_Stretch" " -k 1"
-		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:Arm_Ctrls|Bigfoot_Rig:R_Arm_IK_Ctrls|Bigfoot_Rig:R_Arm_3_Jnt_IK_Ctrl_Grp|Bigfoot_Rig:R_Arm_3_Jnt_IK_Ctrl" 
-		"Local_Space" " -k 1"
-		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:Arm_Ctrls|Bigfoot_Rig:R_Arm_IK_Ctrls|Bigfoot_Rig:R_Arm_1_Jnt_IK_Ctrl_Grp|Bigfoot_Rig:R_Arm_1_Jnt_IK_Ctrl" 
-		"FollowTranslate" " -k 1"
-		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:Arm_Ctrls|Bigfoot_Rig:R_Arm_IK_Ctrls|Bigfoot_Rig:R_Arm_1_Jnt_IK_Ctrl_Grp|Bigfoot_Rig:R_Arm_1_Jnt_IK_Ctrl" 
-		"FollowRotate" " -k 1"
-		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:Arm_Ctrls|Bigfoot_Rig:L_Arm_IK_Ctrls|Bigfoot_Rig:L_Arm_2_Jnt_IK_Ctrl_Grp|Bigfoot_Rig:L_Arm_IK_PV_OFFSET|Bigfoot_Rig:L_Arm_IK_PV_Ctrl" 
-		"Local_Space" " -k 1"
 		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:Arm_Ctrls|Bigfoot_Rig:L_Arm_IK_Ctrls|Bigfoot_Rig:L_Arm_3_Jnt_IK_Ctrl_Grp|Bigfoot_Rig:L_Arm_3_Jnt_IK_Ctrl" 
 		"rotatePivotTranslate" " -type \"double3\" 0 0 0"
-		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:Arm_Ctrls|Bigfoot_Rig:L_Arm_IK_Ctrls|Bigfoot_Rig:L_Arm_3_Jnt_IK_Ctrl_Grp|Bigfoot_Rig:L_Arm_3_Jnt_IK_Ctrl" 
-		"Stretch" " -k 1"
-		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:Arm_Ctrls|Bigfoot_Rig:L_Arm_IK_Ctrls|Bigfoot_Rig:L_Arm_3_Jnt_IK_Ctrl_Grp|Bigfoot_Rig:L_Arm_3_Jnt_IK_Ctrl" 
-		"Max_Stretch" " -k 1"
-		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:Arm_Ctrls|Bigfoot_Rig:L_Arm_IK_Ctrls|Bigfoot_Rig:L_Arm_3_Jnt_IK_Ctrl_Grp|Bigfoot_Rig:L_Arm_3_Jnt_IK_Ctrl" 
-		"Local_Space" " -k 1"
-		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:Arm_Ctrls|Bigfoot_Rig:L_Arm_IK_Ctrls|Bigfoot_Rig:L_Arm_1_Jnt_IK_Ctrl_Grp|Bigfoot_Rig:L_Arm_1_Jnt_IK_Ctrl" 
-		"FollowTranslate" " -k 1"
-		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:Arm_Ctrls|Bigfoot_Rig:L_Arm_IK_Ctrls|Bigfoot_Rig:L_Arm_1_Jnt_IK_Ctrl_Grp|Bigfoot_Rig:L_Arm_1_Jnt_IK_Ctrl" 
-		"FollowRotate" " -k 1"
 		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:Arm_Ctrls|Bigfoot_Rig:L_Arm_FK_Ctrls|Bigfoot_Rig:L_Arm_2_Jnt_FK_Ctrl_Grp|Bigfoot_Rig:L_Arm_2_Jnt_FK_Ctrl" 
 		"rotate" " -type \"double3\" 0 0 0"
 		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:Arm_Ctrls|Bigfoot_Rig:L_Arm_FK_Ctrls|Bigfoot_Rig:L_Arm_2_Jnt_FK_Ctrl_Grp|Bigfoot_Rig:L_Arm_2_Jnt_FK_Ctrl" 
 		"rotatePivotTranslate" " -type \"double3\" 0 0 0"
 		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:Arm_Ctrls|Bigfoot_Rig:L_Hand_Ctrls|Bigfoot_Rig:L_Finger_4_Jnt_1_Ctrl_Grp|Bigfoot_Rig:L_Finger_4_Jnt_1_Ctrl" 
 		"rotatePivotTranslate" " -type \"double3\" 0 0 0"
-		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:Arm_Ctrls|Bigfoot_Rig:L_Hand_Ctrls|Bigfoot_Rig:L_Finger_4_Jnt_1_Ctrl_Grp|Bigfoot_Rig:L_Finger_4_Jnt_1_Ctrl" 
-		"FollowTranslate" " -k 1"
-		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:Arm_Ctrls|Bigfoot_Rig:L_Hand_Ctrls|Bigfoot_Rig:L_Finger_4_Jnt_1_Ctrl_Grp|Bigfoot_Rig:L_Finger_4_Jnt_1_Ctrl" 
-		"FollowRotate" " -k 1"
 		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:Arm_Ctrls|Bigfoot_Rig:L_Hand_Ctrls|Bigfoot_Rig:L_Finger_3_Jnt_3_Ctrl_Grp|Bigfoot_Rig:L_Finger_3_Jnt_3_Ctrl" 
 		"rotatePivotTranslate" " -type \"double3\" 0 0 0"
-		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:Arm_Ctrls|Bigfoot_Rig:L_Hand_Ctrls|Bigfoot_Rig:L_Finger_3_Jnt_3_Ctrl_Grp|Bigfoot_Rig:L_Finger_3_Jnt_3_Ctrl" 
-		"FollowTranslate" " -k 1"
-		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:Arm_Ctrls|Bigfoot_Rig:L_Hand_Ctrls|Bigfoot_Rig:L_Finger_3_Jnt_3_Ctrl_Grp|Bigfoot_Rig:L_Finger_3_Jnt_3_Ctrl" 
-		"FollowRotate" " -k 1"
 		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:Arm_Ctrls|Bigfoot_Rig:L_Hand_Ctrls|Bigfoot_Rig:L_Finger_3_Jnt_1_Ctrl_Grp|Bigfoot_Rig:L_Finger_3_Jnt_1_Ctrl" 
 		"rotatePivotTranslate" " -type \"double3\" 0 0 0"
-		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:Arm_Ctrls|Bigfoot_Rig:L_Hand_Ctrls|Bigfoot_Rig:L_Finger_3_Jnt_1_Ctrl_Grp|Bigfoot_Rig:L_Finger_3_Jnt_1_Ctrl" 
-		"FollowTranslate" " -k 1"
-		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:Arm_Ctrls|Bigfoot_Rig:L_Hand_Ctrls|Bigfoot_Rig:L_Finger_3_Jnt_1_Ctrl_Grp|Bigfoot_Rig:L_Finger_3_Jnt_1_Ctrl" 
-		"FollowRotate" " -k 1"
 		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:Arm_Ctrls|Bigfoot_Rig:L_Hand_Ctrls|Bigfoot_Rig:L_Finger_2_Jnt_1_Ctrl_Grp|Bigfoot_Rig:L_Finger_2_Jnt_1_Ctrl" 
 		"rotatePivotTranslate" " -type \"double3\" 0 0 0"
-		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:Arm_Ctrls|Bigfoot_Rig:L_Hand_Ctrls|Bigfoot_Rig:L_Finger_2_Jnt_1_Ctrl_Grp|Bigfoot_Rig:L_Finger_2_Jnt_1_Ctrl" 
-		"FollowTranslate" " -k 1"
-		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:Arm_Ctrls|Bigfoot_Rig:L_Hand_Ctrls|Bigfoot_Rig:L_Finger_2_Jnt_1_Ctrl_Grp|Bigfoot_Rig:L_Finger_2_Jnt_1_Ctrl" 
-		"FollowRotate" " -k 1"
 		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:Arm_Ctrls|Bigfoot_Rig:L_Hand_Ctrls|Bigfoot_Rig:L_Finger_3_Jnt_2_Ctrl_Grp|Bigfoot_Rig:L_Finger_3_Jnt_2_Ctrl" 
 		"rotatePivotTranslate" " -type \"double3\" 0 0 0"
-		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:Arm_Ctrls|Bigfoot_Rig:L_Hand_Ctrls|Bigfoot_Rig:L_Finger_3_Jnt_2_Ctrl_Grp|Bigfoot_Rig:L_Finger_3_Jnt_2_Ctrl" 
-		"FollowTranslate" " -k 1"
-		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:Arm_Ctrls|Bigfoot_Rig:L_Hand_Ctrls|Bigfoot_Rig:L_Finger_3_Jnt_2_Ctrl_Grp|Bigfoot_Rig:L_Finger_3_Jnt_2_Ctrl" 
-		"FollowRotate" " -k 1"
 		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:Arm_Ctrls|Bigfoot_Rig:L_Hand_Ctrls|Bigfoot_Rig:L_Finger_1_Jnt_2_Ctrl_Grp|Bigfoot_Rig:L_Finger_1_Jnt_2_Ctrl" 
 		"rotatePivotTranslate" " -type \"double3\" 0 0 0"
-		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:Arm_Ctrls|Bigfoot_Rig:L_Hand_Ctrls|Bigfoot_Rig:L_Finger_1_Jnt_2_Ctrl_Grp|Bigfoot_Rig:L_Finger_1_Jnt_2_Ctrl" 
-		"FollowTranslate" " -k 1"
-		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:Arm_Ctrls|Bigfoot_Rig:L_Hand_Ctrls|Bigfoot_Rig:L_Finger_1_Jnt_2_Ctrl_Grp|Bigfoot_Rig:L_Finger_1_Jnt_2_Ctrl" 
-		"FollowRotate" " -k 1"
 		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:Arm_Ctrls|Bigfoot_Rig:L_Hand_Ctrls|Bigfoot_Rig:L_Finger_1_Jnt_1_Ctrl_Grp|Bigfoot_Rig:L_Finger_1_Jnt_1_Ctrl" 
 		"rotatePivotTranslate" " -type \"double3\" 0 0 0"
-		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:Arm_Ctrls|Bigfoot_Rig:L_Hand_Ctrls|Bigfoot_Rig:L_Finger_1_Jnt_1_Ctrl_Grp|Bigfoot_Rig:L_Finger_1_Jnt_1_Ctrl" 
-		"FollowTranslate" " -k 1"
-		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:Arm_Ctrls|Bigfoot_Rig:L_Hand_Ctrls|Bigfoot_Rig:L_Finger_1_Jnt_1_Ctrl_Grp|Bigfoot_Rig:L_Finger_1_Jnt_1_Ctrl" 
-		"FollowRotate" " -k 1"
 		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:Arm_Ctrls|Bigfoot_Rig:L_Hand_Ctrls|Bigfoot_Rig:L_Thumb_1_Jnt_Ctrl_Grp|Bigfoot_Rig:L_Thumb_1_Jnt_Ctrl" 
 		"rotatePivotTranslate" " -type \"double3\" 0 0 0"
-		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:Arm_Ctrls|Bigfoot_Rig:L_Hand_Ctrls|Bigfoot_Rig:L_Thumb_1_Jnt_Ctrl_Grp|Bigfoot_Rig:L_Thumb_1_Jnt_Ctrl" 
-		"FollowTranslate" " -k 1"
-		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:Arm_Ctrls|Bigfoot_Rig:L_Hand_Ctrls|Bigfoot_Rig:L_Thumb_1_Jnt_Ctrl_Grp|Bigfoot_Rig:L_Thumb_1_Jnt_Ctrl" 
-		"FollowRotate" " -k 1"
 		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:Arm_Ctrls|Bigfoot_Rig:L_Hand_Ctrls|Bigfoot_Rig:L_Thumb_2_Jnt_Ctrl_Grp|Bigfoot_Rig:L_Thumb_2_Jnt_Ctrl" 
 		"rotatePivotTranslate" " -type \"double3\" 0 0 0"
-		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:Arm_Ctrls|Bigfoot_Rig:L_Hand_Ctrls|Bigfoot_Rig:L_Thumb_2_Jnt_Ctrl_Grp|Bigfoot_Rig:L_Thumb_2_Jnt_Ctrl" 
-		"FollowTranslate" " -k 1"
-		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:Arm_Ctrls|Bigfoot_Rig:L_Hand_Ctrls|Bigfoot_Rig:L_Thumb_2_Jnt_Ctrl_Grp|Bigfoot_Rig:L_Thumb_2_Jnt_Ctrl" 
-		"FollowRotate" " -k 1"
 		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:Arm_Ctrls|Bigfoot_Rig:L_Hand_Ctrls|Bigfoot_Rig:L_Thumb_3_Jnt_Ctrl_Grp|Bigfoot_Rig:L_Thumb_3_Jnt_Ctrl" 
 		"rotatePivotTranslate" " -type \"double3\" 0 0 0"
-		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:Arm_Ctrls|Bigfoot_Rig:L_Hand_Ctrls|Bigfoot_Rig:L_Thumb_3_Jnt_Ctrl_Grp|Bigfoot_Rig:L_Thumb_3_Jnt_Ctrl" 
-		"FollowTranslate" " -k 1"
-		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:Arm_Ctrls|Bigfoot_Rig:L_Hand_Ctrls|Bigfoot_Rig:L_Thumb_3_Jnt_Ctrl_Grp|Bigfoot_Rig:L_Thumb_3_Jnt_Ctrl" 
-		"FollowRotate" " -k 1"
 		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:Arm_Ctrls|Bigfoot_Rig:L_Hand_Ctrls|Bigfoot_Rig:L_Finger_2_Jnt_2_Ctrl_Grp|Bigfoot_Rig:L_Finger_2_Jnt_2_Ctrl" 
 		"rotatePivotTranslate" " -type \"double3\" 0 0 0"
-		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:Arm_Ctrls|Bigfoot_Rig:L_Hand_Ctrls|Bigfoot_Rig:L_Finger_2_Jnt_2_Ctrl_Grp|Bigfoot_Rig:L_Finger_2_Jnt_2_Ctrl" 
-		"FollowTranslate" " -k 1"
-		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:Arm_Ctrls|Bigfoot_Rig:L_Hand_Ctrls|Bigfoot_Rig:L_Finger_2_Jnt_2_Ctrl_Grp|Bigfoot_Rig:L_Finger_2_Jnt_2_Ctrl" 
-		"FollowRotate" " -k 1"
 		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:Arm_Ctrls|Bigfoot_Rig:L_Hand_Ctrls|Bigfoot_Rig:L_Finger_4_Jnt_2_Ctrl_Grp|Bigfoot_Rig:L_Finger_4_Jnt_2_Ctrl" 
 		"rotatePivotTranslate" " -type \"double3\" 0 0 0"
-		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:Arm_Ctrls|Bigfoot_Rig:L_Hand_Ctrls|Bigfoot_Rig:L_Finger_4_Jnt_2_Ctrl_Grp|Bigfoot_Rig:L_Finger_4_Jnt_2_Ctrl" 
-		"FollowTranslate" " -k 1"
-		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:Arm_Ctrls|Bigfoot_Rig:L_Hand_Ctrls|Bigfoot_Rig:L_Finger_4_Jnt_2_Ctrl_Grp|Bigfoot_Rig:L_Finger_4_Jnt_2_Ctrl" 
-		"FollowRotate" " -k 1"
 		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:Arm_Ctrls|Bigfoot_Rig:L_Hand_Ctrls|Bigfoot_Rig:L_Finger_1_Jnt_3_Ctrl_Grp|Bigfoot_Rig:L_Finger_1_Jnt_3_Ctrl" 
 		"rotatePivotTranslate" " -type \"double3\" 0 0 0"
-		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:Arm_Ctrls|Bigfoot_Rig:L_Hand_Ctrls|Bigfoot_Rig:L_Finger_1_Jnt_3_Ctrl_Grp|Bigfoot_Rig:L_Finger_1_Jnt_3_Ctrl" 
-		"FollowTranslate" " -k 1"
-		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:Arm_Ctrls|Bigfoot_Rig:L_Hand_Ctrls|Bigfoot_Rig:L_Finger_1_Jnt_3_Ctrl_Grp|Bigfoot_Rig:L_Finger_1_Jnt_3_Ctrl" 
-		"FollowRotate" " -k 1"
 		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:Arm_Ctrls|Bigfoot_Rig:L_Hand_Ctrls|Bigfoot_Rig:L_Finger_2_Jnt_3_Ctrl_Grp|Bigfoot_Rig:L_Finger_2_Jnt_3_Ctrl" 
 		"rotatePivotTranslate" " -type \"double3\" 0 0 0"
-		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:Arm_Ctrls|Bigfoot_Rig:L_Hand_Ctrls|Bigfoot_Rig:L_Finger_2_Jnt_3_Ctrl_Grp|Bigfoot_Rig:L_Finger_2_Jnt_3_Ctrl" 
-		"FollowTranslate" " -k 1"
-		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:Arm_Ctrls|Bigfoot_Rig:L_Hand_Ctrls|Bigfoot_Rig:L_Finger_2_Jnt_3_Ctrl_Grp|Bigfoot_Rig:L_Finger_2_Jnt_3_Ctrl" 
-		"FollowRotate" " -k 1"
 		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:Arm_Ctrls|Bigfoot_Rig:L_Hand_Ctrls|Bigfoot_Rig:L_Finger_4_Jnt_3_Ctrl_Grp|Bigfoot_Rig:L_Finger_4_Jnt_3_Ctrl" 
 		"rotatePivotTranslate" " -type \"double3\" 0 0 0"
-		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:Arm_Ctrls|Bigfoot_Rig:L_Hand_Ctrls|Bigfoot_Rig:L_Finger_4_Jnt_3_Ctrl_Grp|Bigfoot_Rig:L_Finger_4_Jnt_3_Ctrl" 
-		"FollowTranslate" " -k 1"
-		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:Arm_Ctrls|Bigfoot_Rig:L_Hand_Ctrls|Bigfoot_Rig:L_Finger_4_Jnt_3_Ctrl_Grp|Bigfoot_Rig:L_Finger_4_Jnt_3_Ctrl" 
-		"FollowRotate" " -k 1"
 		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:Arm_Ctrls|Bigfoot_Rig:R_Hand_Ctrls|Bigfoot_Rig:R_Finger_1_Jnt_1_Ctrl_Grp|Bigfoot_Rig:R_Finger_1_Jnt_1_Ctrl" 
 		"rotatePivotTranslate" " -type \"double3\" 0 0 0"
-		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:Arm_Ctrls|Bigfoot_Rig:R_Hand_Ctrls|Bigfoot_Rig:R_Finger_1_Jnt_1_Ctrl_Grp|Bigfoot_Rig:R_Finger_1_Jnt_1_Ctrl" 
-		"FollowTranslate" " -k 1"
-		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:Arm_Ctrls|Bigfoot_Rig:R_Hand_Ctrls|Bigfoot_Rig:R_Finger_1_Jnt_1_Ctrl_Grp|Bigfoot_Rig:R_Finger_1_Jnt_1_Ctrl" 
-		"FollowRotate" " -k 1"
 		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:Arm_Ctrls|Bigfoot_Rig:R_Hand_Ctrls|Bigfoot_Rig:R_Finger_4_Jnt_2_Ctrl_Grp|Bigfoot_Rig:R_Finger_4_Jnt_2_Ctrl" 
 		"rotatePivotTranslate" " -type \"double3\" 0 0 0"
-		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:Arm_Ctrls|Bigfoot_Rig:R_Hand_Ctrls|Bigfoot_Rig:R_Finger_4_Jnt_2_Ctrl_Grp|Bigfoot_Rig:R_Finger_4_Jnt_2_Ctrl" 
-		"FollowTranslate" " -k 1"
-		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:Arm_Ctrls|Bigfoot_Rig:R_Hand_Ctrls|Bigfoot_Rig:R_Finger_4_Jnt_2_Ctrl_Grp|Bigfoot_Rig:R_Finger_4_Jnt_2_Ctrl" 
-		"FollowRotate" " -k 1"
 		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:Arm_Ctrls|Bigfoot_Rig:R_Hand_Ctrls|Bigfoot_Rig:R_Finger_3_Jnt_1_Ctrl_Grp|Bigfoot_Rig:R_Finger_3_Jnt_1_Ctrl" 
 		"rotatePivotTranslate" " -type \"double3\" 0 0 0"
-		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:Arm_Ctrls|Bigfoot_Rig:R_Hand_Ctrls|Bigfoot_Rig:R_Finger_3_Jnt_1_Ctrl_Grp|Bigfoot_Rig:R_Finger_3_Jnt_1_Ctrl" 
-		"FollowTranslate" " -k 1"
-		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:Arm_Ctrls|Bigfoot_Rig:R_Hand_Ctrls|Bigfoot_Rig:R_Finger_3_Jnt_1_Ctrl_Grp|Bigfoot_Rig:R_Finger_3_Jnt_1_Ctrl" 
-		"FollowRotate" " -k 1"
 		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:Arm_Ctrls|Bigfoot_Rig:R_Hand_Ctrls|Bigfoot_Rig:R_Finger_1_Jnt_2_Ctrl_Grp|Bigfoot_Rig:R_Finger_1_Jnt_2_Ctrl" 
 		"rotatePivotTranslate" " -type \"double3\" 0 0 0"
-		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:Arm_Ctrls|Bigfoot_Rig:R_Hand_Ctrls|Bigfoot_Rig:R_Finger_1_Jnt_2_Ctrl_Grp|Bigfoot_Rig:R_Finger_1_Jnt_2_Ctrl" 
-		"FollowTranslate" " -k 1"
-		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:Arm_Ctrls|Bigfoot_Rig:R_Hand_Ctrls|Bigfoot_Rig:R_Finger_1_Jnt_2_Ctrl_Grp|Bigfoot_Rig:R_Finger_1_Jnt_2_Ctrl" 
-		"FollowRotate" " -k 1"
 		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:Arm_Ctrls|Bigfoot_Rig:R_Hand_Ctrls|Bigfoot_Rig:R_Finger_2_Jnt_1_Ctrl_Grp|Bigfoot_Rig:R_Finger_2_Jnt_1_Ctrl" 
 		"rotatePivotTranslate" " -type \"double3\" 0 0 0"
-		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:Arm_Ctrls|Bigfoot_Rig:R_Hand_Ctrls|Bigfoot_Rig:R_Finger_2_Jnt_1_Ctrl_Grp|Bigfoot_Rig:R_Finger_2_Jnt_1_Ctrl" 
-		"FollowTranslate" " -k 1"
-		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:Arm_Ctrls|Bigfoot_Rig:R_Hand_Ctrls|Bigfoot_Rig:R_Finger_2_Jnt_1_Ctrl_Grp|Bigfoot_Rig:R_Finger_2_Jnt_1_Ctrl" 
-		"FollowRotate" " -k 1"
 		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:Arm_Ctrls|Bigfoot_Rig:R_Hand_Ctrls|Bigfoot_Rig:R_Finger_2_Jnt_2_Ctrl_Grp|Bigfoot_Rig:R_Finger_2_Jnt_2_Ctrl" 
 		"rotatePivotTranslate" " -type \"double3\" 0 0 0"
-		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:Arm_Ctrls|Bigfoot_Rig:R_Hand_Ctrls|Bigfoot_Rig:R_Finger_2_Jnt_2_Ctrl_Grp|Bigfoot_Rig:R_Finger_2_Jnt_2_Ctrl" 
-		"FollowTranslate" " -k 1"
-		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:Arm_Ctrls|Bigfoot_Rig:R_Hand_Ctrls|Bigfoot_Rig:R_Finger_2_Jnt_2_Ctrl_Grp|Bigfoot_Rig:R_Finger_2_Jnt_2_Ctrl" 
-		"FollowRotate" " -k 1"
-		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:Arm_Ctrls|Bigfoot_Rig:R_Hand_Ctrls|Bigfoot_Rig:R_Thumb_1_Jnt_Ctrl_Grp|Bigfoot_Rig:R_Thumb_1_Jnt_Ctrl" 
-		"FollowTranslate" " -k 1"
-		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:Arm_Ctrls|Bigfoot_Rig:R_Hand_Ctrls|Bigfoot_Rig:R_Thumb_1_Jnt_Ctrl_Grp|Bigfoot_Rig:R_Thumb_1_Jnt_Ctrl" 
-		"FollowRotate" " -k 1"
-		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:Arm_Ctrls|Bigfoot_Rig:R_Hand_Ctrls|Bigfoot_Rig:R_Thumb_3_Jnt_Ctrl_Grp|Bigfoot_Rig:R_Thumb_3_Jnt_Ctrl" 
-		"FollowTranslate" " -k 1"
-		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:Arm_Ctrls|Bigfoot_Rig:R_Hand_Ctrls|Bigfoot_Rig:R_Thumb_3_Jnt_Ctrl_Grp|Bigfoot_Rig:R_Thumb_3_Jnt_Ctrl" 
-		"FollowRotate" " -k 1"
-		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:Arm_Ctrls|Bigfoot_Rig:R_Hand_Ctrls|Bigfoot_Rig:R_Thumb_2_Jnt_Ctrl_Grp|Bigfoot_Rig:R_Thumb_2_Jnt_Ctrl" 
-		"FollowTranslate" " -k 1"
-		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:Arm_Ctrls|Bigfoot_Rig:R_Hand_Ctrls|Bigfoot_Rig:R_Thumb_2_Jnt_Ctrl_Grp|Bigfoot_Rig:R_Thumb_2_Jnt_Ctrl" 
-		"FollowRotate" " -k 1"
 		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:Arm_Ctrls|Bigfoot_Rig:R_Hand_Ctrls|Bigfoot_Rig:R_Finger_3_Jnt_2_Ctrl_Grp|Bigfoot_Rig:R_Finger_3_Jnt_2_Ctrl" 
 		"rotatePivotTranslate" " -type \"double3\" 0 0 0"
-		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:Arm_Ctrls|Bigfoot_Rig:R_Hand_Ctrls|Bigfoot_Rig:R_Finger_3_Jnt_2_Ctrl_Grp|Bigfoot_Rig:R_Finger_3_Jnt_2_Ctrl" 
-		"FollowTranslate" " -k 1"
-		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:Arm_Ctrls|Bigfoot_Rig:R_Hand_Ctrls|Bigfoot_Rig:R_Finger_3_Jnt_2_Ctrl_Grp|Bigfoot_Rig:R_Finger_3_Jnt_2_Ctrl" 
-		"FollowRotate" " -k 1"
 		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:Arm_Ctrls|Bigfoot_Rig:R_Hand_Ctrls|Bigfoot_Rig:R_Finger_1_Jnt_3_Ctrl_Grp|Bigfoot_Rig:R_Finger_1_Jnt_3_Ctrl" 
 		"rotatePivotTranslate" " -type \"double3\" 0 0 0"
-		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:Arm_Ctrls|Bigfoot_Rig:R_Hand_Ctrls|Bigfoot_Rig:R_Finger_1_Jnt_3_Ctrl_Grp|Bigfoot_Rig:R_Finger_1_Jnt_3_Ctrl" 
-		"FollowTranslate" " -k 1"
-		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:Arm_Ctrls|Bigfoot_Rig:R_Hand_Ctrls|Bigfoot_Rig:R_Finger_1_Jnt_3_Ctrl_Grp|Bigfoot_Rig:R_Finger_1_Jnt_3_Ctrl" 
-		"FollowRotate" " -k 1"
 		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:Arm_Ctrls|Bigfoot_Rig:R_Hand_Ctrls|Bigfoot_Rig:R_Finger_2_Jnt_3_Ctrl_Grp|Bigfoot_Rig:R_Finger_2_Jnt_3_Ctrl" 
 		"rotatePivotTranslate" " -type \"double3\" 0 0 0"
-		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:Arm_Ctrls|Bigfoot_Rig:R_Hand_Ctrls|Bigfoot_Rig:R_Finger_2_Jnt_3_Ctrl_Grp|Bigfoot_Rig:R_Finger_2_Jnt_3_Ctrl" 
-		"FollowTranslate" " -k 1"
-		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:Arm_Ctrls|Bigfoot_Rig:R_Hand_Ctrls|Bigfoot_Rig:R_Finger_2_Jnt_3_Ctrl_Grp|Bigfoot_Rig:R_Finger_2_Jnt_3_Ctrl" 
-		"FollowRotate" " -k 1"
 		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:Arm_Ctrls|Bigfoot_Rig:R_Hand_Ctrls|Bigfoot_Rig:R_Finger_3_Jnt_3_Ctrl_Grp|Bigfoot_Rig:R_Finger_3_Jnt_3_Ctrl" 
 		"rotatePivotTranslate" " -type \"double3\" 0 0 0"
-		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:Arm_Ctrls|Bigfoot_Rig:R_Hand_Ctrls|Bigfoot_Rig:R_Finger_3_Jnt_3_Ctrl_Grp|Bigfoot_Rig:R_Finger_3_Jnt_3_Ctrl" 
-		"FollowTranslate" " -k 1"
-		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:Arm_Ctrls|Bigfoot_Rig:R_Hand_Ctrls|Bigfoot_Rig:R_Finger_3_Jnt_3_Ctrl_Grp|Bigfoot_Rig:R_Finger_3_Jnt_3_Ctrl" 
-		"FollowRotate" " -k 1"
 		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:Arm_Ctrls|Bigfoot_Rig:R_Hand_Ctrls|Bigfoot_Rig:R_Finger_4_Jnt_3_Ctrl_Grp|Bigfoot_Rig:R_Finger_4_Jnt_3_Ctrl" 
 		"rotatePivotTranslate" " -type \"double3\" 0 0 0"
-		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:Arm_Ctrls|Bigfoot_Rig:R_Hand_Ctrls|Bigfoot_Rig:R_Finger_4_Jnt_3_Ctrl_Grp|Bigfoot_Rig:R_Finger_4_Jnt_3_Ctrl" 
-		"FollowTranslate" " -k 1"
-		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:Arm_Ctrls|Bigfoot_Rig:R_Hand_Ctrls|Bigfoot_Rig:R_Finger_4_Jnt_3_Ctrl_Grp|Bigfoot_Rig:R_Finger_4_Jnt_3_Ctrl" 
-		"FollowRotate" " -k 1"
 		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:Arm_Ctrls|Bigfoot_Rig:R_Hand_Ctrls|Bigfoot_Rig:R_Finger_4_Jnt_1_Ctrl_Grp|Bigfoot_Rig:R_Finger_4_Jnt_1_Ctrl" 
 		"rotatePivotTranslate" " -type \"double3\" 0 0 0"
-		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:Arm_Ctrls|Bigfoot_Rig:R_Hand_Ctrls|Bigfoot_Rig:R_Finger_4_Jnt_1_Ctrl_Grp|Bigfoot_Rig:R_Finger_4_Jnt_1_Ctrl" 
-		"FollowTranslate" " -k 1"
-		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:Arm_Ctrls|Bigfoot_Rig:R_Hand_Ctrls|Bigfoot_Rig:R_Finger_4_Jnt_1_Ctrl_Grp|Bigfoot_Rig:R_Finger_4_Jnt_1_Ctrl" 
-		"FollowRotate" " -k 1"
 		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:Arm_Ctrls|Bigfoot_Rig:L_Clav_Jnt_Ctrl_Grp|Bigfoot_Rig:L_Clav_Jnt_Ctrl" 
 		"rotatePivotTranslate" " -type \"double3\" 0 0 0"
-		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:Arm_Ctrls|Bigfoot_Rig:L_Clav_Jnt_Ctrl_Grp|Bigfoot_Rig:L_Clav_Jnt_Ctrl" 
-		"FollowTranslate" " -k 1"
-		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:Arm_Ctrls|Bigfoot_Rig:L_Clav_Jnt_Ctrl_Grp|Bigfoot_Rig:L_Clav_Jnt_Ctrl" 
-		"FollowRotate" " -k 1"
 		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:Arm_Ctrls|Bigfoot_Rig:R_Clav_Jnt_Ctrl_Grp|Bigfoot_Rig:R_Clav_Jnt_Ctrl" 
 		"rotatePivotTranslate" " -type \"double3\" 0 0 0"
-		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:Arm_Ctrls|Bigfoot_Rig:R_Clav_Jnt_Ctrl_Grp|Bigfoot_Rig:R_Clav_Jnt_Ctrl" 
-		"FollowTranslate" " -k 1"
-		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:Arm_Ctrls|Bigfoot_Rig:R_Clav_Jnt_Ctrl_Grp|Bigfoot_Rig:R_Clav_Jnt_Ctrl" 
-		"FollowRotate" " -k 1"
 		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:L_Leg_IK_Handles|Bigfoot_Rig:L_Foot_1_Jnt_IK_Ctrl_Grp|Bigfoot_Rig:L_Foot_1_Jnt_IK_Ctrl" 
 		"rotatePivotTranslate" " -type \"double3\" 0 0 0"
-		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:L_Leg_IK_Handles|Bigfoot_Rig:L_Foot_1_Jnt_IK_Ctrl_Grp|Bigfoot_Rig:L_Foot_1_Jnt_IK_Ctrl" 
-		"Stretch" " -k 1"
-		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:L_Leg_IK_Handles|Bigfoot_Rig:L_Foot_1_Jnt_IK_Ctrl_Grp|Bigfoot_Rig:L_Foot_1_Jnt_IK_Ctrl" 
-		"Max_Stretch" " -k 1"
-		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:L_Leg_IK_Handles|Bigfoot_Rig:L_Foot_1_Jnt_IK_Ctrl_Grp|Bigfoot_Rig:L_Foot_1_Jnt_IK_Ctrl" 
-		"Local_Space" " -k 1"
-		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:L_Leg_IK_Handles|Bigfoot_Rig:L_Leg_2_Jnt_IK_Ctrl_Grp|Bigfoot_Rig:L_Leg_IK_PV_OFFSET|Bigfoot_Rig:L_Leg_IK_PV_Ctrl" 
-		"Local_Space" " -k 1"
-		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:L_Leg_IK_Handles|Bigfoot_Rig:L_Leg_1_Jnt_IK_Ctrl_Grp|Bigfoot_Rig:L_Leg_1_Jnt_IK_Ctrl" 
-		"FollowTranslate" " -k 1"
-		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:L_Leg_IK_Handles|Bigfoot_Rig:L_Leg_1_Jnt_IK_Ctrl_Grp|Bigfoot_Rig:L_Leg_1_Jnt_IK_Ctrl" 
-		"FollowRotate" " -k 1"
 		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:R_Leg_IK_Handles|Bigfoot_Rig:R_Foot_1_Jnt_IK_Ctrl_Grp|Bigfoot_Rig:R_Foot_1_Jnt_IK_Ctrl" 
 		"rotatePivotTranslate" " -type \"double3\" 0 0 0"
-		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:R_Leg_IK_Handles|Bigfoot_Rig:R_Foot_1_Jnt_IK_Ctrl_Grp|Bigfoot_Rig:R_Foot_1_Jnt_IK_Ctrl" 
-		"Stretch" " -k 1"
-		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:R_Leg_IK_Handles|Bigfoot_Rig:R_Foot_1_Jnt_IK_Ctrl_Grp|Bigfoot_Rig:R_Foot_1_Jnt_IK_Ctrl" 
-		"Max_Stretch" " -k 1"
-		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:R_Leg_IK_Handles|Bigfoot_Rig:R_Foot_1_Jnt_IK_Ctrl_Grp|Bigfoot_Rig:R_Foot_1_Jnt_IK_Ctrl" 
-		"Local_Space" " -k 1"
-		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:R_Leg_IK_Handles|Bigfoot_Rig:R_Leg_2_Jnt_IK_Ctrl_Grp|Bigfoot_Rig:R_Leg_IK_PV_OFFSET|Bigfoot_Rig:R_Leg_IK_PV_Ctrl" 
-		"Local_Space" " -k 1"
-		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:R_Leg_IK_Handles|Bigfoot_Rig:R_Leg_1_Jnt_IK_Ctrl_Grp|Bigfoot_Rig:R_Leg_1_Jnt_IK_Ctrl" 
-		"FollowTranslate" " -k 1"
-		2 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:R_Leg_IK_Handles|Bigfoot_Rig:R_Leg_1_Jnt_IK_Ctrl_Grp|Bigfoot_Rig:R_Leg_1_Jnt_IK_Ctrl" 
-		"FollowRotate" " -k 1"
-		2 "Bigfoot_Rig:Geometry_Layer" "displayType" " 2"
+		2 "Bigfoot_Rig:Geometry_Layer" "displayType" " 0"
 		2 "Bigfoot_Rig:groupParts1" "inputRemoveComponent" " -type \"componentList\" 2 \"f[0:95]\" \"f[1313:1318]\""
 		
 		2 "Bigfoot_Rig:groupParts1" "groupId" " 156"
 		2 "Bigfoot_Rig:groupParts2" "inputRemoveComponent" " -type \"componentList\" 2 \"f[96:1312]\" \"f[1319:1366]\""
 		
 		2 "Bigfoot_Rig:groupParts2" "groupId" " 157"
-		3 "Bigfoot_Rig:groupId148.groupId" "Bigfoot_Rig:groupParts2.groupId" ""
+		3 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Geometry|Bigfoot_Rig:BigFootGeo|Bigfoot_Rig:BigFootGeoShape.instObjGroups.objectGroups[1]" 
+		"Bigfoot_Rig:standardSurface2SG.dagSetMembers" "-na"
+		3 "Bigfoot_Rig:groupId148.message" "Bigfoot_Rig:standardSurface2SG.groupNodes" 
+		"-na"
+		3 "Bigfoot_Rig:groupId147.groupId" "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Geometry|Bigfoot_Rig:BigFootGeo|Bigfoot_Rig:BigFootGeoShape.instObjGroups.objectGroups[0].objectGroupId" 
+		""
+		3 ":initialShadingGroup.memberWireframeColor" "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Geometry|Bigfoot_Rig:BigFootGeo|Bigfoot_Rig:BigFootGeoShape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Geometry|Bigfoot_Rig:BigFootGeo|Bigfoot_Rig:BigFootGeoShape.instObjGroups.objectGroups[0]" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "Bigfoot_Rig:groupId148.groupId" "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Geometry|Bigfoot_Rig:BigFootGeo|Bigfoot_Rig:BigFootGeoShape.instObjGroups.objectGroups[1].objectGroupId" 
+		""
+		3 "Bigfoot_Rig:standardSurface2SG.memberWireframeColor" "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Geometry|Bigfoot_Rig:BigFootGeo|Bigfoot_Rig:BigFootGeoShape.instObjGroups.objectGroups[1].objectGrpColor" 
+		""
+		3 "Bigfoot_Rig:groupId147.groupId" "Bigfoot_Rig:groupParts1.groupId" ""
+		3 "Bigfoot_Rig:groupId147.message" ":initialShadingGroup.groupNodes" "-na"
+		
 		3 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:HEAD_ctrls|Bigfoot_Rig:Face_Ctrls|Bigfoot_Rig:Beard_Jnt_Ctrl_Grp|Bigfoot_Rig:Beard_Jnt_Ctrl|Bigfoot_Rig:Beard_Jnt_Ctrl_parentConstraint1.constraintTranslateX" 
 		"|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:HEAD_ctrls|Bigfoot_Rig:Face_Ctrls|Bigfoot_Rig:Beard_Jnt_Ctrl_Grp|Bigfoot_Rig:Beard_Jnt_Ctrl.translateX" 
 		""
@@ -3551,23 +3294,7 @@ createNode reference -n "Bigfoot_RigRN";
 		3 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:HEAD_ctrls|Bigfoot_Rig:Face_Ctrls|Bigfoot_Rig:Beard_Jnt_Ctrl_Grp|Bigfoot_Rig:Beard_Jnt_Ctrl|Bigfoot_Rig:Beard_Jnt_Ctrl_scaleConstraint1.constraintScaleZ" 
 		"|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:HEAD_ctrls|Bigfoot_Rig:Face_Ctrls|Bigfoot_Rig:Beard_Jnt_Ctrl_Grp|Bigfoot_Rig:Beard_Jnt_Ctrl.scaleZ" 
 		""
-		3 "Bigfoot_Rig:groupId147.message" ":initialShadingGroup.groupNodes" "-na"
-		
-		3 "Bigfoot_Rig:groupId147.groupId" "Bigfoot_Rig:groupParts1.groupId" ""
-		3 "Bigfoot_Rig:groupId147.groupId" "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Geometry|Bigfoot_Rig:BigFootGeo|Bigfoot_Rig:BigFootGeoShape.instObjGroups.objectGroups[0].objectGroupId" 
-		""
-		3 ":initialShadingGroup.memberWireframeColor" "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Geometry|Bigfoot_Rig:BigFootGeo|Bigfoot_Rig:BigFootGeoShape.instObjGroups.objectGroups[0].objectGrpColor" 
-		""
-		3 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Geometry|Bigfoot_Rig:BigFootGeo|Bigfoot_Rig:BigFootGeoShape.instObjGroups.objectGroups[0]" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "Bigfoot_Rig:groupId148.groupId" "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Geometry|Bigfoot_Rig:BigFootGeo|Bigfoot_Rig:BigFootGeoShape.instObjGroups.objectGroups[1].objectGroupId" 
-		""
-		3 "Bigfoot_Rig:standardSurface2SG.memberWireframeColor" "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Geometry|Bigfoot_Rig:BigFootGeo|Bigfoot_Rig:BigFootGeoShape.instObjGroups.objectGroups[1].objectGrpColor" 
-		""
-		3 "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Geometry|Bigfoot_Rig:BigFootGeo|Bigfoot_Rig:BigFootGeoShape.instObjGroups.objectGroups[1]" 
-		"Bigfoot_Rig:standardSurface2SG.dagSetMembers" "-na"
-		3 "Bigfoot_Rig:groupId148.message" "Bigfoot_Rig:standardSurface2SG.groupNodes" 
-		"-na"
+		3 "Bigfoot_Rig:groupId148.groupId" "Bigfoot_Rig:groupParts2.groupId" ""
 		5 3 "Bigfoot_RigRN" "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:IKFK_Ctrls|Bigfoot_Rig:R_Arm_IKFK_Control_Grp|Bigfoot_Rig:R_Arm_IKFK_Control.R_Arm_IKFK" 
 		"Bigfoot_RigRN.placeHolderList[1]" ""
 		5 3 "Bigfoot_RigRN" "|Bigfoot_Rig:BIGFOOT|Bigfoot_Rig:Controls|Bigfoot_Rig:IKFK_Ctrls|Bigfoot_Rig:R_Arm_IKFK_Control_Grp|Bigfoot_Rig:R_Arm_IKFK_Control.R_Arm_IKFK" 
@@ -9523,54 +9250,55 @@ createNode script -n "uiConfigurationScriptNode";
 		"// Maya Mel UI Configuration File.\n//\n//  This script is machine generated.  Edit at your own risk.\n//\n//\n\nglobal string $gMainPane;\nif (`paneLayout -exists $gMainPane`) {\n\n\tglobal int $gUseScenePanelConfig;\n\tint    $useSceneConfig = $gUseScenePanelConfig;\n\tint    $nodeEditorPanelVisible = stringArrayContains(\"nodeEditorPanel1\", `getPanel -vis`);\n\tint    $nodeEditorWorkspaceControlOpen = (`workspaceControl -exists nodeEditorPanel1Window` && `workspaceControl -q -visible nodeEditorPanel1Window`);\n\tint    $menusOkayInPanels = `optionVar -q allowMenusInPanels`;\n\tint    $nVisPanes = `paneLayout -q -nvp $gMainPane`;\n\tint    $nPanes = 0;\n\tstring $editorName;\n\tstring $panelName;\n\tstring $itemFilterName;\n\tstring $panelConfig;\n\n\t//\n\t//  get current state of the UI\n\t//\n\tsceneUIReplacement -update $gMainPane;\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Top View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Top View\")) -mbv $menusOkayInPanels  $panelName;\n"
 		+ "\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|top\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n"
 		+ "            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n"
-		+ "            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 638\n            -height 438\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n"
+		+ "            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n"
 		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Side View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|side\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n"
 		+ "            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n"
 		+ "            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n"
-		+ "            -shadows 0\n            -captureSequenceNumber -1\n            -width 98\n            -height 0\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n"
+		+ "            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n"
 		+ "            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n"
 		+ "            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n"
-		+ "            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 98\n            -height 0\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n"
+		+ "            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n"
 		+ "            -camera \"|persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 1\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n"
 		+ "            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 0\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n"
-		+ "            -imagePlane 1\n            -joints 1\n            -ikHandles 0\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1286\n            -height 695\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n"
+		+ "            -imagePlane 1\n            -joints 1\n            -ikHandles 0\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 2047\n            -height 1388\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n"
 		+ "\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 0\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n"
 		+ "            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 0\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -isSet 0\n            -isSetMember 0\n            -showUfeItems 1\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n"
 		+ "            -longNames 0\n            -niceNames 1\n            -selectCommand \"print(\\\"\\\")\" \n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -renderFilterIndex 0\n            -selectionOrder \"chronological\" \n            -expandAttribute 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n            -showAttributes 0\n            -showConnected 0\n"
 		+ "            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -showUfeItems 1\n            -displayMode \"DAG\" \n"
 		+ "            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"graphEditor\" (localizedPanelLabel(\"Graph Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Graph Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n"
 		+ "            outlinerEditor -e \n                -showShapes 1\n                -showAssignedMaterials 0\n                -showTimeEditor 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -organizeByClip 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 1\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showParentContainers 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n"
-		+ "                -autoSelectNewObjects 1\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 1\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -isSet 0\n                -isSetMember 0\n                -showUfeItems 1\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 1\n                -mapMotionTrails 1\n"
-		+ "                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                -selectionOrder \"display\" \n                -expandAttribute 1\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"GraphEd\");\n            animCurveEditor -e \n                -displayValues 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -showPlayRangeShades \"on\" \n                -lockPlayRangeShades \"off\" \n                -smoothness \"fine\" \n                -resultSamples 1\n                -resultScreenSamples 0\n                -resultUpdate \"delayed\" \n                -showUpstreamCurves 1\n                -tangentScale 1\n                -tangentLineThickness 1\n                -keyMinScale 1\n                -stackedCurvesMin -1\n                -stackedCurvesMax 1\n                -stackedCurvesSpace 0.2\n                -preSelectionHighlight 0\n                -limitToSelectedCurves 0\n                -constrainDrag 0\n                -valueLinesToggle 0\n"
-		+ "                -outliner \"graphEditor1OutlineEd\" \n                -highlightAffectedCurves 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dopeSheetPanel\" (localizedPanelLabel(\"Dope Sheet\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dope Sheet\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showAssignedMaterials 0\n                -showTimeEditor 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -organizeByClip 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 1\n"
-		+ "                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showParentContainers 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 0\n                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 1\n                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"0\" \n                -showSetMembers 1\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -showUfeItems 1\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n"
-		+ "                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"DopeSheetEd\");\n            dopeSheetEditor -e \n                -displayValues 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -outliner \"dopeSheetPanel1OutlineEd\" \n                -hierarchyBelow 0\n                -selectionWindow 0 0 0 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"timeEditorPanel\" (localizedPanelLabel(\"Time Editor\")) `;\n"
-		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Time Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"clipEditorPanel\" (localizedPanelLabel(\"Trax Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Trax Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = clipEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayValues 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -initialized 0\n                -manageSequencer 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"sequenceEditorPanel\" (localizedPanelLabel(\"Camera Sequencer\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n"
-		+ "\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Camera Sequencer\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = sequenceEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayValues 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -initialized 0\n                -manageSequencer 1 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperGraphPanel\" (localizedPanelLabel(\"Hypergraph Hierarchy\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypergraph Hierarchy\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"HyperGraphEd\");\n            hyperGraph -e \n                -graphLayoutStyle \"hierarchicalLayout\" \n                -orientation \"horiz\" \n                -mergeConnections 0\n                -zoom 1\n                -animateTransition 0\n                -showRelationships 1\n"
-		+ "                -showShapes 0\n                -showDeformers 0\n                -showExpressions 0\n                -showConstraints 0\n                -showConnectionFromSelected 0\n                -showConnectionToSelected 0\n                -showConstraintLabels 0\n                -showUnderworld 0\n                -showInvisible 0\n                -transitionFrames 1\n                -opaqueContainers 0\n                -freeform 0\n                -imagePosition 0 0 \n                -imageScale 1\n                -imageEnabled 0\n                -graphType \"DAG\" \n                -heatMapDisplay 0\n                -updateSelection 1\n                -updateNodeAdded 1\n                -useDrawOverrideColor 0\n                -limitGraphTraversal -1\n                -range 0 0 \n                -iconSize \"smallIcons\" \n                -showCachedConnections 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperShadePanel\" (localizedPanelLabel(\"Hypershade\")) `;\n"
-		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypershade\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"visorPanel\" (localizedPanelLabel(\"Visor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Visor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"nodeEditorPanel\" (localizedPanelLabel(\"Node Editor\")) `;\n\tif ($nodeEditorPanelVisible || $nodeEditorWorkspaceControlOpen) {\n\t\tif (\"\" == $panelName) {\n\t\t\tif ($useSceneConfig) {\n\t\t\t\t$panelName = `scriptedPanel -unParent  -type \"nodeEditorPanel\" -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n"
-		+ "                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -connectNodeOnCreation 0\n                -connectOnDrop 0\n                -copyConnectionsOnPaste 0\n                -connectionStyle \"bezier\" \n                -defaultPinnedState 0\n                -additiveGraphingMode 0\n                -connectedGraphingMode 1\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -crosshairOnEdgeDragging 0\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 0\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 0\n                -extendToShapes 1\n"
-		+ "                -showUnitConversions 0\n                -editorMode \"default\" \n                -hasWatchpoint 0\n                $editorName;\n\t\t\t}\n\t\t} else {\n\t\t\t$label = `panel -q -label $panelName`;\n\t\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -connectNodeOnCreation 0\n                -connectOnDrop 0\n                -copyConnectionsOnPaste 0\n                -connectionStyle \"bezier\" \n                -defaultPinnedState 0\n                -additiveGraphingMode 0\n                -connectedGraphingMode 1\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n"
-		+ "                -gridSnap 0\n                -gridVisibility 1\n                -crosshairOnEdgeDragging 0\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 0\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 0\n                -extendToShapes 1\n                -showUnitConversions 0\n                -editorMode \"default\" \n                -hasWatchpoint 0\n                $editorName;\n\t\t\tif (!$useSceneConfig) {\n\t\t\t\tpanel -e -l $label $panelName;\n\t\t\t}\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"createNodePanel\" (localizedPanelLabel(\"Create Node\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Create Node\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"polyTexturePlacementPanel\" (localizedPanelLabel(\"UV Editor\")) `;\n"
-		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"UV Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"renderWindowPanel\" (localizedPanelLabel(\"Render View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Render View\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"shapePanel\" (localizedPanelLabel(\"Shape Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tshapePanel -edit -l (localizedPanelLabel(\"Shape Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"posePanel\" (localizedPanelLabel(\"Pose Editor\")) `;\n\tif (\"\" != $panelName) {\n"
-		+ "\t\t$label = `panel -q -label $panelName`;\n\t\tposePanel -edit -l (localizedPanelLabel(\"Pose Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynRelEdPanel\" (localizedPanelLabel(\"Dynamic Relationships\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dynamic Relationships\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"relationshipPanel\" (localizedPanelLabel(\"Relationship Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"referenceEditorPanel\" (localizedPanelLabel(\"Reference Editor\")) `;\n"
-		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynPaintScriptedPanelType\" (localizedPanelLabel(\"Paint Effects\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"scriptEditorPanel\" (localizedPanelLabel(\"Script Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"profilerPanel\" (localizedPanelLabel(\"Profiler Tool\")) `;\n"
+		+ "                -autoSelectNewObjects 1\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 1\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -showUfeItems 1\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 1\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n"
+		+ "                -renderFilterVisible 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"GraphEd\");\n            animCurveEditor -e \n                -displayValues 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -showPlayRangeShades \"on\" \n                -lockPlayRangeShades \"off\" \n                -smoothness \"fine\" \n                -resultSamples 1\n                -resultScreenSamples 0\n                -resultUpdate \"delayed\" \n                -showUpstreamCurves 1\n                -tangentScale 1\n                -tangentLineThickness 1\n                -keyMinScale 1\n                -stackedCurvesMin -1\n                -stackedCurvesMax 1\n                -stackedCurvesSpace 0.2\n                -preSelectionHighlight 0\n                -limitToSelectedCurves 0\n                -constrainDrag 0\n                -valueLinesToggle 0\n                -outliner \"graphEditor1OutlineEd\" \n                -highlightAffectedCurves 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n"
+		+ "\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dopeSheetPanel\" (localizedPanelLabel(\"Dope Sheet\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dope Sheet\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showAssignedMaterials 0\n                -showTimeEditor 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -organizeByClip 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 1\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n"
+		+ "                -showParentContainers 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 0\n                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 1\n                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"0\" \n                -showSetMembers 1\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -showUfeItems 1\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n"
+		+ "                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"DopeSheetEd\");\n            dopeSheetEditor -e \n                -displayValues 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -outliner \"dopeSheetPanel1OutlineEd\" \n                -hierarchyBelow 0\n                -selectionWindow 0 0 0 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"timeEditorPanel\" (localizedPanelLabel(\"Time Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n"
+		+ "\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Time Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"clipEditorPanel\" (localizedPanelLabel(\"Trax Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Trax Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = clipEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayValues 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -initialized 0\n                -manageSequencer 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"sequenceEditorPanel\" (localizedPanelLabel(\"Camera Sequencer\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Camera Sequencer\")) -mbv $menusOkayInPanels  $panelName;\n"
+		+ "\n\t\t\t$editorName = sequenceEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayValues 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -initialized 0\n                -manageSequencer 1 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperGraphPanel\" (localizedPanelLabel(\"Hypergraph Hierarchy\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypergraph Hierarchy\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"HyperGraphEd\");\n            hyperGraph -e \n                -graphLayoutStyle \"hierarchicalLayout\" \n                -orientation \"horiz\" \n                -mergeConnections 0\n                -zoom 1\n                -animateTransition 0\n                -showRelationships 1\n                -showShapes 0\n                -showDeformers 0\n                -showExpressions 0\n"
+		+ "                -showConstraints 0\n                -showConnectionFromSelected 0\n                -showConnectionToSelected 0\n                -showConstraintLabels 0\n                -showUnderworld 0\n                -showInvisible 0\n                -transitionFrames 1\n                -opaqueContainers 0\n                -freeform 0\n                -imagePosition 0 0 \n                -imageScale 1\n                -imageEnabled 0\n                -graphType \"DAG\" \n                -heatMapDisplay 0\n                -updateSelection 1\n                -updateNodeAdded 1\n                -useDrawOverrideColor 0\n                -limitGraphTraversal -1\n                -range 0 0 \n                -iconSize \"smallIcons\" \n                -showCachedConnections 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperShadePanel\" (localizedPanelLabel(\"Hypershade\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n"
+		+ "\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypershade\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"visorPanel\" (localizedPanelLabel(\"Visor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Visor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"nodeEditorPanel\" (localizedPanelLabel(\"Node Editor\")) `;\n\tif ($nodeEditorPanelVisible || $nodeEditorWorkspaceControlOpen) {\n\t\tif (\"\" == $panelName) {\n\t\t\tif ($useSceneConfig) {\n\t\t\t\t$panelName = `scriptedPanel -unParent  -type \"nodeEditorPanel\" -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n"
+		+ "                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -connectNodeOnCreation 0\n                -connectOnDrop 0\n                -copyConnectionsOnPaste 0\n                -connectionStyle \"bezier\" \n                -defaultPinnedState 0\n                -additiveGraphingMode 0\n                -connectedGraphingMode 1\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -crosshairOnEdgeDragging 0\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                -showUnitConversions 0\n                -editorMode \"default\" \n"
+		+ "                -hasWatchpoint 0\n                $editorName;\n\t\t\t}\n\t\t} else {\n\t\t\t$label = `panel -q -label $panelName`;\n\t\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -connectNodeOnCreation 0\n                -connectOnDrop 0\n                -copyConnectionsOnPaste 0\n                -connectionStyle \"bezier\" \n                -defaultPinnedState 0\n                -additiveGraphingMode 0\n                -connectedGraphingMode 1\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n"
+		+ "                -crosshairOnEdgeDragging 0\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                -showUnitConversions 0\n                -editorMode \"default\" \n                -hasWatchpoint 0\n                $editorName;\n\t\t\tif (!$useSceneConfig) {\n\t\t\t\tpanel -e -l $label $panelName;\n\t\t\t}\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"createNodePanel\" (localizedPanelLabel(\"Create Node\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Create Node\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"polyTexturePlacementPanel\" (localizedPanelLabel(\"UV Editor\")) `;\n\tif (\"\" != $panelName) {\n"
+		+ "\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"UV Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"renderWindowPanel\" (localizedPanelLabel(\"Render View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Render View\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"shapePanel\" (localizedPanelLabel(\"Shape Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tshapePanel -edit -l (localizedPanelLabel(\"Shape Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"posePanel\" (localizedPanelLabel(\"Pose Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n"
+		+ "\t\tposePanel -edit -l (localizedPanelLabel(\"Pose Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynRelEdPanel\" (localizedPanelLabel(\"Dynamic Relationships\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dynamic Relationships\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"relationshipPanel\" (localizedPanelLabel(\"Relationship Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"referenceEditorPanel\" (localizedPanelLabel(\"Reference Editor\")) `;\n\tif (\"\" != $panelName) {\n"
+		+ "\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynPaintScriptedPanelType\" (localizedPanelLabel(\"Paint Effects\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"scriptEditorPanel\" (localizedPanelLabel(\"Script Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"profilerPanel\" (localizedPanelLabel(\"Profiler Tool\")) `;\n"
 		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Profiler Tool\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"contentBrowserPanel\" (localizedPanelLabel(\"Content Browser\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Content Browser\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"Stereo\" (localizedPanelLabel(\"Stereo\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Stereo\")) -mbv $menusOkayInPanels  $panelName;\n{ string $editorName = ($panelName+\"Editor\");\n            stereoCameraView -e \n                -camera \"|persp\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n"
 		+ "                -displayAppearance \"wireframe\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -holdOuts 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 1\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 32768\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -depthOfFieldPreview 1\n"
 		+ "                -maxConstantTransparency 1\n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 4 4 \n                -bumpResolution 4 4 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -controllers 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n"
 		+ "                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -bluePencil 1\n                -greasePencils 0\n                -shadows 0\n                -captureSequenceNumber -1\n                -width 0\n                -height 0\n                -sceneRenderFilter 0\n                -displayMode \"centerEye\" \n"
 		+ "                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n            stereoCameraView -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName; };\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
-		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 0\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 0\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1286\\n    -height 695\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
-		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 0\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 0\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1286\\n    -height 695\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 0\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 0\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 2047\\n    -height 1388\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 0\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 0\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 2047\\n    -height 1388\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
 		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 5 -size 12 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
 	setAttr ".st" 3;
 createNode script -n "sceneConfigurationScriptNode";
 	rename -uid "C1EAF7C2-440B-93FB-1B05-07A303F45DC9";
-	setAttr ".b" -type "string" "playbackOptions -min 0 -max 76 -ast -10 -aet 200 ";
+	setAttr ".b" -type "string" "playbackOptions -min -20 -max 75 -ast -20 -aet 200 ";
 	setAttr ".st" 6;
 createNode reference -n "BinocularsRN";
 	rename -uid "666A9B3E-4779-3915-BC24-AEA04E9137D6";
-	setAttr -s 10 ".phl";
+	setAttr ".fn[0]" -type "string" "C:/Users/caris/Desktop/ProjectCryptid/CryptidMobile_MayaProject//scenes/Props/Binoculars.obj";
+	setAttr -s 12 ".phl";
 	setAttr ".phl[1]" 0;
 	setAttr ".phl[2]" 0;
 	setAttr ".phl[3]" 0;
@@ -9581,12 +9309,27 @@ createNode reference -n "BinocularsRN";
 	setAttr ".phl[8]" 0;
 	setAttr ".phl[9]" 0;
 	setAttr ".phl[10]" 0;
+	setAttr ".phl[11]" 0;
+	setAttr ".phl[12]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"BinocularsRN"
 		"BinocularsRN" 0
-		"BinocularsRN" 11
+		"BinocularsRN" 15
 		0 "|BinocularsRNfosterParent1|pCylinder3_parentConstraint1" "|Binoculars:pCylinder3" 
 		"-s -r "
+		2 "|Binoculars:pCylinder3|Binoculars:pCylinder3Shape" "uvPivot" " -type \"double2\" 0.94886347925883507 0.75392710907118665"
+		
+		2 "|Binoculars:pCylinder3|Binoculars:pCylinder3Shape" "uvst[0].uvsp[0:222]" 
+		(" -s 223 -type \"float2\" 0.43732991999999998 0.68804061000000005 0.45522919000000001 0.69303214999999996 0.47384020999999998 0.61472428000000001 0.46192720999999998 0.61140214999999998 0.47346070000000001 0.69662762 0.48597385999999998 0.61711716999999999 0.49191549000000001 0.69880556999999999 0.49825624000000002 0.61856663000000001 0.51048291000000001 0.69955312999999997 0.51061356000000002 0.61906421 0.52905261999999997 0.69886601000000004 0.52297245999999997 0.61860693 0.54751408000000001 0.69674802000000002 0.53525937000000001 0.61719727999999996 0.56575715999999998 0.69321166999999995 0.54740082999999995 0.61484360999999998 0.58367312000000005 0.68827832 0.55932462000000005 0.61156045999999997 0.1847963 0.50112062999999996 0.17285928 0.48918193999999998 0.16441639999999999 0.50956058999999998 0.18479487 0.51800323000000004 0.17285654 0.52994037000000005 0.15597375999999999 0.52993888 0.14403692000000001 0.51800029999999997 0.14403799 0.50111764999999997 0.15597662000000001 0.48918055999999999 0.9545944899"
+		+ "9999996 0.73919164999999998 0.96333968999999997 0.74793684000000005 0.94841063000000003 0.75412058999999998 0.96333968999999997 0.76030432999999997 0.95459448999999996 0.76904929 0.94222676999999999 0.76904929 0.93348169000000003 0.76030432999999997 0.93348169000000003 0.74793684000000005 0.94222676999999999 0.73919164999999998 0.4734737 0.69664669000000001 0.45523681999999999 0.69307863999999997 0.47372987999999999 0.61474298999999999 0.48586705000000002 0.61711764000000002 0.43732991999999998 0.68811405000000003 0.46181192999999998 0.61143875000000003 0.58367312000000005 0.68813168999999996 0.56576477999999997 0.69309187000000005 0.54729079999999997 0.61475170000000001 0.55920946999999999 0.61145055000000004 0.54752719000000005 0.69665562999999997 0.53515279000000004 0.61712359999999999 0.52906883000000005 0.69880164 0.52286792000000004 0.61855172999999997 0.51049984000000004 0.69951653000000003 0.51050972999999999 0.61902785000000005 0.49193165 0.69879711 0.49815151000000002 0.61854863000000004 0.184779500"
+		+ "00000001 0.50108026999999999 0.18481156000000001 0.51796299000000001 0.16441639999999999 0.50956058999999998 0.17281911 0.48916543000000001 0.15593645 0.48919731 0.14402154 0.50115794000000002 0.14405343000000001 0.51804035999999998 0.15601406000000001 0.52995574000000001 0.17289671000000001 0.52992349999999999 0.95459448999999996 0.73919164999999998 0.96333968999999997 0.74793684000000005 0.94841063000000003 0.75412058999999998 0.96333968999999997 0.76030432999999997 0.95459448999999996 0.76904929 0.94222676999999999 0.76904929 0.93348169000000003 0.76030432999999997 0.93348169000000003 0.74793684000000005 0.94222676999999999 0.73919164999999998 0.14198056000000001 0.49990845 0.14198031999999999 0.51849097 0.13619556999999999 0.52088719999999999 0.13619556999999999 0.49751227999999997 0.15512022 0.48676866000000002 0.15272411999999999 0.48098373 0.17370281000000001 0.48676866000000002 0.17609902999999999 0.48098373 0.18684265 0.49990845 0.19262752 0.49751227999999997 0.18684265 0.51849120999999998 0.19262752"
+		+ " 0.52088719999999999 0.17370281000000001 0.53163075000000004 0.17609902999999999 0.53741567999999995 0.15512034 0.53163075000000004 0.15272411999999999 0.53741567999999995 0.14198056000000001 0.49990845 0.14198056000000001 0.51849097 0.13619556999999999 0.52088719999999999 0.13619556999999999 0.49751227999999997 0.15512022 0.48676866000000002 0.15272411999999999 0.48098373 0.17370316 0.48676866000000002 0.17609902999999999 0.48098373 0.18684289000000001 0.49990845 0.19262752 0.49751227999999997 0.18684289000000001 0.51849120999999998 0.19262752 0.52088719999999999 0.17370316 0.53163075000000004 0.17609902999999999 0.53741567999999995 0.15512034 0.53163075000000004 0.15272411999999999 0.53741567999999995 0.046612560999999997 0.79760998000000005 0.046611488 0.82098495999999999 0.025735319 0.82098627000000002 0.025732874999999999 0.79760951000000002 0.046628772999999998 0.96122949999999996 0.046627640999999997 0.98460895000000004 0.025749504999999999 0.98460906999999998 0.025747119999999998 0.96123700999999995 0"
+		+ ".046623765999999997 0.93785792999999995 0.025745869000000001 0.93785839999999998 0.046621382000000003 0.91448342999999999 0.025744319000000002 0.91448432000000002 0.046620131000000002 0.89110743999999997 0.025742768999999999 0.89110816000000004 0.046616971 0.86773449000000002 0.025739728999999999 0.86773515000000001 0.046615481 0.84435821 0.025738298999999999 0.84435897999999998 0.046625376000000003 0.98460798999999999 0.046625376000000003 0.96123247999999994 0.025746346 0.96123356000000004 0.025748073999999999 0.98460871000000005 0.046615124000000001 0.82098453999999998 0.046611786000000002 0.79761033999999997 0.025736153000000001 0.79761022000000004 0.025736153000000001 0.82098590999999999 0.046616196999999998 0.84435874 0.025737286000000002 0.84436065000000005 0.046617686999999998 0.86773354000000003 0.025739728999999999 0.86773491000000003 0.046619654000000003 0.89110869000000004 0.025741397999999999 0.89110953000000004 0.046620666999999998 0.91448300999999999 0.025742768999999999 0.91448373000000005 0.04"
+		+ "6622097000000001 0.93785792999999995 0.025745034 0.93785858 0.97708070000000002 0.76561129000000006 0.97707796000000002 0.74223625999999998 0.96879232000000004 0.74566971999999998 0.96879422999999998 0.76217997000000004 0.96055424 0.78214169 0.95712112999999999 0.77385568999999998 0.93717932999999998 0.78214443 0.94061088999999998 0.77385771000000003 0.92064893000000003 0.76561796999999998 0.92893468999999995 0.76218450000000004 0.92064619000000003 0.74224305000000002 0.92893291 0.74567424999999998 0.93717265000000005 0.72571271999999998 0.94060588000000001 0.73399859999999995 0.96054733000000003 0.72570979999999996 0.95711637000000005 0.73399656999999996 0.97708130000000004 0.76561045999999999 0.96055542999999999 0.78214132999999997 0.95712185000000005 0.77385532999999995 0.96879470000000001 0.76217926000000003 0.97707759999999999 0.74223554000000003 0.96879183999999996 0.74566900999999997 0.96054673000000002 0.72570931999999999 0.95711553000000005 0.73399627000000001 0.93717181999999999 0.72571313000000004 "
+		+ "0.94060540000000004 0.73399884000000004 0.92064570999999995 0.74224411999999995 0.92893267000000002 0.74567521000000003 0.92064964999999999 0.76561904000000003 0.92893517000000003 0.76218545000000004 0.93718040000000002 0.78214490000000003 0.94061136000000001 0.77385819 0.010156989 0.86300248000000002 0.010154425999999999 0.84648847999999999 0.019749640999999998 0.84648973000000005 0.019750953000000002 0.86299937999999998 0.010156989 0.87950801999999995 0.019750953000000002 0.87951040000000003 0.010159909999999999 0.89602196000000001 0.019753873000000002 0.89601892000000005 0.01015836 0.91252917 0.019753873000000002 0.91252995000000003 0.010161936 0.92904222000000003 0.019755124999999998 0.92903996 0.010152220999999999 0.81346810000000003 0.010151148 0.79695797000000002 0.019744873 0.79695523000000001 0.019748569000000001 0.81346858 0.010152876 0.82997852999999999 0.019746481999999999 0.82997637999999996 0.010157286999999999 0.86300045000000003 0.010150731 0.84649068000000005 0.019745349999999998 0.8464859099"
+		+ "9999995 0.019750833999999998 0.86299705999999998 0.010161458999999999 0.87951033999999995 0.019755602000000001 0.87950790000000001 0.010168135 0.89602 0.019762218000000002 0.89601748999999997 0.010173440000000001 0.91253114000000002 0.019768178000000001 0.91252756000000002 0.010179341 0.92904149999999996 0.019773303999999998 0.92903751000000001 0.010138988 0.81346881000000004 0.010133504999999999 0.79695892000000002 0.019728780000000001 0.79695612000000005 0.019734024999999999 0.81346642999999996 0.010144413 0.82997984000000002 0.019740700999999999 0.82997673999999999 0.93144822000000005 0.96091716999999999 0.93144952999999997 0.93848770999999997 0.97111248999999999 0.93916350999999998 0.97089051999999998 0.96008152000000002 0.93145180000000005 0.90235584999999996 0.97625971 0.90680295 0.97545051999999999 0.92593913999999999 0.93145025000000004 0.92706186000000002 0.97566509000000001 0.97274965000000002 0.93144751000000003 0.97271757999999997 0.89200639999999998 0.96007699000000002 0.89178668999999999 0.93915"
+		+ "910000000002 0.88745046000000005 0.92593413999999996 0.88664293000000005 0.90679759000000004 0.88723015999999999 0.97274441"
+		)
 		5 4 "BinocularsRN" "|Binoculars:pCylinder3.translateX" "BinocularsRN.placeHolderList[1]" 
 		""
 		5 4 "BinocularsRN" "|Binoculars:pCylinder3.translateY" "BinocularsRN.placeHolderList[2]" 
@@ -9606,6 +9349,10 @@ createNode reference -n "BinocularsRN";
 		5 3 "BinocularsRN" "|Binoculars:pCylinder3.rotatePivot" "BinocularsRN.placeHolderList[9]" 
 		""
 		5 3 "BinocularsRN" "|Binoculars:pCylinder3.rotatePivotTranslate" "BinocularsRN.placeHolderList[10]" 
+		""
+		5 4 "BinocularsRN" "Binoculars:materialInfo1.texture" "BinocularsRN.placeHolderList[11]" 
+		""
+		5 4 "BinocularsRN" "Binoculars:lambert2SG1.color" "BinocularsRN.placeHolderList[12]" 
 		"";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
@@ -10105,7 +9852,7 @@ createNode animCurveTA -n "R_Finger_4_Jnt_2_Ctrl_rotateY";
 	rename -uid "5E8B4E46-43F3-E6D3-97AB-9E968941485B";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  12 0 27 1.3987880595723594 42 0;
+	setAttr -s 3 ".ktv[0:2]"  12 0 27 1.3987880595723596 42 0;
 	setAttr ".pre" 3;
 	setAttr ".pst" 3;
 createNode animCurveTA -n "R_Finger_4_Jnt_2_Ctrl_rotateX";
@@ -10949,7 +10696,7 @@ createNode animCurveTA -n "L_Finger_4_Jnt_1_Ctrl_rotateY";
 	rename -uid "040CE41F-4DF5-D55C-D48B-C6A450E29588";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  9 0 24 0.19439126456916933 40 0;
+	setAttr -s 3 ".ktv[0:2]"  9 0 24 0.19439126456916936 40 0;
 	setAttr ".pre" 3;
 	setAttr ".pst" 3;
 createNode animCurveTA -n "L_Finger_4_Jnt_1_Ctrl_rotateX";
@@ -11573,7 +11320,7 @@ createNode animCurveTA -n "R_Finger_3_Jnt_2_Ctrl_rotateZ";
 	rename -uid "403BAE2B-4ED5-0E2D-9BA6-528C01D70C62";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  12 0 27 -5.2750885256699593 42 0;
+	setAttr -s 3 ".ktv[0:2]"  12 0 27 -5.2750885256699602 42 0;
 	setAttr ".pre" 3;
 	setAttr ".pst" 3;
 createNode animCurveTA -n "R_Finger_3_Jnt_2_Ctrl_rotateY";
@@ -12211,7 +11958,7 @@ createNode animCurveTA -n "R_Eyelid_Jnt_Ctrl_rotateY";
 	rename -uid "DE1AB6E9-46E2-FB9B-34C4-66B112E0349B";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 -0.19422835120002516;
+	setAttr ".ktv[0]"  1 -0.19422835120002518;
 	setAttr ".pre" 3;
 	setAttr ".pst" 3;
 createNode animCurveTA -n "R_Eyelid_Jnt_Ctrl_rotateX";
@@ -12624,7 +12371,7 @@ createNode animCurveTA -n "Spine_1_Jnt_FK_Ctrl_rotateZ";
 	rename -uid "C2A43578-4B8D-51D3-41C4-37BA8C226C36";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 -0.61743820531321969;
+	setAttr ".ktv[0]"  1 -0.6174382053132198;
 	setAttr ".pre" 3;
 	setAttr ".pst" 3;
 createNode animCurveTA -n "Spine_1_Jnt_FK_Ctrl_rotateY";
@@ -12800,7 +12547,7 @@ createNode animCurveTA -n "L_Finger_2_Jnt_1_Ctrl_rotateY";
 	rename -uid "75AF2036-4E2F-6EDD-0A00-1B86D3D0B82C";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  9 0 24 0.28626782095342113 40 0;
+	setAttr -s 3 ".ktv[0:2]"  9 0 24 0.28626782095342118 40 0;
 	setAttr ".pre" 3;
 	setAttr ".pst" 3;
 createNode animCurveTA -n "L_Finger_2_Jnt_1_Ctrl_rotateX";
@@ -12849,7 +12596,7 @@ createNode animCurveTA -n "L_Thumb_1_Jnt_Ctrl_rotateX";
 	rename -uid "B9D9B526-45C0-574C-90E4-029E0699B98A";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 -19.20525074832489;
+	setAttr ".ktv[0]"  1 -19.205250748324893;
 	setAttr ".pre" 3;
 	setAttr ".pst" 3;
 createNode animCurveTL -n "L_Thumb_1_Jnt_Ctrl_translateZ";
@@ -13061,7 +12808,7 @@ createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:L_Thumb_1_Jnt_Ctrl_translateZ
 	rename -uid "0A278AAD-48FD-BB04-F7A4-A9A720EE46D9";
 createNode animBlendNodeAdditiveRotation -n "Bigfoot_Rig:L_Thumb_1_Jnt_Ctrl_rotate_AnimLayer1";
 	rename -uid "084A800C-41A2-791D-DBD4-2CA0A2E208A9";
-	setAttr ".o" -type "double3" -19.20525074832489 0 51.2964140526053 ;
+	setAttr ".o" -type "double3" -19.205250748324893 0 51.2964140526053 ;
 createNode animBlendNodeAdditiveScale -n "Bigfoot_Rig:L_Thumb_1_Jnt_Ctrl_scaleX_AnimLayer1";
 	rename -uid "B99E4DB0-4698-DB62-D75B-4AB5724E7A7A";
 	setAttr ".ia" 1;
@@ -13098,7 +12845,7 @@ createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:L_Finger_2_Jnt_1_Ctrl_transla
 	rename -uid "D34EAF56-4316-EF88-5FD6-23A7D42D048B";
 createNode animBlendNodeAdditiveRotation -n "Bigfoot_Rig:L_Finger_2_Jnt_1_Ctrl_rotate_AnimLayer1";
 	rename -uid "D6B47F60-407F-8020-54E2-679AD7C5B7A1";
-	setAttr ".o" -type "double3" 0.052369860899223915 0.029771853379155801 4.7233519361537262 ;
+	setAttr ".o" -type "double3" 0.22663766013082939 0.12884172445281386 3.054590512070869 ;
 createNode animBlendNodeAdditiveScale -n "Bigfoot_Rig:L_Finger_2_Jnt_1_Ctrl_scaleX_AnimLayer1";
 	rename -uid "5447C368-42C9-07A5-88E1-27AAF61A32DA";
 	setAttr ".ia" 1;
@@ -13165,13 +12912,13 @@ createNode animBlendNodeBoolean -n "Bigfoot_Rig:Spine_3_Jnt_FK_Ctrl_visibility_A
 	setAttr ".o" yes;
 createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:Spine_3_Jnt_FK_Ctrl_translateX_AnimLayer1";
 	rename -uid "C2FE55C8-4A18-E575-3074-7F9FBA9D9B67";
-	setAttr ".o" -0.38024201729817014;
+	setAttr ".o" -0.80017259532443208;
 createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:Spine_3_Jnt_FK_Ctrl_translateY_AnimLayer1";
 	rename -uid "8EDAA31E-4A1C-D0BB-B8C8-FBB229B36F82";
-	setAttr ".o" -0.26445567721067276;
+	setAttr ".o" -0.55651447224468176;
 createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:Spine_3_Jnt_FK_Ctrl_translateZ_AnimLayer1";
 	rename -uid "EB5C996F-47E7-DE01-F988-5D83BB863523";
-	setAttr ".o" 0.098747488690149154;
+	setAttr ".o" 0.20780195431428697;
 createNode animBlendNodeAdditiveRotation -n "Bigfoot_Rig:Spine_3_Jnt_FK_Ctrl_rotate_AnimLayer1";
 	rename -uid "6347E895-49F5-84B7-B2CC-28879C28394E";
 	setAttr ".o" -type "double3" 0 0 -7.6330931508722131 ;
@@ -13248,7 +12995,7 @@ createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:Spine_1_Jnt_FK_Ctrl_translate
 	rename -uid "3C886AEB-4BBD-A509-C78C-6AA4DAE93AE2";
 createNode animBlendNodeAdditiveRotation -n "Bigfoot_Rig:Spine_1_Jnt_FK_Ctrl_rotate_AnimLayer1";
 	rename -uid "86A2BB44-4729-CF3D-93DE-B99207C2CC10";
-	setAttr ".o" -type "double3" 6.4130462849896599 -5.5019582216418126 -0.61743820531321969 ;
+	setAttr ".o" -type "double3" 6.4130462849896599 -5.5019582216418126 -0.6174382053132198 ;
 createNode animBlendNodeAdditiveScale -n "Bigfoot_Rig:Spine_1_Jnt_FK_Ctrl_scaleX_AnimLayer1";
 	rename -uid "933D8185-41F2-58E2-0C6C-73A993D7D744";
 	setAttr ".ia" 1;
@@ -13285,7 +13032,7 @@ createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:R_Finger_4_Jnt_1_Ctrl_transla
 	rename -uid "FA4D2DEE-47D8-2546-5296-BCB5DEE20B8B";
 createNode animBlendNodeAdditiveRotation -n "Bigfoot_Rig:R_Finger_4_Jnt_1_Ctrl_rotate_AnimLayer1";
 	rename -uid "C6CAD215-417C-36C5-11AB-6190C8F3660C";
-	setAttr ".o" -type "double3" -0.031972926138524212 0.089906706764527194 -0.25728937982084515 ;
+	setAttr ".o" -type "double3" -0.17058725836102853 0.47968517328634908 -1.3727329716051184 ;
 createNode animBlendNodeAdditiveScale -n "Bigfoot_Rig:R_Finger_4_Jnt_1_Ctrl_scaleX_AnimLayer1";
 	rename -uid "EF2F1EA1-44C2-D7C0-9252-38AE8EB210BC";
 	setAttr ".ia" 1;
@@ -13386,7 +13133,7 @@ createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:R_Finger_1_Jnt_3_Ctrl_transla
 	rename -uid "EF908E2E-403B-C51C-8B1F-FE86B64B5E3F";
 createNode animBlendNodeAdditiveRotation -n "Bigfoot_Rig:R_Finger_1_Jnt_3_Ctrl_rotate_AnimLayer1";
 	rename -uid "B9B22CCE-4FC4-0E33-EDEE-F1A2EA77D7ED";
-	setAttr ".o" -type "double3" -0.093680958141134127 -0.0219368319732435 -0.25610794553909372 ;
+	setAttr ".o" -type "double3" -0.4998221852042215 -0.11704102424748812 -1.3664295874799199 ;
 createNode animBlendNodeAdditiveScale -n "Bigfoot_Rig:R_Finger_1_Jnt_3_Ctrl_scaleX_AnimLayer1";
 	rename -uid "8175A7EC-4AF3-9C8C-3B2C-AB9ECB190DDD";
 	setAttr ".ia" 1;
@@ -13417,16 +13164,16 @@ createNode animBlendNodeBoolean -n "Bigfoot_Rig:Head_Ctrl_visibility_AnimLayer1"
 	setAttr ".o" yes;
 createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:Head_Ctrl_translateX_AnimLayer1";
 	rename -uid "D40DC411-4791-FA8E-3EBA-DC8403589538";
-	setAttr ".o" -0.0041686733948082784;
+	setAttr ".o" -0.0076375365752149029;
 createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:Head_Ctrl_translateY_AnimLayer1";
 	rename -uid "B737C4D3-48CE-FB53-7D15-5B943B64140D";
-	setAttr ".o" -0.017146973374658762;
+	setAttr ".o" -0.031415422581748086;
 createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:Head_Ctrl_translateZ_AnimLayer1";
 	rename -uid "4C860DFB-4451-DA57-2991-E4BE069CC095";
-	setAttr ".o" 0.0093962218504067638;
+	setAttr ".o" 0.017215066102489809;
 createNode animBlendNodeAdditiveRotation -n "Bigfoot_Rig:Head_Ctrl_rotate_AnimLayer1";
 	rename -uid "4C02470E-498C-0733-7C26-18A005F74E30";
-	setAttr ".o" -type "double3" -20.778610599911566 7.0728036520080844 -8.0204497288476997 ;
+	setAttr ".o" -type "double3" -20.778632170178856 7.0728036520080844 -8.0204497288476997 ;
 createNode animBlendNodeAdditiveScale -n "Bigfoot_Rig:Head_Ctrl_scaleX_AnimLayer1";
 	rename -uid "05274DA4-436B-1062-2D6B-82B5CBEFC5BA";
 	setAttr ".ia" 1;
@@ -13463,7 +13210,7 @@ createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:R_Finger_1_Jnt_2_Ctrl_transla
 	rename -uid "30429BDE-4029-8080-BE6D-DD918D84ADB4";
 createNode animBlendNodeAdditiveRotation -n "Bigfoot_Rig:R_Finger_1_Jnt_2_Ctrl_rotate_AnimLayer1";
 	rename -uid "1576F29E-44E5-BE21-A214-3C89335E308D";
-	setAttr ".o" -type "double3" -0.093680958141134169 -0.021936831973243431 -0.256107945539094 ;
+	setAttr ".o" -type "double3" -0.49982218520422161 -0.11704102424748775 -1.3664295874799213 ;
 createNode animBlendNodeAdditiveScale -n "Bigfoot_Rig:R_Finger_1_Jnt_2_Ctrl_scaleX_AnimLayer1";
 	rename -uid "B3DFDF99-4E61-BAA8-84B2-F2B5BEF9691D";
 	setAttr ".ia" 1;
@@ -13564,7 +13311,7 @@ createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:R_Finger_3_Jnt_3_Ctrl_transla
 	rename -uid "860F4790-4BC9-12DF-1B3B-E38D32F198B4";
 createNode animBlendNodeAdditiveRotation -n "Bigfoot_Rig:R_Finger_3_Jnt_3_Ctrl_rotate_AnimLayer1";
 	rename -uid "CACBFDA1-4BDF-4C51-B2D5-7C88EEFDEA5C";
-	setAttr ".o" -type "double3" -0.069231359348339544 0.070642535639956358 -0.25633022761773877 ;
+	setAttr ".o" -type "double3" -0.36937463066949433 0.37690377246927914 -1.3676155436922033 ;
 createNode animBlendNodeAdditiveScale -n "Bigfoot_Rig:R_Finger_3_Jnt_3_Ctrl_scaleX_AnimLayer1";
 	rename -uid "1D09F390-48DE-877B-3E74-FB86F07459AD";
 	setAttr ".ia" 1;
@@ -13601,7 +13348,7 @@ createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:R_Eyelid_Jnt_Ctrl_translateZ_
 	rename -uid "ACB6583C-409D-175E-FD4A-9B8147B93923";
 createNode animBlendNodeAdditiveRotation -n "Bigfoot_Rig:R_Eyelid_Jnt_Ctrl_rotate_AnimLayer1";
 	rename -uid "A26F25CE-420D-62F5-C665-74803FC50C82";
-	setAttr ".o" -type "double3" 1.8575610418902579 -0.19422835120002516 -0.88932234053254255 ;
+	setAttr ".o" -type "double3" 1.8575610418902579 -0.19422835120002518 -0.88932234053254255 ;
 createNode animBlendNodeAdditiveScale -n "Bigfoot_Rig:R_Eyelid_Jnt_Ctrl_scaleX_AnimLayer1";
 	rename -uid "B1770E61-41B6-9623-E3B2-BBBDEABACA0F";
 	setAttr ".ia" 1;
@@ -13633,7 +13380,7 @@ createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:CoG_Jnt_Ctrl_translateX_AnimL
 	rename -uid "BCD3085D-4FC1-34B7-5F2A-0ABC0DAA6660";
 createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:CoG_Jnt_Ctrl_translateY_AnimLayer1";
 	rename -uid "A25C29C7-4809-D4D5-8117-669E3E9C57F6";
-	setAttr ".o" -38.386990787625898;
+	setAttr ".o" -40.267027672319834;
 createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:CoG_Jnt_Ctrl_translateZ_AnimLayer1";
 	rename -uid "FFA52612-4FF2-3623-0ACB-789B6353BD58";
 	setAttr ".o" 5.3629332716244491;
@@ -13779,7 +13526,7 @@ createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:R_Finger_2_Jnt_2_Ctrl_transla
 	rename -uid "945AE88A-482C-F51F-061B-2AACB6E131DD";
 createNode animBlendNodeAdditiveRotation -n "Bigfoot_Rig:R_Finger_2_Jnt_2_Ctrl_rotate_AnimLayer1";
 	rename -uid "4B1D3EDD-418C-A491-50AE-698C5EC938F4";
-	setAttr ".o" -type "double3" -0.021386554862629598 0.018741716777119704 -0.066230032357257246 ;
+	setAttr ".o" -type "double3" -0.081567325522586998 0.071480036080178749 -0.25259826294395787 ;
 createNode animBlendNodeAdditiveScale -n "Bigfoot_Rig:R_Finger_2_Jnt_2_Ctrl_scaleX_AnimLayer1";
 	rename -uid "72D74254-422E-C1FE-9FF3-A590D65DDF58";
 	setAttr ".ia" 1;
@@ -13816,7 +13563,7 @@ createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:R_Finger_2_Jnt_1_Ctrl_transla
 	rename -uid "8B6337C6-4A19-4F02-9036-4A945FC8B9B7";
 createNode animBlendNodeAdditiveRotation -n "Bigfoot_Rig:R_Finger_2_Jnt_1_Ctrl_rotate_AnimLayer1";
 	rename -uid "83CCE0DB-4F65-F233-30CE-5B93D78254AC";
-	setAttr ".o" -type "double3" -0.014972712685983597 0.024175111392219568 -0.066203416489577227 ;
+	setAttr ".o" -type "double3" -0.057105229779100243 0.092202750426140623 -0.25249675126257465 ;
 createNode animBlendNodeAdditiveScale -n "Bigfoot_Rig:R_Finger_2_Jnt_1_Ctrl_scaleX_AnimLayer1";
 	rename -uid "8D1AF6E4-43CA-E8FC-4B6B-A3B89D877041";
 	setAttr ".ia" 1;
@@ -13943,7 +13690,7 @@ createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:Jaw_Ctrl_Ctrl_translateZ_Anim
 	setAttr ".o" -15.968155488877606;
 createNode animBlendNodeAdditiveRotation -n "Bigfoot_Rig:Jaw_Ctrl_Ctrl_rotate_AnimLayer1";
 	rename -uid "3B487F78-46B2-1862-4DCC-648E26945D68";
-	setAttr ".o" -type "double3" 0.71023041014785915 -0.099019488417028817 0.046834501364208019 ;
+	setAttr ".o" -type "double3" 1.1571857544650461 -0.1613334768174004 0.076307937567545808 ;
 createNode animBlendNodeAdditiveScale -n "Bigfoot_Rig:Jaw_Ctrl_Ctrl_scaleX_AnimLayer1";
 	rename -uid "17764065-4FF6-F16C-E4F8-938BB0B26F2B";
 	setAttr ".ia" 1;
@@ -14043,13 +13790,13 @@ createNode animBlendNodeBoolean -n "Bigfoot_Rig:Spine_2_Jnt_FK_Ctrl_visibility_A
 	setAttr ".o" yes;
 createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:Spine_2_Jnt_FK_Ctrl_translateX_AnimLayer1";
 	rename -uid "46F897D2-469F-1E0E-2C38-E9B2C3199897";
-	setAttr ".o" -0.74994783984050328;
+	setAttr ".o" -1.3739992352048194;
 createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:Spine_2_Jnt_FK_Ctrl_translateY_AnimLayer1";
 	rename -uid "A0BDEC36-4AFA-3D90-F6C3-39827D202385";
-	setAttr ".o" -0.49124185520467517;
+	setAttr ".o" -0.9000171711880256;
 createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:Spine_2_Jnt_FK_Ctrl_translateZ_AnimLayer1";
 	rename -uid "94BD498F-491D-B172-529E-DFA587B2C852";
-	setAttr ".o" -0.016886664029965529;
+	setAttr ".o" -0.030938502959443091;
 createNode animBlendNodeAdditiveRotation -n "Bigfoot_Rig:Spine_2_Jnt_FK_Ctrl_rotate_AnimLayer1";
 	rename -uid "8A7F2E06-4307-E171-A744-A483B90F13C6";
 	setAttr ".o" -type "double3" 6.5335528236382849 -11.541744626276097 -4.4303322709665842 ;
@@ -14089,7 +13836,7 @@ createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:L_Finger_3_Jnt_1_Ctrl_transla
 	rename -uid "5B3657C2-44CC-EFB6-AB33-5180E411AF1B";
 createNode animBlendNodeAdditiveRotation -n "Bigfoot_Rig:L_Finger_3_Jnt_1_Ctrl_rotate_AnimLayer1";
 	rename -uid "6929AB53-4E74-30E1-5465-6A9255B335AE";
-	setAttr ".o" -type "double3" 0.0990187541236736 0.033215018536350067 2.7336834084166495 ;
+	setAttr ".o" -type "double3" 0.42851705844404603 0.14374248762597081 1.0902386985312909 ;
 createNode animBlendNodeAdditiveScale -n "Bigfoot_Rig:L_Finger_3_Jnt_1_Ctrl_scaleX_AnimLayer1";
 	rename -uid "15EC4921-4B12-E0CA-911C-46921B9FB621";
 	setAttr ".ia" 1;
@@ -14154,7 +13901,7 @@ createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:R_Finger_3_Jnt_2_Ctrl_transla
 	rename -uid "01C74059-41EA-19D5-8C51-7AA48C8CC9BB";
 createNode animBlendNodeAdditiveRotation -n "Bigfoot_Rig:R_Finger_3_Jnt_2_Ctrl_rotate_AnimLayer1";
 	rename -uid "2526CE68-4B59-D3B5-9B71-DC83784B1043";
-	setAttr ".o" -type "double3" -0.069231359348338573 0.070642535639956858 -0.25633022761774038 ;
+	setAttr ".o" -type "double3" -0.36937463066948917 0.37690377246928181 -1.3676155436922122 ;
 createNode animBlendNodeAdditiveScale -n "Bigfoot_Rig:R_Finger_3_Jnt_2_Ctrl_scaleX_AnimLayer1";
 	rename -uid "E6BA0A5B-4EEF-0F13-D86F-D0A7EF5DACE6";
 	setAttr ".ia" 1;
@@ -14334,7 +14081,7 @@ createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:L_Finger_4_Jnt_3_Ctrl_transla
 	rename -uid "E8AF957A-4B85-A71B-EF06-AA8441787E1C";
 createNode animBlendNodeAdditiveRotation -n "Bigfoot_Rig:L_Finger_4_Jnt_3_Ctrl_rotate_AnimLayer1";
 	rename -uid "F2A223E1-40F5-8E36-4F11-869069BD59A4";
-	setAttr ".o" -type "double3" 0.12048900870021664 0.024407413081840544 22.523413917080028 ;
+	setAttr ".o" -type "double3" 0.52143249064281771 0.10562638310916175 20.893926911776258 ;
 createNode animBlendNodeAdditiveScale -n "Bigfoot_Rig:L_Finger_4_Jnt_3_Ctrl_scaleX_AnimLayer1";
 	rename -uid "646B245B-4582-D3A8-FA2D-97AF77E70196";
 	setAttr ".ia" 1;
@@ -14371,7 +14118,7 @@ createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:R_Finger_4_Jnt_3_Ctrl_transla
 	rename -uid "E0B3EA43-4248-E04E-5ADA-948091320165";
 createNode animBlendNodeAdditiveRotation -n "Bigfoot_Rig:R_Finger_4_Jnt_3_Ctrl_rotate_AnimLayer1";
 	rename -uid "D92C0A0F-479D-4BBD-C4E4-EEBC167D6551";
-	setAttr ".o" -type "double3" -0.066977597813433321 0.06797073830218274 -0.2575907465317685 ;
+	setAttr ".o" -type "double3" -0.35734998833386661 0.36264875618542602 -1.3743408732640079 ;
 createNode animBlendNodeAdditiveScale -n "Bigfoot_Rig:R_Finger_4_Jnt_3_Ctrl_scaleX_AnimLayer1";
 	rename -uid "6F3C6E24-4527-FF9D-61ED-A196631ABACC";
 	setAttr ".ia" 1;
@@ -14408,7 +14155,7 @@ createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:L_Finger_4_Jnt_2_Ctrl_transla
 	rename -uid "C9D73236-4709-A9C6-F324-43BB4086523C";
 createNode animBlendNodeAdditiveRotation -n "Bigfoot_Rig:L_Finger_4_Jnt_2_Ctrl_rotate_AnimLayer1";
 	rename -uid "717A941B-4F8A-042C-B06D-5D9B0E3F3131";
-	setAttr ".o" -type "double3" 0.10137454508599412 0.069558813345096476 -0.48891665564891901 ;
+	setAttr ".o" -type "double3" 0.43871206263710844 0.30102517798063116 -2.1158529912555775 ;
 createNode animBlendNodeAdditiveScale -n "Bigfoot_Rig:L_Finger_4_Jnt_2_Ctrl_scaleX_AnimLayer1";
 	rename -uid "D0A8954B-4028-215F-599F-5EBDA008FF87";
 	setAttr ".ia" 1;
@@ -14439,13 +14186,13 @@ createNode animBlendNodeBoolean -n "Bigfoot_Rig:L_Arm_3_Jnt_IK_Ctrl_visibility_A
 	setAttr ".o" yes;
 createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:L_Arm_3_Jnt_IK_Ctrl_translateX_AnimLayer1";
 	rename -uid "ECF3C761-4EE8-49D5-04BA-E1A15D4645CE";
-	setAttr ".o" -133.02816143034258;
+	setAttr ".o" -131.63600441865094;
 createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:L_Arm_3_Jnt_IK_Ctrl_translateY_AnimLayer1";
 	rename -uid "86584529-4AD4-E3AC-2011-D0B6FCE21C91";
-	setAttr ".o" -31.526208548519339;
+	setAttr ".o" -32.374040764972925;
 createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:L_Arm_3_Jnt_IK_Ctrl_translateZ_AnimLayer1";
 	rename -uid "C603C0F2-446D-AB0B-61C0-12ACBE80F7A7";
-	setAttr ".o" 182.11119114976609;
+	setAttr ".o" 181.89132436080428;
 createNode animBlendNodeAdditiveRotation -n "Bigfoot_Rig:L_Arm_3_Jnt_IK_Ctrl_rotate_AnimLayer1";
 	rename -uid "440FB317-43ED-CD43-3F8B-27A82CD53AE8";
 	setAttr ".o" -type "double3" -0.41592876896184516 -146.98951963278765 12.069213626093518 ;
@@ -14729,7 +14476,7 @@ createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:L_Finger_4_Jnt_1_Ctrl_transla
 	rename -uid "FD5855A1-4A0B-5A8E-D38B-988DDE393062";
 createNode animBlendNodeAdditiveRotation -n "Bigfoot_Rig:L_Finger_4_Jnt_1_Ctrl_rotate_AnimLayer1";
 	rename -uid "882D7DB1-4490-5D32-590F-3E99B267C7F7";
-	setAttr ".o" -type "double3" 0.1212620555540906 0.020216691515193608 14.122560461775736 ;
+	setAttr ".o" -type "double3" 0.52477795551756001 0.087490468409057248 12.492769841185739 ;
 createNode animBlendNodeAdditiveScale -n "Bigfoot_Rig:L_Finger_4_Jnt_1_Ctrl_scaleX_AnimLayer1";
 	rename -uid "E1615FC5-40BC-6BF4-5593-47B09DFE3606";
 	setAttr ".ia" 1;
@@ -14766,7 +14513,7 @@ createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:L_Finger_2_Jnt_3_Ctrl_transla
 	rename -uid "2B9040FD-401B-0EB3-1FDA-67B3247C31C6";
 createNode animBlendNodeAdditiveRotation -n "Bigfoot_Rig:L_Finger_2_Jnt_3_Ctrl_rotate_AnimLayer1";
 	rename -uid "FF33C809-408D-C6D2-57FF-D0AB55B46FDA";
-	setAttr ".o" -type "double3" 0.02641987203607301 0.054138139024758891 -0.50150968634574522 ;
+	setAttr ".o" -type "double3" 0.11433557157491424 0.23429012301597926 -2.1703510357811586 ;
 createNode animBlendNodeAdditiveScale -n "Bigfoot_Rig:L_Finger_2_Jnt_3_Ctrl_scaleX_AnimLayer1";
 	rename -uid "9BC49354-40A2-881F-B07A-EB973C270CAD";
 	setAttr ".ia" 1;
@@ -15013,7 +14760,7 @@ createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:L_Finger_2_Jnt_2_Ctrl_transla
 	rename -uid "B932F1AB-4D1D-2B35-79C0-8B9710C754BE";
 createNode animBlendNodeAdditiveRotation -n "Bigfoot_Rig:L_Finger_2_Jnt_2_Ctrl_rotate_AnimLayer1";
 	rename -uid "351A912A-4479-6838-737A-57BBF84E6D8E";
-	setAttr ".o" -type "double3" 0.026419872036072763 0.054138139024758752 -17.871708361843236 ;
+	setAttr ".o" -type "double3" 0.11433557157491316 0.23429012301597882 -19.540549711278651 ;
 createNode animBlendNodeAdditiveScale -n "Bigfoot_Rig:L_Finger_2_Jnt_2_Ctrl_scaleX_AnimLayer1";
 	rename -uid "0840BB6C-40C2-2EF0-3C19-49B87D165301";
 	setAttr ".ia" 1;
@@ -15115,7 +14862,7 @@ createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:R_Finger_2_Jnt_3_Ctrl_transla
 	rename -uid "2A27CC7A-422F-DE36-DD7A-40A29772147E";
 createNode animBlendNodeAdditiveRotation -n "Bigfoot_Rig:R_Finger_2_Jnt_3_Ctrl_rotate_AnimLayer1";
 	rename -uid "E7AB69C4-4746-A15D-DE0F-0299902C39A5";
-	setAttr ".o" -type "double3" -0.081567325522587761 0.071480036080177653 -0.2525982629439556 ;
+	setAttr ".o" -type "double3" -0.43519152336746503 0.38137214372045997 -1.3477041468046407 ;
 createNode animBlendNodeAdditiveScale -n "Bigfoot_Rig:R_Finger_2_Jnt_3_Ctrl_scaleX_AnimLayer1";
 	rename -uid "B1EDCF61-4FAD-3617-E916-F3834490D106";
 	setAttr ".ia" 1;
@@ -15189,7 +14936,7 @@ createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:L_Finger_3_Jnt_3_Ctrl_transla
 	rename -uid "67DD2B29-4A76-DB45-D9E6-01B514523FF3";
 createNode animBlendNodeAdditiveRotation -n "Bigfoot_Rig:L_Finger_3_Jnt_3_Ctrl_rotate_AnimLayer1";
 	rename -uid "2C2A1F52-4257-0B79-24CD-1F82E2DD0D0F";
-	setAttr ".o" -type "double3" 0.039326478041338479 0.096755097807312826 -0.49378141130018416 ;
+	setAttr ".o" -type "double3" 0.17019065568317135 0.41872077939973829 -2.1369058796723071 ;
 createNode animBlendNodeAdditiveScale -n "Bigfoot_Rig:L_Finger_3_Jnt_3_Ctrl_scaleX_AnimLayer1";
 	rename -uid "65879A62-47E1-B08A-82CF-B592E96E1513";
 	setAttr ".ia" 1;
@@ -15340,7 +15087,7 @@ createNode animBlendNodeAdditiveRotation -n "Bigfoot_Rig:Beard_Jnt_Ctrl_rotate_A
 createNode animBlendNodeAdditiveScale -n "Bigfoot_Rig:Beard_Jnt_Ctrl_scaleX_AnimLayer1";
 	rename -uid "7DF7C3F2-4E0D-B1A0-AC0D-4A8744045699";
 	setAttr ".ib" 1;
-	setAttr ".o" 0.99999999999999878;
+	setAttr ".o" 0.99999999999999922;
 createNode animBlendNodeAdditiveScale -n "Bigfoot_Rig:Beard_Jnt_Ctrl_scaleY_AnimLayer1";
 	rename -uid "6C43F94B-443C-5BC5-8622-57B25DE07088";
 	setAttr ".ib" 1;
@@ -15348,7 +15095,7 @@ createNode animBlendNodeAdditiveScale -n "Bigfoot_Rig:Beard_Jnt_Ctrl_scaleY_Anim
 createNode animBlendNodeAdditiveScale -n "Bigfoot_Rig:Beard_Jnt_Ctrl_scaleZ_AnimLayer1";
 	rename -uid "195D20A7-494E-DD0A-8040-BB933334259C";
 	setAttr ".ib" 1;
-	setAttr ".o" 1.0000000000000007;
+	setAttr ".o" 0.99999999999999989;
 createNode animBlendNodeAdditive -n "Bigfoot_Rig:Beard_Jnt_Ctrl_FollowTranslate_AnimLayer1";
 	rename -uid "876C31AA-4578-1EF3-C931-4CBE6AB43A5A";
 	setAttr ".ia" 1;
@@ -15372,7 +15119,7 @@ createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:R_Finger_3_Jnt_1_Ctrl_transla
 	rename -uid "C33FC204-45E8-8DD9-5F1A-AFB49805171E";
 createNode animBlendNodeAdditiveRotation -n "Bigfoot_Rig:R_Finger_3_Jnt_1_Ctrl_rotate_AnimLayer1";
 	rename -uid "2EE20F86-4A43-A8CF-39BC-A88535FD24AB";
-	setAttr ".o" -type "double3" -0.0086225114624177493 0.024457683204052841 -0.067122683158936811 ;
+	setAttr ".o" -type "double3" -0.032885857670616123 0.093280466173597282 -0.25600279158291744 ;
 createNode animBlendNodeAdditiveScale -n "Bigfoot_Rig:R_Finger_3_Jnt_1_Ctrl_scaleX_AnimLayer1";
 	rename -uid "EB9F8ACF-4711-EED0-EA92-E9AC2BC43DA8";
 	setAttr ".ia" 1;
@@ -15509,7 +15256,7 @@ createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:R_Finger_4_Jnt_2_Ctrl_transla
 	rename -uid "58E6DCA0-49A2-674A-E30D-CFAB68CF3782";
 createNode animBlendNodeAdditiveRotation -n "Bigfoot_Rig:R_Finger_4_Jnt_2_Ctrl_rotate_AnimLayer1";
 	rename -uid "28381A7D-4C01-D23B-7284-AFA628960685";
-	setAttr ".o" -type "double3" -0.066977597813433085 0.067970738302182837 -0.25759074653177017 ;
+	setAttr ".o" -type "double3" -0.35734998833386528 0.36264875618542669 -1.374340873264017 ;
 createNode animBlendNodeAdditiveScale -n "Bigfoot_Rig:R_Finger_4_Jnt_2_Ctrl_scaleX_AnimLayer1";
 	rename -uid "E3311DD4-4841-E99C-FC64-37BBA540C03C";
 	setAttr ".ia" 1;
@@ -15604,16 +15351,16 @@ createNode animBlendNodeBoolean -n "Bigfoot_Rig:R_Arm_3_Jnt_IK_Ctrl_visibility_A
 	setAttr ".o" yes;
 createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:R_Arm_3_Jnt_IK_Ctrl_translateX_AnimLayer1";
 	rename -uid "265952D0-432A-D54C-76B3-DDAEFAF9045F";
-	setAttr ".o" 2.1826445529961536;
+	setAttr ".o" 1.2471437141779655;
 createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:R_Arm_3_Jnt_IK_Ctrl_translateY_AnimLayer1";
 	rename -uid "8854EFB6-44CB-A9D9-52E5-4C8C6FBEF9DC";
-	setAttr ".o" 12.164302276715338;
+	setAttr ".o" 12.734028063698249;
 createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:R_Arm_3_Jnt_IK_Ctrl_translateZ_AnimLayer1";
 	rename -uid "B2501BAF-40BC-4675-C34B-919ECC9BA8CF";
-	setAttr ".o" -63.203665590317144;
+	setAttr ".o" -63.055919640974821;
 createNode animBlendNodeAdditiveRotation -n "Bigfoot_Rig:R_Arm_3_Jnt_IK_Ctrl_rotate_AnimLayer1";
 	rename -uid "19F3F8AB-46CF-5D97-043E-428F050AA98F";
-	setAttr ".o" -type "double3" 35.033430104526118 -67.613039045060205 5.359672357410914 ;
+	setAttr ".o" -type "double3" 37.501272526255057 -66.114067622944944 2.8606688019514537 ;
 createNode animBlendNodeAdditiveScale -n "Bigfoot_Rig:R_Arm_3_Jnt_IK_Ctrl_scaleX_AnimLayer1";
 	rename -uid "74E09BCD-4407-84A2-C7D6-C5B67153FB3E";
 	setAttr ".ia" 1;
@@ -15801,7 +15548,7 @@ createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:L_Finger_3_Jnt_2_Ctrl_transla
 	rename -uid "A53C28EE-47B9-FCF6-693D-48B8E3A4416B";
 createNode animBlendNodeAdditiveRotation -n "Bigfoot_Rig:L_Finger_3_Jnt_2_Ctrl_rotate_AnimLayer1";
 	rename -uid "EEA4FABA-40C6-7ACF-4A46-6987CCDC29D3";
-	setAttr ".o" -type "double3" 0.039326478041338209 0.096755097807312826 -24.835290037815572 ;
+	setAttr ".o" -type "double3" 0.17019065568317013 0.41872077939973829 -26.47841450618769 ;
 createNode animBlendNodeAdditiveScale -n "Bigfoot_Rig:L_Finger_3_Jnt_2_Ctrl_scaleX_AnimLayer1";
 	rename -uid "C4FC8AF3-4CAD-87CC-2DE8-66827F718578";
 	setAttr ".ia" 1;
@@ -15832,16 +15579,16 @@ createNode animBlendNodeBoolean -n "locator1_visibility_AnimLayer1";
 	setAttr ".o" yes;
 createNode animBlendNodeAdditiveDL -n "locator1_translateX_AnimLayer1";
 	rename -uid "30B8FC66-470B-369F-7031-40B4CA0B0E06";
-	setAttr ".o" 36.520666098980229;
+	setAttr ".o" 31.156307928547406;
 createNode animBlendNodeAdditiveDL -n "locator1_translateY_AnimLayer1";
 	rename -uid "EF4419E3-4E86-CCCE-026B-24A2D59618E0";
-	setAttr ".o" 275.03676489045517;
+	setAttr ".o" 294.71357307819557;
 createNode animBlendNodeAdditiveDL -n "locator1_translateZ_AnimLayer1";
 	rename -uid "3570302F-48A8-1EE5-AD36-B1B424A37024";
-	setAttr ".o" 131.06407887331738;
+	setAttr ".o" 159.27358069846019;
 createNode animBlendNodeAdditiveRotation -n "locator1_rotate_AnimLayer1";
 	rename -uid "A64E83E2-41E7-CA8C-A153-F993E7A38890";
-	setAttr ".o" -type "double3" -0.72173403865019459 -157.77206163629327 -46.957312513774475 ;
+	setAttr ".o" -type "double3" 6.6332634951729217 -167.65346523832667 -43.711697168902411 ;
 createNode animBlendNodeAdditiveScale -n "locator1_scaleX_AnimLayer1";
 	rename -uid "FE242F4C-4E21-BA6B-9771-B9996183CF8B";
 	setAttr ".ia" 1.0000000000000013;
@@ -15979,10 +15726,6 @@ createNode animLayer -n "AnimLayer2";
 	rename -uid "1DAECE4E-4E47-C153-B0A2-AFBC9D1DD73A";
 	setAttr -s 938 ".dsm";
 	setAttr -s 778 ".bnds";
-	setAttr ".mt" yes;
-	setAttr ".lo" yes;
-	setAttr ".pref" yes;
-	setAttr ".slct" yes;
 createNode animBlendNodeBoolean -n "Bigfoot_Rig:L_Finger_1_Jnt_2_Ctrl_visibility_AnimLayer2";
 	rename -uid "A483F09B-4508-4E00-6FBD-D18E9672A4CC";
 	setAttr ".ib" yes;
@@ -16026,7 +15769,7 @@ createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:L_Thumb_1_Jnt_Ctrl_translateZ
 	rename -uid "9E2460D0-4EC5-6CD3-F994-0CA7505D53CF";
 createNode animBlendNodeAdditiveRotation -n "Bigfoot_Rig:L_Thumb_1_Jnt_Ctrl_rotate_AnimLayer2";
 	rename -uid "3B4EE6A7-4E89-8E9D-F7D9-6E9B841CDF6C";
-	setAttr ".o" -type "double3" -19.20525074832489 0 51.2964140526053 ;
+	setAttr ".o" -type "double3" -19.205250748324893 0 51.2964140526053 ;
 createNode animBlendNodeAdditiveScale -n "Bigfoot_Rig:L_Thumb_1_Jnt_Ctrl_scaleX_AnimLayer2";
 	rename -uid "C0C1C97C-4EEC-A3CB-83FA-EFA49689FE56";
 	setAttr ".ib" 1;
@@ -16057,7 +15800,7 @@ createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:L_Finger_2_Jnt_1_Ctrl_transla
 	rename -uid "9FCA7D3E-45D8-FD46-479A-E68150194FAC";
 createNode animBlendNodeAdditiveRotation -n "Bigfoot_Rig:L_Finger_2_Jnt_1_Ctrl_rotate_AnimLayer2";
 	rename -uid "394ED418-4CA8-91D7-5C64-498CF007C783";
-	setAttr ".o" -type "double3" 0.052369860899223915 0.029771853379155801 4.7233519361537262 ;
+	setAttr ".o" -type "double3" 0.22663766013082939 0.12884172445281386 3.054590512070869 ;
 createNode animBlendNodeAdditiveScale -n "Bigfoot_Rig:L_Finger_2_Jnt_1_Ctrl_scaleX_AnimLayer2";
 	rename -uid "B2B5437B-4E51-0407-7BAF-9DB4E0A986AE";
 	setAttr ".ib" 1;
@@ -16112,16 +15855,16 @@ createNode animBlendNodeBoolean -n "Bigfoot_Rig:Spine_3_Jnt_FK_Ctrl_visibility_A
 	setAttr ".o" yes;
 createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:Spine_3_Jnt_FK_Ctrl_translateX_AnimLayer2";
 	rename -uid "C7273BCC-4A92-357A-5914-259523541FA8";
-	setAttr ".o" -0.38024201729817014;
+	setAttr ".o" -0.80017259532443208;
 createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:Spine_3_Jnt_FK_Ctrl_translateY_AnimLayer2";
 	rename -uid "8F12D248-4717-7725-D901-6CAEE83EBEAE";
-	setAttr ".o" -0.26445567721067276;
+	setAttr ".o" -0.55651447224468176;
 createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:Spine_3_Jnt_FK_Ctrl_translateZ_AnimLayer2";
 	rename -uid "4E2BD830-4341-389F-FA7B-13B39D9DFDDE";
-	setAttr ".o" 0.098747488690149154;
+	setAttr ".o" 0.20780195431428697;
 createNode animBlendNodeAdditiveRotation -n "Bigfoot_Rig:Spine_3_Jnt_FK_Ctrl_rotate_AnimLayer2";
 	rename -uid "15BE0BB5-4A30-AB8F-9E61-02B6BD9573A5";
-	setAttr ".o" -type "double3" 0 0 -7.6330931508722131 ;
+	setAttr ".o" -type "double3" 3.9429154789820213 -5.132251586259585 -5.4628635910987224 ;
 createNode animBlendNodeAdditiveScale -n "Bigfoot_Rig:Spine_3_Jnt_FK_Ctrl_scaleX_AnimLayer2";
 	rename -uid "ABCBF2AE-4BF4-4B83-A2C3-F2801766A546";
 	setAttr ".ib" 1;
@@ -16183,7 +15926,7 @@ createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:Spine_1_Jnt_FK_Ctrl_translate
 	rename -uid "9E976592-430F-D60C-B2A5-CC9F6D23AC97";
 createNode animBlendNodeAdditiveRotation -n "Bigfoot_Rig:Spine_1_Jnt_FK_Ctrl_rotate_AnimLayer2";
 	rename -uid "0D9C44F0-4FBF-352E-2DEA-D8A82087B7A1";
-	setAttr ".o" -type "double3" 6.4130462849896599 -5.5019582216418126 -0.61743820531321969 ;
+	setAttr ".o" -type "double3" 4.5263023038621206 -5.4637567438971546 -0.89520647288366206 ;
 createNode animBlendNodeAdditiveScale -n "Bigfoot_Rig:Spine_1_Jnt_FK_Ctrl_scaleX_AnimLayer2";
 	rename -uid "CFD53AC3-4E91-6394-C9C8-768EFEA5B1C1";
 	setAttr ".ib" 1;
@@ -16214,7 +15957,7 @@ createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:R_Finger_4_Jnt_1_Ctrl_transla
 	rename -uid "E68EBD3E-4189-6018-9ECB-348E8294F18D";
 createNode animBlendNodeAdditiveRotation -n "Bigfoot_Rig:R_Finger_4_Jnt_1_Ctrl_rotate_AnimLayer2";
 	rename -uid "5D49A534-4A22-0EE3-9C73-3FB859E70E73";
-	setAttr ".o" -type "double3" -0.031972926138524212 0.089906706764527194 -0.25728937982084515 ;
+	setAttr ".o" -type "double3" -0.17058725836102853 0.47968517328634908 -1.3727329716051184 ;
 createNode animBlendNodeAdditiveScale -n "Bigfoot_Rig:R_Finger_4_Jnt_1_Ctrl_scaleX_AnimLayer2";
 	rename -uid "DEED3742-4845-B63B-7F21-5FB16169C3E9";
 	setAttr ".ib" 1;
@@ -16299,7 +16042,7 @@ createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:R_Finger_1_Jnt_3_Ctrl_transla
 	rename -uid "1447A10F-4C49-3B67-4D23-1098B95F24F0";
 createNode animBlendNodeAdditiveRotation -n "Bigfoot_Rig:R_Finger_1_Jnt_3_Ctrl_rotate_AnimLayer2";
 	rename -uid "FBB6A27C-4E1B-4559-69C1-E5A945742E4A";
-	setAttr ".o" -type "double3" -0.093680958141134127 -0.0219368319732435 -0.25610794553909372 ;
+	setAttr ".o" -type "double3" -0.4998221852042215 -0.11704102424748812 -1.3664295874799199 ;
 createNode animBlendNodeAdditiveScale -n "Bigfoot_Rig:R_Finger_1_Jnt_3_Ctrl_scaleX_AnimLayer2";
 	rename -uid "B872D5D7-4311-DB80-3A2A-2884DC11BB5A";
 	setAttr ".ib" 1;
@@ -16324,17 +16067,17 @@ createNode animBlendNodeBoolean -n "Bigfoot_Rig:Head_Ctrl_visibility_AnimLayer2"
 	setAttr ".o" yes;
 createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:Head_Ctrl_translateX_AnimLayer2";
 	rename -uid "BBFD238D-4B4C-E200-294C-2EB822E96B50";
-	setAttr ".o" -0.0041686733948082784;
+	setAttr ".o" -0.0076375365752149029;
 createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:Head_Ctrl_translateY_AnimLayer2";
 	rename -uid "920EF0D1-459B-8EFD-1CBA-4588FC7F48E5";
-	setAttr ".o" -0.017146973374658762;
+	setAttr ".o" -0.031415422581748086;
 createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:Head_Ctrl_translateZ_AnimLayer2";
 	rename -uid "B1EC68DC-45F2-E8EC-E8B6-998ACC6B9939";
-	setAttr ".o" 0.0093962218504067638;
+	setAttr ".o" 0.017215066102489809;
 createNode animBlendNodeAdditiveRotation -n "Bigfoot_Rig:Head_Ctrl_rotate_AnimLayer2";
 	rename -uid "F27B01B9-4BD6-33D6-21DE-2D9856E11C00";
-	setAttr ".ib" -type "double3" -2.3235957541261363 -0.019799782970185021 0.018726060162025947 ;
-	setAttr ".o" -type "double3" -20.778610599911566 7.0728036520080844 -8.0204497288476997 ;
+	setAttr ".ib" -type "double3" -2.3235957541261367 -0.019799782970185021 0.018726060162025947 ;
+	setAttr ".o" -type "double3" -23.102227924304994 7.0530038690378989 -8.0017236686856741 ;
 createNode animBlendNodeAdditiveScale -n "Bigfoot_Rig:Head_Ctrl_scaleX_AnimLayer2";
 	rename -uid "A7D6AF55-4AA1-D2FA-1EC0-7DA643162B18";
 	setAttr ".ib" 1;
@@ -16365,7 +16108,7 @@ createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:R_Finger_1_Jnt_2_Ctrl_transla
 	rename -uid "E82F8859-4A97-D19A-A51C-03A6681D9A6A";
 createNode animBlendNodeAdditiveRotation -n "Bigfoot_Rig:R_Finger_1_Jnt_2_Ctrl_rotate_AnimLayer2";
 	rename -uid "28823ABE-4965-7E2E-CB3F-48B51F3FB205";
-	setAttr ".o" -type "double3" -0.093680958141134169 -0.021936831973243431 -0.256107945539094 ;
+	setAttr ".o" -type "double3" -0.49982218520422161 -0.11704102424748775 -1.3664295874799213 ;
 createNode animBlendNodeAdditiveScale -n "Bigfoot_Rig:R_Finger_1_Jnt_2_Ctrl_scaleX_AnimLayer2";
 	rename -uid "10873B99-4723-E741-601D-CC8B15DDD67F";
 	setAttr ".ib" 1;
@@ -16450,7 +16193,7 @@ createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:R_Finger_3_Jnt_3_Ctrl_transla
 	rename -uid "4B2DE6F3-416B-0324-3814-1F8394E0AD7E";
 createNode animBlendNodeAdditiveRotation -n "Bigfoot_Rig:R_Finger_3_Jnt_3_Ctrl_rotate_AnimLayer2";
 	rename -uid "036C8680-4227-D95C-5841-69B6FEE0F698";
-	setAttr ".o" -type "double3" -0.069231359348339544 0.070642535639956358 -0.25633022761773877 ;
+	setAttr ".o" -type "double3" -0.36937463066949433 0.37690377246927914 -1.3676155436922033 ;
 createNode animBlendNodeAdditiveScale -n "Bigfoot_Rig:R_Finger_3_Jnt_3_Ctrl_scaleX_AnimLayer2";
 	rename -uid "B91534C5-4AA6-D9F4-4CE6-D9B370BAA700";
 	setAttr ".ib" 1;
@@ -16481,7 +16224,7 @@ createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:R_Eyelid_Jnt_Ctrl_translateZ_
 	rename -uid "7F64B426-45A7-5418-29B0-52939DA0A548";
 createNode animBlendNodeAdditiveRotation -n "Bigfoot_Rig:R_Eyelid_Jnt_Ctrl_rotate_AnimLayer2";
 	rename -uid "B92D9D18-44FD-B4A6-53C9-038DD0E369FE";
-	setAttr ".o" -type "double3" 1.8575610418902579 -0.19422835120002516 -0.88932234053254255 ;
+	setAttr ".o" -type "double3" 1.8575610418902579 -0.19422835120002518 -0.88932234053254255 ;
 createNode animBlendNodeAdditiveScale -n "Bigfoot_Rig:R_Eyelid_Jnt_Ctrl_scaleX_AnimLayer2";
 	rename -uid "70EED871-4274-EFC2-C213-5FBE5970F17C";
 	setAttr ".ib" 1;
@@ -16508,13 +16251,13 @@ createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:CoG_Jnt_Ctrl_translateX_AnimL
 	rename -uid "21B96EF6-424F-C27A-03F9-42BD6DD1ACEC";
 createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:CoG_Jnt_Ctrl_translateY_AnimLayer2";
 	rename -uid "4B66CC2E-4EAF-B470-4931-C1883AD84781";
-	setAttr ".o" -38.386990787625898;
+	setAttr ".o" -39.96631924589483;
 createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:CoG_Jnt_Ctrl_translateZ_AnimLayer2";
 	rename -uid "42BCB702-408A-2131-D9D1-0997C0460585";
-	setAttr ".o" 5.3629332716244491;
+	setAttr ".o" 27.13045718056593;
 createNode animBlendNodeAdditiveRotation -n "Bigfoot_Rig:CoG_Jnt_Ctrl_rotate_AnimLayer2";
 	rename -uid "3CEB46BD-4140-67AD-0A59-CFB63546569E";
-	setAttr ".o" -type "double3" 4.8730619515226845 0 0 ;
+	setAttr ".o" -type "double3" 9.622948218158669 0 0 ;
 createNode animBlendNodeAdditiveScale -n "Bigfoot_Rig:CoG_Jnt_Ctrl_scaleX_AnimLayer2";
 	rename -uid "FC5CC609-4106-B4BD-E17A-279B41B42507";
 	setAttr ".ib" 1;
@@ -16637,7 +16380,7 @@ createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:R_Finger_2_Jnt_2_Ctrl_transla
 	rename -uid "CA502FA4-4B2A-130E-D152-23956C4F6E97";
 createNode animBlendNodeAdditiveRotation -n "Bigfoot_Rig:R_Finger_2_Jnt_2_Ctrl_rotate_AnimLayer2";
 	rename -uid "CA4652B1-487C-75CC-60F9-E8835A1BE0FF";
-	setAttr ".o" -type "double3" -0.021386554862629598 0.018741716777119704 -0.066230032357257246 ;
+	setAttr ".o" -type "double3" -0.081567325522586998 0.071480036080178749 -0.25259826294395787 ;
 createNode animBlendNodeAdditiveScale -n "Bigfoot_Rig:R_Finger_2_Jnt_2_Ctrl_scaleX_AnimLayer2";
 	rename -uid "92C0CEC8-43D4-863C-4726-CA9BA6523146";
 	setAttr ".ib" 1;
@@ -16668,7 +16411,7 @@ createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:R_Finger_2_Jnt_1_Ctrl_transla
 	rename -uid "E225292A-483A-E43A-096B-4C88FAE4EFBD";
 createNode animBlendNodeAdditiveRotation -n "Bigfoot_Rig:R_Finger_2_Jnt_1_Ctrl_rotate_AnimLayer2";
 	rename -uid "948B38B3-469F-63C1-2DB4-21A0D7FBE3B1";
-	setAttr ".o" -type "double3" -0.014972712685983597 0.024175111392219568 -0.066203416489577227 ;
+	setAttr ".o" -type "double3" -0.057105229779100243 0.092202750426140623 -0.25249675126257465 ;
 createNode animBlendNodeAdditiveScale -n "Bigfoot_Rig:R_Finger_2_Jnt_1_Ctrl_scaleX_AnimLayer2";
 	rename -uid "AEDF5A75-4D9F-191B-BAD0-9CA9F92DE000";
 	setAttr ".ib" 1;
@@ -16776,7 +16519,7 @@ createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:Jaw_Ctrl_Ctrl_translateZ_Anim
 	setAttr ".o" -15.968155488877606;
 createNode animBlendNodeAdditiveRotation -n "Bigfoot_Rig:Jaw_Ctrl_Ctrl_rotate_AnimLayer2";
 	rename -uid "B7034574-4E7A-A9DE-CC75-DAAAC24B5B70";
-	setAttr ".o" -type "double3" 0.71023041014785915 -0.099019488417028817 0.046834501364208019 ;
+	setAttr ".o" -type "double3" 9.3289254822276355 -0.1613334768174004 0.076307937567545808 ;
 createNode animBlendNodeAdditiveScale -n "Bigfoot_Rig:Jaw_Ctrl_Ctrl_scaleX_AnimLayer2";
 	rename -uid "5D88B817-45B3-E8AB-7960-0797B6E872CC";
 	setAttr ".ib" 1;
@@ -16860,16 +16603,16 @@ createNode animBlendNodeBoolean -n "Bigfoot_Rig:Spine_2_Jnt_FK_Ctrl_visibility_A
 	setAttr ".o" yes;
 createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:Spine_2_Jnt_FK_Ctrl_translateX_AnimLayer2";
 	rename -uid "FDAF16FA-45A6-73C9-84A3-8585457C100B";
-	setAttr ".o" -0.74994783984050328;
+	setAttr ".o" -1.5777639721272554;
 createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:Spine_2_Jnt_FK_Ctrl_translateY_AnimLayer2";
 	rename -uid "47AFF07E-4690-1E83-9AD7-41B669A270CE";
-	setAttr ".o" -0.49124185520467517;
+	setAttr ".o" -1.0334901436714965;
 createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:Spine_2_Jnt_FK_Ctrl_translateZ_AnimLayer2";
 	rename -uid "39D08D88-43FE-705C-FDBA-D695C673FD5C";
-	setAttr ".o" -0.016886664029965529;
+	setAttr ".o" -0.035526697592146203;
 createNode animBlendNodeAdditiveRotation -n "Bigfoot_Rig:Spine_2_Jnt_FK_Ctrl_rotate_AnimLayer2";
 	rename -uid "46E2F24C-4F51-2C8D-859F-288B7DBE59A3";
-	setAttr ".o" -type "double3" 6.5335528236382849 -11.541744626276097 -4.4303322709665842 ;
+	setAttr ".o" -type "double3" 6.5804484548069508 -11.665944398285481 -3.0735506420866874 ;
 createNode animBlendNodeAdditiveScale -n "Bigfoot_Rig:Spine_2_Jnt_FK_Ctrl_scaleX_AnimLayer2";
 	rename -uid "FAAC3E7C-4AAE-D2DF-FD01-B8AF5AD2229D";
 	setAttr ".ib" 1;
@@ -16900,7 +16643,7 @@ createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:L_Finger_3_Jnt_1_Ctrl_transla
 	rename -uid "0B8D37C0-434C-220E-E165-6382F8BEC0DD";
 createNode animBlendNodeAdditiveRotation -n "Bigfoot_Rig:L_Finger_3_Jnt_1_Ctrl_rotate_AnimLayer2";
 	rename -uid "7F914B95-4FA5-9360-C34E-A2A518005E30";
-	setAttr ".o" -type "double3" 0.0990187541236736 0.033215018536350067 2.7336834084166495 ;
+	setAttr ".o" -type "double3" 0.42851705844404603 0.14374248762597081 1.0902386985312909 ;
 createNode animBlendNodeAdditiveScale -n "Bigfoot_Rig:L_Finger_3_Jnt_1_Ctrl_scaleX_AnimLayer2";
 	rename -uid "F80E9F12-407A-09B3-70EC-0AA7B247EB9D";
 	setAttr ".ib" 1;
@@ -16955,7 +16698,7 @@ createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:R_Finger_3_Jnt_2_Ctrl_transla
 	rename -uid "27CCF71A-472C-CF54-8660-4ABCCCC7557F";
 createNode animBlendNodeAdditiveRotation -n "Bigfoot_Rig:R_Finger_3_Jnt_2_Ctrl_rotate_AnimLayer2";
 	rename -uid "86B2CAD3-475E-C283-A233-F7B66EBDDB13";
-	setAttr ".o" -type "double3" -0.069231359348338573 0.070642535639956858 -0.25633022761774038 ;
+	setAttr ".o" -type "double3" -0.36937463066948917 0.37690377246928181 -1.3676155436922122 ;
 createNode animBlendNodeAdditiveScale -n "Bigfoot_Rig:R_Finger_3_Jnt_2_Ctrl_scaleX_AnimLayer2";
 	rename -uid "D3F0D424-4F7E-1A53-06CE-B6B77D0BB6BD";
 	setAttr ".ib" 1;
@@ -16980,13 +16723,13 @@ createNode animBlendNodeBoolean -n "Bigfoot_Rig:L_Arm_IK_PV_Ctrl_visibility_Anim
 	setAttr ".o" yes;
 createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:L_Arm_IK_PV_Ctrl_translateX_AnimLayer2";
 	rename -uid "9B0BA52C-4A9A-20C3-FC3A-C89FD7C2A1B6";
-	setAttr ".o" 55.613360596884277;
+	setAttr ".o" 68.535638705255735;
 createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:L_Arm_IK_PV_Ctrl_translateY_AnimLayer2";
 	rename -uid "E0092E0A-4CD0-88B3-8E1F-2585D886B680";
-	setAttr ".o" 48.933258420615211;
+	setAttr ".o" 40.858353032786262;
 createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:L_Arm_IK_PV_Ctrl_translateZ_AnimLayer2";
 	rename -uid "EC4D7177-4CB8-E06F-6C41-C8AA6EA77212";
-	setAttr ".o" 61.125875315347074;
+	setAttr ".o" 57.74444732247575;
 createNode animBlendNodeAdditiveRotation -n "Bigfoot_Rig:L_Arm_IK_PV_Ctrl_rotate_AnimLayer2";
 	rename -uid "68FC0A09-4D37-5FCC-B6DF-69B003966A35";
 createNode animBlendNodeAdditiveScale -n "Bigfoot_Rig:L_Arm_IK_PV_Ctrl_scaleX_AnimLayer2";
@@ -17009,10 +16752,13 @@ createNode animBlendNodeBoolean -n "Bigfoot_Rig:R_Eyebrow_Ctrl_visibility_AnimLa
 	setAttr ".o" yes;
 createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:R_Eyebrow_Ctrl_translateX_AnimLayer2";
 	rename -uid "BED0C9AB-4639-34C9-BA48-949F43530CC9";
+	setAttr ".o" -0.17776756078956168;
 createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:R_Eyebrow_Ctrl_translateY_AnimLayer2";
 	rename -uid "4B00072C-4517-6E9D-B945-66A46A5EA854";
+	setAttr ".o" 1.4385764799066232;
 createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:R_Eyebrow_Ctrl_translateZ_AnimLayer2";
 	rename -uid "C7C19BE0-4655-59EE-0A20-8289627D0884";
+	setAttr ".o" 0.029536896329938854;
 createNode animBlendNodeAdditiveRotation -n "Bigfoot_Rig:R_Eyebrow_Ctrl_rotate_AnimLayer2";
 	rename -uid "F0C72C17-4A4E-DE65-6938-808D247EE60F";
 createNode animBlendNodeAdditiveScale -n "Bigfoot_Rig:R_Eyebrow_Ctrl_scaleX_AnimLayer2";
@@ -17107,7 +16853,7 @@ createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:L_Finger_4_Jnt_3_Ctrl_transla
 	rename -uid "BBC8CADF-426D-1D37-D0EA-8D81384D4091";
 createNode animBlendNodeAdditiveRotation -n "Bigfoot_Rig:L_Finger_4_Jnt_3_Ctrl_rotate_AnimLayer2";
 	rename -uid "0012CE62-41DE-FD9D-C746-149888AFD276";
-	setAttr ".o" -type "double3" 0.12048900870021664 0.024407413081840544 22.523413917080028 ;
+	setAttr ".o" -type "double3" 0.52143249064281771 0.10562638310916175 20.893926911776258 ;
 createNode animBlendNodeAdditiveScale -n "Bigfoot_Rig:L_Finger_4_Jnt_3_Ctrl_scaleX_AnimLayer2";
 	rename -uid "D83D7A70-4753-6E88-0FF8-5DA71DD73FF4";
 	setAttr ".ib" 1;
@@ -17138,7 +16884,7 @@ createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:R_Finger_4_Jnt_3_Ctrl_transla
 	rename -uid "8E495FC4-4FBF-00DE-58D9-50AB76CF61A9";
 createNode animBlendNodeAdditiveRotation -n "Bigfoot_Rig:R_Finger_4_Jnt_3_Ctrl_rotate_AnimLayer2";
 	rename -uid "E43C28BC-4819-712B-21E7-8ABD324D99DA";
-	setAttr ".o" -type "double3" -0.066977597813433321 0.06797073830218274 -0.2575907465317685 ;
+	setAttr ".o" -type "double3" -0.35734998833386661 0.36264875618542602 -1.3743408732640079 ;
 createNode animBlendNodeAdditiveScale -n "Bigfoot_Rig:R_Finger_4_Jnt_3_Ctrl_scaleX_AnimLayer2";
 	rename -uid "DE8877A6-4FD7-F5F9-0386-F8BBE55C85CE";
 	setAttr ".ib" 1;
@@ -17169,7 +16915,7 @@ createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:L_Finger_4_Jnt_2_Ctrl_transla
 	rename -uid "4F21A34B-460D-829B-ECC8-9D8696601095";
 createNode animBlendNodeAdditiveRotation -n "Bigfoot_Rig:L_Finger_4_Jnt_2_Ctrl_rotate_AnimLayer2";
 	rename -uid "19EF84DC-4C27-D267-2EBC-4B98CDB13B6B";
-	setAttr ".o" -type "double3" 0.10137454508599412 0.069558813345096476 -0.48891665564891901 ;
+	setAttr ".o" -type "double3" 0.43871206263710844 0.30102517798063116 -2.1158529912555775 ;
 createNode animBlendNodeAdditiveScale -n "Bigfoot_Rig:L_Finger_4_Jnt_2_Ctrl_scaleX_AnimLayer2";
 	rename -uid "5C9B99CE-404E-4FDD-7FA9-E3B4C2754379";
 	setAttr ".ib" 1;
@@ -17194,16 +16940,16 @@ createNode animBlendNodeBoolean -n "Bigfoot_Rig:L_Arm_3_Jnt_IK_Ctrl_visibility_A
 	setAttr ".o" yes;
 createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:L_Arm_3_Jnt_IK_Ctrl_translateX_AnimLayer2";
 	rename -uid "2967C7B4-4756-958C-79A0-549881C68A66";
-	setAttr ".o" -133.02816143034258;
+	setAttr ".o" -110.82139870239985;
 createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:L_Arm_3_Jnt_IK_Ctrl_translateY_AnimLayer2";
 	rename -uid "AD938245-4AFE-EBC6-D0CC-CC9A594469B5";
-	setAttr ".o" -31.526208548519339;
+	setAttr ".o" -13.468199820141564;
 createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:L_Arm_3_Jnt_IK_Ctrl_translateZ_AnimLayer2";
 	rename -uid "0B729A6C-404F-66F6-8507-CB81F15C55BD";
-	setAttr ".o" 182.11119114976609;
+	setAttr ".o" 177.21881802312043;
 createNode animBlendNodeAdditiveRotation -n "Bigfoot_Rig:L_Arm_3_Jnt_IK_Ctrl_rotate_AnimLayer2";
 	rename -uid "B1BD8975-48CA-6176-613B-66832155F17A";
-	setAttr ".o" -type "double3" -0.41592876896184516 -146.98951963278765 12.069213626093518 ;
+	setAttr ".o" -type "double3" 4.0231797869557697 -121.3708271634373 8.6345192234884482 ;
 createNode animBlendNodeAdditiveScale -n "Bigfoot_Rig:L_Arm_3_Jnt_IK_Ctrl_scaleX_AnimLayer2";
 	rename -uid "1AC0D5D2-40CF-084D-3267-7A9CE839A8A3";
 	setAttr ".ib" 1;
@@ -17238,7 +16984,7 @@ createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:L_Clav_Jnt_Ctrl_translateZ_An
 	rename -uid "4BA28CB3-4CDD-E857-4BF4-AAABF575C0A0";
 createNode animBlendNodeAdditiveRotation -n "Bigfoot_Rig:L_Clav_Jnt_Ctrl_rotate_AnimLayer2";
 	rename -uid "FE783A2D-496A-DCF9-A6FE-F0AAF269C95F";
-	setAttr ".o" -type "double3" -3.5950663022205958 -24.308197006661477 31.326619326681381 ;
+	setAttr ".o" -type "double3" -4.0987389185292269 -25.625518036561445 26.271141538775876 ;
 createNode animBlendNodeAdditiveScale -n "Bigfoot_Rig:L_Clav_Jnt_Ctrl_scaleX_AnimLayer2";
 	rename -uid "E0968D31-438C-8D0F-8DFF-0095986038EF";
 	setAttr ".ib" 1;
@@ -17442,7 +17188,7 @@ createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:L_Finger_4_Jnt_1_Ctrl_transla
 	rename -uid "A3DC0D60-419F-3858-4A85-9DA9E183BB84";
 createNode animBlendNodeAdditiveRotation -n "Bigfoot_Rig:L_Finger_4_Jnt_1_Ctrl_rotate_AnimLayer2";
 	rename -uid "50607BF3-400D-943D-B8CC-E793DB1E3A25";
-	setAttr ".o" -type "double3" 0.1212620555540906 0.020216691515193608 14.122560461775736 ;
+	setAttr ".o" -type "double3" 0.52477795551756001 0.087490468409057248 12.492769841185739 ;
 createNode animBlendNodeAdditiveScale -n "Bigfoot_Rig:L_Finger_4_Jnt_1_Ctrl_scaleX_AnimLayer2";
 	rename -uid "B27191F3-4684-43F0-A0CB-2C8E0489ADA0";
 	setAttr ".ib" 1;
@@ -17473,7 +17219,7 @@ createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:L_Finger_2_Jnt_3_Ctrl_transla
 	rename -uid "A9369C76-4F18-BD20-EB76-D99DAB75AB10";
 createNode animBlendNodeAdditiveRotation -n "Bigfoot_Rig:L_Finger_2_Jnt_3_Ctrl_rotate_AnimLayer2";
 	rename -uid "57AC3B22-4F9F-BC6D-2641-35B2AA7351F5";
-	setAttr ".o" -type "double3" 0.02641987203607301 0.054138139024758891 -0.50150968634574522 ;
+	setAttr ".o" -type "double3" 0.11433557157491424 0.23429012301597926 -2.1703510357811586 ;
 createNode animBlendNodeAdditiveScale -n "Bigfoot_Rig:L_Finger_2_Jnt_3_Ctrl_scaleX_AnimLayer2";
 	rename -uid "528CB353-4E8C-4B29-F746-02B1BB3B59E2";
 	setAttr ".ib" 1;
@@ -17626,7 +17372,7 @@ createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:R_Clav_Jnt_Ctrl_translateZ_An
 	rename -uid "821C7BF6-4028-B561-5A5E-EABE2C2EB573";
 createNode animBlendNodeAdditiveRotation -n "Bigfoot_Rig:R_Clav_Jnt_Ctrl_rotate_AnimLayer2";
 	rename -uid "A5203187-47A6-8273-4715-5790AB693343";
-	setAttr ".o" -type "double3" -0.86971804848749534 -6.5966486745698889 12.781619612745793 ;
+	setAttr ".o" -type "double3" 0.64746666165823152 -8.4187818240328056 6.2594248261403687 ;
 createNode animBlendNodeAdditiveScale -n "Bigfoot_Rig:R_Clav_Jnt_Ctrl_scaleX_AnimLayer2";
 	rename -uid "7FEC5C7F-4EBE-979A-5533-968EFB8DC574";
 	setAttr ".ib" 1;
@@ -17681,7 +17427,7 @@ createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:L_Finger_2_Jnt_2_Ctrl_transla
 	rename -uid "698ECE7A-4930-2CC4-08D5-BE83FB839A4D";
 createNode animBlendNodeAdditiveRotation -n "Bigfoot_Rig:L_Finger_2_Jnt_2_Ctrl_rotate_AnimLayer2";
 	rename -uid "0DC99E7B-48C7-7CAE-295E-C7B3FCB0951E";
-	setAttr ".o" -type "double3" 0.026419872036072763 0.054138139024758752 -17.871708361843236 ;
+	setAttr ".o" -type "double3" 0.11433557157491316 0.23429012301597882 -19.540549711278651 ;
 createNode animBlendNodeAdditiveScale -n "Bigfoot_Rig:L_Finger_2_Jnt_2_Ctrl_scaleX_AnimLayer2";
 	rename -uid "E4CBC566-4585-814B-6561-868243003ACB";
 	setAttr ".ib" 1;
@@ -17767,7 +17513,7 @@ createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:R_Finger_2_Jnt_3_Ctrl_transla
 	rename -uid "10FB6F79-4257-696A-111F-C4A62EE2E925";
 createNode animBlendNodeAdditiveRotation -n "Bigfoot_Rig:R_Finger_2_Jnt_3_Ctrl_rotate_AnimLayer2";
 	rename -uid "87A26C71-4B46-608E-2328-669AC6940772";
-	setAttr ".o" -type "double3" -0.081567325522587761 0.071480036080177653 -0.2525982629439556 ;
+	setAttr ".o" -type "double3" -0.43519152336746503 0.38137214372045997 -1.3477041468046407 ;
 createNode animBlendNodeAdditiveScale -n "Bigfoot_Rig:R_Finger_2_Jnt_3_Ctrl_scaleX_AnimLayer2";
 	rename -uid "5309A4E3-48D2-0BAD-3460-299D43040F24";
 	setAttr ".ib" 1;
@@ -17829,7 +17575,7 @@ createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:L_Finger_3_Jnt_3_Ctrl_transla
 	rename -uid "A27C5E7D-4E2C-C4A5-3A38-1D85BF168764";
 createNode animBlendNodeAdditiveRotation -n "Bigfoot_Rig:L_Finger_3_Jnt_3_Ctrl_rotate_AnimLayer2";
 	rename -uid "F3AB5BC6-4B6C-A1BE-379A-3DBBCF7A9D7E";
-	setAttr ".o" -type "double3" 0.039326478041338479 0.096755097807312826 -0.49378141130018416 ;
+	setAttr ".o" -type "double3" 0.17019065568317135 0.41872077939973829 -2.1369058796723071 ;
 createNode animBlendNodeAdditiveScale -n "Bigfoot_Rig:L_Finger_3_Jnt_3_Ctrl_scaleX_AnimLayer2";
 	rename -uid "40C2F237-4A39-DA9F-89D1-5A849F893CD3";
 	setAttr ".ib" 1;
@@ -17958,7 +17704,7 @@ createNode animBlendNodeAdditiveRotation -n "Bigfoot_Rig:Beard_Jnt_Ctrl_rotate_A
 createNode animBlendNodeAdditiveScale -n "Bigfoot_Rig:Beard_Jnt_Ctrl_scaleX_AnimLayer2";
 	rename -uid "4949F136-4FD3-8251-3B2B-1E89319192FD";
 	setAttr ".ib" 1;
-	setAttr ".o" 0.99999999999999878;
+	setAttr ".o" 0.99999999999999922;
 createNode animBlendNodeAdditiveScale -n "Bigfoot_Rig:Beard_Jnt_Ctrl_scaleY_AnimLayer2";
 	rename -uid "670F5BD6-41ED-FEF7-5FA8-82AC04903A27";
 	setAttr ".ib" 1;
@@ -17966,7 +17712,7 @@ createNode animBlendNodeAdditiveScale -n "Bigfoot_Rig:Beard_Jnt_Ctrl_scaleY_Anim
 createNode animBlendNodeAdditiveScale -n "Bigfoot_Rig:Beard_Jnt_Ctrl_scaleZ_AnimLayer2";
 	rename -uid "B68AA555-474C-BB0C-E4E4-9BA7CC8613C6";
 	setAttr ".ib" 1;
-	setAttr ".o" 1.0000000000000007;
+	setAttr ".o" 0.99999999999999989;
 createNode animBlendNodeAdditive -n "Bigfoot_Rig:Beard_Jnt_Ctrl_FollowTranslate_AnimLayer2";
 	rename -uid "FAE1F827-4AA2-B19D-405D-C890DF9543B4";
 	setAttr ".o" 1;
@@ -17987,7 +17733,7 @@ createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:R_Finger_3_Jnt_1_Ctrl_transla
 	rename -uid "B186766C-4F48-E6C8-C7A9-8EA4FB731135";
 createNode animBlendNodeAdditiveRotation -n "Bigfoot_Rig:R_Finger_3_Jnt_1_Ctrl_rotate_AnimLayer2";
 	rename -uid "E9B473DF-41E7-4B8D-11A7-1BA8F79627C0";
-	setAttr ".o" -type "double3" -0.0086225114624177493 0.024457683204052841 -0.067122683158936811 ;
+	setAttr ".o" -type "double3" -0.032885857670616123 0.093280466173597282 -0.25600279158291744 ;
 createNode animBlendNodeAdditiveScale -n "Bigfoot_Rig:R_Finger_3_Jnt_1_Ctrl_scaleX_AnimLayer2";
 	rename -uid "5C812ABB-4817-89EE-5B69-73B2B3A7324F";
 	setAttr ".ib" 1;
@@ -18102,7 +17848,7 @@ createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:R_Finger_4_Jnt_2_Ctrl_transla
 	rename -uid "BAAAD21B-4DD2-ED4E-A414-339A6CCEBC6D";
 createNode animBlendNodeAdditiveRotation -n "Bigfoot_Rig:R_Finger_4_Jnt_2_Ctrl_rotate_AnimLayer2";
 	rename -uid "537A79CA-4504-6B4B-F9D7-DA9A67D10E68";
-	setAttr ".o" -type "double3" -0.066977597813433085 0.067970738302182837 -0.25759074653177017 ;
+	setAttr ".o" -type "double3" -0.35734998833386528 0.36264875618542669 -1.374340873264017 ;
 createNode animBlendNodeAdditiveScale -n "Bigfoot_Rig:R_Finger_4_Jnt_2_Ctrl_scaleX_AnimLayer2";
 	rename -uid "350EE325-4B39-D157-68C0-D5951CA88FD1";
 	setAttr ".ib" 1;
@@ -18182,16 +17928,16 @@ createNode animBlendNodeBoolean -n "Bigfoot_Rig:R_Arm_3_Jnt_IK_Ctrl_visibility_A
 	setAttr ".o" yes;
 createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:R_Arm_3_Jnt_IK_Ctrl_translateX_AnimLayer2";
 	rename -uid "86D84BBD-415E-3E93-9F04-799367B030B8";
-	setAttr ".o" 2.1826445529961536;
+	setAttr ".o" -13.82156091046731;
 createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:R_Arm_3_Jnt_IK_Ctrl_translateY_AnimLayer2";
 	rename -uid "459AC4F7-4BD4-0481-6706-14A2D3F5D9CE";
-	setAttr ".o" 12.164302276715338;
+	setAttr ".o" 21.674872566892553;
 createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:R_Arm_3_Jnt_IK_Ctrl_translateZ_AnimLayer2";
 	rename -uid "0179D695-494E-9F82-3881-B68CF04826F1";
-	setAttr ".o" -63.203665590317144;
+	setAttr ".o" -62.218780355996167;
 createNode animBlendNodeAdditiveRotation -n "Bigfoot_Rig:R_Arm_3_Jnt_IK_Ctrl_rotate_AnimLayer2";
 	rename -uid "F96266FB-4F0D-F984-388C-6D88D769A1C6";
-	setAttr ".o" -type "double3" 35.033430104526118 -67.613039045060205 5.359672357410914 ;
+	setAttr ".o" -type "double3" 40.250603764125316 -59.133542854431738 -7.5494655652524658 ;
 createNode animBlendNodeAdditiveScale -n "Bigfoot_Rig:R_Arm_3_Jnt_IK_Ctrl_scaleX_AnimLayer2";
 	rename -uid "FD792248-4F27-58FB-22A8-F1A4B29E2586";
 	setAttr ".ib" 1;
@@ -18317,7 +18063,7 @@ createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:Neck_Jnt_Ctrl_translateZ_Anim
 	rename -uid "3350CBF0-474A-A93D-7D68-A48ACEC6D786";
 createNode animBlendNodeAdditiveRotation -n "Bigfoot_Rig:Neck_Jnt_Ctrl_rotate_AnimLayer2";
 	rename -uid "C62A6D50-48F8-4BB6-69FC-47AFB4DEF963";
-	setAttr ".o" -type "double3" 0 0 -5.9376566785390521 ;
+	setAttr ".o" -type "double3" 0.90706977933800392 1.408897774841521 2.1149933392298892 ;
 createNode animBlendNodeAdditiveScale -n "Bigfoot_Rig:Neck_Jnt_Ctrl_scaleX_AnimLayer2";
 	rename -uid "2B0BB193-4095-BA80-F682-89923B74247A";
 	setAttr ".ib" 1;
@@ -18348,7 +18094,7 @@ createNode animBlendNodeAdditiveDL -n "Bigfoot_Rig:L_Finger_3_Jnt_2_Ctrl_transla
 	rename -uid "B98001C5-413B-1B47-F3A5-BDA490E8FB8C";
 createNode animBlendNodeAdditiveRotation -n "Bigfoot_Rig:L_Finger_3_Jnt_2_Ctrl_rotate_AnimLayer2";
 	rename -uid "C13A742E-4C23-3008-F02B-A3A4555AA1B8";
-	setAttr ".o" -type "double3" 0.039326478041338209 0.096755097807312826 -24.835290037815572 ;
+	setAttr ".o" -type "double3" 0.17019065568317013 0.41872077939973829 -26.47841450618769 ;
 createNode animBlendNodeAdditiveScale -n "Bigfoot_Rig:L_Finger_3_Jnt_2_Ctrl_scaleX_AnimLayer2";
 	rename -uid "974CACC7-450E-6D4E-0A65-91A830056FA4";
 	setAttr ".ib" 1;
@@ -18373,16 +18119,16 @@ createNode animBlendNodeBoolean -n "locator1_visibility_AnimLayer2";
 	setAttr ".o" yes;
 createNode animBlendNodeAdditiveDL -n "locator1_translateX_AnimLayer2";
 	rename -uid "2922F97B-4575-086A-7E43-9CA29F456223";
-	setAttr ".o" 36.520666098980229;
+	setAttr ".o" 31.156307928547406;
 createNode animBlendNodeAdditiveDL -n "locator1_translateY_AnimLayer2";
 	rename -uid "6B82C8B9-4C2B-2A6B-7B3E-5B89032170FD";
-	setAttr ".o" 275.03676489045517;
+	setAttr ".o" 294.71357307819557;
 createNode animBlendNodeAdditiveDL -n "locator1_translateZ_AnimLayer2";
 	rename -uid "4D660C33-4E48-0CD6-8D13-D8B6819B3062";
-	setAttr ".o" 131.06407887331738;
+	setAttr ".o" 159.27358069846019;
 createNode animBlendNodeAdditiveRotation -n "locator1_rotate_AnimLayer2";
 	rename -uid "63400C4B-4D3E-CE69-C68F-0BB30B281C36";
-	setAttr ".o" -type "double3" -0.72173403865019459 -157.77206163629327 -46.957312513774475 ;
+	setAttr ".o" -type "double3" 6.6332634951729217 -167.65346523832667 -43.711697168902411 ;
 createNode animBlendNodeAdditiveScale -n "locator1_scaleX_AnimLayer2";
 	rename -uid "53234511-433B-32B5-5569-3986B980F94A";
 	setAttr ".ib" 1;
@@ -18399,584 +18145,500 @@ createNode animCurveTL -n "CoG_Jnt_Ctrl_translateX_AnimLayer2_inputB";
 	rename -uid "50AF2696-47F1-69A1-3AF7-6CB1397602F0";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 -l on ".ktv[0:2]"  5 0 60 0 70 0;
-	setAttr -l on ".ktv";
+	setAttr -s 3 ".ktv[0:2]"  5 0 60 0 70 0;
 createNode animCurveTL -n "CoG_Jnt_Ctrl_translateY_AnimLayer2_inputB";
 	rename -uid "3B463E2A-4085-0756-0AEA-DE934836B473";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 -l on ".ktv[0:3]"  5 0 14 8.3947196644965629 60 -1.6532177636859302
+	setAttr -s 4 ".ktv[0:3]"  5 0 14 8.3947196644965629 60 -1.6532177636859302
 		 70 2.9691706935613595;
-	setAttr -l on ".ktv";
 createNode animCurveTL -n "CoG_Jnt_Ctrl_translateZ_AnimLayer2_inputB";
 	rename -uid "2408D499-4EDB-E2C7-8D7F-1C8642C1DB24";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 -l on ".ktv[0:4]"  5 0 10 16.576936233301524 14 21.767523908941481
+	setAttr -s 5 ".ktv[0:4]"  5 0 10 16.576936233301524 14 21.767523908941481
 		 60 21.767523908941481 70 0;
-	setAttr -l on ".ktv";
 createNode animCurveTA -n "CoG_Jnt_Ctrl_rotate_AnimLayer2_inputBX";
 	rename -uid "0ED864A8-4773-1BE6-3149-F4A94AA52D17";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 -l on ".ktv[0:4]"  5 0 10 1.9127477385371763 14 4.7498862666359836
+	setAttr -s 5 ".ktv[0:4]"  5 0 10 1.9127477385371763 14 4.7498862666359836
 		 60 4.7498862666359836 70 0;
-	setAttr -l on ".ktv";
 createNode animCurveTA -n "CoG_Jnt_Ctrl_rotate_AnimLayer2_inputBY";
 	rename -uid "87D3FD98-43F3-FFA9-E797-F395A6EA4C48";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 -l on ".ktv[0:3]"  5 0 14 0 60 0 70 0;
-	setAttr -l on ".ktv";
+	setAttr -s 4 ".ktv[0:3]"  5 0 14 0 60 0 70 0;
 createNode animCurveTA -n "CoG_Jnt_Ctrl_rotate_AnimLayer2_inputBZ";
 	rename -uid "BC0A7071-4547-3E52-2B61-E28623C0901F";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 -l on ".ktv[0:3]"  5 0 14 0 60 0 70 0;
-	setAttr -l on ".ktv";
+	setAttr -s 4 ".ktv[0:3]"  5 0 14 0 60 0 70 0;
 createNode animCurveTL -n "Spine_1_Jnt_FK_Ctrl_translateX_AnimLayer2_inputB";
 	rename -uid "E13B79B8-48FD-6A4D-8D5A-1BB6923E0158";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 -l on ".ktv[0:2]"  6 0 60 0 70 0;
-	setAttr -l on ".ktv";
+	setAttr -s 3 ".ktv[0:2]"  6 0 60 0 70 0;
 createNode animCurveTL -n "Spine_1_Jnt_FK_Ctrl_translateY_AnimLayer2_inputB";
 	rename -uid "FAF3A308-44DF-DB3D-89B2-BBB226ECFFCD";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 -l on ".ktv[0:2]"  6 0 60 0 70 0;
-	setAttr -l on ".ktv";
+	setAttr -s 3 ".ktv[0:2]"  6 0 60 0 70 0;
 createNode animCurveTL -n "Spine_1_Jnt_FK_Ctrl_translateZ_AnimLayer2_inputB";
 	rename -uid "B5074C2F-4497-B6D2-1AD3-738DF700F664";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 -l on ".ktv[0:2]"  6 0 60 0 70 0;
-	setAttr -l on ".ktv";
+	setAttr -s 3 ".ktv[0:2]"  6 0 60 0 70 0;
 createNode animCurveTA -n "Spine_1_Jnt_FK_Ctrl_rotate_AnimLayer2_inputBX";
 	rename -uid "169E7DF3-4905-45D4-6251-E98DB973D1B5";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 -l on ".ktv[0:3]"  6 0 13 -1.8867439811275395 60 -1.8867439811275395
+	setAttr -s 4 ".ktv[0:3]"  6 0 13 -1.8867439811275395 60 -1.8867439811275395
 		 70 0;
-	setAttr -l on ".ktv";
 createNode animCurveTA -n "Spine_1_Jnt_FK_Ctrl_rotate_AnimLayer2_inputBY";
 	rename -uid "D58D1869-4FC0-3232-A281-1CA61E78F4EB";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 -l on ".ktv[0:3]"  6 0 13 0.038201477744657361 60 0.038201477744657361
+	setAttr -s 4 ".ktv[0:3]"  6 0 13 0.038201477744657361 60 0.038201477744657361
 		 70 0;
-	setAttr -l on ".ktv";
 createNode animCurveTA -n "Spine_1_Jnt_FK_Ctrl_rotate_AnimLayer2_inputBZ";
 	rename -uid "6E9B9D1F-42F8-E714-08F0-B58C40E4B7DF";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 -l on ".ktv[0:3]"  6 0 13 -0.27776826757044237 60 -0.27776826757044237
+	setAttr -s 4 ".ktv[0:3]"  6 0 13 -0.27776826757044237 60 -0.27776826757044237
 		 70 0;
-	setAttr -l on ".ktv";
 createNode animCurveTL -n "Spine_2_Jnt_FK_Ctrl_translateX_AnimLayer2_inputB";
 	rename -uid "0FB894C9-495E-7F26-129B-6D862484DBCC";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 -l on ".ktv[0:2]"  6 0 60 -0.23859020326260028 70 0;
-	setAttr -l on ".ktv";
+	setAttr -s 3 ".ktv[0:2]"  6 0 60 -0.23859020326260028 70 0;
 createNode animCurveTL -n "Spine_2_Jnt_FK_Ctrl_translateY_AnimLayer2_inputB";
 	rename -uid "98A5F22C-4F05-4DCD-3B7B-A183643C6D7E";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 -l on ".ktv[0:2]"  6 0 60 -0.15628486123689211 70 0;
-	setAttr -l on ".ktv";
+	setAttr -s 3 ".ktv[0:2]"  6 0 60 -0.15628486123689211 70 0;
 createNode animCurveTL -n "Spine_2_Jnt_FK_Ctrl_translateZ_AnimLayer2_inputB";
 	rename -uid "058248DD-4C60-0237-DE86-32AD8EA72F00";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 -l on ".ktv[0:2]"  6 0 60 -0.0053723637689170323 70 0;
-	setAttr -l on ".ktv";
+	setAttr -s 3 ".ktv[0:2]"  6 0 60 -0.0053723637689170323 70 0;
 createNode animCurveTA -n "Spine_2_Jnt_FK_Ctrl_rotate_AnimLayer2_inputBX";
 	rename -uid "0DC0CA24-46F7-D915-1DD2-898A3C49849E";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 -l on ".ktv[0:3]"  6 0 13 0.094327359913795678 60 0.024866824412888212
+	setAttr -s 4 ".ktv[0:3]"  6 0 13 0.094327359913795678 60 0.024866824412888212
 		 70 0.018700467854630306;
-	setAttr -l on ".ktv";
 createNode animCurveTA -n "Spine_2_Jnt_FK_Ctrl_rotate_AnimLayer2_inputBY";
 	rename -uid "B09503DB-4DE6-35BB-B606-AAB070A4854E";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 -l on ".ktv[0:3]"  6 0 13 -0.24981936064373811 60 -0.065858030816773994
+	setAttr -s 4 ".ktv[0:3]"  6 0 13 -0.24981936064373811 60 -0.065858030816773994
 		 70 -0.04952687033170379;
-	setAttr -l on ".ktv";
 createNode animCurveTA -n "Spine_2_Jnt_FK_Ctrl_rotate_AnimLayer2_inputBZ";
 	rename -uid "3390F643-4E05-4282-CB45-148797125F36";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 -l on ".ktv[0:3]"  6 0 13 2.7290736011523218 60 0.7194454939873326
+	setAttr -s 4 ".ktv[0:3]"  6 0 13 2.7290736011523218 60 0.7194454939873326
 		 70 0.54104083054914798;
-	setAttr -l on ".ktv";
 createNode animCurveTL -n "Spine_3_Jnt_FK_Ctrl_translateX_AnimLayer2_inputB";
 	rename -uid "4AF459AD-4EB7-E6AE-1592-CA8C8BABDC0D";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 -l on ".ktv[0:2]"  6 0 60 0 70 0.052491322253282721;
-	setAttr -l on ".ktv";
+	setAttr -s 3 ".ktv[0:2]"  6 0 60 0 70 0.052491322253282721;
 createNode animCurveTL -n "Spine_3_Jnt_FK_Ctrl_translateY_AnimLayer2_inputB";
 	rename -uid "58C4D8C8-4B34-87F8-094F-C488BE3B107E";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 -l on ".ktv[0:2]"  6 0 60 0 70 0.036507349379251111;
-	setAttr -l on ".ktv";
+	setAttr -s 3 ".ktv[0:2]"  6 0 60 0 70 0.036507349379251111;
 createNode animCurveTL -n "Spine_3_Jnt_FK_Ctrl_translateZ_AnimLayer2_inputB";
 	rename -uid "0C8DE431-4BF0-6E91-AA7C-EA9CA22D6FA3";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 -l on ".ktv[0:2]"  6 0 60 0 70 -0.013631808203017218;
-	setAttr -l on ".ktv";
+	setAttr -s 3 ".ktv[0:2]"  6 0 60 0 70 -0.013631808203017218;
 createNode animCurveTA -n "Spine_3_Jnt_FK_Ctrl_rotate_AnimLayer2_inputBX";
 	rename -uid "E6E23581-4C86-45F2-9FFA-4F9E0DB1C3E5";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 -l on ".ktv[0:3]"  6 0 12 3.9429154789820213 60 3.9429154789820213
+	setAttr -s 4 ".ktv[0:3]"  6 0 12 3.9429154789820213 60 3.9429154789820213
 		 70 0;
-	setAttr -l on ".ktv";
 createNode animCurveTA -n "Spine_3_Jnt_FK_Ctrl_rotate_AnimLayer2_inputBY";
 	rename -uid "316BF2FA-4984-290F-001E-7D880BB1D58C";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 -l on ".ktv[0:3]"  6 0 12 -5.132251586259585 60 -5.132251586259585
+	setAttr -s 4 ".ktv[0:3]"  6 0 12 -5.132251586259585 60 -5.132251586259585
 		 70 0;
-	setAttr -l on ".ktv";
 createNode animCurveTA -n "Spine_3_Jnt_FK_Ctrl_rotate_AnimLayer2_inputBZ";
 	rename -uid "A822AB6D-4AFD-B816-CE55-50B9A53471B4";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 -l on ".ktv[0:3]"  6 0 12 2.1702295597734902 60 2.1702295597734902
+	setAttr -s 4 ".ktv[0:3]"  6 0 12 2.1702295597734902 60 2.1702295597734902
 		 70 0;
-	setAttr -l on ".ktv";
 createNode animCurveTL -n "L_Arm_3_Jnt_IK_Ctrl_translateX_AnimLayer2_inputB";
 	rename -uid "DB7B1750-4338-9B5C-93C0-25B9CBCEAA9C";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 -l on ".ktv[0:4]"  10 0 15 19.2162495 56 20.831692789245679
+	setAttr -s 5 ".ktv[0:4]"  10 0 15 19.2162495 56 20.831692789245679
 		 60 14.891981532809311 66 0.45414878125308178;
-	setAttr -l on ".ktv";
 createNode animCurveTL -n "L_Arm_3_Jnt_IK_Ctrl_translateY_AnimLayer2_inputB";
 	rename -uid "BD24F7C8-4285-887F-DCD5-A9A0D91FDAC7";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 -l on ".ktv[0:4]"  10 0 15 19.259863500000002 56 18.515247150977235
+	setAttr -s 5 ".ktv[0:4]"  10 0 15 19.259863500000002 56 18.515247150977235
 		 60 13.706081711069452 66 -0.27657941207479908;
-	setAttr -l on ".ktv";
 createNode animCurveTL -n "L_Arm_3_Jnt_IK_Ctrl_translateZ_AnimLayer2_inputB";
 	rename -uid "605474BA-4A4F-A26E-E7DD-D6A62932C4BB";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 -l on ".ktv[0:4]"  10 0 15 -4.420074 56 -4.6752049412469034
+	setAttr -s 5 ".ktv[0:4]"  10 0 15 -4.420074 56 -4.6752049412469034
 		 60 -3.3780046475366419 66 -0.071724836643028311;
-	setAttr -l on ".ktv";
 createNode animCurveTA -n "L_Arm_3_Jnt_IK_Ctrl_rotate_AnimLayer2_inputBX";
 	rename -uid "B5BA6DCF-4920-246D-6DA5-7AB2E82B1767";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 -l on ".ktv[0:5]"  10 0 15 -0.12559659997055581 19 4.4391085559176142
+	setAttr -s 6 ".ktv[0:5]"  10 0 15 -0.12559659997055581 19 4.4391085559176142
 		 56 4.4391085559176142 60 4.4391085559176142 66 0;
-	setAttr -l on ".ktv";
 createNode animCurveTA -n "L_Arm_3_Jnt_IK_Ctrl_rotate_AnimLayer2_inputBY";
 	rename -uid "AFB3B261-49E7-0529-9DE5-538A4F13AB66";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 -l on ".ktv[0:5]"  10 0 15 16.892477158420824 19 25.618692469350361
+	setAttr -s 6 ".ktv[0:5]"  10 0 15 16.892477158420824 19 25.618692469350361
 		 56 25.618692469350361 60 25.618692469350361 66 0;
-	setAttr -l on ".ktv";
 createNode animCurveTA -n "L_Arm_3_Jnt_IK_Ctrl_rotate_AnimLayer2_inputBZ";
 	rename -uid "889D4600-4278-8E78-55AD-C7839588B8E5";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 -l on ".ktv[0:5]"  10 0 15 0.18764982029457289 19 -3.4346944026050705
+	setAttr -s 6 ".ktv[0:5]"  10 0 15 0.18764982029457289 19 -3.4346944026050705
 		 56 -3.4346944026050705 60 -3.4346944026050705 66 0;
-	setAttr -l on ".ktv";
 createNode animCurveTL -n "R_Eyelid_Jnt_Ctrl_translateX_AnimLayer2_inputB";
 	rename -uid "09FDED07-4DFF-1E98-AB60-4A803519ABDC";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 -l on ".ktv[0:5]"  6 0 21 0 24 0 26 0 27 0 29 0;
-	setAttr -l on ".ktv";
+	setAttr -s 6 ".ktv[0:5]"  6 0 21 0 24 0 26 0 27 0 29 0;
 createNode animCurveTL -n "R_Eyelid_Jnt_Ctrl_translateY_AnimLayer2_inputB";
 	rename -uid "09277514-4C9D-3D55-614B-13BAB419F6C8";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 -l on ".ktv[0:5]"  6 0 21 0 24 0 26 0 27 0 29 0;
-	setAttr -l on ".ktv";
+	setAttr -s 6 ".ktv[0:5]"  6 0 21 0 24 0 26 0 27 0 29 0;
 createNode animCurveTL -n "R_Eyelid_Jnt_Ctrl_translateZ_AnimLayer2_inputB";
 	rename -uid "C5918683-4656-B09E-41B2-6F9341CD2CA3";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 -l on ".ktv[0:5]"  6 0 21 0 24 0 26 0 27 0 29 0;
-	setAttr -l on ".ktv";
+	setAttr -s 6 ".ktv[0:5]"  6 0 21 0 24 0 26 0 27 0 29 0;
 createNode animCurveTA -n "R_Eyelid_Jnt_Ctrl_rotate_AnimLayer2_inputBX";
 	rename -uid "A2A29336-42E9-BEE6-930C-AAB5428C1412";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 7 -l on ".ktv[0:6]"  6 0 21 0 22 72.639790797266684 24 0
-		 26 0 27 72.639790797266684 29 0;
-	setAttr -l on ".ktv";
+	setAttr -s 7 ".ktv[0:6]"  6 0 21 0 22 72.639790797266684 24 0 26 0
+		 27 72.639790797266684 29 0;
 createNode animCurveTA -n "R_Eyelid_Jnt_Ctrl_rotate_AnimLayer2_inputBY";
 	rename -uid "9F172C7B-43A0-406B-0530-9C878C4FCAA6";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 -l on ".ktv[0:5]"  6 0 21 0 24 0 26 0 27 0 29 0;
-	setAttr -l on ".ktv";
+	setAttr -s 6 ".ktv[0:5]"  6 0 21 0 24 0 26 0 27 0 29 0;
 createNode animCurveTA -n "R_Eyelid_Jnt_Ctrl_rotate_AnimLayer2_inputBZ";
 	rename -uid "5A813C18-4431-E39A-90DE-489AF6AEA4C5";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 -l on ".ktv[0:5]"  6 0 21 0 24 0 26 0 27 0 29 0;
-	setAttr -l on ".ktv";
+	setAttr -s 6 ".ktv[0:5]"  6 0 21 0 24 0 26 0 27 0 29 0;
 createNode animCurveTL -n "Jaw_Ctrl_Ctrl_translateX_AnimLayer2_inputB";
 	rename -uid "92E0E149-4815-1FD5-A92E-A3AB4FF5146A";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 -l on ".ktv[0:3]"  6 0 47 0 60 0 70 0;
-	setAttr -l on ".ktv";
+	setAttr -s 4 ".ktv[0:3]"  6 0 47 0 60 0 70 0;
 createNode animCurveTL -n "Jaw_Ctrl_Ctrl_translateY_AnimLayer2_inputB";
 	rename -uid "F44790BD-4642-C51E-2C11-A3A98A16C949";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 -l on ".ktv[0:3]"  6 0 47 0 60 0 70 0;
-	setAttr -l on ".ktv";
+	setAttr -s 4 ".ktv[0:3]"  6 0 47 0 60 0 70 0;
 createNode animCurveTL -n "Jaw_Ctrl_Ctrl_translateZ_AnimLayer2_inputB";
 	rename -uid "41EBCB33-4BAC-861F-D62C-9FA82654AD40";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 -l on ".ktv[0:3]"  6 0 47 0 60 0 70 0;
-	setAttr -l on ".ktv";
+	setAttr -s 4 ".ktv[0:3]"  6 0 47 0 60 0 70 0;
 createNode animCurveTA -n "Jaw_Ctrl_Ctrl_rotate_AnimLayer2_inputBX";
 	rename -uid "4C8E1EE5-4590-836E-3372-9E9F15FD396F";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 -l on ".ktv[0:4]"  6 0 19 4.4472708136823513 47 8.1717397277625885
+	setAttr -s 5 ".ktv[0:4]"  6 0 19 4.4472708136823513 47 8.1717397277625885
 		 60 8.860023634405314 70 -0.16378158165047607;
-	setAttr -l on ".ktv";
 createNode animCurveTA -n "Jaw_Ctrl_Ctrl_rotate_AnimLayer2_inputBY";
 	rename -uid "F82040D0-4A56-3B14-47C4-53AC00763F0F";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 -l on ".ktv[0:3]"  6 0 47 0 60 -0.1203056297071714 70 0.02283423547547862;
-	setAttr -l on ".ktv";
+	setAttr -s 4 ".ktv[0:3]"  6 0 47 0 60 -0.1203056297071714 70 0.02283423547547862;
 createNode animCurveTA -n "Jaw_Ctrl_Ctrl_rotate_AnimLayer2_inputBZ";
 	rename -uid "76264637-492D-A33E-A1BF-87B6078E07CD";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 -l on ".ktv[0:3]"  6 0 47 0 60 0.056902477166034734 70 -0.010800197512866932;
-	setAttr -l on ".ktv";
+	setAttr -s 4 ".ktv[0:3]"  6 0 47 0 60 0.056902477166034734 70 -0.010800197512866932;
 createNode animCurveTL -n "L_Eyelid_Jnt_Ctrl_translateX_AnimLayer2_inputB";
 	rename -uid "DC775E29-4108-E2CE-AFCB-F2AF19EFFDC0";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 -l on ".ktv[0:4]"  21 0 24 0 26 0 27 0 29 0;
-	setAttr -l on ".ktv";
+	setAttr -s 5 ".ktv[0:4]"  21 0 24 0 26 0 27 0 29 0;
 createNode animCurveTL -n "L_Eyelid_Jnt_Ctrl_translateY_AnimLayer2_inputB";
 	rename -uid "03412AE2-46D3-6F18-7244-51A397B5EFCD";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 -l on ".ktv[0:4]"  21 0 24 0 26 0 27 0 29 0;
-	setAttr -l on ".ktv";
+	setAttr -s 5 ".ktv[0:4]"  21 0 24 0 26 0 27 0 29 0;
 createNode animCurveTL -n "L_Eyelid_Jnt_Ctrl_translateZ_AnimLayer2_inputB";
 	rename -uid "61A52157-414E-120E-004C-E7AA912E4A90";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 -l on ".ktv[0:4]"  21 0 24 0 26 0 27 0 29 0;
-	setAttr -l on ".ktv";
+	setAttr -s 5 ".ktv[0:4]"  21 0 24 0 26 0 27 0 29 0;
 createNode animCurveTA -n "L_Eyelid_Jnt_Ctrl_rotate_AnimLayer2_inputBX";
 	rename -uid "88CAF7AD-49FA-D67B-820D-3E89838CB209";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 -l on ".ktv[0:5]"  21 0 22 69.976643649052235 24 0 26 0
-		 27 69.976643649052235 29 0;
-	setAttr -l on ".ktv";
+	setAttr -s 6 ".ktv[0:5]"  21 0 22 69.976643649052235 24 0 26 0 27 69.976643649052235
+		 29 0;
 createNode animCurveTA -n "L_Eyelid_Jnt_Ctrl_rotate_AnimLayer2_inputBY";
 	rename -uid "5A5B00F0-471B-A0E1-B2FB-EB9969685E55";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 -l on ".ktv[0:4]"  21 0 24 0 26 0 27 0 29 0;
-	setAttr -l on ".ktv";
+	setAttr -s 5 ".ktv[0:4]"  21 0 24 0 26 0 27 0 29 0;
 createNode animCurveTA -n "L_Eyelid_Jnt_Ctrl_rotate_AnimLayer2_inputBZ";
 	rename -uid "7160180A-4D6B-003A-701E-F9BDF4AED82B";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 -l on ".ktv[0:4]"  21 0 24 0 26 0 27 0 29 0;
-	setAttr -l on ".ktv";
+	setAttr -s 5 ".ktv[0:4]"  21 0 24 0 26 0 27 0 29 0;
 createNode animCurveTL -n "R_Eyebrow_Ctrl_translateX_AnimLayer2_inputB";
 	rename -uid "10CBE98E-4C50-1A32-8CFE-18B923731440";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 -l on ".ktv[0:2]"  6 0 13 -0.4978647695319664 70 0;
-	setAttr -l on ".ktv";
+	setAttr -s 3 ".ktv[0:2]"  6 0 13 -0.4978647695319664 70 0;
 createNode animCurveTL -n "R_Eyebrow_Ctrl_translateY_AnimLayer2_inputB";
 	rename -uid "93A3973E-4AEE-5C1B-20B4-778EE709A8AD";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 -l on ".ktv[0:2]"  6 0 13 4.028949626364418 70 0;
-	setAttr -l on ".ktv";
+	setAttr -s 3 ".ktv[0:2]"  6 0 13 4.028949626364418 70 0;
 createNode animCurveTL -n "R_Eyebrow_Ctrl_translateZ_AnimLayer2_inputB";
 	rename -uid "8D0F2EB1-4387-A1B8-C4A9-07ADD4B2D48E";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 -l on ".ktv[0:2]"  6 0 13 0.082722517081744648 70 0;
-	setAttr -l on ".ktv";
+	setAttr -s 3 ".ktv[0:2]"  6 0 13 0.082722517081744648 70 0;
 createNode animCurveTA -n "R_Eyebrow_Ctrl_rotate_AnimLayer2_inputBX";
 	rename -uid "A47EB01C-4F95-D663-4890-CF9688186E9B";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 -l on ".ktv[0:1]"  6 0 70 0;
-	setAttr -l on ".ktv";
+	setAttr -s 2 ".ktv[0:1]"  6 0 70 0;
 createNode animCurveTA -n "R_Eyebrow_Ctrl_rotate_AnimLayer2_inputBY";
 	rename -uid "75546E76-4510-29F3-D3BE-C999161C2A75";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 -l on ".ktv[0:1]"  6 0 70 0;
-	setAttr -l on ".ktv";
+	setAttr -s 2 ".ktv[0:1]"  6 0 70 0;
 createNode animCurveTA -n "R_Eyebrow_Ctrl_rotate_AnimLayer2_inputBZ";
 	rename -uid "5ECE4053-4BDD-1CFC-DB52-79A324292440";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 -l on ".ktv[0:1]"  6 0 70 0;
-	setAttr -l on ".ktv";
+	setAttr -s 2 ".ktv[0:1]"  6 0 70 0;
 createNode animCurveTL -n "Neck_Jnt_Ctrl_translateX_AnimLayer2_inputB";
 	rename -uid "6B953D81-4D3B-8291-6E8F-E7A8AC34AF83";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 -l on ".ktv[0:4]"  6 0 9 0 20 0 60 0 66 0;
-	setAttr -l on ".ktv";
+	setAttr -s 5 ".ktv[0:4]"  6 0 9 0 20 0 60 0 66 0;
 createNode animCurveTL -n "Neck_Jnt_Ctrl_translateY_AnimLayer2_inputB";
 	rename -uid "B65BB48F-4CF7-F01D-2579-70B8885FFCDC";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 -l on ".ktv[0:4]"  6 0 9 0 20 0 60 0 66 0;
-	setAttr -l on ".ktv";
+	setAttr -s 5 ".ktv[0:4]"  6 0 9 0 20 0 60 0 66 0;
 createNode animCurveTL -n "Neck_Jnt_Ctrl_translateZ_AnimLayer2_inputB";
 	rename -uid "32DE9F44-4066-5895-803C-DFA9FF675D54";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 -l on ".ktv[0:4]"  6 0 9 0 20 0 60 0 66 0;
-	setAttr -l on ".ktv";
+	setAttr -s 5 ".ktv[0:4]"  6 0 9 0 20 0 60 0 66 0;
 createNode animCurveTA -n "Neck_Jnt_Ctrl_rotate_AnimLayer2_inputBX";
 	rename -uid "4F1ADFC2-453B-F77D-3EC2-93B939A0BF2B";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 -l on ".ktv[0:5]"  6 0 9 -1.0961453638665328 14 1.8248491889060665
+	setAttr -s 6 ".ktv[0:5]"  6 0 9 -1.0961453638665328 14 1.8248491889060665
 		 20 0.90706977933800392 60 0.90706977933800392 66 0;
-	setAttr -l on ".ktv";
 createNode animCurveTA -n "Neck_Jnt_Ctrl_rotate_AnimLayer2_inputBY";
 	rename -uid "622E6E05-46F1-4234-9440-2E8232AE145D";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 -l on ".ktv[0:5]"  6 0 9 -1.7753663307593353 14 1.7820587835459467
+	setAttr -s 6 ".ktv[0:5]"  6 0 9 -1.7753663307593353 14 1.7820587835459467
 		 20 1.408897774841521 60 1.408897774841521 66 0;
-	setAttr -l on ".ktv";
 createNode animCurveTA -n "Neck_Jnt_Ctrl_rotate_AnimLayer2_inputBZ";
 	rename -uid "53A03523-4052-4254-3A3E-2CB6644EC4F4";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 -l on ".ktv[0:5]"  6 0 9 -8.4469509456989442 14 10.575071223807354
+	setAttr -s 6 ".ktv[0:5]"  6 0 9 -8.4469509456989442 14 10.575071223807354
 		 20 8.0526500177689417 60 8.0526500177689417 66 0;
-	setAttr -l on ".ktv";
 createNode animCurveTL -n "R_Clav_Jnt_Ctrl_translateX_AnimLayer2_inputB";
 	rename -uid "86F8B5C1-4571-1872-5580-728A51C971DB";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 -l on ".ktv[0:2]"  8 0 60 0 70 0;
-	setAttr -l on ".ktv";
+	setAttr -s 3 ".ktv[0:2]"  8 0 60 0 70 0;
 createNode animCurveTL -n "R_Clav_Jnt_Ctrl_translateY_AnimLayer2_inputB";
 	rename -uid "E767302B-43BC-CCEA-3B3E-5FBFE769AF1F";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 -l on ".ktv[0:2]"  8 0 60 0 70 0;
-	setAttr -l on ".ktv";
+	setAttr -s 3 ".ktv[0:2]"  8 0 60 0 70 0;
 createNode animCurveTL -n "R_Clav_Jnt_Ctrl_translateZ_AnimLayer2_inputB";
 	rename -uid "248876C1-47CD-3B1B-9265-E9A06ED4152D";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 -l on ".ktv[0:2]"  8 0 60 0 70 0;
-	setAttr -l on ".ktv";
+	setAttr -s 3 ".ktv[0:2]"  8 0 60 0 70 0;
 createNode animCurveTA -n "R_Clav_Jnt_Ctrl_rotate_AnimLayer2_inputBX";
 	rename -uid "DB0335B7-4B60-5A0A-B532-AF98EA839E91";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 -l on ".ktv[0:3]"  8 0 14 1.517184710145727 60 1.517184710145727
+	setAttr -s 4 ".ktv[0:3]"  8 0 14 1.517184710145727 60 1.517184710145727
 		 70 0;
-	setAttr -l on ".ktv";
 createNode animCurveTA -n "R_Clav_Jnt_Ctrl_rotate_AnimLayer2_inputBY";
 	rename -uid "B1F736AE-4B08-03A7-A7E0-3593314B8FE0";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 -l on ".ktv[0:3]"  8 0 14 -1.8221331494629167 60 -1.8221331494629167
+	setAttr -s 4 ".ktv[0:3]"  8 0 14 -1.8221331494629167 60 -1.8221331494629167
 		 70 0;
-	setAttr -l on ".ktv";
 createNode animCurveTA -n "R_Clav_Jnt_Ctrl_rotate_AnimLayer2_inputBZ";
 	rename -uid "34D10D4D-4F64-8B3C-7B8E-F58F4AB88FD8";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 -l on ".ktv[0:3]"  8 0 14 -6.5221947866054251 60 -6.5221947866054251
+	setAttr -s 4 ".ktv[0:3]"  8 0 14 -6.5221947866054251 60 -6.5221947866054251
 		 70 0;
-	setAttr -l on ".ktv";
 createNode animCurveTL -n "L_Clav_Jnt_Ctrl_translateX_AnimLayer2_inputB";
 	rename -uid "F0A3C339-4E23-60BD-7096-CD9E147A0123";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 -l on ".ktv[0:2]"  8 0 60 0 70 0;
-	setAttr -l on ".ktv";
+	setAttr -s 3 ".ktv[0:2]"  8 0 60 0 70 0;
 createNode animCurveTL -n "L_Clav_Jnt_Ctrl_translateY_AnimLayer2_inputB";
 	rename -uid "531953B2-43CA-8286-90F6-90903C6CDB6A";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 -l on ".ktv[0:2]"  8 0 60 0 70 0;
-	setAttr -l on ".ktv";
+	setAttr -s 3 ".ktv[0:2]"  8 0 60 0 70 0;
 createNode animCurveTL -n "L_Clav_Jnt_Ctrl_translateZ_AnimLayer2_inputB";
 	rename -uid "74A9C4D6-44ED-AEEC-92E0-638A5B140FC1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 -l on ".ktv[0:2]"  8 0 60 0 70 0;
-	setAttr -l on ".ktv";
+	setAttr -s 3 ".ktv[0:2]"  8 0 60 0 70 0;
 createNode animCurveTA -n "L_Clav_Jnt_Ctrl_rotate_AnimLayer2_inputBX";
 	rename -uid "A3A290C4-46B4-0D2A-49A0-A1BA78781703";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 -l on ".ktv[0:3]"  8 0 14 -0.50367261630863092 60 -0.50367261630863092
+	setAttr -s 4 ".ktv[0:3]"  8 0 14 -0.50367261630863103 60 -0.50367261630863103
 		 70 0;
-	setAttr -l on ".ktv";
 createNode animCurveTA -n "L_Clav_Jnt_Ctrl_rotate_AnimLayer2_inputBY";
 	rename -uid "0E51057F-482F-F733-95C8-0E8726070126";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 -l on ".ktv[0:3]"  8 0 14 -1.3173210298999674 60 -1.3173210298999674
+	setAttr -s 4 ".ktv[0:3]"  8 0 14 -1.3173210298999674 60 -1.3173210298999674
 		 70 0;
-	setAttr -l on ".ktv";
 createNode animCurveTA -n "L_Clav_Jnt_Ctrl_rotate_AnimLayer2_inputBZ";
 	rename -uid "1CF0AD61-49A4-7648-38F6-70B31BD928EF";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 -l on ".ktv[0:3]"  8 0 14 -5.0554777879055042 60 -5.0554777879055042
+	setAttr -s 4 ".ktv[0:3]"  8 0 14 -5.0554777879055042 60 -5.0554777879055042
 		 70 0;
-	setAttr -l on ".ktv";
 createNode animCurveTL -n "L_Arm_IK_PV_Ctrl_translateX_AnimLayer2_inputB";
 	rename -uid "0B84AD91-4FF1-329F-C137-9581F82A704C";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 -l on ".ktv[0:3]"  8 0 16 12.922278108371458 60 12.922278108371458
+	setAttr -s 4 ".ktv[0:3]"  8 0 16 12.922278108371458 60 12.922278108371458
 		 70 0;
-	setAttr -l on ".ktv";
 createNode animCurveTL -n "L_Arm_IK_PV_Ctrl_translateY_AnimLayer2_inputB";
 	rename -uid "62690F5B-4D70-C8F0-21AA-899114EF0762";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 -l on ".ktv[0:3]"  8 0 16 -8.0749053878289487 60 -8.0749053878289487
+	setAttr -s 4 ".ktv[0:3]"  8 0 16 -8.0749053878289487 60 -8.0749053878289487
 		 70 0;
-	setAttr -l on ".ktv";
 createNode animCurveTL -n "L_Arm_IK_PV_Ctrl_translateZ_AnimLayer2_inputB";
 	rename -uid "B9651D82-412B-4E8A-3B8A-7B9070FE4167";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 -l on ".ktv[0:3]"  8 0 16 -3.3814279928713233 60 -3.3814279928713233
+	setAttr -s 4 ".ktv[0:3]"  8 0 16 -3.3814279928713233 60 -3.3814279928713233
 		 70 0;
-	setAttr -l on ".ktv";
 createNode animCurveTA -n "L_Arm_IK_PV_Ctrl_rotate_AnimLayer2_inputBX";
 	rename -uid "36740E44-4B27-8632-D44D-F9A903F9BFB5";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 -l on ".ktv[0:2]"  8 0 60 0 70 0;
-	setAttr -l on ".ktv";
+	setAttr -s 3 ".ktv[0:2]"  8 0 60 0 70 0;
 createNode animCurveTA -n "L_Arm_IK_PV_Ctrl_rotate_AnimLayer2_inputBY";
 	rename -uid "B8572282-4859-C7CA-2D48-5CA082DE7889";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 -l on ".ktv[0:2]"  8 0 60 0 70 0;
-	setAttr -l on ".ktv";
+	setAttr -s 3 ".ktv[0:2]"  8 0 60 0 70 0;
 createNode animCurveTA -n "L_Arm_IK_PV_Ctrl_rotate_AnimLayer2_inputBZ";
 	rename -uid "D74C6188-452E-9597-42E3-CCA128F6FDC3";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 -l on ".ktv[0:2]"  8 0 60 0 70 0;
-	setAttr -l on ".ktv";
+	setAttr -s 3 ".ktv[0:2]"  8 0 60 0 70 0;
 createNode animCurveTL -n "R_Arm_3_Jnt_IK_Ctrl_translateX_AnimLayer2_inputB";
 	rename -uid "F90D6909-4129-FC83-2A6B-DB98C8628AA1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 -l on ".ktv[0:3]"  9 0 17 -18.73436567804217 60 -11.193915354267673
+	setAttr -s 4 ".ktv[0:3]"  9 0 17 -18.73436567804217 60 -11.193915354267673
 		 70 -0.10733061165300262;
-	setAttr -l on ".ktv";
 createNode animCurveTL -n "R_Arm_3_Jnt_IK_Ctrl_translateY_AnimLayer2_inputB";
 	rename -uid "E76E8B9E-482D-74E7-BDDA-3C84142F8D3E";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 -l on ".ktv[0:3]"  9 0 17 11.129768717678488 60 6.6359985428654973
+	setAttr -s 4 ".ktv[0:3]"  9 0 17 11.129768717678488 60 6.6359985428654973
 		 70 0.065365005197230985;
-	setAttr -l on ".ktv";
 createNode animCurveTL -n "R_Arm_3_Jnt_IK_Ctrl_translateZ_AnimLayer2_inputB";
 	rename -uid "00C859BE-41D7-A531-C5B3-E4BEFB57E4B0";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 -l on ".ktv[0:3]"  9 0 17 1.1319123244677627 60 0.58408240581353965
+	setAttr -s 4 ".ktv[0:3]"  9 0 17 1.1319123244677627 60 0.58408240581353965
 		 70 0.016950987593126854;
-	setAttr -l on ".ktv";
 createNode animCurveTA -n "R_Arm_3_Jnt_IK_Ctrl_rotate_AnimLayer2_inputBX";
 	rename -uid "C6678C7F-421D-8936-C938-6483FA223BE2";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 -l on ".ktv[0:3]"  9 0 17 5.6038532360840136 60 1.1358801760189945
-		 70 0.28313714493512371;
-	setAttr -l on ".ktv";
+	setAttr -s 4 ".ktv[0:3]"  9 0 17 5.6038532360840136 60 1.1358801760189945
+		 70 0.28313714493512376;
 createNode animCurveTA -n "R_Arm_3_Jnt_IK_Ctrl_rotate_AnimLayer2_inputBY";
 	rename -uid "CB5946B8-4F99-386D-8559-C9B05391A024";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 -l on ".ktv[0:3]"  9 0 17 9.6925356380853795 60 4.7650429980397737
+	setAttr -s 4 ".ktv[0:3]"  9 0 17 9.6925356380853795 60 4.7650429980397737
 		 70 0.17197795331669521;
-	setAttr -l on ".ktv";
 createNode animCurveTA -n "R_Arm_3_Jnt_IK_Ctrl_rotate_AnimLayer2_inputBZ";
 	rename -uid "F08F0140-4CA0-447A-A935-3E82D0569A27";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 -l on ".ktv[0:3]"  9 0 17 -14.705370041143007 60 -7.0021537547822952
+	setAttr -s 4 ".ktv[0:3]"  9 0 17 -14.705370041143007 60 -7.0021537547822952
 		 70 -0.28671228180760561;
-	setAttr -l on ".ktv";
 createNode animCurveTL -n "L_Eyebrow_Ctrl_translateX_AnimLayer2_inputB";
 	rename -uid "0D89EAA9-4242-191F-21F3-D88AFCF84349";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -l on ".ktv[0]"  70 0;
-	setAttr -l on ".ktv";
+	setAttr ".ktv[0]"  70 0;
 createNode animCurveTL -n "L_Eyebrow_Ctrl_translateY_AnimLayer2_inputB";
 	rename -uid "85FE4B27-4692-6097-DDC7-529DA9D541A8";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -l on ".ktv[0]"  70 0;
-	setAttr -l on ".ktv";
+	setAttr ".ktv[0]"  70 0;
 createNode animCurveTL -n "L_Eyebrow_Ctrl_translateZ_AnimLayer2_inputB";
 	rename -uid "3DE634EF-45FC-D8BD-9F1E-95BDAAE8235B";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -l on ".ktv[0]"  70 0;
-	setAttr -l on ".ktv";
+	setAttr ".ktv[0]"  70 0;
 createNode animCurveTA -n "L_Eyebrow_Ctrl_rotate_AnimLayer2_inputBX";
 	rename -uid "E0D2E4F1-4466-4C6F-8425-EB98DFD13461";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -l on ".ktv[0]"  70 0;
-	setAttr -l on ".ktv";
+	setAttr ".ktv[0]"  70 0;
 createNode animCurveTA -n "L_Eyebrow_Ctrl_rotate_AnimLayer2_inputBY";
 	rename -uid "15A87015-4CA0-285B-5B08-43AD5336D545";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -l on ".ktv[0]"  70 0;
-	setAttr -l on ".ktv";
+	setAttr ".ktv[0]"  70 0;
 createNode animCurveTA -n "L_Eyebrow_Ctrl_rotate_AnimLayer2_inputBZ";
 	rename -uid "61B602DB-497F-EF3B-9AB7-2AB433F9A46B";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -l on ".ktv[0]"  70 0;
-	setAttr -l on ".ktv";
+	setAttr ".ktv[0]"  70 0;
+createNode file -n "file2";
+	rename -uid "D9B01318-43E6-6494-6543-BDBE47C47C9F";
+	setAttr ".ftn" -type "string" "C:/Users/caris/Desktop/ProjectCryptid/Cryptid 1.0.1/Assets/Material Textures/Props/Binoculars/Binoculars_lambert2SG_BaseColor.png";
+	setAttr ".cs" -type "string" "sRGB";
+createNode place2dTexture -n "place2dTexture2";
+	rename -uid "60D63F8D-4F6D-9803-15E9-E2BC9A5B78D5";
 select -ne :time1;
-	setAttr ".o" 74;
-	setAttr ".unw" 74;
+	setAttr ".o" 47;
+	setAttr ".unw" 47;
 select -ne :hardwareRenderingGlobals;
 	setAttr ".otfna" -type "stringArray" 22 "NURBS Curves" "NURBS Surfaces" "Polygons" "Subdiv Surface" "Particles" "Particle Instance" "Fluids" "Strokes" "Image Planes" "UI" "Lights" "Cameras" "Locators" "Joints" "IK Handles" "Deformers" "Motion Trails" "Components" "Hair Systems" "Follicles" "Misc. UI" "Ornaments"  ;
 	setAttr ".otfva" -type "Int32Array" 22 0 1 1 1 1 1
@@ -18992,11 +18654,11 @@ select -ne :defaultShaderList1;
 select -ne :postProcessList1;
 	setAttr -s 2 ".p";
 select -ne :defaultRenderUtilityList1;
-	setAttr -s 17 ".u";
+	setAttr -s 18 ".u";
 select -ne :defaultRenderingList1;
 	setAttr -s 2 ".r";
 select -ne :defaultTextureList1;
-	setAttr -s 2 ".tx";
+	setAttr -s 3 ".tx";
 select -ne :standardSurface1;
 	setAttr ".bc" -type "float3" 0.40000001 0.40000001 0.40000001 ;
 	setAttr ".sr" 0.5;
@@ -19008,7 +18670,6 @@ select -ne :initialShadingGroup;
 	setAttr -s 34 ".gn";
 select -ne :initialParticleSE;
 	setAttr ".ro" yes;
-select -ne :initialMaterialInfo;
 select -ne :defaultRenderGlobals;
 	addAttr -ci true -h true -sn "dss" -ln "defaultSurfaceShader" -dt "string";
 	setAttr ".ren" -type "string" "arnold";
@@ -19041,48 +18702,48 @@ connectAttr "Bigfoot_RigRN.phl[7]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_RigRN.phl[8]" "AnimLayer2.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Arm_IKFK_Control_FollowRotate_AnimLayer2.o" "Bigfoot_RigRN.phl[9]"
 		;
-connectAttr "Bigfoot_RigRN.phl[10]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[11]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[10]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[11]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Arm_IKFK_Control_translateX_AnimLayer2.o" "Bigfoot_RigRN.phl[12]"
 		;
-connectAttr "Bigfoot_RigRN.phl[13]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[14]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[13]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[14]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Arm_IKFK_Control_translateY_AnimLayer2.o" "Bigfoot_RigRN.phl[15]"
 		;
-connectAttr "Bigfoot_RigRN.phl[16]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[17]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[16]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[17]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Arm_IKFK_Control_translateZ_AnimLayer2.o" "Bigfoot_RigRN.phl[18]"
 		;
-connectAttr "Bigfoot_RigRN.phl[19]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[20]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[19]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[20]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Arm_IKFK_Control_rotate_AnimLayer2.ox" "Bigfoot_RigRN.phl[21]"
 		;
-connectAttr "Bigfoot_RigRN.phl[22]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[23]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[22]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[23]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Arm_IKFK_Control_rotate_AnimLayer2.oy" "Bigfoot_RigRN.phl[24]"
 		;
-connectAttr "Bigfoot_RigRN.phl[25]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[26]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[25]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[26]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Arm_IKFK_Control_rotate_AnimLayer2.oz" "Bigfoot_RigRN.phl[27]"
 		;
-connectAttr "Bigfoot_RigRN.phl[28]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[29]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[28]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[29]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Arm_IKFK_Control_visibility_AnimLayer2.o" "Bigfoot_RigRN.phl[30]"
 		;
-connectAttr "Bigfoot_RigRN.phl[31]" "Bigfoot_Rig:R_Arm_IKFK_Control_rotate_AnimLayer2.ro"
+connectAttr "Bigfoot_RigRN.phl[31]" "Bigfoot_Rig:R_Arm_IKFK_Control_rotate_AnimLayer1.ro"
 		;
-connectAttr "Bigfoot_RigRN.phl[32]" "Bigfoot_Rig:R_Arm_IKFK_Control_rotate_AnimLayer1.ro"
+connectAttr "Bigfoot_RigRN.phl[32]" "Bigfoot_Rig:R_Arm_IKFK_Control_rotate_AnimLayer2.ro"
 		;
-connectAttr "Bigfoot_RigRN.phl[33]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[34]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[33]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[34]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Arm_IKFK_Control_scaleX_AnimLayer2.o" "Bigfoot_RigRN.phl[35]"
 		;
-connectAttr "Bigfoot_RigRN.phl[36]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[37]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[36]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[37]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Arm_IKFK_Control_scaleY_AnimLayer2.o" "Bigfoot_RigRN.phl[38]"
 		;
-connectAttr "Bigfoot_RigRN.phl[39]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[40]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[39]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[40]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Arm_IKFK_Control_scaleZ_AnimLayer2.o" "Bigfoot_RigRN.phl[41]"
 		;
 connectAttr "Bigfoot_RigRN.phl[42]" "AnimLayer1.dsm" -na;
@@ -19097,48 +18758,48 @@ connectAttr "Bigfoot_RigRN.phl[48]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_RigRN.phl[49]" "AnimLayer2.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Arm_IKFK_Control_FollowRotate_AnimLayer2.o" "Bigfoot_RigRN.phl[50]"
 		;
-connectAttr "Bigfoot_RigRN.phl[51]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[52]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[51]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[52]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Arm_IKFK_Control_translateX_AnimLayer2.o" "Bigfoot_RigRN.phl[53]"
 		;
-connectAttr "Bigfoot_RigRN.phl[54]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[55]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[54]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[55]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Arm_IKFK_Control_translateY_AnimLayer2.o" "Bigfoot_RigRN.phl[56]"
 		;
-connectAttr "Bigfoot_RigRN.phl[57]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[58]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[57]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[58]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Arm_IKFK_Control_translateZ_AnimLayer2.o" "Bigfoot_RigRN.phl[59]"
 		;
-connectAttr "Bigfoot_RigRN.phl[60]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[61]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[60]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[61]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Arm_IKFK_Control_rotate_AnimLayer2.ox" "Bigfoot_RigRN.phl[62]"
 		;
-connectAttr "Bigfoot_RigRN.phl[63]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[64]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[63]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[64]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Arm_IKFK_Control_rotate_AnimLayer2.oy" "Bigfoot_RigRN.phl[65]"
 		;
-connectAttr "Bigfoot_RigRN.phl[66]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[67]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[66]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[67]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Arm_IKFK_Control_rotate_AnimLayer2.oz" "Bigfoot_RigRN.phl[68]"
 		;
-connectAttr "Bigfoot_RigRN.phl[69]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[70]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[69]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[70]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Arm_IKFK_Control_visibility_AnimLayer2.o" "Bigfoot_RigRN.phl[71]"
 		;
-connectAttr "Bigfoot_RigRN.phl[72]" "Bigfoot_Rig:L_Arm_IKFK_Control_rotate_AnimLayer2.ro"
+connectAttr "Bigfoot_RigRN.phl[72]" "Bigfoot_Rig:L_Arm_IKFK_Control_rotate_AnimLayer1.ro"
 		;
-connectAttr "Bigfoot_RigRN.phl[73]" "Bigfoot_Rig:L_Arm_IKFK_Control_rotate_AnimLayer1.ro"
+connectAttr "Bigfoot_RigRN.phl[73]" "Bigfoot_Rig:L_Arm_IKFK_Control_rotate_AnimLayer2.ro"
 		;
-connectAttr "Bigfoot_RigRN.phl[74]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[75]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[74]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[75]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Arm_IKFK_Control_scaleX_AnimLayer2.o" "Bigfoot_RigRN.phl[76]"
 		;
-connectAttr "Bigfoot_RigRN.phl[77]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[78]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[77]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[78]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Arm_IKFK_Control_scaleY_AnimLayer2.o" "Bigfoot_RigRN.phl[79]"
 		;
-connectAttr "Bigfoot_RigRN.phl[80]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[81]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[80]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[81]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Arm_IKFK_Control_scaleZ_AnimLayer2.o" "Bigfoot_RigRN.phl[82]"
 		;
 connectAttr "Bigfoot_RigRN.phl[83]" "AnimLayer1.dsm" -na;
@@ -19153,48 +18814,48 @@ connectAttr "Bigfoot_RigRN.phl[89]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_RigRN.phl[90]" "AnimLayer2.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Leg_IKFK_Control_FollowRotate_AnimLayer2.o" "Bigfoot_RigRN.phl[91]"
 		;
-connectAttr "Bigfoot_RigRN.phl[92]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[93]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[92]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[93]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Leg_IKFK_Control_translateX_AnimLayer2.o" "Bigfoot_RigRN.phl[94]"
 		;
-connectAttr "Bigfoot_RigRN.phl[95]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[96]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[95]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[96]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Leg_IKFK_Control_translateY_AnimLayer2.o" "Bigfoot_RigRN.phl[97]"
 		;
-connectAttr "Bigfoot_RigRN.phl[98]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[99]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[98]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[99]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Leg_IKFK_Control_translateZ_AnimLayer2.o" "Bigfoot_RigRN.phl[100]"
 		;
-connectAttr "Bigfoot_RigRN.phl[101]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[102]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[101]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[102]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Leg_IKFK_Control_rotate_AnimLayer2.ox" "Bigfoot_RigRN.phl[103]"
 		;
-connectAttr "Bigfoot_RigRN.phl[104]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[105]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[104]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[105]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Leg_IKFK_Control_rotate_AnimLayer2.oy" "Bigfoot_RigRN.phl[106]"
 		;
-connectAttr "Bigfoot_RigRN.phl[107]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[108]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[107]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[108]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Leg_IKFK_Control_rotate_AnimLayer2.oz" "Bigfoot_RigRN.phl[109]"
 		;
-connectAttr "Bigfoot_RigRN.phl[110]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[111]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[110]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[111]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Leg_IKFK_Control_visibility_AnimLayer2.o" "Bigfoot_RigRN.phl[112]"
 		;
-connectAttr "Bigfoot_RigRN.phl[113]" "Bigfoot_Rig:L_Leg_IKFK_Control_rotate_AnimLayer2.ro"
+connectAttr "Bigfoot_RigRN.phl[113]" "Bigfoot_Rig:L_Leg_IKFK_Control_rotate_AnimLayer1.ro"
 		;
-connectAttr "Bigfoot_RigRN.phl[114]" "Bigfoot_Rig:L_Leg_IKFK_Control_rotate_AnimLayer1.ro"
+connectAttr "Bigfoot_RigRN.phl[114]" "Bigfoot_Rig:L_Leg_IKFK_Control_rotate_AnimLayer2.ro"
 		;
-connectAttr "Bigfoot_RigRN.phl[115]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[116]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[115]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[116]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Leg_IKFK_Control_scaleX_AnimLayer2.o" "Bigfoot_RigRN.phl[117]"
 		;
-connectAttr "Bigfoot_RigRN.phl[118]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[119]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[118]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[119]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Leg_IKFK_Control_scaleY_AnimLayer2.o" "Bigfoot_RigRN.phl[120]"
 		;
-connectAttr "Bigfoot_RigRN.phl[121]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[122]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[121]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[122]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Leg_IKFK_Control_scaleZ_AnimLayer2.o" "Bigfoot_RigRN.phl[123]"
 		;
 connectAttr "Bigfoot_RigRN.phl[124]" "AnimLayer1.dsm" -na;
@@ -19209,48 +18870,48 @@ connectAttr "Bigfoot_RigRN.phl[130]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_RigRN.phl[131]" "AnimLayer2.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Leg_IKFK_Control_FollowRotate_AnimLayer2.o" "Bigfoot_RigRN.phl[132]"
 		;
-connectAttr "Bigfoot_RigRN.phl[133]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[134]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[133]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[134]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Leg_IKFK_Control_translateX_AnimLayer2.o" "Bigfoot_RigRN.phl[135]"
 		;
-connectAttr "Bigfoot_RigRN.phl[136]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[137]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[136]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[137]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Leg_IKFK_Control_translateY_AnimLayer2.o" "Bigfoot_RigRN.phl[138]"
 		;
-connectAttr "Bigfoot_RigRN.phl[139]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[140]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[139]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[140]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Leg_IKFK_Control_translateZ_AnimLayer2.o" "Bigfoot_RigRN.phl[141]"
 		;
-connectAttr "Bigfoot_RigRN.phl[142]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[143]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[142]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[143]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Leg_IKFK_Control_rotate_AnimLayer2.ox" "Bigfoot_RigRN.phl[144]"
 		;
-connectAttr "Bigfoot_RigRN.phl[145]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[146]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[145]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[146]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Leg_IKFK_Control_rotate_AnimLayer2.oy" "Bigfoot_RigRN.phl[147]"
 		;
-connectAttr "Bigfoot_RigRN.phl[148]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[149]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[148]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[149]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Leg_IKFK_Control_rotate_AnimLayer2.oz" "Bigfoot_RigRN.phl[150]"
 		;
-connectAttr "Bigfoot_RigRN.phl[151]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[152]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[151]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[152]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Leg_IKFK_Control_visibility_AnimLayer2.o" "Bigfoot_RigRN.phl[153]"
 		;
-connectAttr "Bigfoot_RigRN.phl[154]" "Bigfoot_Rig:R_Leg_IKFK_Control_rotate_AnimLayer2.ro"
+connectAttr "Bigfoot_RigRN.phl[154]" "Bigfoot_Rig:R_Leg_IKFK_Control_rotate_AnimLayer1.ro"
 		;
-connectAttr "Bigfoot_RigRN.phl[155]" "Bigfoot_Rig:R_Leg_IKFK_Control_rotate_AnimLayer1.ro"
+connectAttr "Bigfoot_RigRN.phl[155]" "Bigfoot_Rig:R_Leg_IKFK_Control_rotate_AnimLayer2.ro"
 		;
-connectAttr "Bigfoot_RigRN.phl[156]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[157]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[156]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[157]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Leg_IKFK_Control_scaleX_AnimLayer2.o" "Bigfoot_RigRN.phl[158]"
 		;
-connectAttr "Bigfoot_RigRN.phl[159]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[160]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[159]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[160]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Leg_IKFK_Control_scaleY_AnimLayer2.o" "Bigfoot_RigRN.phl[161]"
 		;
-connectAttr "Bigfoot_RigRN.phl[162]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[163]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[162]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[163]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Leg_IKFK_Control_scaleZ_AnimLayer2.o" "Bigfoot_RigRN.phl[164]"
 		;
 connectAttr "Bigfoot_RigRN.phl[165]" "AnimLayer1.dsm" -na;
@@ -19265,88 +18926,88 @@ connectAttr "Bigfoot_RigRN.phl[171]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_RigRN.phl[172]" "AnimLayer2.dsm" -na;
 connectAttr "Bigfoot_Rig:Spine_IKFK_Control_FollowRotate_AnimLayer2.o" "Bigfoot_RigRN.phl[173]"
 		;
-connectAttr "Bigfoot_RigRN.phl[174]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[175]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[174]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[175]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:Spine_IKFK_Control_translateX_AnimLayer2.o" "Bigfoot_RigRN.phl[176]"
 		;
-connectAttr "Bigfoot_RigRN.phl[177]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[178]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[177]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[178]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:Spine_IKFK_Control_translateY_AnimLayer2.o" "Bigfoot_RigRN.phl[179]"
 		;
-connectAttr "Bigfoot_RigRN.phl[180]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[181]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[180]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[181]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:Spine_IKFK_Control_translateZ_AnimLayer2.o" "Bigfoot_RigRN.phl[182]"
 		;
-connectAttr "Bigfoot_RigRN.phl[183]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[184]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[183]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[184]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:Spine_IKFK_Control_rotate_AnimLayer2.ox" "Bigfoot_RigRN.phl[185]"
 		;
-connectAttr "Bigfoot_RigRN.phl[186]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[187]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[186]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[187]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:Spine_IKFK_Control_rotate_AnimLayer2.oy" "Bigfoot_RigRN.phl[188]"
 		;
-connectAttr "Bigfoot_RigRN.phl[189]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[190]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[189]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[190]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:Spine_IKFK_Control_rotate_AnimLayer2.oz" "Bigfoot_RigRN.phl[191]"
 		;
-connectAttr "Bigfoot_RigRN.phl[192]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[193]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[192]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[193]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:Spine_IKFK_Control_visibility_AnimLayer2.o" "Bigfoot_RigRN.phl[194]"
 		;
-connectAttr "Bigfoot_RigRN.phl[195]" "Bigfoot_Rig:Spine_IKFK_Control_rotate_AnimLayer2.ro"
+connectAttr "Bigfoot_RigRN.phl[195]" "Bigfoot_Rig:Spine_IKFK_Control_rotate_AnimLayer1.ro"
 		;
-connectAttr "Bigfoot_RigRN.phl[196]" "Bigfoot_Rig:Spine_IKFK_Control_rotate_AnimLayer1.ro"
+connectAttr "Bigfoot_RigRN.phl[196]" "Bigfoot_Rig:Spine_IKFK_Control_rotate_AnimLayer2.ro"
 		;
-connectAttr "Bigfoot_RigRN.phl[197]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[198]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[197]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[198]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:Spine_IKFK_Control_scaleX_AnimLayer2.o" "Bigfoot_RigRN.phl[199]"
 		;
-connectAttr "Bigfoot_RigRN.phl[200]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[201]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[200]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[201]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:Spine_IKFK_Control_scaleY_AnimLayer2.o" "Bigfoot_RigRN.phl[202]"
 		;
-connectAttr "Bigfoot_RigRN.phl[203]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[204]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[203]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[204]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:Spine_IKFK_Control_scaleZ_AnimLayer2.o" "Bigfoot_RigRN.phl[205]"
 		;
-connectAttr "Bigfoot_RigRN.phl[206]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[207]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[206]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[207]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:CoG_Jnt_Ctrl_translateY_AnimLayer2.o" "Bigfoot_RigRN.phl[208]"
 		;
-connectAttr "Bigfoot_RigRN.phl[209]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[210]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[209]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[210]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:CoG_Jnt_Ctrl_translateZ_AnimLayer2.o" "Bigfoot_RigRN.phl[211]"
 		;
-connectAttr "Bigfoot_RigRN.phl[212]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[213]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[212]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[213]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:CoG_Jnt_Ctrl_translateX_AnimLayer2.o" "Bigfoot_RigRN.phl[214]"
 		;
-connectAttr "Bigfoot_RigRN.phl[215]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[216]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[215]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[216]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:CoG_Jnt_Ctrl_rotate_AnimLayer2.oy" "Bigfoot_RigRN.phl[217]"
 		;
-connectAttr "Bigfoot_RigRN.phl[218]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[219]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[218]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[219]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:CoG_Jnt_Ctrl_rotate_AnimLayer2.ox" "Bigfoot_RigRN.phl[220]"
 		;
-connectAttr "Bigfoot_RigRN.phl[221]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[222]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[221]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[222]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:CoG_Jnt_Ctrl_rotate_AnimLayer2.oz" "Bigfoot_RigRN.phl[223]"
 		;
 connectAttr "Bigfoot_RigRN.phl[224]" "Bigfoot_Rig:CoG_Jnt_Ctrl_rotate_AnimLayer1.ro"
 		;
 connectAttr "Bigfoot_RigRN.phl[225]" "Bigfoot_Rig:CoG_Jnt_Ctrl_rotate_AnimLayer2.ro"
 		;
-connectAttr "Bigfoot_RigRN.phl[226]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[227]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[226]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[227]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:CoG_Jnt_Ctrl_scaleX_AnimLayer2.o" "Bigfoot_RigRN.phl[228]"
 		;
-connectAttr "Bigfoot_RigRN.phl[229]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[230]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[229]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[230]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:CoG_Jnt_Ctrl_scaleY_AnimLayer2.o" "Bigfoot_RigRN.phl[231]"
 		;
-connectAttr "Bigfoot_RigRN.phl[232]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[233]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[232]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[233]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:CoG_Jnt_Ctrl_scaleZ_AnimLayer2.o" "Bigfoot_RigRN.phl[234]"
 		;
 connectAttr "Bigfoot_RigRN.phl[235]" "AnimLayer1.dsm" -na;
@@ -19357,96 +19018,96 @@ connectAttr "Bigfoot_RigRN.phl[238]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_RigRN.phl[239]" "AnimLayer2.dsm" -na;
 connectAttr "Bigfoot_Rig:CoG_Jnt_Ctrl_FollowRotate_AnimLayer2.o" "Bigfoot_RigRN.phl[240]"
 		;
-connectAttr "Bigfoot_RigRN.phl[241]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[242]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[241]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[242]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:CoG_Jnt_Ctrl_visibility_AnimLayer2.o" "Bigfoot_RigRN.phl[243]"
 		;
 connectAttr "Bigfoot_RigRN.phl[244]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_RigRN.phl[245]" "AnimLayer2.dsm" -na;
 connectAttr "Bigfoot_Rig:Transform_Ctrl_MasterScale_AnimLayer2.o" "Bigfoot_RigRN.phl[246]"
 		;
-connectAttr "Bigfoot_RigRN.phl[247]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[248]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[247]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[248]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:Transform_Ctrl_translateX_AnimLayer2.o" "Bigfoot_RigRN.phl[249]"
 		;
-connectAttr "Bigfoot_RigRN.phl[250]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[251]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[250]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[251]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:Transform_Ctrl_translateY_AnimLayer2.o" "Bigfoot_RigRN.phl[252]"
 		;
-connectAttr "Bigfoot_RigRN.phl[253]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[254]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[253]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[254]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:Transform_Ctrl_translateZ_AnimLayer2.o" "Bigfoot_RigRN.phl[255]"
 		;
-connectAttr "Bigfoot_RigRN.phl[256]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[257]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[256]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[257]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:Transform_Ctrl_rotate_AnimLayer2.ox" "Bigfoot_RigRN.phl[258]"
 		;
-connectAttr "Bigfoot_RigRN.phl[259]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[260]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[259]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[260]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:Transform_Ctrl_rotate_AnimLayer2.oy" "Bigfoot_RigRN.phl[261]"
 		;
-connectAttr "Bigfoot_RigRN.phl[262]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[263]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[262]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[263]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:Transform_Ctrl_rotate_AnimLayer2.oz" "Bigfoot_RigRN.phl[264]"
 		;
 connectAttr "Bigfoot_RigRN.phl[265]" "Bigfoot_Rig:Transform_Ctrl_rotate_AnimLayer1.ro"
 		;
 connectAttr "Bigfoot_RigRN.phl[266]" "Bigfoot_Rig:Transform_Ctrl_rotate_AnimLayer2.ro"
 		;
-connectAttr "Bigfoot_RigRN.phl[267]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[268]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[267]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[268]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:Transform_Ctrl_scaleX_AnimLayer2.o" "Bigfoot_RigRN.phl[269]"
 		;
-connectAttr "Bigfoot_RigRN.phl[270]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[271]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[270]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[271]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:Transform_Ctrl_scaleY_AnimLayer2.o" "Bigfoot_RigRN.phl[272]"
 		;
-connectAttr "Bigfoot_RigRN.phl[273]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[274]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[273]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[274]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:Transform_Ctrl_scaleZ_AnimLayer2.o" "Bigfoot_RigRN.phl[275]"
 		;
-connectAttr "Bigfoot_RigRN.phl[276]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[277]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[276]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[277]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:Transform_Ctrl_visibility_AnimLayer2.o" "Bigfoot_RigRN.phl[278]"
 		;
-connectAttr "Bigfoot_RigRN.phl[279]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[280]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[279]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[280]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:Spine_3_Jnt_FK_Ctrl_translateX_AnimLayer2.o" "Bigfoot_RigRN.phl[281]"
 		;
-connectAttr "Bigfoot_RigRN.phl[282]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[283]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[282]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[283]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:Spine_3_Jnt_FK_Ctrl_translateY_AnimLayer2.o" "Bigfoot_RigRN.phl[284]"
 		;
-connectAttr "Bigfoot_RigRN.phl[285]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[286]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[285]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[286]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:Spine_3_Jnt_FK_Ctrl_translateZ_AnimLayer2.o" "Bigfoot_RigRN.phl[287]"
 		;
-connectAttr "Bigfoot_RigRN.phl[288]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[289]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[288]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[289]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:Spine_3_Jnt_FK_Ctrl_rotate_AnimLayer2.oz" "Bigfoot_RigRN.phl[290]"
 		;
-connectAttr "Bigfoot_RigRN.phl[291]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[292]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[291]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[292]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:Spine_3_Jnt_FK_Ctrl_rotate_AnimLayer2.ox" "Bigfoot_RigRN.phl[293]"
 		;
-connectAttr "Bigfoot_RigRN.phl[294]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[295]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[294]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[295]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:Spine_3_Jnt_FK_Ctrl_rotate_AnimLayer2.oy" "Bigfoot_RigRN.phl[296]"
 		;
 connectAttr "Bigfoot_RigRN.phl[297]" "Bigfoot_Rig:Spine_3_Jnt_FK_Ctrl_rotate_AnimLayer1.ro"
 		;
 connectAttr "Bigfoot_RigRN.phl[298]" "Bigfoot_Rig:Spine_3_Jnt_FK_Ctrl_rotate_AnimLayer2.ro"
 		;
-connectAttr "Bigfoot_RigRN.phl[299]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[300]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[299]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[300]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:Spine_3_Jnt_FK_Ctrl_scaleX_AnimLayer2.o" "Bigfoot_RigRN.phl[301]"
 		;
-connectAttr "Bigfoot_RigRN.phl[302]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[303]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[302]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[303]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:Spine_3_Jnt_FK_Ctrl_scaleY_AnimLayer2.o" "Bigfoot_RigRN.phl[304]"
 		;
-connectAttr "Bigfoot_RigRN.phl[305]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[306]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[305]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[306]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:Spine_3_Jnt_FK_Ctrl_scaleZ_AnimLayer2.o" "Bigfoot_RigRN.phl[307]"
 		;
 connectAttr "Bigfoot_RigRN.phl[308]" "AnimLayer1.dsm" -na;
@@ -19457,48 +19118,48 @@ connectAttr "Bigfoot_RigRN.phl[311]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_RigRN.phl[312]" "AnimLayer2.dsm" -na;
 connectAttr "Bigfoot_Rig:Spine_3_Jnt_FK_Ctrl_FollowRotate_AnimLayer2.o" "Bigfoot_RigRN.phl[313]"
 		;
-connectAttr "Bigfoot_RigRN.phl[314]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[315]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[314]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[315]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:Spine_3_Jnt_FK_Ctrl_visibility_AnimLayer2.o" "Bigfoot_RigRN.phl[316]"
 		;
-connectAttr "Bigfoot_RigRN.phl[317]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[318]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[317]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[318]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:Spine_1_Jnt_FK_Ctrl_translateX_AnimLayer2.o" "Bigfoot_RigRN.phl[319]"
 		;
-connectAttr "Bigfoot_RigRN.phl[320]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[321]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[320]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[321]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:Spine_1_Jnt_FK_Ctrl_translateY_AnimLayer2.o" "Bigfoot_RigRN.phl[322]"
 		;
-connectAttr "Bigfoot_RigRN.phl[323]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[324]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[323]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[324]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:Spine_1_Jnt_FK_Ctrl_translateZ_AnimLayer2.o" "Bigfoot_RigRN.phl[325]"
 		;
-connectAttr "Bigfoot_RigRN.phl[326]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[327]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[326]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[327]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:Spine_1_Jnt_FK_Ctrl_rotate_AnimLayer2.ox" "Bigfoot_RigRN.phl[328]"
 		;
-connectAttr "Bigfoot_RigRN.phl[329]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[330]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[329]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[330]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:Spine_1_Jnt_FK_Ctrl_rotate_AnimLayer2.oy" "Bigfoot_RigRN.phl[331]"
 		;
-connectAttr "Bigfoot_RigRN.phl[332]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[333]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[332]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[333]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:Spine_1_Jnt_FK_Ctrl_rotate_AnimLayer2.oz" "Bigfoot_RigRN.phl[334]"
 		;
 connectAttr "Bigfoot_RigRN.phl[335]" "Bigfoot_Rig:Spine_1_Jnt_FK_Ctrl_rotate_AnimLayer1.ro"
 		;
 connectAttr "Bigfoot_RigRN.phl[336]" "Bigfoot_Rig:Spine_1_Jnt_FK_Ctrl_rotate_AnimLayer2.ro"
 		;
-connectAttr "Bigfoot_RigRN.phl[337]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[338]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[337]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[338]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:Spine_1_Jnt_FK_Ctrl_scaleX_AnimLayer2.o" "Bigfoot_RigRN.phl[339]"
 		;
-connectAttr "Bigfoot_RigRN.phl[340]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[341]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[340]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[341]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:Spine_1_Jnt_FK_Ctrl_scaleY_AnimLayer2.o" "Bigfoot_RigRN.phl[342]"
 		;
-connectAttr "Bigfoot_RigRN.phl[343]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[344]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[343]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[344]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:Spine_1_Jnt_FK_Ctrl_scaleZ_AnimLayer2.o" "Bigfoot_RigRN.phl[345]"
 		;
 connectAttr "Bigfoot_RigRN.phl[346]" "AnimLayer1.dsm" -na;
@@ -19509,48 +19170,48 @@ connectAttr "Bigfoot_RigRN.phl[349]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_RigRN.phl[350]" "AnimLayer2.dsm" -na;
 connectAttr "Bigfoot_Rig:Spine_1_Jnt_FK_Ctrl_FollowRotate_AnimLayer2.o" "Bigfoot_RigRN.phl[351]"
 		;
-connectAttr "Bigfoot_RigRN.phl[352]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[353]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[352]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[353]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:Spine_1_Jnt_FK_Ctrl_visibility_AnimLayer2.o" "Bigfoot_RigRN.phl[354]"
 		;
-connectAttr "Bigfoot_RigRN.phl[355]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[356]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[355]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[356]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:Spine_2_Jnt_FK_Ctrl_translateX_AnimLayer2.o" "Bigfoot_RigRN.phl[357]"
 		;
-connectAttr "Bigfoot_RigRN.phl[358]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[359]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[358]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[359]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:Spine_2_Jnt_FK_Ctrl_translateY_AnimLayer2.o" "Bigfoot_RigRN.phl[360]"
 		;
-connectAttr "Bigfoot_RigRN.phl[361]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[362]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[361]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[362]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:Spine_2_Jnt_FK_Ctrl_translateZ_AnimLayer2.o" "Bigfoot_RigRN.phl[363]"
 		;
-connectAttr "Bigfoot_RigRN.phl[364]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[365]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[364]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[365]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:Spine_2_Jnt_FK_Ctrl_rotate_AnimLayer2.oz" "Bigfoot_RigRN.phl[366]"
 		;
-connectAttr "Bigfoot_RigRN.phl[367]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[368]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[367]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[368]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:Spine_2_Jnt_FK_Ctrl_rotate_AnimLayer2.ox" "Bigfoot_RigRN.phl[369]"
 		;
-connectAttr "Bigfoot_RigRN.phl[370]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[371]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[370]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[371]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:Spine_2_Jnt_FK_Ctrl_rotate_AnimLayer2.oy" "Bigfoot_RigRN.phl[372]"
 		;
 connectAttr "Bigfoot_RigRN.phl[373]" "Bigfoot_Rig:Spine_2_Jnt_FK_Ctrl_rotate_AnimLayer1.ro"
 		;
 connectAttr "Bigfoot_RigRN.phl[374]" "Bigfoot_Rig:Spine_2_Jnt_FK_Ctrl_rotate_AnimLayer2.ro"
 		;
-connectAttr "Bigfoot_RigRN.phl[375]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[376]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[375]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[376]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:Spine_2_Jnt_FK_Ctrl_scaleX_AnimLayer2.o" "Bigfoot_RigRN.phl[377]"
 		;
-connectAttr "Bigfoot_RigRN.phl[378]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[379]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[378]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[379]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:Spine_2_Jnt_FK_Ctrl_scaleY_AnimLayer2.o" "Bigfoot_RigRN.phl[380]"
 		;
-connectAttr "Bigfoot_RigRN.phl[381]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[382]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[381]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[382]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:Spine_2_Jnt_FK_Ctrl_scaleZ_AnimLayer2.o" "Bigfoot_RigRN.phl[383]"
 		;
 connectAttr "Bigfoot_RigRN.phl[384]" "AnimLayer1.dsm" -na;
@@ -19561,48 +19222,48 @@ connectAttr "Bigfoot_RigRN.phl[387]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_RigRN.phl[388]" "AnimLayer2.dsm" -na;
 connectAttr "Bigfoot_Rig:Spine_2_Jnt_FK_Ctrl_FollowRotate_AnimLayer2.o" "Bigfoot_RigRN.phl[389]"
 		;
-connectAttr "Bigfoot_RigRN.phl[390]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[391]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[390]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[391]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:Spine_2_Jnt_FK_Ctrl_visibility_AnimLayer2.o" "Bigfoot_RigRN.phl[392]"
 		;
-connectAttr "Bigfoot_RigRN.phl[393]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[394]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[393]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[394]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:Pelvis_Ctrl_translateX_AnimLayer2.o" "Bigfoot_RigRN.phl[395]"
 		;
-connectAttr "Bigfoot_RigRN.phl[396]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[397]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[396]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[397]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:Pelvis_Ctrl_translateY_AnimLayer2.o" "Bigfoot_RigRN.phl[398]"
 		;
-connectAttr "Bigfoot_RigRN.phl[399]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[400]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[399]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[400]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:Pelvis_Ctrl_translateZ_AnimLayer2.o" "Bigfoot_RigRN.phl[401]"
 		;
-connectAttr "Bigfoot_RigRN.phl[402]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[403]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[402]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[403]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:Pelvis_Ctrl_rotate_AnimLayer2.oy" "Bigfoot_RigRN.phl[404]"
 		;
-connectAttr "Bigfoot_RigRN.phl[405]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[406]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[405]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[406]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:Pelvis_Ctrl_rotate_AnimLayer2.ox" "Bigfoot_RigRN.phl[407]"
 		;
-connectAttr "Bigfoot_RigRN.phl[408]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[409]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[408]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[409]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:Pelvis_Ctrl_rotate_AnimLayer2.oz" "Bigfoot_RigRN.phl[410]"
 		;
 connectAttr "Bigfoot_RigRN.phl[411]" "Bigfoot_Rig:Pelvis_Ctrl_rotate_AnimLayer1.ro"
 		;
 connectAttr "Bigfoot_RigRN.phl[412]" "Bigfoot_Rig:Pelvis_Ctrl_rotate_AnimLayer2.ro"
 		;
-connectAttr "Bigfoot_RigRN.phl[413]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[414]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[413]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[414]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:Pelvis_Ctrl_scaleX_AnimLayer2.o" "Bigfoot_RigRN.phl[415]"
 		;
-connectAttr "Bigfoot_RigRN.phl[416]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[417]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[416]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[417]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:Pelvis_Ctrl_scaleY_AnimLayer2.o" "Bigfoot_RigRN.phl[418]"
 		;
-connectAttr "Bigfoot_RigRN.phl[419]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[420]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[419]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[420]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:Pelvis_Ctrl_scaleZ_AnimLayer2.o" "Bigfoot_RigRN.phl[421]"
 		;
 connectAttr "Bigfoot_RigRN.phl[422]" "AnimLayer1.dsm" -na;
@@ -19613,48 +19274,48 @@ connectAttr "Bigfoot_RigRN.phl[425]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_RigRN.phl[426]" "AnimLayer2.dsm" -na;
 connectAttr "Bigfoot_Rig:Pelvis_Ctrl_FollowRotate_AnimLayer2.o" "Bigfoot_RigRN.phl[427]"
 		;
-connectAttr "Bigfoot_RigRN.phl[428]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[429]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[428]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[429]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:Pelvis_Ctrl_visibility_AnimLayer2.o" "Bigfoot_RigRN.phl[430]"
 		;
-connectAttr "Bigfoot_RigRN.phl[431]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[432]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[431]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[432]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:Neck_Jnt_Ctrl_translateX_AnimLayer2.o" "Bigfoot_RigRN.phl[433]"
 		;
-connectAttr "Bigfoot_RigRN.phl[434]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[435]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[434]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[435]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:Neck_Jnt_Ctrl_translateY_AnimLayer2.o" "Bigfoot_RigRN.phl[436]"
 		;
-connectAttr "Bigfoot_RigRN.phl[437]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[438]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[437]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[438]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:Neck_Jnt_Ctrl_translateZ_AnimLayer2.o" "Bigfoot_RigRN.phl[439]"
 		;
-connectAttr "Bigfoot_RigRN.phl[440]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[441]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[440]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[441]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:Neck_Jnt_Ctrl_rotate_AnimLayer2.ox" "Bigfoot_RigRN.phl[442]"
 		;
-connectAttr "Bigfoot_RigRN.phl[443]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[444]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[443]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[444]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:Neck_Jnt_Ctrl_rotate_AnimLayer2.oy" "Bigfoot_RigRN.phl[445]"
 		;
-connectAttr "Bigfoot_RigRN.phl[446]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[447]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[446]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[447]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:Neck_Jnt_Ctrl_rotate_AnimLayer2.oz" "Bigfoot_RigRN.phl[448]"
 		;
 connectAttr "Bigfoot_RigRN.phl[449]" "Bigfoot_Rig:Neck_Jnt_Ctrl_rotate_AnimLayer1.ro"
 		;
 connectAttr "Bigfoot_RigRN.phl[450]" "Bigfoot_Rig:Neck_Jnt_Ctrl_rotate_AnimLayer2.ro"
 		;
-connectAttr "Bigfoot_RigRN.phl[451]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[452]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[451]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[452]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:Neck_Jnt_Ctrl_scaleX_AnimLayer2.o" "Bigfoot_RigRN.phl[453]"
 		;
-connectAttr "Bigfoot_RigRN.phl[454]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[455]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[454]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[455]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:Neck_Jnt_Ctrl_scaleY_AnimLayer2.o" "Bigfoot_RigRN.phl[456]"
 		;
-connectAttr "Bigfoot_RigRN.phl[457]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[458]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[457]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[458]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:Neck_Jnt_Ctrl_scaleZ_AnimLayer2.o" "Bigfoot_RigRN.phl[459]"
 		;
 connectAttr "Bigfoot_RigRN.phl[460]" "AnimLayer1.dsm" -na;
@@ -19665,36 +19326,36 @@ connectAttr "Bigfoot_RigRN.phl[463]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_RigRN.phl[464]" "AnimLayer2.dsm" -na;
 connectAttr "Bigfoot_Rig:Neck_Jnt_Ctrl_FollowRotate_AnimLayer2.o" "Bigfoot_RigRN.phl[465]"
 		;
-connectAttr "Bigfoot_RigRN.phl[466]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[467]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[466]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[467]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:Neck_Jnt_Ctrl_visibility_AnimLayer2.o" "Bigfoot_RigRN.phl[468]"
 		;
 connectAttr "Bigfoot_RigRN.phl[469]" "locator1_parentConstraint1.tg[0].tt";
-connectAttr "Bigfoot_RigRN.phl[470]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[471]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[470]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[471]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:Head_Ctrl_translateY_AnimLayer2.o" "Bigfoot_RigRN.phl[472]"
 		;
-connectAttr "Bigfoot_RigRN.phl[473]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[474]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[473]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[474]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:Head_Ctrl_translateZ_AnimLayer2.o" "Bigfoot_RigRN.phl[475]"
 		;
-connectAttr "Bigfoot_RigRN.phl[476]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[477]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[476]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[477]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:Head_Ctrl_translateX_AnimLayer2.o" "Bigfoot_RigRN.phl[478]"
 		;
 connectAttr "Bigfoot_RigRN.phl[479]" "locator1_parentConstraint1.tg[0].trp";
 connectAttr "Bigfoot_RigRN.phl[480]" "locator1_parentConstraint1.tg[0].trt";
 connectAttr "Bigfoot_RigRN.phl[481]" "locator1_parentConstraint1.tg[0].tr";
-connectAttr "Bigfoot_RigRN.phl[482]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[483]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[482]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[483]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:Head_Ctrl_rotate_AnimLayer2.ox" "Bigfoot_RigRN.phl[484]"
 		;
-connectAttr "Bigfoot_RigRN.phl[485]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[486]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[485]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[486]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:Head_Ctrl_rotate_AnimLayer2.oy" "Bigfoot_RigRN.phl[487]"
 		;
-connectAttr "Bigfoot_RigRN.phl[488]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[489]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[488]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[489]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:Head_Ctrl_rotate_AnimLayer2.oz" "Bigfoot_RigRN.phl[490]"
 		;
 connectAttr "Bigfoot_RigRN.phl[491]" "locator1_parentConstraint1.tg[0].tro";
@@ -19703,16 +19364,16 @@ connectAttr "Bigfoot_RigRN.phl[492]" "Bigfoot_Rig:Head_Ctrl_rotate_AnimLayer1.ro
 connectAttr "Bigfoot_RigRN.phl[493]" "Bigfoot_Rig:Head_Ctrl_rotate_AnimLayer2.ro"
 		;
 connectAttr "Bigfoot_RigRN.phl[494]" "locator1_parentConstraint1.tg[0].ts";
-connectAttr "Bigfoot_RigRN.phl[495]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[496]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[495]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[496]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:Head_Ctrl_scaleX_AnimLayer2.o" "Bigfoot_RigRN.phl[497]"
 		;
-connectAttr "Bigfoot_RigRN.phl[498]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[499]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[498]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[499]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:Head_Ctrl_scaleY_AnimLayer2.o" "Bigfoot_RigRN.phl[500]"
 		;
-connectAttr "Bigfoot_RigRN.phl[501]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[502]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[501]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[502]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:Head_Ctrl_scaleZ_AnimLayer2.o" "Bigfoot_RigRN.phl[503]"
 		;
 connectAttr "Bigfoot_RigRN.phl[504]" "locator1_parentConstraint1.tg[0].tpm";
@@ -19724,48 +19385,48 @@ connectAttr "Bigfoot_RigRN.phl[508]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_RigRN.phl[509]" "AnimLayer2.dsm" -na;
 connectAttr "Bigfoot_Rig:Head_Ctrl_FollowRotate_AnimLayer2.o" "Bigfoot_RigRN.phl[510]"
 		;
-connectAttr "Bigfoot_RigRN.phl[511]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[512]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[511]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[512]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:Head_Ctrl_visibility_AnimLayer2.o" "Bigfoot_RigRN.phl[513]"
 		;
-connectAttr "Bigfoot_RigRN.phl[514]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[515]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[514]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[515]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:Nose_Jnt_Ctrl_translateY_AnimLayer2.o" "Bigfoot_RigRN.phl[516]"
 		;
-connectAttr "Bigfoot_RigRN.phl[517]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[518]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[517]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[518]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:Nose_Jnt_Ctrl_translateZ_AnimLayer2.o" "Bigfoot_RigRN.phl[519]"
 		;
-connectAttr "Bigfoot_RigRN.phl[520]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[521]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[520]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[521]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:Nose_Jnt_Ctrl_translateX_AnimLayer2.o" "Bigfoot_RigRN.phl[522]"
 		;
-connectAttr "Bigfoot_RigRN.phl[523]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[524]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[523]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[524]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:Nose_Jnt_Ctrl_rotate_AnimLayer2.ox" "Bigfoot_RigRN.phl[525]"
 		;
-connectAttr "Bigfoot_RigRN.phl[526]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[527]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[526]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[527]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:Nose_Jnt_Ctrl_rotate_AnimLayer2.oy" "Bigfoot_RigRN.phl[528]"
 		;
-connectAttr "Bigfoot_RigRN.phl[529]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[530]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[529]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[530]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:Nose_Jnt_Ctrl_rotate_AnimLayer2.oz" "Bigfoot_RigRN.phl[531]"
 		;
 connectAttr "Bigfoot_RigRN.phl[532]" "Bigfoot_Rig:Nose_Jnt_Ctrl_rotate_AnimLayer1.ro"
 		;
 connectAttr "Bigfoot_RigRN.phl[533]" "Bigfoot_Rig:Nose_Jnt_Ctrl_rotate_AnimLayer2.ro"
 		;
-connectAttr "Bigfoot_RigRN.phl[534]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[535]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[534]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[535]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:Nose_Jnt_Ctrl_scaleX_AnimLayer2.o" "Bigfoot_RigRN.phl[536]"
 		;
-connectAttr "Bigfoot_RigRN.phl[537]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[538]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[537]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[538]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:Nose_Jnt_Ctrl_scaleY_AnimLayer2.o" "Bigfoot_RigRN.phl[539]"
 		;
-connectAttr "Bigfoot_RigRN.phl[540]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[541]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[540]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[541]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:Nose_Jnt_Ctrl_scaleZ_AnimLayer2.o" "Bigfoot_RigRN.phl[542]"
 		;
 connectAttr "Bigfoot_RigRN.phl[543]" "AnimLayer1.dsm" -na;
@@ -19776,48 +19437,48 @@ connectAttr "Bigfoot_RigRN.phl[546]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_RigRN.phl[547]" "AnimLayer2.dsm" -na;
 connectAttr "Bigfoot_Rig:Nose_Jnt_Ctrl_FollowRotate_AnimLayer2.o" "Bigfoot_RigRN.phl[548]"
 		;
-connectAttr "Bigfoot_RigRN.phl[549]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[550]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[549]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[550]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:Nose_Jnt_Ctrl_visibility_AnimLayer2.o" "Bigfoot_RigRN.phl[551]"
 		;
-connectAttr "Bigfoot_RigRN.phl[552]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[553]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[552]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[553]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Eyelid_Jnt_Ctrl_translateX_AnimLayer2.o" "Bigfoot_RigRN.phl[554]"
 		;
-connectAttr "Bigfoot_RigRN.phl[555]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[556]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[555]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[556]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Eyelid_Jnt_Ctrl_translateY_AnimLayer2.o" "Bigfoot_RigRN.phl[557]"
 		;
-connectAttr "Bigfoot_RigRN.phl[558]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[559]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[558]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[559]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Eyelid_Jnt_Ctrl_translateZ_AnimLayer2.o" "Bigfoot_RigRN.phl[560]"
 		;
-connectAttr "Bigfoot_RigRN.phl[561]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[562]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[561]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[562]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Eyelid_Jnt_Ctrl_rotate_AnimLayer2.ox" "Bigfoot_RigRN.phl[563]"
 		;
-connectAttr "Bigfoot_RigRN.phl[564]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[565]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[564]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[565]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Eyelid_Jnt_Ctrl_rotate_AnimLayer2.oy" "Bigfoot_RigRN.phl[566]"
 		;
-connectAttr "Bigfoot_RigRN.phl[567]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[568]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[567]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[568]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Eyelid_Jnt_Ctrl_rotate_AnimLayer2.oz" "Bigfoot_RigRN.phl[569]"
 		;
 connectAttr "Bigfoot_RigRN.phl[570]" "Bigfoot_Rig:R_Eyelid_Jnt_Ctrl_rotate_AnimLayer1.ro"
 		;
 connectAttr "Bigfoot_RigRN.phl[571]" "Bigfoot_Rig:R_Eyelid_Jnt_Ctrl_rotate_AnimLayer2.ro"
 		;
-connectAttr "Bigfoot_RigRN.phl[572]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[573]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[572]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[573]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Eyelid_Jnt_Ctrl_scaleX_AnimLayer2.o" "Bigfoot_RigRN.phl[574]"
 		;
-connectAttr "Bigfoot_RigRN.phl[575]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[576]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[575]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[576]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Eyelid_Jnt_Ctrl_scaleY_AnimLayer2.o" "Bigfoot_RigRN.phl[577]"
 		;
-connectAttr "Bigfoot_RigRN.phl[578]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[579]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[578]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[579]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Eyelid_Jnt_Ctrl_scaleZ_AnimLayer2.o" "Bigfoot_RigRN.phl[580]"
 		;
 connectAttr "Bigfoot_RigRN.phl[581]" "AnimLayer1.dsm" -na;
@@ -19828,48 +19489,48 @@ connectAttr "Bigfoot_RigRN.phl[584]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_RigRN.phl[585]" "AnimLayer2.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Eyelid_Jnt_Ctrl_FollowRotate_AnimLayer2.o" "Bigfoot_RigRN.phl[586]"
 		;
-connectAttr "Bigfoot_RigRN.phl[587]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[588]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[587]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[588]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Eyelid_Jnt_Ctrl_visibility_AnimLayer2.o" "Bigfoot_RigRN.phl[589]"
 		;
-connectAttr "Bigfoot_RigRN.phl[590]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[591]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[590]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[591]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Eyelid_Jnt_Ctrl_translateX_AnimLayer2.o" "Bigfoot_RigRN.phl[592]"
 		;
-connectAttr "Bigfoot_RigRN.phl[593]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[594]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[593]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[594]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Eyelid_Jnt_Ctrl_translateY_AnimLayer2.o" "Bigfoot_RigRN.phl[595]"
 		;
-connectAttr "Bigfoot_RigRN.phl[596]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[597]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[596]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[597]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Eyelid_Jnt_Ctrl_translateZ_AnimLayer2.o" "Bigfoot_RigRN.phl[598]"
 		;
-connectAttr "Bigfoot_RigRN.phl[599]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[600]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[599]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[600]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Eyelid_Jnt_Ctrl_rotate_AnimLayer2.ox" "Bigfoot_RigRN.phl[601]"
 		;
-connectAttr "Bigfoot_RigRN.phl[602]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[603]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[602]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[603]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Eyelid_Jnt_Ctrl_rotate_AnimLayer2.oy" "Bigfoot_RigRN.phl[604]"
 		;
-connectAttr "Bigfoot_RigRN.phl[605]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[606]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[605]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[606]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Eyelid_Jnt_Ctrl_rotate_AnimLayer2.oz" "Bigfoot_RigRN.phl[607]"
 		;
 connectAttr "Bigfoot_RigRN.phl[608]" "Bigfoot_Rig:L_Eyelid_Jnt_Ctrl_rotate_AnimLayer1.ro"
 		;
 connectAttr "Bigfoot_RigRN.phl[609]" "Bigfoot_Rig:L_Eyelid_Jnt_Ctrl_rotate_AnimLayer2.ro"
 		;
-connectAttr "Bigfoot_RigRN.phl[610]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[611]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[610]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[611]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Eyelid_Jnt_Ctrl_scaleX_AnimLayer2.o" "Bigfoot_RigRN.phl[612]"
 		;
-connectAttr "Bigfoot_RigRN.phl[613]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[614]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[613]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[614]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Eyelid_Jnt_Ctrl_scaleY_AnimLayer2.o" "Bigfoot_RigRN.phl[615]"
 		;
-connectAttr "Bigfoot_RigRN.phl[616]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[617]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[616]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[617]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Eyelid_Jnt_Ctrl_scaleZ_AnimLayer2.o" "Bigfoot_RigRN.phl[618]"
 		;
 connectAttr "Bigfoot_RigRN.phl[619]" "AnimLayer1.dsm" -na;
@@ -19880,65 +19541,65 @@ connectAttr "Bigfoot_RigRN.phl[622]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_RigRN.phl[623]" "AnimLayer2.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Eyelid_Jnt_Ctrl_FollowRotate_AnimLayer2.o" "Bigfoot_RigRN.phl[624]"
 		;
-connectAttr "Bigfoot_RigRN.phl[625]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[626]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[625]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[626]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Eyelid_Jnt_Ctrl_visibility_AnimLayer2.o" "Bigfoot_RigRN.phl[627]"
 		;
-connectAttr "Bigfoot_RigRN.phl[628]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[629]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[628]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[629]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:Beard_Jnt_Ctrl_translateX_AnimLayer2.o" "Bigfoot_RigRN.phl[630]"
 		;
-connectAttr "Bigfoot_RigRN.phl[631]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[632]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[631]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[632]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:Beard_Jnt_Ctrl_translateY_AnimLayer2.o" "Bigfoot_RigRN.phl[633]"
 		;
-connectAttr "Bigfoot_RigRN.phl[634]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[635]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[634]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[635]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:Beard_Jnt_Ctrl_translateZ_AnimLayer2.o" "Bigfoot_RigRN.phl[636]"
 		;
-connectAttr "Bigfoot_RigRN.phl[637]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[638]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[637]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[638]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:Beard_Jnt_Ctrl_rotate_AnimLayer2.ox" "Bigfoot_RigRN.phl[639]"
 		;
-connectAttr "Bigfoot_RigRN.phl[640]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[641]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[640]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[641]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:Beard_Jnt_Ctrl_rotate_AnimLayer2.oy" "Bigfoot_RigRN.phl[642]"
 		;
-connectAttr "Bigfoot_RigRN.phl[643]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[644]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[643]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[644]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:Beard_Jnt_Ctrl_rotate_AnimLayer2.oz" "Bigfoot_RigRN.phl[645]"
 		;
 connectAttr "Bigfoot_RigRN.phl[646]" "Bigfoot_Rig:Beard_Jnt_Ctrl_rotate_AnimLayer1.ro"
 		;
 connectAttr "Bigfoot_RigRN.phl[647]" "Bigfoot_Rig:Beard_Jnt_Ctrl_rotate_AnimLayer2.ro"
 		;
-connectAttr "Bigfoot_RigRN.phl[648]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[649]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[648]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[649]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:Beard_Jnt_Ctrl_scaleX_AnimLayer2.o" "Bigfoot_RigRN.phl[650]"
 		;
-connectAttr "Bigfoot_RigRN.phl[651]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[652]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[651]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[652]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:Beard_Jnt_Ctrl_scaleY_AnimLayer2.o" "Bigfoot_RigRN.phl[653]"
 		;
-connectAttr "Bigfoot_RigRN.phl[654]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[655]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[654]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[655]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:Beard_Jnt_Ctrl_scaleZ_AnimLayer2.o" "Bigfoot_RigRN.phl[656]"
 		;
-connectAttr "Bigfoot_RigRN.phl[657]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[658]" "pairBlend1.w";
+connectAttr "Bigfoot_RigRN.phl[657]" "pairBlend1.w";
+connectAttr "Bigfoot_RigRN.phl[658]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_RigRN.phl[659]" "AnimLayer2.dsm" -na;
 connectAttr "Bigfoot_Rig:Beard_Jnt_Ctrl_blendParent1_AnimLayer2.o" "Bigfoot_RigRN.phl[660]"
 		;
-connectAttr "Bigfoot_RigRN.phl[661]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[662]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[661]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[662]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:Beard_Jnt_Ctrl_visibility_AnimLayer2.o" "Bigfoot_RigRN.phl[663]"
 		;
-connectAttr "Bigfoot_RigRN.phl[664]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[665]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[664]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[665]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:Beard_Jnt_Ctrl_FollowTranslate_AnimLayer2.o" "Bigfoot_RigRN.phl[666]"
 		;
-connectAttr "Bigfoot_RigRN.phl[667]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[668]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[667]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[668]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:Beard_Jnt_Ctrl_FollowRotate_AnimLayer2.o" "Bigfoot_RigRN.phl[669]"
 		;
 connectAttr "Bigfoot_RigRN.phl[670]" "pairBlend1.itx2";
@@ -19953,44 +19614,44 @@ connectAttr "Bigfoot_RigRN.phl[677]" "Bigfoot_Rig:Beard_Jnt_Ctrl_scaleY_AnimLaye
 		;
 connectAttr "Bigfoot_RigRN.phl[678]" "Bigfoot_Rig:Beard_Jnt_Ctrl_scaleZ_AnimLayer1.ia"
 		;
-connectAttr "Bigfoot_RigRN.phl[679]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[680]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[679]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[680]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:Jaw_Ctrl_Ctrl_translateX_AnimLayer2.o" "Bigfoot_RigRN.phl[681]"
 		;
-connectAttr "Bigfoot_RigRN.phl[682]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[683]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[682]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[683]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:Jaw_Ctrl_Ctrl_translateY_AnimLayer2.o" "Bigfoot_RigRN.phl[684]"
 		;
-connectAttr "Bigfoot_RigRN.phl[685]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[686]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[685]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[686]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:Jaw_Ctrl_Ctrl_translateZ_AnimLayer2.o" "Bigfoot_RigRN.phl[687]"
 		;
-connectAttr "Bigfoot_RigRN.phl[688]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[689]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[688]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[689]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:Jaw_Ctrl_Ctrl_rotate_AnimLayer2.ox" "Bigfoot_RigRN.phl[690]"
 		;
-connectAttr "Bigfoot_RigRN.phl[691]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[692]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[691]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[692]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:Jaw_Ctrl_Ctrl_rotate_AnimLayer2.oy" "Bigfoot_RigRN.phl[693]"
 		;
-connectAttr "Bigfoot_RigRN.phl[694]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[695]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[694]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[695]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:Jaw_Ctrl_Ctrl_rotate_AnimLayer2.oz" "Bigfoot_RigRN.phl[696]"
 		;
 connectAttr "Bigfoot_RigRN.phl[697]" "Bigfoot_Rig:Jaw_Ctrl_Ctrl_rotate_AnimLayer1.ro"
 		;
 connectAttr "Bigfoot_RigRN.phl[698]" "Bigfoot_Rig:Jaw_Ctrl_Ctrl_rotate_AnimLayer2.ro"
 		;
-connectAttr "Bigfoot_RigRN.phl[699]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[700]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[699]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[700]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:Jaw_Ctrl_Ctrl_scaleX_AnimLayer2.o" "Bigfoot_RigRN.phl[701]"
 		;
-connectAttr "Bigfoot_RigRN.phl[702]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[703]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[702]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[703]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:Jaw_Ctrl_Ctrl_scaleY_AnimLayer2.o" "Bigfoot_RigRN.phl[704]"
 		;
-connectAttr "Bigfoot_RigRN.phl[705]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[706]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[705]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[706]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:Jaw_Ctrl_Ctrl_scaleZ_AnimLayer2.o" "Bigfoot_RigRN.phl[707]"
 		;
 connectAttr "Bigfoot_RigRN.phl[708]" "AnimLayer1.dsm" -na;
@@ -20001,20 +19662,20 @@ connectAttr "Bigfoot_RigRN.phl[711]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_RigRN.phl[712]" "AnimLayer2.dsm" -na;
 connectAttr "Bigfoot_Rig:Jaw_Ctrl_Ctrl_FollowRotate_AnimLayer2.o" "Bigfoot_RigRN.phl[713]"
 		;
-connectAttr "Bigfoot_RigRN.phl[714]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[715]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[714]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[715]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:Jaw_Ctrl_Ctrl_visibility_AnimLayer2.o" "Bigfoot_RigRN.phl[716]"
 		;
-connectAttr "Bigfoot_RigRN.phl[717]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[718]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[717]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[718]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Eye_Jnt_Ctrl_translateX_AnimLayer2.o" "Bigfoot_RigRN.phl[719]"
 		;
-connectAttr "Bigfoot_RigRN.phl[720]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[721]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[720]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[721]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Eye_Jnt_Ctrl_translateY_AnimLayer2.o" "Bigfoot_RigRN.phl[722]"
 		;
-connectAttr "Bigfoot_RigRN.phl[723]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[724]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[723]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[724]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Eye_Jnt_Ctrl_translateZ_AnimLayer2.o" "Bigfoot_RigRN.phl[725]"
 		;
 connectAttr "Bigfoot_RigRN.phl[726]" "AnimLayer1.dsm" -na;
@@ -20025,48 +19686,48 @@ connectAttr "Bigfoot_RigRN.phl[729]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_RigRN.phl[730]" "AnimLayer2.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Eye_Jnt_Ctrl_FollowRotate_AnimLayer2.o" "Bigfoot_RigRN.phl[731]"
 		;
-connectAttr "Bigfoot_RigRN.phl[732]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[733]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[732]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[733]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Eye_Jnt_Ctrl_rotate_AnimLayer2.ox" "Bigfoot_RigRN.phl[734]"
 		;
-connectAttr "Bigfoot_RigRN.phl[735]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[736]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[735]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[736]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Eye_Jnt_Ctrl_rotate_AnimLayer2.oy" "Bigfoot_RigRN.phl[737]"
 		;
-connectAttr "Bigfoot_RigRN.phl[738]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[739]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[738]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[739]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Eye_Jnt_Ctrl_rotate_AnimLayer2.oz" "Bigfoot_RigRN.phl[740]"
 		;
-connectAttr "Bigfoot_RigRN.phl[741]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[742]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[741]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[742]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Eye_Jnt_Ctrl_visibility_AnimLayer2.o" "Bigfoot_RigRN.phl[743]"
 		;
-connectAttr "Bigfoot_RigRN.phl[744]" "Bigfoot_Rig:R_Eye_Jnt_Ctrl_rotate_AnimLayer2.ro"
+connectAttr "Bigfoot_RigRN.phl[744]" "Bigfoot_Rig:R_Eye_Jnt_Ctrl_rotate_AnimLayer1.ro"
 		;
-connectAttr "Bigfoot_RigRN.phl[745]" "Bigfoot_Rig:R_Eye_Jnt_Ctrl_rotate_AnimLayer1.ro"
+connectAttr "Bigfoot_RigRN.phl[745]" "Bigfoot_Rig:R_Eye_Jnt_Ctrl_rotate_AnimLayer2.ro"
 		;
-connectAttr "Bigfoot_RigRN.phl[746]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[747]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[746]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[747]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Eye_Jnt_Ctrl_scaleX_AnimLayer2.o" "Bigfoot_RigRN.phl[748]"
 		;
-connectAttr "Bigfoot_RigRN.phl[749]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[750]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[749]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[750]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Eye_Jnt_Ctrl_scaleY_AnimLayer2.o" "Bigfoot_RigRN.phl[751]"
 		;
-connectAttr "Bigfoot_RigRN.phl[752]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[753]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[752]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[753]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Eye_Jnt_Ctrl_scaleZ_AnimLayer2.o" "Bigfoot_RigRN.phl[754]"
 		;
-connectAttr "Bigfoot_RigRN.phl[755]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[756]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[755]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[756]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Eye_Jnt_Ctrl_translateX_AnimLayer2.o" "Bigfoot_RigRN.phl[757]"
 		;
-connectAttr "Bigfoot_RigRN.phl[758]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[759]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[758]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[759]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Eye_Jnt_Ctrl_translateY_AnimLayer2.o" "Bigfoot_RigRN.phl[760]"
 		;
-connectAttr "Bigfoot_RigRN.phl[761]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[762]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[761]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[762]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Eye_Jnt_Ctrl_translateZ_AnimLayer2.o" "Bigfoot_RigRN.phl[763]"
 		;
 connectAttr "Bigfoot_RigRN.phl[764]" "AnimLayer1.dsm" -na;
@@ -20077,124 +19738,124 @@ connectAttr "Bigfoot_RigRN.phl[767]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_RigRN.phl[768]" "AnimLayer2.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Eye_Jnt_Ctrl_FollowRotate_AnimLayer2.o" "Bigfoot_RigRN.phl[769]"
 		;
-connectAttr "Bigfoot_RigRN.phl[770]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[771]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[770]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[771]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Eye_Jnt_Ctrl_rotate_AnimLayer2.ox" "Bigfoot_RigRN.phl[772]"
 		;
-connectAttr "Bigfoot_RigRN.phl[773]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[774]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[773]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[774]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Eye_Jnt_Ctrl_rotate_AnimLayer2.oy" "Bigfoot_RigRN.phl[775]"
 		;
-connectAttr "Bigfoot_RigRN.phl[776]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[777]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[776]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[777]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Eye_Jnt_Ctrl_rotate_AnimLayer2.oz" "Bigfoot_RigRN.phl[778]"
 		;
-connectAttr "Bigfoot_RigRN.phl[779]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[780]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[779]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[780]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Eye_Jnt_Ctrl_visibility_AnimLayer2.o" "Bigfoot_RigRN.phl[781]"
 		;
-connectAttr "Bigfoot_RigRN.phl[782]" "Bigfoot_Rig:L_Eye_Jnt_Ctrl_rotate_AnimLayer2.ro"
+connectAttr "Bigfoot_RigRN.phl[782]" "Bigfoot_Rig:L_Eye_Jnt_Ctrl_rotate_AnimLayer1.ro"
 		;
-connectAttr "Bigfoot_RigRN.phl[783]" "Bigfoot_Rig:L_Eye_Jnt_Ctrl_rotate_AnimLayer1.ro"
+connectAttr "Bigfoot_RigRN.phl[783]" "Bigfoot_Rig:L_Eye_Jnt_Ctrl_rotate_AnimLayer2.ro"
 		;
-connectAttr "Bigfoot_RigRN.phl[784]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[785]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[784]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[785]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Eye_Jnt_Ctrl_scaleX_AnimLayer2.o" "Bigfoot_RigRN.phl[786]"
 		;
-connectAttr "Bigfoot_RigRN.phl[787]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[788]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[787]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[788]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Eye_Jnt_Ctrl_scaleY_AnimLayer2.o" "Bigfoot_RigRN.phl[789]"
 		;
-connectAttr "Bigfoot_RigRN.phl[790]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[791]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[790]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[791]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Eye_Jnt_Ctrl_scaleZ_AnimLayer2.o" "Bigfoot_RigRN.phl[792]"
 		;
-connectAttr "Bigfoot_RigRN.phl[793]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[794]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[793]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[794]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:Eye_Aim_Meta_Ctrl_Ctrl_translateY_AnimLayer2.o" "Bigfoot_RigRN.phl[795]"
 		;
-connectAttr "Bigfoot_RigRN.phl[796]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[797]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[796]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[797]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:Eye_Aim_Meta_Ctrl_Ctrl_translateX_AnimLayer2.o" "Bigfoot_RigRN.phl[798]"
 		;
-connectAttr "Bigfoot_RigRN.phl[799]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[800]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[799]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[800]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:Eye_Aim_Meta_Ctrl_Ctrl_translateZ_AnimLayer2.o" "Bigfoot_RigRN.phl[801]"
 		;
-connectAttr "Bigfoot_RigRN.phl[802]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[803]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[802]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[803]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:Eye_Aim_Meta_Ctrl_Ctrl_rotate_AnimLayer2.ox" "Bigfoot_RigRN.phl[804]"
 		;
-connectAttr "Bigfoot_RigRN.phl[805]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[806]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[805]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[806]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:Eye_Aim_Meta_Ctrl_Ctrl_rotate_AnimLayer2.oy" "Bigfoot_RigRN.phl[807]"
 		;
-connectAttr "Bigfoot_RigRN.phl[808]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[809]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[808]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[809]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:Eye_Aim_Meta_Ctrl_Ctrl_rotate_AnimLayer2.oz" "Bigfoot_RigRN.phl[810]"
 		;
 connectAttr "Bigfoot_RigRN.phl[811]" "Bigfoot_Rig:Eye_Aim_Meta_Ctrl_Ctrl_rotate_AnimLayer1.ro"
 		;
 connectAttr "Bigfoot_RigRN.phl[812]" "Bigfoot_Rig:Eye_Aim_Meta_Ctrl_Ctrl_rotate_AnimLayer2.ro"
 		;
-connectAttr "Bigfoot_RigRN.phl[813]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[814]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[813]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[814]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:Eye_Aim_Meta_Ctrl_Ctrl_scaleX_AnimLayer2.o" "Bigfoot_RigRN.phl[815]"
 		;
-connectAttr "Bigfoot_RigRN.phl[816]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[817]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[816]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[817]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:Eye_Aim_Meta_Ctrl_Ctrl_scaleY_AnimLayer2.o" "Bigfoot_RigRN.phl[818]"
 		;
-connectAttr "Bigfoot_RigRN.phl[819]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[820]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[819]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[820]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:Eye_Aim_Meta_Ctrl_Ctrl_scaleZ_AnimLayer2.o" "Bigfoot_RigRN.phl[821]"
 		;
 connectAttr "Bigfoot_RigRN.phl[822]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_RigRN.phl[823]" "AnimLayer2.dsm" -na;
 connectAttr "Bigfoot_Rig:Eye_Aim_Meta_Ctrl_Ctrl_Local_Space_AnimLayer2.o" "Bigfoot_RigRN.phl[824]"
 		;
-connectAttr "Bigfoot_RigRN.phl[825]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[826]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[825]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[826]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:Eye_Aim_Meta_Ctrl_Ctrl_visibility_AnimLayer2.o" "Bigfoot_RigRN.phl[827]"
 		;
-connectAttr "Bigfoot_RigRN.phl[828]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[829]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[828]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[829]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Eyebrow_Ctrl_translateX_AnimLayer2.o" "Bigfoot_RigRN.phl[830]"
 		;
-connectAttr "Bigfoot_RigRN.phl[831]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[832]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[831]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[832]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Eyebrow_Ctrl_translateZ_AnimLayer2.o" "Bigfoot_RigRN.phl[833]"
 		;
-connectAttr "Bigfoot_RigRN.phl[834]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[835]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[834]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[835]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Eyebrow_Ctrl_translateY_AnimLayer2.o" "Bigfoot_RigRN.phl[836]"
 		;
-connectAttr "Bigfoot_RigRN.phl[837]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[838]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[837]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[838]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Eyebrow_Ctrl_rotate_AnimLayer2.ox" "Bigfoot_RigRN.phl[839]"
 		;
-connectAttr "Bigfoot_RigRN.phl[840]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[841]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[840]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[841]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Eyebrow_Ctrl_rotate_AnimLayer2.oy" "Bigfoot_RigRN.phl[842]"
 		;
-connectAttr "Bigfoot_RigRN.phl[843]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[844]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[843]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[844]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Eyebrow_Ctrl_rotate_AnimLayer2.oz" "Bigfoot_RigRN.phl[845]"
 		;
 connectAttr "Bigfoot_RigRN.phl[846]" "Bigfoot_Rig:R_Eyebrow_Ctrl_rotate_AnimLayer1.ro"
 		;
 connectAttr "Bigfoot_RigRN.phl[847]" "Bigfoot_Rig:R_Eyebrow_Ctrl_rotate_AnimLayer2.ro"
 		;
-connectAttr "Bigfoot_RigRN.phl[848]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[849]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[848]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[849]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Eyebrow_Ctrl_scaleX_AnimLayer2.o" "Bigfoot_RigRN.phl[850]"
 		;
-connectAttr "Bigfoot_RigRN.phl[851]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[852]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[851]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[852]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Eyebrow_Ctrl_scaleY_AnimLayer2.o" "Bigfoot_RigRN.phl[853]"
 		;
-connectAttr "Bigfoot_RigRN.phl[854]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[855]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[854]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[855]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Eyebrow_Ctrl_scaleZ_AnimLayer2.o" "Bigfoot_RigRN.phl[856]"
 		;
 connectAttr "Bigfoot_RigRN.phl[857]" "AnimLayer1.dsm" -na;
@@ -20205,48 +19866,48 @@ connectAttr "Bigfoot_RigRN.phl[860]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_RigRN.phl[861]" "AnimLayer2.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Eyebrow_Ctrl_FollowRotate_AnimLayer2.o" "Bigfoot_RigRN.phl[862]"
 		;
-connectAttr "Bigfoot_RigRN.phl[863]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[864]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[863]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[864]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Eyebrow_Ctrl_visibility_AnimLayer2.o" "Bigfoot_RigRN.phl[865]"
 		;
-connectAttr "Bigfoot_RigRN.phl[866]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[867]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[866]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[867]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Eyebrow_Ctrl_translateY_AnimLayer2.o" "Bigfoot_RigRN.phl[868]"
 		;
-connectAttr "Bigfoot_RigRN.phl[869]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[870]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[869]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[870]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Eyebrow_Ctrl_translateZ_AnimLayer2.o" "Bigfoot_RigRN.phl[871]"
 		;
-connectAttr "Bigfoot_RigRN.phl[872]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[873]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[872]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[873]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Eyebrow_Ctrl_translateX_AnimLayer2.o" "Bigfoot_RigRN.phl[874]"
 		;
-connectAttr "Bigfoot_RigRN.phl[875]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[876]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[875]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[876]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Eyebrow_Ctrl_rotate_AnimLayer2.ox" "Bigfoot_RigRN.phl[877]"
 		;
-connectAttr "Bigfoot_RigRN.phl[878]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[879]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[878]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[879]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Eyebrow_Ctrl_rotate_AnimLayer2.oy" "Bigfoot_RigRN.phl[880]"
 		;
-connectAttr "Bigfoot_RigRN.phl[881]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[882]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[881]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[882]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Eyebrow_Ctrl_rotate_AnimLayer2.oz" "Bigfoot_RigRN.phl[883]"
 		;
 connectAttr "Bigfoot_RigRN.phl[884]" "Bigfoot_Rig:L_Eyebrow_Ctrl_rotate_AnimLayer1.ro"
 		;
 connectAttr "Bigfoot_RigRN.phl[885]" "Bigfoot_Rig:L_Eyebrow_Ctrl_rotate_AnimLayer2.ro"
 		;
-connectAttr "Bigfoot_RigRN.phl[886]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[887]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[886]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[887]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Eyebrow_Ctrl_scaleX_AnimLayer2.o" "Bigfoot_RigRN.phl[888]"
 		;
-connectAttr "Bigfoot_RigRN.phl[889]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[890]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[889]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[890]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Eyebrow_Ctrl_scaleY_AnimLayer2.o" "Bigfoot_RigRN.phl[891]"
 		;
-connectAttr "Bigfoot_RigRN.phl[892]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[893]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[892]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[893]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Eyebrow_Ctrl_scaleZ_AnimLayer2.o" "Bigfoot_RigRN.phl[894]"
 		;
 connectAttr "Bigfoot_RigRN.phl[895]" "AnimLayer1.dsm" -na;
@@ -20257,96 +19918,96 @@ connectAttr "Bigfoot_RigRN.phl[898]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_RigRN.phl[899]" "AnimLayer2.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Eyebrow_Ctrl_FollowRotate_AnimLayer2.o" "Bigfoot_RigRN.phl[900]"
 		;
-connectAttr "Bigfoot_RigRN.phl[901]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[902]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[901]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[902]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Eyebrow_Ctrl_visibility_AnimLayer2.o" "Bigfoot_RigRN.phl[903]"
 		;
-connectAttr "Bigfoot_RigRN.phl[904]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[905]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[904]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[905]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Arm_IK_PV_Ctrl_translateX_AnimLayer2.o" "Bigfoot_RigRN.phl[906]"
 		;
-connectAttr "Bigfoot_RigRN.phl[907]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[908]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[907]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[908]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Arm_IK_PV_Ctrl_translateY_AnimLayer2.o" "Bigfoot_RigRN.phl[909]"
 		;
-connectAttr "Bigfoot_RigRN.phl[910]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[911]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[910]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[911]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Arm_IK_PV_Ctrl_translateZ_AnimLayer2.o" "Bigfoot_RigRN.phl[912]"
 		;
 connectAttr "Bigfoot_RigRN.phl[913]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_RigRN.phl[914]" "AnimLayer2.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Arm_IK_PV_Ctrl_Local_Space_AnimLayer2.o" "Bigfoot_RigRN.phl[915]"
 		;
-connectAttr "Bigfoot_RigRN.phl[916]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[917]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[916]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[917]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Arm_IK_PV_Ctrl_rotate_AnimLayer2.ox" "Bigfoot_RigRN.phl[918]"
 		;
-connectAttr "Bigfoot_RigRN.phl[919]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[920]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[919]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[920]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Arm_IK_PV_Ctrl_rotate_AnimLayer2.oy" "Bigfoot_RigRN.phl[921]"
 		;
-connectAttr "Bigfoot_RigRN.phl[922]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[923]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[922]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[923]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Arm_IK_PV_Ctrl_rotate_AnimLayer2.oz" "Bigfoot_RigRN.phl[924]"
 		;
-connectAttr "Bigfoot_RigRN.phl[925]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[926]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[925]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[926]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Arm_IK_PV_Ctrl_visibility_AnimLayer2.o" "Bigfoot_RigRN.phl[927]"
 		;
-connectAttr "Bigfoot_RigRN.phl[928]" "Bigfoot_Rig:R_Arm_IK_PV_Ctrl_rotate_AnimLayer2.ro"
+connectAttr "Bigfoot_RigRN.phl[928]" "Bigfoot_Rig:R_Arm_IK_PV_Ctrl_rotate_AnimLayer1.ro"
 		;
-connectAttr "Bigfoot_RigRN.phl[929]" "Bigfoot_Rig:R_Arm_IK_PV_Ctrl_rotate_AnimLayer1.ro"
+connectAttr "Bigfoot_RigRN.phl[929]" "Bigfoot_Rig:R_Arm_IK_PV_Ctrl_rotate_AnimLayer2.ro"
 		;
-connectAttr "Bigfoot_RigRN.phl[930]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[931]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[930]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[931]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Arm_IK_PV_Ctrl_scaleX_AnimLayer2.o" "Bigfoot_RigRN.phl[932]"
 		;
-connectAttr "Bigfoot_RigRN.phl[933]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[934]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[933]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[934]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Arm_IK_PV_Ctrl_scaleY_AnimLayer2.o" "Bigfoot_RigRN.phl[935]"
 		;
-connectAttr "Bigfoot_RigRN.phl[936]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[937]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[936]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[937]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Arm_IK_PV_Ctrl_scaleZ_AnimLayer2.o" "Bigfoot_RigRN.phl[938]"
 		;
-connectAttr "Bigfoot_RigRN.phl[939]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[940]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[939]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[940]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Arm_3_Jnt_IK_Ctrl_translateX_AnimLayer2.o" "Bigfoot_RigRN.phl[941]"
 		;
-connectAttr "Bigfoot_RigRN.phl[942]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[943]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[942]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[943]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Arm_3_Jnt_IK_Ctrl_translateY_AnimLayer2.o" "Bigfoot_RigRN.phl[944]"
 		;
-connectAttr "Bigfoot_RigRN.phl[945]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[946]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[945]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[946]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Arm_3_Jnt_IK_Ctrl_translateZ_AnimLayer2.o" "Bigfoot_RigRN.phl[947]"
 		;
-connectAttr "Bigfoot_RigRN.phl[948]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[949]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[948]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[949]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Arm_3_Jnt_IK_Ctrl_rotate_AnimLayer2.oy" "Bigfoot_RigRN.phl[950]"
 		;
-connectAttr "Bigfoot_RigRN.phl[951]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[952]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[951]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[952]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Arm_3_Jnt_IK_Ctrl_rotate_AnimLayer2.ox" "Bigfoot_RigRN.phl[953]"
 		;
-connectAttr "Bigfoot_RigRN.phl[954]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[955]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[954]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[955]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Arm_3_Jnt_IK_Ctrl_rotate_AnimLayer2.oz" "Bigfoot_RigRN.phl[956]"
 		;
 connectAttr "Bigfoot_RigRN.phl[957]" "Bigfoot_Rig:R_Arm_3_Jnt_IK_Ctrl_rotate_AnimLayer1.ro"
 		;
 connectAttr "Bigfoot_RigRN.phl[958]" "Bigfoot_Rig:R_Arm_3_Jnt_IK_Ctrl_rotate_AnimLayer2.ro"
 		;
-connectAttr "Bigfoot_RigRN.phl[959]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[960]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[959]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[960]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Arm_3_Jnt_IK_Ctrl_scaleX_AnimLayer2.o" "Bigfoot_RigRN.phl[961]"
 		;
-connectAttr "Bigfoot_RigRN.phl[962]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[963]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[962]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[963]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Arm_3_Jnt_IK_Ctrl_scaleY_AnimLayer2.o" "Bigfoot_RigRN.phl[964]"
 		;
-connectAttr "Bigfoot_RigRN.phl[965]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[966]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[965]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[966]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Arm_3_Jnt_IK_Ctrl_scaleZ_AnimLayer2.o" "Bigfoot_RigRN.phl[967]"
 		;
 connectAttr "Bigfoot_RigRN.phl[968]" "AnimLayer1.dsm" -na;
@@ -20361,48 +20022,48 @@ connectAttr "Bigfoot_RigRN.phl[974]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_RigRN.phl[975]" "AnimLayer2.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Arm_3_Jnt_IK_Ctrl_Local_Space_AnimLayer2.o" "Bigfoot_RigRN.phl[976]"
 		;
-connectAttr "Bigfoot_RigRN.phl[977]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[978]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[977]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[978]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Arm_3_Jnt_IK_Ctrl_visibility_AnimLayer2.o" "Bigfoot_RigRN.phl[979]"
 		;
-connectAttr "Bigfoot_RigRN.phl[980]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[981]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[980]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[981]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Arm_1_Jnt_IK_Ctrl_translateX_AnimLayer2.o" "Bigfoot_RigRN.phl[982]"
 		;
-connectAttr "Bigfoot_RigRN.phl[983]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[984]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[983]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[984]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Arm_1_Jnt_IK_Ctrl_translateY_AnimLayer2.o" "Bigfoot_RigRN.phl[985]"
 		;
-connectAttr "Bigfoot_RigRN.phl[986]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[987]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[986]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[987]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Arm_1_Jnt_IK_Ctrl_translateZ_AnimLayer2.o" "Bigfoot_RigRN.phl[988]"
 		;
-connectAttr "Bigfoot_RigRN.phl[989]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[990]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[989]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[990]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Arm_1_Jnt_IK_Ctrl_rotate_AnimLayer2.ox" "Bigfoot_RigRN.phl[991]"
 		;
-connectAttr "Bigfoot_RigRN.phl[992]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[993]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[992]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[993]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Arm_1_Jnt_IK_Ctrl_rotate_AnimLayer2.oy" "Bigfoot_RigRN.phl[994]"
 		;
-connectAttr "Bigfoot_RigRN.phl[995]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[996]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[995]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[996]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Arm_1_Jnt_IK_Ctrl_rotate_AnimLayer2.oz" "Bigfoot_RigRN.phl[997]"
 		;
 connectAttr "Bigfoot_RigRN.phl[998]" "Bigfoot_Rig:R_Arm_1_Jnt_IK_Ctrl_rotate_AnimLayer1.ro"
 		;
 connectAttr "Bigfoot_RigRN.phl[999]" "Bigfoot_Rig:R_Arm_1_Jnt_IK_Ctrl_rotate_AnimLayer2.ro"
 		;
-connectAttr "Bigfoot_RigRN.phl[1000]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1001]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1000]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1001]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Arm_1_Jnt_IK_Ctrl_scaleX_AnimLayer2.o" "Bigfoot_RigRN.phl[1002]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1003]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1004]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1003]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1004]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Arm_1_Jnt_IK_Ctrl_scaleY_AnimLayer2.o" "Bigfoot_RigRN.phl[1005]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1006]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1007]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1006]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1007]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Arm_1_Jnt_IK_Ctrl_scaleZ_AnimLayer2.o" "Bigfoot_RigRN.phl[1008]"
 		;
 connectAttr "Bigfoot_RigRN.phl[1009]" "AnimLayer1.dsm" -na;
@@ -20413,84 +20074,84 @@ connectAttr "Bigfoot_RigRN.phl[1012]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_RigRN.phl[1013]" "AnimLayer2.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Arm_1_Jnt_IK_Ctrl_FollowRotate_AnimLayer2.o" "Bigfoot_RigRN.phl[1014]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1015]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1016]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1015]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1016]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Arm_1_Jnt_IK_Ctrl_visibility_AnimLayer2.o" "Bigfoot_RigRN.phl[1017]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1018]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1019]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1018]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1019]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Arm_IK_PV_Ctrl_translateX_AnimLayer2.o" "Bigfoot_RigRN.phl[1020]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1021]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1022]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1021]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1022]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Arm_IK_PV_Ctrl_translateY_AnimLayer2.o" "Bigfoot_RigRN.phl[1023]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1024]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1025]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1024]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1025]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Arm_IK_PV_Ctrl_translateZ_AnimLayer2.o" "Bigfoot_RigRN.phl[1026]"
 		;
 connectAttr "Bigfoot_RigRN.phl[1027]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_RigRN.phl[1028]" "AnimLayer2.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Arm_IK_PV_Ctrl_Local_Space_AnimLayer2.o" "Bigfoot_RigRN.phl[1029]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1030]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1031]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1030]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1031]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Arm_IK_PV_Ctrl_rotate_AnimLayer2.ox" "Bigfoot_RigRN.phl[1032]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1033]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1034]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1033]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1034]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Arm_IK_PV_Ctrl_rotate_AnimLayer2.oy" "Bigfoot_RigRN.phl[1035]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1036]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1037]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1036]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1037]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Arm_IK_PV_Ctrl_rotate_AnimLayer2.oz" "Bigfoot_RigRN.phl[1038]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1039]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1040]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1039]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1040]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Arm_IK_PV_Ctrl_visibility_AnimLayer2.o" "Bigfoot_RigRN.phl[1041]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1042]" "Bigfoot_Rig:L_Arm_IK_PV_Ctrl_rotate_AnimLayer2.ro"
+connectAttr "Bigfoot_RigRN.phl[1042]" "Bigfoot_Rig:L_Arm_IK_PV_Ctrl_rotate_AnimLayer1.ro"
 		;
-connectAttr "Bigfoot_RigRN.phl[1043]" "Bigfoot_Rig:L_Arm_IK_PV_Ctrl_rotate_AnimLayer1.ro"
+connectAttr "Bigfoot_RigRN.phl[1043]" "Bigfoot_Rig:L_Arm_IK_PV_Ctrl_rotate_AnimLayer2.ro"
 		;
-connectAttr "Bigfoot_RigRN.phl[1044]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1045]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1044]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1045]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Arm_IK_PV_Ctrl_scaleX_AnimLayer2.o" "Bigfoot_RigRN.phl[1046]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1047]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1048]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1047]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1048]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Arm_IK_PV_Ctrl_scaleY_AnimLayer2.o" "Bigfoot_RigRN.phl[1049]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1050]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1051]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1050]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1051]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Arm_IK_PV_Ctrl_scaleZ_AnimLayer2.o" "Bigfoot_RigRN.phl[1052]"
 		;
 connectAttr "Bigfoot_RigRN.phl[1053]" "pCylinder3_parentConstraint1.tg[0].tt";
-connectAttr "Bigfoot_RigRN.phl[1054]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1055]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1054]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1055]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Arm_3_Jnt_IK_Ctrl_translateX_AnimLayer2.o" "Bigfoot_RigRN.phl[1056]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1057]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1058]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1057]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1058]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Arm_3_Jnt_IK_Ctrl_translateY_AnimLayer2.o" "Bigfoot_RigRN.phl[1059]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1060]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1061]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1060]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1061]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Arm_3_Jnt_IK_Ctrl_translateZ_AnimLayer2.o" "Bigfoot_RigRN.phl[1062]"
 		;
 connectAttr "Bigfoot_RigRN.phl[1063]" "pCylinder3_parentConstraint1.tg[0].trp";
 connectAttr "Bigfoot_RigRN.phl[1064]" "pCylinder3_parentConstraint1.tg[0].trt";
 connectAttr "Bigfoot_RigRN.phl[1065]" "pCylinder3_parentConstraint1.tg[0].tr";
-connectAttr "Bigfoot_RigRN.phl[1066]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1067]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1066]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1067]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Arm_3_Jnt_IK_Ctrl_rotate_AnimLayer2.oy" "Bigfoot_RigRN.phl[1068]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1069]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1070]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1069]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1070]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Arm_3_Jnt_IK_Ctrl_rotate_AnimLayer2.ox" "Bigfoot_RigRN.phl[1071]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1072]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1073]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1072]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1073]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Arm_3_Jnt_IK_Ctrl_rotate_AnimLayer2.oz" "Bigfoot_RigRN.phl[1074]"
 		;
 connectAttr "Bigfoot_RigRN.phl[1075]" "pCylinder3_parentConstraint1.tg[0].tro";
@@ -20499,16 +20160,16 @@ connectAttr "Bigfoot_RigRN.phl[1076]" "Bigfoot_Rig:L_Arm_3_Jnt_IK_Ctrl_rotate_An
 connectAttr "Bigfoot_RigRN.phl[1077]" "Bigfoot_Rig:L_Arm_3_Jnt_IK_Ctrl_rotate_AnimLayer2.ro"
 		;
 connectAttr "Bigfoot_RigRN.phl[1078]" "pCylinder3_parentConstraint1.tg[0].ts";
-connectAttr "Bigfoot_RigRN.phl[1079]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1080]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1079]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1080]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Arm_3_Jnt_IK_Ctrl_scaleX_AnimLayer2.o" "Bigfoot_RigRN.phl[1081]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1082]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1083]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1082]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1083]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Arm_3_Jnt_IK_Ctrl_scaleY_AnimLayer2.o" "Bigfoot_RigRN.phl[1084]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1085]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1086]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1085]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1086]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Arm_3_Jnt_IK_Ctrl_scaleZ_AnimLayer2.o" "Bigfoot_RigRN.phl[1087]"
 		;
 connectAttr "Bigfoot_RigRN.phl[1088]" "pCylinder3_parentConstraint1.tg[0].tpm";
@@ -20524,48 +20185,48 @@ connectAttr "Bigfoot_RigRN.phl[1095]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_RigRN.phl[1096]" "AnimLayer2.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Arm_3_Jnt_IK_Ctrl_Local_Space_AnimLayer2.o" "Bigfoot_RigRN.phl[1097]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1098]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1099]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1098]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1099]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Arm_3_Jnt_IK_Ctrl_visibility_AnimLayer2.o" "Bigfoot_RigRN.phl[1100]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1101]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1102]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1101]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1102]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Arm_1_Jnt_IK_Ctrl_translateX_AnimLayer2.o" "Bigfoot_RigRN.phl[1103]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1104]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1105]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1104]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1105]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Arm_1_Jnt_IK_Ctrl_translateY_AnimLayer2.o" "Bigfoot_RigRN.phl[1106]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1107]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1108]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1107]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1108]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Arm_1_Jnt_IK_Ctrl_translateZ_AnimLayer2.o" "Bigfoot_RigRN.phl[1109]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1110]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1111]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1110]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1111]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Arm_1_Jnt_IK_Ctrl_rotate_AnimLayer2.oy" "Bigfoot_RigRN.phl[1112]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1113]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1114]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1113]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1114]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Arm_1_Jnt_IK_Ctrl_rotate_AnimLayer2.ox" "Bigfoot_RigRN.phl[1115]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1116]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1117]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1116]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1117]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Arm_1_Jnt_IK_Ctrl_rotate_AnimLayer2.oz" "Bigfoot_RigRN.phl[1118]"
 		;
 connectAttr "Bigfoot_RigRN.phl[1119]" "Bigfoot_Rig:L_Arm_1_Jnt_IK_Ctrl_rotate_AnimLayer1.ro"
 		;
 connectAttr "Bigfoot_RigRN.phl[1120]" "Bigfoot_Rig:L_Arm_1_Jnt_IK_Ctrl_rotate_AnimLayer2.ro"
 		;
-connectAttr "Bigfoot_RigRN.phl[1121]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1122]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1121]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1122]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Arm_1_Jnt_IK_Ctrl_scaleX_AnimLayer2.o" "Bigfoot_RigRN.phl[1123]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1124]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1125]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1124]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1125]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Arm_1_Jnt_IK_Ctrl_scaleY_AnimLayer2.o" "Bigfoot_RigRN.phl[1126]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1127]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1128]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1127]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1128]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Arm_1_Jnt_IK_Ctrl_scaleZ_AnimLayer2.o" "Bigfoot_RigRN.phl[1129]"
 		;
 connectAttr "Bigfoot_RigRN.phl[1130]" "AnimLayer1.dsm" -na;
@@ -20576,48 +20237,48 @@ connectAttr "Bigfoot_RigRN.phl[1133]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_RigRN.phl[1134]" "AnimLayer2.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Arm_1_Jnt_IK_Ctrl_FollowRotate_AnimLayer2.o" "Bigfoot_RigRN.phl[1135]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1136]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1137]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1136]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1137]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Arm_1_Jnt_IK_Ctrl_visibility_AnimLayer2.o" "Bigfoot_RigRN.phl[1138]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1139]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1140]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1139]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1140]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Finger_4_Jnt_1_Ctrl_translateX_AnimLayer2.o" "Bigfoot_RigRN.phl[1141]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1142]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1143]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1142]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1143]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Finger_4_Jnt_1_Ctrl_translateY_AnimLayer2.o" "Bigfoot_RigRN.phl[1144]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1145]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1146]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1145]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1146]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Finger_4_Jnt_1_Ctrl_translateZ_AnimLayer2.o" "Bigfoot_RigRN.phl[1147]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1148]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1149]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1148]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1149]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Finger_4_Jnt_1_Ctrl_rotate_AnimLayer2.ox" "Bigfoot_RigRN.phl[1150]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1151]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1152]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1151]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1152]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Finger_4_Jnt_1_Ctrl_rotate_AnimLayer2.oy" "Bigfoot_RigRN.phl[1153]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1154]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1155]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1154]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1155]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Finger_4_Jnt_1_Ctrl_rotate_AnimLayer2.oz" "Bigfoot_RigRN.phl[1156]"
 		;
 connectAttr "Bigfoot_RigRN.phl[1157]" "Bigfoot_Rig:L_Finger_4_Jnt_1_Ctrl_rotate_AnimLayer1.ro"
 		;
 connectAttr "Bigfoot_RigRN.phl[1158]" "Bigfoot_Rig:L_Finger_4_Jnt_1_Ctrl_rotate_AnimLayer2.ro"
 		;
-connectAttr "Bigfoot_RigRN.phl[1159]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1160]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1159]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1160]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Finger_4_Jnt_1_Ctrl_scaleX_AnimLayer2.o" "Bigfoot_RigRN.phl[1161]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1162]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1163]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1162]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1163]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Finger_4_Jnt_1_Ctrl_scaleY_AnimLayer2.o" "Bigfoot_RigRN.phl[1164]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1165]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1166]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1165]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1166]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Finger_4_Jnt_1_Ctrl_scaleZ_AnimLayer2.o" "Bigfoot_RigRN.phl[1167]"
 		;
 connectAttr "Bigfoot_RigRN.phl[1168]" "AnimLayer1.dsm" -na;
@@ -20628,48 +20289,48 @@ connectAttr "Bigfoot_RigRN.phl[1171]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_RigRN.phl[1172]" "AnimLayer2.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Finger_4_Jnt_1_Ctrl_FollowRotate_AnimLayer2.o" "Bigfoot_RigRN.phl[1173]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1174]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1175]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1174]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1175]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Finger_4_Jnt_1_Ctrl_visibility_AnimLayer2.o" "Bigfoot_RigRN.phl[1176]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1177]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1178]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1177]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1178]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Finger_3_Jnt_3_Ctrl_translateX_AnimLayer2.o" "Bigfoot_RigRN.phl[1179]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1180]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1181]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1180]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1181]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Finger_3_Jnt_3_Ctrl_translateY_AnimLayer2.o" "Bigfoot_RigRN.phl[1182]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1183]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1184]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1183]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1184]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Finger_3_Jnt_3_Ctrl_translateZ_AnimLayer2.o" "Bigfoot_RigRN.phl[1185]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1186]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1187]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1186]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1187]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Finger_3_Jnt_3_Ctrl_rotate_AnimLayer2.ox" "Bigfoot_RigRN.phl[1188]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1189]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1190]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1189]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1190]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Finger_3_Jnt_3_Ctrl_rotate_AnimLayer2.oy" "Bigfoot_RigRN.phl[1191]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1192]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1193]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1192]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1193]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Finger_3_Jnt_3_Ctrl_rotate_AnimLayer2.oz" "Bigfoot_RigRN.phl[1194]"
 		;
 connectAttr "Bigfoot_RigRN.phl[1195]" "Bigfoot_Rig:L_Finger_3_Jnt_3_Ctrl_rotate_AnimLayer1.ro"
 		;
 connectAttr "Bigfoot_RigRN.phl[1196]" "Bigfoot_Rig:L_Finger_3_Jnt_3_Ctrl_rotate_AnimLayer2.ro"
 		;
-connectAttr "Bigfoot_RigRN.phl[1197]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1198]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1197]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1198]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Finger_3_Jnt_3_Ctrl_scaleX_AnimLayer2.o" "Bigfoot_RigRN.phl[1199]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1200]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1201]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1200]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1201]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Finger_3_Jnt_3_Ctrl_scaleY_AnimLayer2.o" "Bigfoot_RigRN.phl[1202]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1203]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1204]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1203]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1204]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Finger_3_Jnt_3_Ctrl_scaleZ_AnimLayer2.o" "Bigfoot_RigRN.phl[1205]"
 		;
 connectAttr "Bigfoot_RigRN.phl[1206]" "AnimLayer1.dsm" -na;
@@ -20680,48 +20341,48 @@ connectAttr "Bigfoot_RigRN.phl[1209]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_RigRN.phl[1210]" "AnimLayer2.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Finger_3_Jnt_3_Ctrl_FollowRotate_AnimLayer2.o" "Bigfoot_RigRN.phl[1211]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1212]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1213]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1212]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1213]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Finger_3_Jnt_3_Ctrl_visibility_AnimLayer2.o" "Bigfoot_RigRN.phl[1214]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1215]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1216]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1215]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1216]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Finger_3_Jnt_1_Ctrl_translateX_AnimLayer2.o" "Bigfoot_RigRN.phl[1217]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1218]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1219]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1218]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1219]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Finger_3_Jnt_1_Ctrl_translateY_AnimLayer2.o" "Bigfoot_RigRN.phl[1220]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1221]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1222]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1221]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1222]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Finger_3_Jnt_1_Ctrl_translateZ_AnimLayer2.o" "Bigfoot_RigRN.phl[1223]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1224]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1225]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1224]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1225]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Finger_3_Jnt_1_Ctrl_rotate_AnimLayer2.ox" "Bigfoot_RigRN.phl[1226]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1227]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1228]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1227]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1228]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Finger_3_Jnt_1_Ctrl_rotate_AnimLayer2.oy" "Bigfoot_RigRN.phl[1229]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1230]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1231]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1230]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1231]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Finger_3_Jnt_1_Ctrl_rotate_AnimLayer2.oz" "Bigfoot_RigRN.phl[1232]"
 		;
 connectAttr "Bigfoot_RigRN.phl[1233]" "Bigfoot_Rig:L_Finger_3_Jnt_1_Ctrl_rotate_AnimLayer1.ro"
 		;
 connectAttr "Bigfoot_RigRN.phl[1234]" "Bigfoot_Rig:L_Finger_3_Jnt_1_Ctrl_rotate_AnimLayer2.ro"
 		;
-connectAttr "Bigfoot_RigRN.phl[1235]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1236]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1235]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1236]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Finger_3_Jnt_1_Ctrl_scaleX_AnimLayer2.o" "Bigfoot_RigRN.phl[1237]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1238]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1239]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1238]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1239]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Finger_3_Jnt_1_Ctrl_scaleY_AnimLayer2.o" "Bigfoot_RigRN.phl[1240]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1241]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1242]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1241]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1242]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Finger_3_Jnt_1_Ctrl_scaleZ_AnimLayer2.o" "Bigfoot_RigRN.phl[1243]"
 		;
 connectAttr "Bigfoot_RigRN.phl[1244]" "AnimLayer1.dsm" -na;
@@ -20732,48 +20393,48 @@ connectAttr "Bigfoot_RigRN.phl[1247]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_RigRN.phl[1248]" "AnimLayer2.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Finger_3_Jnt_1_Ctrl_FollowRotate_AnimLayer2.o" "Bigfoot_RigRN.phl[1249]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1250]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1251]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1250]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1251]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Finger_3_Jnt_1_Ctrl_visibility_AnimLayer2.o" "Bigfoot_RigRN.phl[1252]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1253]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1254]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1253]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1254]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Finger_2_Jnt_1_Ctrl_translateX_AnimLayer2.o" "Bigfoot_RigRN.phl[1255]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1256]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1257]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1256]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1257]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Finger_2_Jnt_1_Ctrl_translateY_AnimLayer2.o" "Bigfoot_RigRN.phl[1258]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1259]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1260]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1259]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1260]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Finger_2_Jnt_1_Ctrl_translateZ_AnimLayer2.o" "Bigfoot_RigRN.phl[1261]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1262]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1263]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1262]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1263]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Finger_2_Jnt_1_Ctrl_rotate_AnimLayer2.ox" "Bigfoot_RigRN.phl[1264]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1265]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1266]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1265]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1266]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Finger_2_Jnt_1_Ctrl_rotate_AnimLayer2.oy" "Bigfoot_RigRN.phl[1267]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1268]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1269]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1268]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1269]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Finger_2_Jnt_1_Ctrl_rotate_AnimLayer2.oz" "Bigfoot_RigRN.phl[1270]"
 		;
 connectAttr "Bigfoot_RigRN.phl[1271]" "Bigfoot_Rig:L_Finger_2_Jnt_1_Ctrl_rotate_AnimLayer1.ro"
 		;
 connectAttr "Bigfoot_RigRN.phl[1272]" "Bigfoot_Rig:L_Finger_2_Jnt_1_Ctrl_rotate_AnimLayer2.ro"
 		;
-connectAttr "Bigfoot_RigRN.phl[1273]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1274]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1273]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1274]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Finger_2_Jnt_1_Ctrl_scaleX_AnimLayer2.o" "Bigfoot_RigRN.phl[1275]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1276]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1277]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1276]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1277]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Finger_2_Jnt_1_Ctrl_scaleY_AnimLayer2.o" "Bigfoot_RigRN.phl[1278]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1279]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1280]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1279]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1280]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Finger_2_Jnt_1_Ctrl_scaleZ_AnimLayer2.o" "Bigfoot_RigRN.phl[1281]"
 		;
 connectAttr "Bigfoot_RigRN.phl[1282]" "AnimLayer1.dsm" -na;
@@ -20784,48 +20445,48 @@ connectAttr "Bigfoot_RigRN.phl[1285]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_RigRN.phl[1286]" "AnimLayer2.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Finger_2_Jnt_1_Ctrl_FollowRotate_AnimLayer2.o" "Bigfoot_RigRN.phl[1287]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1288]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1289]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1288]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1289]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Finger_2_Jnt_1_Ctrl_visibility_AnimLayer2.o" "Bigfoot_RigRN.phl[1290]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1291]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1292]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1291]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1292]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Finger_3_Jnt_2_Ctrl_translateX_AnimLayer2.o" "Bigfoot_RigRN.phl[1293]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1294]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1295]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1294]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1295]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Finger_3_Jnt_2_Ctrl_translateY_AnimLayer2.o" "Bigfoot_RigRN.phl[1296]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1297]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1298]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1297]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1298]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Finger_3_Jnt_2_Ctrl_translateZ_AnimLayer2.o" "Bigfoot_RigRN.phl[1299]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1300]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1301]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1300]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1301]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Finger_3_Jnt_2_Ctrl_rotate_AnimLayer2.ox" "Bigfoot_RigRN.phl[1302]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1303]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1304]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1303]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1304]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Finger_3_Jnt_2_Ctrl_rotate_AnimLayer2.oy" "Bigfoot_RigRN.phl[1305]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1306]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1307]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1306]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1307]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Finger_3_Jnt_2_Ctrl_rotate_AnimLayer2.oz" "Bigfoot_RigRN.phl[1308]"
 		;
 connectAttr "Bigfoot_RigRN.phl[1309]" "Bigfoot_Rig:L_Finger_3_Jnt_2_Ctrl_rotate_AnimLayer1.ro"
 		;
 connectAttr "Bigfoot_RigRN.phl[1310]" "Bigfoot_Rig:L_Finger_3_Jnt_2_Ctrl_rotate_AnimLayer2.ro"
 		;
-connectAttr "Bigfoot_RigRN.phl[1311]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1312]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1311]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1312]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Finger_3_Jnt_2_Ctrl_scaleX_AnimLayer2.o" "Bigfoot_RigRN.phl[1313]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1314]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1315]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1314]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1315]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Finger_3_Jnt_2_Ctrl_scaleY_AnimLayer2.o" "Bigfoot_RigRN.phl[1316]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1317]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1318]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1317]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1318]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Finger_3_Jnt_2_Ctrl_scaleZ_AnimLayer2.o" "Bigfoot_RigRN.phl[1319]"
 		;
 connectAttr "Bigfoot_RigRN.phl[1320]" "AnimLayer1.dsm" -na;
@@ -20836,48 +20497,48 @@ connectAttr "Bigfoot_RigRN.phl[1323]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_RigRN.phl[1324]" "AnimLayer2.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Finger_3_Jnt_2_Ctrl_FollowRotate_AnimLayer2.o" "Bigfoot_RigRN.phl[1325]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1326]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1327]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1326]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1327]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Finger_3_Jnt_2_Ctrl_visibility_AnimLayer2.o" "Bigfoot_RigRN.phl[1328]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1329]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1330]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1329]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1330]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Finger_1_Jnt_2_Ctrl_translateX_AnimLayer2.o" "Bigfoot_RigRN.phl[1331]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1332]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1333]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1332]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1333]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Finger_1_Jnt_2_Ctrl_translateY_AnimLayer2.o" "Bigfoot_RigRN.phl[1334]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1335]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1336]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1335]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1336]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Finger_1_Jnt_2_Ctrl_translateZ_AnimLayer2.o" "Bigfoot_RigRN.phl[1337]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1338]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1339]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1338]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1339]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Finger_1_Jnt_2_Ctrl_rotate_AnimLayer2.ox" "Bigfoot_RigRN.phl[1340]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1341]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1342]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1341]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1342]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Finger_1_Jnt_2_Ctrl_rotate_AnimLayer2.oy" "Bigfoot_RigRN.phl[1343]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1344]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1345]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1344]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1345]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Finger_1_Jnt_2_Ctrl_rotate_AnimLayer2.oz" "Bigfoot_RigRN.phl[1346]"
 		;
 connectAttr "Bigfoot_RigRN.phl[1347]" "Bigfoot_Rig:L_Finger_1_Jnt_2_Ctrl_rotate_AnimLayer1.ro"
 		;
 connectAttr "Bigfoot_RigRN.phl[1348]" "Bigfoot_Rig:L_Finger_1_Jnt_2_Ctrl_rotate_AnimLayer2.ro"
 		;
-connectAttr "Bigfoot_RigRN.phl[1349]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1350]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1349]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1350]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Finger_1_Jnt_2_Ctrl_scaleX_AnimLayer2.o" "Bigfoot_RigRN.phl[1351]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1352]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1353]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1352]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1353]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Finger_1_Jnt_2_Ctrl_scaleY_AnimLayer2.o" "Bigfoot_RigRN.phl[1354]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1355]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1356]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1355]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1356]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Finger_1_Jnt_2_Ctrl_scaleZ_AnimLayer2.o" "Bigfoot_RigRN.phl[1357]"
 		;
 connectAttr "Bigfoot_RigRN.phl[1358]" "AnimLayer1.dsm" -na;
@@ -20888,48 +20549,48 @@ connectAttr "Bigfoot_RigRN.phl[1361]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_RigRN.phl[1362]" "AnimLayer2.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Finger_1_Jnt_2_Ctrl_FollowRotate_AnimLayer2.o" "Bigfoot_RigRN.phl[1363]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1364]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1365]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1364]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1365]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Finger_1_Jnt_2_Ctrl_visibility_AnimLayer2.o" "Bigfoot_RigRN.phl[1366]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1367]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1368]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1367]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1368]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Finger_1_Jnt_1_Ctrl_translateX_AnimLayer2.o" "Bigfoot_RigRN.phl[1369]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1370]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1371]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1370]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1371]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Finger_1_Jnt_1_Ctrl_translateY_AnimLayer2.o" "Bigfoot_RigRN.phl[1372]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1373]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1374]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1373]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1374]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Finger_1_Jnt_1_Ctrl_translateZ_AnimLayer2.o" "Bigfoot_RigRN.phl[1375]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1376]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1377]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1376]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1377]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Finger_1_Jnt_1_Ctrl_rotate_AnimLayer2.ox" "Bigfoot_RigRN.phl[1378]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1379]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1380]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1379]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1380]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Finger_1_Jnt_1_Ctrl_rotate_AnimLayer2.oy" "Bigfoot_RigRN.phl[1381]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1382]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1383]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1382]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1383]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Finger_1_Jnt_1_Ctrl_rotate_AnimLayer2.oz" "Bigfoot_RigRN.phl[1384]"
 		;
 connectAttr "Bigfoot_RigRN.phl[1385]" "Bigfoot_Rig:L_Finger_1_Jnt_1_Ctrl_rotate_AnimLayer1.ro"
 		;
 connectAttr "Bigfoot_RigRN.phl[1386]" "Bigfoot_Rig:L_Finger_1_Jnt_1_Ctrl_rotate_AnimLayer2.ro"
 		;
-connectAttr "Bigfoot_RigRN.phl[1387]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1388]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1387]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1388]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Finger_1_Jnt_1_Ctrl_scaleX_AnimLayer2.o" "Bigfoot_RigRN.phl[1389]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1390]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1391]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1390]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1391]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Finger_1_Jnt_1_Ctrl_scaleY_AnimLayer2.o" "Bigfoot_RigRN.phl[1392]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1393]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1394]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1393]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1394]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Finger_1_Jnt_1_Ctrl_scaleZ_AnimLayer2.o" "Bigfoot_RigRN.phl[1395]"
 		;
 connectAttr "Bigfoot_RigRN.phl[1396]" "AnimLayer1.dsm" -na;
@@ -20940,48 +20601,48 @@ connectAttr "Bigfoot_RigRN.phl[1399]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_RigRN.phl[1400]" "AnimLayer2.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Finger_1_Jnt_1_Ctrl_FollowRotate_AnimLayer2.o" "Bigfoot_RigRN.phl[1401]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1402]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1403]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1402]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1403]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Finger_1_Jnt_1_Ctrl_visibility_AnimLayer2.o" "Bigfoot_RigRN.phl[1404]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1405]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1406]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1405]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1406]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Thumb_1_Jnt_Ctrl_translateX_AnimLayer2.o" "Bigfoot_RigRN.phl[1407]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1408]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1409]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1408]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1409]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Thumb_1_Jnt_Ctrl_translateY_AnimLayer2.o" "Bigfoot_RigRN.phl[1410]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1411]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1412]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1411]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1412]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Thumb_1_Jnt_Ctrl_translateZ_AnimLayer2.o" "Bigfoot_RigRN.phl[1413]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1414]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1415]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1414]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1415]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Thumb_1_Jnt_Ctrl_rotate_AnimLayer2.ox" "Bigfoot_RigRN.phl[1416]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1417]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1418]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1417]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1418]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Thumb_1_Jnt_Ctrl_rotate_AnimLayer2.oy" "Bigfoot_RigRN.phl[1419]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1420]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1421]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1420]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1421]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Thumb_1_Jnt_Ctrl_rotate_AnimLayer2.oz" "Bigfoot_RigRN.phl[1422]"
 		;
 connectAttr "Bigfoot_RigRN.phl[1423]" "Bigfoot_Rig:L_Thumb_1_Jnt_Ctrl_rotate_AnimLayer1.ro"
 		;
 connectAttr "Bigfoot_RigRN.phl[1424]" "Bigfoot_Rig:L_Thumb_1_Jnt_Ctrl_rotate_AnimLayer2.ro"
 		;
-connectAttr "Bigfoot_RigRN.phl[1425]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1426]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1425]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1426]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Thumb_1_Jnt_Ctrl_scaleX_AnimLayer2.o" "Bigfoot_RigRN.phl[1427]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1428]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1429]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1428]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1429]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Thumb_1_Jnt_Ctrl_scaleY_AnimLayer2.o" "Bigfoot_RigRN.phl[1430]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1431]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1432]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1431]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1432]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Thumb_1_Jnt_Ctrl_scaleZ_AnimLayer2.o" "Bigfoot_RigRN.phl[1433]"
 		;
 connectAttr "Bigfoot_RigRN.phl[1434]" "AnimLayer1.dsm" -na;
@@ -20992,48 +20653,48 @@ connectAttr "Bigfoot_RigRN.phl[1437]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_RigRN.phl[1438]" "AnimLayer2.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Thumb_1_Jnt_Ctrl_FollowRotate_AnimLayer2.o" "Bigfoot_RigRN.phl[1439]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1440]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1441]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1440]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1441]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Thumb_1_Jnt_Ctrl_visibility_AnimLayer2.o" "Bigfoot_RigRN.phl[1442]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1443]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1444]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1443]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1444]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Thumb_2_Jnt_Ctrl_translateX_AnimLayer2.o" "Bigfoot_RigRN.phl[1445]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1446]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1447]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1446]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1447]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Thumb_2_Jnt_Ctrl_translateY_AnimLayer2.o" "Bigfoot_RigRN.phl[1448]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1449]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1450]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1449]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1450]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Thumb_2_Jnt_Ctrl_translateZ_AnimLayer2.o" "Bigfoot_RigRN.phl[1451]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1452]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1453]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1452]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1453]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Thumb_2_Jnt_Ctrl_rotate_AnimLayer2.ox" "Bigfoot_RigRN.phl[1454]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1455]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1456]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1455]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1456]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Thumb_2_Jnt_Ctrl_rotate_AnimLayer2.oy" "Bigfoot_RigRN.phl[1457]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1458]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1459]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1458]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1459]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Thumb_2_Jnt_Ctrl_rotate_AnimLayer2.oz" "Bigfoot_RigRN.phl[1460]"
 		;
 connectAttr "Bigfoot_RigRN.phl[1461]" "Bigfoot_Rig:L_Thumb_2_Jnt_Ctrl_rotate_AnimLayer1.ro"
 		;
 connectAttr "Bigfoot_RigRN.phl[1462]" "Bigfoot_Rig:L_Thumb_2_Jnt_Ctrl_rotate_AnimLayer2.ro"
 		;
-connectAttr "Bigfoot_RigRN.phl[1463]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1464]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1463]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1464]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Thumb_2_Jnt_Ctrl_scaleX_AnimLayer2.o" "Bigfoot_RigRN.phl[1465]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1466]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1467]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1466]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1467]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Thumb_2_Jnt_Ctrl_scaleY_AnimLayer2.o" "Bigfoot_RigRN.phl[1468]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1469]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1470]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1469]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1470]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Thumb_2_Jnt_Ctrl_scaleZ_AnimLayer2.o" "Bigfoot_RigRN.phl[1471]"
 		;
 connectAttr "Bigfoot_RigRN.phl[1472]" "AnimLayer1.dsm" -na;
@@ -21044,48 +20705,48 @@ connectAttr "Bigfoot_RigRN.phl[1475]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_RigRN.phl[1476]" "AnimLayer2.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Thumb_2_Jnt_Ctrl_FollowRotate_AnimLayer2.o" "Bigfoot_RigRN.phl[1477]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1478]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1479]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1478]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1479]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Thumb_2_Jnt_Ctrl_visibility_AnimLayer2.o" "Bigfoot_RigRN.phl[1480]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1481]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1482]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1481]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1482]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Thumb_3_Jnt_Ctrl_translateX_AnimLayer2.o" "Bigfoot_RigRN.phl[1483]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1484]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1485]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1484]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1485]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Thumb_3_Jnt_Ctrl_translateY_AnimLayer2.o" "Bigfoot_RigRN.phl[1486]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1487]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1488]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1487]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1488]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Thumb_3_Jnt_Ctrl_translateZ_AnimLayer2.o" "Bigfoot_RigRN.phl[1489]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1490]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1491]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1490]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1491]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Thumb_3_Jnt_Ctrl_rotate_AnimLayer2.ox" "Bigfoot_RigRN.phl[1492]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1493]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1494]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1493]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1494]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Thumb_3_Jnt_Ctrl_rotate_AnimLayer2.oy" "Bigfoot_RigRN.phl[1495]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1496]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1497]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1496]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1497]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Thumb_3_Jnt_Ctrl_rotate_AnimLayer2.oz" "Bigfoot_RigRN.phl[1498]"
 		;
 connectAttr "Bigfoot_RigRN.phl[1499]" "Bigfoot_Rig:L_Thumb_3_Jnt_Ctrl_rotate_AnimLayer1.ro"
 		;
 connectAttr "Bigfoot_RigRN.phl[1500]" "Bigfoot_Rig:L_Thumb_3_Jnt_Ctrl_rotate_AnimLayer2.ro"
 		;
-connectAttr "Bigfoot_RigRN.phl[1501]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1502]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1501]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1502]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Thumb_3_Jnt_Ctrl_scaleX_AnimLayer2.o" "Bigfoot_RigRN.phl[1503]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1504]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1505]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1504]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1505]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Thumb_3_Jnt_Ctrl_scaleY_AnimLayer2.o" "Bigfoot_RigRN.phl[1506]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1507]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1508]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1507]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1508]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Thumb_3_Jnt_Ctrl_scaleZ_AnimLayer2.o" "Bigfoot_RigRN.phl[1509]"
 		;
 connectAttr "Bigfoot_RigRN.phl[1510]" "AnimLayer1.dsm" -na;
@@ -21096,48 +20757,48 @@ connectAttr "Bigfoot_RigRN.phl[1513]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_RigRN.phl[1514]" "AnimLayer2.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Thumb_3_Jnt_Ctrl_FollowRotate_AnimLayer2.o" "Bigfoot_RigRN.phl[1515]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1516]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1517]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1516]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1517]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Thumb_3_Jnt_Ctrl_visibility_AnimLayer2.o" "Bigfoot_RigRN.phl[1518]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1519]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1520]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1519]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1520]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Finger_2_Jnt_2_Ctrl_translateX_AnimLayer2.o" "Bigfoot_RigRN.phl[1521]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1522]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1523]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1522]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1523]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Finger_2_Jnt_2_Ctrl_translateY_AnimLayer2.o" "Bigfoot_RigRN.phl[1524]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1525]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1526]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1525]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1526]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Finger_2_Jnt_2_Ctrl_translateZ_AnimLayer2.o" "Bigfoot_RigRN.phl[1527]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1528]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1529]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1528]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1529]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Finger_2_Jnt_2_Ctrl_rotate_AnimLayer2.ox" "Bigfoot_RigRN.phl[1530]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1531]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1532]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1531]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1532]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Finger_2_Jnt_2_Ctrl_rotate_AnimLayer2.oy" "Bigfoot_RigRN.phl[1533]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1534]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1535]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1534]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1535]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Finger_2_Jnt_2_Ctrl_rotate_AnimLayer2.oz" "Bigfoot_RigRN.phl[1536]"
 		;
 connectAttr "Bigfoot_RigRN.phl[1537]" "Bigfoot_Rig:L_Finger_2_Jnt_2_Ctrl_rotate_AnimLayer1.ro"
 		;
 connectAttr "Bigfoot_RigRN.phl[1538]" "Bigfoot_Rig:L_Finger_2_Jnt_2_Ctrl_rotate_AnimLayer2.ro"
 		;
-connectAttr "Bigfoot_RigRN.phl[1539]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1540]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1539]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1540]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Finger_2_Jnt_2_Ctrl_scaleX_AnimLayer2.o" "Bigfoot_RigRN.phl[1541]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1542]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1543]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1542]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1543]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Finger_2_Jnt_2_Ctrl_scaleY_AnimLayer2.o" "Bigfoot_RigRN.phl[1544]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1545]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1546]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1545]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1546]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Finger_2_Jnt_2_Ctrl_scaleZ_AnimLayer2.o" "Bigfoot_RigRN.phl[1547]"
 		;
 connectAttr "Bigfoot_RigRN.phl[1548]" "AnimLayer1.dsm" -na;
@@ -21148,48 +20809,48 @@ connectAttr "Bigfoot_RigRN.phl[1551]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_RigRN.phl[1552]" "AnimLayer2.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Finger_2_Jnt_2_Ctrl_FollowRotate_AnimLayer2.o" "Bigfoot_RigRN.phl[1553]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1554]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1555]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1554]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1555]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Finger_2_Jnt_2_Ctrl_visibility_AnimLayer2.o" "Bigfoot_RigRN.phl[1556]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1557]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1558]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1557]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1558]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Finger_4_Jnt_2_Ctrl_translateX_AnimLayer2.o" "Bigfoot_RigRN.phl[1559]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1560]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1561]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1560]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1561]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Finger_4_Jnt_2_Ctrl_translateY_AnimLayer2.o" "Bigfoot_RigRN.phl[1562]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1563]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1564]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1563]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1564]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Finger_4_Jnt_2_Ctrl_translateZ_AnimLayer2.o" "Bigfoot_RigRN.phl[1565]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1566]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1567]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1566]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1567]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Finger_4_Jnt_2_Ctrl_rotate_AnimLayer2.ox" "Bigfoot_RigRN.phl[1568]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1569]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1570]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1569]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1570]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Finger_4_Jnt_2_Ctrl_rotate_AnimLayer2.oy" "Bigfoot_RigRN.phl[1571]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1572]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1573]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1572]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1573]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Finger_4_Jnt_2_Ctrl_rotate_AnimLayer2.oz" "Bigfoot_RigRN.phl[1574]"
 		;
 connectAttr "Bigfoot_RigRN.phl[1575]" "Bigfoot_Rig:L_Finger_4_Jnt_2_Ctrl_rotate_AnimLayer1.ro"
 		;
 connectAttr "Bigfoot_RigRN.phl[1576]" "Bigfoot_Rig:L_Finger_4_Jnt_2_Ctrl_rotate_AnimLayer2.ro"
 		;
-connectAttr "Bigfoot_RigRN.phl[1577]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1578]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1577]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1578]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Finger_4_Jnt_2_Ctrl_scaleX_AnimLayer2.o" "Bigfoot_RigRN.phl[1579]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1580]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1581]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1580]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1581]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Finger_4_Jnt_2_Ctrl_scaleY_AnimLayer2.o" "Bigfoot_RigRN.phl[1582]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1583]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1584]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1583]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1584]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Finger_4_Jnt_2_Ctrl_scaleZ_AnimLayer2.o" "Bigfoot_RigRN.phl[1585]"
 		;
 connectAttr "Bigfoot_RigRN.phl[1586]" "AnimLayer1.dsm" -na;
@@ -21200,48 +20861,48 @@ connectAttr "Bigfoot_RigRN.phl[1589]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_RigRN.phl[1590]" "AnimLayer2.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Finger_4_Jnt_2_Ctrl_FollowRotate_AnimLayer2.o" "Bigfoot_RigRN.phl[1591]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1592]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1593]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1592]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1593]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Finger_4_Jnt_2_Ctrl_visibility_AnimLayer2.o" "Bigfoot_RigRN.phl[1594]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1595]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1596]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1595]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1596]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Finger_1_Jnt_3_Ctrl_translateX_AnimLayer2.o" "Bigfoot_RigRN.phl[1597]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1598]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1599]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1598]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1599]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Finger_1_Jnt_3_Ctrl_translateY_AnimLayer2.o" "Bigfoot_RigRN.phl[1600]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1601]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1602]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1601]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1602]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Finger_1_Jnt_3_Ctrl_translateZ_AnimLayer2.o" "Bigfoot_RigRN.phl[1603]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1604]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1605]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1604]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1605]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Finger_1_Jnt_3_Ctrl_rotate_AnimLayer2.ox" "Bigfoot_RigRN.phl[1606]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1607]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1608]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1607]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1608]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Finger_1_Jnt_3_Ctrl_rotate_AnimLayer2.oy" "Bigfoot_RigRN.phl[1609]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1610]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1611]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1610]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1611]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Finger_1_Jnt_3_Ctrl_rotate_AnimLayer2.oz" "Bigfoot_RigRN.phl[1612]"
 		;
 connectAttr "Bigfoot_RigRN.phl[1613]" "Bigfoot_Rig:L_Finger_1_Jnt_3_Ctrl_rotate_AnimLayer1.ro"
 		;
 connectAttr "Bigfoot_RigRN.phl[1614]" "Bigfoot_Rig:L_Finger_1_Jnt_3_Ctrl_rotate_AnimLayer2.ro"
 		;
-connectAttr "Bigfoot_RigRN.phl[1615]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1616]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1615]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1616]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Finger_1_Jnt_3_Ctrl_scaleX_AnimLayer2.o" "Bigfoot_RigRN.phl[1617]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1618]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1619]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1618]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1619]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Finger_1_Jnt_3_Ctrl_scaleY_AnimLayer2.o" "Bigfoot_RigRN.phl[1620]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1621]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1622]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1621]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1622]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Finger_1_Jnt_3_Ctrl_scaleZ_AnimLayer2.o" "Bigfoot_RigRN.phl[1623]"
 		;
 connectAttr "Bigfoot_RigRN.phl[1624]" "AnimLayer1.dsm" -na;
@@ -21252,48 +20913,48 @@ connectAttr "Bigfoot_RigRN.phl[1627]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_RigRN.phl[1628]" "AnimLayer2.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Finger_1_Jnt_3_Ctrl_FollowRotate_AnimLayer2.o" "Bigfoot_RigRN.phl[1629]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1630]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1631]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1630]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1631]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Finger_1_Jnt_3_Ctrl_visibility_AnimLayer2.o" "Bigfoot_RigRN.phl[1632]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1633]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1634]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1633]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1634]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Finger_2_Jnt_3_Ctrl_translateX_AnimLayer2.o" "Bigfoot_RigRN.phl[1635]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1636]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1637]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1636]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1637]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Finger_2_Jnt_3_Ctrl_translateY_AnimLayer2.o" "Bigfoot_RigRN.phl[1638]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1639]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1640]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1639]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1640]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Finger_2_Jnt_3_Ctrl_translateZ_AnimLayer2.o" "Bigfoot_RigRN.phl[1641]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1642]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1643]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1642]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1643]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Finger_2_Jnt_3_Ctrl_rotate_AnimLayer2.ox" "Bigfoot_RigRN.phl[1644]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1645]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1646]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1645]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1646]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Finger_2_Jnt_3_Ctrl_rotate_AnimLayer2.oy" "Bigfoot_RigRN.phl[1647]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1648]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1649]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1648]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1649]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Finger_2_Jnt_3_Ctrl_rotate_AnimLayer2.oz" "Bigfoot_RigRN.phl[1650]"
 		;
 connectAttr "Bigfoot_RigRN.phl[1651]" "Bigfoot_Rig:L_Finger_2_Jnt_3_Ctrl_rotate_AnimLayer1.ro"
 		;
 connectAttr "Bigfoot_RigRN.phl[1652]" "Bigfoot_Rig:L_Finger_2_Jnt_3_Ctrl_rotate_AnimLayer2.ro"
 		;
-connectAttr "Bigfoot_RigRN.phl[1653]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1654]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1653]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1654]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Finger_2_Jnt_3_Ctrl_scaleX_AnimLayer2.o" "Bigfoot_RigRN.phl[1655]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1656]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1657]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1656]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1657]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Finger_2_Jnt_3_Ctrl_scaleY_AnimLayer2.o" "Bigfoot_RigRN.phl[1658]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1659]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1660]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1659]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1660]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Finger_2_Jnt_3_Ctrl_scaleZ_AnimLayer2.o" "Bigfoot_RigRN.phl[1661]"
 		;
 connectAttr "Bigfoot_RigRN.phl[1662]" "AnimLayer1.dsm" -na;
@@ -21304,48 +20965,48 @@ connectAttr "Bigfoot_RigRN.phl[1665]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_RigRN.phl[1666]" "AnimLayer2.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Finger_2_Jnt_3_Ctrl_FollowRotate_AnimLayer2.o" "Bigfoot_RigRN.phl[1667]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1668]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1669]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1668]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1669]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Finger_2_Jnt_3_Ctrl_visibility_AnimLayer2.o" "Bigfoot_RigRN.phl[1670]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1671]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1672]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1671]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1672]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Finger_4_Jnt_3_Ctrl_translateX_AnimLayer2.o" "Bigfoot_RigRN.phl[1673]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1674]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1675]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1674]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1675]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Finger_4_Jnt_3_Ctrl_translateY_AnimLayer2.o" "Bigfoot_RigRN.phl[1676]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1677]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1678]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1677]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1678]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Finger_4_Jnt_3_Ctrl_translateZ_AnimLayer2.o" "Bigfoot_RigRN.phl[1679]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1680]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1681]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1680]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1681]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Finger_4_Jnt_3_Ctrl_rotate_AnimLayer2.ox" "Bigfoot_RigRN.phl[1682]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1683]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1684]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1683]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1684]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Finger_4_Jnt_3_Ctrl_rotate_AnimLayer2.oy" "Bigfoot_RigRN.phl[1685]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1686]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1687]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1686]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1687]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Finger_4_Jnt_3_Ctrl_rotate_AnimLayer2.oz" "Bigfoot_RigRN.phl[1688]"
 		;
 connectAttr "Bigfoot_RigRN.phl[1689]" "Bigfoot_Rig:L_Finger_4_Jnt_3_Ctrl_rotate_AnimLayer1.ro"
 		;
 connectAttr "Bigfoot_RigRN.phl[1690]" "Bigfoot_Rig:L_Finger_4_Jnt_3_Ctrl_rotate_AnimLayer2.ro"
 		;
-connectAttr "Bigfoot_RigRN.phl[1691]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1692]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1691]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1692]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Finger_4_Jnt_3_Ctrl_scaleX_AnimLayer2.o" "Bigfoot_RigRN.phl[1693]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1694]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1695]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1694]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1695]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Finger_4_Jnt_3_Ctrl_scaleY_AnimLayer2.o" "Bigfoot_RigRN.phl[1696]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1697]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1698]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1697]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1698]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Finger_4_Jnt_3_Ctrl_scaleZ_AnimLayer2.o" "Bigfoot_RigRN.phl[1699]"
 		;
 connectAttr "Bigfoot_RigRN.phl[1700]" "AnimLayer1.dsm" -na;
@@ -21356,48 +21017,48 @@ connectAttr "Bigfoot_RigRN.phl[1703]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_RigRN.phl[1704]" "AnimLayer2.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Finger_4_Jnt_3_Ctrl_FollowRotate_AnimLayer2.o" "Bigfoot_RigRN.phl[1705]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1706]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1707]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1706]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1707]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Finger_4_Jnt_3_Ctrl_visibility_AnimLayer2.o" "Bigfoot_RigRN.phl[1708]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1709]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1710]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1709]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1710]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Finger_1_Jnt_1_Ctrl_translateX_AnimLayer2.o" "Bigfoot_RigRN.phl[1711]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1712]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1713]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1712]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1713]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Finger_1_Jnt_1_Ctrl_translateY_AnimLayer2.o" "Bigfoot_RigRN.phl[1714]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1715]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1716]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1715]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1716]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Finger_1_Jnt_1_Ctrl_translateZ_AnimLayer2.o" "Bigfoot_RigRN.phl[1717]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1718]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1719]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1718]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1719]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Finger_1_Jnt_1_Ctrl_rotate_AnimLayer2.ox" "Bigfoot_RigRN.phl[1720]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1721]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1722]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1721]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1722]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Finger_1_Jnt_1_Ctrl_rotate_AnimLayer2.oy" "Bigfoot_RigRN.phl[1723]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1724]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1725]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1724]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1725]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Finger_1_Jnt_1_Ctrl_rotate_AnimLayer2.oz" "Bigfoot_RigRN.phl[1726]"
 		;
 connectAttr "Bigfoot_RigRN.phl[1727]" "Bigfoot_Rig:R_Finger_1_Jnt_1_Ctrl_rotate_AnimLayer1.ro"
 		;
 connectAttr "Bigfoot_RigRN.phl[1728]" "Bigfoot_Rig:R_Finger_1_Jnt_1_Ctrl_rotate_AnimLayer2.ro"
 		;
-connectAttr "Bigfoot_RigRN.phl[1729]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1730]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1729]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1730]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Finger_1_Jnt_1_Ctrl_scaleX_AnimLayer2.o" "Bigfoot_RigRN.phl[1731]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1732]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1733]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1732]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1733]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Finger_1_Jnt_1_Ctrl_scaleY_AnimLayer2.o" "Bigfoot_RigRN.phl[1734]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1735]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1736]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1735]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1736]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Finger_1_Jnt_1_Ctrl_scaleZ_AnimLayer2.o" "Bigfoot_RigRN.phl[1737]"
 		;
 connectAttr "Bigfoot_RigRN.phl[1738]" "AnimLayer1.dsm" -na;
@@ -21408,48 +21069,48 @@ connectAttr "Bigfoot_RigRN.phl[1741]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_RigRN.phl[1742]" "AnimLayer2.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Finger_1_Jnt_1_Ctrl_FollowRotate_AnimLayer2.o" "Bigfoot_RigRN.phl[1743]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1744]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1745]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1744]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1745]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Finger_1_Jnt_1_Ctrl_visibility_AnimLayer2.o" "Bigfoot_RigRN.phl[1746]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1747]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1748]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1747]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1748]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Finger_4_Jnt_2_Ctrl_translateX_AnimLayer2.o" "Bigfoot_RigRN.phl[1749]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1750]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1751]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1750]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1751]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Finger_4_Jnt_2_Ctrl_translateY_AnimLayer2.o" "Bigfoot_RigRN.phl[1752]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1753]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1754]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1753]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1754]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Finger_4_Jnt_2_Ctrl_translateZ_AnimLayer2.o" "Bigfoot_RigRN.phl[1755]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1756]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1757]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1756]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1757]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Finger_4_Jnt_2_Ctrl_rotate_AnimLayer2.ox" "Bigfoot_RigRN.phl[1758]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1759]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1760]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1759]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1760]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Finger_4_Jnt_2_Ctrl_rotate_AnimLayer2.oy" "Bigfoot_RigRN.phl[1761]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1762]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1763]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1762]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1763]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Finger_4_Jnt_2_Ctrl_rotate_AnimLayer2.oz" "Bigfoot_RigRN.phl[1764]"
 		;
 connectAttr "Bigfoot_RigRN.phl[1765]" "Bigfoot_Rig:R_Finger_4_Jnt_2_Ctrl_rotate_AnimLayer1.ro"
 		;
 connectAttr "Bigfoot_RigRN.phl[1766]" "Bigfoot_Rig:R_Finger_4_Jnt_2_Ctrl_rotate_AnimLayer2.ro"
 		;
-connectAttr "Bigfoot_RigRN.phl[1767]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1768]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1767]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1768]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Finger_4_Jnt_2_Ctrl_scaleX_AnimLayer2.o" "Bigfoot_RigRN.phl[1769]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1770]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1771]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1770]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1771]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Finger_4_Jnt_2_Ctrl_scaleY_AnimLayer2.o" "Bigfoot_RigRN.phl[1772]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1773]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1774]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1773]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1774]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Finger_4_Jnt_2_Ctrl_scaleZ_AnimLayer2.o" "Bigfoot_RigRN.phl[1775]"
 		;
 connectAttr "Bigfoot_RigRN.phl[1776]" "AnimLayer1.dsm" -na;
@@ -21460,48 +21121,48 @@ connectAttr "Bigfoot_RigRN.phl[1779]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_RigRN.phl[1780]" "AnimLayer2.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Finger_4_Jnt_2_Ctrl_FollowRotate_AnimLayer2.o" "Bigfoot_RigRN.phl[1781]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1782]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1783]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1782]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1783]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Finger_4_Jnt_2_Ctrl_visibility_AnimLayer2.o" "Bigfoot_RigRN.phl[1784]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1785]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1786]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1785]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1786]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Finger_3_Jnt_1_Ctrl_translateX_AnimLayer2.o" "Bigfoot_RigRN.phl[1787]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1788]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1789]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1788]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1789]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Finger_3_Jnt_1_Ctrl_translateY_AnimLayer2.o" "Bigfoot_RigRN.phl[1790]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1791]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1792]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1791]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1792]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Finger_3_Jnt_1_Ctrl_translateZ_AnimLayer2.o" "Bigfoot_RigRN.phl[1793]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1794]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1795]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1794]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1795]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Finger_3_Jnt_1_Ctrl_rotate_AnimLayer2.ox" "Bigfoot_RigRN.phl[1796]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1797]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1798]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1797]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1798]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Finger_3_Jnt_1_Ctrl_rotate_AnimLayer2.oy" "Bigfoot_RigRN.phl[1799]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1800]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1801]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1800]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1801]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Finger_3_Jnt_1_Ctrl_rotate_AnimLayer2.oz" "Bigfoot_RigRN.phl[1802]"
 		;
 connectAttr "Bigfoot_RigRN.phl[1803]" "Bigfoot_Rig:R_Finger_3_Jnt_1_Ctrl_rotate_AnimLayer1.ro"
 		;
 connectAttr "Bigfoot_RigRN.phl[1804]" "Bigfoot_Rig:R_Finger_3_Jnt_1_Ctrl_rotate_AnimLayer2.ro"
 		;
-connectAttr "Bigfoot_RigRN.phl[1805]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1806]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1805]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1806]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Finger_3_Jnt_1_Ctrl_scaleX_AnimLayer2.o" "Bigfoot_RigRN.phl[1807]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1808]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1809]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1808]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1809]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Finger_3_Jnt_1_Ctrl_scaleY_AnimLayer2.o" "Bigfoot_RigRN.phl[1810]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1811]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1812]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1811]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1812]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Finger_3_Jnt_1_Ctrl_scaleZ_AnimLayer2.o" "Bigfoot_RigRN.phl[1813]"
 		;
 connectAttr "Bigfoot_RigRN.phl[1814]" "AnimLayer1.dsm" -na;
@@ -21512,48 +21173,48 @@ connectAttr "Bigfoot_RigRN.phl[1817]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_RigRN.phl[1818]" "AnimLayer2.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Finger_3_Jnt_1_Ctrl_FollowRotate_AnimLayer2.o" "Bigfoot_RigRN.phl[1819]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1820]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1821]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1820]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1821]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Finger_3_Jnt_1_Ctrl_visibility_AnimLayer2.o" "Bigfoot_RigRN.phl[1822]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1823]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1824]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1823]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1824]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Finger_1_Jnt_2_Ctrl_translateX_AnimLayer2.o" "Bigfoot_RigRN.phl[1825]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1826]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1827]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1826]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1827]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Finger_1_Jnt_2_Ctrl_translateY_AnimLayer2.o" "Bigfoot_RigRN.phl[1828]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1829]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1830]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1829]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1830]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Finger_1_Jnt_2_Ctrl_translateZ_AnimLayer2.o" "Bigfoot_RigRN.phl[1831]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1832]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1833]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1832]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1833]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Finger_1_Jnt_2_Ctrl_rotate_AnimLayer2.ox" "Bigfoot_RigRN.phl[1834]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1835]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1836]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1835]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1836]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Finger_1_Jnt_2_Ctrl_rotate_AnimLayer2.oy" "Bigfoot_RigRN.phl[1837]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1838]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1839]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1838]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1839]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Finger_1_Jnt_2_Ctrl_rotate_AnimLayer2.oz" "Bigfoot_RigRN.phl[1840]"
 		;
 connectAttr "Bigfoot_RigRN.phl[1841]" "Bigfoot_Rig:R_Finger_1_Jnt_2_Ctrl_rotate_AnimLayer1.ro"
 		;
 connectAttr "Bigfoot_RigRN.phl[1842]" "Bigfoot_Rig:R_Finger_1_Jnt_2_Ctrl_rotate_AnimLayer2.ro"
 		;
-connectAttr "Bigfoot_RigRN.phl[1843]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1844]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1843]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1844]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Finger_1_Jnt_2_Ctrl_scaleX_AnimLayer2.o" "Bigfoot_RigRN.phl[1845]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1846]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1847]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1846]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1847]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Finger_1_Jnt_2_Ctrl_scaleY_AnimLayer2.o" "Bigfoot_RigRN.phl[1848]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1849]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1850]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1849]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1850]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Finger_1_Jnt_2_Ctrl_scaleZ_AnimLayer2.o" "Bigfoot_RigRN.phl[1851]"
 		;
 connectAttr "Bigfoot_RigRN.phl[1852]" "AnimLayer1.dsm" -na;
@@ -21564,48 +21225,48 @@ connectAttr "Bigfoot_RigRN.phl[1855]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_RigRN.phl[1856]" "AnimLayer2.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Finger_1_Jnt_2_Ctrl_FollowRotate_AnimLayer2.o" "Bigfoot_RigRN.phl[1857]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1858]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1859]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1858]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1859]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Finger_1_Jnt_2_Ctrl_visibility_AnimLayer2.o" "Bigfoot_RigRN.phl[1860]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1861]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1862]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1861]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1862]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Finger_2_Jnt_1_Ctrl_translateX_AnimLayer2.o" "Bigfoot_RigRN.phl[1863]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1864]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1865]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1864]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1865]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Finger_2_Jnt_1_Ctrl_translateY_AnimLayer2.o" "Bigfoot_RigRN.phl[1866]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1867]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1868]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1867]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1868]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Finger_2_Jnt_1_Ctrl_translateZ_AnimLayer2.o" "Bigfoot_RigRN.phl[1869]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1870]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1871]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1870]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1871]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Finger_2_Jnt_1_Ctrl_rotate_AnimLayer2.ox" "Bigfoot_RigRN.phl[1872]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1873]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1874]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1873]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1874]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Finger_2_Jnt_1_Ctrl_rotate_AnimLayer2.oy" "Bigfoot_RigRN.phl[1875]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1876]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1877]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1876]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1877]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Finger_2_Jnt_1_Ctrl_rotate_AnimLayer2.oz" "Bigfoot_RigRN.phl[1878]"
 		;
 connectAttr "Bigfoot_RigRN.phl[1879]" "Bigfoot_Rig:R_Finger_2_Jnt_1_Ctrl_rotate_AnimLayer1.ro"
 		;
 connectAttr "Bigfoot_RigRN.phl[1880]" "Bigfoot_Rig:R_Finger_2_Jnt_1_Ctrl_rotate_AnimLayer2.ro"
 		;
-connectAttr "Bigfoot_RigRN.phl[1881]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1882]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1881]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1882]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Finger_2_Jnt_1_Ctrl_scaleX_AnimLayer2.o" "Bigfoot_RigRN.phl[1883]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1884]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1885]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1884]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1885]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Finger_2_Jnt_1_Ctrl_scaleY_AnimLayer2.o" "Bigfoot_RigRN.phl[1886]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1887]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1888]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1887]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1888]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Finger_2_Jnt_1_Ctrl_scaleZ_AnimLayer2.o" "Bigfoot_RigRN.phl[1889]"
 		;
 connectAttr "Bigfoot_RigRN.phl[1890]" "AnimLayer1.dsm" -na;
@@ -21616,48 +21277,48 @@ connectAttr "Bigfoot_RigRN.phl[1893]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_RigRN.phl[1894]" "AnimLayer2.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Finger_2_Jnt_1_Ctrl_FollowRotate_AnimLayer2.o" "Bigfoot_RigRN.phl[1895]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1896]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1897]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1896]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1897]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Finger_2_Jnt_1_Ctrl_visibility_AnimLayer2.o" "Bigfoot_RigRN.phl[1898]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1899]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1900]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1899]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1900]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Finger_2_Jnt_2_Ctrl_translateX_AnimLayer2.o" "Bigfoot_RigRN.phl[1901]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1902]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1903]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1902]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1903]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Finger_2_Jnt_2_Ctrl_translateY_AnimLayer2.o" "Bigfoot_RigRN.phl[1904]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1905]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1906]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1905]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1906]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Finger_2_Jnt_2_Ctrl_translateZ_AnimLayer2.o" "Bigfoot_RigRN.phl[1907]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1908]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1909]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1908]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1909]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Finger_2_Jnt_2_Ctrl_rotate_AnimLayer2.ox" "Bigfoot_RigRN.phl[1910]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1911]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1912]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1911]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1912]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Finger_2_Jnt_2_Ctrl_rotate_AnimLayer2.oy" "Bigfoot_RigRN.phl[1913]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1914]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1915]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1914]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1915]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Finger_2_Jnt_2_Ctrl_rotate_AnimLayer2.oz" "Bigfoot_RigRN.phl[1916]"
 		;
 connectAttr "Bigfoot_RigRN.phl[1917]" "Bigfoot_Rig:R_Finger_2_Jnt_2_Ctrl_rotate_AnimLayer1.ro"
 		;
 connectAttr "Bigfoot_RigRN.phl[1918]" "Bigfoot_Rig:R_Finger_2_Jnt_2_Ctrl_rotate_AnimLayer2.ro"
 		;
-connectAttr "Bigfoot_RigRN.phl[1919]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1920]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1919]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1920]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Finger_2_Jnt_2_Ctrl_scaleX_AnimLayer2.o" "Bigfoot_RigRN.phl[1921]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1922]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1923]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1922]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1923]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Finger_2_Jnt_2_Ctrl_scaleY_AnimLayer2.o" "Bigfoot_RigRN.phl[1924]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1925]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1926]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1925]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1926]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Finger_2_Jnt_2_Ctrl_scaleZ_AnimLayer2.o" "Bigfoot_RigRN.phl[1927]"
 		;
 connectAttr "Bigfoot_RigRN.phl[1928]" "AnimLayer1.dsm" -na;
@@ -21668,48 +21329,48 @@ connectAttr "Bigfoot_RigRN.phl[1931]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_RigRN.phl[1932]" "AnimLayer2.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Finger_2_Jnt_2_Ctrl_FollowRotate_AnimLayer2.o" "Bigfoot_RigRN.phl[1933]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1934]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1935]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1934]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1935]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Finger_2_Jnt_2_Ctrl_visibility_AnimLayer2.o" "Bigfoot_RigRN.phl[1936]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1937]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1938]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1937]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1938]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Thumb_1_Jnt_Ctrl_translateX_AnimLayer2.o" "Bigfoot_RigRN.phl[1939]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1940]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1941]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1940]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1941]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Thumb_1_Jnt_Ctrl_translateY_AnimLayer2.o" "Bigfoot_RigRN.phl[1942]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1943]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1944]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1943]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1944]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Thumb_1_Jnt_Ctrl_translateZ_AnimLayer2.o" "Bigfoot_RigRN.phl[1945]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1946]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1947]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1946]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1947]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Thumb_1_Jnt_Ctrl_rotate_AnimLayer2.ox" "Bigfoot_RigRN.phl[1948]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1949]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1950]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1949]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1950]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Thumb_1_Jnt_Ctrl_rotate_AnimLayer2.oy" "Bigfoot_RigRN.phl[1951]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1952]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1953]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1952]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1953]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Thumb_1_Jnt_Ctrl_rotate_AnimLayer2.oz" "Bigfoot_RigRN.phl[1954]"
 		;
 connectAttr "Bigfoot_RigRN.phl[1955]" "Bigfoot_Rig:R_Thumb_1_Jnt_Ctrl_rotate_AnimLayer1.ro"
 		;
 connectAttr "Bigfoot_RigRN.phl[1956]" "Bigfoot_Rig:R_Thumb_1_Jnt_Ctrl_rotate_AnimLayer2.ro"
 		;
-connectAttr "Bigfoot_RigRN.phl[1957]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1958]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1957]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1958]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Thumb_1_Jnt_Ctrl_scaleX_AnimLayer2.o" "Bigfoot_RigRN.phl[1959]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1960]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1961]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1960]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1961]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Thumb_1_Jnt_Ctrl_scaleY_AnimLayer2.o" "Bigfoot_RigRN.phl[1962]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1963]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1964]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1963]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1964]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Thumb_1_Jnt_Ctrl_scaleZ_AnimLayer2.o" "Bigfoot_RigRN.phl[1965]"
 		;
 connectAttr "Bigfoot_RigRN.phl[1966]" "AnimLayer1.dsm" -na;
@@ -21720,48 +21381,48 @@ connectAttr "Bigfoot_RigRN.phl[1969]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_RigRN.phl[1970]" "AnimLayer2.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Thumb_1_Jnt_Ctrl_FollowRotate_AnimLayer2.o" "Bigfoot_RigRN.phl[1971]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1972]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1973]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1972]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1973]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Thumb_1_Jnt_Ctrl_visibility_AnimLayer2.o" "Bigfoot_RigRN.phl[1974]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1975]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1976]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1975]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1976]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Thumb_3_Jnt_Ctrl_translateX_AnimLayer2.o" "Bigfoot_RigRN.phl[1977]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1978]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1979]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1978]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1979]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Thumb_3_Jnt_Ctrl_translateY_AnimLayer2.o" "Bigfoot_RigRN.phl[1980]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1981]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1982]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1981]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1982]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Thumb_3_Jnt_Ctrl_translateZ_AnimLayer2.o" "Bigfoot_RigRN.phl[1983]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1984]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1985]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1984]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1985]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Thumb_3_Jnt_Ctrl_rotate_AnimLayer2.ox" "Bigfoot_RigRN.phl[1986]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1987]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1988]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1987]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1988]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Thumb_3_Jnt_Ctrl_rotate_AnimLayer2.oy" "Bigfoot_RigRN.phl[1989]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1990]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1991]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1990]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1991]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Thumb_3_Jnt_Ctrl_rotate_AnimLayer2.oz" "Bigfoot_RigRN.phl[1992]"
 		;
 connectAttr "Bigfoot_RigRN.phl[1993]" "Bigfoot_Rig:R_Thumb_3_Jnt_Ctrl_rotate_AnimLayer1.ro"
 		;
 connectAttr "Bigfoot_RigRN.phl[1994]" "Bigfoot_Rig:R_Thumb_3_Jnt_Ctrl_rotate_AnimLayer2.ro"
 		;
-connectAttr "Bigfoot_RigRN.phl[1995]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1996]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1995]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1996]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Thumb_3_Jnt_Ctrl_scaleX_AnimLayer2.o" "Bigfoot_RigRN.phl[1997]"
 		;
-connectAttr "Bigfoot_RigRN.phl[1998]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[1999]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1998]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[1999]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Thumb_3_Jnt_Ctrl_scaleY_AnimLayer2.o" "Bigfoot_RigRN.phl[2000]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2001]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2002]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2001]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2002]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Thumb_3_Jnt_Ctrl_scaleZ_AnimLayer2.o" "Bigfoot_RigRN.phl[2003]"
 		;
 connectAttr "Bigfoot_RigRN.phl[2004]" "AnimLayer1.dsm" -na;
@@ -21772,48 +21433,48 @@ connectAttr "Bigfoot_RigRN.phl[2007]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_RigRN.phl[2008]" "AnimLayer2.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Thumb_3_Jnt_Ctrl_FollowRotate_AnimLayer2.o" "Bigfoot_RigRN.phl[2009]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2010]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2011]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2010]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2011]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Thumb_3_Jnt_Ctrl_visibility_AnimLayer2.o" "Bigfoot_RigRN.phl[2012]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2013]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2014]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2013]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2014]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Thumb_2_Jnt_Ctrl_translateX_AnimLayer2.o" "Bigfoot_RigRN.phl[2015]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2016]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2017]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2016]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2017]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Thumb_2_Jnt_Ctrl_translateY_AnimLayer2.o" "Bigfoot_RigRN.phl[2018]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2019]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2020]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2019]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2020]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Thumb_2_Jnt_Ctrl_translateZ_AnimLayer2.o" "Bigfoot_RigRN.phl[2021]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2022]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2023]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2022]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2023]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Thumb_2_Jnt_Ctrl_rotate_AnimLayer2.ox" "Bigfoot_RigRN.phl[2024]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2025]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2026]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2025]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2026]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Thumb_2_Jnt_Ctrl_rotate_AnimLayer2.oy" "Bigfoot_RigRN.phl[2027]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2028]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2029]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2028]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2029]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Thumb_2_Jnt_Ctrl_rotate_AnimLayer2.oz" "Bigfoot_RigRN.phl[2030]"
 		;
 connectAttr "Bigfoot_RigRN.phl[2031]" "Bigfoot_Rig:R_Thumb_2_Jnt_Ctrl_rotate_AnimLayer1.ro"
 		;
 connectAttr "Bigfoot_RigRN.phl[2032]" "Bigfoot_Rig:R_Thumb_2_Jnt_Ctrl_rotate_AnimLayer2.ro"
 		;
-connectAttr "Bigfoot_RigRN.phl[2033]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2034]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2033]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2034]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Thumb_2_Jnt_Ctrl_scaleX_AnimLayer2.o" "Bigfoot_RigRN.phl[2035]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2036]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2037]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2036]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2037]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Thumb_2_Jnt_Ctrl_scaleY_AnimLayer2.o" "Bigfoot_RigRN.phl[2038]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2039]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2040]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2039]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2040]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Thumb_2_Jnt_Ctrl_scaleZ_AnimLayer2.o" "Bigfoot_RigRN.phl[2041]"
 		;
 connectAttr "Bigfoot_RigRN.phl[2042]" "AnimLayer1.dsm" -na;
@@ -21824,48 +21485,48 @@ connectAttr "Bigfoot_RigRN.phl[2045]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_RigRN.phl[2046]" "AnimLayer2.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Thumb_2_Jnt_Ctrl_FollowRotate_AnimLayer2.o" "Bigfoot_RigRN.phl[2047]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2048]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2049]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2048]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2049]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Thumb_2_Jnt_Ctrl_visibility_AnimLayer2.o" "Bigfoot_RigRN.phl[2050]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2051]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2052]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2051]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2052]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Finger_3_Jnt_2_Ctrl_translateX_AnimLayer2.o" "Bigfoot_RigRN.phl[2053]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2054]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2055]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2054]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2055]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Finger_3_Jnt_2_Ctrl_translateY_AnimLayer2.o" "Bigfoot_RigRN.phl[2056]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2057]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2058]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2057]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2058]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Finger_3_Jnt_2_Ctrl_translateZ_AnimLayer2.o" "Bigfoot_RigRN.phl[2059]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2060]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2061]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2060]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2061]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Finger_3_Jnt_2_Ctrl_rotate_AnimLayer2.ox" "Bigfoot_RigRN.phl[2062]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2063]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2064]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2063]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2064]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Finger_3_Jnt_2_Ctrl_rotate_AnimLayer2.oy" "Bigfoot_RigRN.phl[2065]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2066]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2067]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2066]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2067]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Finger_3_Jnt_2_Ctrl_rotate_AnimLayer2.oz" "Bigfoot_RigRN.phl[2068]"
 		;
 connectAttr "Bigfoot_RigRN.phl[2069]" "Bigfoot_Rig:R_Finger_3_Jnt_2_Ctrl_rotate_AnimLayer1.ro"
 		;
 connectAttr "Bigfoot_RigRN.phl[2070]" "Bigfoot_Rig:R_Finger_3_Jnt_2_Ctrl_rotate_AnimLayer2.ro"
 		;
-connectAttr "Bigfoot_RigRN.phl[2071]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2072]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2071]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2072]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Finger_3_Jnt_2_Ctrl_scaleX_AnimLayer2.o" "Bigfoot_RigRN.phl[2073]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2074]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2075]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2074]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2075]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Finger_3_Jnt_2_Ctrl_scaleY_AnimLayer2.o" "Bigfoot_RigRN.phl[2076]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2077]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2078]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2077]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2078]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Finger_3_Jnt_2_Ctrl_scaleZ_AnimLayer2.o" "Bigfoot_RigRN.phl[2079]"
 		;
 connectAttr "Bigfoot_RigRN.phl[2080]" "AnimLayer1.dsm" -na;
@@ -21876,48 +21537,48 @@ connectAttr "Bigfoot_RigRN.phl[2083]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_RigRN.phl[2084]" "AnimLayer2.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Finger_3_Jnt_2_Ctrl_FollowRotate_AnimLayer2.o" "Bigfoot_RigRN.phl[2085]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2086]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2087]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2086]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2087]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Finger_3_Jnt_2_Ctrl_visibility_AnimLayer2.o" "Bigfoot_RigRN.phl[2088]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2089]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2090]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2089]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2090]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Finger_1_Jnt_3_Ctrl_translateX_AnimLayer2.o" "Bigfoot_RigRN.phl[2091]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2092]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2093]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2092]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2093]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Finger_1_Jnt_3_Ctrl_translateY_AnimLayer2.o" "Bigfoot_RigRN.phl[2094]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2095]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2096]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2095]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2096]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Finger_1_Jnt_3_Ctrl_translateZ_AnimLayer2.o" "Bigfoot_RigRN.phl[2097]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2098]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2099]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2098]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2099]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Finger_1_Jnt_3_Ctrl_rotate_AnimLayer2.ox" "Bigfoot_RigRN.phl[2100]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2101]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2102]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2101]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2102]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Finger_1_Jnt_3_Ctrl_rotate_AnimLayer2.oy" "Bigfoot_RigRN.phl[2103]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2104]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2105]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2104]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2105]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Finger_1_Jnt_3_Ctrl_rotate_AnimLayer2.oz" "Bigfoot_RigRN.phl[2106]"
 		;
 connectAttr "Bigfoot_RigRN.phl[2107]" "Bigfoot_Rig:R_Finger_1_Jnt_3_Ctrl_rotate_AnimLayer1.ro"
 		;
 connectAttr "Bigfoot_RigRN.phl[2108]" "Bigfoot_Rig:R_Finger_1_Jnt_3_Ctrl_rotate_AnimLayer2.ro"
 		;
-connectAttr "Bigfoot_RigRN.phl[2109]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2110]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2109]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2110]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Finger_1_Jnt_3_Ctrl_scaleX_AnimLayer2.o" "Bigfoot_RigRN.phl[2111]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2112]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2113]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2112]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2113]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Finger_1_Jnt_3_Ctrl_scaleY_AnimLayer2.o" "Bigfoot_RigRN.phl[2114]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2115]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2116]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2115]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2116]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Finger_1_Jnt_3_Ctrl_scaleZ_AnimLayer2.o" "Bigfoot_RigRN.phl[2117]"
 		;
 connectAttr "Bigfoot_RigRN.phl[2118]" "AnimLayer1.dsm" -na;
@@ -21928,48 +21589,48 @@ connectAttr "Bigfoot_RigRN.phl[2121]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_RigRN.phl[2122]" "AnimLayer2.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Finger_1_Jnt_3_Ctrl_FollowRotate_AnimLayer2.o" "Bigfoot_RigRN.phl[2123]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2124]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2125]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2124]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2125]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Finger_1_Jnt_3_Ctrl_visibility_AnimLayer2.o" "Bigfoot_RigRN.phl[2126]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2127]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2128]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2127]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2128]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Finger_2_Jnt_3_Ctrl_translateX_AnimLayer2.o" "Bigfoot_RigRN.phl[2129]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2130]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2131]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2130]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2131]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Finger_2_Jnt_3_Ctrl_translateY_AnimLayer2.o" "Bigfoot_RigRN.phl[2132]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2133]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2134]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2133]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2134]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Finger_2_Jnt_3_Ctrl_translateZ_AnimLayer2.o" "Bigfoot_RigRN.phl[2135]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2136]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2137]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2136]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2137]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Finger_2_Jnt_3_Ctrl_rotate_AnimLayer2.ox" "Bigfoot_RigRN.phl[2138]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2139]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2140]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2139]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2140]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Finger_2_Jnt_3_Ctrl_rotate_AnimLayer2.oy" "Bigfoot_RigRN.phl[2141]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2142]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2143]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2142]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2143]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Finger_2_Jnt_3_Ctrl_rotate_AnimLayer2.oz" "Bigfoot_RigRN.phl[2144]"
 		;
 connectAttr "Bigfoot_RigRN.phl[2145]" "Bigfoot_Rig:R_Finger_2_Jnt_3_Ctrl_rotate_AnimLayer1.ro"
 		;
 connectAttr "Bigfoot_RigRN.phl[2146]" "Bigfoot_Rig:R_Finger_2_Jnt_3_Ctrl_rotate_AnimLayer2.ro"
 		;
-connectAttr "Bigfoot_RigRN.phl[2147]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2148]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2147]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2148]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Finger_2_Jnt_3_Ctrl_scaleX_AnimLayer2.o" "Bigfoot_RigRN.phl[2149]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2150]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2151]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2150]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2151]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Finger_2_Jnt_3_Ctrl_scaleY_AnimLayer2.o" "Bigfoot_RigRN.phl[2152]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2153]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2154]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2153]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2154]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Finger_2_Jnt_3_Ctrl_scaleZ_AnimLayer2.o" "Bigfoot_RigRN.phl[2155]"
 		;
 connectAttr "Bigfoot_RigRN.phl[2156]" "AnimLayer1.dsm" -na;
@@ -21980,48 +21641,48 @@ connectAttr "Bigfoot_RigRN.phl[2159]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_RigRN.phl[2160]" "AnimLayer2.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Finger_2_Jnt_3_Ctrl_FollowRotate_AnimLayer2.o" "Bigfoot_RigRN.phl[2161]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2162]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2163]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2162]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2163]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Finger_2_Jnt_3_Ctrl_visibility_AnimLayer2.o" "Bigfoot_RigRN.phl[2164]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2165]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2166]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2165]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2166]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Finger_3_Jnt_3_Ctrl_translateX_AnimLayer2.o" "Bigfoot_RigRN.phl[2167]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2168]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2169]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2168]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2169]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Finger_3_Jnt_3_Ctrl_translateY_AnimLayer2.o" "Bigfoot_RigRN.phl[2170]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2171]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2172]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2171]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2172]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Finger_3_Jnt_3_Ctrl_translateZ_AnimLayer2.o" "Bigfoot_RigRN.phl[2173]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2174]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2175]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2174]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2175]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Finger_3_Jnt_3_Ctrl_rotate_AnimLayer2.ox" "Bigfoot_RigRN.phl[2176]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2177]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2178]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2177]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2178]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Finger_3_Jnt_3_Ctrl_rotate_AnimLayer2.oy" "Bigfoot_RigRN.phl[2179]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2180]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2181]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2180]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2181]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Finger_3_Jnt_3_Ctrl_rotate_AnimLayer2.oz" "Bigfoot_RigRN.phl[2182]"
 		;
 connectAttr "Bigfoot_RigRN.phl[2183]" "Bigfoot_Rig:R_Finger_3_Jnt_3_Ctrl_rotate_AnimLayer1.ro"
 		;
 connectAttr "Bigfoot_RigRN.phl[2184]" "Bigfoot_Rig:R_Finger_3_Jnt_3_Ctrl_rotate_AnimLayer2.ro"
 		;
-connectAttr "Bigfoot_RigRN.phl[2185]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2186]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2185]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2186]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Finger_3_Jnt_3_Ctrl_scaleX_AnimLayer2.o" "Bigfoot_RigRN.phl[2187]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2188]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2189]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2188]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2189]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Finger_3_Jnt_3_Ctrl_scaleY_AnimLayer2.o" "Bigfoot_RigRN.phl[2190]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2191]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2192]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2191]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2192]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Finger_3_Jnt_3_Ctrl_scaleZ_AnimLayer2.o" "Bigfoot_RigRN.phl[2193]"
 		;
 connectAttr "Bigfoot_RigRN.phl[2194]" "AnimLayer1.dsm" -na;
@@ -22032,48 +21693,48 @@ connectAttr "Bigfoot_RigRN.phl[2197]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_RigRN.phl[2198]" "AnimLayer2.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Finger_3_Jnt_3_Ctrl_FollowRotate_AnimLayer2.o" "Bigfoot_RigRN.phl[2199]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2200]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2201]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2200]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2201]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Finger_3_Jnt_3_Ctrl_visibility_AnimLayer2.o" "Bigfoot_RigRN.phl[2202]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2203]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2204]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2203]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2204]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Finger_4_Jnt_3_Ctrl_translateX_AnimLayer2.o" "Bigfoot_RigRN.phl[2205]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2206]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2207]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2206]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2207]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Finger_4_Jnt_3_Ctrl_translateY_AnimLayer2.o" "Bigfoot_RigRN.phl[2208]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2209]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2210]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2209]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2210]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Finger_4_Jnt_3_Ctrl_translateZ_AnimLayer2.o" "Bigfoot_RigRN.phl[2211]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2212]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2213]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2212]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2213]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Finger_4_Jnt_3_Ctrl_rotate_AnimLayer2.ox" "Bigfoot_RigRN.phl[2214]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2215]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2216]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2215]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2216]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Finger_4_Jnt_3_Ctrl_rotate_AnimLayer2.oy" "Bigfoot_RigRN.phl[2217]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2218]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2219]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2218]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2219]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Finger_4_Jnt_3_Ctrl_rotate_AnimLayer2.oz" "Bigfoot_RigRN.phl[2220]"
 		;
 connectAttr "Bigfoot_RigRN.phl[2221]" "Bigfoot_Rig:R_Finger_4_Jnt_3_Ctrl_rotate_AnimLayer1.ro"
 		;
 connectAttr "Bigfoot_RigRN.phl[2222]" "Bigfoot_Rig:R_Finger_4_Jnt_3_Ctrl_rotate_AnimLayer2.ro"
 		;
-connectAttr "Bigfoot_RigRN.phl[2223]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2224]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2223]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2224]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Finger_4_Jnt_3_Ctrl_scaleX_AnimLayer2.o" "Bigfoot_RigRN.phl[2225]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2226]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2227]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2226]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2227]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Finger_4_Jnt_3_Ctrl_scaleY_AnimLayer2.o" "Bigfoot_RigRN.phl[2228]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2229]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2230]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2229]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2230]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Finger_4_Jnt_3_Ctrl_scaleZ_AnimLayer2.o" "Bigfoot_RigRN.phl[2231]"
 		;
 connectAttr "Bigfoot_RigRN.phl[2232]" "AnimLayer1.dsm" -na;
@@ -22084,48 +21745,48 @@ connectAttr "Bigfoot_RigRN.phl[2235]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_RigRN.phl[2236]" "AnimLayer2.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Finger_4_Jnt_3_Ctrl_FollowRotate_AnimLayer2.o" "Bigfoot_RigRN.phl[2237]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2238]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2239]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2238]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2239]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Finger_4_Jnt_3_Ctrl_visibility_AnimLayer2.o" "Bigfoot_RigRN.phl[2240]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2241]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2242]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2241]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2242]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Finger_4_Jnt_1_Ctrl_translateX_AnimLayer2.o" "Bigfoot_RigRN.phl[2243]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2244]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2245]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2244]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2245]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Finger_4_Jnt_1_Ctrl_translateY_AnimLayer2.o" "Bigfoot_RigRN.phl[2246]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2247]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2248]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2247]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2248]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Finger_4_Jnt_1_Ctrl_translateZ_AnimLayer2.o" "Bigfoot_RigRN.phl[2249]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2250]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2251]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2250]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2251]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Finger_4_Jnt_1_Ctrl_rotate_AnimLayer2.ox" "Bigfoot_RigRN.phl[2252]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2253]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2254]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2253]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2254]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Finger_4_Jnt_1_Ctrl_rotate_AnimLayer2.oy" "Bigfoot_RigRN.phl[2255]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2256]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2257]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2256]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2257]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Finger_4_Jnt_1_Ctrl_rotate_AnimLayer2.oz" "Bigfoot_RigRN.phl[2258]"
 		;
 connectAttr "Bigfoot_RigRN.phl[2259]" "Bigfoot_Rig:R_Finger_4_Jnt_1_Ctrl_rotate_AnimLayer1.ro"
 		;
 connectAttr "Bigfoot_RigRN.phl[2260]" "Bigfoot_Rig:R_Finger_4_Jnt_1_Ctrl_rotate_AnimLayer2.ro"
 		;
-connectAttr "Bigfoot_RigRN.phl[2261]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2262]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2261]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2262]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Finger_4_Jnt_1_Ctrl_scaleX_AnimLayer2.o" "Bigfoot_RigRN.phl[2263]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2264]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2265]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2264]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2265]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Finger_4_Jnt_1_Ctrl_scaleY_AnimLayer2.o" "Bigfoot_RigRN.phl[2266]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2267]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2268]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2267]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2268]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Finger_4_Jnt_1_Ctrl_scaleZ_AnimLayer2.o" "Bigfoot_RigRN.phl[2269]"
 		;
 connectAttr "Bigfoot_RigRN.phl[2270]" "AnimLayer1.dsm" -na;
@@ -22136,48 +21797,48 @@ connectAttr "Bigfoot_RigRN.phl[2273]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_RigRN.phl[2274]" "AnimLayer2.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Finger_4_Jnt_1_Ctrl_FollowRotate_AnimLayer2.o" "Bigfoot_RigRN.phl[2275]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2276]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2277]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2276]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2277]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Finger_4_Jnt_1_Ctrl_visibility_AnimLayer2.o" "Bigfoot_RigRN.phl[2278]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2279]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2280]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2279]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2280]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Clav_Jnt_Ctrl_translateX_AnimLayer2.o" "Bigfoot_RigRN.phl[2281]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2282]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2283]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2282]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2283]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Clav_Jnt_Ctrl_translateY_AnimLayer2.o" "Bigfoot_RigRN.phl[2284]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2285]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2286]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2285]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2286]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Clav_Jnt_Ctrl_translateZ_AnimLayer2.o" "Bigfoot_RigRN.phl[2287]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2288]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2289]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2288]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2289]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Clav_Jnt_Ctrl_rotate_AnimLayer2.ox" "Bigfoot_RigRN.phl[2290]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2291]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2292]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2291]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2292]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Clav_Jnt_Ctrl_rotate_AnimLayer2.oy" "Bigfoot_RigRN.phl[2293]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2294]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2295]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2294]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2295]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Clav_Jnt_Ctrl_rotate_AnimLayer2.oz" "Bigfoot_RigRN.phl[2296]"
 		;
 connectAttr "Bigfoot_RigRN.phl[2297]" "Bigfoot_Rig:L_Clav_Jnt_Ctrl_rotate_AnimLayer1.ro"
 		;
 connectAttr "Bigfoot_RigRN.phl[2298]" "Bigfoot_Rig:L_Clav_Jnt_Ctrl_rotate_AnimLayer2.ro"
 		;
-connectAttr "Bigfoot_RigRN.phl[2299]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2300]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2299]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2300]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Clav_Jnt_Ctrl_scaleX_AnimLayer2.o" "Bigfoot_RigRN.phl[2301]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2302]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2303]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2302]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2303]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Clav_Jnt_Ctrl_scaleY_AnimLayer2.o" "Bigfoot_RigRN.phl[2304]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2305]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2306]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2305]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2306]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Clav_Jnt_Ctrl_scaleZ_AnimLayer2.o" "Bigfoot_RigRN.phl[2307]"
 		;
 connectAttr "Bigfoot_RigRN.phl[2308]" "AnimLayer1.dsm" -na;
@@ -22188,48 +21849,48 @@ connectAttr "Bigfoot_RigRN.phl[2311]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_RigRN.phl[2312]" "AnimLayer2.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Clav_Jnt_Ctrl_FollowRotate_AnimLayer2.o" "Bigfoot_RigRN.phl[2313]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2314]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2315]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2314]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2315]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Clav_Jnt_Ctrl_visibility_AnimLayer2.o" "Bigfoot_RigRN.phl[2316]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2317]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2318]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2317]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2318]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Clav_Jnt_Ctrl_translateX_AnimLayer2.o" "Bigfoot_RigRN.phl[2319]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2320]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2321]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2320]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2321]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Clav_Jnt_Ctrl_translateY_AnimLayer2.o" "Bigfoot_RigRN.phl[2322]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2323]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2324]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2323]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2324]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Clav_Jnt_Ctrl_translateZ_AnimLayer2.o" "Bigfoot_RigRN.phl[2325]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2326]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2327]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2326]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2327]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Clav_Jnt_Ctrl_rotate_AnimLayer2.oz" "Bigfoot_RigRN.phl[2328]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2329]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2330]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2329]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2330]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Clav_Jnt_Ctrl_rotate_AnimLayer2.ox" "Bigfoot_RigRN.phl[2331]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2332]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2333]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2332]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2333]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Clav_Jnt_Ctrl_rotate_AnimLayer2.oy" "Bigfoot_RigRN.phl[2334]"
 		;
 connectAttr "Bigfoot_RigRN.phl[2335]" "Bigfoot_Rig:R_Clav_Jnt_Ctrl_rotate_AnimLayer1.ro"
 		;
 connectAttr "Bigfoot_RigRN.phl[2336]" "Bigfoot_Rig:R_Clav_Jnt_Ctrl_rotate_AnimLayer2.ro"
 		;
-connectAttr "Bigfoot_RigRN.phl[2337]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2338]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2337]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2338]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Clav_Jnt_Ctrl_scaleX_AnimLayer2.o" "Bigfoot_RigRN.phl[2339]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2340]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2341]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2340]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2341]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Clav_Jnt_Ctrl_scaleY_AnimLayer2.o" "Bigfoot_RigRN.phl[2342]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2343]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2344]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2343]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2344]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Clav_Jnt_Ctrl_scaleZ_AnimLayer2.o" "Bigfoot_RigRN.phl[2345]"
 		;
 connectAttr "Bigfoot_RigRN.phl[2346]" "AnimLayer1.dsm" -na;
@@ -22240,48 +21901,48 @@ connectAttr "Bigfoot_RigRN.phl[2349]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_RigRN.phl[2350]" "AnimLayer2.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Clav_Jnt_Ctrl_FollowRotate_AnimLayer2.o" "Bigfoot_RigRN.phl[2351]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2352]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2353]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2352]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2353]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Clav_Jnt_Ctrl_visibility_AnimLayer2.o" "Bigfoot_RigRN.phl[2354]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2355]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2356]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2355]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2356]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Foot_1_Jnt_IK_Ctrl_translateX_AnimLayer2.o" "Bigfoot_RigRN.phl[2357]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2358]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2359]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2358]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2359]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Foot_1_Jnt_IK_Ctrl_translateZ_AnimLayer2.o" "Bigfoot_RigRN.phl[2360]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2361]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2362]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2361]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2362]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Foot_1_Jnt_IK_Ctrl_translateY_AnimLayer2.o" "Bigfoot_RigRN.phl[2363]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2364]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2365]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2364]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2365]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Foot_1_Jnt_IK_Ctrl_rotate_AnimLayer2.oy" "Bigfoot_RigRN.phl[2366]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2367]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2368]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2367]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2368]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Foot_1_Jnt_IK_Ctrl_rotate_AnimLayer2.ox" "Bigfoot_RigRN.phl[2369]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2370]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2371]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2370]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2371]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Foot_1_Jnt_IK_Ctrl_rotate_AnimLayer2.oz" "Bigfoot_RigRN.phl[2372]"
 		;
 connectAttr "Bigfoot_RigRN.phl[2373]" "Bigfoot_Rig:L_Foot_1_Jnt_IK_Ctrl_rotate_AnimLayer1.ro"
 		;
 connectAttr "Bigfoot_RigRN.phl[2374]" "Bigfoot_Rig:L_Foot_1_Jnt_IK_Ctrl_rotate_AnimLayer2.ro"
 		;
-connectAttr "Bigfoot_RigRN.phl[2375]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2376]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2375]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2376]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Foot_1_Jnt_IK_Ctrl_scaleX_AnimLayer2.o" "Bigfoot_RigRN.phl[2377]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2378]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2379]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2378]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2379]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Foot_1_Jnt_IK_Ctrl_scaleY_AnimLayer2.o" "Bigfoot_RigRN.phl[2380]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2381]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2382]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2381]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2382]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Foot_1_Jnt_IK_Ctrl_scaleZ_AnimLayer2.o" "Bigfoot_RigRN.phl[2383]"
 		;
 connectAttr "Bigfoot_RigRN.phl[2384]" "AnimLayer1.dsm" -na;
@@ -22296,360 +21957,360 @@ connectAttr "Bigfoot_RigRN.phl[2390]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_RigRN.phl[2391]" "AnimLayer2.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Foot_1_Jnt_IK_Ctrl_Local_Space_AnimLayer2.o" "Bigfoot_RigRN.phl[2392]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2393]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2394]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2393]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2394]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Foot_1_Jnt_IK_Ctrl_visibility_AnimLayer2.o" "Bigfoot_RigRN.phl[2395]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2396]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2397]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2396]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2397]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_reverse_foot_outer_locator_Ctrl_translateX_AnimLayer2.o" "Bigfoot_RigRN.phl[2398]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2399]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2400]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2399]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2400]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_reverse_foot_outer_locator_Ctrl_translateY_AnimLayer2.o" "Bigfoot_RigRN.phl[2401]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2402]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2403]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2402]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2403]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_reverse_foot_outer_locator_Ctrl_translateZ_AnimLayer2.o" "Bigfoot_RigRN.phl[2404]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2405]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2406]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2405]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2406]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_reverse_foot_outer_locator_Ctrl_rotate_AnimLayer2.ox" "Bigfoot_RigRN.phl[2407]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2408]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2409]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2408]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2409]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_reverse_foot_outer_locator_Ctrl_rotate_AnimLayer2.oy" "Bigfoot_RigRN.phl[2410]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2411]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2412]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2411]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2412]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_reverse_foot_outer_locator_Ctrl_rotate_AnimLayer2.oz" "Bigfoot_RigRN.phl[2413]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2414]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2415]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2414]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2415]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_reverse_foot_outer_locator_Ctrl_visibility_AnimLayer2.o" "Bigfoot_RigRN.phl[2416]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2417]" "Bigfoot_Rig:L_reverse_foot_outer_locator_Ctrl_rotate_AnimLayer2.ro"
+connectAttr "Bigfoot_RigRN.phl[2417]" "Bigfoot_Rig:L_reverse_foot_outer_locator_Ctrl_rotate_AnimLayer1.ro"
 		;
-connectAttr "Bigfoot_RigRN.phl[2418]" "Bigfoot_Rig:L_reverse_foot_outer_locator_Ctrl_rotate_AnimLayer1.ro"
+connectAttr "Bigfoot_RigRN.phl[2418]" "Bigfoot_Rig:L_reverse_foot_outer_locator_Ctrl_rotate_AnimLayer2.ro"
 		;
-connectAttr "Bigfoot_RigRN.phl[2419]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2420]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2419]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2420]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_reverse_foot_outer_locator_Ctrl_scaleX_AnimLayer2.o" "Bigfoot_RigRN.phl[2421]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2422]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2423]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2422]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2423]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_reverse_foot_outer_locator_Ctrl_scaleY_AnimLayer2.o" "Bigfoot_RigRN.phl[2424]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2425]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2426]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2425]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2426]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_reverse_foot_outer_locator_Ctrl_scaleZ_AnimLayer2.o" "Bigfoot_RigRN.phl[2427]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2428]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2429]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2428]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2429]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_reverse_foot_inner_locator_Ctrl_translateX_AnimLayer2.o" "Bigfoot_RigRN.phl[2430]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2431]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2432]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2431]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2432]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_reverse_foot_inner_locator_Ctrl_translateY_AnimLayer2.o" "Bigfoot_RigRN.phl[2433]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2434]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2435]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2434]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2435]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_reverse_foot_inner_locator_Ctrl_translateZ_AnimLayer2.o" "Bigfoot_RigRN.phl[2436]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2437]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2438]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2437]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2438]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_reverse_foot_inner_locator_Ctrl_rotate_AnimLayer2.ox" "Bigfoot_RigRN.phl[2439]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2440]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2441]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2440]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2441]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_reverse_foot_inner_locator_Ctrl_rotate_AnimLayer2.oy" "Bigfoot_RigRN.phl[2442]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2443]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2444]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2443]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2444]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_reverse_foot_inner_locator_Ctrl_rotate_AnimLayer2.oz" "Bigfoot_RigRN.phl[2445]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2446]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2447]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2446]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2447]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_reverse_foot_inner_locator_Ctrl_visibility_AnimLayer2.o" "Bigfoot_RigRN.phl[2448]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2449]" "Bigfoot_Rig:L_reverse_foot_inner_locator_Ctrl_rotate_AnimLayer2.ro"
+connectAttr "Bigfoot_RigRN.phl[2449]" "Bigfoot_Rig:L_reverse_foot_inner_locator_Ctrl_rotate_AnimLayer1.ro"
 		;
-connectAttr "Bigfoot_RigRN.phl[2450]" "Bigfoot_Rig:L_reverse_foot_inner_locator_Ctrl_rotate_AnimLayer1.ro"
+connectAttr "Bigfoot_RigRN.phl[2450]" "Bigfoot_Rig:L_reverse_foot_inner_locator_Ctrl_rotate_AnimLayer2.ro"
 		;
-connectAttr "Bigfoot_RigRN.phl[2451]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2452]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2451]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2452]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_reverse_foot_inner_locator_Ctrl_scaleX_AnimLayer2.o" "Bigfoot_RigRN.phl[2453]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2454]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2455]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2454]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2455]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_reverse_foot_inner_locator_Ctrl_scaleY_AnimLayer2.o" "Bigfoot_RigRN.phl[2456]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2457]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2458]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2457]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2458]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_reverse_foot_inner_locator_Ctrl_scaleZ_AnimLayer2.o" "Bigfoot_RigRN.phl[2459]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2460]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2461]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2460]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2461]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_reverse_foot_heel_locator_Ctrl_translateX_AnimLayer2.o" "Bigfoot_RigRN.phl[2462]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2463]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2464]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2463]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2464]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_reverse_foot_heel_locator_Ctrl_translateY_AnimLayer2.o" "Bigfoot_RigRN.phl[2465]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2466]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2467]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2466]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2467]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_reverse_foot_heel_locator_Ctrl_translateZ_AnimLayer2.o" "Bigfoot_RigRN.phl[2468]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2469]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2470]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2469]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2470]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_reverse_foot_heel_locator_Ctrl_rotate_AnimLayer2.ox" "Bigfoot_RigRN.phl[2471]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2472]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2473]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2472]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2473]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_reverse_foot_heel_locator_Ctrl_rotate_AnimLayer2.oy" "Bigfoot_RigRN.phl[2474]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2475]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2476]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2475]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2476]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_reverse_foot_heel_locator_Ctrl_rotate_AnimLayer2.oz" "Bigfoot_RigRN.phl[2477]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2478]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2479]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2478]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2479]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_reverse_foot_heel_locator_Ctrl_visibility_AnimLayer2.o" "Bigfoot_RigRN.phl[2480]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2481]" "Bigfoot_Rig:L_reverse_foot_heel_locator_Ctrl_rotate_AnimLayer2.ro"
+connectAttr "Bigfoot_RigRN.phl[2481]" "Bigfoot_Rig:L_reverse_foot_heel_locator_Ctrl_rotate_AnimLayer1.ro"
 		;
-connectAttr "Bigfoot_RigRN.phl[2482]" "Bigfoot_Rig:L_reverse_foot_heel_locator_Ctrl_rotate_AnimLayer1.ro"
+connectAttr "Bigfoot_RigRN.phl[2482]" "Bigfoot_Rig:L_reverse_foot_heel_locator_Ctrl_rotate_AnimLayer2.ro"
 		;
-connectAttr "Bigfoot_RigRN.phl[2483]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2484]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2483]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2484]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_reverse_foot_heel_locator_Ctrl_scaleX_AnimLayer2.o" "Bigfoot_RigRN.phl[2485]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2486]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2487]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2486]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2487]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_reverse_foot_heel_locator_Ctrl_scaleY_AnimLayer2.o" "Bigfoot_RigRN.phl[2488]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2489]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2490]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2489]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2490]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_reverse_foot_heel_locator_Ctrl_scaleZ_AnimLayer2.o" "Bigfoot_RigRN.phl[2491]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2492]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2493]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2492]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2493]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_reverse_foot_toe_locator_Ctrl_translateX_AnimLayer2.o" "Bigfoot_RigRN.phl[2494]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2495]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2496]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2495]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2496]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_reverse_foot_toe_locator_Ctrl_translateY_AnimLayer2.o" "Bigfoot_RigRN.phl[2497]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2498]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2499]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2498]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2499]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_reverse_foot_toe_locator_Ctrl_translateZ_AnimLayer2.o" "Bigfoot_RigRN.phl[2500]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2501]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2502]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2501]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2502]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_reverse_foot_toe_locator_Ctrl_rotate_AnimLayer2.ox" "Bigfoot_RigRN.phl[2503]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2504]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2505]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2504]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2505]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_reverse_foot_toe_locator_Ctrl_rotate_AnimLayer2.oy" "Bigfoot_RigRN.phl[2506]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2507]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2508]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2507]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2508]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_reverse_foot_toe_locator_Ctrl_rotate_AnimLayer2.oz" "Bigfoot_RigRN.phl[2509]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2510]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2511]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2510]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2511]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_reverse_foot_toe_locator_Ctrl_visibility_AnimLayer2.o" "Bigfoot_RigRN.phl[2512]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2513]" "Bigfoot_Rig:L_reverse_foot_toe_locator_Ctrl_rotate_AnimLayer2.ro"
+connectAttr "Bigfoot_RigRN.phl[2513]" "Bigfoot_Rig:L_reverse_foot_toe_locator_Ctrl_rotate_AnimLayer1.ro"
 		;
-connectAttr "Bigfoot_RigRN.phl[2514]" "Bigfoot_Rig:L_reverse_foot_toe_locator_Ctrl_rotate_AnimLayer1.ro"
+connectAttr "Bigfoot_RigRN.phl[2514]" "Bigfoot_Rig:L_reverse_foot_toe_locator_Ctrl_rotate_AnimLayer2.ro"
 		;
-connectAttr "Bigfoot_RigRN.phl[2515]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2516]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2515]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2516]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_reverse_foot_toe_locator_Ctrl_scaleX_AnimLayer2.o" "Bigfoot_RigRN.phl[2517]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2518]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2519]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2518]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2519]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_reverse_foot_toe_locator_Ctrl_scaleY_AnimLayer2.o" "Bigfoot_RigRN.phl[2520]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2521]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2522]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2521]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2522]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_reverse_foot_toe_locator_Ctrl_scaleZ_AnimLayer2.o" "Bigfoot_RigRN.phl[2523]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2524]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2525]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2524]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2525]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_reverse_foot_ball_locator_Ctrl_translateX_AnimLayer2.o" "Bigfoot_RigRN.phl[2526]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2527]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2528]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2527]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2528]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_reverse_foot_ball_locator_Ctrl_translateY_AnimLayer2.o" "Bigfoot_RigRN.phl[2529]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2530]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2531]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2530]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2531]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_reverse_foot_ball_locator_Ctrl_translateZ_AnimLayer2.o" "Bigfoot_RigRN.phl[2532]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2533]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2534]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2533]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2534]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_reverse_foot_ball_locator_Ctrl_rotate_AnimLayer2.ox" "Bigfoot_RigRN.phl[2535]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2536]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2537]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2536]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2537]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_reverse_foot_ball_locator_Ctrl_rotate_AnimLayer2.oy" "Bigfoot_RigRN.phl[2538]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2539]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2540]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2539]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2540]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_reverse_foot_ball_locator_Ctrl_rotate_AnimLayer2.oz" "Bigfoot_RigRN.phl[2541]"
 		;
 connectAttr "Bigfoot_RigRN.phl[2542]" "Bigfoot_Rig:L_reverse_foot_ball_locator_Ctrl_rotate_AnimLayer1.ro"
 		;
 connectAttr "Bigfoot_RigRN.phl[2543]" "Bigfoot_Rig:L_reverse_foot_ball_locator_Ctrl_rotate_AnimLayer2.ro"
 		;
-connectAttr "Bigfoot_RigRN.phl[2544]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2545]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2544]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2545]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_reverse_foot_ball_locator_Ctrl_scaleX_AnimLayer2.o" "Bigfoot_RigRN.phl[2546]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2547]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2548]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2547]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2548]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_reverse_foot_ball_locator_Ctrl_scaleY_AnimLayer2.o" "Bigfoot_RigRN.phl[2549]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2550]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2551]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2550]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2551]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_reverse_foot_ball_locator_Ctrl_scaleZ_AnimLayer2.o" "Bigfoot_RigRN.phl[2552]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2553]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2554]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2553]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2554]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_reverse_foot_ball_locator_Ctrl_visibility_AnimLayer2.o" "Bigfoot_RigRN.phl[2555]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2556]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2557]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2556]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2557]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_reverse_foot_toe_tap_locator_Ctrl_translateX_AnimLayer2.o" "Bigfoot_RigRN.phl[2558]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2559]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2560]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2559]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2560]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_reverse_foot_toe_tap_locator_Ctrl_translateY_AnimLayer2.o" "Bigfoot_RigRN.phl[2561]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2562]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2563]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2562]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2563]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_reverse_foot_toe_tap_locator_Ctrl_translateZ_AnimLayer2.o" "Bigfoot_RigRN.phl[2564]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2565]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2566]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2565]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2566]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_reverse_foot_toe_tap_locator_Ctrl_rotate_AnimLayer2.ox" "Bigfoot_RigRN.phl[2567]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2568]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2569]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2568]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2569]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_reverse_foot_toe_tap_locator_Ctrl_rotate_AnimLayer2.oy" "Bigfoot_RigRN.phl[2570]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2571]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2572]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2571]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2572]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_reverse_foot_toe_tap_locator_Ctrl_rotate_AnimLayer2.oz" "Bigfoot_RigRN.phl[2573]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2574]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2575]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2574]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2575]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_reverse_foot_toe_tap_locator_Ctrl_visibility_AnimLayer2.o" "Bigfoot_RigRN.phl[2576]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2577]" "Bigfoot_Rig:L_reverse_foot_toe_tap_locator_Ctrl_rotate_AnimLayer2.ro"
+connectAttr "Bigfoot_RigRN.phl[2577]" "Bigfoot_Rig:L_reverse_foot_toe_tap_locator_Ctrl_rotate_AnimLayer1.ro"
 		;
-connectAttr "Bigfoot_RigRN.phl[2578]" "Bigfoot_Rig:L_reverse_foot_toe_tap_locator_Ctrl_rotate_AnimLayer1.ro"
+connectAttr "Bigfoot_RigRN.phl[2578]" "Bigfoot_Rig:L_reverse_foot_toe_tap_locator_Ctrl_rotate_AnimLayer2.ro"
 		;
-connectAttr "Bigfoot_RigRN.phl[2579]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2580]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2579]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2580]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_reverse_foot_toe_tap_locator_Ctrl_scaleX_AnimLayer2.o" "Bigfoot_RigRN.phl[2581]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2582]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2583]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2582]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2583]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_reverse_foot_toe_tap_locator_Ctrl_scaleY_AnimLayer2.o" "Bigfoot_RigRN.phl[2584]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2585]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2586]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2585]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2586]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_reverse_foot_toe_tap_locator_Ctrl_scaleZ_AnimLayer2.o" "Bigfoot_RigRN.phl[2587]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2588]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2589]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2588]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2589]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Leg_IK_PV_Ctrl_translateX_AnimLayer2.o" "Bigfoot_RigRN.phl[2590]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2591]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2592]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2591]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2592]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Leg_IK_PV_Ctrl_translateY_AnimLayer2.o" "Bigfoot_RigRN.phl[2593]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2594]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2595]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2594]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2595]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Leg_IK_PV_Ctrl_translateZ_AnimLayer2.o" "Bigfoot_RigRN.phl[2596]"
 		;
 connectAttr "Bigfoot_RigRN.phl[2597]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_RigRN.phl[2598]" "AnimLayer2.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Leg_IK_PV_Ctrl_Local_Space_AnimLayer2.o" "Bigfoot_RigRN.phl[2599]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2600]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2601]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2600]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2601]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Leg_IK_PV_Ctrl_rotate_AnimLayer2.ox" "Bigfoot_RigRN.phl[2602]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2603]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2604]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2603]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2604]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Leg_IK_PV_Ctrl_rotate_AnimLayer2.oy" "Bigfoot_RigRN.phl[2605]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2606]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2607]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2606]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2607]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Leg_IK_PV_Ctrl_rotate_AnimLayer2.oz" "Bigfoot_RigRN.phl[2608]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2609]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2610]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2609]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2610]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Leg_IK_PV_Ctrl_visibility_AnimLayer2.o" "Bigfoot_RigRN.phl[2611]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2612]" "Bigfoot_Rig:L_Leg_IK_PV_Ctrl_rotate_AnimLayer2.ro"
+connectAttr "Bigfoot_RigRN.phl[2612]" "Bigfoot_Rig:L_Leg_IK_PV_Ctrl_rotate_AnimLayer1.ro"
 		;
-connectAttr "Bigfoot_RigRN.phl[2613]" "Bigfoot_Rig:L_Leg_IK_PV_Ctrl_rotate_AnimLayer1.ro"
+connectAttr "Bigfoot_RigRN.phl[2613]" "Bigfoot_Rig:L_Leg_IK_PV_Ctrl_rotate_AnimLayer2.ro"
 		;
-connectAttr "Bigfoot_RigRN.phl[2614]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2615]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2614]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2615]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Leg_IK_PV_Ctrl_scaleX_AnimLayer2.o" "Bigfoot_RigRN.phl[2616]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2617]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2618]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2617]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2618]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Leg_IK_PV_Ctrl_scaleY_AnimLayer2.o" "Bigfoot_RigRN.phl[2619]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2620]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2621]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2620]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2621]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Leg_IK_PV_Ctrl_scaleZ_AnimLayer2.o" "Bigfoot_RigRN.phl[2622]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2623]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2624]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2623]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2624]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Leg_1_Jnt_IK_Ctrl_translateX_AnimLayer2.o" "Bigfoot_RigRN.phl[2625]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2626]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2627]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2626]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2627]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Leg_1_Jnt_IK_Ctrl_translateY_AnimLayer2.o" "Bigfoot_RigRN.phl[2628]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2629]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2630]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2629]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2630]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Leg_1_Jnt_IK_Ctrl_translateZ_AnimLayer2.o" "Bigfoot_RigRN.phl[2631]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2632]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2633]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2632]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2633]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Leg_1_Jnt_IK_Ctrl_rotate_AnimLayer2.ox" "Bigfoot_RigRN.phl[2634]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2635]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2636]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2635]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2636]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Leg_1_Jnt_IK_Ctrl_rotate_AnimLayer2.oy" "Bigfoot_RigRN.phl[2637]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2638]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2639]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2638]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2639]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Leg_1_Jnt_IK_Ctrl_rotate_AnimLayer2.oz" "Bigfoot_RigRN.phl[2640]"
 		;
 connectAttr "Bigfoot_RigRN.phl[2641]" "Bigfoot_Rig:L_Leg_1_Jnt_IK_Ctrl_rotate_AnimLayer1.ro"
 		;
 connectAttr "Bigfoot_RigRN.phl[2642]" "Bigfoot_Rig:L_Leg_1_Jnt_IK_Ctrl_rotate_AnimLayer2.ro"
 		;
-connectAttr "Bigfoot_RigRN.phl[2643]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2644]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2643]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2644]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Leg_1_Jnt_IK_Ctrl_scaleX_AnimLayer2.o" "Bigfoot_RigRN.phl[2645]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2646]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2647]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2646]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2647]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Leg_1_Jnt_IK_Ctrl_scaleY_AnimLayer2.o" "Bigfoot_RigRN.phl[2648]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2649]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2650]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2649]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2650]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Leg_1_Jnt_IK_Ctrl_scaleZ_AnimLayer2.o" "Bigfoot_RigRN.phl[2651]"
 		;
 connectAttr "Bigfoot_RigRN.phl[2652]" "AnimLayer1.dsm" -na;
@@ -22660,48 +22321,48 @@ connectAttr "Bigfoot_RigRN.phl[2655]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_RigRN.phl[2656]" "AnimLayer2.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Leg_1_Jnt_IK_Ctrl_FollowRotate_AnimLayer2.o" "Bigfoot_RigRN.phl[2657]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2658]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2659]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2658]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2659]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:L_Leg_1_Jnt_IK_Ctrl_visibility_AnimLayer2.o" "Bigfoot_RigRN.phl[2660]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2661]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2662]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2661]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2662]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Foot_1_Jnt_IK_Ctrl_translateX_AnimLayer2.o" "Bigfoot_RigRN.phl[2663]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2664]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2665]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2664]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2665]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Foot_1_Jnt_IK_Ctrl_translateZ_AnimLayer2.o" "Bigfoot_RigRN.phl[2666]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2667]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2668]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2667]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2668]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Foot_1_Jnt_IK_Ctrl_translateY_AnimLayer2.o" "Bigfoot_RigRN.phl[2669]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2670]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2671]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2670]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2671]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Foot_1_Jnt_IK_Ctrl_rotate_AnimLayer2.oy" "Bigfoot_RigRN.phl[2672]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2673]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2674]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2673]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2674]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Foot_1_Jnt_IK_Ctrl_rotate_AnimLayer2.ox" "Bigfoot_RigRN.phl[2675]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2676]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2677]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2676]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2677]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Foot_1_Jnt_IK_Ctrl_rotate_AnimLayer2.oz" "Bigfoot_RigRN.phl[2678]"
 		;
 connectAttr "Bigfoot_RigRN.phl[2679]" "Bigfoot_Rig:R_Foot_1_Jnt_IK_Ctrl_rotate_AnimLayer1.ro"
 		;
 connectAttr "Bigfoot_RigRN.phl[2680]" "Bigfoot_Rig:R_Foot_1_Jnt_IK_Ctrl_rotate_AnimLayer2.ro"
 		;
-connectAttr "Bigfoot_RigRN.phl[2681]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2682]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2681]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2682]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Foot_1_Jnt_IK_Ctrl_scaleX_AnimLayer2.o" "Bigfoot_RigRN.phl[2683]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2684]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2685]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2684]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2685]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Foot_1_Jnt_IK_Ctrl_scaleY_AnimLayer2.o" "Bigfoot_RigRN.phl[2686]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2687]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2688]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2687]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2688]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Foot_1_Jnt_IK_Ctrl_scaleZ_AnimLayer2.o" "Bigfoot_RigRN.phl[2689]"
 		;
 connectAttr "Bigfoot_RigRN.phl[2690]" "AnimLayer1.dsm" -na;
@@ -22716,360 +22377,360 @@ connectAttr "Bigfoot_RigRN.phl[2696]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_RigRN.phl[2697]" "AnimLayer2.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Foot_1_Jnt_IK_Ctrl_Local_Space_AnimLayer2.o" "Bigfoot_RigRN.phl[2698]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2699]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2700]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2699]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2700]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Foot_1_Jnt_IK_Ctrl_visibility_AnimLayer2.o" "Bigfoot_RigRN.phl[2701]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2702]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2703]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2702]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2703]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_reverse_foot_outer_locator_Ctrl_translateX_AnimLayer2.o" "Bigfoot_RigRN.phl[2704]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2705]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2706]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2705]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2706]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_reverse_foot_outer_locator_Ctrl_translateY_AnimLayer2.o" "Bigfoot_RigRN.phl[2707]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2708]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2709]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2708]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2709]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_reverse_foot_outer_locator_Ctrl_translateZ_AnimLayer2.o" "Bigfoot_RigRN.phl[2710]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2711]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2712]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2711]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2712]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_reverse_foot_outer_locator_Ctrl_rotate_AnimLayer2.ox" "Bigfoot_RigRN.phl[2713]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2714]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2715]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2714]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2715]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_reverse_foot_outer_locator_Ctrl_rotate_AnimLayer2.oy" "Bigfoot_RigRN.phl[2716]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2717]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2718]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2717]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2718]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_reverse_foot_outer_locator_Ctrl_rotate_AnimLayer2.oz" "Bigfoot_RigRN.phl[2719]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2720]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2721]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2720]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2721]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_reverse_foot_outer_locator_Ctrl_visibility_AnimLayer2.o" "Bigfoot_RigRN.phl[2722]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2723]" "Bigfoot_Rig:R_reverse_foot_outer_locator_Ctrl_rotate_AnimLayer2.ro"
+connectAttr "Bigfoot_RigRN.phl[2723]" "Bigfoot_Rig:R_reverse_foot_outer_locator_Ctrl_rotate_AnimLayer1.ro"
 		;
-connectAttr "Bigfoot_RigRN.phl[2724]" "Bigfoot_Rig:R_reverse_foot_outer_locator_Ctrl_rotate_AnimLayer1.ro"
+connectAttr "Bigfoot_RigRN.phl[2724]" "Bigfoot_Rig:R_reverse_foot_outer_locator_Ctrl_rotate_AnimLayer2.ro"
 		;
-connectAttr "Bigfoot_RigRN.phl[2725]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2726]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2725]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2726]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_reverse_foot_outer_locator_Ctrl_scaleX_AnimLayer2.o" "Bigfoot_RigRN.phl[2727]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2728]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2729]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2728]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2729]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_reverse_foot_outer_locator_Ctrl_scaleY_AnimLayer2.o" "Bigfoot_RigRN.phl[2730]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2731]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2732]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2731]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2732]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_reverse_foot_outer_locator_Ctrl_scaleZ_AnimLayer2.o" "Bigfoot_RigRN.phl[2733]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2734]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2735]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2734]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2735]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_reverse_foot_inner_locator_Ctrl_translateX_AnimLayer2.o" "Bigfoot_RigRN.phl[2736]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2737]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2738]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2737]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2738]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_reverse_foot_inner_locator_Ctrl_translateY_AnimLayer2.o" "Bigfoot_RigRN.phl[2739]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2740]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2741]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2740]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2741]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_reverse_foot_inner_locator_Ctrl_translateZ_AnimLayer2.o" "Bigfoot_RigRN.phl[2742]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2743]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2744]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2743]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2744]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_reverse_foot_inner_locator_Ctrl_rotate_AnimLayer2.ox" "Bigfoot_RigRN.phl[2745]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2746]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2747]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2746]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2747]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_reverse_foot_inner_locator_Ctrl_rotate_AnimLayer2.oy" "Bigfoot_RigRN.phl[2748]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2749]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2750]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2749]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2750]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_reverse_foot_inner_locator_Ctrl_rotate_AnimLayer2.oz" "Bigfoot_RigRN.phl[2751]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2752]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2753]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2752]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2753]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_reverse_foot_inner_locator_Ctrl_visibility_AnimLayer2.o" "Bigfoot_RigRN.phl[2754]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2755]" "Bigfoot_Rig:R_reverse_foot_inner_locator_Ctrl_rotate_AnimLayer2.ro"
+connectAttr "Bigfoot_RigRN.phl[2755]" "Bigfoot_Rig:R_reverse_foot_inner_locator_Ctrl_rotate_AnimLayer1.ro"
 		;
-connectAttr "Bigfoot_RigRN.phl[2756]" "Bigfoot_Rig:R_reverse_foot_inner_locator_Ctrl_rotate_AnimLayer1.ro"
+connectAttr "Bigfoot_RigRN.phl[2756]" "Bigfoot_Rig:R_reverse_foot_inner_locator_Ctrl_rotate_AnimLayer2.ro"
 		;
-connectAttr "Bigfoot_RigRN.phl[2757]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2758]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2757]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2758]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_reverse_foot_inner_locator_Ctrl_scaleX_AnimLayer2.o" "Bigfoot_RigRN.phl[2759]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2760]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2761]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2760]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2761]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_reverse_foot_inner_locator_Ctrl_scaleY_AnimLayer2.o" "Bigfoot_RigRN.phl[2762]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2763]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2764]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2763]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2764]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_reverse_foot_inner_locator_Ctrl_scaleZ_AnimLayer2.o" "Bigfoot_RigRN.phl[2765]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2766]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2767]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2766]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2767]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_reverse_foot_heel_locator_Ctrl_translateX_AnimLayer2.o" "Bigfoot_RigRN.phl[2768]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2769]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2770]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2769]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2770]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_reverse_foot_heel_locator_Ctrl_translateY_AnimLayer2.o" "Bigfoot_RigRN.phl[2771]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2772]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2773]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2772]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2773]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_reverse_foot_heel_locator_Ctrl_translateZ_AnimLayer2.o" "Bigfoot_RigRN.phl[2774]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2775]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2776]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2775]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2776]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_reverse_foot_heel_locator_Ctrl_rotate_AnimLayer2.ox" "Bigfoot_RigRN.phl[2777]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2778]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2779]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2778]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2779]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_reverse_foot_heel_locator_Ctrl_rotate_AnimLayer2.oy" "Bigfoot_RigRN.phl[2780]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2781]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2782]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2781]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2782]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_reverse_foot_heel_locator_Ctrl_rotate_AnimLayer2.oz" "Bigfoot_RigRN.phl[2783]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2784]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2785]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2784]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2785]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_reverse_foot_heel_locator_Ctrl_visibility_AnimLayer2.o" "Bigfoot_RigRN.phl[2786]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2787]" "Bigfoot_Rig:R_reverse_foot_heel_locator_Ctrl_rotate_AnimLayer2.ro"
+connectAttr "Bigfoot_RigRN.phl[2787]" "Bigfoot_Rig:R_reverse_foot_heel_locator_Ctrl_rotate_AnimLayer1.ro"
 		;
-connectAttr "Bigfoot_RigRN.phl[2788]" "Bigfoot_Rig:R_reverse_foot_heel_locator_Ctrl_rotate_AnimLayer1.ro"
+connectAttr "Bigfoot_RigRN.phl[2788]" "Bigfoot_Rig:R_reverse_foot_heel_locator_Ctrl_rotate_AnimLayer2.ro"
 		;
-connectAttr "Bigfoot_RigRN.phl[2789]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2790]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2789]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2790]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_reverse_foot_heel_locator_Ctrl_scaleX_AnimLayer2.o" "Bigfoot_RigRN.phl[2791]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2792]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2793]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2792]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2793]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_reverse_foot_heel_locator_Ctrl_scaleY_AnimLayer2.o" "Bigfoot_RigRN.phl[2794]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2795]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2796]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2795]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2796]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_reverse_foot_heel_locator_Ctrl_scaleZ_AnimLayer2.o" "Bigfoot_RigRN.phl[2797]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2798]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2799]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2798]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2799]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_reverse_foot_toe_locator_Ctrl_rotate_AnimLayer2.ox" "Bigfoot_RigRN.phl[2800]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2801]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2802]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2801]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2802]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_reverse_foot_toe_locator_Ctrl_rotate_AnimLayer2.oy" "Bigfoot_RigRN.phl[2803]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2804]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2805]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2804]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2805]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_reverse_foot_toe_locator_Ctrl_rotate_AnimLayer2.oz" "Bigfoot_RigRN.phl[2806]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2807]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2808]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2807]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2808]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_reverse_foot_toe_locator_Ctrl_translateX_AnimLayer2.o" "Bigfoot_RigRN.phl[2809]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2810]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2811]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2810]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2811]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_reverse_foot_toe_locator_Ctrl_translateY_AnimLayer2.o" "Bigfoot_RigRN.phl[2812]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2813]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2814]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2813]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2814]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_reverse_foot_toe_locator_Ctrl_translateZ_AnimLayer2.o" "Bigfoot_RigRN.phl[2815]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2816]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2817]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2816]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2817]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_reverse_foot_toe_locator_Ctrl_visibility_AnimLayer2.o" "Bigfoot_RigRN.phl[2818]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2819]" "Bigfoot_Rig:R_reverse_foot_toe_locator_Ctrl_rotate_AnimLayer2.ro"
+connectAttr "Bigfoot_RigRN.phl[2819]" "Bigfoot_Rig:R_reverse_foot_toe_locator_Ctrl_rotate_AnimLayer1.ro"
 		;
-connectAttr "Bigfoot_RigRN.phl[2820]" "Bigfoot_Rig:R_reverse_foot_toe_locator_Ctrl_rotate_AnimLayer1.ro"
+connectAttr "Bigfoot_RigRN.phl[2820]" "Bigfoot_Rig:R_reverse_foot_toe_locator_Ctrl_rotate_AnimLayer2.ro"
 		;
-connectAttr "Bigfoot_RigRN.phl[2821]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2822]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2821]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2822]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_reverse_foot_toe_locator_Ctrl_scaleX_AnimLayer2.o" "Bigfoot_RigRN.phl[2823]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2824]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2825]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2824]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2825]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_reverse_foot_toe_locator_Ctrl_scaleY_AnimLayer2.o" "Bigfoot_RigRN.phl[2826]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2827]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2828]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2827]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2828]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_reverse_foot_toe_locator_Ctrl_scaleZ_AnimLayer2.o" "Bigfoot_RigRN.phl[2829]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2830]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2831]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2830]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2831]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_reverse_foot_ball_locator_Ctrl_translateX_AnimLayer2.o" "Bigfoot_RigRN.phl[2832]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2833]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2834]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2833]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2834]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_reverse_foot_ball_locator_Ctrl_translateY_AnimLayer2.o" "Bigfoot_RigRN.phl[2835]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2836]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2837]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2836]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2837]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_reverse_foot_ball_locator_Ctrl_translateZ_AnimLayer2.o" "Bigfoot_RigRN.phl[2838]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2839]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2840]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2839]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2840]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_reverse_foot_ball_locator_Ctrl_rotate_AnimLayer2.ox" "Bigfoot_RigRN.phl[2841]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2842]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2843]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2842]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2843]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_reverse_foot_ball_locator_Ctrl_rotate_AnimLayer2.oy" "Bigfoot_RigRN.phl[2844]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2845]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2846]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2845]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2846]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_reverse_foot_ball_locator_Ctrl_rotate_AnimLayer2.oz" "Bigfoot_RigRN.phl[2847]"
 		;
 connectAttr "Bigfoot_RigRN.phl[2848]" "Bigfoot_Rig:R_reverse_foot_ball_locator_Ctrl_rotate_AnimLayer1.ro"
 		;
 connectAttr "Bigfoot_RigRN.phl[2849]" "Bigfoot_Rig:R_reverse_foot_ball_locator_Ctrl_rotate_AnimLayer2.ro"
 		;
-connectAttr "Bigfoot_RigRN.phl[2850]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2851]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2850]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2851]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_reverse_foot_ball_locator_Ctrl_scaleX_AnimLayer2.o" "Bigfoot_RigRN.phl[2852]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2853]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2854]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2853]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2854]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_reverse_foot_ball_locator_Ctrl_scaleY_AnimLayer2.o" "Bigfoot_RigRN.phl[2855]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2856]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2857]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2856]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2857]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_reverse_foot_ball_locator_Ctrl_scaleZ_AnimLayer2.o" "Bigfoot_RigRN.phl[2858]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2859]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2860]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2859]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2860]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_reverse_foot_ball_locator_Ctrl_visibility_AnimLayer2.o" "Bigfoot_RigRN.phl[2861]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2862]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2863]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2862]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2863]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_reverse_foot_toe_tap_locator_Ctrl_translateX_AnimLayer2.o" "Bigfoot_RigRN.phl[2864]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2865]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2866]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2865]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2866]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_reverse_foot_toe_tap_locator_Ctrl_translateY_AnimLayer2.o" "Bigfoot_RigRN.phl[2867]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2868]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2869]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2868]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2869]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_reverse_foot_toe_tap_locator_Ctrl_translateZ_AnimLayer2.o" "Bigfoot_RigRN.phl[2870]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2871]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2872]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2871]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2872]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_reverse_foot_toe_tap_locator_Ctrl_rotate_AnimLayer2.ox" "Bigfoot_RigRN.phl[2873]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2874]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2875]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2874]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2875]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_reverse_foot_toe_tap_locator_Ctrl_rotate_AnimLayer2.oy" "Bigfoot_RigRN.phl[2876]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2877]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2878]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2877]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2878]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_reverse_foot_toe_tap_locator_Ctrl_rotate_AnimLayer2.oz" "Bigfoot_RigRN.phl[2879]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2880]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2881]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2880]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2881]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_reverse_foot_toe_tap_locator_Ctrl_visibility_AnimLayer2.o" "Bigfoot_RigRN.phl[2882]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2883]" "Bigfoot_Rig:R_reverse_foot_toe_tap_locator_Ctrl_rotate_AnimLayer2.ro"
+connectAttr "Bigfoot_RigRN.phl[2883]" "Bigfoot_Rig:R_reverse_foot_toe_tap_locator_Ctrl_rotate_AnimLayer1.ro"
 		;
-connectAttr "Bigfoot_RigRN.phl[2884]" "Bigfoot_Rig:R_reverse_foot_toe_tap_locator_Ctrl_rotate_AnimLayer1.ro"
+connectAttr "Bigfoot_RigRN.phl[2884]" "Bigfoot_Rig:R_reverse_foot_toe_tap_locator_Ctrl_rotate_AnimLayer2.ro"
 		;
-connectAttr "Bigfoot_RigRN.phl[2885]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2886]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2885]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2886]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_reverse_foot_toe_tap_locator_Ctrl_scaleX_AnimLayer2.o" "Bigfoot_RigRN.phl[2887]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2888]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2889]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2888]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2889]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_reverse_foot_toe_tap_locator_Ctrl_scaleY_AnimLayer2.o" "Bigfoot_RigRN.phl[2890]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2891]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2892]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2891]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2892]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_reverse_foot_toe_tap_locator_Ctrl_scaleZ_AnimLayer2.o" "Bigfoot_RigRN.phl[2893]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2894]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2895]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2894]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2895]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Leg_IK_PV_Ctrl_translateX_AnimLayer2.o" "Bigfoot_RigRN.phl[2896]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2897]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2898]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2897]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2898]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Leg_IK_PV_Ctrl_translateY_AnimLayer2.o" "Bigfoot_RigRN.phl[2899]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2900]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2901]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2900]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2901]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Leg_IK_PV_Ctrl_translateZ_AnimLayer2.o" "Bigfoot_RigRN.phl[2902]"
 		;
 connectAttr "Bigfoot_RigRN.phl[2903]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_RigRN.phl[2904]" "AnimLayer2.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Leg_IK_PV_Ctrl_Local_Space_AnimLayer2.o" "Bigfoot_RigRN.phl[2905]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2906]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2907]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2906]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2907]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Leg_IK_PV_Ctrl_rotate_AnimLayer2.ox" "Bigfoot_RigRN.phl[2908]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2909]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2910]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2909]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2910]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Leg_IK_PV_Ctrl_rotate_AnimLayer2.oy" "Bigfoot_RigRN.phl[2911]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2912]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2913]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2912]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2913]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Leg_IK_PV_Ctrl_rotate_AnimLayer2.oz" "Bigfoot_RigRN.phl[2914]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2915]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2916]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2915]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2916]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Leg_IK_PV_Ctrl_visibility_AnimLayer2.o" "Bigfoot_RigRN.phl[2917]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2918]" "Bigfoot_Rig:R_Leg_IK_PV_Ctrl_rotate_AnimLayer2.ro"
+connectAttr "Bigfoot_RigRN.phl[2918]" "Bigfoot_Rig:R_Leg_IK_PV_Ctrl_rotate_AnimLayer1.ro"
 		;
-connectAttr "Bigfoot_RigRN.phl[2919]" "Bigfoot_Rig:R_Leg_IK_PV_Ctrl_rotate_AnimLayer1.ro"
+connectAttr "Bigfoot_RigRN.phl[2919]" "Bigfoot_Rig:R_Leg_IK_PV_Ctrl_rotate_AnimLayer2.ro"
 		;
-connectAttr "Bigfoot_RigRN.phl[2920]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2921]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2920]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2921]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Leg_IK_PV_Ctrl_scaleX_AnimLayer2.o" "Bigfoot_RigRN.phl[2922]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2923]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2924]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2923]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2924]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Leg_IK_PV_Ctrl_scaleY_AnimLayer2.o" "Bigfoot_RigRN.phl[2925]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2926]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2927]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2926]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2927]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Leg_IK_PV_Ctrl_scaleZ_AnimLayer2.o" "Bigfoot_RigRN.phl[2928]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2929]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2930]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2929]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2930]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Leg_1_Jnt_IK_Ctrl_translateX_AnimLayer2.o" "Bigfoot_RigRN.phl[2931]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2932]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2933]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2932]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2933]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Leg_1_Jnt_IK_Ctrl_translateY_AnimLayer2.o" "Bigfoot_RigRN.phl[2934]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2935]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2936]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2935]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2936]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Leg_1_Jnt_IK_Ctrl_translateZ_AnimLayer2.o" "Bigfoot_RigRN.phl[2937]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2938]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2939]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2938]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2939]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Leg_1_Jnt_IK_Ctrl_rotate_AnimLayer2.ox" "Bigfoot_RigRN.phl[2940]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2941]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2942]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2941]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2942]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Leg_1_Jnt_IK_Ctrl_rotate_AnimLayer2.oy" "Bigfoot_RigRN.phl[2943]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2944]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2945]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2944]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2945]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Leg_1_Jnt_IK_Ctrl_rotate_AnimLayer2.oz" "Bigfoot_RigRN.phl[2946]"
 		;
 connectAttr "Bigfoot_RigRN.phl[2947]" "Bigfoot_Rig:R_Leg_1_Jnt_IK_Ctrl_rotate_AnimLayer1.ro"
 		;
 connectAttr "Bigfoot_RigRN.phl[2948]" "Bigfoot_Rig:R_Leg_1_Jnt_IK_Ctrl_rotate_AnimLayer2.ro"
 		;
-connectAttr "Bigfoot_RigRN.phl[2949]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2950]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2949]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2950]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Leg_1_Jnt_IK_Ctrl_scaleX_AnimLayer2.o" "Bigfoot_RigRN.phl[2951]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2952]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2953]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2952]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2953]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Leg_1_Jnt_IK_Ctrl_scaleY_AnimLayer2.o" "Bigfoot_RigRN.phl[2954]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2955]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2956]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2955]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2956]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Leg_1_Jnt_IK_Ctrl_scaleZ_AnimLayer2.o" "Bigfoot_RigRN.phl[2957]"
 		;
 connectAttr "Bigfoot_RigRN.phl[2958]" "AnimLayer1.dsm" -na;
@@ -23080,8 +22741,8 @@ connectAttr "Bigfoot_RigRN.phl[2961]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_RigRN.phl[2962]" "AnimLayer2.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Leg_1_Jnt_IK_Ctrl_FollowRotate_AnimLayer2.o" "Bigfoot_RigRN.phl[2963]"
 		;
-connectAttr "Bigfoot_RigRN.phl[2964]" "AnimLayer1.dsm" -na;
-connectAttr "Bigfoot_RigRN.phl[2965]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2964]" "AnimLayer2.dsm" -na;
+connectAttr "Bigfoot_RigRN.phl[2965]" "AnimLayer1.dsm" -na;
 connectAttr "Bigfoot_Rig:R_Leg_1_Jnt_IK_Ctrl_visibility_AnimLayer2.o" "Bigfoot_RigRN.phl[2966]"
 		;
 connectAttr "file1.oc" "Bigfoot_RigRN.phl[2967]";
@@ -23097,6 +22758,8 @@ connectAttr "BinocularsRN.phl[7]" "pCylinder3_parentConstraint1.cro";
 connectAttr "BinocularsRN.phl[8]" "pCylinder3_parentConstraint1.cpim";
 connectAttr "BinocularsRN.phl[9]" "pCylinder3_parentConstraint1.crp";
 connectAttr "BinocularsRN.phl[10]" "pCylinder3_parentConstraint1.crt";
+connectAttr "file2.msg" "BinocularsRN.phl[11]";
+connectAttr "file2.oc" "BinocularsRN.phl[12]";
 connectAttr "locator1_translateX_AnimLayer2.o" "locator1.tx";
 connectAttr "locator1_translateY_AnimLayer2.o" "locator1.ty";
 connectAttr "locator1_translateZ_AnimLayer2.o" "locator1.tz";
@@ -23107,12 +22770,12 @@ connectAttr "locator1_visibility_AnimLayer2.o" "locator1.v";
 connectAttr "locator1_scaleX_AnimLayer2.o" "locator1.sx";
 connectAttr "locator1_scaleY_AnimLayer2.o" "locator1.sy";
 connectAttr "locator1_scaleZ_AnimLayer2.o" "locator1.sz";
+connectAttr "locator1_parentConstraint1.w0" "locator1_parentConstraint1.tg[0].tw"
+		;
 connectAttr "locator1.ro" "locator1_parentConstraint1.cro";
 connectAttr "locator1.pim" "locator1_parentConstraint1.cpim";
 connectAttr "locator1.rp" "locator1_parentConstraint1.crp";
 connectAttr "locator1.rpt" "locator1_parentConstraint1.crt";
-connectAttr "locator1_parentConstraint1.w0" "locator1_parentConstraint1.tg[0].tw"
-		;
 connectAttr "pCylinder3_parentConstraint1.w0" "pCylinder3_parentConstraint1.tg[0].tw"
 		;
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
@@ -23161,9 +22824,6 @@ connectAttr "AnimLayer1.sl" "BaseAnimation.chsl[0]";
 connectAttr "AnimLayer2.sl" "BaseAnimation.chsl[2]";
 connectAttr "AnimLayer1.play" "BaseAnimation.cdly[0]";
 connectAttr "AnimLayer2.play" "BaseAnimation.cdly[2]";
-connectAttr "BaseAnimation.csol" "AnimLayer1.sslo";
-connectAttr "BaseAnimation.fgwt" "AnimLayer1.pwth";
-connectAttr "BaseAnimation.omte" "AnimLayer1.pmte";
 connectAttr "locator1.v" "AnimLayer1.dsm" -na;
 connectAttr "locator1.tx" "AnimLayer1.dsm" -na;
 connectAttr "locator1.ty" "AnimLayer1.dsm" -na;
@@ -23174,6 +22834,9 @@ connectAttr "locator1.rz" "AnimLayer1.dsm" -na;
 connectAttr "locator1.sx" "AnimLayer1.dsm" -na;
 connectAttr "locator1.sy" "AnimLayer1.dsm" -na;
 connectAttr "locator1.sz" "AnimLayer1.dsm" -na;
+connectAttr "BaseAnimation.csol" "AnimLayer1.sslo";
+connectAttr "BaseAnimation.fgwt" "AnimLayer1.pwth";
+connectAttr "BaseAnimation.omte" "AnimLayer1.pmte";
 connectAttr "Bigfoot_Rig:L_Finger_1_Jnt_2_Ctrl_visibility_AnimLayer1.msg" "AnimLayer1.bnds[0]"
 		;
 connectAttr "Bigfoot_Rig:L_Finger_1_Jnt_2_Ctrl_translateX_AnimLayer1.msg" "AnimLayer1.bnds[1]"
@@ -29308,9 +28971,6 @@ connectAttr "AnimLayer1.fgwt" "locator1_scaleY_AnimLayer1.wb";
 connectAttr "AnimLayer1.sam" "locator1_scaleZ_AnimLayer1.acm";
 connectAttr "AnimLayer1.bgwt" "locator1_scaleZ_AnimLayer1.wa";
 connectAttr "AnimLayer1.fgwt" "locator1_scaleZ_AnimLayer1.wb";
-connectAttr "BaseAnimation.csol" "AnimLayer2.sslo";
-connectAttr "BaseAnimation.fgwt" "AnimLayer2.pwth";
-connectAttr "BaseAnimation.omte" "AnimLayer2.pmte";
 connectAttr "locator1.v" "AnimLayer2.dsm" -na;
 connectAttr "locator1.tx" "AnimLayer2.dsm" -na;
 connectAttr "locator1.ty" "AnimLayer2.dsm" -na;
@@ -29321,6 +28981,9 @@ connectAttr "locator1.rz" "AnimLayer2.dsm" -na;
 connectAttr "locator1.sx" "AnimLayer2.dsm" -na;
 connectAttr "locator1.sy" "AnimLayer2.dsm" -na;
 connectAttr "locator1.sz" "AnimLayer2.dsm" -na;
+connectAttr "BaseAnimation.csol" "AnimLayer2.sslo";
+connectAttr "BaseAnimation.fgwt" "AnimLayer2.pwth";
+connectAttr "BaseAnimation.omte" "AnimLayer2.pmte";
 connectAttr "Bigfoot_Rig:L_Finger_1_Jnt_2_Ctrl_visibility_AnimLayer2.msg" "AnimLayer2.bnds[0]"
 		;
 connectAttr "Bigfoot_Rig:L_Finger_1_Jnt_2_Ctrl_translateX_AnimLayer2.msg" "AnimLayer2.bnds[1]"
@@ -36506,7 +36169,31 @@ connectAttr "AnimLayer2.sam" "locator1_scaleZ_AnimLayer2.acm";
 connectAttr "AnimLayer2.bgwt" "locator1_scaleZ_AnimLayer2.wa";
 connectAttr "AnimLayer2.fgwt" "locator1_scaleZ_AnimLayer2.wb";
 connectAttr "locator1_scaleZ_AnimLayer1.o" "locator1_scaleZ_AnimLayer2.ia";
+connectAttr ":defaultColorMgtGlobals.cme" "file2.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "file2.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "file2.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "file2.ws";
+connectAttr "place2dTexture2.c" "file2.c";
+connectAttr "place2dTexture2.tf" "file2.tf";
+connectAttr "place2dTexture2.rf" "file2.rf";
+connectAttr "place2dTexture2.mu" "file2.mu";
+connectAttr "place2dTexture2.mv" "file2.mv";
+connectAttr "place2dTexture2.s" "file2.s";
+connectAttr "place2dTexture2.wu" "file2.wu";
+connectAttr "place2dTexture2.wv" "file2.wv";
+connectAttr "place2dTexture2.re" "file2.re";
+connectAttr "place2dTexture2.of" "file2.of";
+connectAttr "place2dTexture2.r" "file2.ro";
+connectAttr "place2dTexture2.n" "file2.n";
+connectAttr "place2dTexture2.vt1" "file2.vt1";
+connectAttr "place2dTexture2.vt2" "file2.vt2";
+connectAttr "place2dTexture2.vt3" "file2.vt3";
+connectAttr "place2dTexture2.vc1" "file2.vc1";
+connectAttr "place2dTexture2.o" "file2.uv";
+connectAttr "place2dTexture2.ofs" "file2.fs";
 connectAttr "place2dTexture1.msg" ":defaultRenderUtilityList1.u" -na;
+connectAttr "place2dTexture2.msg" ":defaultRenderUtilityList1.u" -na;
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 connectAttr "file1.msg" ":defaultTextureList1.tx" -na;
+connectAttr "file2.msg" ":defaultTextureList1.tx" -na;
 // End of Bigfoot_Idle.ma
