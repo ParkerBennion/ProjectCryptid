@@ -1,6 +1,6 @@
 //Maya ASCII 2025ff03 scene
 //Name: JackalopeRIG.ma
-//Last modified: Sat, Oct 18, 2025 09:35:34 PM
+//Last modified: Sun, Oct 19, 2025 05:28:22 PM
 //Codeset: 1252
 file -rdi 1 -ns "CalebSIZEREFERENCE" -dr 1 -rfn "CalebSIZEREFERENCERN" -op "v=0;"
 		 -typ "mayaAscii" "C:/Users/caris/Desktop/ProjectCryptid/CryptidMobile_MayaProject//scenes/CalebSIZEREFERENCE.ma";
@@ -23,12 +23,12 @@ fileInfo "product" "Maya 2025";
 fileInfo "version" "2025";
 fileInfo "cutIdentifier" "202409190603-cbdc5a7e54";
 fileInfo "osv" "Windows 10 Home v2009 (Build: 19045)";
-fileInfo "UUID" "ED0B6AB2-4032-17A1-7028-5ABE47CA2A34";
+fileInfo "UUID" "4164BA26-414B-ED80-8972-76BC393A1B06";
 createNode transform -s -n "persp";
 	rename -uid "C0EB1D46-4A5F-6D27-45A7-BDB4D9099663";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 2.7666478320753782 2.929633995768528 -1.685812607095047 ;
-	setAttr ".r" -type "double3" -25.354201382655127 -6359.4000000002879 0 ;
+	setAttr ".t" -type "double3" -8.8343047126866434 1.844527311666468 6.9130704475977645 ;
+	setAttr ".r" -type "double3" -8.5542015499818724 -4370.1999999969285 -6.2109562701089191e-16 ;
 	setAttr ".rp" -type "double3" 3.552713678800501e-17 7.105427357601002e-17 0 ;
 	setAttr ".rpt" -type "double3" -4.2024788517521801e-17 -4.0948712884773849e-19 -3.5748872871810077e-17 ;
 createNode camera -s -n "perspShape" -p "persp";
@@ -39,7 +39,7 @@ createNode camera -s -n "perspShape" -p "persp";
 	setAttr ".ncp" 0.001;
 	setAttr ".fcp" 100;
 	setAttr ".fd" 0.05;
-	setAttr ".coi" 3.7869932314063361;
+	setAttr ".coi" 11.624039862719329;
 	setAttr ".ow" 0.1;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
@@ -3149,11 +3149,13 @@ createNode joint -n "ROOT_JNT" -p "SKELETON";
 	setAttr ".v" no;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr ".ssc" no;
 createNode joint -n "CoG_Jnt" -p "ROOT_JNT";
 	rename -uid "E85C0A67-4B87-47D6-12E5-33B834A190D2";
 	setAttr ".t" -type "double3" 0 0.78445777893066437 -0.44547084808349613 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr ".ssc" no;
 	setAttr ".bps" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 78.445777893066435 -44.547084808349609 1;
 	setAttr ".radi" 0.5;
 createNode joint -n "Pelvis_Jnt" -p "CoG_Jnt";
@@ -3164,6 +3166,7 @@ createNode joint -n "Pelvis_Jnt" -p "CoG_Jnt";
 	setAttr ".ovc" 17;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr ".ssc" no;
 	setAttr ".bps" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 78.445777893066406 -44.547084808349609 1;
 	setAttr ".radi" 0.35;
 createNode joint -n "Tail_Jnt" -p "Pelvis_Jnt";
@@ -3173,6 +3176,7 @@ createNode joint -n "Tail_Jnt" -p "Pelvis_Jnt";
 	setAttr ".oc" 1;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr ".ssc" no;
 	setAttr ".bps" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 64.844668539305303 -68.426925855867978 1;
 	setAttr ".radi" 0.25;
 createNode parentConstraint -n "Tail_Jnt_parentConstraint1" -p "Tail_Jnt";
@@ -3217,6 +3221,7 @@ createNode joint -n "R_Rear_Leg_1_Jnt" -p "Pelvis_Jnt";
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" -90.000000000000114 68.707029364381924 90.000000000000838 ;
+	setAttr ".ssc" no;
 	setAttr ".radi" 0.25;
 createNode joint -n "R_Rear_Leg_2_Jnt" -p "R_Rear_Leg_1_Jnt";
 	rename -uid "7AC23C94-4944-4556-AD7B-5FABAF50427A";
@@ -3225,6 +3230,7 @@ createNode joint -n "R_Rear_Leg_2_Jnt" -p "R_Rear_Leg_1_Jnt";
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" -2.4075128080059483e-14 1.3985704911232875e-14 -119.69374427228732 ;
+	setAttr ".ssc" no;
 	setAttr ".radi" 0.25;
 createNode joint -n "R_Rear_Leg_3_Jnt" -p "R_Rear_Leg_2_Jnt";
 	rename -uid "E254BC37-4EAD-4539-537E-17BEC5FC036D";
@@ -3233,6 +3239,7 @@ createNode joint -n "R_Rear_Leg_3_Jnt" -p "R_Rear_Leg_2_Jnt";
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" -1.9377964046236743e-14 -2.0497311229639494e-14 86.784120924047883 ;
+	setAttr ".ssc" no;
 	setAttr ".radi" 0.25;
 createNode joint -n "R_Rear_Leg_4_Jnt" -p "R_Rear_Leg_3_Jnt";
 	rename -uid "6A504399-4B65-CC12-7AFB-049AF569107E";
@@ -3241,6 +3248,7 @@ createNode joint -n "R_Rear_Leg_4_Jnt" -p "R_Rear_Leg_3_Jnt";
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jot" -type "string" "none";
+	setAttr ".ssc" no;
 	setAttr ".radi" 0.25;
 createNode joint -n "R_Rear_Foot_Jnt" -p "R_Rear_Leg_4_Jnt";
 	rename -uid "E381D6B7-423B-5DDE-3D96-998CC2C08A37";
@@ -3251,6 +3259,7 @@ createNode joint -n "R_Rear_Foot_Jnt" -p "R_Rear_Leg_4_Jnt";
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" -54.20259398385754 89.999999999999091 0 ;
+	setAttr ".ssc" no;
 	setAttr ".radi" 0.5;
 createNode orientConstraint -n "R_Rear_Foot_Jnt_orientConstraint1" -p "R_Rear_Foot_Jnt";
 	rename -uid "BA1B7BB8-4C14-4084-3E95-2B8ED7AD029A";
@@ -3270,7 +3279,7 @@ createNode orientConstraint -n "R_Rear_Foot_Jnt_orientConstraint1" -p "R_Rear_Fo
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
 	setAttr -s 2 ".tg";
-	setAttr ".lr" -type "double3" 3.1805546814635231e-15 -2.3854160110976374e-14 -3.1805546814635168e-14 ;
+	setAttr ".lr" -type "double3" -9.541664044390544e-15 -2.5444437451708134e-14 -3.1805546814635168e-14 ;
 	setAttr ".rsrr" -type "double3" -6.3611093629270264e-15 -2.2263882770244621e-14 
 		-3.4986101496098681e-14 ;
 	setAttr -k on ".w0";
@@ -3457,6 +3466,7 @@ createNode joint -n "R_Hip_Mid_Twist_Jnt_1" -p "R_Rear_Leg_1_Jnt";
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" -9.5416640443903136e-15 4.1936380256985544e-16 3.180554681463516e-15 ;
+	setAttr ".ssc" no;
 	setAttr ".radi" -0.125;
 createNode parentConstraint -n "R_Hip_Mid_Twist_Jnt_1_parentConstraint1" -p "R_Hip_Mid_Twist_Jnt_1";
 	rename -uid "1DBB6EC7-468B-19CF-2F87-AA818F75DF3C";
@@ -3485,6 +3495,7 @@ createNode joint -n "R_Hip_End_Twist_Jnt" -p "R_Rear_Leg_1_Jnt";
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" -9.5416640443903136e-15 4.1936380256985544e-16 3.180554681463516e-15 ;
+	setAttr ".ssc" no;
 	setAttr ".radi" -0.125;
 createNode parentConstraint -n "R_Hip_End_Twist_Jnt_parentConstraint1" -p "R_Hip_End_Twist_Jnt";
 	rename -uid "00E88CE6-486D-B354-8448-BEA58C1413E4";
@@ -3512,6 +3523,7 @@ createNode joint -n "L_Rear_Leg_1_Jnt" -p "Pelvis_Jnt";
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" 90 -68.707029364381881 -90.000000000000909 ;
+	setAttr ".ssc" no;
 	setAttr ".radi" 0.25;
 createNode joint -n "L_Rear_Leg_2_Jnt" -p "L_Rear_Leg_1_Jnt";
 	rename -uid "636E4E41-4021-F954-4AE5-5B9040ECE9D0";
@@ -3520,6 +3532,7 @@ createNode joint -n "L_Rear_Leg_2_Jnt" -p "L_Rear_Leg_1_Jnt";
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" 0 0 -119.69374427228732 ;
+	setAttr ".ssc" no;
 	setAttr ".radi" 0.25;
 createNode joint -n "L_Rear_Leg_3_Jnt" -p "L_Rear_Leg_2_Jnt";
 	rename -uid "36CD688D-4521-5A48-228A-5EA4E0FD0C2C";
@@ -3528,6 +3541,7 @@ createNode joint -n "L_Rear_Leg_3_Jnt" -p "L_Rear_Leg_2_Jnt";
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" 0 0 86.784120924047883 ;
+	setAttr ".ssc" no;
 	setAttr ".radi" 0.25;
 createNode joint -n "L_Rear_Leg_4_Jnt" -p "L_Rear_Leg_3_Jnt";
 	rename -uid "634A5193-4AA8-113A-486B-BD90B187D934";
@@ -3536,6 +3550,7 @@ createNode joint -n "L_Rear_Leg_4_Jnt" -p "L_Rear_Leg_3_Jnt";
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jot" -type "string" "none";
+	setAttr ".ssc" no;
 	setAttr ".radi" 0.25;
 createNode joint -n "L_Rear_Foot_Jnt" -p "L_Rear_Leg_4_Jnt";
 	rename -uid "FC06C6C6-4702-4E27-9F2B-D0BD755F7C6A";
@@ -3546,6 +3561,7 @@ createNode joint -n "L_Rear_Foot_Jnt" -p "L_Rear_Leg_4_Jnt";
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" -54.202593983857561 89.999999999999091 0 ;
+	setAttr ".ssc" no;
 	setAttr ".radi" 0.5;
 createNode orientConstraint -n "L_Rear_Foot_Jnt_orientConstraint1" -p "L_Rear_Foot_Jnt";
 	rename -uid "FFC9D3EA-48D9-90B8-92BA-6AA1CF737F35";
@@ -3751,6 +3767,7 @@ createNode joint -n "L_Hip_Mid_Twist_Jnt_1" -p "L_Rear_Leg_1_Jnt";
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" 1.5902773407317008e-15 1.6092876255787665e-15 -3.1805546814635152e-15 ;
+	setAttr ".ssc" no;
 	setAttr ".radi" -0.125;
 createNode parentConstraint -n "L_Hip_Mid_Twist_Jnt_1_parentConstraint1" -p "L_Hip_Mid_Twist_Jnt_1";
 	rename -uid "96AC373B-4FF2-149B-9BFE-65A61827CE81";
@@ -3779,6 +3796,7 @@ createNode joint -n "L_Hip_End_Twist_Jnt" -p "L_Rear_Leg_1_Jnt";
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" 1.5902773407317008e-15 1.6092876255787665e-15 -3.1805546814635152e-15 ;
+	setAttr ".ssc" no;
 	setAttr ".radi" -0.125;
 createNode parentConstraint -n "L_Hip_End_Twist_Jnt_parentConstraint1" -p "L_Hip_End_Twist_Jnt";
 	rename -uid "EA509841-461B-891B-87E0-B89D80A0098B";
@@ -3809,6 +3827,7 @@ createNode joint -n "L_Rear_Leg_1_Jnt_IK" -p "Pelvis_Jnt";
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" 90 -68.707029364381881 -90.000000000000909 ;
+	setAttr ".ssc" no;
 createNode joint -n "L_Rear_Leg_2_Jnt_IK" -p "L_Rear_Leg_1_Jnt_IK";
 	rename -uid "4BB04166-48C9-D04A-0D2C-EAA790CE7B44";
 	setAttr ".uoc" 1;
@@ -3818,6 +3837,7 @@ createNode joint -n "L_Rear_Leg_2_Jnt_IK" -p "L_Rear_Leg_1_Jnt_IK";
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" 0 0 -119.69374427228732 ;
+	setAttr ".ssc" no;
 createNode joint -n "L_Rear_Leg_3_Jnt_IK" -p "L_Rear_Leg_2_Jnt_IK";
 	rename -uid "0161DB5B-461B-BE6C-2366-DBAE92FF2C75";
 	setAttr ".uoc" 1;
@@ -3827,6 +3847,7 @@ createNode joint -n "L_Rear_Leg_3_Jnt_IK" -p "L_Rear_Leg_2_Jnt_IK";
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" 0 0 86.784120924047883 ;
+	setAttr ".ssc" no;
 createNode joint -n "L_Rear_Leg_4_Jnt_IK" -p "L_Rear_Leg_3_Jnt_IK";
 	rename -uid "24227307-4621-586B-3A26-C49DAD365D92";
 	setAttr ".uoc" 1;
@@ -3835,6 +3856,7 @@ createNode joint -n "L_Rear_Leg_4_Jnt_IK" -p "L_Rear_Leg_3_Jnt_IK";
 	setAttr ".s" -type "double3" 1 0.99999999999999989 1 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr ".ssc" no;
 createNode ikEffector -n "effector6" -p "L_Rear_Leg_3_Jnt_IK";
 	rename -uid "228DCE86-4DDB-3F36-C042-49BF6F01145E";
 	setAttr ".v" no;
@@ -3848,6 +3870,7 @@ createNode joint -n "L_Rear_Leg_1_Jnt_FK" -p "Pelvis_Jnt";
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" 90 -68.707029364381881 -90.000000000000909 ;
+	setAttr ".ssc" no;
 createNode joint -n "L_Rear_Leg_2_Jnt_FK" -p "L_Rear_Leg_1_Jnt_FK";
 	rename -uid "7489C96C-4BC6-B12D-6138-DB92B78E34F0";
 	setAttr ".uoc" 1;
@@ -3855,6 +3878,7 @@ createNode joint -n "L_Rear_Leg_2_Jnt_FK" -p "L_Rear_Leg_1_Jnt_FK";
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" 0 0 -119.69374427228732 ;
+	setAttr ".ssc" no;
 createNode joint -n "L_Rear_Leg_3_Jnt_FK" -p "L_Rear_Leg_2_Jnt_FK";
 	rename -uid "CDC76864-4098-AB14-D3FB-3B942DA28D4A";
 	setAttr ".uoc" 1;
@@ -3862,6 +3886,7 @@ createNode joint -n "L_Rear_Leg_3_Jnt_FK" -p "L_Rear_Leg_2_Jnt_FK";
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" 0 0 86.784120924047883 ;
+	setAttr ".ssc" no;
 createNode joint -n "L_Rear_Leg_4_Jnt_FK" -p "L_Rear_Leg_3_Jnt_FK";
 	rename -uid "92D47FF0-4E4A-3221-4167-25AABF869A95";
 	setAttr ".uoc" 1;
@@ -3870,6 +3895,7 @@ createNode joint -n "L_Rear_Leg_4_Jnt_FK" -p "L_Rear_Leg_3_Jnt_FK";
 	setAttr ".s" -type "double3" 1 0.99999999999999989 1 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr ".ssc" no;
 createNode parentConstraint -n "L_Rear_Leg_3_Jnt_FK_parentConstraint1" -p "L_Rear_Leg_3_Jnt_FK";
 	rename -uid "2DA99D0E-4148-3573-0793-AAA569EB772D";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "L_Rear_Leg_3_Jnt_FK_CtrlW0" -dv 1 
@@ -3987,6 +4013,7 @@ createNode joint -n "R_Rear_Leg_1_Jnt_IK" -p "Pelvis_Jnt";
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" -90.000000000000114 68.707029364381924 90.000000000000838 ;
+	setAttr ".ssc" no;
 createNode joint -n "R_Rear_Leg_2_Jnt_IK" -p "R_Rear_Leg_1_Jnt_IK";
 	rename -uid "923AD0DB-4381-11ED-5DCC-E29B7ECCBCCB";
 	setAttr ".uoc" 1;
@@ -3996,6 +4023,7 @@ createNode joint -n "R_Rear_Leg_2_Jnt_IK" -p "R_Rear_Leg_1_Jnt_IK";
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" 0 0 -119.69374427228732 ;
+	setAttr ".ssc" no;
 createNode joint -n "R_Rear_Leg_3_Jnt_IK" -p "R_Rear_Leg_2_Jnt_IK";
 	rename -uid "4DEE21CE-495E-72D5-74F0-B08394A6BC79";
 	setAttr ".uoc" 1;
@@ -4005,6 +4033,7 @@ createNode joint -n "R_Rear_Leg_3_Jnt_IK" -p "R_Rear_Leg_2_Jnt_IK";
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" 0 0 86.784120924047883 ;
+	setAttr ".ssc" no;
 createNode joint -n "R_Rear_Leg_4_Jnt_IK" -p "R_Rear_Leg_3_Jnt_IK";
 	rename -uid "EBE2753C-448B-6A63-855E-FCA4651D977B";
 	setAttr ".uoc" 1;
@@ -4013,6 +4042,7 @@ createNode joint -n "R_Rear_Leg_4_Jnt_IK" -p "R_Rear_Leg_3_Jnt_IK";
 	setAttr ".s" -type "double3" 1 1.0000000000000002 0.99999999999999989 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr ".ssc" no;
 createNode ikEffector -n "effector4" -p "R_Rear_Leg_3_Jnt_IK";
 	rename -uid "49A16BC0-42A5-215B-AD7F-D89031F58757";
 	setAttr ".v" no;
@@ -4026,6 +4056,7 @@ createNode joint -n "R_Rear_Leg_1_Jnt_FK" -p "Pelvis_Jnt";
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" -90.000000000000114 68.707029364381924 90.000000000000838 ;
+	setAttr ".ssc" no;
 createNode joint -n "R_Rear_Leg_2_Jnt_FK" -p "R_Rear_Leg_1_Jnt_FK";
 	rename -uid "BAD9AF22-4CA9-5698-3411-589F57C1A098";
 	setAttr ".uoc" 1;
@@ -4033,6 +4064,7 @@ createNode joint -n "R_Rear_Leg_2_Jnt_FK" -p "R_Rear_Leg_1_Jnt_FK";
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" 0 0 -119.69374427228732 ;
+	setAttr ".ssc" no;
 createNode joint -n "R_Rear_Leg_3_Jnt_FK" -p "R_Rear_Leg_2_Jnt_FK";
 	rename -uid "F9950567-418E-5A50-80E9-EAA6B3FB1465";
 	setAttr ".uoc" 1;
@@ -4040,6 +4072,7 @@ createNode joint -n "R_Rear_Leg_3_Jnt_FK" -p "R_Rear_Leg_2_Jnt_FK";
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" 0 0 86.784120924047883 ;
+	setAttr ".ssc" no;
 createNode joint -n "R_Rear_Leg_4_Jnt_FK" -p "R_Rear_Leg_3_Jnt_FK";
 	rename -uid "90F4812D-4174-5929-0D94-9BAEB14FE03E";
 	setAttr ".uoc" 1;
@@ -4048,6 +4081,7 @@ createNode joint -n "R_Rear_Leg_4_Jnt_FK" -p "R_Rear_Leg_3_Jnt_FK";
 	setAttr ".s" -type "double3" 1 1.0000000000000002 0.99999999999999989 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr ".ssc" no;
 createNode parentConstraint -n "R_Rear_Leg_3_Jnt_FK_parentConstraint1" -p "R_Rear_Leg_3_Jnt_FK";
 	rename -uid "690D8B23-41E7-EC0C-ED1D-82B4E5287D23";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "R_Rear_Leg_3_Jnt_FK_CtrlW0" -dv 1 
@@ -4192,24 +4226,28 @@ createNode joint -n "Spine_1_Jnt" -p "CoG_Jnt";
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" -90 -69.89760243816383 90 ;
+	setAttr ".ssc" no;
 	setAttr ".radi" 0.25;
 createNode joint -n "Spine_2_Jnt" -p "Spine_1_Jnt";
 	rename -uid "B8E5F823-4A3A-6410-6CC5-2BAF1C8E3A1B";
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" 0 0 -28.114653390985794 ;
+	setAttr ".ssc" no;
 	setAttr ".radi" 0.25;
 createNode joint -n "Spine_3_Jnt" -p "Spine_2_Jnt";
 	rename -uid "82D07A14-4434-930F-6173-9AAB773C5BBF";
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" 8.2452732281635162e-15 2.5354190215445524e-14 36.029421015363816 ;
+	setAttr ".ssc" no;
 	setAttr ".radi" 0.25;
 createNode joint -n "Neck_Jnt" -p "Spine_3_Jnt";
 	rename -uid "7376E11E-486E-2EBA-8CBF-84A07517D085";
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" 0 0 48.620459697463829 ;
+	setAttr ".ssc" no;
 	setAttr ".radi" 0.25;
 createNode joint -n "Head_Jnt" -p "Neck_Jnt";
 	rename -uid "25EEB787-43EC-D67E-E81A-48BACC9EC322";
@@ -4217,18 +4255,21 @@ createNode joint -n "Head_Jnt" -p "Neck_Jnt";
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jot" -type "string" "none";
 	setAttr ".jo" -type "double3" 76.637624883678058 89.999999999999986 0 ;
+	setAttr ".ssc" no;
 	setAttr ".radi" 0.25;
 createNode joint -n "L_Ear_Base_Jnt" -p "Head_Jnt";
 	rename -uid "9E292AB4-4BB1-3873-8B62-2E8658A87272";
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" 73.209057013631437 54.566578279578302 76.187278538028366 ;
+	setAttr ".ssc" no;
 	setAttr ".radi" 0.25;
 createNode joint -n "L_Ear_Fold_Jnt" -p "L_Ear_Base_Jnt";
 	rename -uid "59116E14-472F-2C30-33ED-C888C8CC3136";
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jot" -type "string" "none";
+	setAttr ".ssc" no;
 	setAttr ".radi" 0.25;
 createNode parentConstraint -n "L_Ear_Fold_Jnt_parentConstraint1" -p "L_Ear_Fold_Jnt";
 	rename -uid "7B0D8CC1-4943-EC9E-29EC-A8AAE387E83C";
@@ -4281,7 +4322,7 @@ createNode parentConstraint -n "L_Ear_Base_Jnt_parentConstraint1" -p "L_Ear_Base
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" -9.5416640443905503e-15 2.3854160110976336e-15 -4.2937488199757468e-14 ;
+	setAttr ".lr" -type "double3" 4.1347210859025721e-14 -4.7708320221952586e-15 -4.6118042881220995e-14 ;
 	setAttr ".rst" -type "double3" 0.069771943092346134 0.042688293457031394 -0.057284584045410231 ;
 	setAttr ".rsrr" -type "double3" 1.1034765745125392e-31 -7.9513867036587899e-16 -1.5902773407317578e-14 ;
 	setAttr -k on ".w0";
@@ -4307,6 +4348,7 @@ createNode joint -n "Nose_Jnt" -p "Head_Jnt";
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" -2.2263882770244611e-14 -3.2486805490324105e-15 -1.3847910901140587e-14 ;
+	setAttr ".ssc" no;
 	setAttr ".radi" 0.25;
 createNode parentConstraint -n "Nose_Jnt_parentConstraint1" -p "Nose_Jnt";
 	rename -uid "D8B9176B-46DC-770C-6DA4-82807FDDBC27";
@@ -4346,12 +4388,14 @@ createNode joint -n "R_Ear_Base_Jnt" -p "Head_Jnt";
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" -106.79094298636849 -54.56657827957833 -76.18727853802848 ;
+	setAttr ".ssc" no;
 	setAttr ".radi" 0.25;
 createNode joint -n "R_Ear_Fold_Jnt" -p "R_Ear_Base_Jnt";
 	rename -uid "CB970B3D-4D57-7256-44CD-D5BA4E15D294";
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jot" -type "string" "none";
+	setAttr ".ssc" no;
 	setAttr ".radi" 0.25;
 createNode parentConstraint -n "R_Ear_Fold_Jnt_parentConstraint1" -p "R_Ear_Fold_Jnt";
 	rename -uid "5EA904A3-40B9-B8EC-EF42-058487F0B5BA";
@@ -4404,7 +4448,7 @@ createNode parentConstraint -n "R_Ear_Base_Jnt_parentConstraint1" -p "R_Ear_Base
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" -1.2722218725854062e-13 4.4527765540489216e-14 -3.1805546814635657e-15 ;
+	setAttr ".lr" -type "double3" -8.9055531080978457e-14 3.8166656177562176e-14 -2.2263882770244639e-14 ;
 	setAttr ".rst" -type "double3" -0.069771900000000039 0.042683654174804957 -0.057284724731445566 ;
 	setAttr ".rsrr" -type "double3" -2.2263882770244621e-14 1.9083328088781097e-14 -1.272221872585407e-14 ;
 	setAttr -k on ".w0";
@@ -4440,7 +4484,7 @@ createNode parentConstraint -n "Head_Jnt_parentConstraint1" -p "Head_Jnt";
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" -4.4527765540489235e-14 -3.1805546814635219e-15 -1.2722218725854065e-14 ;
+	setAttr ".lr" -type "double3" 3.1805546814635168e-15 4.4139062980501586e-31 -1.5902773407317584e-14 ;
 	setAttr ".rst" -type "double3" 0.13611927576727184 -2.4868995751603509e-16 2.6397328573729254e-17 ;
 	setAttr ".rsrr" -type "double3" -1.9083328088781101e-14 -3.1805546814635195e-15 
 		-1.9083328088781101e-14 ;
@@ -4476,6 +4520,7 @@ createNode parentConstraint -n "Neck_Jnt_parentConstraint1" -p "Neck_Jnt";
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
+	setAttr ".lr" -type "double3" 0 0 -1.2722218725854067e-14 ;
 	setAttr ".rst" -type "double3" 0.17481666299074747 2.8421709430404008e-16 -7.7358838015020107e-17 ;
 	setAttr ".rsrr" -type "double3" 0 0 -6.3611093629270335e-15 ;
 	setAttr -k on ".w0";
@@ -4500,6 +4545,7 @@ createNode joint -n "L_Clav_Jnt" -p "Spine_3_Jnt";
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" 28.017165186214214 90 0 ;
+	setAttr ".ssc" no;
 	setAttr ".radi" 0.25;
 createNode joint -n "L_Front_Leg_1_Jnt" -p "L_Clav_Jnt";
 	rename -uid "A82F9BAF-4864-4823-8BAD-D58F1EEA0780";
@@ -4508,18 +4554,21 @@ createNode joint -n "L_Front_Leg_1_Jnt" -p "L_Clav_Jnt";
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" 90 25.213498697679036 -90 ;
+	setAttr ".ssc" no;
 	setAttr ".radi" 0.25;
 createNode joint -n "L_Front_Leg_2_Jnt" -p "L_Front_Leg_1_Jnt";
 	rename -uid "C4ABCA81-406D-DCC3-0EB0-4F8015B3CD43";
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" 0 0 48.091556506768192 ;
+	setAttr ".ssc" no;
 	setAttr ".radi" 0.25;
 createNode joint -n "L_Front_Leg_3_Jnt" -p "L_Front_Leg_2_Jnt";
 	rename -uid "C9161542-433A-8246-E901-6AA62B827F09";
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jot" -type "string" "none";
+	setAttr ".ssc" no;
 	setAttr ".radi" 0.25;
 createNode joint -n "L_Front_Foot" -p "L_Front_Leg_3_Jnt";
 	rename -uid "EA0683DE-4592-52F1-B783-D48171689E7E";
@@ -4528,6 +4577,7 @@ createNode joint -n "L_Front_Foot" -p "L_Front_Leg_3_Jnt";
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" -67.121942190910843 90 0 ;
+	setAttr ".ssc" no;
 	setAttr ".radi" 0.5;
 createNode orientConstraint -n "L_Front_Foot_orientConstraint1" -p "|JACKALOPE|SKELETON|ROOT_JNT|CoG_Jnt|Spine_1_Jnt|Spine_2_Jnt|Spine_3_Jnt|L_Clav_Jnt|L_Front_Leg_1_Jnt|L_Front_Leg_2_Jnt|L_Front_Leg_3_Jnt|L_Front_Foot";
 	rename -uid "C9162DBF-44A2-D017-2939-A9BEAB7961CA";
@@ -4547,7 +4597,7 @@ createNode orientConstraint -n "L_Front_Foot_orientConstraint1" -p "|JACKALOPE|S
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
 	setAttr -s 2 ".tg";
-	setAttr ".lr" -type "double3" -3.8166656177562201e-14 0 0 ;
+	setAttr ".lr" -type "double3" -1.9083328088781101e-14 0 0 ;
 	setAttr ".rsrr" -type "double3" -3.8166656177562201e-14 0 0 ;
 	setAttr -k on ".w0";
 	setAttr -k on ".w1";
@@ -4689,6 +4739,7 @@ createNode joint -n "L_Shoulder_Mid_Twist_Jnt_1" -p "L_Front_Leg_1_Jnt";
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" 0 0 -1.2722218725854056e-14 ;
+	setAttr ".ssc" no;
 	setAttr ".radi" -0.125;
 createNode parentConstraint -n "L_Shoulder_Mid_Twist_Jnt_1_parentConstraint1" -p "L_Shoulder_Mid_Twist_Jnt_1";
 	rename -uid "DE7895F1-4F05-4B6D-9FD3-849C7772ACEA";
@@ -4716,6 +4767,7 @@ createNode joint -n "L_Shoulder_End_Twist_Jnt" -p "L_Front_Leg_1_Jnt";
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" 0 0 -1.2722218725854056e-14 ;
+	setAttr ".ssc" no;
 	setAttr ".radi" -0.125;
 createNode parentConstraint -n "L_Shoulder_End_Twist_Jnt_parentConstraint1" -p "L_Shoulder_End_Twist_Jnt";
 	rename -uid "7A592C16-47B7-4028-4AAB-EF8DEC01F0A4";
@@ -4741,24 +4793,27 @@ createNode joint -n "L_Front_Leg_1_Jnt_IK" -p "L_Clav_Jnt";
 	setAttr ".ove" yes;
 	setAttr ".ovc" 13;
 	setAttr ".t" -type "double3" 0.0062637615203857419 -0.17315650939941407 0.08480109214782719 ;
-	setAttr ".r" -type "double3" -1.3136668897301094e-14 -4.9360680509151466e-15 9.4322455380804116e-31 ;
+	setAttr ".r" -type "double3" -1.3136668897301099e-14 -4.9360680509151324e-15 9.4322455380803485e-31 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" 90 25.213498697679018 -90 ;
+	setAttr ".ssc" no;
 createNode joint -n "L_Front_Leg_2_Jnt_IK" -p "L_Front_Leg_1_Jnt_IK";
 	rename -uid "AC004CF1-4FC8-D2C5-3DEA-1B8C9FD7239C";
 	setAttr ".t" -type "double3" 0.40984404008658593 -7.105427357601002e-17 3.552713678800501e-17 ;
-	setAttr ".r" -type "double3" 2.9995445043508977e-29 4.7390898099850155e-29 1.7573728707757699e-13 ;
+	setAttr ".r" -type "double3" 4.99924084058483e-30 7.898483016641693e-30 2.928954784626283e-14 ;
 	setAttr ".s" -type "double3" 1 0.99999999999999989 0.99999999999999989 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" 0 0 48.091556506768192 ;
+	setAttr ".ssc" no;
 createNode joint -n "L_Front_Leg_3_Jnt_IK" -p "L_Front_Leg_2_Jnt_IK";
 	rename -uid "5938ED2B-4C3F-5A27-8171-A2A807635E39";
 	setAttr ".t" -type "double3" 0.31221953671807917 -1.7763568394002506e-16 -5.3290705182007512e-17 ;
 	setAttr ".s" -type "double3" 1 0.99999999999999967 0.99999999999999978 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr ".ssc" no;
 createNode ikEffector -n "effector1" -p "L_Front_Leg_2_Jnt_IK";
 	rename -uid "9BE50493-4049-C41E-C783-4BBF2CF643EA";
 	setAttr ".v" no;
@@ -4770,17 +4825,20 @@ createNode joint -n "L_Front_Leg_1_Jnt_FK" -p "L_Clav_Jnt";
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" 90 25.213498697679018 -90 ;
+	setAttr ".ssc" no;
 createNode joint -n "L_Front_Leg_2_Jnt_FK" -p "L_Front_Leg_1_Jnt_FK";
 	rename -uid "BDB2ED76-48BF-899E-9C8B-9A94EE3F4614";
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" 0 0 48.091556506768192 ;
+	setAttr ".ssc" no;
 createNode joint -n "L_Front_Leg_3_Jnt_FK" -p "L_Front_Leg_2_Jnt_FK";
 	rename -uid "BBF76678-43CE-2FCA-3147-71AEF01B2675";
 	setAttr ".t" -type "double3" 0.31221953671807917 -1.7763568394002506e-16 -5.3290705182007512e-17 ;
 	setAttr ".s" -type "double3" 1 0.99999999999999967 0.99999999999999978 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr ".ssc" no;
 createNode parentConstraint -n "L_Front_Leg_2_Jnt_FK_parentConstraint1" -p "L_Front_Leg_2_Jnt_FK";
 	rename -uid "87BBA300-4A4E-5668-CA40-ACAC6ECCBBE1";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "L_Front_Leg_2_Jnt_FK_CtrlW0" -dv 
@@ -4797,7 +4855,7 @@ createNode parentConstraint -n "L_Front_Leg_2_Jnt_FK_parentConstraint1" -p "L_Fr
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" 0 0 -1.9083328088781101e-14 ;
+	setAttr ".lr" -type "double3" 0 0 -3.8166656177562201e-14 ;
 	setAttr ".rst" -type "double3" 0.40984404008658609 0 3.552713678800501e-17 ;
 	setAttr ".rsrr" -type "double3" 0 0 -6.3611093629270335e-15 ;
 	setAttr -k on ".w0";
@@ -4834,7 +4892,7 @@ createNode parentConstraint -n "L_Front_Leg_1_Jnt_FK_parentConstraint1" -p "L_Fr
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" 0 0 5.0888874903416281e-14 ;
+	setAttr ".lr" -type "double3" 0 0 4.4527765540489235e-14 ;
 	setAttr ".rst" -type "double3" 0.0062637615203857419 -0.17315650939941393 0.084801092147827245 ;
 	setAttr ".rsrr" -type "double3" 0 0 3.8166656177562201e-14 ;
 	setAttr -k on ".w0";
@@ -4895,6 +4953,7 @@ createNode joint -n "R_Clav_Jnt" -p "Spine_3_Jnt";
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" -151.98283481378581 90 0 ;
+	setAttr ".ssc" no;
 	setAttr ".radi" 0.25;
 createNode joint -n "R_Front_Leg_1_Jnt" -p "R_Clav_Jnt";
 	rename -uid "6F19B00C-4D54-0257-E7DC-9BA82AFB5FF3";
@@ -4903,18 +4962,21 @@ createNode joint -n "R_Front_Leg_1_Jnt" -p "R_Clav_Jnt";
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" 90 25.213498697679007 -90 ;
+	setAttr ".ssc" no;
 	setAttr ".radi" 0.25;
 createNode joint -n "R_Front_Leg_2_Jnt" -p "R_Front_Leg_1_Jnt";
 	rename -uid "0AE5D1BA-4D8E-36AC-CA7F-159E43BE224E";
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" -1.0561278789935315e-15 -2.3670105286471896e-15 48.091556506768171 ;
+	setAttr ".ssc" no;
 	setAttr ".radi" 0.25;
 createNode joint -n "R_Front_Leg_3_Jnt" -p "R_Front_Leg_2_Jnt";
 	rename -uid "615A7924-47DC-8E92-D99E-92BB1E330023";
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jot" -type "string" "none";
+	setAttr ".ssc" no;
 	setAttr ".radi" 0.25;
 createNode joint -n "R_Front_Foot" -p "R_Front_Leg_3_Jnt";
 	rename -uid "ABA2D0F0-46D6-A6F9-01C7-3693EC2EB421";
@@ -4923,6 +4985,7 @@ createNode joint -n "R_Front_Foot" -p "R_Front_Leg_3_Jnt";
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" -67.121942190910858 90 0 ;
+	setAttr ".ssc" no;
 	setAttr ".radi" 0.5;
 createNode orientConstraint -n "R_Front_Foot_orientConstraint1" -p "|JACKALOPE|SKELETON|ROOT_JNT|CoG_Jnt|Spine_1_Jnt|Spine_2_Jnt|Spine_3_Jnt|R_Clav_Jnt|R_Front_Leg_1_Jnt|R_Front_Leg_2_Jnt|R_Front_Leg_3_Jnt|R_Front_Foot";
 	rename -uid "E8A9EE79-4AF0-52B7-A978-33AD43F4CFDD";
@@ -4942,6 +5005,7 @@ createNode orientConstraint -n "R_Front_Foot_orientConstraint1" -p "|JACKALOPE|S
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
 	setAttr -s 2 ".tg";
+	setAttr ".lr" -type "double3" 5.7249984266343296e-14 0 0 ;
 	setAttr ".rsrr" -type "double3" 1.9083328088781097e-14 0 0 ;
 	setAttr -k on ".w0";
 	setAttr -k on ".w1";
@@ -5084,6 +5148,7 @@ createNode joint -n "R_Shoulder_Mid_Twist_Jnt_1" -p "R_Front_Leg_1_Jnt";
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" 0 0 -1.2722218725854053e-14 ;
+	setAttr ".ssc" no;
 	setAttr ".radi" -0.125;
 createNode parentConstraint -n "R_Shoulder_Mid_Twist_Jnt_1_parentConstraint1" -p "R_Shoulder_Mid_Twist_Jnt_1";
 	rename -uid "65EF1CA7-4BA9-1974-6726-CCA365F97620";
@@ -5111,6 +5176,7 @@ createNode joint -n "R_Shoulder_End_Twist_Jnt" -p "R_Front_Leg_1_Jnt";
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" 0 0 -1.2722218725854053e-14 ;
+	setAttr ".ssc" no;
 	setAttr ".radi" -0.125;
 createNode parentConstraint -n "R_Shoulder_End_Twist_Jnt_parentConstraint1" -p "R_Shoulder_End_Twist_Jnt";
 	rename -uid "B7177C86-46F8-2BC1-99EA-A2B30142AEA3";
@@ -5136,25 +5202,28 @@ createNode joint -n "R_Front_Leg_1_Jnt_IK" -p "R_Clav_Jnt";
 	setAttr ".ove" yes;
 	setAttr ".ovc" 13;
 	setAttr ".t" -type "double3" -0.0062640000000000204 0.17315699999999992 -0.084801000000000099 ;
-	setAttr ".r" -type "double3" 1.3136672474652737e-14 4.9360585302733587e-15 9.432236164953877e-31 ;
+	setAttr ".r" -type "double3" 7.9921687399758333e-07 3.0030293257642202e-07 2.0944577043586803e-15 ;
 	setAttr ".s" -type "double3" 1 1 0.99999999999999978 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" 90 25.213498697679022 -90 ;
+	setAttr ".ssc" no;
 createNode joint -n "R_Front_Leg_2_Jnt_IK" -p "R_Front_Leg_1_Jnt_IK";
 	rename -uid "9A8F4F25-4C24-5C30-EE7B-0996190292CF";
 	setAttr ".t" -type "double3" -0.40984435774047528 3.2747475888328379e-07 -1.0658141036401502e-16 ;
-	setAttr ".r" -type "double3" -2.9283038755162011e-29 -1.047525853197768e-28 -1.0293803737345831e-13 ;
+	setAttr ".r" -type "double3" -1.9033975190855308e-28 -6.8089180457854918e-28 -6.6909724292747901e-13 ;
 	setAttr ".s" -type "double3" 0.99999999999999989 0.99999999999999956 0.99999999999999978 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" 0 0 48.091556506768171 ;
+	setAttr ".ssc" no;
 createNode joint -n "R_Front_Leg_3_Jnt_IK" -p "R_Front_Leg_2_Jnt_IK";
 	rename -uid "7C2AFA43-4BC0-4218-8271-FDA777B8AFCC";
 	setAttr ".t" -type "double3" -0.31221934715543997 -3.0484521573725942e-08 8.8817841970012528e-17 ;
 	setAttr ".s" -type "double3" 1 0.99999999999999989 1.0000000000000004 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr ".ssc" no;
 createNode ikEffector -n "effector2" -p "R_Front_Leg_2_Jnt_IK";
 	rename -uid "C55D1DD8-46BA-BC09-75FD-A4B2C3118530";
 	setAttr ".v" no;
@@ -5166,17 +5235,20 @@ createNode joint -n "R_Front_Leg_1_Jnt_FK" -p "R_Clav_Jnt";
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" 90 25.213498697679022 -90 ;
+	setAttr ".ssc" no;
 createNode joint -n "R_Front_Leg_2_Jnt_FK" -p "R_Front_Leg_1_Jnt_FK";
 	rename -uid "C188BFB6-42A4-E60D-1588-A3B39E462826";
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" 0 0 48.091556506768171 ;
+	setAttr ".ssc" no;
 createNode joint -n "R_Front_Leg_3_Jnt_FK" -p "R_Front_Leg_2_Jnt_FK";
 	rename -uid "1112E4C4-4CE6-05B5-5FA9-0F9021ED892D";
 	setAttr ".t" -type "double3" -0.31221934715543997 -3.0484521573725942e-08 8.8817841970012528e-17 ;
 	setAttr ".s" -type "double3" 1 0.99999999999999989 1.0000000000000004 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr ".ssc" no;
 createNode parentConstraint -n "R_Front_Leg_2_Jnt_FK_parentConstraint1" -p "R_Front_Leg_2_Jnt_FK";
 	rename -uid "6F72D6F6-486C-15A6-95C8-CAB985219E35";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "R_Front_Leg_2_Jnt_FK_CtrlW0" -dv 
@@ -5193,7 +5265,7 @@ createNode parentConstraint -n "R_Front_Leg_2_Jnt_FK_parentConstraint1" -p "R_Fr
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" 0 0 -6.3611093629270335e-15 ;
+	setAttr ".lr" -type "double3" 0 0 -3.8166656177562201e-14 ;
 	setAttr ".rst" -type "double3" -0.40984435774047534 3.274747589365745e-07 -1.2434497875801754e-16 ;
 	setAttr ".rsrr" -type "double3" 0 0 -6.3611093629270335e-15 ;
 	setAttr -k on ".w0";
@@ -5230,7 +5302,7 @@ createNode parentConstraint -n "R_Front_Leg_1_Jnt_FK_parentConstraint1" -p "R_Fr
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" 0 0 1.9083328088781101e-14 ;
+	setAttr ".lr" -type "double3" 0 0 1.2722218725854067e-14 ;
 	setAttr ".rst" -type "double3" -0.006264000000000056 0.17315700000000006 -0.084801000000000099 ;
 	setAttr ".rsrr" -type "double3" 0 0 1.2722218725854067e-14 ;
 	setAttr -k on ".w0";
@@ -5413,6 +5485,7 @@ createNode joint -n "Spine_1_Jnt_IK" -p "CoG_Jnt";
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" -90 -69.89760243816383 90 ;
+	setAttr ".ssc" no;
 createNode joint -n "Spine_2_Jnt_IK" -p "Spine_1_Jnt_IK";
 	rename -uid "62C997AB-4C64-F968-D51D-3AA576E9C472";
 	setAttr ".t" -type "double3" 0.33755319669142603 5.6843418860808016e-16 -1.2319723248954578e-32 ;
@@ -5420,6 +5493,7 @@ createNode joint -n "Spine_2_Jnt_IK" -p "Spine_1_Jnt_IK";
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" 0 0 -28.114653390985797 ;
+	setAttr ".ssc" no;
 createNode joint -n "Spine_3_Jnt_IK" -p "Spine_2_Jnt_IK";
 	rename -uid "3164FEFA-4D8E-F835-46D0-C89C3E2AB689";
 	setAttr ".t" -type "double3" 0.3271519736147277 -1.4210854715202004e-16 -3.4231788126239826e-17 ;
@@ -5427,6 +5501,7 @@ createNode joint -n "Spine_3_Jnt_IK" -p "Spine_2_Jnt_IK";
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" 0 0 36.029421015363816 ;
+	setAttr ".ssc" no;
 createNode ikEffector -n "effector5" -p "Spine_2_Jnt_IK";
 	rename -uid "C6C831F2-4FA5-B33E-D549-F2ADC835049F";
 	setAttr ".v" no;
@@ -5454,16 +5529,19 @@ createNode joint -n "Spine_1_Jnt_FK" -p "CoG_Jnt";
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" -90 -69.89760243816383 90 ;
+	setAttr ".ssc" no;
 createNode joint -n "Spine_2_Jnt_FK" -p "Spine_1_Jnt_FK";
 	rename -uid "99CB4ACA-432D-17DB-6C55-9CA0132AA2D4";
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" 0 0 -28.114653390985797 ;
+	setAttr ".ssc" no;
 createNode joint -n "Spine_3_Jnt_FK" -p "Spine_2_Jnt_FK";
 	rename -uid "148DCD28-4C4C-5A6C-06B7-02BB551FA1AC";
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" 0 0 36.029421015363816 ;
+	setAttr ".ssc" no;
 createNode parentConstraint -n "Spine_3_Jnt_FK_parentConstraint1" -p "Spine_3_Jnt_FK";
 	rename -uid "6C9DC897-41B2-3E71-9D04-97B12993A9BD";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "Spine_3_Jnt_FK_CtrlW0" -dv 1 -min 
@@ -5580,6 +5658,7 @@ createNode joint -n "ROOT_SKIN_JNT" -p "SKELETON";
 	setAttr ".ovc" 9;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr ".ssc" no;
 	setAttr ".radi" 1.25;
 createNode joint -n "CoG_Skin_Jnt" -p "ROOT_SKIN_JNT";
 	rename -uid "00D6D0B2-483D-F078-B99F-A18DF45DAF56";
@@ -5588,6 +5667,7 @@ createNode joint -n "CoG_Skin_Jnt" -p "ROOT_SKIN_JNT";
 	setAttr ".ovc" 9;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr ".ssc" no;
 	setAttr ".bps" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 78.445777893066435 -44.547084808349609 1;
 	setAttr ".radi" 0.625;
 createNode joint -n "Pelvis_Skin_Jnt" -p "CoG_Skin_Jnt";
@@ -5598,6 +5678,7 @@ createNode joint -n "Pelvis_Skin_Jnt" -p "CoG_Skin_Jnt";
 	setAttr ".ovc" 9;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr ".ssc" no;
 	setAttr ".bps" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 78.445777893066406 -44.547084808349609 1;
 	setAttr ".radi" 0.4375;
 createNode joint -n "Tail_Skin_Jnt" -p "Pelvis_Skin_Jnt";
@@ -5609,6 +5690,7 @@ createNode joint -n "Tail_Skin_Jnt" -p "Pelvis_Skin_Jnt";
 	setAttr ".ovc" 9;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr ".ssc" no;
 	setAttr ".bps" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 64.844668539305303 -68.426925855867978 1;
 	setAttr ".radi" 0.3125;
 createNode parentConstraint -n "Tail_Skin_Jnt_parentConstraint1" -p "Tail_Skin_Jnt";
@@ -5659,6 +5741,7 @@ createNode joint -n "R_Rear_Leg_1_Skin_Jnt" -p "Pelvis_Skin_Jnt";
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" -90.000000000000114 68.707029364381924 90.000000000000838 ;
+	setAttr ".ssc" no;
 	setAttr ".radi" 0.3125;
 createNode joint -n "R_Rear_Leg_2_Skin_Jnt" -p "R_Rear_Leg_1_Skin_Jnt";
 	rename -uid "03F7F115-488C-C7BB-E90C-F0AE9D8159AA";
@@ -5670,6 +5753,7 @@ createNode joint -n "R_Rear_Leg_2_Skin_Jnt" -p "R_Rear_Leg_1_Skin_Jnt";
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" 0 0 -119.69374427228732 ;
+	setAttr ".ssc" no;
 	setAttr ".radi" 0.3125;
 createNode joint -n "R_Rear_Leg_3_Skin_Jnt" -p "R_Rear_Leg_2_Skin_Jnt";
 	rename -uid "1504D51D-46CB-47E8-DBB9-00B9BF42B4F6";
@@ -5680,6 +5764,7 @@ createNode joint -n "R_Rear_Leg_3_Skin_Jnt" -p "R_Rear_Leg_2_Skin_Jnt";
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" 0 0 86.784120924047883 ;
+	setAttr ".ssc" no;
 	setAttr ".radi" 0.3125;
 createNode joint -n "R_Rear_Leg_4_Skin_Jnt" -p "R_Rear_Leg_3_Skin_Jnt";
 	rename -uid "6184644D-43D4-3F9A-C13F-4F83501C484A";
@@ -5691,6 +5776,7 @@ createNode joint -n "R_Rear_Leg_4_Skin_Jnt" -p "R_Rear_Leg_3_Skin_Jnt";
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jot" -type "string" "none";
+	setAttr ".ssc" no;
 	setAttr ".radi" 0.3125;
 createNode joint -n "R_Rear_Foot_Skin_Jnt" -p "R_Rear_Leg_4_Skin_Jnt";
 	rename -uid "295A1978-4446-6038-3F35-539F979B9596";
@@ -5702,6 +5788,7 @@ createNode joint -n "R_Rear_Foot_Skin_Jnt" -p "R_Rear_Leg_4_Skin_Jnt";
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" -54.202593983857547 89.999999999999105 0 ;
+	setAttr ".ssc" no;
 	setAttr ".radi" 0.625;
 createNode parentConstraint -n "R_Rear_Foot_Skin_Jnt_parentConstraint1" -p "R_Rear_Foot_Skin_Jnt";
 	rename -uid "F98C6788-4714-433B-AAD1-2C8CD429F48B";
@@ -5928,6 +6015,7 @@ createNode joint -n "L_Rear_Leg_1_Skin_Jnt" -p "Pelvis_Skin_Jnt";
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" 90 -68.707029364381881 -90.000000000000909 ;
+	setAttr ".ssc" no;
 	setAttr ".radi" 0.3125;
 createNode joint -n "L_Rear_Leg_2_Skin_Jnt" -p "L_Rear_Leg_1_Skin_Jnt";
 	rename -uid "DA645A9D-4D75-B0C1-7D42-6C960F62599C";
@@ -5939,6 +6027,7 @@ createNode joint -n "L_Rear_Leg_2_Skin_Jnt" -p "L_Rear_Leg_1_Skin_Jnt";
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" 0 0 -119.69374427228732 ;
+	setAttr ".ssc" no;
 	setAttr ".radi" 0.3125;
 createNode joint -n "L_Rear_Leg_3_Skin_Jnt" -p "L_Rear_Leg_2_Skin_Jnt";
 	rename -uid "9C1068BC-467F-51CA-3FF4-09900F778627";
@@ -5950,6 +6039,7 @@ createNode joint -n "L_Rear_Leg_3_Skin_Jnt" -p "L_Rear_Leg_2_Skin_Jnt";
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" 0 0 86.784120924047883 ;
+	setAttr ".ssc" no;
 	setAttr ".radi" 0.3125;
 createNode joint -n "L_Rear_Leg_4_Skin_Jnt" -p "L_Rear_Leg_3_Skin_Jnt";
 	rename -uid "817D63DC-4A40-F93E-7352-8598DFA0AA31";
@@ -5961,6 +6051,7 @@ createNode joint -n "L_Rear_Leg_4_Skin_Jnt" -p "L_Rear_Leg_3_Skin_Jnt";
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jot" -type "string" "none";
+	setAttr ".ssc" no;
 	setAttr ".radi" 0.3125;
 createNode joint -n "L_Rear_Foot_Skin_Jnt" -p "L_Rear_Leg_4_Skin_Jnt";
 	rename -uid "58E6F825-441F-104F-2C57-12AB72AB6DC9";
@@ -5972,6 +6063,7 @@ createNode joint -n "L_Rear_Foot_Skin_Jnt" -p "L_Rear_Leg_4_Skin_Jnt";
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" -54.202593983857597 89.999999999999091 0 ;
+	setAttr ".ssc" no;
 	setAttr ".radi" 0.625;
 createNode parentConstraint -n "L_Rear_Foot_Skin_Jnt_parentConstraint1" -p "L_Rear_Foot_Skin_Jnt";
 	rename -uid "E5A02E81-4682-73C2-E668-BA9DBC676EE1";
@@ -6234,6 +6326,7 @@ createNode joint -n "Spine_1_Skin_Jnt" -p "CoG_Skin_Jnt";
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" -90 -69.89760243816383 90 ;
+	setAttr ".ssc" no;
 	setAttr ".radi" 0.3125;
 createNode joint -n "Spine_2_Skin_Jnt" -p "Spine_1_Skin_Jnt";
 	rename -uid "1F05215C-4399-9CF7-A040-B4B828C68643";
@@ -6243,6 +6336,7 @@ createNode joint -n "Spine_2_Skin_Jnt" -p "Spine_1_Skin_Jnt";
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" 0 0 -28.114653390985797 ;
+	setAttr ".ssc" no;
 	setAttr ".radi" 0.3125;
 createNode joint -n "Spine_3_Skin_Jnt" -p "Spine_2_Skin_Jnt";
 	rename -uid "71BE8498-4A53-3412-7B71-A8BD209DE75B";
@@ -6252,6 +6346,7 @@ createNode joint -n "Spine_3_Skin_Jnt" -p "Spine_2_Skin_Jnt";
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" 0 0 36.029421015363816 ;
+	setAttr ".ssc" no;
 	setAttr ".radi" 0.3125;
 createNode joint -n "Neck_Skin_Jnt" -p "Spine_3_Skin_Jnt";
 	rename -uid "39D81025-4DB1-6E46-FB7B-2BB7DB8151CB";
@@ -6261,6 +6356,7 @@ createNode joint -n "Neck_Skin_Jnt" -p "Spine_3_Skin_Jnt";
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" 0 0 48.620459697463829 ;
+	setAttr ".ssc" no;
 	setAttr ".radi" 0.3125;
 createNode joint -n "Head_Skin_Jnt" -p "Neck_Skin_Jnt";
 	rename -uid "7F72F222-4414-AD62-F072-05B33BAD1965";
@@ -6271,6 +6367,7 @@ createNode joint -n "Head_Skin_Jnt" -p "Neck_Skin_Jnt";
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jot" -type "string" "none";
 	setAttr ".jo" -type "double3" 76.637624883678058 89.999999999999986 0 ;
+	setAttr ".ssc" no;
 	setAttr ".radi" 0.3125;
 createNode joint -n "L_Ear_Base_Skin_Jnt" -p "Head_Skin_Jnt";
 	rename -uid "B007B835-4355-4FFA-B821-6C9F888F45C3";
@@ -6280,6 +6377,7 @@ createNode joint -n "L_Ear_Base_Skin_Jnt" -p "Head_Skin_Jnt";
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" 73.20905701363148 54.566578279578309 76.187278538028394 ;
+	setAttr ".ssc" no;
 	setAttr ".radi" 0.3125;
 createNode joint -n "L_Ear_Fold_Skin_Jnt" -p "L_Ear_Base_Skin_Jnt";
 	rename -uid "B1BE7FE7-4ED8-6ECD-C583-ABB6C470785F";
@@ -6289,6 +6387,7 @@ createNode joint -n "L_Ear_Fold_Skin_Jnt" -p "L_Ear_Base_Skin_Jnt";
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jot" -type "string" "none";
+	setAttr ".ssc" no;
 	setAttr ".radi" 0.3125;
 createNode parentConstraint -n "L_Ear_Fold_Skin_Jnt_parentConstraint1" -p "L_Ear_Fold_Skin_Jnt";
 	rename -uid "64E55831-417B-AD46-73A9-07AC53EA7C53";
@@ -6380,6 +6479,7 @@ createNode joint -n "Nose_Skin_Jnt" -p "Head_Skin_Jnt";
 	setAttr ".ovc" 9;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr ".ssc" no;
 	setAttr ".radi" 0.3125;
 createNode parentConstraint -n "Nose_Skin_Jnt_parentConstraint1" -p "Nose_Skin_Jnt";
 	rename -uid "15550FAE-4599-6994-BC71-8D84224FBAA6";
@@ -6429,6 +6529,7 @@ createNode joint -n "R_Ear_Base_Skin_Jnt" -p "Head_Skin_Jnt";
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" -106.79094298636851 -54.566578279578309 -76.187278538028508 ;
+	setAttr ".ssc" no;
 	setAttr ".radi" 0.3125;
 createNode joint -n "R_Ear_Fold_Skin_Jnt" -p "R_Ear_Base_Skin_Jnt";
 	rename -uid "68F61BE5-4049-8C62-40D8-3AB0BAAEC42E";
@@ -6438,6 +6539,7 @@ createNode joint -n "R_Ear_Fold_Skin_Jnt" -p "R_Ear_Base_Skin_Jnt";
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jot" -type "string" "none";
+	setAttr ".ssc" no;
 	setAttr ".radi" 0.3125;
 createNode parentConstraint -n "R_Ear_Fold_Skin_Jnt_parentConstraint1" -p "R_Ear_Fold_Skin_Jnt";
 	rename -uid "171694E9-4110-0BF6-4996-AFB7AEE55F1B";
@@ -6614,6 +6716,7 @@ createNode joint -n "L_Clav_Skin_Jnt" -p "Spine_3_Skin_Jnt";
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" 28.017165186214218 90 0 ;
+	setAttr ".ssc" no;
 	setAttr ".radi" 0.3125;
 createNode joint -n "L_Front_Leg_1_Skin_Jnt" -p "L_Clav_Skin_Jnt";
 	rename -uid "380FA325-4386-F5FA-1F8E-D29E37525774";
@@ -6623,6 +6726,7 @@ createNode joint -n "L_Front_Leg_1_Skin_Jnt" -p "L_Clav_Skin_Jnt";
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" 90 25.213498697679036 -90 ;
+	setAttr ".ssc" no;
 	setAttr ".radi" 0.3125;
 createNode joint -n "L_Front_Leg_2_Skin_Jnt" -p "L_Front_Leg_1_Skin_Jnt";
 	rename -uid "379B8317-49AC-55C3-1C49-02811D76654D";
@@ -6632,6 +6736,7 @@ createNode joint -n "L_Front_Leg_2_Skin_Jnt" -p "L_Front_Leg_1_Skin_Jnt";
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" 0 0 48.091556506768192 ;
+	setAttr ".ssc" no;
 	setAttr ".radi" 0.3125;
 createNode joint -n "L_Front_Leg_3_Skin_Jnt" -p "L_Front_Leg_2_Skin_Jnt";
 	rename -uid "CEF8AE81-44EC-9234-02C4-5491D434C332";
@@ -6641,6 +6746,7 @@ createNode joint -n "L_Front_Leg_3_Skin_Jnt" -p "L_Front_Leg_2_Skin_Jnt";
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jot" -type "string" "none";
+	setAttr ".ssc" no;
 	setAttr ".radi" 0.3125;
 createNode joint -n "L_Front_Foot" -p "L_Front_Leg_3_Skin_Jnt";
 	rename -uid "9DFB0069-4389-0A35-5BA3-489882955CDF";
@@ -6650,6 +6756,7 @@ createNode joint -n "L_Front_Foot" -p "L_Front_Leg_3_Skin_Jnt";
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" -67.121942190910858 90 0 ;
+	setAttr ".ssc" no;
 	setAttr ".radi" 0.625;
 createNode parentConstraint -n "L_Front_Foot_parentConstraint1" -p "|JACKALOPE|SKELETON|ROOT_SKIN_JNT|CoG_Skin_Jnt|Spine_1_Skin_Jnt|Spine_2_Skin_Jnt|Spine_3_Skin_Jnt|L_Clav_Skin_Jnt|L_Front_Leg_1_Skin_Jnt|L_Front_Leg_2_Skin_Jnt|L_Front_Leg_3_Skin_Jnt|L_Front_Foot";
 	rename -uid "B1BE0FFC-4D0C-9353-132F-2194E3EC96B3";
@@ -6874,6 +6981,7 @@ createNode joint -n "R_Clav_Skin_Jnt" -p "Spine_3_Skin_Jnt";
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" -151.98283481378581 90 0 ;
+	setAttr ".ssc" no;
 	setAttr ".radi" 0.3125;
 createNode joint -n "R_Front_Leg_1_Skin_Jnt" -p "R_Clav_Skin_Jnt";
 	rename -uid "1C8D1B74-4292-5BCA-22BD-1187FB9BDD18";
@@ -6883,6 +6991,7 @@ createNode joint -n "R_Front_Leg_1_Skin_Jnt" -p "R_Clav_Skin_Jnt";
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" 90 25.213498697679007 -90 ;
+	setAttr ".ssc" no;
 	setAttr ".radi" 0.3125;
 createNode joint -n "R_Front_Leg_2_Skin_Jnt" -p "R_Front_Leg_1_Skin_Jnt";
 	rename -uid "769CFE07-46F5-B93E-2C40-009EC0E9E12C";
@@ -6892,6 +7001,7 @@ createNode joint -n "R_Front_Leg_2_Skin_Jnt" -p "R_Front_Leg_1_Skin_Jnt";
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" 0 0 48.091556506768171 ;
+	setAttr ".ssc" no;
 	setAttr ".radi" 0.3125;
 createNode joint -n "R_Front_Leg_3_Skin_Jnt" -p "R_Front_Leg_2_Skin_Jnt";
 	rename -uid "64252465-4832-D1A0-8B76-6D849FF0DC21";
@@ -6901,6 +7011,7 @@ createNode joint -n "R_Front_Leg_3_Skin_Jnt" -p "R_Front_Leg_2_Skin_Jnt";
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jot" -type "string" "none";
+	setAttr ".ssc" no;
 	setAttr ".radi" 0.3125;
 createNode joint -n "R_Front_Foot" -p "R_Front_Leg_3_Skin_Jnt";
 	rename -uid "0A6A1B4A-4133-F32C-94ED-EF85B534D165";
@@ -6910,6 +7021,7 @@ createNode joint -n "R_Front_Foot" -p "R_Front_Leg_3_Skin_Jnt";
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" -67.121942190910858 90 0 ;
+	setAttr ".ssc" no;
 	setAttr ".radi" 0.625;
 createNode parentConstraint -n "R_Front_Foot_parentConstraint1" -p "|JACKALOPE|SKELETON|ROOT_SKIN_JNT|CoG_Skin_Jnt|Spine_1_Skin_Jnt|Spine_2_Skin_Jnt|Spine_3_Skin_Jnt|R_Clav_Skin_Jnt|R_Front_Leg_1_Skin_Jnt|R_Front_Leg_2_Skin_Jnt|R_Front_Leg_3_Skin_Jnt|R_Front_Foot";
 	rename -uid "1EC29BE8-4102-840D-D472-9C84C67A74DC";
@@ -7277,6 +7389,22 @@ createNode scaleConstraint -n "ROOT_SKIN_JNT_scaleConstraint1" -p "ROOT_SKIN_JNT
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
 	setAttr -k on ".w0";
+createNode scaleConstraint -n "SKELETON_scaleConstraint1" -p "SKELETON";
+	rename -uid "44CDD450-4A93-2D7B-1A90-5DB9AE5564D0";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "CONTROLSW0" -dv 1 -min 0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr -k on ".w0";
 createNode transform -n "CONTROLS" -p "JACKALOPE";
 	rename -uid "DC15DBF2-453F-3BC3-77B5-63B297BF8660";
 	setAttr ".t" -type "double3" 0 -0.31613265261034329 0 ;
@@ -7369,6 +7497,8 @@ createNode transform -n "Transform_Ctrl_Grp" -p "CONTROLS";
 	rename -uid "69B2C28F-49DD-C6CD-D894-6693BA0D0293";
 createNode transform -n "Transform_Ctrl" -p "Transform_Ctrl_Grp";
 	rename -uid "4E79BA0B-488E-1157-F372-8998CE571BB9";
+	addAttr -ci true -sn "MasterScale" -ln "MasterScale" -dv 1 -min 0.1 -max 10 -at "double";
+	setAttr -k on ".MasterScale";
 createNode nurbsCurve -n "Transform_CtrlShape" -p "Transform_Ctrl";
 	rename -uid "7456CB79-4334-DC5A-45B5-D2A9247AE786";
 	setAttr -k off ".v";
@@ -7655,7 +7785,7 @@ createNode transform -n "Front_Leg_IK_Ctrl" -p "Front_Leg_IK_Ctrl_Grp";
 	rename -uid "50FD1E28-431B-CAED-DEF3-03A6859A153E";
 	addAttr -ci true -k true -sn "Local_Space" -ln "Local_Space" -min 0 -max 2 -en 
 		"World:Transform_Ctrl:CoG_Jnt_Ctrl" -at "enum";
-	setAttr -k on ".Local_Space";
+	setAttr -k on ".Local_Space" 1;
 createNode nurbsCurve -n "Front_Leg_IK_CtrlShape" -p "Front_Leg_IK_Ctrl";
 	rename -uid "A48D7203-4CC3-6E67-B29B-A4AD6F79FCBF";
 	setAttr -k off ".v";
@@ -7983,7 +8113,7 @@ createNode transform -n "Rear_Leg_IK_Ctrl_Ctrl" -p "Rear_Leg_IK_Ctrl_Ctrl_Grp";
 	rename -uid "D11366CD-4FBB-9184-33D8-82B494A9CC2E";
 	addAttr -ci true -k true -sn "Local_Space" -ln "Local_Space" -min 0 -max 2 -en 
 		"World:Transform_Ctrl:CoG_Jnt_Ctrl" -at "enum";
-	setAttr -k on ".Local_Space";
+	setAttr -k on ".Local_Space" 1;
 createNode nurbsCurve -n "Rear_Leg_IK_Ctrl_CtrlShape" -p "Rear_Leg_IK_Ctrl_Ctrl";
 	rename -uid "D44510E7-4214-4BDE-63AC-18A9F9EF236B";
 	setAttr -k off ".v";
@@ -8849,7 +8979,7 @@ createNode parentConstraint -n "R_Ear_Fold_Jnt_Ctrl_Grp_parentConstraint2" -p "R
 		3.7803504504552168e-08 ;
 	setAttr ".tg[0].tor" -type "double3" 7.9513867036587922e-14 -4.9298597562684515e-14 
 		-1.272221872585407e-14 ;
-	setAttr ".lr" -type "double3" -106.79094298636855 -54.566578279578309 -76.187278538028536 ;
+	setAttr ".lr" -type "double3" -106.79094298636856 -54.566578279578316 -76.187278538028536 ;
 	setAttr ".rst" -type "double3" -0.12312100000000005 1.32911 0.0099395400000000227 ;
 	setAttr ".rsrr" -type "double3" -106.79094298636853 -54.566578279578316 -76.187278538028522 ;
 	setAttr -k on ".w0";
@@ -9081,7 +9211,7 @@ createNode transform -n "Rear_Legs_IKFK" -p "Rear_Leg_IKFK_Ctrl_Grp";
 		0 -max 1 -at "double";
 	addAttr -ci true -k true -sn "FollowRotate" -ln "FollowRotate" -dv 1 -min 0 -max 
 		1 -at "double";
-	setAttr -k on ".RearIKFK" 1;
+	setAttr -k on ".RearIKFK";
 	setAttr -k on ".FollowTranslate";
 	setAttr -k on ".FollowRotate";
 createNode nurbsCurve -n "Rear_Legs_IKFKShape" -p "Rear_Legs_IKFK";
@@ -9174,7 +9304,7 @@ createNode transform -n "Front_Legs_IKFK" -p "Front_Leg_IKFK_Ctrl_Grp";
 		0 -max 1 -at "double";
 	addAttr -ci true -k true -sn "FollowRotate" -ln "FollowRotate" -dv 1 -min 0 -max 
 		1 -at "double";
-	setAttr -k on ".FrontIKFK" 1;
+	setAttr -k on ".FrontIKFK";
 	setAttr -k on ".FollowTranslate";
 	setAttr -k on ".FollowRotate";
 createNode nurbsCurve -n "Front_Legs_IKFKShape" -p "Front_Legs_IKFK";
@@ -10204,6 +10334,7 @@ createNode transform -n "L_Front_Leg_1_Jnt_FK_Ctrl" -p "L_Front_Leg_1_Jnt_FK_Ctr
 	addAttr -ci true -k true -sn "FollowRotate" -ln "FollowRotate" -dv 1 -min 0 -max 
 		1 -at "double";
 	setAttr ".rp" -type "double3" 0 1.7763568394002505e-17 0 ;
+	setAttr ".rpt" -type "double3" 1.1832913578315177e-32 -3.3526588471893004e-32 0 ;
 	setAttr ".sp" -type "double3" 0 1.7763568394002505e-17 0 ;
 	setAttr -k on ".FollowTranslate";
 	setAttr -k on ".FollowRotate";
@@ -10800,6 +10931,7 @@ createNode transform -n "L_Rear_Leg_2_Jnt_FK_Ctrl" -p "L_Rear_Leg_2_Jnt_FK_Ctrl_
 	addAttr -ci true -k true -sn "FollowRotate" -ln "FollowRotate" -dv 1 -min 0 -max 
 		1 -at "double";
 	setAttr ".rp" -type "double3" 3.552713678800501e-17 -7.105427357601002e-17 0 ;
+	setAttr ".rpt" -type "double3" -1.6171648557030743e-31 3.1554436208840473e-32 0 ;
 	setAttr ".sp" -type "double3" 3.552713678800501e-17 -7.105427357601002e-17 0 ;
 	setAttr -k on ".FollowTranslate";
 	setAttr -k on ".FollowRotate";
@@ -10901,6 +11033,7 @@ createNode transform -n "L_Rear_Leg_3_Jnt_FK_Ctrl" -p "L_Rear_Leg_3_Jnt_FK_Ctrl_
 	addAttr -ci true -k true -sn "FollowRotate" -ln "FollowRotate" -dv 1 -min 0 -max 
 		1 -at "double";
 	setAttr ".rp" -type "double3" 0 -7.105427357601002e-17 3.552713678800501e-17 ;
+	setAttr ".rpt" -type "double3" 0 3.6287601640166545e-31 0 ;
 	setAttr ".sp" -type "double3" 0 -7.105427357601002e-17 3.552713678800501e-17 ;
 	setAttr -k on ".FollowTranslate";
 	setAttr -k on ".FollowRotate";
@@ -11295,6 +11428,7 @@ createNode transform -n "L_Clav_Jnt_Ctrl" -p "L_Clav_Jnt_Ctrl_Grp";
 	addAttr -ci true -k true -sn "FollowRotate" -ln "FollowRotate" -dv 1 -min 0 -max 
 		1 -at "double";
 	setAttr ".rp" -type "double3" 0 -1.4210854715202004e-16 0 ;
+	setAttr ".rpt" -type "double3" 6.3108872417680946e-32 3.3132158019282495e-31 0 ;
 	setAttr ".sp" -type "double3" 0 -1.4210854715202004e-16 0 ;
 	setAttr -k on ".FollowTranslate";
 	setAttr -k on ".FollowRotate";
@@ -11390,6 +11524,7 @@ createNode joint -n "Spine_Shoulder_Ctrl_Jnt" -p "Deformers";
 	setAttr ".ovc" 17;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr ".ssc" no;
 	setAttr ".bps" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 3.4231788360010321e-15 85.487442016601562 19.547697067260742 1;
 	setAttr ".radi" 0.25;
 createNode parentConstraint -n "Spine_Shoulder_Ctrl_Jnt_parentConstraint1" -p "Spine_Shoulder_Ctrl_Jnt";
@@ -11654,12 +11789,14 @@ createNode joint -n "R_Hip_IK_Joint_1" -p "R_Hip_IK_Joint_Grp";
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" 7.9513867036587935e-15 1.272221872585407e-14 1.272221872585407e-14 ;
+	setAttr ".ssc" no;
 createNode joint -n "R_Hip_IK_Joint_2" -p "R_Hip_IK_Joint_1";
 	rename -uid "B753EC96-4653-9C71-D75C-EBBF5857A142";
 	setAttr ".t" -type "double3" 0.25831423138592224 1.4210854715202004e-16 2.0190405857649289e-17 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jot" -type "string" "none";
+	setAttr ".ssc" no;
 createNode ikEffector -n "effector8" -p "R_Hip_IK_Joint_1";
 	rename -uid "A72B2FF3-422D-5AF0-781F-EAA992D07882";
 	setAttr ".v" no;
@@ -11929,12 +12066,14 @@ createNode joint -n "L_Hip_IK_Joint_1" -p "L_Hip_IK_Joint_Grp";
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" 1.5902773407317592e-15 -6.3611093629270351e-15 1.272221872585407e-14 ;
+	setAttr ".ssc" no;
 createNode joint -n "L_Hip_IK_Joint_2" -p "L_Hip_IK_Joint_1";
 	rename -uid "0A261790-4701-31F2-7863-9EBDBDCEB10D";
 	setAttr ".t" -type "double3" 0.2583145103851292 2.4868995751603509e-16 -8.4947892778177835e-17 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jot" -type "string" "none";
+	setAttr ".ssc" no;
 createNode ikEffector -n "effector7" -p "L_Hip_IK_Joint_1";
 	rename -uid "41B699E9-4E14-1A70-1FF5-C9877C8279DA";
 	setAttr ".v" no;
@@ -12199,17 +12338,18 @@ createNode transform -n "L_Shoulder_IK_Joint_Grp" -p "L_Shoulder_IK_Jnt_System";
 createNode joint -n "L_Shoulder_IK_Joint_1" -p "L_Shoulder_IK_Joint_Grp";
 	rename -uid "3F771B51-455E-284D-576A-E1A90363420E";
 	setAttr ".t" -type "double3" 0 7.9936057773011268e-17 0 ;
-	setAttr ".r" -type "double3" -1.4033418597069752e-14 -6.871243309752762e-29 -9.9071306310170339e-30 ;
 	setAttr ".s" -type "double3" 0.99999999999999711 1.0000000000000007 1.000000000000002 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" -2.2263882770244636e-14 2.2263882770244557e-14 -4.6913181551586748e-14 ;
+	setAttr ".ssc" no;
 createNode joint -n "L_Shoulder_IK_Joint_2" -p "L_Shoulder_IK_Joint_1";
 	rename -uid "13C1C3C1-4385-A3C3-96D8-3F83295A648D";
 	setAttr ".t" -type "double3" 0.25395478790254045 1.2434497875801754e-15 1.7928370344828368e-16 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jot" -type "string" "none";
+	setAttr ".ssc" no;
 createNode ikEffector -n "effector10" -p "L_Shoulder_IK_Joint_1";
 	rename -uid "D311FD7D-4BBF-2E70-A08B-C99A66BF93A1";
 	setAttr ".v" no;
@@ -12271,7 +12411,7 @@ createNode parentConstraint -n "L_Shoulder_Master_Grp_parentConstraint1" -p "L_S
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" 0.30626376152038681 -0.30095424560886991 0.21789781085415519 ;
 	setAttr ".tg[0].tor" -type "double3" -1.9083328088781101e-14 0 0 ;
-	setAttr ".lr" -type "double3" 1.2722218725854067e-14 0 0 ;
+	setAttr ".lr" -type "double3" 3.180554681463516e-15 0 0 ;
 	setAttr ".rst" -type "double3" -7.105427357601002e-17 -7.105427357601002e-17 0 ;
 	setAttr ".rsrr" -type "double3" 1.2722218725854067e-14 0 0 ;
 	setAttr -k on ".w0";
@@ -12387,7 +12527,7 @@ createNode parentConstraint -n "R_Shoulder_Twist_Loc_Grp_Upper_parentConstraint1
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" -1.4210854715202004e-16 -8.8817841970012528e-17 
 		1.7763568394002505e-17 ;
-	setAttr ".lr" -type "double3" -90 -25.213498697679 90 ;
+	setAttr ".lr" -type "double3" -90 -25.213498697678975 90 ;
 	setAttr ".rst" -type "double3" -0.14926500000000015 0.70056700000000083 0.22943400000000036 ;
 	setAttr ".rsrr" -type "double3" -90 -25.213498697679 90 ;
 	setAttr -k on ".w0";
@@ -12484,12 +12624,14 @@ createNode joint -n "R_Shoulder_IK_Joint_1" -p "R_Shoulder_IK_Joint_Grp";
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" -7.9513867036587982e-15 -3.1805546814635097e-15 8.7465253740246514e-15 ;
+	setAttr ".ssc" no;
 createNode joint -n "R_Shoulder_IK_Joint_2" -p "R_Shoulder_IK_Joint_1";
 	rename -uid "ADB333B7-4319-87AF-CA42-AE88E6BD8855";
 	setAttr ".t" -type "double3" 0.25395491606376297 8.8817841970012523e-16 -9.4175833581169377e-18 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jot" -type "string" "none";
+	setAttr ".ssc" no;
 createNode ikEffector -n "effector9" -p "R_Shoulder_IK_Joint_1";
 	rename -uid "2CA7B278-446A-8375-6915-F79E86AD15E3";
 	setAttr ".v" no;
@@ -12551,7 +12693,7 @@ createNode parentConstraint -n "R_Shoulder_Master_Grp_parentConstraint1" -p "R_S
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" -0.30626400000000098 0.30095495307844666 -0.21789776980059025 ;
 	setAttr ".tg[0].tor" -type "double3" -179.99999999999997 0 0 ;
-	setAttr ".lr" -type "double3" 3.180554681463516e-15 0 0 ;
+	setAttr ".lr" -type "double3" -3.1805546814635152e-15 0 0 ;
 	setAttr ".rst" -type "double3" 7.105427357601002e-17 -1.4210854715202004e-16 7.105427357601002e-17 ;
 	setAttr ".rsrr" -type "double3" 3.180554681463516e-15 0 0 ;
 	setAttr -k on ".w0";
@@ -12572,15 +12714,15 @@ createNode scaleConstraint -n "R_Shoulder_Master_Grp_scaleConstraint1" -p "R_Sho
 	setAttr ".erp" yes;
 	setAttr -k on ".w0";
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "A4B551CD-46F3-2AF3-1441-C6A76C7C344A";
+	rename -uid "1EC9BD9B-4307-33DF-A8BC-6E8EB8B7836C";
 	setAttr -s 15 ".lnk";
 	setAttr -s 15 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "B5374417-40A0-382E-4370-968BBDE51775";
+	rename -uid "C622E04C-463A-E796-542C-20836381756E";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "7B58E80F-409E-0562-D497-01A22AB5874A";
+	rename -uid "F983DAD2-4C0B-1BC7-6790-EF80A5149AC0";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "16B93618-4ABB-568E-5124-67AA2CFC6DB7";
+	rename -uid "01F501E0-47F7-0635-238B-A0AF0C6A7F93";
 	setAttr ".cdl" 1;
 	setAttr -s 6 ".dli[1:5]"  5 2 3 4 1;
 	setAttr -s 6 ".dli";
@@ -12588,7 +12730,7 @@ createNode displayLayer -n "defaultLayer";
 	rename -uid "1423CAB1-4FDF-38CF-7765-3D869B8C2B47";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "CDC83E36-4C80-AB7D-C58A-308C0DDDFD33";
+	rename -uid "52F8FCBA-4DBC-2B59-C4FF-5E87D27F5F5D";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "C041669C-4F01-EDFF-A74E-D68FF2841F11";
 	setAttr ".g" yes;
@@ -12986,75 +13128,6 @@ createNode reverse -n "Rear_Reverse_MD";
 	rename -uid "9DDAB8CF-429E-10F3-3D77-5BA606FDEFD1";
 createNode reverse -n "Front_IKFK_Reverse_MD";
 	rename -uid "5C860D34-4679-04D3-A900-F08BBCB8268A";
-createNode nodeGraphEditorInfo -n "MayaNodeEditorSavedTabsInfo";
-	rename -uid "EA5E5CA5-4A92-D09A-0338-FA91BCA925E7";
-	setAttr ".tgi[0].tn" -type "string" "Untitled_1";
-	setAttr ".tgi[0].vl" -type "double2" -462.66716268521759 -458.33331512080366 ;
-	setAttr ".tgi[0].vh" -type "double2" 509.09573226888358 73.809520876596977 ;
-	setAttr -s 21 ".tgi[0].ni";
-	setAttr ".tgi[0].ni[0].x" 324.28570556640625;
-	setAttr ".tgi[0].ni[0].y" 47.142856597900391;
-	setAttr ".tgi[0].ni[0].nvs" 18304;
-	setAttr ".tgi[0].ni[1].x" 324.28570556640625;
-	setAttr ".tgi[0].ni[1].y" 452.85714721679688;
-	setAttr ".tgi[0].ni[1].nvs" 18304;
-	setAttr ".tgi[0].ni[2].x" 324.28570556640625;
-	setAttr ".tgi[0].ni[2].y" 554.28570556640625;
-	setAttr ".tgi[0].ni[2].nvs" 18304;
-	setAttr ".tgi[0].ni[3].x" 324.28570556640625;
-	setAttr ".tgi[0].ni[3].y" 351.42855834960938;
-	setAttr ".tgi[0].ni[3].nvs" 18304;
-	setAttr ".tgi[0].ni[4].x" 17.142856597900391;
-	setAttr ".tgi[0].ni[4].y" 517.14288330078125;
-	setAttr ".tgi[0].ni[4].nvs" 18306;
-	setAttr ".tgi[0].ni[5].x" 324.28570556640625;
-	setAttr ".tgi[0].ni[5].y" 250;
-	setAttr ".tgi[0].ni[5].nvs" 18304;
-	setAttr ".tgi[0].ni[6].x" 324.28570556640625;
-	setAttr ".tgi[0].ni[6].y" 148.57142639160156;
-	setAttr ".tgi[0].ni[6].nvs" 18304;
-	setAttr ".tgi[0].ni[7].x" 324.28570556640625;
-	setAttr ".tgi[0].ni[7].y" -764.28570556640625;
-	setAttr ".tgi[0].ni[7].nvs" 18304;
-	setAttr ".tgi[0].ni[8].x" 109.89276885986328;
-	setAttr ".tgi[0].ni[8].y" -95.705291748046875;
-	setAttr ".tgi[0].ni[8].nvs" 18306;
-	setAttr ".tgi[0].ni[9].x" 324.28570556640625;
-	setAttr ".tgi[0].ni[9].y" -358.57144165039062;
-	setAttr ".tgi[0].ni[9].nvs" 18304;
-	setAttr ".tgi[0].ni[10].x" 324.28570556640625;
-	setAttr ".tgi[0].ni[10].y" -460;
-	setAttr ".tgi[0].ni[10].nvs" 18304;
-	setAttr ".tgi[0].ni[11].x" 324.28570556640625;
-	setAttr ".tgi[0].ni[11].y" -561.4285888671875;
-	setAttr ".tgi[0].ni[11].nvs" 18304;
-	setAttr ".tgi[0].ni[12].x" 324.28570556640625;
-	setAttr ".tgi[0].ni[12].y" 757.14288330078125;
-	setAttr ".tgi[0].ni[12].nvs" 18304;
-	setAttr ".tgi[0].ni[13].x" 324.28570556640625;
-	setAttr ".tgi[0].ni[13].y" 960;
-	setAttr ".tgi[0].ni[13].nvs" 18304;
-	setAttr ".tgi[0].ni[14].x" 324.28570556640625;
-	setAttr ".tgi[0].ni[14].y" 858.5714111328125;
-	setAttr ".tgi[0].ni[14].nvs" 18304;
-	setAttr ".tgi[0].ni[15].x" 324.28570556640625;
-	setAttr ".tgi[0].ni[15].y" 655.71429443359375;
-	setAttr ".tgi[0].ni[15].nvs" 18304;
-	setAttr ".tgi[0].ni[16].x" 324.28570556640625;
-	setAttr ".tgi[0].ni[16].y" -155.71427917480469;
-	setAttr ".tgi[0].ni[16].nvs" 18304;
-	setAttr ".tgi[0].ni[17].x" 324.28570556640625;
-	setAttr ".tgi[0].ni[17].y" -54.285713195800781;
-	setAttr ".tgi[0].ni[17].nvs" 18304;
-	setAttr ".tgi[0].ni[18].x" 324.28570556640625;
-	setAttr ".tgi[0].ni[18].y" -257.14285278320312;
-	setAttr ".tgi[0].ni[18].nvs" 18304;
-	setAttr ".tgi[0].ni[19].x" 381.42855834960938;
-	setAttr ".tgi[0].ni[19].y" -995.71429443359375;
-	setAttr ".tgi[0].ni[19].nvs" 18304;
-	setAttr ".tgi[0].ni[20].x" 324.28570556640625;
-	setAttr ".tgi[0].ni[20].y" -865.71429443359375;
-	setAttr ".tgi[0].ni[20].nvs" 18304;
 createNode unitConversion -n "unitConversion7";
 	rename -uid "DAEC4D54-4D17-06F8-0836-50A4B1C91AA9";
 	setAttr ".cf" 0.01;
@@ -13508,7 +13581,7 @@ createNode deleteComponent -n "deleteComponent2";
 createNode skinCluster -n "skinCluster3";
 	rename -uid "15371F28-4365-D818-B860-1D8E0F1C71A1";
 	setAttr -s 405 ".wl";
-	setAttr ".wl[0:363].w"
+	setAttr ".wl[0:176].w"
 		1 2 1
 		1 2 1
 		1 2 1
@@ -13544,16 +13617,18 @@ createNode skinCluster -n "skinCluster3";
 		1 24 1
 		6 2 2.5321e-05 10 2.2480000000000002e-05 11 8.6951000000000001e-05 
 		12 0.349433573 23 0.121163518 24 0.52926815699999996
-		2 12 0.65820777400000008 23 0.34179222599999998
+		3 12 0.54898277400000006 23 0.28507418400000001 29 0.16594304200000001
 		6 2 0.000272255 10 0.00024170999999999999 11 0.00093488399999999998 
 		12 0.31025585700000002 23 0.25526990900000002 24 0.43302538499999998
-		6 2 3.343e-06 10 2.9679999999999998e-06 11 1.1481000000000001e-05 
-		12 0.56587648800000012 23 0.42872863300000003 24 0.005377087
-		6 2 3.343e-06 10 2.9679999999999998e-06 11 1.1481000000000001e-05 
-		12 0.56587648800000012 23 0.42872863300000003 24 0.005377087
+		7 2 2.4820000000000001e-06 10 2.2029999999999999e-06 11 8.524e-06 
+		12 0.42013585399999998 23 0.31831021999999998 24 0.0039922259999999998 
+		29 0.25754849099999999
+		7 2 2.4820000000000001e-06 10 2.2029999999999999e-06 11 8.524e-06 
+		12 0.42013585399999998 21 0.25754849099999999 23 0.31831021999999998 
+		24 0.0039922259999999998
 		6 2 0.000272255 10 0.00024170999999999999 11 0.00093488399999999998 
 		12 0.31025585700000002 23 0.25526990900000002 24 0.43302538499999998
-		2 12 0.65820777400000008 23 0.34179222599999998
+		3 12 0.54898277400000006 21 0.16594304200000001 23 0.28507418400000001
 		2 12 0.83469685999999998 23 0.16530313999999999
 		6 2 0.000163692 10 0.000145327 11 0.00056209499999999998 12 
 		0.13098573199999999 23 0.098664616999999996 24 0.76947853700000002
@@ -13572,96 +13647,125 @@ createNode skinCluster -n "skinCluster3";
 		5 2 0.001539096 10 0.0013664199999999999 11 0.005285021 12 
 		0.50441806599999994 23 0.487391397
 		1 12 1
-		1 12 1
-		1 12 1
+		2 12 0.73271378700000001 29 0.26728621299999999
+		2 12 0.73271378700000001 21 0.26728621299999999
 		4 2 0.032180343 10 0.028569939999999999 11 0.110502398 12 
 		0.82874731899999998
-		4 2 0.14877522900000001 10 0.10327075600000001 11 0.25738362599999998 
-		12 0.49057038899999994
+		5 2 0.111564987 10 0.077441658999999996 11 0.193009287 12 
+		0.36787359899999994 21 0.25011046799999997
 		4 2 0.17925575299999999 10 0.119678622 11 0.27858149700000001 
 		12 0.42248412799999996
-		4 2 0.14877522900000001 10 0.10327075600000001 11 0.25738362599999998 
-		12 0.49057038899999994
-		4 2 0.12463310599999999 10 0.082258342999999998 11 0.22036649 
-		12 0.57274206100000002
-		4 2 0.12463310599999999 10 0.082258342999999998 11 0.22036649 
-		12 0.57274206100000002
-		1 12 1
-		1 12 1
-		1 12 1
-		4 2 0.087433990000000003 10 0.045055956000000001 11 0.241231842 
-		12 0.626278212
-		4 2 0.087433990000000003 10 0.045055956000000001 11 0.241231842 
-		12 0.626278212
-		1 12 1
-		1 12 1
-		1 12 1
+		5 2 0.111564987 10 0.077441658999999996 11 0.193009287 12 
+		0.36787359899999994 29 0.25011046799999997
+		7 2 0.014807529999999999 10 0.0097730279999999996 11 0.026181513999999999 
+		12 0.068046888999999999 18 0.14941938499999999 21 0.73120436899999997 
+		29 0.00056728499999999995
+		7 2 0.014807529999999999 10 0.0097730279999999996 11 0.026181513999999999 
+		12 0.068046888999999999 21 0.00056728499999999995 26 0.14941938499999999 
+		29 0.73120436900000008
+		3 18 0.47022421800000003 21 0.441884583 29 0.087891199000000003
+		3 21 0.087891199000000003 26 0.47022421800000003 29 0.441884583
+		3 12 0.78828006799999994 21 0.105859966 29 0.105859966
+		7 2 0.002265502 10 0.001167445 11 0.0062505599999999996 12 
+		0.016227499999999999 18 0.37318084499999998 21 0.59878601999999992 29 
+		0.002122128
+		7 2 0.002265502 10 0.001167445 11 0.0062505599999999996 12 
+		0.016227499999999999 21 0.002122128 26 0.37318084499999998 29 0.59878601999999992
+		4 12 0.71839796300000003 21 0.046748347000000003 26 0.12392824500000001 
+		29 0.110925445
+		3 12 0.832733524 21 0.083633237999999999 29 0.083633237999999999
+		4 12 0.71839796300000003 18 0.12392824500000001 21 0.110925445 
+		29 0.046748347000000003
 		4 2 0.047469315999999998 10 0.022425077000000002 11 0.68221948200000004 
 		12 0.24788612500000001
-		4 2 0.020988455 10 0.011882116 11 0.62076981899999994 12 
-		0.34635960999999998
-		4 2 0.020988455 10 0.011882116 11 0.62076981899999994 12 
-		0.34635960999999998
+		7 2 0.011714014999999999 10 0.0066316120000000003 11 0.346462257 
+		12 0.193309223 18 0.142524557 21 0.26709925200000001 29 0.032259084
+		7 2 0.011714014999999999 10 0.0066316120000000003 11 0.34646225700000011 
+		12 0.193309223 21 0.032259084 26 0.142524557 29 0.26709925200000001
 		3 2 0.32482755499999999 10 0.188715314 11 0.48645713099999993
 		3 2 0.34995704399999999 10 0.15895747800000001 11 0.49108547799999996
 		3 2 0.32482755499999999 10 0.188715314 11 0.48645713099999993
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
+		4 12 0.172979206 21 0.0045585740000000001 26 0.25451974500000002 
+		29 0.56794247499999995
+		4 12 0.172979206 18 0.25451974500000002 21 0.56794247499999995 
+		29 0.0045585740000000001
+		4 12 0.060482803000000002 21 0.019013958000000001 26 0.26798499399999998 
+		29 0.652518245
+		4 12 0.060482803000000002 18 0.26798499399999998 21 0.652518245 
+		29 0.019013958000000001
+		5 21 9.5439999999999994e-05 26 0.017633540999999999 27 0.109882337 
+		29 0.00039513699999999999 33 0.87199354500000004
+		5 21 1.6753e-05 26 0.0060935679999999997 27 0.24244468799999999 
+		29 6.0121000000000003e-05 33 0.75138486999999998
+		1 32 1
+		1 33 1
+		1 31 1
+		1 31 1
+		5 18 0.0060935679999999997 21 6.0121000000000003e-05 28 0.24244468799999999 
+		29 1.6753e-05 31 0.75138486999999998
+		5 18 0.017633540999999999 21 0.00039513699999999999 28 0.109882337 
+		29 9.5439999999999994e-05 31 0.87199354500000004
+		5 21 1.0991e-05 26 0.023112707 27 0.24034471499999999 29 0.000109726 
+		33 0.73642186100000007
+		1 33 1
+		1 31 1
+		5 18 0.023112707 21 0.000109726 28 0.24034471499999999 29 
+		1.0991e-05 31 0.73642186100000007
+		1 32 1
+		1 32 1
+		1 31 1
+		1 31 1
+		1 32 1
+		1 31 1
+		1 33 1
+		1 31 1
+		1 33 1
+		1 31 1
+		1 33 1
+		1 31 1
+		3 26 0.60155039300000002 27 0.38425419999999999 29 0.014195407
+		4 21 0.0018610230000000001 26 0.65299316299999999 27 0.328913705 
+		29 0.016232109000000002
+		4 18 0.65299316299999999 21 0.016232109000000002 28 0.328913705 
+		29 0.0018610230000000001
+		3 18 0.60155039300000002 21 0.014195407 28 0.38425419999999999
+		1 26 1
+		4 21 0.000108626 26 0.70684876099999994 27 0.290180936 29 
+		0.002861677
+		4 18 0.70684876099999994 21 0.002861677 28 0.290180936 29 
+		0.000108626
+		1 18 1
+		4 21 0.0052372010000000004 26 0.76623601299999999 27 0.211300393 
+		29 0.017226393
+		4 18 0.76623601299999999 21 0.017226393 28 0.211300393 29 
+		0.0052372010000000004
+		4 21 0.0032549950000000001 26 0.61130995099999996 27 0.34759725699999999 
+		29 0.037837796999999999
+		4 18 0.61130995099999996 21 0.037837796999999999 28 0.34759725699999999 
+		29 0.0032549950000000001
+		2 26 0.61321230800000004 29 0.38678769200000002
+		2 18 0.61321230800000004 21 0.38678769200000002
+		4 12 0.55052998600000014 21 0.018941408999999999 26 0.206048501 
+		29 0.22448010400000001
+		4 12 0.55052998600000014 18 0.206048501 21 0.22448010400000001 
+		29 0.018941408999999999
+		3 21 0.032895648 26 0.87072085399999999 29 0.096383497999999998
+		3 18 0.87072085399999999 21 0.096383497999999998 29 0.032895648
+		1 26 1
+		1 18 1
+		2 26 0.89828943800000005 29 0.101710562
+		2 18 0.89828943800000005 21 0.101710562
 		3 2 0.43994203699999995 10 0.25561711500000001 11 0.30444084799999999
 		3 2 0.41981607100000007 10 0.27627614499999997 11 0.30390778400000001
 		3 2 0.41981607100000007 10 0.27627614499999997 11 0.30390778400000001
-		3 2 0.35660166700000001 10 0.249369322 11 0.39402901099999993
-		3 2 0.35660166700000001 10 0.249369322 11 0.39402901099999993
-		3 2 0.35282714100000001 10 0.152629235 11 0.49454362399999996
-		3 2 0.35282714100000001 10 0.152629235 11 0.49454362399999996
+		4 2 0.27492065399999999 10 0.19225029900000001 11 0.30377511899999993 
+		21 0.22905392799999999
+		4 2 0.27492065399999999 10 0.19225029900000001 11 0.30377511899999993 
+		29 0.22905392799999999
+		4 2 0.29701114899999997 10 0.12848383499999999 11 0.416308593 
+		21 0.158196423
+		4 2 0.29701114899999997 10 0.12848383499999999 11 0.416308593 
+		29 0.158196423
 		2 2 0.90842985499999995 10 0.091570145000000006
 		1 2 1
 		2 2 0.90842985499999995 10 0.091570145000000006
@@ -13674,30 +13778,51 @@ createNode skinCluster -n "skinCluster3";
 		2 2 0.83931916500000003 10 0.16068083499999999
 		2 2 0.95983525999999997 10 0.040164739999999997
 		1 2 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
-		1 12 1
+		5 18 0.023885420000000001 21 0.00019486899999999999 28 0.33474989500000002 
+		29 2.559e-06 31 0.64116725699999999
+		5 18 0.0099960359999999998 21 0.00010304799999999999 28 0.61690054500000002 
+		29 9.1940000000000004e-06 31 0.37299117700000001
+		5 18 0.021067671999999999 21 0.00072853000000000002 28 0.37716876500000002 
+		29 7.9017000000000006e-05 31 0.60095601599999993
+		5 18 0.032399725999999997 21 0.00072720300000000005 28 0.19504369399999999 
+		29 0.00017561200000000001 31 0.77165376500000005
+		5 18 0.024666515999999999 21 0.00018184000000000001 28 0.424220337 
+		29 4.9314000000000003e-05 31 0.55088199300000007
+		5 18 0.044652955000000001 21 0.000200762 28 0.34783575799999999 
+		29 1.6249e-05 31 0.60729427600000008
+		5 21 2.559e-06 26 0.023885420000000001 27 0.33474989500000002 
+		29 0.00019486899999999999 33 0.64116725699999999
+		5 21 9.1940000000000004e-06 26 0.0099961159999999993 27 0.61690054300000008 
+		29 0.000103049 33 0.37299109800000002
+		5 21 7.9017999999999995e-05 26 0.021067758999999998 27 0.37716876999999999 
+		29 0.00072853299999999996 33 0.60095591999999998
+		5 21 0.00017561200000000001 26 0.032399725999999997 27 0.19504369399999999 
+		29 0.00072720300000000005 33 0.77165376500000005
+		5 21 4.9314000000000003e-05 26 0.024666515999999999 27 0.424220337 
+		29 0.00018184000000000001 33 0.55088199300000007
+		5 21 1.6249e-05 26 0.044653035000000001 27 0.34783578399999998 
+		29 0.00020076299999999999 33 0.60729416899999999
+		3 18 0.47432805 21 0.004594824 28 0.521077126
+		2 18 0.32875678200000003 28 0.67124321799999997
+		4 18 0.5149783349999999 21 0.019595172000000001 28 0.46374081900000003 
+		29 0.0016856740000000001
+		4 18 0.62379525700000005 21 0.014093253 28 0.35832714799999998 
+		29 0.003784342
+		4 18 0.41306749300000001 21 0.002095998 28 0.58412114599999998 
+		29 0.000715363
+		4 18 0.64562233399999991 21 0.0024940079999999998 28 0.35173342099999999 
+		29 0.00015023700000000001
+		4 26 0.47432792299999998 27 0.52107705800000004 29 0.0045948220000000001 
+		33 1.97e-07
+		2 26 0.32875678200000003 27 0.67124321799999997
+		4 21 0.0016856740000000001 26 0.5149783349999999 27 0.46374081900000003 
+		29 0.019595172000000001
+		5 21 0.0037843410000000001 26 0.62379513499999995 27 0.358327173 
+		29 0.01409325 33 1.01e-07
+		5 21 0.000715363 26 0.41306740600000003 27 0.58412107999999996 
+		29 0.002095998 33 1.5300000000000001e-07
+		5 21 0.00015023599999999999 26 0.64562213599999996 27 0.35173352400000002 
+		29 0.0024940090000000002 33 9.5000000000000004e-08
 		1 24 1
 		1 24 1
 		1 24 1
@@ -13708,7 +13833,8 @@ createNode skinCluster -n "skinCluster3";
 		1 24 1
 		1 24 1
 		1 24 1
-		1 24 1
+		1 24 1;
+	setAttr ".wl[177:404].w"
 		1 24 1
 		1 24 1
 		1 24 1
@@ -13794,151 +13920,169 @@ createNode skinCluster -n "skinCluster3";
 		1 22 1
 		1 22 1
 		1 22 1
-		1 15 1
-		1 15 1
-		1 15 1
-		1 15 1
-		1 15 1
-		1 15 1
-		1 15 1
-		1 15 1
-		1 15 1
-		1 15 1
-		1 15 1
-		1 15 1
-		1 15 1
-		1 15 1
-		1 15 1
-		1 15 1
-		1 15 1
-		1 15 1
-		1 15 1
-		1 15 1
-		1 15 1
-		1 15 1
-		1 15 1
-		1 15 1
-		1 15 1
-		1 15 1
-		1 15 1
-		1 15 1
-		1 15 1
-		1 15 1
-		1 15 1
-		1 15 1
-		1 15 1
-		1 15 1
-		1 15 1
-		1 15 1
-		1 15 1
-		1 15 1
-		1 15 1
-		1 15 1
-		1 15 1
-		1 15 1
-		1 15 1
-		1 15 1
-		1 15 1
-		1 15 1
-		1 15 1
-		1 15 1
-		1 15 1
-		1 15 1
-		1 15 1
-		1 15 1
-		1 15 1
-		1 15 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1;
-	setAttr ".wl[364:404].w"
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 15 1
-		1 15 1
-		1 15 1
-		1 15 1
-		1 15 1
-		1 15 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 15 1
-		1 15 1
-		1 15 1
-		1 15 1
-		1 15 1
-		1 15 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 15 1
-		1 15 1
-		1 15 1
-		1 15 1
-		1 15 1
-		1 15 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1
-		1 3 1;
+		2 14 0.49714425299999998 15 0.50285574700000002
+		2 14 0.53723447200000007 15 0.46276552799999998
+		1 14 1
+		2 14 0.81087745499999997 15 0.189122545
+		1 15 1
+		2 14 0.19992525999999999 15 0.80007474000000001
+		2 14 0.10668391100000001 15 0.89331608900000004
+		1 15 1
+		2 14 0.48223099800000002 15 0.51776900199999998
+		2 14 0.179587833 15 0.82041216699999997
+		1 14 1
+		1 14 1
+		2 14 0.82155173999999997 15 0.17844826
+		3 14 0.39180926999999999 15 0.000663712 16 0.60752701800000009
+		1 14 1
+		3 14 0.54663120099999996 15 0.019982024000000001 16 0.433386775
+		3 14 0.235899684 15 5.9889999999999997e-06 16 0.76409432700000002
+		3 14 0.45638278199999999 15 0.0099252170000000001 16 0.53369200100000003
+		4 13 0.59001815199999996 14 0.016164814 15 6.1750000000000002e-06 
+		16 0.39381085900000001
+		4 13 0.88315736999999994 14 4.0770000000000001e-06 15 1.0000000000000001e-09 
+		16 0.116838552
+		4 13 0.54467623799999998 14 0.022689179 15 1.8351000000000001e-05 
+		16 0.43261623199999999
+		3 14 0.55405987700000003 15 0.000277877 16 0.44566224599999998
+		3 14 0.62907590199999996 15 0.00012386600000000001 16 0.37080023200000001
+		2 14 0.99999822599999999 15 1.7740000000000001e-06
+		2 14 0.99906999500000004 15 0.00093000500000000002
+		3 14 0.416538872 15 0.0033438399999999998 16 0.58011728799999995
+		1 16 1
+		4 13 0.60512017399999996 14 0.0020602530000000002 15 9.183e-06 
+		16 0.39281039000000001
+		4 13 0.78765833500000004 14 0.00014804 15 6.5e-08 16 0.21219356
+		3 14 0.53735502999999996 15 0.002053582 16 0.46059138799999999
+		3 14 0.58546824400000008 15 0.0046413890000000001 16 0.40989036699999998
+		1 14 1
+		3 13 0.97416493599999998 14 1.6300000000000001e-06 16 0.025833433999999999
+		3 14 0.39898399600000001 15 0.0061209760000000002 16 0.59489502799999994
+		3 14 0.57049122199999991 15 0.012558609 16 0.41695016899999998
+		2 14 0.83684404499999998 15 0.16315595499999999
+		1 13 1
+		1 13 1
+		1 13 1
+		1 13 1
+		1 13 1
+		1 13 1
+		2 14 0.56113163300000002 15 0.43886836699999998
+		2 14 0.78692673700000004 15 0.21307326300000001
+		1 14 1
+		2 14 0.47090042100000001 15 0.52909957900000004
+		2 14 0.117030102 15 0.88296989800000003
+		2 14 7.323e-06 15 0.99999267700000005
+		1 15 1
+		2 14 0.53424536700000003 15 0.46575463299999997
+		1 14 1
+		2 14 0.0061621510000000003 15 0.99383784900000005
+		2 14 0.015020356 15 0.98497964400000004
+		2 14 0.227746951 15 0.77225304900000002
+		2 3 0.50285574700000002 4 0.49714425299999998
+		2 3 0.46276552799999998 4 0.53723447200000007
+		1 4 1
+		2 3 0.189122545 4 0.81087745499999997
+		1 3 1
+		2 3 0.80007474000000001 4 0.19992525999999999
+		2 3 0.89331608900000004 4 0.10668391100000001
+		1 3 1
+		2 3 0.51776900199999998 4 0.48223099800000002
+		2 3 0.82041216699999997 4 0.179587833
+		1 4 1
+		1 4 1
+		2 3 0.17844826 4 0.82155173999999997
+		3 0 0.60752701800000009 3 0.000663712 4 0.39180926999999999
+		1 4 1
+		3 0 0.433386775 3 0.019982024000000001 4 0.54663120099999996
+		3 0 0.76409432700000002 3 5.9889999999999997e-06 4 0.235899684
+		3 0 0.53369200100000003 3 0.0099252170000000001 4 0.45638278199999999
+		4 0 0.39381085900000001 1 0.59001815199999996 3 6.1750000000000002e-06 
+		4 0.016164814
+		4 0 0.116838552 1 0.88315736999999994 3 1.0000000000000001e-09 
+		4 4.0770000000000001e-06
+		4 0 0.43261623199999999 1 0.54467623799999998 3 1.8351000000000001e-05 
+		4 0.022689179
+		3 0 0.44566224599999998 3 0.000277877 4 0.55405987700000003
+		3 0 0.37080023200000001 3 0.00012386600000000001 4 0.62907590199999996
+		2 3 1.7740000000000001e-06 4 0.99999822599999999
+		2 3 0.00093000500000000002 4 0.99906999500000004
+		3 0 0.58011728799999995 3 0.0033438399999999998 4 0.416538872
+		1 0 1
+		4 0 0.39281039000000001 1 0.60512017399999996 3 9.183e-06 4 
+		0.0020602530000000002
+		4 0 0.21219356 1 0.78765833500000004 3 6.5e-08 4 0.00014804
+		3 0 0.46059138799999999 3 0.002053582 4 0.53735502999999996
+		3 0 0.40989036699999998 3 0.0046413890000000001 4 0.58546824400000008
+		1 4 1
+		3 0 0.025833433999999999 1 0.97416493599999998 4 1.6300000000000001e-06
+		3 0 0.59489502799999994 3 0.0061209760000000002 4 0.39898399600000001
+		3 0 0.41695016899999998 3 0.012558609 4 0.57049122199999991
+		2 3 0.16315595499999999 4 0.83684404499999998
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		2 3 0.43886836699999998 4 0.56113163300000002
+		2 3 0.21307326300000001 4 0.78692673700000004
+		1 4 1
+		2 3 0.52909957900000004 4 0.47090042100000001
+		2 3 0.88296989800000003 4 0.117030102
+		2 3 0.99999267700000005 4 7.323e-06
+		1 3 1
+		2 3 0.46575463299999997 4 0.53424536700000003
+		1 4 1
+		2 3 0.99383784900000005 4 0.0061621510000000003
+		2 3 0.98497964400000004 4 0.015020356
+		2 3 0.77225304900000002 4 0.227746951
+		4 13 0.57070532899999993 14 0.020319706 15 6.5930000000000002e-06 
+		16 0.40896837200000002
+		4 13 0.51777783799999999 14 0.034548980999999999 15 2.9045000000000001e-05 
+		16 0.44764413600000003
+		4 13 0.61862785399999998 14 0.016166218999999999 15 8.7058000000000006e-05 
+		16 0.36511886900000001
+		4 13 0.64187013800000003 14 0.012939783 15 0.00025311000000000002 
+		16 0.34493696899999998
+		4 13 0.71990819699999997 14 0.011175045999999999 15 0.000175274 
+		16 0.268741483
+		4 13 0.55761443099999997 14 0.002275156 15 1.3786e-05 16 0.44009662700000002
+		4 0 0.40896837200000002 1 0.57070532899999993 3 6.5930000000000002e-06 
+		4 0.020319706
+		4 0 0.44764413600000003 1 0.51777783799999999 3 2.9045000000000001e-05 
+		4 0.034548980999999999
+		4 0 0.36511886900000001 1 0.61862785399999998 3 8.7058000000000006e-05 
+		4 0.016166218999999999
+		4 0 0.34493696899999998 1 0.64187013800000003 3 0.00025311000000000002 
+		4 0.012939783
+		4 0 0.268741483 1 0.71990819699999997 3 0.000175274 4 
+		0.011175045999999999
+		4 0 0.44009662700000002 1 0.55761443099999997 3 1.3786e-05 
+		4 0.002275156
+		1 13 1
+		1 13 1
+		1 13 1
+		1 13 1
+		1 13 1
+		1 13 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		1 1 1
+		2 14 0.55105856200000003 15 0.44894143800000003
+		2 14 0.74397919000000001 15 0.25602080999999999
+		2 14 0.33500599399999997 15 0.66499400600000003
+		2 14 0.073671527000000001 15 0.92632847299999999
+		2 14 0.098851558000000006 15 0.90114844199999999
+		2 14 0.887453508 15 0.112546492
+		2 3 0.44894143800000003 4 0.55105856200000003
+		2 3 0.112546492 4 0.887453508
+		2 3 0.90114844199999999 4 0.098851558000000006
+		2 3 0.92632847299999999 4 0.073671527000000001
+		2 3 0.66499400600000003 4 0.33500599399999997
+		2 3 0.25602080999999999 4 0.74397919000000001;
 	setAttr -s 34 ".pm";
 	setAttr ".pm[0]" -type "matrix" -1.2982657616881079e-14 1.0183776441239883e-14 -0.99999999999999967 0
 		 0.81109030127394532 -0.58492095464202731 -1.6468987313588774e-14 0 -0.58492095464202754 -0.8110903012739451 -6.9915405657499175e-16 0
@@ -14322,27 +14466,54 @@ createNode dagPose -n "bindPose2";
 	setAttr ".bp" yes;
 createNode ngst2SkinLayerData -n "ngSkinToolsData_skinCluster3";
 	rename -uid "C127DD80-45E4-FE7F-CB2A-23B3790758CE";
-	setAttr ".ld" -type "ngst2SkinLayerDataStorage" 16 3982 {
-"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"};
+	setAttr ".ld" -type "ngst2SkinLayerDataStorage" 16 9751 {
+"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"};
 	setAttr ".imo" -type "string" "{}";
-createNode animCurveTA -n "L_Ear_Fold_Jnt_Ctrl_rotateX";
-	rename -uid "5EFDB80C-449C-C1A8-D746-198049BBF1A0";
+createNode animCurveTA -n "L_Rear_FK_Ctrl_rotateX";
+	rename -uid "746E49B7-4050-F06A-80F7-69ACBD5F628C";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  0 0 10 -53.077227094884478;
+createNode animCurveTA -n "L_Rear_FK_Ctrl_rotateY";
+	rename -uid "FBFDC640-48B3-A3B2-5F00-4EA7B67DC33B";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 2 ".ktv[0:1]"  0 0 10 0;
-createNode animCurveTA -n "L_Ear_Fold_Jnt_Ctrl_rotateY";
-	rename -uid "20331C20-4004-E595-8CB5-A98CDA7E1DB1";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 10 -73.82010423359236;
-createNode animCurveTA -n "L_Ear_Fold_Jnt_Ctrl_rotateZ";
-	rename -uid "C50DD343-4DEA-2921-434D-D6ADBD7B4223";
+createNode animCurveTA -n "L_Rear_FK_Ctrl_rotateZ";
+	rename -uid "6257931A-4073-20BC-6D8F-66B1DAC93704";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 2 ".ktv[0:1]"  0 0 10 0;
+createNode nodeGraphEditorInfo -n "MayaNodeEditorSavedTabsInfo";
+	rename -uid "CAA0F01B-4B87-5148-2A50-26BA8356D98E";
+	setAttr ".tgi[0].tn" -type "string" "Untitled_1";
+	setAttr ".tgi[0].vl" -type "double2" -749.9175594765137 -634.11255515268726 ;
+	setAttr ".tgi[0].vh" -type "double2" 741.67903734079096 182.69414462557759 ;
+	setAttr -s 3 ".tgi[0].ni";
+	setAttr ".tgi[0].ni[0].x" -131.17645263671875;
+	setAttr ".tgi[0].ni[0].y" 9.1596593856811523;
+	setAttr ".tgi[0].ni[0].nvs" 18306;
+	setAttr ".tgi[0].ni[1].x" -554.87396240234375;
+	setAttr ".tgi[0].ni[1].y" 75.210075378417969;
+	setAttr ".tgi[0].ni[1].nvs" 18306;
+	setAttr ".tgi[0].ni[2].x" -70;
+	setAttr ".tgi[0].ni[2].y" -91.428573608398438;
+	setAttr ".tgi[0].ni[2].nvs" 18304;
+createNode animCurveTU -n "Jackalope_Geometry_visibility";
+	rename -uid "E76861AD-4CEA-513F-41DF-C8A20AFBD35A";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 1;
+	setAttr ".kot[0]"  5;
 select -ne :time1;
 	setAttr ".o" 0;
 select -ne :hardwareRenderingGlobals;
@@ -14403,6 +14574,7 @@ connectAttr "groupId123.id" "rear_legsShape.iog.og[0].gid";
 connectAttr ":initialShadingGroup.mwc" "rear_legsShape.iog.og[0].gco";
 connectAttr "groupId126.id" "horns_1Shape.iog.og[0].gid";
 connectAttr ":initialShadingGroup.mwc" "horns_1Shape.iog.og[0].gco";
+connectAttr "Jackalope_Geometry_visibility.o" "Jackalope_Geometry.v";
 connectAttr "skinCluster3.og[0]" "Jackalope_GeometryShape.i";
 connectAttr "groupId127.id" "Jackalope_GeometryShape.iog.og[0].gid";
 connectAttr ":initialShadingGroup.mwc" "Jackalope_GeometryShape.iog.og[0].gco";
@@ -14411,6 +14583,9 @@ connectAttr "Jackalope:set1.mwc" "Jackalope_GeometryShape.iog.og[1].gco";
 connectAttr "tweak1.vl[0].vt[0]" "Jackalope_GeometryShape.twl";
 connectAttr "deleteComponent2.og" "Jackalope_GeometryShapeOrig.i";
 connectAttr "Joint_Layer.di" "SKELETON.do";
+connectAttr "SKELETON_scaleConstraint1.csx" "SKELETON.sx";
+connectAttr "SKELETON_scaleConstraint1.csy" "SKELETON.sy";
+connectAttr "SKELETON_scaleConstraint1.csz" "SKELETON.sz";
 connectAttr "ROOT_JNT.s" "CoG_Jnt.is";
 connectAttr "CoG_Jnt.s" "Pelvis_Jnt.is";
 connectAttr "Pelvis_Jnt_scaleConstraint1.csx" "Pelvis_Jnt.sx";
@@ -18857,7 +19032,14 @@ connectAttr "ROOT_JNT.s" "ROOT_SKIN_JNT_scaleConstraint1.tg[0].ts";
 connectAttr "ROOT_JNT.pm" "ROOT_SKIN_JNT_scaleConstraint1.tg[0].tpm";
 connectAttr "ROOT_SKIN_JNT_scaleConstraint1.w0" "ROOT_SKIN_JNT_scaleConstraint1.tg[0].tw"
 		;
+connectAttr "SKELETON.pim" "SKELETON_scaleConstraint1.cpim";
+connectAttr "CONTROLS.s" "SKELETON_scaleConstraint1.tg[0].ts";
+connectAttr "CONTROLS.pm" "SKELETON_scaleConstraint1.tg[0].tpm";
+connectAttr "SKELETON_scaleConstraint1.w0" "SKELETON_scaleConstraint1.tg[0].tw";
 connectAttr "Control_Layer.di" "CONTROLS.do";
+connectAttr "Transform_Ctrl.MasterScale" "CONTROLS.sx";
+connectAttr "Transform_Ctrl.MasterScale" "CONTROLS.sy";
+connectAttr "Transform_Ctrl.MasterScale" "CONTROLS.sz";
 connectAttr "CoG_Jnt_Ctrl_Grp_parentConstraint1.ctx" "CoG_Jnt_Ctrl_Grp.tx";
 connectAttr "CoG_Jnt_Ctrl_Grp_parentConstraint1.cty" "CoG_Jnt_Ctrl_Grp.ty";
 connectAttr "CoG_Jnt_Ctrl_Grp_parentConstraint1.ctz" "CoG_Jnt_Ctrl_Grp.tz";
@@ -20116,9 +20298,6 @@ connectAttr "L_Ear_Fold_Jnt_Ctrl_Grp_scaleConstraint1.csy" "L_Ear_Fold_Jnt_Ctrl_
 		;
 connectAttr "L_Ear_Fold_Jnt_Ctrl_Grp_scaleConstraint1.csz" "L_Ear_Fold_Jnt_Ctrl_Grp.sz"
 		;
-connectAttr "L_Ear_Fold_Jnt_Ctrl_rotateX.o" "L_Ear_Fold_Jnt_Ctrl.rx";
-connectAttr "L_Ear_Fold_Jnt_Ctrl_rotateY.o" "L_Ear_Fold_Jnt_Ctrl.ry";
-connectAttr "L_Ear_Fold_Jnt_Ctrl_rotateZ.o" "L_Ear_Fold_Jnt_Ctrl.rz";
 connectAttr "L_Ear_Fold_Jnt_Ctrl_Grp.ro" "L_Ear_Fold_Jnt_Ctrl_Grp_parentConstraint1.cro"
 		;
 connectAttr "L_Ear_Fold_Jnt_Ctrl_Grp.pim" "L_Ear_Fold_Jnt_Ctrl_Grp_parentConstraint1.cpim"
@@ -21799,6 +21978,9 @@ connectAttr "L_Rear_FK_Ctrl_Grp_parentConstraint2.crz" "L_Rear_FK_Ctrl_Grp.rz";
 connectAttr "L_Rear_FK_Ctrl_Grp_scaleConstraint1.csx" "L_Rear_FK_Ctrl_Grp.sx";
 connectAttr "L_Rear_FK_Ctrl_Grp_scaleConstraint1.csy" "L_Rear_FK_Ctrl_Grp.sy";
 connectAttr "L_Rear_FK_Ctrl_Grp_scaleConstraint1.csz" "L_Rear_FK_Ctrl_Grp.sz";
+connectAttr "L_Rear_FK_Ctrl_rotateX.o" "L_Rear_FK_Ctrl.rx";
+connectAttr "L_Rear_FK_Ctrl_rotateY.o" "L_Rear_FK_Ctrl.ry";
+connectAttr "L_Rear_FK_Ctrl_rotateZ.o" "L_Rear_FK_Ctrl.rz";
 connectAttr "L_Rear_FK_Ctrl_Grp.ro" "L_Rear_FK_Ctrl_Grp_parentConstraint1.cro";
 connectAttr "L_Rear_FK_Ctrl_Grp.pim" "L_Rear_FK_Ctrl_Grp_parentConstraint1.cpim"
 		;
@@ -23247,46 +23429,6 @@ connectAttr "ikHandle1_poleVectorConstraint1.cty" "unitConversion5.i";
 connectAttr "ikHandle1_poleVectorConstraint1.ctz" "unitConversion6.i";
 connectAttr "Rear_Legs_IKFK.RearIKFK" "Rear_Reverse_MD.ix";
 connectAttr "Front_Legs_IKFK.FrontIKFK" "Front_IKFK_Reverse_MD.ix";
-connectAttr "L_Rear_Leg_IKFK_Reverse.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[0].dn"
-		;
-connectAttr "R_Rear_Leg_3_Jnt_scaleConstraint1.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[1].dn"
-		;
-connectAttr "L_Rear_Leg_3_Jnt_parentConstraint1.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[2].dn"
-		;
-connectAttr "R_Rear_Leg_2_Jnt_scaleConstraint1.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[3].dn"
-		;
-connectAttr "Rear_Legs_IKFK.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[4].dn";
-connectAttr "R_Rear_Leg_IKFK_Reverse.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[5].dn"
-		;
-connectAttr "L_Rear_Leg_1_Jnt_scaleConstraint1.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[6].dn"
-		;
-connectAttr "R_Rear_Leg_4_Jnt_parentConstraint1.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[7].dn"
-		;
-connectAttr "Rear_Reverse_MD.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[8].dn";
-connectAttr "L_Rear_Leg_3_Jnt_scaleConstraint1.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[9].dn"
-		;
-connectAttr "L_Rear_Leg_2_Jnt_scaleConstraint1.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[10].dn"
-		;
-connectAttr "R_Rear_Leg_1_Jnt_scaleConstraint1.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[11].dn"
-		;
-connectAttr "R_Rear_Leg_2_Jnt_parentConstraint1.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[12].dn"
-		;
-connectAttr "R_Rear_Leg_4_Jnt_scaleConstraint1.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[13].dn"
-		;
-connectAttr "R_Rear_Leg_3_Jnt_parentConstraint1.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[14].dn"
-		;
-connectAttr "L_Rear_Leg_4_Jnt_scaleConstraint1.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[15].dn"
-		;
-connectAttr "L_Rear_Leg_2_Jnt_parentConstraint1.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[16].dn"
-		;
-connectAttr "L_Rear_Leg_1_Jnt_parentConstraint1.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[17].dn"
-		;
-connectAttr "L_Rear_Leg_4_Jnt_parentConstraint1.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[18].dn"
-		;
-connectAttr "Rear_Legs_IKFKShape.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[19].dn"
-		;
-connectAttr "R_Rear_Leg_1_Jnt_parentConstraint1.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[20].dn"
-		;
 connectAttr "L_Front_Leg_IKHandle_poleVectorConstraint1.ctx" "unitConversion7.i"
 		;
 connectAttr "L_Front_Leg_IKHandle_poleVectorConstraint1.cty" "unitConversion8.i"
@@ -23635,6 +23777,10 @@ connectAttr "bindPose2.m[32]" "bindPose2.p[33]";
 connectAttr "bindPose2.m[30]" "bindPose2.p[34]";
 connectAttr "bindPose2.m[34]" "bindPose2.p[35]";
 connectAttr "skinCluster3.msg" "ngSkinToolsData_skinCluster3.sc";
+connectAttr "CONTROLS.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[0].dn";
+connectAttr "Transform_Ctrl.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[1].dn";
+connectAttr "Transform_CtrlShape.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[2].dn"
+		;
 connectAttr "CalebSIZEREFERENCE1:Pine_GeneratorSG.pa" ":renderPartition.st" -na;
 connectAttr "CalebSIZEREFERENCE1:Caleb_Geometry:lambert1SG.pa" ":renderPartition.st"
 		 -na;
