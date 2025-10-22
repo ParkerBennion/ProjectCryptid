@@ -1044,6 +1044,7 @@ GameObject:
   - component: {fileID: 2227833995817679539}
   - component: {fileID: 6291017523567492363}
   - component: {fileID: 3291109149546443505}
+  - component: {fileID: 1510534896331095608}
   m_Layer: 5
   m_Name: DamagePanel
   m_TagString: Untagged
@@ -1137,7 +1138,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1729154568558303853}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b9a87ea4ad0c7714ea2a0adcde2d77a7, type: 3}
   m_Name: 
@@ -1186,6 +1187,74 @@ MonoBehaviour:
   images:
   - {fileID: 21300000, guid: b11d6d9935ab9cb47919a8dee4428259, type: 3}
   - {fileID: 21300000, guid: e9450241af8675c40832e7b7836e8757, type: 3}
+  specificImage: {fileID: 0}
+--- !u!114 &1510534896331095608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1729154568558303853}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5139ee6c4ceb984dadef35e42cbe1dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthAction: {fileID: 11400000, guid: 32af2b1640fadcc498a552b88973f501, type: 2}
+  positiveAction:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3291109149546443505}
+        m_TargetAssemblyTypeName: ImageSwapper, Assembly-CSharp
+        m_MethodName: AssignImage
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 21300000, guid: d85c0bc91f85f5c43bbb43f0efa7b979, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2227833995817679539}
+        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+        m_MethodName: SetTrigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Flash
+          m_BoolArgument: 0
+        m_CallState: 2
+  negativeAction:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3291109149546443505}
+        m_TargetAssemblyTypeName: ImageSwapper, Assembly-CSharp
+        m_MethodName: AssignNextImage
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2227833995817679539}
+        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+        m_MethodName: SetTrigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Flash
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2396858535816387483
 GameObject:
   m_ObjectHideFlags: 0

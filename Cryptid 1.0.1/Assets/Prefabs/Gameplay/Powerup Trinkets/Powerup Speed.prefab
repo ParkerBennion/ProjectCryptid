@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8247621379513850372}
   - component: {fileID: 2847526630031367480}
   - component: {fileID: 5670008678199578161}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -148,7 +148,7 @@ GameObject:
   - component: {fileID: 506372571690319172}
   - component: {fileID: 2607084156299346873}
   - component: {fileID: 1984643010282954853}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Display Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -351,7 +351,8 @@ GameObject:
   - component: {fileID: 6833773167443180847}
   - component: {fileID: 1924686721236600104}
   - component: {fileID: 5656746165582213840}
-  m_Layer: 0
+  - component: {fileID: 4447210728347616230}
+  m_Layer: 6
   m_Name: Powerup Speed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -482,6 +483,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bdd46ac3441a17d458943c9252343a08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!54 &4447210728347616230
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6005470697690076103}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 112
+  m_CollisionDetection: 0
 --- !u!1 &6076128350740232178
 GameObject:
   m_ObjectHideFlags: 0
@@ -496,7 +524,7 @@ GameObject:
   - component: {fileID: 4868184360700755818}
   - component: {fileID: 5341025201217438437}
   - component: {fileID: 7480560944990678132}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -721,6 +749,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Yellow Item Glow
       objectReference: {fileID: 0}
+    - target: {fileID: 1729718316700901326, guid: 0b44248cde45b4049a8b9007db2ad6fd, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1942869270631601523, guid: 0b44248cde45b4049a8b9007db2ad6fd, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125225204819627502, guid: 0b44248cde45b4049a8b9007db2ad6fd, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5832735885372424938, guid: 0b44248cde45b4049a8b9007db2ad6fd, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 7866513791284800080, guid: 0b44248cde45b4049a8b9007db2ad6fd, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -760,6 +804,10 @@ PrefabInstance:
     - target: {fileID: 7866513791284800080, guid: 0b44248cde45b4049a8b9007db2ad6fd, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8844982964057458099, guid: 0b44248cde45b4049a8b9007db2ad6fd, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
