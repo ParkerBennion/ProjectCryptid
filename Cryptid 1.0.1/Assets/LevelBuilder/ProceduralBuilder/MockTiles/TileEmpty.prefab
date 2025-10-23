@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 1719108879233915820}
   - component: {fileID: 5259533631473209010}
   - component: {fileID: 2681295101811440513}
+  - component: {fileID: -1213967757200655909}
   m_Layer: 11
   m_Name: TileEmpty
   m_TagString: Untagged
@@ -59,7 +60,7 @@ MeshRenderer:
   m_RenderingLayerMask: 129
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: fd15437ae339bc14489c05be7cd39b4d, type: 2}
+  - {fileID: 2100000, guid: 032ba1ca6d430e04b9bb8fc624a863c2, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -158,3 +159,17 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -5843487310387925994, guid: ee2c4c3a74969db42bbb45a58713d246, type: 3}
+--- !u!114 &-1213967757200655909
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5650620722496709884}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70d8d86ff6937794d9c3bf11ef06e610, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tileFloorRenderer: {fileID: 0}
+  pathMask: {fileID: 2800000, guid: c1a4a8af608ea8747bc080ba5924193e, type: 3}

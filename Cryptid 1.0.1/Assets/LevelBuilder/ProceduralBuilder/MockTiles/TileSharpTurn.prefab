@@ -100,6 +100,7 @@ GameObject:
   - component: {fileID: 7407499851782943314}
   - component: {fileID: 231996265745846649}
   - component: {fileID: -4246408738649326088}
+  - component: {fileID: 7733598030160383324}
   m_Layer: 11
   m_Name: TileSharpTurn
   m_TagString: Untagged
@@ -147,7 +148,7 @@ MeshRenderer:
   m_RenderingLayerMask: 129
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: fd15437ae339bc14489c05be7cd39b4d, type: 2}
+  - {fileID: 2100000, guid: 032ba1ca6d430e04b9bb8fc624a863c2, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -246,6 +247,20 @@ MonoBehaviour:
   m_MinRegionArea: 2
   m_NavMeshData: {fileID: 23800000, guid: f9086cbfa6119fd469dcfafbc03fa01e, type: 2}
   m_BuildHeightMesh: 0
+--- !u!114 &7733598030160383324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5650620722496709884}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70d8d86ff6937794d9c3bf11ef06e610, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tileFloorRenderer: {fileID: 0}
+  pathMask: {fileID: 2800000, guid: 4fd0a48676c44aa45a96a9239c38667d, type: 3}
 --- !u!1 &8668832759795102700
 GameObject:
   m_ObjectHideFlags: 0

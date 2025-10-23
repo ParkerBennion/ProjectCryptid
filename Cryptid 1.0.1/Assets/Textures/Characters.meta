@@ -1,6 +1,10 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Cryptid 1.0.1/Assets/Textures/Characters.meta
 guid: 45e0a3774573a2049be81306f085b3da
 folderAsset: yes
+========
+guid: 02ecf0cabe1e38144b4d87bac247bec9
+>>>>>>>> main:Cryptid 1.0.1/Assets/Houdini Starter/HDA/sop_parke.tilegen.1.0.hdalc.meta
 DefaultImporter:
   externalObjects: {}
   userData: 
