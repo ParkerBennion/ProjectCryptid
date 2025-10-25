@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 public class MushroomDefault : MonoBehaviour, IDamageable
 {
@@ -9,5 +10,7 @@ public class MushroomDefault : MonoBehaviour, IDamageable
     {
         print("Mushroom Received Hit: " + damage);
         changeHealthAction?.RaiseAction(healAmount);
+        Instantiate(particlePrefab, transform.position, Quaternion.identity);
+        Destroy(gameObject);
     }
 }
