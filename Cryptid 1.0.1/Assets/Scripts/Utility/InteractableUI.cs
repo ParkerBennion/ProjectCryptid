@@ -41,7 +41,6 @@ public class InteractableUI : MonoBehaviour
     public void StopTracking()
     {
         tracking = false;
-        print("Hiding UI");
         transform.parent.gameObject.SetActive(false);
     }
     /// <summary>

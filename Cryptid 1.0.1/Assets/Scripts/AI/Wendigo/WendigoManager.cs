@@ -8,8 +8,7 @@ public class WendigoManager : CryptidManager
     public GameObject playerTarget;
     private WaitForSeconds meleeWFS, rangedWFS;
     public bool canMelee, canRangeAttack;
-    private bool canStun;
-    [SerializeField] private State flinchState, disengageState;
+    [SerializeField] private State disengageState;
     [SerializeField] private float rangeCD, meleeCD;
 
     protected override void Awake()
@@ -19,12 +18,10 @@ public class WendigoManager : CryptidManager
         rangedWFS = new WaitForSeconds(rangeCD);
     }
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     private void Start()
     {
         canMelee = true;
         canRangeAttack = true;
-        canStun = true;
     }
     public void SetTarget(GameObject obj)
     {
@@ -74,20 +71,6 @@ public class WendigoManager : CryptidManager
         yield return meleeWFS;
         canMelee = true;
     }
-    private IEnumerator StunCooldown()
-    {
-        stateMachine.SwitchToNextState(flinchState);
-        canStun = false;
-        yield return new WaitForSeconds(1.5f);
-        canStun = true;
-    }
 
-    public void BeginStunCoodlown()
-    {
-        if (canStun)
-        {
-            //stateMachine.SwitchToNextState(flinchState);
-            StartCoroutine(StunCooldown());
-        }
-    }
+    
 }

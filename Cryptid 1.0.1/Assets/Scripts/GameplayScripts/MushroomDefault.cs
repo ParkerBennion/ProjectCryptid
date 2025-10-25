@@ -8,7 +8,6 @@ public class MushroomDefault : MonoBehaviour, IDamageable
     [SerializeField] private float healAmount;
     public void DealDamage(float damage)
     {
-        print("Mushroom Received Hit: " + damage);
         changeHealthAction?.RaiseAction(healAmount);
         Instantiate(particlePrefab, transform.position, Quaternion.identity);
         Destroy(gameObject);

@@ -1818,6 +1818,7 @@ MonoBehaviour:
   animator: {fileID: 3806275233138044880}
   navAgent: {fileID: 4467649302048103906}
   stateMachine: {fileID: 8601654369842533651}
+  mRenderer: {fileID: 4181809573326108634}
   splatterFX: {fileID: 472526503852951626, guid: a1fa0cfc504c03949a631a1d626da7bb, type: 3}
   playerTarget: {fileID: 0}
   canMelee: 0
@@ -1875,13 +1876,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCurrentHealth: 0
-  maxHealth: 0
+  maxHealth: 10
   damageEvent:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 5607830380607762379}
         m_TargetAssemblyTypeName: WendigoManager, Assembly-CSharp
         m_MethodName: BeginStunCoodlown
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 5607830380607762379}
+        m_TargetAssemblyTypeName: CryptidManager, Assembly-CSharp
+        m_MethodName: FlashHurt
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2466,6 +2479,7 @@ SkinnedMeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: a9febfc9f435c204e87b5fad2931392c, type: 2}
+  - {fileID: 2100000, guid: 8306659a85ebdf04c83d11c15b09a7d8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
