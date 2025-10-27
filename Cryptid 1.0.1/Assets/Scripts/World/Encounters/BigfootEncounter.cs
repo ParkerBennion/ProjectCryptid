@@ -35,7 +35,7 @@ public class BigfootEncounter : Encounter
             {
                 detected = true;
                 detectedEvent.Invoke();
-                Destroy(bigfootInstance);
+                bigfootInstance.GetComponent<Animator>().SetTrigger("Alerted");
             }
             yield return WFS;
         }
