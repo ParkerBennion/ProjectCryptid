@@ -9,7 +9,7 @@ public class AssignCharacterMaterialVariation : MonoBehaviour
 
     private void Awake()
     {
-        mRenderer.material = variations[Random.Range(0, variations.Length)];
+        mRenderer.materials[0] = variations[Random.Range(0, variations.Length)];
     }
 
     

@@ -36,16 +36,17 @@ public class SpawnMultiple : MonoBehaviour
     {
         float elapsedTime = 0;
         float t;
-        Vector3 destinationOffset = new Vector3(Random.Range(-xSpread, xSpread), 0, zDistance);
-        Vector3 destination = transform.TransformPoint(destinationOffset);
+        Vector3 destination = transform.position
+                              + transform.right * Random.Range(-xSpread, xSpread)
+                              + transform.forward * zDistance;
         Vector3 currentArcPos;
-        Vector3 startPosition = gameObject.transform.position;
+        Vector3 startPosition = transform.position;
         while (elapsedTime < airTime)
         {
             t = elapsedTime / airTime;
             currentArcPos = Vector3.Lerp(startPosition, destination, t);
             currentArcPos.y += (4 * launchHeight * t * (1 - t));//calculates the height based on the distance travelled(t) and the maximum height
-            item.gameObject.transform.position = currentArcPos;
+            item.transform.position = currentArcPos;
             elapsedTime += Time.deltaTime;
             yield return wff;
         }

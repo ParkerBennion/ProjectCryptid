@@ -9,6 +9,7 @@ public class ImageSwapper : MonoBehaviour
     public UnityEngine.UI.Image thisImage;
     private int imageIndex;
     public Sprite[] images;
+    public Sprite specificImage;
 
     private void Awake()
     {
@@ -16,7 +17,7 @@ public class ImageSwapper : MonoBehaviour
         imageIndex = 0;
     }
 
-    private void AssignImage(Sprite sprite)
+    public void AssignImage(Sprite sprite)
     {
         thisImage.sprite = sprite;
     }
@@ -27,5 +28,4 @@ public class ImageSwapper : MonoBehaviour
         if (imageIndex >= images.Length) imageIndex = 0;
         thisImage.sprite = images[imageIndex];
     }
-    
 }

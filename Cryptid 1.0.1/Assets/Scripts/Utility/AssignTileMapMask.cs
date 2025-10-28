@@ -10,14 +10,15 @@ public class AssignTileMapMask : MonoBehaviour
 
     private void Awake()
     {
+        tileFloorRenderer = GetComponent<MeshRenderer>();
         InstancedGroundMaterial = tileFloorRenderer.material;
     }
 
     private void Start()
     {
         // assign the pathMask to the material
-        if(InstancedGroundMaterial.GetTexture("PathMask")!=null)
-            InstancedGroundMaterial.SetTexture("PathMask", pathMask);
+        if(InstancedGroundMaterial.GetTexture("_PathMask")!=null)
+            InstancedGroundMaterial.SetTexture("_PathMask", pathMask);
         else Debug.LogWarning("Material of "+gameObject.name+" has no attribute named 'PathMask'");
     }
 }

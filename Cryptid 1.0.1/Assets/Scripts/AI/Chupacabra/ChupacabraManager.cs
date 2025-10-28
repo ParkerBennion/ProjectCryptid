@@ -8,18 +8,16 @@ using Random = UnityEngine.Random;
 [RequireComponent(typeof(Animator), typeof(NavMeshAgent))]
 public class ChupacabraManager : CryptidManager
 {
-    public State fleeState, flinchState;
+    public State fleeState;
     public bool canPounce;
     public GameObject playerTarget;
     private WaitForSeconds skillCDWFS;
     [SerializeField] private float pounceCooldown;
-    [SerializeField] private bool canStun;
 
     protected override void Awake()
     {
         base.Awake();
         canPounce = true;
-        canStun = true;
         skillCDWFS = new WaitForSeconds(pounceCooldown);
     }
 
@@ -58,32 +56,6 @@ public class ChupacabraManager : CryptidManager
             transform.position = hit.point;
         }
     }
-
-    
-    private IEnumerator StunCooldown()
-    {
-        canStun = false;
-        yield return new WaitForSeconds(1.5f);
-        canStun = true;
-    }
-    
-    public void BeginStunCoodlown()
-    {
-        if (canStun)
-        {
-            stateMachine.SwitchToNextState(flinchState);
-            StartCoroutine(StunCooldown());
-        }
-    }
-
-    public void Stun()
-    {
-        if (canStun)
-        {
-            stateMachine.SwitchToNextState(flinchState);
-        }
-    }
-    
     
     /// <summary>
     /// puts the pounce ability on CD for (POUNCECOOLDOWN) seconds, barring it's use until it is off cooldown

@@ -4842,6 +4842,7 @@ GameObject:
   - component: {fileID: 882038372797051415}
   - component: {fileID: 1792391614931232964}
   - component: {fileID: 2469136257454081710}
+  - component: {fileID: 8472832683707017007}
   m_Layer: 3
   m_Name: PlayerCharCaleb
   m_TagString: PlayerCharacter
@@ -4864,6 +4865,7 @@ Transform:
   m_Children:
   - {fileID: 4109710033390353757}
   - {fileID: 6689222554867857265}
+  - {fileID: 8756874786784641204}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &3494001154833995361
@@ -4960,19 +4962,7 @@ MonoBehaviour:
   maxHealth: 100
   damageEvent:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 11400000, guid: f2fa229f8dd1c084394f879efef37c04, type: 2}
-        m_TargetAssemblyTypeName: GameAction, Assembly-CSharp
-        m_MethodName: RaiseAction
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   deathEvent:
     m_PersistentCalls:
       m_Calls:
@@ -5162,6 +5152,34 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   callerAction: {fileID: 11400000, guid: 59d328b0aaa5a36468d932940168344d, type: 2}
+--- !u!114 &8472832683707017007
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1102599369354472857}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48203b53e8e555649b720f431a4c70c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  floatAction: {fileID: 11400000, guid: 32af2b1640fadcc498a552b88973f501, type: 2}
+  responseEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7505922445188434151}
+        m_TargetAssemblyTypeName: PlayerHealth, Assembly-CSharp
+        m_MethodName: ChangeHealth
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1284699922658229064
 GameObject:
   m_ObjectHideFlags: 0
@@ -14935,8 +14953,7 @@ Transform:
   m_LocalPosition: {x: -10.06357, y: 8.987421, z: -2.2006917}
   m_LocalScale: {x: 66, y: 66, z: 65.999985}
   m_ConstrainProportionsScale: 1
-  m_Children:
-  - {fileID: 8756874786784641204}
+  m_Children: []
   m_Father: {fileID: 2131463058701913459}
   m_LocalEulerAnglesHint: {x: -32.938, y: 90, z: 98.003}
 --- !u!33 &6106094654100893612
@@ -25026,13 +25043,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7665137806515170774}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.64329, y: 0.29356074, z: -0.3802658, w: 0.5961528}
-  m_LocalPosition: {x: 0.025, y: 1.413, z: -0.111}
-  m_LocalScale: {x: 9.159788, y: 8.9986315, z: 2.8590465}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 5.63, z: 0}
+  m_LocalScale: {x: 6.0454617, y: 5.939097, z: 1.8869715}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 7420997215013720686}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Father: {fileID: 1642039911162146809}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!108 &7675386470668078479
 Light:
   m_ObjectHideFlags: 0
@@ -25042,12 +25059,12 @@ Light:
   m_GameObject: {fileID: 7665137806515170774}
   m_Enabled: 1
   serializedVersion: 11
-  m_Type: 2
-  m_Color: {r: 1, g: 0.5262718, b: 0, a: 1}
-  m_Intensity: 0
+  m_Type: 0
+  m_Color: {r: 1, g: 0.8634665, b: 0.7122642, a: 1}
+  m_Intensity: 45
   m_Range: 10
-  m_SpotAngle: 30
-  m_InnerSpotAngle: 21.80208
+  m_SpotAngle: 154.94089
+  m_InnerSpotAngle: 122.85047
   m_CookieSize: 10
   m_Shadows:
     m_Type: 0
@@ -25144,7 +25161,7 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
-          m_FloatArgument: 1
+          m_FloatArgument: 45
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
