@@ -1012,6 +1012,7 @@ SkinnedMeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 45eb89dde7923784d871b60bcee6b885, type: 2}
+  - {fileID: 2100000, guid: 8306659a85ebdf04c83d11c15b09a7d8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1561,7 +1562,7 @@ GameObject:
   - component: {fileID: 6245659497031701177}
   - component: {fileID: 1400355363187787757}
   m_Layer: 7
-  m_Name: Chupacabra
+  m_Name: Cryptid_Chupacabra
   m_TagString: Untagged
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -1664,6 +1665,7 @@ MonoBehaviour:
   animator: {fileID: 6587335968660136068}
   navAgent: {fileID: 5802046408941479511}
   stateMachine: {fileID: 5636798512514614687}
+  mRenderer: {fileID: 507172229204657985}
   splatterFX: {fileID: 472526503852951626, guid: a1fa0cfc504c03949a631a1d626da7bb, type: 3}
   fleeState: {fileID: 761088540955871117}
   flinchState: {fileID: 2290627368239795043}
@@ -1705,6 +1707,18 @@ MonoBehaviour:
       - m_Target: {fileID: 4509567553487782231}
         m_TargetAssemblyTypeName: ChupacabraManager, Assembly-CSharp
         m_MethodName: BeginStunCoodlown
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 4509567553487782231}
+        m_TargetAssemblyTypeName: CryptidManager, Assembly-CSharp
+        m_MethodName: FlashHurt
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

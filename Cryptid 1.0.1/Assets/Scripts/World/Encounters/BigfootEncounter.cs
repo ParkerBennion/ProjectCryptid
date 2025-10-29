@@ -12,15 +12,17 @@ public class BigfootEncounter : Encounter
     public UnityEvent detectedEvent;
     public override void OnExitEncounter()
     {
-        Destroy(bigfootInstance);
+        if(bigfootInstance is not null)
+            Destroy(bigfootInstance);
     }
 
     public override IEnumerator EncounterRoutine()
     {
+        float tickTime = .25f;
         detected = false;
         float distanceFromPlayer;
         Debug.Log("SPAWNING BIGFOOT");
-        WaitForSeconds WFS = new WaitForSeconds(.5f);
+        WaitForSeconds WFS = new WaitForSeconds(tickTime);
         player = encounterManager.player;
         bigfootInstance = Instantiate(bigfootPrefab, FindSpawnInFrontOfPlayer(), Quaternion.identity,null).gameObject;
         while (!detected)
@@ -34,9 +36,26 @@ public class BigfootEncounter : Encounter
             if (distanceFromPlayer < detectionRange)
             {
                 detected = true;
+                bigfootInstance.GetComponent<Animator>().SetTrigger("Alerted");
+                yield return WFS;
+                bigfootInstance.GetComponent<BigfootAIController>().TurnToPlayer(player);
                 detectedEvent.Invoke();
-                Destroy(bigfootInstance);
             }
+            yield return WFS;
+        }
+        //at this point, bigfoot has either despawned or is running
+        yield return new WaitForSeconds(1f);
+        float elapsedTime = 0;
+        float allowedRunTime = 5f; // this is the maximum time bigfoot can run away before he disappears automatically
+        while (elapsedTime < allowedRunTime)
+        {
+            distanceFromPlayer = Vector3.Distance(player.transform.position, bigfootInstance.transform.position);
+            if (distanceFromPlayer > despawnRange)
+            {
+                elapsedTime = allowedRunTime+1f;
+                continue;
+            }
+            elapsedTime += tickTime;
             yield return WFS;
         }
         encounterManager.CloseCurrentEncounter();

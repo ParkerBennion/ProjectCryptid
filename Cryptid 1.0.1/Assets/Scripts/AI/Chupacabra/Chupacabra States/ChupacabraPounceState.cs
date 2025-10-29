@@ -101,7 +101,6 @@ public class ChupacabraPounceState : State
         Collider[] cols = Physics.OverlapBox(attackCenter, hitboxHalfExtents, quaternion.identity, LayerMask.GetMask("PlayerLayer"));
         foreach (Collider thisCol in cols)
         {
-            print("Checking collider "+thisCol.gameObject.gameObject.name);
             if (thisCol.gameObject.gameObject.CompareTag("PlayerCharacter"))
             {
                 foundPlayer = true;
@@ -122,7 +121,6 @@ public class ChupacabraPounceState : State
 
     public override void OnAnimationFinish()
     {
-        print("Fumble animation finished");
         manager.StartPounceCD();
         stateMachine.SwitchToNextState(FumbleState);
     }
