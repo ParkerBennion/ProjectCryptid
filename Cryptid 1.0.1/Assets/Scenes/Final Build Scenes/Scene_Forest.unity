@@ -6778,6 +6778,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0.00000028487713
       objectReference: {fileID: 0}
+    - target: {fileID: 1049683504339075795, guid: 42a42adffa27bdc48ab73cef4f59ec74, type: 3}
+      propertyPath: m_AdditionalLightsShadowResolutionTier
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1102599369354472857, guid: 42a42adffa27bdc48ab73cef4f59ec74, type: 3}
       propertyPath: m_Name
       value: PlayerChar
@@ -7321,6 +7325,10 @@ PrefabInstance:
     - target: {fileID: 7665137806515170774, guid: 42a42adffa27bdc48ab73cef4f59ec74, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7675386470668078479, guid: 42a42adffa27bdc48ab73cef4f59ec74, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8079006791580368474, guid: 42a42adffa27bdc48ab73cef4f59ec74, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
