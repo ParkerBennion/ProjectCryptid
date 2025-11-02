@@ -8,6 +8,7 @@ public class BigfootAIController : MonoBehaviour
     [SerializeField] private NavMeshAgent agent;
     [SerializeField] private Animator animator;
     private GameObject playerCharacter;
+    [SerializeField] private GameObject binoculars;
 
 
     public void Flee()
@@ -20,6 +21,13 @@ public class BigfootAIController : MonoBehaviour
     {
         playerCharacter = player;
         StartCoroutine(TurnAndFacePlayer());
+    }
+
+    public void DropBinoculars()
+    {
+        binoculars.GetComponent<Rigidbody>().useGravity = true;
+        binoculars.GetComponent<Rigidbody>().AddTorque(new Vector3(50,0,150));
+        binoculars.transform.SetParent(null);
     }
     public IEnumerator TurnAndFacePlayer()
     {

@@ -5297,6 +5297,7 @@ GameObject:
   - component: {fileID: 73851879260574492}
   - component: {fileID: 4547338163919234030}
   - component: {fileID: 3328501843666688675}
+  - component: {fileID: 6695199333832726913}
   - component: {fileID: 7139823562945001052}
   m_Layer: 5
   m_Name: TorchButton
@@ -5419,6 +5420,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ControlPath: <Gamepad>/buttonNorth
+--- !u!114 &6695199333832726913
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8895607567075910975}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71d6a57f9149da44c849078fb00f63a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  torchSO: {fileID: 11400000, guid: 5d112b78f37dda646a93d2fd7ed1babe, type: 2}
+  torchOnImage: {fileID: 844763960, guid: 593591750988d5e44b95179f9fcff461, type: 3}
+  torchOffImage: {fileID: -89843089, guid: 593591750988d5e44b95179f9fcff461, type: 3}
 --- !u!114 &7139823562945001052
 MonoBehaviour:
   m_ObjectHideFlags: 0
