@@ -25,12 +25,12 @@ public class UIHealthChangeReciever : MonoBehaviour
         if (val < currentHealth)//if player takes damage
         {
             negativeAction.Invoke();
-            print("player has damaged for "+val);
+            //print("player has damaged for "+val);
         }
         else if(val > currentHealth)
         {
             positiveAction.Invoke();
-            print("player has healed for "+val);
+            //print("player has healed for "+val);
         }
 
         currentHealth = val;

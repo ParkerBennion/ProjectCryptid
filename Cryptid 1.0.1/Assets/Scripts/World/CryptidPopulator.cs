@@ -82,7 +82,7 @@ public class CryptidPopulator : MonoBehaviour
         bool isRunning = true;
         while (isRunning) 
         {
-            print("Wrangling cryptids");
+            //print("Wrangling cryptids");
             foreach (CryptidManager cryptid in activeCryptids)
             {
                 if (Vector3.Distance(playerCharacter.transform.position, cryptid.transform.position) > maxSpawnRange)
