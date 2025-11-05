@@ -7122,6 +7122,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0.0000000209006
       objectReference: {fileID: 0}
+    - target: {fileID: 6533573094479299966, guid: 42a42adffa27bdc48ab73cef4f59ec74, type: 3}
+      propertyPath: moveWithTransform
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6563399409263680478, guid: 42a42adffa27bdc48ab73cef4f59ec74, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: -2.344329
@@ -17458,6 +17462,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1712265427366806249, guid: b9be03c6825b51944b38135995a76acc, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 4122132737173972261, guid: b9be03c6825b51944b38135995a76acc, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.25
+      objectReference: {fileID: 0}
     - target: {fileID: 4816673455531227876, guid: b9be03c6825b51944b38135995a76acc, type: 3}
       propertyPath: m_LocalPosition.x
       value: 12.92
@@ -17470,10 +17482,22 @@ PrefabInstance:
       propertyPath: cellManager
       value: 
       objectReference: {fileID: 1456038613}
+    - target: {fileID: 5622546591501537518, guid: b9be03c6825b51944b38135995a76acc, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 5866035770806128210, guid: b9be03c6825b51944b38135995a76acc, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.25
+      objectReference: {fileID: 0}
     - target: {fileID: 6265639404286607582, guid: b9be03c6825b51944b38135995a76acc, type: 3}
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1333294011}
+    - target: {fileID: 7400050063447668044, guid: b9be03c6825b51944b38135995a76acc, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.25
+      objectReference: {fileID: 0}
     - target: {fileID: 8461872142734046693, guid: b9be03c6825b51944b38135995a76acc, type: 3}
       propertyPath: m_LocalPosition.y
       value: -0.12
