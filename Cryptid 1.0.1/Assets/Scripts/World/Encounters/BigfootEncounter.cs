@@ -21,7 +21,6 @@ public class BigfootEncounter : Encounter
         float tickTime = .25f;
         detected = false;
         float distanceFromPlayer;
-        Debug.Log("SPAWNING BIGFOOT");
         WaitForSeconds WFS = new WaitForSeconds(tickTime);
         player = encounterManager.player;
         bigfootInstance = Instantiate(bigfootPrefab, FindSpawnInFrontOfPlayer(), Quaternion.identity,null).gameObject;
