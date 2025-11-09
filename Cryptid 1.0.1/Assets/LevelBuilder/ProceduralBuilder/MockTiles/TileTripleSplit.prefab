@@ -261,7 +261,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tileFloorRenderer: {fileID: 0}
-  pathMask: {fileID: 2800000, guid: 9209eca9c89e96a4c9a55f242feb3ebe, type: 3}
+  pathMask: {fileID: 2800000, guid: f08e4ce1092517c47999ae4e2a4819a8, type: 3}
 --- !u!1 &8668832759795102700
 GameObject:
   m_ObjectHideFlags: 0
