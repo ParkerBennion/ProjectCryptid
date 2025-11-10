@@ -1,0 +1,1 @@
+Add assets in these folders need to be labeled as "Type #" ass seen here with the caps and space for example Tree 3 or Rock 12. the number also maxes out at 12 assets and cannot hold more.
