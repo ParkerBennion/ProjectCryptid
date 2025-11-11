@@ -416,48 +416,16 @@ PrefabInstance:
       value: Jacklope 2 VFX
       objectReference: {fileID: 0}
     - target: {fileID: 4980137333800894632, guid: a832223be1e27a04dbeb93656dcdff64, type: 3}
-      propertyPath: RotationModule.enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4980137333800894632, guid: a832223be1e27a04dbeb93656dcdff64, type: 3}
-      propertyPath: NoiseModule.strength.scalar
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4980137333800894632, guid: a832223be1e27a04dbeb93656dcdff64, type: 3}
-      propertyPath: RotationModule.curve.scalar
-      value: 1.0716321
+      propertyPath: InitialModule.maxNumParticles
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4980137333800894632, guid: a832223be1e27a04dbeb93656dcdff64, type: 3}
       propertyPath: InitialModule.startSize.scalar
-      value: 0.45
-      objectReference: {fileID: 0}
-    - target: {fileID: 4980137333800894632, guid: a832223be1e27a04dbeb93656dcdff64, type: 3}
-      propertyPath: EmissionModule.rateOverTime.scalar
-      value: 8.12
-      objectReference: {fileID: 0}
-    - target: {fileID: 4980137333800894632, guid: a832223be1e27a04dbeb93656dcdff64, type: 3}
-      propertyPath: InitialModule.startColor.maxColor.a
-      value: 0.6627451
-      objectReference: {fileID: 0}
-    - target: {fileID: 6608581897975300317, guid: a832223be1e27a04dbeb93656dcdff64, type: 3}
-      propertyPath: RotationModule.enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6608581897975300317, guid: a832223be1e27a04dbeb93656dcdff64, type: 3}
-      propertyPath: NoiseModule.strength.scalar
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6608581897975300317, guid: a832223be1e27a04dbeb93656dcdff64, type: 3}
-      propertyPath: RotationModule.curve.scalar
-      value: 1.0716321
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 6608581897975300317, guid: a832223be1e27a04dbeb93656dcdff64, type: 3}
       propertyPath: InitialModule.startSize.scalar
-      value: 0.45
-      objectReference: {fileID: 0}
-    - target: {fileID: 6608581897975300317, guid: a832223be1e27a04dbeb93656dcdff64, type: 3}
-      propertyPath: EmissionModule.rateOverTime.scalar
-      value: 10.6
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 8051507491538891691, guid: a832223be1e27a04dbeb93656dcdff64, type: 3}
       propertyPath: m_LocalPosition.x
@@ -498,10 +466,6 @@ PrefabInstance:
     - target: {fileID: 8051507491538891691, guid: a832223be1e27a04dbeb93656dcdff64, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8362531074917841366, guid: a832223be1e27a04dbeb93656dcdff64, type: 3}
-      propertyPath: InitialModule.startColor.maxColor.a
-      value: 0.6901961
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6513,6 +6477,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4924508517794848669, guid: 35377ac6911f46342bb84f66644a00c9, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5040449643259996639, guid: 35377ac6911f46342bb84f66644a00c9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0.0000037214984
@@ -9772,6 +9740,18 @@ PrefabInstance:
     - target: {fileID: 96240003499216460, guid: e53d9e55246ac3f40bb756f7936f10fc, type: 3}
       propertyPath: m_Name
       value: Jacklope 1 VFX
+      objectReference: {fileID: 0}
+    - target: {fileID: 4980137333800894632, guid: e53d9e55246ac3f40bb756f7936f10fc, type: 3}
+      propertyPath: InitialModule.maxNumParticles
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4980137333800894632, guid: e53d9e55246ac3f40bb756f7936f10fc, type: 3}
+      propertyPath: InitialModule.startSize.scalar
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6608581897975300317, guid: e53d9e55246ac3f40bb756f7936f10fc, type: 3}
+      propertyPath: InitialModule.startSize.scalar
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 8051507491538891691, guid: e53d9e55246ac3f40bb756f7936f10fc, type: 3}
       propertyPath: m_LocalPosition.x

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3206868040933765561}
   - component: {fileID: 4999122334339669569}
   m_Layer: 0
-  m_Name: Wendigo Summon
+  m_Name: Wendigo Summon VFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9783,7 +9783,7 @@ ParticleSystem:
   startDelay:
     serializedVersion: 2
     minMaxState: 0
-    scalar: 0.11
+    scalar: 0.04
     minScalar: 0
     maxCurve:
       serializedVersion: 2
@@ -9843,7 +9843,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1.05
+      scalar: 1.34
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -14666,7 +14666,7 @@ ParticleSystem:
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
   emitterVelocityMode: 1
-  looping: 1
+  looping: 0
   prewarm: 0
   playOnAwake: 1
   useUnscaledTime: 0
@@ -14906,7 +14906,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 3
       scalar: 4
-      minScalar: 2
+      minScalar: 1
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -15171,7 +15171,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 3
       scalar: 0.7853981
-      minScalar: -0.7853981
+      minScalar: -0.5235988
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -15369,7 +15369,7 @@ ParticleSystem:
     sphericalDirectionAmount: 0
     randomPositionAmount: 0
     radius:
-      value: 2.24
+      value: 2.45
       mode: 0
       spread: 0
       speed:
@@ -15924,8 +15924,8 @@ ParticleSystem:
     curve:
       serializedVersion: 2
       minMaxState: 3
-      scalar: -0.5235988
-      minScalar: 0.6981317
+      scalar: -0.7853981
+      minScalar: 0.7853981
       maxCurve:
         serializedVersion: 2
         m_Curve:
