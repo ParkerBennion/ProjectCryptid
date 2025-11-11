@@ -172,4 +172,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tileFloorRenderer: {fileID: 0}
-  pathMask: {fileID: 2800000, guid: c1a4a8af608ea8747bc080ba5924193e, type: 3}
+  pathMask: {fileID: 2800000, guid: 5a66340f53ede2b4d9d64a2a91bcd070, type: 3}
