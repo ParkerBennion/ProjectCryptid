@@ -6051,7 +6051,7 @@ MonoBehaviour:
   - {fileID: 8926484042661615366}
   - {fileID: 8926484042661615367}
   m_UIPosition: {x: 0, y: 0}
-  m_UICollapsed: 1
+  m_UICollapsed: 0
   m_UISuperCollapsed: 0
   m_MasterSlot: {fileID: 8926484042661615361}
   m_MasterData:
@@ -6186,7 +6186,7 @@ MonoBehaviour:
   - {fileID: 8926484042661615370}
   - {fileID: 8926484042661615371}
   m_UIPosition: {x: 0, y: 0}
-  m_UICollapsed: 1
+  m_UICollapsed: 0
   m_UISuperCollapsed: 0
   m_MasterSlot: {fileID: 8926484042661615361}
   m_MasterData:
