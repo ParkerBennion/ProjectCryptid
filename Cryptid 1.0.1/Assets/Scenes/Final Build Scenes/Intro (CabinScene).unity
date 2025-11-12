@@ -8326,6 +8326,10 @@ PrefabInstance:
       propertyPath: playerDataManager
       value: 
       objectReference: {fileID: 1597844650}
+    - target: {fileID: 5851504514292581080, guid: f4d98c96c6bfc4041a617bf0a4c893cd, type: 3}
+      propertyPath: thisEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6524319623191555951, guid: f4d98c96c6bfc4041a617bf0a4c893cd, type: 3}
       propertyPath: startCamera
       value: 
