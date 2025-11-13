@@ -1,9 +1,12 @@
 using UnityEngine;
+using UnityEngine.Events;
+
 [CreateAssetMenu]
 public class TorchSO : ScriptableObject
 {
     [SerializeField] private GameAction torchOnAction, torchOffAction;
     [SerializeField] private bool torchIsActive;
+    public UnityAction<bool> torchChange;
 
     public void ToggleTorch()
     {
@@ -17,6 +20,7 @@ public class TorchSO : ScriptableObject
             torchIsActive = true;
             torchOnAction.RaiseAction();
         }
+        torchChange.Invoke(torchIsActive);
     }
 
     public bool GetTorchStatus()

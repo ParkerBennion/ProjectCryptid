@@ -32,7 +32,7 @@ public abstract class CryptidManager : MonoBehaviour
     public virtual void Die()
     {
         deathCall.RaiseAction(this);
-        Instantiate(splatterFX, transform.position, Quaternion.identity);
+        Instantiate(splatterFX, transform.position+new Vector3(0f,.25f,1f), Quaternion.identity);
     }
 
     public abstract void ResetAI();
