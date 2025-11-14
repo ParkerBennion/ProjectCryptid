@@ -307,6 +307,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wisp
       objectReference: {fileID: 0}
+    - target: {fileID: 6521236809631168867, guid: 2df7df81627340440a0310647e81c89f, type: 3}
+      propertyPath: InitialModule.rotation3D
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8438093307013545852, guid: 2df7df81627340440a0310647e81c89f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.179
