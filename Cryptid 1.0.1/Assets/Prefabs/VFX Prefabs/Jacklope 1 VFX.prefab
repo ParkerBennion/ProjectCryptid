@@ -5499,7 +5499,7 @@ ParticleSystem:
         m_RotationOrder: 4
   ShapeModule:
     serializedVersion: 6
-    enabled: 1
+    enabled: 0
     type: 4
     angle: 9.33
     length: 5
@@ -9616,7 +9616,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 7d3140bef9fd8ef41b34a83cc0793691, type: 2}
+  - {fileID: 2100000, guid: 932cda2a3f7680b4281e2962ef730c2a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
