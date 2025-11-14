@@ -1339,7 +1339,7 @@ MonoBehaviour:
         m_MethodName: AssignImage
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgument: {fileID: 21300000, guid: d85c0bc91f85f5c43bbb43f0efa7b979, type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
