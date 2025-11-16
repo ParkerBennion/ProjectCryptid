@@ -1,14 +1,21 @@
+using System;
 using UnityEngine;
 using TMPro;
 using System.Reflection;
 
 public class DataDisplayUpdater : MonoBehaviour
 {
+    private static readonly int Pulse = Animator.StringToHash("Pulse");
     public TMP_Text displayText;
     public string fieldName = "logs";
-    public GameAction updateDisplayAction; // Reference to the GameAction
-
+    [SerializeField] private GameAction updateDisplayAction; // Reference to the GameAction
     private DataBlockSO data;
+    private Animator animator;
+
+    private void Awake()
+    {
+        animator = GetComponent<Animator>();
+    }
 
     private void Start()
     {
@@ -45,11 +52,12 @@ public class DataDisplayUpdater : MonoBehaviour
         if (field != null)
         {
             object value = field.GetValue(data);
-            displayText.text = $"{fieldName}: {(value != null ? value.ToString() : "N/A")}";
+            displayText.text = $"x {(value != null ? value.ToString() : "N/A")}";
         }
         else
         {
             Debug.LogWarning($"Field '{fieldName}' not found in DataBlockSO.");
         }
+        animator.SetTrigger(Pulse);
     }
 }
