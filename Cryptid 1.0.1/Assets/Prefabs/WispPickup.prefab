@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1000492620673521061}
   - component: {fileID: 8525139497039914582}
   m_Layer: 0
-  m_Name: Sphere
+  m_Name: DetectionCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -69,21 +69,9 @@ MonoBehaviour:
   detectEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2637033025706660663}
-        m_TargetAssemblyTypeName: UnityEngine.ParticleSystem, UnityEngine
-        m_MethodName: Play
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 8740754908376494084}
-        m_TargetAssemblyTypeName: CollectibleWoodChunk, Assembly-CSharp
-        m_MethodName: 
+        m_TargetAssemblyTypeName: CollectibleWisp, Assembly-CSharp
+        m_MethodName: CollectItem
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -233,6 +221,7 @@ MonoBehaviour:
   logValue: 1
   updateDisplayAction: {fileID: 11400000, guid: a7489fb67a5207048a90be0ecce927ec, type: 2}
   rb: {fileID: 3026072289952355850}
+  collectionBurst: {fileID: 628544306005140027, guid: 1cf6003e23a480048a330e90b0f6c5ea, type: 3}
 --- !u!114 &222381996225232229
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -352,17 +341,13 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 1641183551409259716, guid: 2df7df81627340440a0310647e81c89f, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2df7df81627340440a0310647e81c89f, type: 3}
 --- !u!4 &793382184166151464 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8438093307013545852, guid: 2df7df81627340440a0310647e81c89f, type: 3}
-  m_PrefabInstance: {fileID: 9086163720853023316}
-  m_PrefabAsset: {fileID: 0}
---- !u!198 &2637033025706660663 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 6521236809631168867, guid: 2df7df81627340440a0310647e81c89f, type: 3}
   m_PrefabInstance: {fileID: 9086163720853023316}
   m_PrefabAsset: {fileID: 0}
