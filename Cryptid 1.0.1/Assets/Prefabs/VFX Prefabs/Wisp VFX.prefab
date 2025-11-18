@@ -14578,7 +14578,7 @@ GameObject:
   - component: {fileID: 8978165726855162898}
   - component: {fileID: 1409635593756816140}
   m_Layer: 0
-  m_Name: Wisp
+  m_Name: Wisp VFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
