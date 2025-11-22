@@ -7,37 +7,29 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Force Field Shader Mat
-  m_Shader: {fileID: -6465566751694194690, guid: 3161c52e45a0c154cb9f6e80c20c66f3, type: 3}
+  m_Name: Force Field Ground Shader Mat
+  m_Shader: {fileID: -6465566751694194690, guid: 50529045f489d6b4380cf53ff4721e43, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
   - _SURFACE_TYPE_TRANSPARENT
   m_InvalidKeywords: []
-  m_LightmapFlags: 2
+  m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
   stringTagMap:
     RenderType: Transparent
   disabledShaderPasses:
-  - MOTIONVECTORS
   - DepthOnly
   - SHADOWCASTER
+  - MOTIONVECTORS
   m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
-    - _SampleTexture2D_229fe34b97ca4704adf7eaf349456b75_Texture_1_Texture2D:
-        m_Texture: {fileID: 2800000, guid: 9e4ab3b8688c2634ebe2b1d66554cc03, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _SampleTexture2D_4e697d49224c482f9775b790278b9f96_Texture_1_Texture2D:
-        m_Texture: {fileID: 2800000, guid: 20074365d4a51654c87bd26846d15f64, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
     - _Texture:
-        m_Texture: {fileID: 2800000, guid: 997a80a2af355b94384918d1ec30817f, type: 3}
+        m_Texture: {fileID: 2800000, guid: 48c0d4d6bebaa934384b07aa1e2f8184, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
@@ -54,21 +46,16 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - _Alpha: 0.1
     - _AlphaClip: 0
     - _AlphaToMask: 0
     - _Blend: 0
     - _CastShadows: 0
-    - _Cull: 2
-    - _DecalMeshBiasType: 0
-    - _DecalMeshDepthBias: 0
-    - _DecalMeshViewBias: 0
-    - _DrawOrder: 0
+    - _Cull: 0
     - _DstBlend: 10
-    - _Edge_Gradient_Offset: -0.26
-    - _Fill: 0.03
-    - _Fresnel_Power: 6.31
-    - _Gradient_Offset: -0.09
-    - _Offset: 0.6
+    - _Edge_Gradient_Offset: -0.02
+    - _Fill: 0.1
+    - _Fresnel_Power: 5
     - _QueueControl: 0
     - _QueueOffset: 0
     - _SrcBlend: 5
@@ -77,16 +64,13 @@ Material:
     - _ZWrite: 0
     - _ZWriteControl: 0
     m_Colors:
-    - _Edge_Gradient_Emissive: {r: 0.051886797, g: 0.7555709, b: 1, a: 0}
-    - _Force_Field_Color: {r: 0.4481132, g: 1, b: 0.97371966, a: 0}
-    - _Force_Field_Emissive: {r: 1, g: 0.6797458, b: 0.6462264, a: 0}
-    - _Gradient_Emissive: {r: 0.16509432, g: 0.8751542, b: 1, a: 0}
-    - _Texture_Scale: {r: 1.98, g: 1, b: 0, a: 0}
-    - _Texture_Speed: {r: -0.05, g: -0.06, b: 0, a: 0}
-    - _Texture_Tiling: {r: 5, g: 5, b: 0, a: 0}
+    - _Force_Field_Color: {r: 0.5613208, g: 1, b: 0.98245287, a: 0}
+    - _Force_Field_Emissive: {r: 1, g: 1, b: 1, a: 0}
+    - _Texture_Scale: {r: 1, g: 1, b: 0, a: 0}
+    - _Texture_Speed: {r: 0, g: 0.05, b: 0, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
---- !u!114 &3532294790182332601
+--- !u!114 &2776164976222419283
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
