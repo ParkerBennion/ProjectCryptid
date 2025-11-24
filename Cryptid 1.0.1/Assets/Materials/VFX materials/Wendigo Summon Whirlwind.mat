@@ -49,7 +49,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Image:
-        m_Texture: {fileID: 2800000, guid: 6b9ee63c0caf00e4f937ad69a41fe4c4, type: 3}
+        m_Texture: {fileID: 2800000, guid: 65aa72f4bef0c014da24ccf6d7c4c166, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
@@ -91,7 +91,7 @@ Material:
     m_Ints: []
     m_Floats:
     - _AddPrecomputedVelocity: 0
-    - _Alpha: 0.51
+    - _Alpha: 0.3
     - _AlphaClip: 0
     - _AlphaToMask: 0
     - _Blend: 0
@@ -113,6 +113,7 @@ Material:
     - _Metallic: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.005
+    - _Progress: 1
     - _QueueControl: 0
     - _QueueOffset: 0
     - _ReceiveShadows: 1
