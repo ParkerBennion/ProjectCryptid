@@ -13,7 +13,8 @@ Material:
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
   - _SURFACE_TYPE_TRANSPARENT
-  m_InvalidKeywords: []
+  m_InvalidKeywords:
+  - _RECEIVE_SHADOWS_OFF
   m_LightmapFlags: 2
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -28,6 +29,10 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - _SampleTexture2DLOD_9b58419774894d05981b9af2602d4531_Texture_1_Texture2D:
+        m_Texture: {fileID: 2800000, guid: 1b3039c91d65d47439550b7c561160ff, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _SampleTexture2D_229fe34b97ca4704adf7eaf349456b75_Texture_1_Texture2D:
         m_Texture: {fileID: 2800000, guid: 9e4ab3b8688c2634ebe2b1d66554cc03, type: 3}
         m_Scale: {x: 1, y: 1}
@@ -37,7 +42,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Texture:
-        m_Texture: {fileID: 2800000, guid: 997a80a2af355b94384918d1ec30817f, type: 3}
+        m_Texture: {fileID: 2800000, guid: 1b3039c91d65d47439550b7c561160ff, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
@@ -57,32 +62,37 @@ Material:
     - _AlphaClip: 0
     - _AlphaToMask: 0
     - _Blend: 0
+    - _BlendModePreserveSpecular: 1
     - _CastShadows: 0
     - _Cull: 2
     - _DecalMeshBiasType: 0
     - _DecalMeshDepthBias: 0
     - _DecalMeshViewBias: 0
+    - _Displacement: 0.05
     - _DrawOrder: 0
     - _DstBlend: 10
-    - _Edge_Gradient_Offset: -0.26
-    - _Fill: 0.03
-    - _Fresnel_Power: 6.31
+    - _Edge_Gradient_Offset: 0.07
+    - _Fill: 0.01
+    - _Fresnel_Power: 6.84
     - _Gradient_Offset: -0.09
     - _Offset: 0.6
     - _QueueControl: 0
     - _QueueOffset: 0
+    - _ReceiveShadows: 0
     - _SrcBlend: 5
     - _Surface: 1
+    - _Texture_power: 5
+    - _WorkflowMode: 1
     - _ZTest: 4
     - _ZWrite: 0
     - _ZWriteControl: 0
     m_Colors:
     - _Edge_Gradient_Emissive: {r: 0.051886797, g: 0.7555709, b: 1, a: 0}
-    - _Force_Field_Color: {r: 0.4481132, g: 1, b: 0.97371966, a: 0}
-    - _Force_Field_Emissive: {r: 1, g: 0.6797458, b: 0.6462264, a: 0}
+    - _Force_Field_Color: {r: 0.3812745, g: 0.9622642, b: 0.92537594, a: 0}
+    - _Force_Field_Emissive: {r: 1, g: 1, b: 1, a: 0}
     - _Gradient_Emissive: {r: 0.16509432, g: 0.8751542, b: 1, a: 0}
-    - _Texture_Scale: {r: 1.98, g: 1, b: 0, a: 0}
-    - _Texture_Speed: {r: -0.05, g: -0.06, b: 0, a: 0}
+    - _Texture_Scale: {r: 2.12, g: 15.62, b: 0, a: 0}
+    - _Texture_Speed: {r: -0.05, g: -0.19, b: 0, a: 0}
     - _Texture_Tiling: {r: 5, g: 5, b: 0, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
