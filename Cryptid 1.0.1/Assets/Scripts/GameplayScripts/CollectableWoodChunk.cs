@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class CollectibleWoodChunk : MonoBehaviour
+public class CollectibleWisp : MonoBehaviour
 {
     [Tooltip("How many coins this chunk gives")]
     public int logValue = 1;
@@ -9,8 +9,9 @@ public class CollectibleWoodChunk : MonoBehaviour
     public GameAction updateDisplayAction; // Reference to the GameAction
 
     [SerializeField] private Rigidbody rb;
+    [SerializeField] private GameObject collectionBurst;
     
-    public void CollectChunk()
+    public void CollectItem()
     {
         // Get the current player data
         if (PlayerDataManager.Instance != null && PlayerDataManager.Instance.playerData != null)
@@ -31,7 +32,7 @@ public class CollectibleWoodChunk : MonoBehaviour
         {
             Debug.LogWarning("No active player data found to update logs!");
         }
-
+        Instantiate(collectionBurst, transform.position, Quaternion.identity, null);
         Destroy(gameObject);
     }
 
