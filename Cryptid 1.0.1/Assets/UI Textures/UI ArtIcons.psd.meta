@@ -311,6 +311,72 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: UI Wisp Background
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 217
+        width: 204
+        height: 214
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1b253974cd18e748916baae0fc94df5
+      internalID: 469621546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI Wood border
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 400
+        width: 221
+        height: 244
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e62937255beaf0d42889a4d2ac1c99e1
+      internalID: 2125684811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI Backdrop
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 401
+        width: 178
+        height: 243
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d05cbe1bdd91ed443a584880e97906cd
+      internalID: 1181891589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
@@ -328,11 +394,14 @@ TextureImporter:
       UI Axe: 288244791
       UI Axe Background: -1354765750
       UI AxeAttack: 244916323
+      UI Backdrop: 1181891589
       UI Joystick Backdrop: -287957007
       UI Joystick Knob: -1265394452
       UI Torch Off: -89843089
       UI Torch On: 844763960
       UI Wisp: -1214311002
+      UI Wisp Background: 469621546
+      UI Wood border: 2125684811
   mipmapLimitGroupName: 
   pSDRemoveMatte: 1
   userData: 
