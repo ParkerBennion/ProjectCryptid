@@ -4,18 +4,24 @@ using UnityEngine.Events;
 
 public class InteractionItem : MonoBehaviour
 {
-    [Header("Resource Configuration")]
+    [Header("Requirements")]
+    [Tooltip("See Resources>profiles>File x Data for valid resources. ALL RESOURCES ARE LOWERCASE ONLY")]
     public List<string> resourceNames = new List<string>();
+    [Tooltip("Int value for how many the player must have")]
     public List<float> costs = new List<float>();
-    [Tooltip("If true, resources will be deducted upon success.")]
+    [Tooltip("If true, resources will be deducted upon success. If false, resources will be required but not deducted")]
     public bool deductResources = true;
 
     [Header("Game Actions")]
+    [Tooltip("Optional game actions to run only if a SUCCESSFULL purchase is made.")]
     public List<GameAction> gameAction;
+    [Tooltip("Optional game actions to run only if a FAILED purchase is made.")]
     public List<GameAction> insufficientResourceActions;
     
     [Header("Unity Events")]
+    [Tooltip("Optional Unity Events to run only if a SUCCESSFULL purchase is made.")]
     public UnityEvent onSuccess;
+    [Tooltip("Optional Unity Events to run only if a FAILED purchase is made.")]
     public UnityEvent onInsufficient;
 
     protected DataBlockSO playerData;
