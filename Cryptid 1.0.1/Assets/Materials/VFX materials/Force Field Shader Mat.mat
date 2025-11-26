@@ -73,8 +73,9 @@ Material:
     - _DstBlend: 10
     - _Edge_Gradient_Offset: 0.07
     - _Fill: 0.01
-    - _Fresnel_Power: 6.84
+    - _Fresnel_Power: 10.88
     - _Gradient_Offset: -0.09
+    - _Green_channel_mask: 0.14
     - _Offset: 0.6
     - _QueueControl: 0
     - _QueueOffset: 0
