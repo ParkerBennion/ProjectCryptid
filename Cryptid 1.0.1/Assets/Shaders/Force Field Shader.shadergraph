@@ -1558,7 +1558,7 @@
     "m_ObjectId": "237b39f4879d4ac5b7772e37571b1160",
     "m_Title": "Edge Gradient Effect",
     "m_Position": {
-        "x": -1897.0,
+        "x": -1897.0001220703125,
         "y": 306.5
     }
 }
@@ -4556,8 +4556,8 @@
     "m_ObjectId": "ca36f57b57244e03abe7f32baba54efd",
     "m_Title": "Texture",
     "m_Position": {
-        "x": -1298.5,
-        "y": -988.0
+        "x": -1298.5001220703125,
+        "y": -988.0000610351563
     }
 }
 

@@ -12,11 +12,10 @@ public class DataBlockSO : ScriptableObject
 
     [Header("Stats")]
     public int logs = 0;
-
-    public int Coins = 0;
-    //public float playerHealth;
-    //public float speedMultiplier = 1f;
-    //public bool vulnerable;
+    //logs is tied to other scripts and for simplicity must stay logs
+    
+    
+    public int coins = 0;
 
     //[Header("Settings")]
     //public bool musicOn;
@@ -34,6 +33,12 @@ public class DataBlockSO : ScriptableObject
     public void ChangeLogs(int amount)
     {
         logs += amount;
+        NotifyChanged();
+    }
+
+    public void ChangeCoins(int amount)
+    {
+        coins += amount;
         NotifyChanged();
     }
 }

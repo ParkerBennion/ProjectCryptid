@@ -1,6 +1,6 @@
 //Maya ASCII 2026 scene
 //Name: Totem Pole.ma
-//Last modified: Tue, Nov 25, 2025 03:06:47 AM
+//Last modified: Tue, Nov 25, 2025 05:30:25 PM
 //Codeset: 1252
 file -rdi 1 -ns "CalebSIZEREFERENCE" -rfn "CalebSIZEREFERENCERN" -op "v=0;" 
 		-typ "mayaAscii" "C:/Users/caris/Desktop/ProjectCryptid/CryptidMobile_MayaProject//scenes/CalebSIZEREFERENCE.ma";
@@ -17,17 +17,17 @@ fileInfo "product" "Maya 2026";
 fileInfo "version" "2026";
 fileInfo "cutIdentifier" "202502240946-c910a8ba47";
 fileInfo "osv" "Windows 10 Pro for Workstations v2009 (Build: 19045)";
-fileInfo "UUID" "216C0414-44C1-112D-7533-23ABE49F7B30";
+fileInfo "UUID" "4BE3EFB6-4925-6CB4-CCDB-4BBAC820F4D6";
 createNode transform -s -n "persp";
 	rename -uid "15149724-4EB5-998F-4F10-0380B301B6B2";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -54.611216537230533 2279.1475750351128 958.88785545641622 ;
-	setAttr ".r" -type "double3" -422.5541977445165 -1082.9999999997233 0 ;
+	setAttr ".t" -type "double3" -184.7944288242532 1232.4332035254934 2245.0370690880923 ;
+	setAttr ".r" -type "double3" -379.35419774450429 -1084.5999999997018 9.9713523173390605e-17 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "BDBD2157-4FF1-9C23-C94D-B9856F548AAE";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 2068.1778124413336;
+	setAttr ".coi" 2379.8056220745507;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
