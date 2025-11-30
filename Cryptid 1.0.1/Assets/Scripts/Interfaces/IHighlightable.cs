@@ -2,5 +2,5 @@ using UnityEngine;
 
 public interface IHighlightable
 {
-    public void HighlightObject();
+    public void HighlightObject(bool highlight);
 }

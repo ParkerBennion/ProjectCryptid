@@ -6,6 +6,7 @@ TagManager:
   tags:
   - PlayerCharacter
   - DitherObject
+  - HighlightObject
   layers:
   - Default
   - TransparentFX
