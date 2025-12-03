@@ -6,6 +6,7 @@ TagManager:
   tags:
   - PlayerCharacter
   - DitherObject
+  - HighlightObject
   layers:
   - Default
   - TransparentFX
@@ -20,7 +21,7 @@ TagManager:
   - 3D ui Layer
   - Ground
   - VFX
-  - 
+  - Highlight
   - 
   - 
   - 

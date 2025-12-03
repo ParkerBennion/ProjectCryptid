@@ -46,7 +46,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _PathMask:
-        m_Texture: {fileID: 2800000, guid: 648fdddfce18ecc4783dacdad932e728, type: 3}
+        m_Texture: {fileID: 2800000, guid: 1b3039c91d65d47439550b7c561160ff, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _TrailMap:

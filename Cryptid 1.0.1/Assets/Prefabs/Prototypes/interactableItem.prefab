@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1315280235650207050}
   - component: {fileID: 3289833561309816342}
   - component: {fileID: 887383510733254084}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -150,7 +150,7 @@ GameObject:
   - component: {fileID: 1176581623565400679}
   - component: {fileID: 1635902670480751782}
   - component: {fileID: 1370618246814503346}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -315,7 +315,7 @@ GameObject:
   - component: {fileID: 5045883816426805266}
   - component: {fileID: 3805324874784397958}
   - component: {fileID: 1921824577168140682}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Display Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -416,7 +416,7 @@ GameObject:
   - component: {fileID: 5075835847248842120}
   - component: {fileID: 9221032543761177429}
   - component: {fileID: 1219501579835793377}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player Detect Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -516,7 +516,7 @@ GameObject:
   - component: {fileID: 3624293426595817504}
   - component: {fileID: 945210736678416731}
   - component: {fileID: 7465188109876403763}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: interactableItem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
