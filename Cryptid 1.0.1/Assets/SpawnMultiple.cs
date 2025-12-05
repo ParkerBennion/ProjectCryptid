@@ -16,29 +16,41 @@ public class SpawnMultiple : MonoBehaviour
         wfs = new WaitForSeconds(timeBetweenSpawns);
     }
 
-    public void SpawnItems()
+    public void SpawnItemsForward()
     {
-        StartCoroutine(EjectItems());
+        StartCoroutine(EjectItemsForward());
+    }
+    public void SpawnItemsRandomly()
+    {
+        StartCoroutine(EjectItemsRandomly());
     }
 
-    private IEnumerator EjectItems()
+    private IEnumerator EjectItemsForward()
     {
         GameObject instance;
         foreach (GameObject item in lootSpawns)
         {
             instance = Instantiate(item, transform.position, quaternion.identity);
-            StartCoroutine(EjectItemRoutine(instance));
+            StartCoroutine(EjectItemRoutine(instance,transform.position + transform.right * Random.Range(-xSpread, xSpread) + transform.forward * zDistance));
+            yield return wfs;
+        }
+    }
+    
+    private IEnumerator EjectItemsRandomly()
+    {
+        GameObject instance;
+        foreach (GameObject item in lootSpawns)
+        {
+            instance = Instantiate(item, transform.position, quaternion.identity);
+            StartCoroutine(EjectItemRoutine(instance, new Vector3(Random.Range(-1f,1f)*zDistance, transform.position.y, Random.Range(-1f,1f)*zDistance)+transform.position));
             yield return wfs;
         }
     }
 
-    private IEnumerator EjectItemRoutine(GameObject item)
+    private IEnumerator EjectItemRoutine(GameObject item, Vector3 destination)
     {
         float elapsedTime = 0;
         float t;
-        Vector3 destination = transform.position
-                              + transform.right * Random.Range(-xSpread, xSpread)
-                              + transform.forward * zDistance;
         Vector3 currentArcPos;
         Vector3 startPosition = transform.position;
         while (elapsedTime < airTime)
