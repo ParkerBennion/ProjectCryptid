@@ -848,6 +848,8 @@ GameObject:
   - component: {fileID: 6105625084157881317}
   - component: {fileID: 4001387956049746440}
   - component: {fileID: 6386455428535961938}
+  - component: {fileID: 3142956038257910823}
+  - component: {fileID: 2888442055640910633}
   m_Layer: 7
   m_Name: Cryptid_Jackalope
   m_TagString: Untagged
@@ -908,8 +910,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mRenderer: {fileID: 8211397227385474353}
   variations:
-  - {fileID: 2100000, guid: abed0a33a594e3a448026c4f8bf7ed9b, type: 2}
-  - {fileID: 2100000, guid: 9fd949a8815fb9d47b7f86c8b985d59f, type: 2}
+  - {fileID: 2100000, guid: e65d695462c991f4c95a92c8956c8167, type: 2}
+  - {fileID: 2100000, guid: 6e94c9cc20e4a75439227b6ddc0e03bf, type: 2}
 --- !u!114 &6105625084157881317
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -950,6 +952,30 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 3142956038257910823}
+        m_TargetAssemblyTypeName: SpawnMultiple, Assembly-CSharp
+        m_MethodName: SpawnItemsRandomly
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 2
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2888442055640910633}
+        m_TargetAssemblyTypeName: DestroyBehavior, Assembly-CSharp
+        m_MethodName: DestroyAfterSeconds
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 2
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
@@ -996,6 +1022,43 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 1
   m_Center: {x: 0, y: 1, z: 0}
+--- !u!114 &3142956038257910823
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5941881327485030644}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f914ea316cefed147bd424f7fc35cc78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeBetweenSpawns: 0.05
+  launchHeight: 2
+  airTime: 1
+  zDistance: 3
+  xSpread: 5
+  lootSpawns:
+  - {fileID: 7835740818892888821, guid: 822471273de72e84f851d2676261c548, type: 3}
+  - {fileID: 7835740818892888821, guid: 822471273de72e84f851d2676261c548, type: 3}
+  - {fileID: 7835740818892888821, guid: 822471273de72e84f851d2676261c548, type: 3}
+  - {fileID: 7835740818892888821, guid: 822471273de72e84f851d2676261c548, type: 3}
+  - {fileID: 7835740818892888821, guid: 822471273de72e84f851d2676261c548, type: 3}
+  - {fileID: 7835740818892888821, guid: 822471273de72e84f851d2676261c548, type: 3}
+  - {fileID: 7835740818892888821, guid: 822471273de72e84f851d2676261c548, type: 3}
+--- !u!114 &2888442055640910633
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5941881327485030644}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bdd46ac3441a17d458943c9252343a08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6319993067851337709
 GameObject:
   m_ObjectHideFlags: 0
