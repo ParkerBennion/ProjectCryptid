@@ -87,7 +87,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 6336407553980271056}
         m_TargetAssemblyTypeName: SpawnMultiple, Assembly-CSharp
-        m_MethodName: SpawnItems
+        m_MethodName: SpawnItemsForward
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

@@ -136,9 +136,9 @@ MonoBehaviour:
     realType: Texture2DArray
     defaultValue:
       m_Type:
-        m_SerializableType: UnityEngine.Texture2DArray, UnityEngine.CoreModule, Version=0.0.0.0,
+        m_SerializableType: UnityEngine.Object, UnityEngine.CoreModule, Version=0.0.0.0,
           Culture=neutral, PublicKeyToken=null
-      m_SerializableObject: '{"obj":{"fileID":18700000,"guid":"4687c2d37bcbe9e49bcb80eec759bbe2","type":3}}'
+      m_SerializableObject: 
     min: -Infinity
     max: Infinity
     enumValues: []
@@ -6337,7 +6337,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: UnityEngine.Texture2DArray, UnityEngine.CoreModule, Version=0.0.0.0,
           Culture=neutral, PublicKeyToken=null
-      m_SerializableObject: '{"obj":{"fileID":18700000,"guid":"4687c2d37bcbe9e49bcb80eec759bbe2","type":3}}'
+      m_SerializableObject: 
     m_Space: -1
   m_Property:
     name: texture
@@ -6712,7 +6712,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: UnityEngine.Texture2DArray, UnityEngine.CoreModule, Version=0.0.0.0,
           Culture=neutral, PublicKeyToken=null
-      m_SerializableObject: '{"obj":{"fileID":18700000,"guid":"4687c2d37bcbe9e49bcb80eec759bbe2","type":3}}'
+      m_SerializableObject: 
     m_Space: -1
   m_Property:
     name: mainTexture
