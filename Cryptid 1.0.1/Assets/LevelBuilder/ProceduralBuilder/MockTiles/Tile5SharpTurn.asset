@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Tile5SharpTurn
   m_EditorClassIdentifier: 
   variations:
-  - {fileID: 5650620722496709884, guid: 82b35a12915c31440a2c56e4d997bbe0, type: 3}
+  - {fileID: 5650620722496709884, guid: d8f50395d7fdee54b8226a1b6f4e2c9a, type: 3}

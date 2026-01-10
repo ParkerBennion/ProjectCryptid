@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Tile3Straight
   m_EditorClassIdentifier: 
   variations:
-  - {fileID: 5650620722496709884, guid: f41fc5e8d39982b4bb85de297fcc1391, type: 3}
+  - {fileID: 5650620722496709884, guid: b8fe3efb857886a4cacaee710d20ce1d, type: 3}

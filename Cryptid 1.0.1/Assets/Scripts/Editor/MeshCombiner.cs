@@ -61,14 +61,23 @@ public class MeshCombiner : EditorWindow
                 combiners[j].mesh = meshFilter.sharedMesh;
                 combiners[j].transform = meshObjects[j].GetComponent<Transform>().localToWorldMatrix;
                 
-                Undo.DestroyObjectImmediate(meshObjects[j]);
+                
             }
         }
 
+        foreach (GameObject obj in Selection.gameObjects )
+        {
+            Undo.DestroyObjectImmediate(obj);
+        }
+
         finalMesh.CombineMeshes(combiners);
-        
+        string path = "Assets/LevelBuilder/ProceduralBuilder/MockTiles/Combined Grass Tiles/Combined Grasses/"+stage.prefabContentsRoot.name+"CombinedGrass.asset";
+        AssetDatabase.CreateAsset(finalMesh, path);
+        AssetDatabase.SaveAssets();
+
         newCombinedMesh.GetComponent<MeshFilter>().sharedMesh = finalMesh;
         Debug.Log("FINISHED");
+        EditorSceneManager.MarkSceneDirty(stage.scene);
     }
     private void CombineSelected()
     {
