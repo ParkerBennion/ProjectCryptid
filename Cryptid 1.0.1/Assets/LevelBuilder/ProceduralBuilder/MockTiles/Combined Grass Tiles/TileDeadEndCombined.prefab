@@ -124,7 +124,7 @@ GameObject:
   - component: {fileID: 9008349470215097136}
   - component: {fileID: -2484029869418189132}
   m_Layer: 11
-  m_Name: TileDeadEnd
+  m_Name: TileDeadEndCombined
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
