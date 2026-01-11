@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   torchOnAction: {fileID: 11400000, guid: e3f3413a8161482408bced6ac77c74ed, type: 2}
   torchOffAction: {fileID: 11400000, guid: 64bc3cda7612a4c4693ae692ff3273e4, type: 2}
-  torchIsActive: 0
+  torchIsActive: 1
