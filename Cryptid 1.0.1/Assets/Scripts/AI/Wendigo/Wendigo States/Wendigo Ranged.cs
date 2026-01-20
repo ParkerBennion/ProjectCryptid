@@ -9,13 +9,15 @@ public class WendigoRanged : State
     private SimpleAttack attackModule;
     [SerializeField] private State decisionState;
     [SerializeField] private GameObject telegraphObj;
+    [SerializeField] private GameObject lightningFX;
+    
     
     //attack is inducted and executed through the coroutine, and the execute animation tells the state to finish and transition
     protected override void Awake()
     {
         base.Awake();
         manager = stateMachine.GetComponent<WendigoManager>();
-        WFSInduction = new WaitForSeconds(1);
+        WFSInduction = new WaitForSeconds(2.25f);
         attackModule = manager.GetComponent<SimpleAttack>();
     }
 
@@ -46,9 +48,10 @@ public class WendigoRanged : State
         telegraphObj.transform.parent = null;
         telegraphObj.transform.position = manager.playerTarget.transform.position;
         yield return WFSInduction;//charging up attack
-        attackModule.AttackWorldPoint(10, 2, telegraphObj.transform.position);
-        ReclaimTelegraph();
+        //attack is handled through animation event
         animator.SetTrigger("RangedExecute");
+        yield return new WaitForSeconds(3);
+        ReclaimTelegraph();
     }
 
     public override void OnAnimationFinish()
@@ -63,4 +66,12 @@ public class WendigoRanged : State
         telegraphObj.transform.parent = manager.gameObject.transform;
         telegraphObj.SetActive(false);
     }
+
+    public void LightningStrike()
+    {
+        Instantiate(lightningFX,telegraphObj.transform.position,Quaternion.identity);
+        ReclaimTelegraph();
+    }
+
+    
 }

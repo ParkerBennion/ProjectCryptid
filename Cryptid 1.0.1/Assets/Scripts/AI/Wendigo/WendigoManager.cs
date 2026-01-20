@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.Events;
 
 public class WendigoManager : CryptidManager
 {
@@ -10,6 +11,7 @@ public class WendigoManager : CryptidManager
     public bool canMelee, canRangeAttack;
     [SerializeField] private State disengageState;
     [SerializeField] private float rangeCD, meleeCD;
+    [SerializeField] private UnityEvent strikeLightningEvent;
 
     protected override void Awake()
     {
@@ -70,6 +72,11 @@ public class WendigoManager : CryptidManager
         canMelee = false;
         yield return meleeWFS;
         canMelee = true;
+    }
+
+    public void StrikeLightning()
+    {
+        strikeLightningEvent?.Invoke();
     }
 
     
