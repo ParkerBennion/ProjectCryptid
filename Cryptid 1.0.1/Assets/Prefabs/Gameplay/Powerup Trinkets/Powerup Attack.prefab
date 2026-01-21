@@ -251,7 +251,6 @@ GameObject:
   - component: {fileID: 2137358952263881341}
   - component: {fileID: 7394177376202776128}
   - component: {fileID: 2076520003798408556}
-  - component: {fileID: 494381558911828525}
   m_Layer: 6
   m_Name: Button
   m_TagString: Untagged
@@ -448,23 +447,6 @@ MonoBehaviour:
   tracking: 0
   targetObjectTest: {fileID: 8527232963266207746}
   mainCam: {fileID: 0}
---- !u!114 &494381558911828525
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6477198909057311677}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f456844240540534e8deaf5bb55240d2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  resourceName: logs
-  cost: 3
-  gameAction: []
-  failureColor: {r: 1, g: 0, b: 0, a: 1}
-  flashDuration: 0.5
 --- !u!1 &8527232963266207746
 GameObject:
   m_ObjectHideFlags: 0
