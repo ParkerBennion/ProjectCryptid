@@ -5295,7 +5295,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   container: {fileID: 354502563766759409}
   rowPrefab: {fileID: 2207863488825248693, guid: 345bb844b10ff404c93a1650fecd279a, type: 3}
-  valueChangeStep: 1
+  valueChangeStep: 5
   onDataChanged: {fileID: 11400000, guid: a7489fb67a5207048a90be0ecce927ec, type: 2}
 --- !u!114 &4228323795458909309
 MonoBehaviour:

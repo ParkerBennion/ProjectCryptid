@@ -128,7 +128,7 @@ public class CheaterUI : MonoBehaviour
 
                 plus?.onClick.AddListener(() =>
                 {
-                    val += 1;
+                    val += (int)valueChangeStep;
                     field.SetValue(playerData, val);
                     valueText.text = val.ToString();
                     playerData.NotifyChanged();
@@ -136,7 +136,7 @@ public class CheaterUI : MonoBehaviour
 
                 minus?.onClick.AddListener(() =>
                 {
-                    val -= 1;
+                    val -= (int)valueChangeStep;
                     field.SetValue(playerData, val);
                     valueText.text = val.ToString();
                     playerData.NotifyChanged();
