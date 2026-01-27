@@ -10,6 +10,6 @@ public class SpawnRandomItem : MonoBehaviour
 /// </summary>
     private void Start()
     {
-        Instantiate(spawnList[Random.Range(0, spawnList.Length)], this.transform);
+        Instantiate(spawnList[Random.Range(0, spawnList.Length)], transform.position, Quaternion.identity, this.transform);
     }
 }
