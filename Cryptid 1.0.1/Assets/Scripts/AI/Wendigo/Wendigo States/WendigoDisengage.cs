@@ -25,6 +25,7 @@ public class WendigoDisengage : State
     {
         fleeRoutine = StartCoroutine(Flee());
         navAgent.speed = 8;
+        navAgent.isStopped = false;
     }
 
     /// <summary>

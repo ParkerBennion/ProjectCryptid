@@ -23,7 +23,7 @@ public class NPC_DialogueModule : MonoBehaviour
 
     private void OnEnable()
     {
-        StartCoroutine(DelayedStart());
+        //StartConversation(defaultConversation);
     }
 
     
@@ -63,7 +63,18 @@ public class NPC_DialogueModule : MonoBehaviour
         yield return new WaitForSeconds(1);
         textDisplay.updateText(activeConversationNode[currentLineIndex]);
     }
-    
+
+    public void StartConversation(string[] conversation)
+    {
+        activeConversationNode = conversation;
+        StartCoroutine(DelayedStart());
+    }
+
+    public void StartConversation()
+    {
+        activeConversationNode = defaultConversation;
+        StartCoroutine(DelayedStart());
+    }
     
     
 }
