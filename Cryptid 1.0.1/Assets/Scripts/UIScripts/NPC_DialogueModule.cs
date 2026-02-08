@@ -5,6 +5,7 @@ using UnityEngine.Events;
 
 public class NPC_DialogueModule : MonoBehaviour
 {
+    [SerializeField] private QuestDialogueKeeperSO npcDialogueSO;
     [SerializeField] private SimpleTextUpdater textDisplay;
     public string[] activeConversationNode;
     [SerializeField]private int currentLineIndex;
@@ -58,7 +59,6 @@ public class NPC_DialogueModule : MonoBehaviour
     private IEnumerator DelayedStart()
     {
         conversationStartEvent.Invoke();//disables hud and controls
-        activeConversationNode = defaultConversation;//assign conversation chain
         currentLineIndex = 0;
         yield return new WaitForSeconds(1);
         textDisplay.updateText(activeConversationNode[currentLineIndex]);
@@ -69,6 +69,14 @@ public class NPC_DialogueModule : MonoBehaviour
         activeConversationNode = conversation;
         StartCoroutine(DelayedStart());
     }
+
+    public void StartConversation(int questIndex)//1 for bigfoot, 2 for nessie, 3 for thunderbird
+    {
+        activeConversationNode = npcDialogueSO.GetCurrentStageQuestDialogues(questIndex);
+        StartCoroutine(DelayedStart());
+    }
+    
+    
 
     public void StartConversation()
     {

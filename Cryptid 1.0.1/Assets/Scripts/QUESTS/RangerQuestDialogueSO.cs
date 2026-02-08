@@ -1,12 +1,10 @@
 using System;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "BigfoorQuestKeeperSO", menuName = "Scriptable Objects/BigfoorQuestKeeperSO")]
-public class BigfoorQuestKeeperSO : QuestKeeperSO
+[CreateAssetMenu(fileName = "RangerQuestDialogue", menuName = "Scriptable Objects/RangerQuestDialogue")]
+public class RangerQuestDialogueSO : QuestDialogueKeeperSO
 {
-    private void OnEnable()//figure out how to pull this from a JSON
-    {
-        rangerQuestDialogues=new string [][]
+    public override string[][] BigfootQuestDialogues { get; protected set; } = 
         {
             new string[] {//phase 1- nothing
                 "Hey kid!", 
@@ -43,5 +41,8 @@ public class BigfoorQuestKeeperSO : QuestKeeperSO
                 "You probably better not let Dan see you in that thing."
             }
         };
-    }
+    
+
+    
+    
 }
