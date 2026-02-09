@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5baa7861068ea0418fd3c3f1f268b84, type: 3}
   m_Name: RangerQuestDialogue
   m_EditorClassIdentifier: 
-  bigFootStage: 1
-  nessieStage: 1
-  thunderBirdStage: 1
+  bigfootQuestStage: {fileID: 11400000, guid: 2fcef111a420e0d4c870f7dbbe977d65, type: 2}
+  nessieQuestStage: {fileID: 0}
+  thunderbirdQuestStage: {fileID: 0}

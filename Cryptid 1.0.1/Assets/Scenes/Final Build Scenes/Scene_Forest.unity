@@ -1580,9 +1580,9 @@ MonoBehaviour:
   enterEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11400000, guid: 2d6db5afc1dfa0647a526f058774217f, type: 2}
-        m_TargetAssemblyTypeName: QuestDialogueKeeperSO, Assembly-CSharp
-        m_MethodName: SetBigfootQuestStage
+      - m_Target: {fileID: 11400000, guid: 2fcef111a420e0d4c870f7dbbe977d65, type: 2}
+        m_TargetAssemblyTypeName: IntData, Assembly-CSharp
+        m_MethodName: SetValue
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3946,9 +3946,9 @@ MonoBehaviour:
   enterEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11400000, guid: 2d6db5afc1dfa0647a526f058774217f, type: 2}
-        m_TargetAssemblyTypeName: QuestDialogueKeeperSO, Assembly-CSharp
-        m_MethodName: SetBigfootQuestStage
+      - m_Target: {fileID: 11400000, guid: 2fcef111a420e0d4c870f7dbbe977d65, type: 2}
+        m_TargetAssemblyTypeName: IntData, Assembly-CSharp
+        m_MethodName: SetValue
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4446,9 +4446,9 @@ MonoBehaviour:
   enterEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11400000, guid: 2d6db5afc1dfa0647a526f058774217f, type: 2}
-        m_TargetAssemblyTypeName: QuestDialogueKeeperSO, Assembly-CSharp
-        m_MethodName: SetBigfootQuestStage
+      - m_Target: {fileID: 11400000, guid: 2fcef111a420e0d4c870f7dbbe977d65, type: 2}
+        m_TargetAssemblyTypeName: IntData, Assembly-CSharp
+        m_MethodName: SetValue
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
