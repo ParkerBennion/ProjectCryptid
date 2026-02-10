@@ -51,6 +51,7 @@ public class WendigoEngage : State
         {
             navAgent.SetDestination(playerTarget.transform.position);
         }
+        
     }
 
     public override void OnEnterState()

@@ -7,6 +7,7 @@ public abstract class CryptidManager : MonoBehaviour
 {
     private static readonly int Alpha = Shader.PropertyToID("_Alpha");
     [SerializeField] private CryptidDeathCall deathCall;
+    [SerializeField] private GameAction disengageAction;
     public Animator animator;
     public NavMeshAgent navAgent;
     public StateMachine stateMachine;
@@ -23,6 +24,7 @@ public abstract class CryptidManager : MonoBehaviour
         damageShader = mRenderer.materials[1];
         wff = new WaitForEndOfFrame();
         canStun = true;
+        disengageAction.raise += Disengage;
     }
 
     public abstract void Disengage();
@@ -81,5 +83,10 @@ public abstract class CryptidManager : MonoBehaviour
         canStun = false;
         yield return new WaitForSeconds(.5f);
         canStun = true;
+    }
+
+    private void OnDestroy()
+    {
+        disengageAction.raise -= Disengage;
     }
 }

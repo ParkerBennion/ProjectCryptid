@@ -24,7 +24,7 @@ public class WendigoIdle : State
 
     public override void OnExitState()
     {
-        
+        navAgent.isStopped = false;
     }
     
     public void EngagePlayer()
@@ -45,7 +45,6 @@ public class WendigoIdle : State
     {
         print("howl finish event called");
         base.OnAnimationFinish();
-        navAgent.isStopped = false;
         canSeePlayer = true;
     }
 }

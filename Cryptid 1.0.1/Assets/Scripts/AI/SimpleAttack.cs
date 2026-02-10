@@ -8,6 +8,7 @@ public class SimpleAttack : MonoBehaviour
 
     [SerializeField] private float damageAmt, damageRadius;
     [SerializeField] private Vector3 AttackOrigin;
+    [SerializeField] private GameObject AttackTarget;
     private void Awake()
     {
         if (layerList.Length == 0)
@@ -66,6 +67,16 @@ public class SimpleAttack : MonoBehaviour
     public bool AttackRangeCheck(float attackRange, GameObject target)
     {
         return Vector3.Distance(gameObject.transform.position, target.transform.position) <= attackRange;
+    }
+
+    public void AttackTargetPoint()
+    {
+        if (!AttackTarget)
+        {
+            Debug.Log("There was no object set as attack target for "+gameObject.name);
+            return;
+        }
+        AttackWorldPoint(damageAmt, damageRadius, AttackTarget.transform.position);
     }
     
 }

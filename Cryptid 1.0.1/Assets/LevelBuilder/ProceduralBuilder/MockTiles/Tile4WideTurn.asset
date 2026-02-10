@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Tile4WideTurn
   m_EditorClassIdentifier: 
   variations:
-  - {fileID: 5650620722496709884, guid: b18a7509344d9884491e2a365d83d094, type: 3}
+  - {fileID: 5650620722496709884, guid: 61b75bb99a4c5b64391d8d8302b56d65, type: 3}
