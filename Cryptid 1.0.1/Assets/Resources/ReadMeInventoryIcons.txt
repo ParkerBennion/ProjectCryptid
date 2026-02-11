@@ -1,0 +1,1 @@
+the icons here must be named the same as what is in the inventory, in other words the names of these png or sprites need to be the same as the pickup names.
