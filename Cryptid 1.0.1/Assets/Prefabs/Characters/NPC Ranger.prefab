@@ -529,7 +529,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1972466331213265121}
         m_TargetAssemblyTypeName: NPC_DialogueModule, Assembly-CSharp
-        m_MethodName: StartConversation
+        m_MethodName: StartQuestConversation
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

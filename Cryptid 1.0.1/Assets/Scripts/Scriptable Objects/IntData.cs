@@ -6,13 +6,13 @@ public class IntData : ScriptableObject
     public int value;
 
 
-    public void ChangeValue(int val)
+    public virtual void ChangeValue(int val)
     {
         value+= val;
         
     }
 
-    public void SetValue(int val)
+    public virtual void SetValue(int val)
     {
         value = val;
     }
