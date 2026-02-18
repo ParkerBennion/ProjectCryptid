@@ -1649,6 +1649,7 @@ MonoBehaviour:
   damageAmt: 15
   damageRadius: 2.25
   AttackOrigin: {x: 0, y: 1.25, z: 1.5}
+  AttackTarget: {fileID: 0}
 --- !u!114 &4509567553487782231
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1662,17 +1663,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deathCall: {fileID: 11400000, guid: 775e1f38c2b7d3d4c885ce7f1510a4bd, type: 2}
+  disengageAction: {fileID: 11400000, guid: 1825430537b0688438cef09be48562ed, type: 2}
   animator: {fileID: 6587335968660136068}
   navAgent: {fileID: 5802046408941479511}
   stateMachine: {fileID: 5636798512514614687}
+  flinchState: {fileID: 2290627368239795043}
   mRenderer: {fileID: 507172229204657985}
   splatterFX: {fileID: 472526503852951626, guid: a1fa0cfc504c03949a631a1d626da7bb, type: 3}
+  canStun: 0
   fleeState: {fileID: 761088540955871117}
-  flinchState: {fileID: 2290627368239795043}
   canPounce: 0
   playerTarget: {fileID: 0}
   pounceCooldown: 8
-  canStun: 0
 --- !u!114 &5636798512514614687
 MonoBehaviour:
   m_ObjectHideFlags: 0
