@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f82eed55c2643dc4c891572935fa761f, type: 3}
-  m_Name: OwlEncounter
+  m_Name: DeerEncounter
   m_EditorClassIdentifier: 
   enterEvent:
     m_PersistentCalls:
@@ -19,5 +19,5 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   encounterManager: {fileID: 0}
-  wildlifePrefab: {fileID: 2145992941271919628, guid: 40497dd205f97f24ebf46311bf7b6531, type: 3}
-  wildlifeSpeed: 8
+  wildlifePrefab: {fileID: 2593414566428673896, guid: 81dae7de01fbdae47a1fd024b0c2e5a0, type: 3}
+  wildlifeSpeed: 5

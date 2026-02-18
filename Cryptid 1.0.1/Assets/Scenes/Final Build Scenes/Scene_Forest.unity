@@ -769,8 +769,13 @@ MonoBehaviour:
   intermissionMax: 4
   encounterList:
   - {fileID: 11400000, guid: e5e0afc4309a5874a8d3c0723b716af6, type: 2}
-  rareEncounterList: []
-  rareEncounterChance: 0
+  - {fileID: 11400000, guid: 33326400400f96a4a99064fe29ff5c3c, type: 2}
+  - {fileID: 11400000, guid: 1e2ce2d150515c14397ae38fe71e09a1, type: 2}
+  - {fileID: 11400000, guid: 066ddfbb1df887e4fa2c3a6c65cbddc0, type: 2}
+  rareEncounterList:
+  - {fileID: 11400000, guid: e0e617b398f08ea44bd3cafa3fa5ec3f, type: 2}
+  - {fileID: 11400000, guid: 1e2ce2d150515c14397ae38fe71e09a1, type: 2}
+  rareEncounterChance: 15
   player: {fileID: 114873689}
 --- !u!4 &140217392
 Transform:
