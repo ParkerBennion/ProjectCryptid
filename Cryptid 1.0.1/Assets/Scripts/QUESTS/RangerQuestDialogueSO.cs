@@ -12,7 +12,8 @@ public class RangerQuestDialogueSO : QuestDialogueKeeperSO
                 "Caleb, isn't it? I saw you with the visiting scout group",
                 "/something about being in the dark alone", 
                 "Have you met Crazy Dan?",
-                "/go find his camper"},
+                "/go find his camper"
+            },
             new string[] {//phase 2- spotted crazy dan's camper
                 "Howdy-do!",
                 "You found crazy Dan's camper?", 
