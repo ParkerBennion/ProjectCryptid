@@ -20,4 +20,5 @@ MonoBehaviour:
       m_Calls: []
   encounterManager: {fileID: 0}
   wildlifePrefab: {fileID: 2593414566428673896, guid: 81dae7de01fbdae47a1fd024b0c2e5a0, type: 3}
-  wildlifeSpeed: 5
+  wildlifeSpeed: 10
+  minimumRunTime: 2
