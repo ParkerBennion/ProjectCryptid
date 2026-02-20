@@ -22,6 +22,11 @@ public class EncounterManager : MonoBehaviour
         {
             encounter.encounterManager = this;
         }
+        
+        foreach (Encounter encounter in rareEncounterList)
+        {
+            encounter.encounterManager = this;
+        }
     }
 
     private void Start()

@@ -5,7 +5,7 @@ using UnityEngine;
 public class WildlifeEncounter:Encounter
 {
     [SerializeField]private GameObject wildlifePrefab;
-    [SerializeField] private float wildlifeSpeed;
+    [SerializeField] private float wildlifeSpeed, minimumRunTime;
     private float elapsedTime;
     private Vector3 playerLocation, spawnLocation, destination;
     private GameObject wildLifeInstance;
@@ -20,12 +20,20 @@ public class WildlifeEncounter:Encounter
         playerLocation = encounterManager.player.transform.position; 
         spawnLocation = new Vector3(Random.Range(-10f,10f), 0 ,Random.Range(-3f,5f))+playerLocation;
         destination = new Vector3(Random.Range(-10f,10f), 0 ,Random.Range(-3f,5f))+playerLocation;
-        Debug.Log(destination);
         wildLifeInstance = Instantiate(wildlifePrefab, spawnLocation, Quaternion.identity, null);
         wildLifeInstance.transform.LookAt(destination);
+        float elapsedTime = 0;
         while (Vector3.Distance(wildLifeInstance.transform.position, destination) > .3f)
         {
             wildLifeInstance.transform.Translate(Vector3.forward * wildlifeSpeed * Time.deltaTime);
+            elapsedTime += Time.deltaTime;
+            yield return wff;
+        }
+
+        while (elapsedTime < minimumRunTime)
+        {
+            wildLifeInstance.transform.Translate(Vector3.forward * wildlifeSpeed * Time.deltaTime);
+            elapsedTime += Time.deltaTime;
             yield return wff;
         }
         Debug.Log("Wildlife Reached destination");

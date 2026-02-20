@@ -42,7 +42,8 @@ public class WendigoManager : CryptidManager
     public override void Die()
     {
         base.Die();
-        gameObject.SetActive(false);
+        //gameObject.SetActive(false);
+        Destroy(gameObject);
     }
 
     public override void ResetAI()
