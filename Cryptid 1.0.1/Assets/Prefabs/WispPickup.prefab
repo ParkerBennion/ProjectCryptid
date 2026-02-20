@@ -292,6 +292,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4434057493318461804}
     m_Modifications:
+    - target: {fileID: 1176316986311514129, guid: 2df7df81627340440a0310647e81c89f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0
+      objectReference: {fileID: 0}
     - target: {fileID: 2203677405191169505, guid: 2df7df81627340440a0310647e81c89f, type: 3}
       propertyPath: m_Name
       value: Wisp
@@ -299,6 +303,22 @@ PrefabInstance:
     - target: {fileID: 6521236809631168867, guid: 2df7df81627340440a0310647e81c89f, type: 3}
       propertyPath: InitialModule.rotation3D
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7766262487969480427, guid: 2df7df81627340440a0310647e81c89f, type: 3}
+      propertyPath: simulationSpeed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7766262487969480427, guid: 2df7df81627340440a0310647e81c89f, type: 3}
+      propertyPath: InitialModule.startSize.scalar
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7766262487969480427, guid: 2df7df81627340440a0310647e81c89f, type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 4.74
+      objectReference: {fileID: 0}
+    - target: {fileID: 7766262487969480427, guid: 2df7df81627340440a0310647e81c89f, type: 3}
+      propertyPath: InitialModule.gravityModifier.scalar
+      value: -0.0005
       objectReference: {fileID: 0}
     - target: {fileID: 8438093307013545852, guid: 2df7df81627340440a0310647e81c89f, type: 3}
       propertyPath: m_LocalPosition.x
