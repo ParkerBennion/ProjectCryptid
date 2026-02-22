@@ -135,6 +135,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 6746388865657886500}
     m_Modifications:
     - target: {fileID: 3873135769317468592, guid: 094bb2da8b5cf544bb9e5d50680592af, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.17
+      objectReference: {fileID: 0}
+    - target: {fileID: 3873135769317468592, guid: 094bb2da8b5cf544bb9e5d50680592af, type: 3}
       propertyPath: m_LocalRotation.w
       value: 0.7071068
       objectReference: {fileID: 0}
@@ -161,6 +165,14 @@ PrefabInstance:
     - target: {fileID: 3873135769317468592, guid: 094bb2da8b5cf544bb9e5d50680592af, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4545330894443138534, guid: 094bb2da8b5cf544bb9e5d50680592af, type: 3}
+      propertyPath: m_Range
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4545330894443138534, guid: 094bb2da8b5cf544bb9e5d50680592af, type: 3}
+      propertyPath: m_Intensity
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5189916688151599636, guid: 094bb2da8b5cf544bb9e5d50680592af, type: 3}
       propertyPath: m_LocalPosition.x
@@ -205,6 +217,14 @@ PrefabInstance:
     - target: {fileID: 5873090424886727493, guid: 094bb2da8b5cf544bb9e5d50680592af, type: 3}
       propertyPath: m_Name
       value: Campfire
+      objectReference: {fileID: 0}
+    - target: {fileID: 5951872172358724406, guid: 094bb2da8b5cf544bb9e5d50680592af, type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key1.a
+      value: 0.32941177
+      objectReference: {fileID: 0}
+    - target: {fileID: 5951872172358724406, guid: 094bb2da8b5cf544bb9e5d50680592af, type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key2.a
+      value: 0.07450981
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
