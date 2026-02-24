@@ -5,6 +5,7 @@ public class PlayerDataManager : MonoBehaviour
 {
     public DataBlockSO playerData;
     public InventorySO inventoryData;
+    public InventorySO Inventory => inventoryData;
     
     private string playerFilePath;
     private string inventoryFilePath;
@@ -82,8 +83,23 @@ public class PlayerDataManager : MonoBehaviour
     {
         if (inventoryData == null) return;
 
-        string json = JsonUtility.ToJson(inventoryData, true);
+        InventorySaveData save = new InventorySaveData();
+
+        foreach (var item in inventoryData.items)
+        {
+            if (item == null) continue;
+            if (item.amount <= 0) continue;
+
+            save.items.Add(new InventorySaveData.ItemEntry
+            {
+                id = item.itemName,//??????????????
+                amount = item.amount
+            });
+        }
+
+        string json = JsonUtility.ToJson(save, true);
         File.WriteAllText(inventoryFilePath, json);
+
         Debug.Log("Inventory saved to " + inventoryFilePath);
     }
 
@@ -91,16 +107,26 @@ public class PlayerDataManager : MonoBehaviour
     {
         if (inventoryData == null) return;
 
-        if (File.Exists(inventoryFilePath))
-        {
-            string json = File.ReadAllText(inventoryFilePath);
-            JsonUtility.FromJsonOverwrite(json, inventoryData);
-            Debug.Log("Inventory loaded from " + inventoryFilePath);
-        }
-        else
+        if (!File.Exists(inventoryFilePath))
         {
             Debug.Log("No inventory file found. Using default inventory values.");
+            return;
         }
+
+        string json = File.ReadAllText(inventoryFilePath);
+        InventorySaveData save = JsonUtility.FromJson<InventorySaveData>(json);
+
+        inventoryData.Clear();
+
+        if (save?.items != null)
+        {
+            foreach (var entry in save.items)
+            {
+                inventoryData.SetAmount(entry.id, entry.amount);
+            }
+        }
+
+        Debug.Log("Inventory loaded from " + inventoryFilePath);
     }
     
     public void SaveAll()
@@ -126,5 +152,18 @@ public class PlayerDataManager : MonoBehaviour
 
         playerFilePath = Path.Combine(folder, playerName + ".json");
         inventoryFilePath = Path.Combine(folder, playerName + "_inventory.json");
+    }
+    
+    [System.Serializable]
+    public class InventorySaveData
+    {
+        [System.Serializable]
+        public class ItemEntry
+        {
+            public string id;
+            public int amount;
+        }
+
+        public System.Collections.Generic.List<ItemEntry> items = new();
     }
 }

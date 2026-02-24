@@ -9,9 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cb693dac057870a41a24f551e59f14b6, type: 3}
-  m_Name: Inventory
+  m_Script: {fileID: 11500000, guid: 09c62ad6038e0b8478afd3302f4cd11b, type: 3}
+  m_Name: InventoryItemDatabase
   m_EditorClassIdentifier: 
-  items:
-  - itemName: TemplateInventoryButton
-    amount: 9
+  itemPrefabs:
+  - {fileID: 2697879771539688577, guid: cd080d30231861c47816605ddb4cf688, type: 3}
