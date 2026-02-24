@@ -19,5 +19,6 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   encounterManager: {fileID: 0}
-  wildlifePrefab: {fileID: 8794485894536896370, guid: 1af86b388625c404f9e966a0aa0beb54, type: 3}
+  wildlifePrefab: {fileID: 2145992941271919628, guid: 40497dd205f97f24ebf46311bf7b6531, type: 3}
   wildlifeSpeed: 8
+  minimumRunTime: 2

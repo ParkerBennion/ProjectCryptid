@@ -4,11 +4,10 @@ using UnityEngine;
 public abstract class QuestDialogueKeeperSO : ScriptableObject
 {
     
-    [SerializeField] private IntData bigfootQuestStage, nessieQuestStage, thunderbirdQuestStage;
+    [SerializeField] protected IntData bigfootQuestStage, nessieQuestStage, thunderbirdQuestStage;
     public virtual string[][] BigfootQuestDialogues { get; protected set; }
     public virtual string[][] NessieQuestDialogues { get; protected set; }
     public virtual string[][] ThunderbirdQuestDialogues { get; protected set; }
-   
     private void LoadQuestData()
     {
         //update this SO with data from the save file, set the active quest stage
@@ -52,6 +51,34 @@ public abstract class QuestDialogueKeeperSO : ScriptableObject
                 return null;
         }
         
+    }
+/// <summary>
+/// this method exists so that the NPC Dialogue Module can progress a quest at the end of it's conversation
+/// </summary>
+/// <param name="questNumber"></param>
+    public void ProgressQuest(int questNumber)
+    {
+        switch (questNumber)
+        {
+            case 1:
+            {
+                bigfootQuestStage.ChangeValue(1);
+                break;
+            }
+            case 2:
+            {
+                nessieQuestStage.ChangeValue(1);
+                break;
+            }
+            case 3:
+            {
+                thunderbirdQuestStage.ChangeValue(1);
+                break;
+            }
+            default:
+                Debug.Log(questNumber+" is not a valid quest number");
+                break;
+        }
     }
     
     

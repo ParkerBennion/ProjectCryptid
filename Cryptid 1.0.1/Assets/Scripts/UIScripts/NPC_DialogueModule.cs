@@ -7,9 +7,11 @@ public class NPC_DialogueModule : MonoBehaviour
 {
     [SerializeField] private QuestDialogueKeeperSO npcDialogueSO;
     [SerializeField] private SimpleTextUpdater textDisplay;
-    public string[] activeConversationNode;
+    public string[] activeConversationList;
     [SerializeField]private int currentLineIndex;
-    [SerializeField]private UnityEvent conversationStartEvent, conversationEndEvent;
+    public UnityEvent conversationStartEvent, conversationEndEvent;
+    [SerializeField] private bool currentConversationProgressesQuest;
+    public int currentQuestNumber;
     private string[] defaultConversation = new[]
     {
         "Good to see ya",
@@ -30,16 +32,20 @@ public class NPC_DialogueModule : MonoBehaviour
     
     public void NextLine()
     {
-        
-        if (currentLineIndex >= activeConversationNode.Length-1)
+        if (currentLineIndex >= activeConversationList.Length-1)//if this is the last line in the current dialogue
         {
-            conversationEndEvent.Invoke();
+            EndConversation();
+            return;
+        }
+        currentLineIndex++;
+        if(activeConversationList[currentLineIndex]=="ProgressQuest")//if this conversation is ending and progresses the quest, progress the quest and end the conversation without updating the text
+        {
+            npcDialogueSO.ProgressQuest(currentQuestNumber);
+            EndConversation();
         }
         else
-        {
-            currentLineIndex++;
-            textDisplay.updateText(activeConversationNode[currentLineIndex]);
-        }
+            textDisplay.updateText(activeConversationList[currentLineIndex]);
+        
     }
 
     public void PreviousLine()
@@ -48,7 +54,7 @@ public class NPC_DialogueModule : MonoBehaviour
         if (currentLineIndex <= 0)
             return;
         currentLineIndex--;
-        textDisplay.updateText(activeConversationNode[currentLineIndex]);
+        textDisplay.updateText(activeConversationList[currentLineIndex]);
     }
 
     public void EndConversation()
@@ -61,28 +67,32 @@ public class NPC_DialogueModule : MonoBehaviour
         conversationStartEvent.Invoke();//disables hud and controls
         currentLineIndex = 0;
         yield return new WaitForSeconds(1);
-        textDisplay.updateText(activeConversationNode[currentLineIndex]);
+        textDisplay.updateText(activeConversationList[currentLineIndex]);
     }
 
-    public void StartConversation(string[] conversation)
+    private void StartConversation(string[] conversation)
     {
-        activeConversationNode = conversation;
+        activeConversationList = conversation;
         StartCoroutine(DelayedStart());
     }
-
-    public void StartConversation(int questIndex)//1 for bigfoot, 2 for nessie, 3 for thunderbird
+/// <summary>
+/// Loads and plays dialogue based on questNumber and the current quest stage
+/// </summary>
+/// <param name="questNumber"></param>
+    public void StartQuestConversation(int questNumber)//1 for bigfoot, 2 for nessie, 3 for thunderbird
     {
-        activeConversationNode = npcDialogueSO.GetCurrentStageQuestDialogues(questIndex);
-        StartCoroutine(DelayedStart());
+        currentQuestNumber = questNumber;
+        StartConversation(npcDialogueSO.GetCurrentStageQuestDialogues(questNumber));
     }
     
     
 
-    public void StartConversation()
+    public void StartDefaultConversation()
     {
-        activeConversationNode = defaultConversation;
+        activeConversationList = defaultConversation;
         StartCoroutine(DelayedStart());
     }
+    
     
     
 }
