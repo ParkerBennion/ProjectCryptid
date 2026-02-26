@@ -38,7 +38,7 @@ public class TileLibrary: MonoBehaviour
     public void Initialize()
     {
         //instantiate all the tile dictionaries
-        Debug.Log("Initializing dictionaries");
+        Debug.Log("Initializing tile dictionaries");
          //N0N
          codeN0N = new Dictionary<int, int[]>
          {
