@@ -4955,6 +4955,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 877719c921a704e4bbbca7714d626c32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  changeHealthAction: {fileID: 11400000, guid: 32af2b1640fadcc498a552b88973f501, type: 2}
+  pickupPrefab: {fileID: 8386669101683562587, guid: 3f879ad10e752f644bee294a2308c9f7, type: 3}
   particlePrefab: {fileID: 5060479232084354546, guid: 07eec2427a80f8b4e85aa94f96fbd487, type: 3}
   healAmount: 25
