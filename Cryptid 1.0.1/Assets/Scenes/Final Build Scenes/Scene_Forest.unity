@@ -3132,7 +3132,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerData: {fileID: 11400000, guid: e75ed5b836ce2994c92bec0aae2b57ce, type: 2}
-  inventoryData: {fileID: 0}
+  inventoryData: {fileID: 11400000, guid: 06c2e9a1cc8dc6c4bb2b0c27c4ef9411, type: 2}
   saveGameAction: {fileID: 11400000, guid: e9765e09cbdd3b548a26aed1ad1730e0, type: 2}
 --- !u!4 &1088480736
 Transform:
