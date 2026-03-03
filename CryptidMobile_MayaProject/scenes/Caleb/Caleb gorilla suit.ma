@@ -1,6 +1,6 @@
 //Maya ASCII 2026 scene
 //Name: Caleb gorilla suit.ma
-//Last modified: Sun, Mar 01, 2026 02:07:53 AM
+//Last modified: Mon, Mar 02, 2026 11:46:30 PM
 //Codeset: 1252
 requires maya "2026";
 requires "stereoCamera" "10.0";
@@ -12,19 +12,19 @@ fileInfo "product" "Maya 2026";
 fileInfo "version" "2026";
 fileInfo "cutIdentifier" "202510291147-60ec9eda33";
 fileInfo "osv" "Windows 10 Pro for Workstations v2009 (Build: 19045)";
-fileInfo "UUID" "94F7805C-4633-C7F8-7AB6-92BABC1DEABF";
+fileInfo "UUID" "C9F01702-4179-A9F4-3732-7AA2FC52ECC9";
 createNode transform -s -n "persp";
 	rename -uid "9855CF90-4C78-DD47-8ABD-00B60822FFD6";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -738.01547230505048 626.18159721603149 847.1985560067684 ;
-	setAttr ".r" -type "double3" -22.354197583163216 2479.799999999917 -1.0410353557195661e-15 ;
+	setAttr ".t" -type "double3" -528.11131664327718 234.82320858937663 179.55837588422901 ;
+	setAttr ".r" -type "double3" -6.7541975827751664 2449.3999999993193 1.1969170894309961e-15 ;
 	setAttr ".rp" -type "double3" 8.8817841970012523e-15 0 5.6843418860808015e-14 ;
 	setAttr ".rpt" -type "double3" -3.0282314674783286e-14 -4.9312062232791936e-15 -1.4554771240953377e-14 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "73ADB111-4297-6647-E070-4798BF5E2287";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 1229.3048978148004;
+	setAttr ".coi" 577.77839853737544;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -3267,7 +3267,6 @@ createNode mesh -n "bodyShape" -p "body";
 	rename -uid "C58015A4-40B2-0EFC-1C47-56AEB515D4F2";
 	addAttr -ci true -h true -sn "_gbp" -ln "gpuBlockPolicy" -at "short";
 	setAttr -k off ".v";
-	setAttr -s 2 ".iog[0].og";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
 	setAttr ".pv" -type "double2" 0.66919993230237163 0.86770904064178467 ;
@@ -4614,7 +4613,6 @@ createNode mesh -n "faceShape" -p "face";
 	rename -uid "E50BF9AB-4E68-FB30-F87F-2DABAE2DD92E";
 	addAttr -ci true -h true -sn "_gbp" -ln "gpuBlockPolicy" -at "short";
 	setAttr -k off ".v";
-	setAttr -s 2 ".iog[0].og";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
 	setAttr ".pv" -type "double2" 0.8603060245513916 0.5810781717300415 ;
@@ -4841,7 +4839,7 @@ createNode mesh -n "faceShape" -p "face";
 		 7.6669488 150.087356567 -7.42649078 -7.88243437 149.73168945 -7.09378624 9.19733238 140.25518799 -0.81045914
 		 2.7350042e-08 139.86566162 -2.64702988 -9.19733238 140.25518799 -0.81045914 -21.76457024 158.48399353 -27.64667511
 		 21.76468658 158.48379517 -27.64656258;
-	setAttr -s 681 ".ed";
+	setAttr -s 683 ".ed";
 	setAttr ".ed[0:165]"  6 43 1 43 240 1 240 241 1 241 6 1 242 3 1 3 7 1 7 243 1
 		 243 242 1 5 44 1 44 41 1 41 13 1 13 5 1 9 14 1 14 15 1 15 10 1 10 9 1 15 59 1 59 60 1
 		 60 10 1 17 11 1 11 0 1 0 2 1 2 17 1 18 11 1 17 16 1 16 18 1 23 20 1 20 21 1 21 22 1
@@ -4915,10 +4913,10 @@ createNode mesh -n "faceShape" -p "face";
 		 292 312 1 313 302 1 314 313 1 312 315 1 314 300 1 289 315 1 311 316 1 316 314 1 315 316 1
 		 318 316 1 315 317 1 317 318 1 318 319 1 319 314 1 288 317 1 319 299 1 321 320 1 320 318 1
 		 317 321 1 320 322 1 322 319 1 307 321 1 321 323 1 323 324 1 324 320 1;
-	setAttr ".ed[664:680]" 325 322 1 324 325 1 287 323 1 286 324 1 298 286 1 298 325 1
+	setAttr ".ed[664:682]" 325 322 1 324 325 1 287 323 1 286 324 1 298 286 1 298 325 1
 		 298 304 1 304 322 1 304 299 1 314 326 1 326 302 1 300 326 1 313 326 1 289 327 1 327 312 1
-		 315 327 1 292 327 1;
-	setAttr -s 352 -ch 1330 ".fc[0:351]" -type "polyFaces" 
+		 315 327 1 292 327 1 301 236 1 290 84 1;
+	setAttr -s 354 -ch 1334 ".fc[0:353]" -type "polyFaces" 
 		f 4 0 1 2 3
 		mu 0 4 0 1 2 3
 		f 4 4 5 6 7
@@ -5041,8 +5039,8 @@ createNode mesh -n "faceShape" -p "face";
 		mu 0 4 82 70 370 367
 		f 4 -142 146 147 148
 		mu 0 4 87 86 90 91
-		f 4 -603 149 150 -604
-		mu 0 4 92 349 368 369
+		f 3 682 150 -604
+		mu 0 3 92 368 369
 		f 4 -146 151 152 -137
 		mu 0 4 385 384 96 83
 		f 4 153 -152 154 155
@@ -5377,8 +5375,8 @@ createNode mesh -n "faceShape" -p "face";
 		mu 0 4 373 374 364 236
 		f 4 474 475 476 -471
 		mu 0 4 249 252 253 250
-		f 4 -612 477 478 -613
-		mu 0 4 254 347 361 346
+		f 3 681 478 -613
+		mu 0 3 254 361 346
 		f 4 -465 -188 479 -473
 		mu 0 4 245 111 114 362
 		f 4 480 481 -480 -193
@@ -5622,7 +5620,11 @@ createNode mesh -n "faceShape" -p "face";
 		f 3 -680 -643 -679
 		mu 0 3 315 318 311
 		f 3 677 -681 605
-		mu 0 3 78 315 95;
+		mu 0 3 78 315 95
+		f 3 -612 477 -682
+		mu 0 3 254 347 361
+		f 3 -603 149 -683
+		mu 0 3 92 349 368;
 	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 20 
@@ -6065,22 +6067,22 @@ createNode mesh -n "teethShape" -p "teeth";
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "748B1F4B-46D7-97A6-85F0-2F8E6E6CE92C";
+	rename -uid "11139CF7-41BA-FF23-DBE3-0A85CD72324A";
 	setAttr -s 19 ".lnk";
 	setAttr -s 19 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "604E1FC2-4FC5-F15A-8951-0B96AC8A5AA3";
+	rename -uid "4F8E7FE7-4369-2656-D541-BEB4482FDA4F";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "C812D15D-4212-7473-3741-56BF6FD0881D";
+	rename -uid "A65E3DC3-4929-C22A-1B78-9E94759F13D9";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "787AA880-4C21-F24B-88F6-B09AF8EE2DA2";
+	rename -uid "F182F809-4EA8-A365-6391-579BDEA12664";
 	setAttr -s 3 ".dli[1:2]"  1 2;
 	setAttr -s 3 ".dli";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "892C0B0F-43D4-F000-85EB-B9B15388F3A1";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "13772AF3-4591-41CF-E6BF-8DA84A54365B";
+	rename -uid "6796FE20-47A7-C5AB-1133-EB82F9834690";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "7C584BA8-4A4B-8D9C-B03F-4989B2522D9B";
 	setAttr ".g" yes;
@@ -6423,7 +6425,6 @@ select -ne :defaultRenderUtilityList1;
 select -ne :defaultRenderingList1;
 select -ne :defaultTextureList1;
 	setAttr -s 2 ".tx";
-select -ne :lambert1;
 select -ne :standardSurface1;
 	setAttr ".bc" -type "float3" 0.40000001 0.40000001 0.40000001 ;
 	setAttr ".sr" 0.5;
@@ -6453,8 +6454,6 @@ select -ne :defaultColorMgtGlobals;
 select -ne :hardwareRenderGlobals;
 	setAttr ".ctrs" 256;
 	setAttr ".btrs" 512;
-select -ne :ikSystem;
-	setAttr -s 4 ".sol";
 connectAttr ":defaultColorMgtGlobals.cme" "imagePlaneShape1.cme";
 connectAttr ":defaultColorMgtGlobals.cfe" "imagePlaneShape1.cmcf";
 connectAttr ":defaultColorMgtGlobals.cfp" "imagePlaneShape1.cmcp";
