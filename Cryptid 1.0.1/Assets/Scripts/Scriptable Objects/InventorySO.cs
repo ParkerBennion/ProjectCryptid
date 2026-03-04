@@ -7,6 +7,7 @@ public class InventorySO : ScriptableObject
 {
     public event Action Changed;
     private void NotifyChanged() => Changed?.Invoke();
+    
     [Serializable]
     public class ItemState
     {

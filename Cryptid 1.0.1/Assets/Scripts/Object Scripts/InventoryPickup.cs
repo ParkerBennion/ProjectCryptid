@@ -3,6 +3,7 @@ using UnityEngine;
 [DisallowMultipleComponent]
 public class InventoryPickup : MonoBehaviour
 {
+    //settings on conditions to allow this to be put into inventory
     [Header("Inventory")]
     [SerializeField] private InventorySO inventory;
 

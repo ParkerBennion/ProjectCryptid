@@ -11,14 +11,16 @@ public class InventoryGridUI : MonoBehaviour
 
     private void OnEnable()
     {
-        // Get current inventory (profile-aware)
+        // Get current inventory (profile-aware "not applicable in cryptid Game")
         inventory = PlayerDataManager.Instance != null ? PlayerDataManager.Instance.Inventory : null;
 
         if (inventory != null)
             inventory.Changed += HandleInventoryChanged;
-        Debug.LogWarning("InventoryGridUI enabled");
+        //Debug.LogWarning("InventoryGridUI enabled");
         Rebuild();
     }
+    
+    //subscribe and unsub from actions
     private void OnDisable()
     {
         if (inventory != null)
@@ -28,6 +30,8 @@ public class InventoryGridUI : MonoBehaviour
     {
         Rebuild();
     }
+    
+    
     public void Rebuild()
     {
         if (gridParent == null || database == null)
@@ -35,9 +39,7 @@ public class InventoryGridUI : MonoBehaviour
             Debug.LogError("InventoryGridUI Failed");
             return;
         }
-            
-            
-
+        
         if (inventory == null)
         {
             // Try again in case PlayerDataManager wasn’t ready at OnEnable
@@ -45,6 +47,7 @@ public class InventoryGridUI : MonoBehaviour
             if (inventory == null) return;
         }
 
+        //clear grid every time to ensure items are renewed.
         ClearGrid();
 
         foreach (var entry in inventory.items)
@@ -66,13 +69,13 @@ public class InventoryGridUI : MonoBehaviour
             if (amountUI != null)
                 amountUI.Set(entry.amount);
         }
-        Debug.Log("InventoryGridUI Rebuild");
+        //Debug.Log("InventoryGridUI Rebuild");
     }
 
     private void ClearGrid()
     {
         for (int i = gridParent.childCount - 1; i >= 0; i--)
             Destroy(gridParent.GetChild(i).gameObject);
-        Debug.Log("InventoryGridUI Clear Grid");
+        //Debug.Log("InventoryGridUI Clear Grid");
     }
 }
