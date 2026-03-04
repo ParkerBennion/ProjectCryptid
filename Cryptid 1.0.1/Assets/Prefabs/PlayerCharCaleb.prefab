@@ -26299,6 +26299,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: ece4eccb5c1a32144934f4dbef3b1526, type: 3}
       insertIndex: -1
       addedObject: {fileID: 6866380237873264911}
+    - targetCorrespondingSourceObject: {fileID: 6930100216114346127, guid: ece4eccb5c1a32144934f4dbef3b1526, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2276654258791845340}
+    - targetCorrespondingSourceObject: {fileID: 6930100216114346127, guid: ece4eccb5c1a32144934f4dbef3b1526, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4445750996558121389}
   m_SourcePrefab: {fileID: 100100000, guid: ece4eccb5c1a32144934f4dbef3b1526, type: 3}
 --- !u!4 &2131463058701913459 stripped
 Transform:
@@ -26335,6 +26341,53 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: ece4eccb5c1a32144934f4dbef3b1526, type: 3}
   m_PrefabInstance: {fileID: 4504205446208969398}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &6822548337773781561 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6930100216114346127, guid: ece4eccb5c1a32144934f4dbef3b1526, type: 3}
+  m_PrefabInstance: {fileID: 4504205446208969398}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2276654258791845340
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6822548337773781561}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96b6e70f16817ef488bed312357427f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  alternateMesh: {fileID: -1149407437223632126, guid: ece4eccb5c1a32144934f4dbef3b1526, type: 3}
+  alternateMaterial: {fileID: 2100000, guid: c82524ba269ae574b916d4356200d76e, type: 2}
+--- !u!114 &4445750996558121389
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6822548337773781561}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9a87ea4ad0c7714ea2a0adcde2d77a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  responseEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2276654258791845340}
+        m_TargetAssemblyTypeName: SkinnedMeshSwap, Assembly-CSharp
+        m_MethodName: ToggleSkin
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  callerAction: {fileID: 11400000, guid: e98382bd4388d894294a8d04c14d32c6, type: 2}
 --- !u!95 &8063892309578278695 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: ece4eccb5c1a32144934f4dbef3b1526, type: 3}
