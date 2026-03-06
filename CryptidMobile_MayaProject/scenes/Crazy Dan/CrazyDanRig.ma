@@ -1,6 +1,6 @@
 //Maya ASCII 2025ff03 scene
 //Name: CrazyDanRig.ma
-//Last modified: Thu, Mar 05, 2026 06:32:32 PM
+//Last modified: Fri, Mar 06, 2026 02:42:38 PM
 //Codeset: 1252
 file -rdi 1 -ns "CalebSIZEREFERENCE" -dr 1 -rfn "Bigfoot_retoppo:CalebSIZEREFERENCERN"
 		 -op "v=0;" -typ "mayaAscii" "C:/Users/caris/Desktop/ProjectCryptid/CryptidMobile_MayaProject//scenes/CalebSIZEREFERENCE.ma";
@@ -19,12 +19,12 @@ fileInfo "product" "Maya 2025";
 fileInfo "version" "2025";
 fileInfo "cutIdentifier" "202409190603-cbdc5a7e54";
 fileInfo "osv" "Windows 10 Home v2009 (Build: 19045)";
-fileInfo "UUID" "04601F39-404B-72F7-F4A0-80AA7A8FB803";
+fileInfo "UUID" "35FE2F31-4E12-17AA-F059-4BAB2107C8E2";
 createNode transform -s -n "persp";
 	rename -uid "14739249-483B-950B-B7B8-208C590DCC2D";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 6.3605903234685437 10.597075590120856 11.406623820098503 ;
-	setAttr ".r" -type "double3" 1075.0458013971904 10466.60000000525 -2.2231585940167364e-16 ;
+	setAttr ".t" -type "double3" 20.131516835886121 11.753604410684625 53.974674465377916 ;
+	setAttr ".r" -type "double3" 1074.4458014002209 10459.799999995024 -4.225501766949709e-16 ;
 	setAttr ".rp" -type "double3" -6.9935308637805131e-16 -4.662353909187009e-16 -9.3247078183740181e-16 ;
 	setAttr ".rpt" -type "double3" -2.7688880291099354e-16 -2.1656013627037304e-16 8.9106501285146023e-16 ;
 createNode camera -s -n "perspShape" -p "persp";
@@ -34,12 +34,12 @@ createNode camera -s -n "perspShape" -p "persp";
 	setAttr ".ncp" 0.0032808398950131233;
 	setAttr ".fcp" 328.08398950131232;
 	setAttr ".fd" 0.16404199475065617;
-	setAttr ".coi" 14.36297527725629;
+	setAttr ".coi" 56.765483715722347;
 	setAttr ".ow" 0.32808398950131235;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
-	setAttr ".tp" -type "double3" -6.3393734706096438e-14 294.65399031195528 52.923768956486271 ;
+	setAttr ".tp" -type "double3" 0 315.61586811930516 52.833126248907391 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 createNode transform -s -n "top";
 	rename -uid "7A3B31FD-4D13-F6A0-AFFB-E3AE59B1162B";
@@ -132,7 +132,6 @@ createNode transform -n "Geo" -p "Geometry";
 	rename -uid "A300D425-49B2-0B97-8162-CC8F887B64CD";
 createNode transform -n "legs" -p "Geo";
 	rename -uid "4693F521-4556-E048-9620-54A1B7F2F007";
-	setAttr ".v" no;
 	setAttr -l on ".tx";
 	setAttr -l on ".ty";
 	setAttr -l on ".tz";
@@ -2516,7 +2515,15 @@ createNode mesh -n "torsoShapeOrig" -p "torso";
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode transform -n "eyebrows" -p "Geo";
 	rename -uid "BE8B3597-4FCA-CC2A-09D4-278AA670F777";
-	setAttr ".v" no;
+	setAttr -l on ".tx";
+	setAttr -l on ".ty";
+	setAttr -l on ".tz";
+	setAttr -l on ".rx";
+	setAttr -l on ".ry";
+	setAttr -l on ".rz";
+	setAttr -l on ".sx";
+	setAttr -l on ".sy";
+	setAttr -l on ".sz";
 	setAttr ".rp" -type "double3" 0 10.226771337153718 1.4129636168792805 ;
 	setAttr ".sp" -type "double3" 0 10.226771337153718 1.4129636168792805 ;
 createNode mesh -n "eyebrowsShape" -p "eyebrows";
@@ -2525,6 +2532,18 @@ createNode mesh -n "eyebrowsShape" -p "eyebrows";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
 	setAttr ".pv" -type "double2" 0.96970841288566589 0.57405027747154236 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr ".vcs" 2;
+createNode mesh -n "eyebrowsShapeOrig" -p "eyebrows";
+	rename -uid "868F3E18-4711-8AAB-B67D-D1BB278500B0";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr -s 52 ".uvst[0].uvsp[0:51]" -type "float2" 0.97444791 0.58602464
 		 0.97510427 0.57448459 0.96658707 0.57429677 0.96737301 0.58549792 0.98101908 0.5870288
@@ -6562,7 +6581,7 @@ createNode joint -n "R_Arm_01_Jnt_IK" -p "R_Clav_Jnt";
 createNode joint -n "R_Arm_02_Jnt_IK" -p "R_Arm_01_Jnt_IK";
 	rename -uid "08F5CBC2-4604-BA0A-E9A2-A4B4E2F961C5";
 	setAttr ".t" -type "double3" -1.7780059576034546 7.4909297545929937e-07 5.1739162735430893e-07 ;
-	setAttr ".r" -type "double3" 2.7395525430619962e-12 -8.2809340863413127e-06 4.7018332032226925e-06 ;
+	setAttr ".r" -type "double3" 2.7395525430619966e-12 -8.2809340863413127e-06 4.7018332032226908e-06 ;
 	setAttr ".s" -type "double3" 1.0000000000000004 0.99999999999999989 1 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
@@ -7093,6 +7112,7 @@ createNode parentConstraint -n "L_Leg_02_Jnt_parentConstraint1" -p "L_Leg_02_Jnt
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
 	setAttr -s 2 ".tg";
+	setAttr ".lr" -type "double3" 0 0 -2.767740864997902e-06 ;
 	setAttr ".rst" -type "double3" 1.8146409630080329 1.049029629567077e-15 -2.3311769545935046e-15 ;
 	setAttr -k on ".w0";
 	setAttr -k on ".w1";
@@ -7191,7 +7211,7 @@ createNode parentConstraint -n "L_Leg_01_Jnt_parentConstraint1" -p "L_Leg_01_Jnt
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
 	setAttr -s 2 ".tg";
-	setAttr ".lr" -type "double3" 2.2263882770244624e-14 -3.8166656177562195e-14 -1.908332808878111e-14 ;
+	setAttr ".lr" -type "double3" 2.2263882011941296e-14 -5.0888875235173975e-14 1.7075472734198599e-06 ;
 	setAttr ".rst" -type "double3" 1.3693854711574374 -0.39616868875733852 0.24703189521637589 ;
 	setAttr ".rsrr" -type "double3" 2.5444437451708147e-14 -4.4527765540489228e-14 -2.226388277024463e-14 ;
 	setAttr -k on ".w0";
@@ -7672,7 +7692,7 @@ createNode joint -n "L_Leg_01_Jnt_IK" -p "Pelvis_Jnt";
 	setAttr ".ove" yes;
 	setAttr ".ovc" 13;
 	setAttr ".t" -type "double3" 1.3693854711574374 -0.39616868875733852 0.24703189521637589 ;
-	setAttr ".r" -type "double3" -1.4493822079427448e-14 9.6928346227026143e-16 1.7075472925031877e-06 ;
+	setAttr ".r" -type "double3" -1.4493822033812642e-14 9.6928323063901999e-16 1.7075472925031877e-06 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" -89.999999999999972 -7.3444078017540262 -89.999999999999901 ;
@@ -7680,7 +7700,7 @@ createNode joint -n "L_Leg_01_Jnt_IK" -p "Pelvis_Jnt";
 createNode joint -n "L_Leg_02_Jnt_IK" -p "L_Leg_01_Jnt_IK";
 	rename -uid "166856C8-4A22-0C18-5E1E-1C8BD4F00666";
 	setAttr ".t" -type "double3" 1.814640998840332 1.6318238682154531e-15 -2.7974123455122052e-15 ;
-	setAttr ".r" -type "double3" -1.3461698969208718e-21 5.5620523166967469e-21 -2.7677407788233331e-06 ;
+	setAttr ".r" -type "double3" -1.3461699388601959e-21 5.5620524899800126e-21 -2.767740865051066e-06 ;
 	setAttr ".s" -type "double3" 0.99999999999999978 0.99999999999999978 1 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
@@ -7696,7 +7716,7 @@ createNode joint -n "L_Leg_03_Jnt_IK" -p "L_Leg_02_Jnt_IK";
 createNode joint -n "L_Foot_01_Jnt_IK" -p "L_Leg_03_Jnt_IK";
 	rename -uid "F72F8B21-4868-442B-1B4B-49B37F7366D7";
 	setAttr ".t" -type "double3" 5.8279423864837615e-16 -3.2053683125660686e-16 1.6318238682154531e-15 ;
-	setAttr ".r" -type "double3" 7.633331235512439e-14 -6.7928753237166325e-30 4.3474402071784591e-28 ;
+	setAttr ".r" -type "double3" 7.633331235512439e-14 -6.7928753237166325e-30 4.34744020717846e-28 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" 179.99999999999974 0 -79.890073816530673 ;
@@ -7978,7 +7998,7 @@ createNode joint -n "R_Leg_01_Jnt_IK" -p "Pelvis_Jnt";
 createNode joint -n "R_Leg_02_Jnt_IK" -p "R_Leg_01_Jnt_IK";
 	rename -uid "CCBF66C7-4B33-5C8F-F1CA-F788A29956C4";
 	setAttr ".t" -type "double3" -1.8146380186080933 7.5084693656513803e-07 4.4292362137276589e-15 ;
-	setAttr ".r" -type "double3" 1.5639982291732145e-21 -1.7315444611946559e-21 8.5749551852089264e-07 ;
+	setAttr ".r" -type "double3" 1.5639982291732142e-21 -1.7315444611946563e-21 8.5749551852089254e-07 ;
 	setAttr ".s" -type "double3" 0.99999999999999989 1 1.0000000000000002 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
@@ -9067,6 +9087,192 @@ createNode scaleConstraint -n "Mustache_Jnt_scaleConstraint1" -p "Mustache_Jnt";
 	rename -uid "7097BBE1-4595-B251-D44A-0A88BB9B6F07";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "Mustache_Jnt_CtrlW0" -dv 1 -min 0 
 		-at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr -k on ".w0";
+createNode joint -n "R_EyeLid_Lower_Skin_Jnt" -p "Head_Skin_Jnt";
+	rename -uid "9C72B70D-4A75-91C3-A856-1EA48E6B189B";
+	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
+	setAttr ".uoc" 1;
+	setAttr ".oc" 5;
+	setAttr ".ove" yes;
+	setAttr ".ovc" 9;
+	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
+	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr ".ssc" no;
+	setAttr ".bps" -type "matrix" 0.99999999999999978 2.2204460492503126e-16 0 0 -2.2380934834012119e-16 1 -1.9706458687096517e-15 0
+		 4.7902714775919756e-17 9.4368957093138345e-16 1.0000000000000009 0 -12.832445760000004 298.83321449005558 38.247218400000037 1;
+	setAttr ".radi" 0.78048;
+	setAttr ".liw" yes;
+createNode parentConstraint -n "R_EyeLid_Lower_Skin_Jnt_parentConstraint1" -p "R_EyeLid_Lower_Skin_Jnt";
+	rename -uid "75F0F4BB-48E6-8136-A7B5-03A01521C57E";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "R_EyeLid_Lower_Skin_Jnt_CtrlW0" -dv 
+		1 -min 0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr ".rst" -type "double3" -0.42101199999999922 0.35516383381465477 0.96747181389773207 ;
+	setAttr -k on ".w0";
+createNode scaleConstraint -n "R_EyeLid_Lower_Skin_Jnt_scaleConstraint1" -p "R_EyeLid_Lower_Skin_Jnt";
+	rename -uid "DE035CC0-4593-65D6-BE4E-B8AD7EA6AA59";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "R_EyeLid_Lower_Skin_Jnt_CtrlW0" -dv 
+		1 -min 0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr -k on ".w0";
+createNode joint -n "L_EyeLid_Lower_Skin_Jnt" -p "Head_Skin_Jnt";
+	rename -uid "C59B2E70-4775-D312-704E-29B8EBD1879C";
+	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
+	setAttr ".uoc" 1;
+	setAttr ".ove" yes;
+	setAttr ".ovc" 9;
+	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
+	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr ".ssc" no;
+	setAttr ".bps" -type "matrix" 0.99999999999999978 2.2204460492503126e-16 0 0 -2.2380934834012119e-16 1 -1.9706458687096517e-15 0
+		 4.7902714775919756e-17 9.4368957093138345e-16 1.0000000000000009 0 12.832459449768061 298.83310677677451 38.247127532959027 1;
+	setAttr ".radi" 0.78048;
+	setAttr ".liw" yes;
+createNode parentConstraint -n "L_EyeLid_Lower_Skin_Jnt_parentConstraint1" -p "L_EyeLid_Lower_Skin_Jnt";
+	rename -uid "BA82186D-4865-E202-0A5D-3CB51CAFC17A";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "L_EyeLid_Lower_Skin_Jnt_CtrlW0" -dv 
+		1 -min 0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr ".rst" -type "double3" 0.42101244913937313 0.35516029991435349 0.96746883269559913 ;
+	setAttr -k on ".w0";
+createNode scaleConstraint -n "L_EyeLid_Lower_Skin_Jnt_scaleConstraint1" -p "L_EyeLid_Lower_Skin_Jnt";
+	rename -uid "CC913368-4FC7-6C91-DF52-DBAEB68AA8CF";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "L_EyeLid_Lower_Skin_Jnt_CtrlW0" -dv 
+		1 -min 0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr -k on ".w0";
+createNode joint -n "L_Eyebrow_Jnt" -p "Head_Skin_Jnt";
+	rename -uid "F7E05BAC-4598-7554-B29C-B3BA4761F93C";
+	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
+	setAttr ".uoc" 1;
+	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
+	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr ".jo" -type "double3" 0 30.264483207268395 0 ;
+	setAttr ".radi" 0.125;
+createNode parentConstraint -n "L_Eyebrow_Jnt_parentConstraint1" -p "L_Eyebrow_Jnt";
+	rename -uid "EC2AA5CE-43DF-53D2-CEC9-83ACA7832ABE";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "L_Eyebrow_Jnt_CtrlW0" -dv 1 -min 
+		0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr ".lr" -type "double3" 0 -1.9083328088781101e-14 0 ;
+	setAttr ".rst" -type "double3" 0.55175650831384149 0.86456501912426698 1.1495941850651974 ;
+	setAttr ".rsrr" -type "double3" 0 -1.9083328088781101e-14 0 ;
+	setAttr -k on ".w0";
+createNode scaleConstraint -n "L_Eyebrow_Jnt_scaleConstraint1" -p "L_Eyebrow_Jnt";
+	rename -uid "E9A6370D-4750-963D-CAFC-C4A4BCE14021";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "L_Eyebrow_Jnt_CtrlW0" -dv 1 -min 
+		0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr -k on ".w0";
+createNode joint -n "R_Eyebrow_Jnt" -p "Head_Skin_Jnt";
+	rename -uid "D9665825-4C36-05AF-6FFB-EF8F60B53A26";
+	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
+	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
+	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr ".jo" -type "double3" 179.99999704244132 -30.264483207268349 -2.5444437040550634e-14 ;
+	setAttr ".radi" 0.125;
+createNode parentConstraint -n "R_Eyebrow_Jnt_parentConstraint1" -p "R_Eyebrow_Jnt";
+	rename -uid "F4A95CDA-467B-0955-9A95-F391CF4C7F2A";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "R_Eyebrow_Jnt_CtrlW0" -dv 1 -min 
+		0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr ".lr" -type "double3" 1.2722218716375276e-13 -3.1805546814635168e-14 -1.6113946071186285e-21 ;
+	setAttr ".rst" -type "double3" -0.55175699999999928 0.86452451327476709 1.1495918138977319 ;
+	setAttr ".rsrr" -type "double3" 1.2722218716375276e-13 -3.1805546814635168e-14 -1.6113946071186285e-21 ;
+	setAttr -k on ".w0";
+createNode scaleConstraint -n "R_Eyebrow_Jnt_scaleConstraint1" -p "R_Eyebrow_Jnt";
+	rename -uid "F15B4543-460E-5E68-DD41-3DAA0C63E7C1";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "R_Eyebrow_Jnt_CtrlW0" -dv 1 -min 
+		0 -at "double";
 	setAttr -k on ".nds";
 	setAttr -k off ".v";
 	setAttr -k off ".tx";
@@ -11182,6 +11388,7 @@ createNode parentConstraint -n "L_Leg_02_Skin_Jnt_parentConstraint1" -p "L_Leg_0
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" 0 -3.2053683125660686e-16 9.3247078183740181e-16 ;
+	setAttr ".lr" -type "double3" 0 0 -2.767740864997902e-06 ;
 	setAttr ".rst" -type "double3" 1.8146409630080329 1.1655884772967523e-15 -9.3247078183740181e-16 ;
 	setAttr -k on ".w0";
 createNode scaleConstraint -n "L_Leg_02_Skin_Jnt_scaleConstraint1" -p "L_Leg_02_Skin_Jnt";
@@ -11274,7 +11481,7 @@ createNode parentConstraint -n "L_Leg_01_Skin_Jnt_parentConstraint1" -p "L_Leg_0
 		4.662353909187009e-16 ;
 	setAttr ".tg[0].tor" -type "double3" 6.3611093629270367e-15 1.8714962703732669e-29 
 		1.590277340731758e-15 ;
-	setAttr ".lr" -type "double3" -9.5416640443905487e-15 1.2722218725854064e-14 6.3611093629270304e-15 ;
+	setAttr ".lr" -type "double3" -2.8624991564444151e-14 3.8166656604107812e-14 1.7075472925031875e-06 ;
 	setAttr ".rst" -type "double3" 1.3693854711574374 -0.39616868875733852 0.24703189521637553 ;
 	setAttr ".rsrr" -type "double3" -9.5416640443905487e-15 1.2722218725854064e-14 6.3611093629270304e-15 ;
 	setAttr -k on ".w0";
@@ -12385,7 +12592,7 @@ createNode parentConstraint -n "L_Hip_Twist_Loc_Grp_Upper_parentConstraint1" -p 
 	setAttr ".tg[0].tot" -type "double3" 4.662353909187009e-16 0 -2.3311769545935045e-16 ;
 	setAttr ".tg[0].tor" -type "double3" 2.2749099470043633e-21 6.6351537484387206e-22 
 		6.361109362927032e-15 ;
-	setAttr ".lr" -type "double3" -89.999999999999986 -7.3444078017540102 -89.999999999999929 ;
+	setAttr ".lr" -type "double3" -90 -7.3444060942067271 -89.999999999999929 ;
 	setAttr ".rst" -type "double3" 1.3693854711574371 4.2204680622819835 0.24703189521637595 ;
 	setAttr ".rsrr" -type "double3" -90 -7.3444060942067271 -89.999999999999929 ;
 	setAttr -k on ".w0";
@@ -12475,7 +12682,7 @@ createNode transform -n "L_Hip_IK_Joint_Grp" -p "L_Hip_IK_Jnt_System";
 createNode joint -n "L_Hip_IK_Joint_1" -p "L_Hip_IK_Joint_Grp";
 	rename -uid "506FB441-47AD-B12B-C839-42B6D92E12B3";
 	setAttr ".t" -type "double3" 0 0 1.1655884772967523e-16 ;
-	setAttr ".r" -type "double3" 90.000000000000014 5.4935638971559288e-07 1.6167638065060839e-06 ;
+	setAttr ".r" -type "double3" 89.999999999999986 1.0763454868174238e-13 -6.9721071836317662e-14 ;
 	setAttr ".s" -type "double3" 0.99999999999999978 0.99999999999999989 0.99999999999999989 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
@@ -12626,7 +12833,7 @@ createNode parentConstraint -n "L_Leg_Twist_Loc_Grp_Lower_parentConstraint1" -p 
 	setAttr ".tg[0].tot" -type "double3" 1.9171706438064586 1.4861253085533591e-15 2.3311769545935046e-15 ;
 	setAttr ".tg[0].tor" -type "double3" -9.1519284535532242e-15 -6.4357319058395521e-15 
 		-7.9513867036587935e-15 ;
-	setAttr ".lr" -type "double3" -89.999999999999986 14.334028596947174 -89.999999999999915 ;
+	setAttr ".lr" -type "double3" -90 14.334027536753599 -89.999999999999943 ;
 	setAttr ".rst" -type "double3" 1.3693854711574422 0.56322803062051308 0.0043609926855703307 ;
 	setAttr ".rsrr" -type "double3" -90 14.33402753675368 -89.999999999999929 ;
 	setAttr -k on ".w0";
@@ -14275,6 +14482,7 @@ createNode transform -n "L_Leg_IK_Ctrl" -p "L_Leg_IK_Ctrl_Grp";
 	addAttr -ci true -k true -sn "Stretch" -ln "Stretch" -dv 1 -min 0 -max 1 -at "float";
 	addAttr -ci true -k true -sn "Max_Stretch" -ln "Max_Stretch" -dv 3 -min 1 -max 3 
 		-at "float";
+	setAttr ".t" -type "double3" 0 0 -3.7298831273496072e-15 ;
 	setAttr -k on ".Tilt";
 	setAttr -k on ".Pitch";
 	setAttr -k on ".Heel_Pivot";
@@ -15013,7 +15221,7 @@ createNode transform -n "L_Leg_01_FK_Ctrl" -p "L_Leg_01_FK_Ctrl_Grp";
 	addAttr -ci true -k true -sn "FollowRotate" -ln "FollowRotate" -dv 1 -min 0 -max 
 		1 -at "double";
 	setAttr ".rp" -type "double3" 0 1.1655884772967523e-16 -2.3311769545935045e-16 ;
-	setAttr ".rpt" -type "double3" 2.5881263294652618e-32 -2.3293136965187354e-31 1.08701305837541e-30 ;
+	setAttr ".rpt" -type "double3" 2.5881263294652618e-32 -2.3293136965187354e-31 1.0870130583754101e-30 ;
 	setAttr ".sp" -type "double3" 0 1.1655884772967523e-16 -2.3311769545935045e-16 ;
 	setAttr -k on ".FollowTranslate";
 	setAttr -k on ".FollowRotate";
@@ -18906,7 +19114,7 @@ createNode transform -n "L_Clav_Ctrl" -p "L_Clav_Ctrl_Grp";
 	addAttr -ci true -k true -sn "FollowRotate" -ln "FollowRotate" -dv 1 -min 0 -max 
 		1 -at "double";
 	setAttr ".rp" -type "double3" -1.1655884772967523e-16 9.3247078183740181e-16 -1.1655884772967523e-16 ;
-	setAttr ".rpt" -type "double3" 3.8304269676085875e-30 -8.644341940413975e-30 4.1410021271444189e-31 ;
+	setAttr ".rpt" -type "double3" 3.8304269676085875e-30 -8.6443419404139764e-30 4.1410021271444189e-31 ;
 	setAttr ".sp" -type "double3" -1.1655884772967523e-16 9.3247078183740181e-16 -1.1655884772967523e-16 ;
 	setAttr -k on ".FollowTranslate";
 	setAttr -k on ".FollowRotate";
@@ -20145,6 +20353,339 @@ createNode scaleConstraint -n "Mustache_Jnt_Ctrl_Grp_scaleConstraint1" -p "Musta
 	setAttr ".erp" yes;
 	setAttr ".o" -type "double3" 0.99999999999999978 1 0.99999999999999978 ;
 	setAttr -k on ".w0";
+createNode transform -n "L_Eyebrow_Jnt_Ctrl_Grp" -p "Head_Ctrls";
+	rename -uid "CAB38FE3-44FD-421B-DCCB-5AA87DE134D9";
+	setAttr ".rp" -type "double3" 0 -8.7419135797256413e-17 0 ;
+	setAttr ".sp" -type "double3" 0 -8.7419135797256413e-17 0 ;
+createNode transform -n "L_Eyebrow_Jnt_Ctrl" -p "L_Eyebrow_Jnt_Ctrl_Grp";
+	rename -uid "BA023EE1-4D4A-50A1-B197-D69AF07D0017";
+	addAttr -ci true -k true -sn "FollowTranslate" -ln "FollowTranslate" -dv 1 -min 
+		0 -max 1 -at "double";
+	addAttr -ci true -k true -sn "FollowRotate" -ln "FollowRotate" -dv 1 -min 0 -max 
+		1 -at "double";
+	setAttr ".rp" -type "double3" -1.1655884772967523e-16 0 -2.3311769545935045e-16 ;
+	setAttr ".sp" -type "double3" -1.1655884772967523e-16 0 -2.3311769545935045e-16 ;
+	setAttr -k on ".FollowTranslate";
+	setAttr -k on ".FollowRotate";
+createNode nurbsCurve -n "L_Eyebrow_Jnt_CtrlShape" -p "L_Eyebrow_Jnt_Ctrl";
+	rename -uid "B91E97FF-4391-68A2-B638-78A0BF16E6B6";
+	setAttr -k off ".v";
+	setAttr ".ove" yes;
+	setAttr ".ovc" 17;
+	setAttr ".tw" yes;
+	setAttr -s 11 ".cp[0:10]" -type "double3" -0.044769714727768042 -0.12141456421714689 
+		0.07672332523308148 -0.044769714727767945 -0.17170612338550814 0.07672332523308148 
+		-0.044769714727767897 -0.12141456421714686 0.07672332523308148 -0.04476971472776816 
+		-0.19946406595623156 0.076723325233081563 -0.044769714727767897 0.12141456421714686 
+		0.07672332523308148 -0.044769714727768369 0.30115851902674834 0.076723325233081507 
+		-0.044769714727768042 0.12141456421714683 0.07672332523308148 -0.04476971472776816 
+		-0.19946406595623156 0.076723325233081563 0 0 0 0 0 0 0 0 0;
+createNode parentConstraint -n "L_Eyebrow_Jnt_Ctrl_Grp_parentConstraint1" -p "L_Eyebrow_Jnt_Ctrl_Grp";
+	rename -uid "129521E8-46B0-4E27-DC7F-7A822AFEA631";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "Head_CtrlW0" -dv 1 -min 0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr ".tg[0].tot" -type "double3" 0.55175650831384149 0.86456501912426875 1.1495941850651956 ;
+	setAttr ".tg[0].tor" -type "double3" 0 30.264483207268395 0 ;
+	setAttr ".lr" -type "double3" 0 30.264483207268395 0 ;
+	setAttr ".rst" -type "double3" 0.55175650831384027 10.313640505849497 1.4369523711674659 ;
+	setAttr ".rsrr" -type "double3" 0 30.264483207268395 0 ;
+	setAttr -k on ".w0";
+createNode parentConstraint -n "L_Eyebrow_Jnt_Ctrl_Grp_parentConstraint2" -p "L_Eyebrow_Jnt_Ctrl_Grp";
+	rename -uid "7189A522-43FF-0CB3-C02A-9399A4A68FEA";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "Head_CtrlW0" -dv 1 -min 0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr ".tg[0].tot" -type "double3" 0.55175650831384149 0.86456501912426875 1.1495941850651956 ;
+	setAttr ".tg[0].tor" -type "double3" 0 30.264483207268395 0 ;
+	setAttr ".lr" -type "double3" 0 30.264483207268395 0 ;
+	setAttr ".rst" -type "double3" 0.55175650831384027 10.313640505849497 1.4369523711674659 ;
+	setAttr ".rsrr" -type "double3" 0 30.264483207268395 0 ;
+	setAttr -k on ".w0";
+createNode scaleConstraint -n "L_Eyebrow_Jnt_Ctrl_Grp_scaleConstraint1" -p "L_Eyebrow_Jnt_Ctrl_Grp";
+	rename -uid "D28306A0-4F26-67E7-B829-3A8B2B5619A5";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "Head_CtrlW0" -dv 1 -min 0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr ".o" -type "double3" 0.99999999999999978 1 0.99999999999999978 ;
+	setAttr -k on ".w0";
+createNode transform -n "R_Eyebrow_Jnt_Ctrl_Grp" -p "Head_Ctrls";
+	rename -uid "2E67EE1D-44BC-937B-D9FD-E692FE144B0B";
+	setAttr ".rp" -type "double3" 0 -8.7419135797256413e-17 0 ;
+	setAttr ".sp" -type "double3" 0 -8.7419135797256413e-17 0 ;
+createNode transform -n "R_Eyebrow_Jnt_Ctrl" -p "R_Eyebrow_Jnt_Ctrl_Grp";
+	rename -uid "E7A43526-4537-3815-AE2F-2EBB73208D85";
+	addAttr -ci true -k true -sn "FollowTranslate" -ln "FollowTranslate" -dv 1 -min 
+		0 -max 1 -at "double";
+	addAttr -ci true -k true -sn "FollowRotate" -ln "FollowRotate" -dv 1 -min 0 -max 
+		1 -at "double";
+	setAttr ".rp" -type "double3" 0 1.8649415636748036e-15 0 ;
+	setAttr ".sp" -type "double3" 0 1.8649415636748036e-15 0 ;
+	setAttr -k on ".FollowTranslate";
+	setAttr -k on ".FollowRotate";
+createNode nurbsCurve -n "R_Eyebrow_Jnt_CtrlShape" -p "R_Eyebrow_Jnt_Ctrl";
+	rename -uid "D41B03A9-4C74-3BE6-43B6-78A1B8727FB4";
+	setAttr -k off ".v";
+	setAttr ".ove" yes;
+	setAttr ".ovc" 17;
+	setAttr ".tw" yes;
+	setAttr -s 11 ".cp[0:10]" -type "double3" 0.044769714727767203 -0.12141456025675505 
+		-0.076723325233081799 0.044769714727767092 -0.30115851506635649 -0.076723331915303075 
+		0.044769714727767314 -0.12141456025675502 -0.076723325233081799 0.044769714727767057 
+		0.19946406991662302 -0.076723314936919265 0.044769714727767314 0.12141456817753871 
+		-0.076723325233081799 0.044769714727767272 0.17170612734589996 -0.076723325233081799 
+		0.044769714727767203 0.12141456817753868 -0.076723325233081799 0.044769714727767057 
+		0.19946406991662302 -0.076723314936919265 0 0 0 0 0 0 0 0 0;
+createNode parentConstraint -n "R_Eyebrow_Jnt_Ctrl_Grp_parentConstraint1" -p "R_Eyebrow_Jnt_Ctrl_Grp";
+	rename -uid "0BC8A5B1-4DB2-BAEF-A574-32AB4EDE3282";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "Head_CtrlW0" -dv 1 -min 0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr ".tg[0].tot" -type "double3" -0.55175699999999928 0.86452451327477098 1.1495918138977297 ;
+	setAttr ".tg[0].tor" -type "double3" 179.99999704244132 -30.264483207268349 -1.0974530895299484e-22 ;
+	setAttr ".lr" -type "double3" 179.99999704244132 -30.264483207268349 -1.0974530895299484e-22 ;
+	setAttr ".rst" -type "double3" -0.55175700000000016 10.3136 1.4369500000000002 ;
+	setAttr ".rsrr" -type "double3" 179.99999704244132 -30.264483207268349 -1.0974530895299484e-22 ;
+	setAttr -k on ".w0";
+createNode parentConstraint -n "R_Eyebrow_Jnt_Ctrl_Grp_parentConstraint2" -p "R_Eyebrow_Jnt_Ctrl_Grp";
+	rename -uid "88782A01-4795-67B0-6967-77981FD17A73";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "Head_CtrlW0" -dv 1 -min 0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr ".tg[0].tot" -type "double3" -0.55175699999999928 0.86452451327477098 1.1495918138977297 ;
+	setAttr ".tg[0].tor" -type "double3" 179.99999704244132 -30.264483207268349 -1.0974530895299484e-22 ;
+	setAttr ".lr" -type "double3" 179.99999704244132 -30.264483207268349 -1.0974530895299484e-22 ;
+	setAttr ".rst" -type "double3" -0.55175700000000016 10.3136 1.4369500000000002 ;
+	setAttr ".rsrr" -type "double3" 179.99999704244132 -30.264483207268349 -1.0974530895299484e-22 ;
+	setAttr -k on ".w0";
+createNode scaleConstraint -n "R_Eyebrow_Jnt_Ctrl_Grp_scaleConstraint1" -p "R_Eyebrow_Jnt_Ctrl_Grp";
+	rename -uid "6D056061-4FED-A6CB-3D54-09A0847365AB";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "Head_CtrlW0" -dv 1 -min 0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr ".o" -type "double3" 0.99999999999999978 1 0.99999999999999978 ;
+	setAttr -k on ".w0";
+createNode transform -n "L_EyeLid_Lower_Skin_Jnt_Ctrl_Grp" -p "Head_Ctrls";
+	rename -uid "CF0D221E-43E6-B1AF-82AB-6AB85C53672F";
+	setAttr ".rp" -type "double3" 0 -1.4569855966209404e-16 0 ;
+	setAttr ".sp" -type "double3" 0 -1.4569855966209404e-16 0 ;
+createNode transform -n "L_EyeLid_Lower_Skin_Jnt_Ctrl" -p "L_EyeLid_Lower_Skin_Jnt_Ctrl_Grp";
+	rename -uid "37D936DE-4A66-26ED-0BAE-59B7DA5C5412";
+	addAttr -ci true -k true -sn "FollowTranslate" -ln "FollowTranslate" -dv 1 -min 
+		0 -max 1 -at "double";
+	addAttr -ci true -k true -sn "FollowRotate" -ln "FollowRotate" -dv 1 -min 0 -max 
+		1 -at "double";
+	setAttr ".rp" -type "double3" 5.8279423864837613e-17 0 2.3311769545935045e-16 ;
+	setAttr ".rpt" -type "double3" 0 7.7643789883957848e-32 -1.5528757976791571e-30 ;
+	setAttr ".sp" -type "double3" 5.8279423864837613e-17 0 2.3311769545935045e-16 ;
+	setAttr -k on ".FollowTranslate";
+	setAttr -k on ".FollowRotate";
+createNode nurbsCurve -n "L_EyeLid_Lower_Skin_Jnt_CtrlShape" -p "L_EyeLid_Lower_Skin_Jnt_Ctrl";
+	rename -uid "091279E4-491D-D5B8-A85C-F6B45831C3BF";
+	setAttr -k off ".v";
+	setAttr ".ove" yes;
+	setAttr ".ovc" 17;
+	setAttr ".tw" yes;
+	setAttr -s 11 ".cp[0:10]" -type "double3" 0 -0.18300486547720593 -0.058972755108820239 
+		0 -0.25880846092566584 -0.083399758929167844 0 -0.1830048654772059 -0.058972755108820184 
+		0 1.2027311096839349e-06 -7.5119759703908313e-07 0 0.18300727093942537 0.05897125271362564 
+		0 0.25881086638788553 0.083398256533973467 0 0.18300727093942537 0.05897125271362564 
+		0 1.2027311097326458e-06 -7.5119759702338644e-07 0 0 0 0 0 0 0 0 0;
+createNode parentConstraint -n "L_EyeLid_Lower_Skin_Jnt_Ctrl_Grp_parentConstraint1" 
+		-p "L_EyeLid_Lower_Skin_Jnt_Ctrl_Grp";
+	rename -uid "5A8A64FA-4BB8-0785-244E-BF86FE7DB604";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "Head_CtrlW0" -dv 1 -min 0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr ".tg[0].tot" -type "double3" 0.42101244913937297 0.35516029991435527 0.9674688326955978 ;
+	setAttr ".rst" -type "double3" 0.42101244913937186 9.8042357866395839 1.2548270187978678 ;
+	setAttr -k on ".w0";
+createNode parentConstraint -n "L_EyeLid_Lower_Skin_Jnt_Ctrl_Grp_parentConstraint2" 
+		-p "L_EyeLid_Lower_Skin_Jnt_Ctrl_Grp";
+	rename -uid "90373A37-42B8-5676-64CD-EEA89ECD8E45";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "Head_CtrlW0" -dv 1 -min 0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr ".tg[0].tot" -type "double3" 0.42101244913937302 0.35516029991435527 0.96746883269559758 ;
+	setAttr ".rst" -type "double3" 0.42101244913937191 9.8042357866395839 1.2548270187978678 ;
+	setAttr -k on ".w0";
+createNode scaleConstraint -n "L_EyeLid_Lower_Skin_Jnt_Ctrl_Grp_scaleConstraint1" 
+		-p "L_EyeLid_Lower_Skin_Jnt_Ctrl_Grp";
+	rename -uid "DF381A3A-440E-A35B-072E-FDADAD865496";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "Head_CtrlW0" -dv 1 -min 0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr -k on ".w0";
+createNode transform -n "R_EyeLid_Lower_Skin_Jnt_Ctrl_Grp" -p "Head_Ctrls";
+	rename -uid "33CC1AD8-4191-E6E2-7302-CDB729A947F1";
+	setAttr ".rp" -type "double3" 0 -1.4569855966209404e-16 0 ;
+	setAttr ".sp" -type "double3" 0 -1.4569855966209404e-16 0 ;
+createNode transform -n "R_EyeLid_Lower_Skin_Jnt_Ctrl" -p "R_EyeLid_Lower_Skin_Jnt_Ctrl_Grp";
+	rename -uid "65B25F40-48D7-1402-3EB0-B1ABA3B391C2";
+	addAttr -ci true -k true -sn "FollowTranslate" -ln "FollowTranslate" -dv 1 -min 
+		0 -max 1 -at "double";
+	addAttr -ci true -k true -sn "FollowRotate" -ln "FollowRotate" -dv 1 -min 0 -max 
+		1 -at "double";
+	setAttr ".rp" -type "double3" -5.8279423864837613e-17 0 2.3311769545935045e-16 ;
+	setAttr ".sp" -type "double3" -5.8279423864837613e-17 0 2.3311769545935045e-16 ;
+	setAttr -k on ".FollowTranslate";
+	setAttr -k on ".FollowRotate";
+createNode nurbsCurve -n "R_EyeLid_Lower_Skin_Jnt_CtrlShape" -p "R_EyeLid_Lower_Skin_Jnt_Ctrl";
+	rename -uid "28E2E05E-42EB-EA3E-06AE-DD8B5573B737";
+	setAttr -k off ".v";
+	setAttr ".ove" yes;
+	setAttr ".ovc" 17;
+	setAttr ".tw" yes;
+	setAttr -s 11 ".cp[0:10]" -type "double3" 0 -0.18300727093942523 -0.05897125271362564 
+		0 -0.25881086638788531 -0.083398256533973356 0 -0.1830072709394252 -0.05897125271362564 
+		0 -1.2027311094385587e-06 7.5119759711815206e-07 0 0.18300486547720604 0.058972755108820329 
+		0 0.25880846092566612 0.083399758929168136 0 0.18300486547720599 0.058972755108820329 
+		0 -1.2027311093898516e-06 7.511975971338497e-07 0 0 0 0 0 0 0 0 0;
+createNode parentConstraint -n "R_EyeLid_Lower_Skin_Jnt_Ctrl_Grp_parentConstraint1" 
+		-p "R_EyeLid_Lower_Skin_Jnt_Ctrl_Grp";
+	rename -uid "B517301D-4FAF-9906-7A7D-3B877E1BFE6C";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "Head_CtrlW0" -dv 1 -min 0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr ".tg[0].tot" -type "double3" -0.42101199999999916 0.35516383381465649 0.96747181389773063 ;
+	setAttr ".rst" -type "double3" -0.42101200000000011 9.8042393205398852 1.2548300000000008 ;
+	setAttr -k on ".w0";
+createNode parentConstraint -n "R_EyeLid_Lower_Skin_Jnt_Ctrl_Grp_parentConstraint2" 
+		-p "R_EyeLid_Lower_Skin_Jnt_Ctrl_Grp";
+	rename -uid "69042DE0-4486-BD1F-606A-E2920B65DCFE";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "Head_CtrlW0" -dv 1 -min 0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr ".tg[0].tot" -type "double3" -0.42101199999999922 0.35516383381465649 0.9674718138977304 ;
+	setAttr ".rst" -type "double3" -0.42101200000000016 9.8042393205398852 1.2548300000000008 ;
+	setAttr -k on ".w0";
+createNode scaleConstraint -n "R_EyeLid_Lower_Skin_Jnt_Ctrl_Grp_scaleConstraint1" 
+		-p "R_EyeLid_Lower_Skin_Jnt_Ctrl_Grp";
+	rename -uid "2CE5AF3D-4553-9293-DA72-338AADB203C9";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "Head_CtrlW0" -dv 1 -min 0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr -k on ".w0";
 createNode transform -n "IKFK_Switches" -p "Controls";
 	rename -uid "900C9EC2-42EA-7372-2788-7296AB625F23";
 	setAttr ".rp" -type "double3" 0 6.3414 -0.4336 ;
@@ -20508,7 +21049,7 @@ createNode transform -n "L_Leg_IKFK_Switch_Ctrl" -p "L_Leg_IKFK_Switch_Ctrl_Grp"
 		0 -max 1 -at "double";
 	addAttr -ci true -k true -sn "FollowRotate" -ln "FollowRotate" -dv 1 -min 0 -max 
 		1 -at "double";
-	setAttr -k on ".L_Leg_IKFK" 1;
+	setAttr -k on ".L_Leg_IKFK";
 	setAttr -k on ".FollowTranslate";
 	setAttr -k on ".FollowRotate";
 createNode nurbsCurve -n "L_Leg_IKFK_Switch_CtrlShape" -p "L_Leg_IKFK_Switch_Ctrl";
@@ -20967,6 +21508,7 @@ createNode transform -n "L_Hand_IK_Ctrl_Ctrl" -p "L_Hand_IK_Ctrl_Ctrl_Grp";
 	addAttr -ci true -k true -sn "Local_Space" -ln "Local_Space" -min 0 -max 3 -en 
 		"World:Transform_Ctrl:CoG_Ctrl:L_Clav_Ctrl" -at "enum";
 	setAttr ".rp" -type "double3" 6.4107366251321373e-16 0 0 ;
+	setAttr ".rpt" -type "double3" -4.1410021271444189e-31 0 3.1057515953583139e-31 ;
 	setAttr ".sp" -type "double3" 6.4107366251321373e-16 0 0 ;
 	setAttr -k on ".Local_Space";
 createNode nurbsCurve -n "L_Hand_IK_Ctrl_CtrlShape" -p "L_Hand_IK_Ctrl_Ctrl";
@@ -21062,16 +21604,16 @@ createNode parentConstraint -n "R_Hand_IK_Ctrl_Ctrl_Grp_parentConstraint1" -p "R
 	setAttr -k on ".w2";
 	setAttr -k on ".w3";
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "94E14745-47DD-2F0E-8963-DD8FA39F4D1A";
+	rename -uid "7AD39964-465A-F884-CF04-398B1404524C";
 	setAttr -s 16 ".lnk";
 	setAttr -s 16 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "5404E5C3-4D50-900F-7106-66AECCDDB8C7";
+	rename -uid "445DDAB6-4206-1E19-D8D8-3F905888288A";
 	setAttr ".bsdt[0].bscd" -type "Int32Array" 0 ;
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "9EA5F247-47CC-253F-E864-98B53C102408";
+	rename -uid "21B84C4C-4D59-6E0D-37C6-A090213E36BF";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "47160271-4C63-D274-720F-738C8AA6CCE7";
+	rename -uid "18ABECA3-4B4E-FB37-0238-DA93406D2669";
 	setAttr ".cdl" 9;
 	setAttr -s 15 ".dli[1:14]"  1 2 3 4 5 6 7 8 
 		0 0 0 9 10 11;
@@ -21080,7 +21622,7 @@ createNode displayLayer -n "defaultLayer";
 	rename -uid "E517C384-455A-D55E-961C-2E9D96E1D26B";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "B214FE49-4701-0D4A-B6DB-8CB4953B6D7B";
+	rename -uid "BF92CF3D-4A83-1C43-B0C0-52A0D11EEBE1";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "11E54929-4AAD-BC37-E9E5-6ABD5ABD06C0";
 	setAttr ".g" yes;
@@ -21105,15 +21647,15 @@ createNode script -n "uiConfigurationScriptNode";
 		"// Maya Mel UI Configuration File.\n//\n//  This script is machine generated.  Edit at your own risk.\n//\n//\n\nglobal string $gMainPane;\nif (`paneLayout -exists $gMainPane`) {\n\n\tglobal int $gUseScenePanelConfig;\n\tint    $useSceneConfig = $gUseScenePanelConfig;\n\tint    $nodeEditorPanelVisible = stringArrayContains(\"nodeEditorPanel1\", `getPanel -vis`);\n\tint    $nodeEditorWorkspaceControlOpen = (`workspaceControl -exists nodeEditorPanel1Window` && `workspaceControl -q -visible nodeEditorPanel1Window`);\n\tint    $menusOkayInPanels = `optionVar -q allowMenusInPanels`;\n\tint    $nVisPanes = `paneLayout -q -nvp $gMainPane`;\n\tint    $nPanes = 0;\n\tstring $editorName;\n\tstring $panelName;\n\tstring $itemFilterName;\n\tstring $panelConfig;\n\n\t//\n\t//  get current state of the UI\n\t//\n\tsceneUIReplacement -update $gMainPane;\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Top View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Top View\")) -mbv $menusOkayInPanels  $panelName;\n"
 		+ "\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|top\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n"
 		+ "            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n"
-		+ "            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1248\n            -height 343\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n"
+		+ "            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n"
 		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Side View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|side\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 1\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n"
 		+ "            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n"
 		+ "            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n"
-		+ "            -shadows 0\n            -captureSequenceNumber -1\n            -width 1250\n            -height 343\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n"
+		+ "            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n"
 		+ "            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n"
 		+ "            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n"
-		+ "            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1250\n            -height 343\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n"
-		+ "        modelEditor -e \n            -camera \"|persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 1\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 1\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n"
+		+ "            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n"
+		+ "            -camera \"|persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 1\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 1\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n"
 		+ "            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n"
 		+ "            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 2502\n            -height 731\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n"
 		+ "\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 0\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n"
@@ -21122,7 +21664,7 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -showUfeItems 1\n            -displayMode \"DAG\" \n"
 		+ "            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"graphEditor\" (localizedPanelLabel(\"Graph Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Graph Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n"
 		+ "            outlinerEditor -e \n                -showShapes 1\n                -showAssignedMaterials 0\n                -showTimeEditor 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -organizeByClip 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 1\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showParentContainers 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n"
-		+ "                -autoSelectNewObjects 1\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 1\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -isSet 0\n                -isSetMember 0\n                -showUfeItems 1\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 1\n                -mapMotionTrails 1\n"
+		+ "                -autoSelectNewObjects 1\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 1\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -isSet 1\n                -isSetMember 0\n                -showUfeItems 1\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 1\n                -mapMotionTrails 1\n"
 		+ "                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                -selectionOrder \"display\" \n                -expandAttribute 1\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"GraphEd\");\n            animCurveEditor -e \n                -displayValues 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -showPlayRangeShades \"on\" \n                -lockPlayRangeShades \"off\" \n                -smoothness \"fine\" \n                -resultSamples 1.25\n                -resultScreenSamples 0\n                -resultUpdate \"delayed\" \n                -showUpstreamCurves 1\n                -tangentScale 1\n                -tangentLineThickness 1\n                -keyMinScale 1\n                -stackedCurvesMin -1\n                -stackedCurvesMax 1\n                -stackedCurvesSpace 0.2\n                -preSelectionHighlight 0\n                -limitToSelectedCurves 0\n                -constrainDrag 0\n                -valueLinesToggle 0\n"
 		+ "                -outliner \"graphEditor1OutlineEd\" \n                -highlightAffectedCurves 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dopeSheetPanel\" (localizedPanelLabel(\"Dope Sheet\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dope Sheet\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showAssignedMaterials 0\n                -showTimeEditor 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -organizeByClip 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 1\n"
 		+ "                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showParentContainers 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 0\n                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 1\n                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"0\" \n                -showSetMembers 1\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -showUfeItems 1\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n"
@@ -21131,8 +21673,8 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Camera Sequencer\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = sequenceEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayValues 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -initialized 0\n                -manageSequencer 1 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperGraphPanel\" (localizedPanelLabel(\"Hypergraph Hierarchy\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypergraph Hierarchy\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"HyperGraphEd\");\n            hyperGraph -e \n                -graphLayoutStyle \"hierarchicalLayout\" \n                -orientation \"horiz\" \n                -mergeConnections 0\n                -zoom 1\n                -animateTransition 0\n                -showRelationships 1\n"
 		+ "                -showShapes 0\n                -showDeformers 0\n                -showExpressions 0\n                -showConstraints 0\n                -showConnectionFromSelected 0\n                -showConnectionToSelected 0\n                -showConstraintLabels 0\n                -showUnderworld 0\n                -showInvisible 0\n                -transitionFrames 1\n                -opaqueContainers 0\n                -freeform 0\n                -imagePosition 0 0 \n                -imageScale 1\n                -imageEnabled 0\n                -graphType \"DAG\" \n                -heatMapDisplay 0\n                -updateSelection 1\n                -updateNodeAdded 1\n                -useDrawOverrideColor 0\n                -limitGraphTraversal -1\n                -range 0 0 \n                -iconSize \"smallIcons\" \n                -showCachedConnections 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperShadePanel\" (localizedPanelLabel(\"Hypershade\")) `;\n"
 		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypershade\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"visorPanel\" (localizedPanelLabel(\"Visor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Visor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"nodeEditorPanel\" (localizedPanelLabel(\"Node Editor\")) `;\n\tif ($nodeEditorPanelVisible || $nodeEditorWorkspaceControlOpen) {\n\t\tif (\"\" == $panelName) {\n\t\t\tif ($useSceneConfig) {\n\t\t\t\t$panelName = `scriptedPanel -unParent  -type \"nodeEditorPanel\" -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n"
-		+ "                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -connectNodeOnCreation 0\n                -connectOnDrop 0\n                -copyConnectionsOnPaste 0\n                -connectionStyle \"bezier\" \n                -defaultPinnedState 0\n                -additiveGraphingMode 0\n                -connectedGraphingMode 1\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit 0\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -crosshairOnEdgeDragging 0\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n"
-		+ "                -showUnitConversions 0\n                -editorMode \"default\" \n                -hasWatchpoint 0\n                $editorName;\n\t\t\t}\n\t\t} else {\n\t\t\t$label = `panel -q -label $panelName`;\n\t\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -connectNodeOnCreation 0\n                -connectOnDrop 0\n                -copyConnectionsOnPaste 0\n                -connectionStyle \"bezier\" \n                -defaultPinnedState 0\n                -additiveGraphingMode 0\n                -connectedGraphingMode 1\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit 0\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n"
+		+ "                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -connectNodeOnCreation 0\n                -connectOnDrop 0\n                -copyConnectionsOnPaste 0\n                -connectionStyle \"bezier\" \n                -defaultPinnedState 0\n                -additiveGraphingMode 0\n                -connectedGraphingMode 1\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -crosshairOnEdgeDragging 0\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n"
+		+ "                -showUnitConversions 0\n                -editorMode \"default\" \n                -hasWatchpoint 0\n                $editorName;\n\t\t\t}\n\t\t} else {\n\t\t\t$label = `panel -q -label $panelName`;\n\t\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -connectNodeOnCreation 0\n                -connectOnDrop 0\n                -copyConnectionsOnPaste 0\n                -connectionStyle \"bezier\" \n                -defaultPinnedState 0\n                -additiveGraphingMode 0\n                -connectedGraphingMode 1\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n"
 		+ "                -gridSnap 0\n                -gridVisibility 1\n                -crosshairOnEdgeDragging 0\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                -showUnitConversions 0\n                -editorMode \"default\" \n                -hasWatchpoint 0\n                $editorName;\n\t\t\tif (!$useSceneConfig) {\n\t\t\t\tpanel -e -l $label $panelName;\n\t\t\t}\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"createNodePanel\" (localizedPanelLabel(\"Create Node\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Create Node\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"polyTexturePlacementPanel\" (localizedPanelLabel(\"UV Editor\")) `;\n"
 		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"UV Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"renderWindowPanel\" (localizedPanelLabel(\"Render View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Render View\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"shapePanel\" (localizedPanelLabel(\"Shape Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tshapePanel -edit -l (localizedPanelLabel(\"Shape Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"posePanel\" (localizedPanelLabel(\"Pose Editor\")) `;\n\tif (\"\" != $panelName) {\n"
 		+ "\t\t$label = `panel -q -label $panelName`;\n\t\tposePanel -edit -l (localizedPanelLabel(\"Pose Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynRelEdPanel\" (localizedPanelLabel(\"Dynamic Relationships\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dynamic Relationships\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"relationshipPanel\" (localizedPanelLabel(\"Relationship Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"referenceEditorPanel\" (localizedPanelLabel(\"Reference Editor\")) `;\n"
@@ -22441,20 +22983,20 @@ createNode unitConversion -n "unitConversion55";
 createNode objectSet -n "Skin_Export_Jnts";
 	rename -uid "8D53058E-4B8A-5D0B-3F52-5394E476CF0A";
 	setAttr ".ihi" 0;
-	setAttr -s 64 ".dsm";
+	setAttr -s 66 ".dsm";
 createNode skinCluster -n "skinCluster2";
 	rename -uid "4431CF4E-467F-0981-D809-F6A4364F54ED";
 	setAttr -s 486 ".wl";
-	setAttr ".wl[0:138].w"
+	setAttr ".wl[0:134].w"
 		3 48 0.17457724299999999 50 0.65084551400000001 59 0.17457724299999999
-		6 4 0.126382197 8 0.18655936200000001 11 0.040479527000000001 
-		48 0.067887943000000006 50 0.51080302799999999 59 0.067887943000000006
-		6 4 0.14165839399999999 8 0.144938712 11 0.064047572999999997 
-		48 0.015946315999999999 50 0.42812297300000002 59 0.20528603200000001
+		6 4 0.076466041999999998 8 0.11287551799999999 11 0.024491655000000001 
+		48 0.041074790999999999 50 0.70401720300000004 59 0.041074790999999999
+		6 4 0.048435559000000003 8 0.049557159000000003 11 0.021899020000000002 
+		48 0.0054523330000000002 50 0.80446493299999999 59 0.070190996000000005
 		2 50 0.52102280400000001 59 0.47897719599999999
 		2 48 0.47897719599999999 50 0.52102280400000001
-		6 4 0.14165839399999999 8 0.144938712 11 0.064047572999999997 
-		48 0.20528603200000001 50 0.42812297300000002 59 0.015946315999999999
+		6 4 0.048435559000000003 8 0.049557159000000003 11 0.021899020000000002 
+		48 0.070190996000000005 50 0.80446493299999999 59 0.0054523330000000002
 		4 4 0.31614294800000003 8 0.26608258499999998 11 0.148417093 
 		50 0.26935737399999998
 		4 4 0.30164040199999992 8 0.24866450700000001 11 0.164286614 
@@ -22467,14 +23009,14 @@ createNode skinCluster -n "skinCluster2";
 		50 0.063057896000000002
 		4 4 0.41780133299999994 8 0.144364987 11 0.36990090799999997 
 		50 0.067932772000000002
-		6 4 0.133180452 8 0.14909850899999999 11 0.073779392999999999 
-		48 0.0012694659999999999 50 0.40847434799999999 59 0.23419783199999999
-		6 4 0.028234498 8 0.042455605 11 0.011875360999999999 48 
-		2.7555999999999998e-05 50 0.44193667399999997 59 0.47547030600000001
+		6 4 0.081323257999999995 8 0.091043214999999997 11 0.045051511000000002 
+		48 0.000775167 50 0.63879989599999998 59 0.14300695299999999
+		6 4 0.027108831 8 0.041195396000000002 11 0.011251763 48 
+		1.6826000000000001e-05 50 0.44693636399999997 59 0.47349082000000015
 		5 4 0.026893200999999999 8 0.041617212000000001 11 0.010902032000000001 
 		48 0.48089420900000002 50 0.43969334599999998
-		6 4 0.133180452 8 0.14909850899999999 11 0.073779392999999999 
-		48 0.23419783199999999 50 0.40847434799999999 59 0.0012694659999999999
+		6 4 0.081323257999999995 8 0.091043214999999997 11 0.045051511000000002 
+		48 0.14300695299999999 50 0.63879989599999998 59 0.000775167
 		5 4 0.27125914499999998 8 0.27315445400000005 11 0.18857342299999999 
 		31 6.8e-08 50 0.26701290999999999
 		4 4 0.27125850400000001 8 0.273155174 11 0.188572348 50 
@@ -22507,10 +23049,10 @@ createNode skinCluster -n "skinCluster2";
 		50 0.25690260599999998
 		4 4 0.36281418100000018 8 0.21099859100000001 11 0.169284622 
 		50 0.25690260599999998
-		5 3 0.082838266999999993 4 0.352404995 8 0.096680456999999997 
-		11 0.41296395600000002 50 0.055112324999999997
-		5 4 0.352404995 8 0.096680456999999997 11 0.41296395600000002 
-		31 0.082838266999999993 50 0.055112324999999997
+		5 3 0.087591179000000005 4 0.35057876300000002 8 0.096179440000000005 
+		11 0.41082389599999991 50 0.054826722000000001
+		5 4 0.35057876300000002 8 0.096179440000000005 11 0.41082389599999991 
+		31 0.087591179000000005 50 0.054826722000000001
 		1 50 1
 		3 4 0.17112306999999999 8 0.21751572199999999 50 0.61136120800000004
 		4 4 0.30921194000000002 8 0.19917032600000001 11 0.182633884 
@@ -22519,37 +23061,39 @@ createNode skinCluster -n "skinCluster2";
 		50 0.10400374499999999
 		7 4 0.102934382 8 0.010083304 11 0.30382890099999998 31 
 		0.37135530800000005 36 0.206196091 46 7.0800000000000004e-07 50 0.0056013060000000003
-		6 4 6.7000000000000004e-08 8 6e-09 11 0.28646264100000002 31 
-		0.71353644699999996 36 8.3600000000000002e-07 50 3e-09
-		5 3 0.71353625300000001 4 1.8099999999999999e-07 8 3.4e-08 
-		11 0.286463517 50 1.4999999999999999e-08
+		7 4 6.7000000000000004e-08 8 6e-09 11 0.28646264100000002 31 
+		0.50482464599999999 36 0.20337578100000001 46 0.0053368560000000001 50 
+		3e-09
+		7 0 0.20337513700000001 3 0.50482429500000003 4 1.8099999999999999e-07 
+		8 3.4e-08 11 0.286463517 30 0.0053368210000000003 50 1.4999999999999999e-08
 		6 0 0.20619470100000001 3 0.37135504200000002 4 0.10293574799999999 
 		8 0.010083440000000001 11 0.30382968799999999 50 0.0056013809999999999
-		3 11 0.30296905400000002 31 0.53315317699999998 36 0.16387776900000001
-		3 0 0.16387776900000001 3 0.53315317699999998 11 0.30296905400000002
+		3 11 0.043248583 31 0.73181120600000005 36 0.224940211
+		3 0 0.224940211 3 0.73181120600000005 11 0.043248583
 		2 11 0.73795869300000005 31 0.262041307
 		3 11 0.012877395 31 0.62295041699999998 36 0.36417218800000001
 		3 0 0.36417218800000001 3 0.62295041699999998 11 0.012877395
 		2 3 0.262041307 11 0.73795869300000005
 		2 11 0.83123267300000003 31 0.16876732699999999
-		2 11 0.20001992499999999 31 0.79998007500000001
-		2 3 0.79998007500000001 11 0.20001992499999999
+		3 11 0.20001992499999999 31 0.48460955799999988 36 0.31537051700000002
+		3 0 0.31537051700000002 3 0.48460955799999988 11 0.20001992499999999
 		2 3 0.16876732699999999 11 0.83123267300000003
 		2 11 0.82893370799999999 31 0.17106629200000001
-		3 11 0.232676195 31 0.53773630100000003 36 0.229587504
-		3 0 0.229587504 3 0.53773630100000003 11 0.232676195
+		3 11 0.232676195 31 0.36538238099999998 36 0.40194142399999994
+		3 0 0.40194142399999994 3 0.36538238099999998 11 0.232676195
 		2 3 0.17106629200000001 11 0.82893370799999999
-		2 11 0.78583234599999996 31 0.21416765400000001
-		3 11 0.299395409 31 0.53311701700000003 36 0.167487574
-		3 0 0.167487574 3 0.53311701700000003 11 0.299395409
-		2 3 0.21416765400000001 11 0.78583234599999996
+		2 11 0.69997860000000001 31 0.30002139999999999
+		2 31 0.62603206900000008 36 0.37396793099999998
+		2 0 0.37396793099999998 3 0.62603206900000008
+		2 3 0.30002139999999999 11 0.69997860000000001
 		1 11 1
 		1 11 1
 		1 11 1
 		4 4 0.196665636 8 0.038146413999999997 11 0.7418147060000001 
 		50 0.023373244000000001
 		1 11 1
-		3 11 0.16843697999999999 31 0.61707678200000005 36 0.214486238
+		4 11 0.16843697999999999 31 0.61707669499999995 36 0.21448632300000001 
+		46 2.0000000000000001e-09
 		5 4 0.074283264000000002 8 0.028584674000000001 11 0.59130175099999993 
 		31 0.29326304800000003 50 0.012567263
 		5 4 0.152038372 8 0.051249485999999997 11 0.54331246300000013 
@@ -22562,16 +23106,16 @@ createNode skinCluster -n "skinCluster2";
 		11 0.59130390700000002 50 0.012567415
 		5 0 0.214486382 3 0.61707630499999999 4 5.0000000000000001e-09 
 		8 1.0000000000000001e-09 11 0.16843730700000001
-		2 31 0.44786421700000001 36 0.55213578299999999
-		2 31 0.45376971399999999 36 0.54623028600000001
-		2 0 0.54623028600000001 3 0.45376971399999999
-		2 0 0.55213578299999999 3 0.44786421700000001
-		2 31 0.39846358399999998 36 0.60153641600000007
-		2 0 0.60153641600000007 3 0.39846358399999998
+		3 31 0.48798803799999996 36 0.41112191100000001 46 0.10089005099999999
+		3 31 0.47980298999999998 36 0.43998149199999997 46 0.080215518
+		3 0 0.43998149199999997 3 0.47980298999999998 30 0.080215518
+		3 0 0.41112191100000001 3 0.48798803799999996 30 0.10089005099999999
+		3 31 0.47276528499999998 36 0.33717480900000002 46 0.190059906
+		3 0 0.33717480900000002 3 0.47276528499999998 30 0.190059906
 		4 11 0.092255118999999997 31 0.34659961099999997 36 0.35249128699999993 
 		46 0.20865398299999999
-		3 31 0.39202639799999994 36 0.347223748 46 0.260749854
-		3 0 0.347223748 3 0.39202639799999994 30 0.260749854
+		3 31 0.33250474000000002 36 0.42771636399999996 46 0.23977889599999999
+		3 0 0.42771636399999996 3 0.33250474000000002 30 0.23977889599999999
 		4 0 0.35249128699999993 3 0.34659961099999997 11 0.092255118999999997 
 		30 0.20865398299999999
 		7 4 0.0078905759999999998 8 0.00051873000000000002 11 0.18287147100000001 
@@ -22580,8 +23124,8 @@ createNode skinCluster -n "skinCluster2";
 		7 0 0.45377987399999992 3 0.310055584 4 0.0078905759999999998 
 		8 0.00051873000000000002 11 0.18287147100000001 30 0.044596755000000002 
 		50 0.00028700999999999998
-		2 31 0.21189788700000001 36 0.78810211299999999
-		2 0 0.78810211299999999 3 0.21189788700000001
+		3 31 0.26262102999999998 36 0.68672250999999995 46 0.05065646
+		3 0 0.68672250999999995 3 0.26262102999999998 30 0.05065646
 		2 31 0.420892924 36 0.579107076
 		2 0 0.579107076 3 0.420892924
 		4 31 0.0092190199999999996 32 0.188619442 36 0.024669933000000002 
@@ -22658,13 +23202,14 @@ createNode skinCluster -n "skinCluster2";
 		3 20 0.65090674100000001 24 0.080577488000000003 28 0.26851577100000001
 		3 32 0.63820392699999995 38 0.078975809999999994 40 0.28282026300000002
 		3 20 0.63820392699999995 24 0.078975809999999994 28 0.28282026300000002
-		3 32 0.62149993299999995 38 0.061062386000000003 40 0.31743768100000003
+		1 32 0.62149993299999995;
+	setAttr ".wl[134:244].w"
+		2 38 0.061062386000000003 40 0.31743768100000003
 		3 20 0.62150030000000001 24 0.061062198999999998 28 0.31743750100000001
 		3 32 0.61283772000000003 38 0.060485090999999998 40 0.32667718899999998
 		3 20 0.61283772000000003 24 0.060485090999999998 28 0.32667718899999998
-		1 32 0.056492195000000002;
-	setAttr ".wl[138:246].w"
-		3 33 0.27959590400000001 38 0.38103283999999993 40 0.28287906099999999
+		4 32 0.056492195000000002 33 0.27959590400000001 38 0.38103283999999993 
+		40 0.28287906099999999
 		4 32 0.061338644999999997 33 0.26276516999999999 38 0.40964533300000006 
 		40 0.26625085199999998
 		4 20 0.061338644999999997 23 0.40964533300000006 24 0.26276516999999999 
@@ -22867,16 +23412,16 @@ createNode skinCluster -n "skinCluster2";
 		9 32 4.0000000000000002e-09 33 1.04e-07 35 6.7309999999999996e-06 
 		37 2.0154999999999999e-05 38 0.0047197020000000001 39 0.79095665900000001 
 		40 3.5000000000000002e-08 43 0.016589829 45 0.18770678099999999
-		8 33 2.0000000000000001e-09 35 1.7599999999999999e-07 37 7.0999999999999998e-07 
+		7 33 2.0000000000000001e-09 35 1.7599999999999999e-07 37 7.0999999999999998e-07 
 		38 0.00041942900000000003 39 0.026735186000000001 41 0.90776821299999999 
-		43 0.00043318799999999999 45 0.064643095999999997
+		43 0.00043318799999999999;
+	setAttr ".wl[244:345].w"
+		1 45 0.064643095999999997
 		9 33 1.3000000000000001e-08 35 8.7700000000000003e-07 37 3.5939999999999998e-06 
 		38 0.0017603339999999999 39 0.124692621 40 4.0000000000000002e-09 41 
 		0.64086264500000001 43 0.0021967710000000001 45 0.230483141
-		2 35 2.0999999999999999e-08 37 5.7299999999999996e-07;
-	setAttr ".wl[246:346].w"
-		4 38 0.036557526999999999 39 0.40501768100000002 43 7.9776000000000003e-05 
-		45 0.55834442200000001
+		6 35 2.0999999999999999e-08 37 5.7299999999999996e-07 38 0.036557526999999999 
+		39 0.40501768100000002 43 7.9776000000000003e-05 45 0.55834442200000001
 		6 35 2.6000000000000001e-08 37 7.1999999999999999e-07 38 0.061135242999999999 
 		39 0.71453557499999998 43 9.7670999999999994e-05 45 0.224230765
 		7 35 4.0000000000000002e-09 37 1.3300000000000001e-07 38 0.00854479 
@@ -23073,14 +23618,14 @@ createNode skinCluster -n "skinCluster2";
 		9 17 5.7244000000000003e-05 18 0.41669051499999998 20 1.0000000000000001e-09 
 		22 2.1100000000000001e-06 23 0.0053579830000000002 24 3.2000000000000002e-08 
 		25 0.019937584000000001 26 0.55795452000000001 28 1.0999999999999999e-08
-		9 17 0.000118039 18 0.54818398800000001 20 3e-09 22 4.352e-06 
-		23 0.01498188 24 6.7000000000000004e-08 25 0.052482003999999999 26 
-		0.38422964500000001 28 2.1999999999999998e-08
-		8 17 0.00037674799999999999 18 0.469409627 20 8.9999999999999995e-09 
+		5 17 0.000118039 18 0.54818398800000001 20 3e-09 22 4.352e-06 
+		23 0.01498188;
+	setAttr ".wl[345:444].w"
+		4 24 6.7000000000000004e-08 25 0.052482003999999999 26 0.38422964500000001 
+		28 2.1999999999999998e-08
+		9 17 0.00037674799999999999 18 0.469409627 20 8.9999999999999995e-09 
 		22 1.3891e-05 23 0.010578087 24 2.1500000000000001e-07 25 0.059863917000000003 
-		26 0.45975743299999999;
-	setAttr ".wl[346:448].w"
-		1 28 7.3000000000000005e-08
+		26 0.45975743299999999 28 7.3000000000000005e-08
 		9 17 0.000134439 18 0.29331485499999999 20 3e-09 22 4.9570000000000001e-06 
 		23 0.003165185 24 7.6000000000000006e-08 25 0.019600128000000001 26 
 		0.68378033100000002 28 2.6000000000000001e-08
@@ -23245,35 +23790,37 @@ createNode skinCluster -n "skinCluster2";
 		11 0.42274598600000002 50 0.0035910849999999999
 		5 3 0.28429903299999998 4 0.15224606399999999 8 0.058493472999999997 
 		11 0.47819170199999994 50 0.026769728
-		5 3 0.49513899500000003 4 0.18875001699999999 8 0.015486075 
-		11 0.29190722499999999 50 0.0087176879999999995
-		2 3 0.429942037 11 0.570057963
+		5 3 0.64638927800000001 4 0.13220278299999999 8 0.010846633 
+		11 0.20445533199999999 50 0.0061059740000000001
+		3 0 0.0017506310000000001 3 0.76309511500000005 11 0.23515425400000001
 		2 3 0.42376483700000001 11 0.57623516299999999
 		2 3 0.55672777699999998 11 0.44327222300000002
 		3 11 0.49335711900000001 31 0.50664217499999997 36 7.06e-07
-		6 4 0.029061229000000001 8 0.0083215839999999999 11 0.42274244999999999 
-		31 0.53628161299999988 36 2.1459999999999999e-06 50 0.0035909779999999999
-		5 4 0.15211649699999999 8 0.058443281 11 0.47816905200000004 
-		31 0.28452444399999999 50 0.026746725999999998
-		6 4 0.18874945300000001 8 0.015485687 11 0.29190699199999998 
-		31 0.49513958599999991 36 8.1500000000000003e-07 50 0.0087174669999999996
-		3 11 0.57005666599999993 31 0.42994284500000002 36 4.89e-07
-		3 11 0.57623286399999996 31 0.423766482 36 6.5400000000000001e-07
-		3 11 0.44327024999999998 31 0.55672962300000006 36 1.2700000000000001e-07
+		7 4 0.029061229000000001 8 0.0083215839999999999 11 0.42274244999999999 
+		31 0.53628157399999998 36 2.1840000000000002e-06 46 1.0000000000000001e-09 
+		50 0.0035909779999999999
+		7 4 0.15211649699999999 8 0.058443281 11 0.47816905199999993 
+		31 0.28448532700000001 36 3.8117000000000001e-05 46 1e-06 50 0.026746725999999998
+		6 4 0.13220193299999999 8 0.010846323999999999 11 0.204454465 
+		31 0.64639041699999999 36 1.0640000000000001e-06 50 0.0061057969999999996
+		3 11 0.23515307499999999 31 0.76309489600000002 36 0.001752029
+		3 11 0.57623265600000007 31 0.42376621199999998 36 1.1319999999999999e-06
+		3 11 0.44327024999999998 31 0.55672840800000001 36 1.342e-06
 		3 20 0.29309455000000001 24 0.26889125400000002 28 0.43801419599999997
 		3 20 0.27994312700000001 24 0.26313432199999998 28 0.45692255099999995
 		3 20 0.289696501 24 0.30116687199999997 28 0.40913662700000009
 		3 20 0.29055945700000002 24 0.31106424199999999 28 0.39837630099999988
 		3 20 0.29494747999999998 24 0.35302752200000015 28 0.35202499799999998
 		3 20 0.301484162 24 0.25283232300000003 28 0.44568351499999997
-		3 20 0.29971671700000002 24 0.18691360100000001 28 0.51336968199999999
+		2 20 0.29971671700000002 24 0.18691360100000001;
+	setAttr ".wl[444:485].w"
+		1 28 0.51336968199999999
 		3 20 0.2965718 24 0.244292915 28 0.45913528500000006
 		4 32 0.29309436999999999 33 0.26889124399999997 38 2.9499999999999998e-07 
 		40 0.43801409100000005
 		4 32 0.27994258 33 0.26313441399999998 38 9.5600000000000004e-07 
 		40 0.45692204999999986
-		4 32 0.289696328 33 0.30116697999999997 38 1.43e-07 40 0.40913654900000007;
-	setAttr ".wl[449:485].w"
+		4 32 0.289696328 33 0.30116697999999997 38 1.43e-07 40 0.40913654900000007
 		4 32 0.29055903 33 0.31106445799999999 38 3.5199999999999998e-07 
 		40 0.39837615999999992
 		4 32 0.29494711299999998 33 0.35302792799999988 38 8.0999999999999997e-08 
@@ -23517,7 +24064,7 @@ createNode skinCluster -n "skinCluster2";
 	setAttr -s 42 ".ifcl";
 createNode dagPose -n "bindPose2";
 	rename -uid "7D061F16-43ED-3126-7D34-9F8525DA8874";
-	setAttr -s 78 ".wm";
+	setAttr -s 80 ".wm";
 	setAttr ".wm[0]" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
 	setAttr ".wm[1]" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
 	setAttr ".wm[2]" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
@@ -23537,7 +24084,7 @@ createNode dagPose -n "bindPose2";
 	setAttr ".wm[8]" -type "matrix" 0.76118446632950609 -0.64751719757684167 -0.036327497311170687 0
 		 0.64678103908762374 0.76205083743949198 -0.030867598457008816 0 0.047670700596870008 -3.3573031167279895e-16 0.99886310588819227 0
 		 49.146363495004138 248.62052780593029 -13.940468029281039 1;
-	setAttr ".wm[9]" -type "matrix" -2.068344122689579e-16 0.9732911129215378 0.22957440952325509 0
+	setAttr ".wm[9]" -type "matrix" -2.0683441226895792e-16 0.9732911129215378 0.22957440952325509 0
 		 -9.800418556718616e-17 0.22957440952325572 -0.9732911129215398 0 -1.0000000000000016 -2.2204460492503165e-16 0 0
 		 -1.8052902565018964e-14 267.67678417792411 3.9631074371482562 1;
 	setAttr ".wm[10]" -type "matrix" 0.99999999999999978 2.2204460492503126e-16 0 0 -2.2380934834012124e-16 1 -1.9428902930940239e-15 0
@@ -23698,7 +24245,7 @@ createNode dagPose -n "bindPose2";
 	setAttr ".wm[65]" -type "matrix" 2.0005974189079379e-15 0.96886886507025605 0.2475744782837524 0
 		 -3.7710901312514629e-16 -0.24757447828375254 0.9688688650702566 0 1.0000000000000009 -1.9984014443252834e-15 0 0
 		 -41.739007199999975 45.475367520000091 7.3664826000000518 1;
-	setAttr -s 79 ".xm";
+	setAttr -s 81 ".xm";
 	setAttr ".xm[0]" -type "matrix" "xform" 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 		 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 1 1 1 yes;
 	setAttr ".xm[1]" -type "matrix" "xform" 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
@@ -23730,8 +24277,8 @@ createNode dagPose -n "bindPose2";
 		 3.0814879110195817e-32 0.042895685578770597 0 33.833003516506807 -4.2632564145606011e-14
 		 1.8932661725304283e-29 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 1 1 1 yes;
 	setAttr ".xm[10]" -type "matrix" "xform" 0.99999999999999822 1.0000000000000016 1.0000000000000004 0
-		 0 0 0 20.888957463541374 -1.4210854715202004e-14 9.2765606145756e-15 0 0 0 0
-		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0.4388694539600424 0.55443088151798892 -0.4388694539600424 0.55443088151798892 1.0000000000000011
+		 0 0 0 20.888957463541374 -1.4210854715202004e-14 9.2765606145755985e-15 0 0
+		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0.4388694539600424 0.55443088151798892 -0.4388694539600424 0.55443088151798892 1.0000000000000011
 		 0.99999999999999956 0.99999999999999911 no;
 	setAttr ".xm[11]" -type "matrix" "xform" 1.0000000000000002 1 0.99999999999999911 0
 		 0 0 0 4.2158167859918582e-14 47.52261832352076 2.6690929430721102 0 0 0 0 0
@@ -23972,9 +24519,15 @@ createNode dagPose -n "bindPose2";
 	setAttr ".xm[80]" -type "matrix" "xform" 1 1 1 0 0 5.5511151231257815e-17 0 -7.6830223177425134
 		 30.567196586824537 6.5725203057809267e-14 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
 		0 0 0.13022170675119354 0.99148490008209711 0.99999999999999978 1 1.0000000000000009 yes;
-	setAttr -s 66 ".m";
-	setAttr -s 66 ".p";
-	setAttr -s 79 ".g";
+	setAttr ".xm[81]" -type "matrix" "xform" 1.0000000000000002 1 1.0000000000000002 2.3665827156630354e-30
+		 -0 0 0 12.8324594497681 10.825285941389495 29.488450020561853 0 0 0 0 0 0 0
+		 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 1 1 1 yes;
+	setAttr ".xm[82]" -type "matrix" "xform" 1.0000000000000002 1 1.0000000000000002 2.3665827156630354e-30
+		 -0 0 0 -12.832445759999976 10.825393654670563 29.488540887602863 0 0 0 0 0 0 0
+		 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 1 1 1 yes;
+	setAttr -s 68 ".m";
+	setAttr -s 68 ".p";
+	setAttr -s 14 ".g";
 	setAttr ".g[0]" yes;
 	setAttr ".g[1]" yes;
 	setAttr ".g[3]" yes;
@@ -23987,35 +24540,37 @@ createNode dagPose -n "bindPose2";
 	setAttr ".g[60]" yes;
 	setAttr ".g[61]" yes;
 	setAttr ".g[62]" yes;
+	setAttr ".g[81]" yes;
+	setAttr ".g[82]" yes;
 	setAttr ".bp" yes;
 createNode ngst2SkinLayerData -n "ngSkinToolsData_skinCluster2";
 	rename -uid "5AB0CFCB-432B-5CA5-C63D-76B37EFCED2F";
-	setAttr ".ld" -type "ngst2SkinLayerDataStorage" 16 25077 {
-"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"};
+	setAttr ".ld" -type "ngst2SkinLayerDataStorage" 16 25230 {
+"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"};
 	setAttr ".imo" -type "string" "{}";
 createNode groupId -n "groupId139";
 	rename -uid "37A151D9-44FD-A5A2-7679-77B27E7072B2";
@@ -24027,7 +24582,12 @@ createNode groupParts -n "groupParts4";
 createNode skinCluster -n "skinCluster3";
 	rename -uid "DEED001B-4819-EF38-651F-83BFCC62CBD7";
 	setAttr -s 376 ".wl";
-	setAttr ".wl[0:320].w"
+	setAttr ".wl[0:313].w"
+		1 8 1
+		1 8 1
+		1 8 1
+		2 8 0.88226053500000001 12 0.117739465
+		2 8 0.88226053500000001 11 0.117739465
 		1 8 1
 		1 8 1
 		1 8 1
@@ -24036,21 +24596,16 @@ createNode skinCluster -n "skinCluster3";
 		1 8 1
 		1 8 1
 		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		2 0 0.019569739999999999 8 0.98043026
-		2 1 0.019569739999999999 8 0.98043026
+		3 0 0.14698081900000001 8 0.85143927099999994 12 0.0015799099999999999
+		3 1 0.14698081900000001 8 0.85143927099999994 11 0.0015799099999999999
 		1 8 1
 		1 8 1
 		2 0 0.91927304899999995 8 0.080726951000000005
 		2 1 0.91927304899999995 8 0.080726951000000005
 		1 8 1
 		1 8 1
-		1 0 1
-		1 1 1
+		2 0 0.92530982400000006 8 0.074690175999999997
+		2 1 0.92530982400000006 8 0.074690175999999997
 		1 8 1
 		1 8 1
 		1 8 1
@@ -24096,7 +24651,7 @@ createNode skinCluster -n "skinCluster3";
 		2 6 0.063974771 8 0.93602522899999996
 		1 8 1
 		1 8 1
-		2 6 0.83930459899999998 8 0.16069540099999999
+		2 6 0.91263506699999997 8 0.087364933000000006
 		2 6 0.97417508500000005 8 0.025824915
 		1 6 1
 		2 6 0.81928016100000001 8 0.18071983899999999
@@ -24190,22 +24745,22 @@ createNode skinCluster -n "skinCluster3";
 		1 8 1
 		1 8 1
 		1 8 1
-		1 8 1
-		1 8 1
-		2 1 0.00059879099999999999 8 0.99940120899999996
+		1 11 1
+		3 1 0.0057312109999999999 8 0.20280505700000001 11 0.79146373199999998
+		3 1 0.15028376099999999 8 0.83455283300000005 11 0.015163406000000001
 		2 1 0.80404663300000001 8 0.19595336699999999
+		2 1 0.84585650200000007 8 0.15414349799999999
 		1 1 1
-		1 1 1
-		1 8 1
-		1 8 1
-		1 8 1
-		1 8 1
-		2 0 0.00059879099999999999 8 0.99940120899999996
+		2 1 0.22485091400000001 8 0.77514908599999999
+		1 11 1
+		1 12 1
+		3 0 0.0057312109999999999 8 0.20280505700000001 12 0.79146373199999998
+		3 0 0.15028376099999999 8 0.83455283300000005 12 0.015163406000000001
 		2 0 0.80404663300000001 8 0.19595336699999999
+		2 0 0.84585650200000007 8 0.15414349799999999
 		1 0 1
-		1 0 1
-		1 8 1
-		1 8 1
+		2 0 0.22485091400000001 8 0.77514908599999999
+		1 12 1
 		1 8 1
 		1 8 1
 		1 8 1
@@ -24235,7 +24790,7 @@ createNode skinCluster -n "skinCluster3";
 		1 8 1
 		2 2 0.022934084 8 0.97706591600000003
 		1 10 1
-		1 8 0.544393338
+		2 8 0.54439333899999998 10 0.45560666100000002
 		1 8 1
 		1 8 1
 		2 2 0.057735033999999998 8 0.94226496599999998
@@ -24248,10 +24803,8 @@ createNode skinCluster -n "skinCluster3";
 		2 2 0.066571929000000002 8 0.93342807100000003
 		2 2 0.079407846000000004 8 0.92059215400000005
 		2 2 0.20056037400000001 8 0.79943962599999996
-		4 2 0.059218732000000003 6 0.0022787649999999999 8 0.76071755799999996 
-		10 0.054960597
-		4 2 0.017829610999999999 6 0.003586086 8 0.90807011000000004 
-		10 0.036287666000000003
+		3 2 0.060205676999999999 6 0.0022057520000000001 8 0.76623361499999998
+		3 2 0.017829610999999999 6 0.003586086 8 0.90807011000000004
 		3 2 0.017829610999999999 6 0.003586086 8 0.90807011000000004
 		3 2 0.055024371000000002 6 0.0023635639999999999 8 0.775977217
 		2 2 0.172212908 8 0.827787092
@@ -24297,7 +24850,7 @@ createNode skinCluster -n "skinCluster3";
 		3 2 0.014649704 6 2.3408e-05 8 0.032470200999999997
 		2 2 0.35261588700000002 8 0.121836915
 		2 2 0.41100036600000001 8 0.58899963399999999
-		2 2 0.45469497199999998 8 0.54530502800000002
+		2 2 0.46372238999999998 8 0.53627761000000007
 		2 2 0.49318568499999998 8 0.50681431500000007
 		2 2 0.61433365400000006 8 0.38566634599999999
 		2 2 0.46431465 8 0.53568535000000006
@@ -24309,12 +24862,12 @@ createNode skinCluster -n "skinCluster3";
 		2 2 0.80015756699999996 8 0.188770733
 		2 2 0.85767328300000001 8 0.14232671699999999
 		2 2 0.371017494 8 0.12388080999999999
-		2 2 0.91552358200000006 8 0.084476417999999998
-		2 2 0.91206797400000006 8 0.087932025999999996
-		2 2 0.81742893500000002 8 0.182571065
-		2 2 0.90606198100000002 8 0.093938018999999998
-		2 2 0.78003082700000004 8 0.16937140000000001
-		2 2 0.88570312299999998 8 0.11429687700000001
+		2 2 0.81790171499999997 8 0.182098285
+		2 2 0.85633823200000003 8 0.143661768
+		2 2 0.80794692899999998 8 0.19064599199999999
+		2 2 0.87534458900000001 8 0.12465541099999999
+		2 2 0.79652763400000004 8 0.17746393799999999
+		2 2 0.82122303600000002 8 0.17877696400000001
 		2 2 0.65345909600000007 8 0.34654090399999998
 		2 2 0.82607902899999996 8 0.17392097100000001
 		2 2 0.50476041100000002 8 0.49523958899999998
@@ -24324,52 +24877,55 @@ createNode skinCluster -n "skinCluster3";
 		2 2 0.31698722099999999 8 0.68301277900000001
 		2 2 0.12574542499999999 8 0.87425457500000003
 		2 2 0.31910753200000003 8 0.68089246800000003
-		2 2 0.148676001 8 0.83281734600000001
+		4 2 0.15974268799999999 6 0.000470211 8 0.76825275500000001 
+		10 0.0057201750000000001
 		2 2 0.52550365399999999 8 0.47449634600000001
 		2 2 0.50601335700000005 8 0.493986643
 		2 2 0.42270611000000002 8 0.57729388999999998
-		2 2 0.61728019300000003 8 0.38271980700000002
+		2 2 0.62184857100000002 8 0.37702149899999998
 		2 2 0.687429858 8 0.312570142
 		2 2 0.39620266799999998 8 0.60379733200000008
-		3 2 0.54417950999999998 8 0.18169879899999999 10 0.146963494
-		2 2 0.33674864599999998 8 0.088565901000000002
-		2 2 0.76653053199999999 8 0.23346946800000001
-		2 2 0.76154593100000001 8 0.23845406899999999
-		2 2 0.78769993999999999 8 0.21230006000000001
-		2 2 0.79517902400000007 8 0.20482097599999999
+		2 2 0.529876609 8 0.17277013599999999
+		2 2 0.36871660699999997 8 0.100004817
+		2 2 0.79529044500000001 8 0.20470955499999999
+		2 2 0.79768708700000002 8 0.19891149899999999
+		2 2 0.795168561 8 0.202699977
+		2 2 0.79412242899999996 8 0.20587757100000001
 		2 2 0.80548393400000007 8 0.19451606599999999
-		2 2 0.79225927800000007 8 0.20774072199999999
+		2 2 0.79258232500000003 8 0.207417675
 		2 2 0.30210951800000002 8 0.69789048200000003
 		2 2 0.23898219600000001 8 0.76101780399999996
 		2 2 0.237385663 8 0.76261433700000003
-		2 2 0.31897935900000002 8 0.68102064100000004
-		2 2 0.077989790000000003 8 0.69192463999999998
-		2 2 0.16567385900000001 8 0.82938729899999997
-		4 2 0.018729261000000001 6 0.0016515880000000001 8 0.44938096399999999 
-		10 0.499796352
-		4 2 0.055705250999999997 6 0.0011457259999999999 8 0.43828697900000002 
-		10 0.42414675200000002
-		1 10 1
-		1 10 1
+		1 8 1
+		2 2 0.14757001 6 0.000517;
+	setAttr ".wl[313:375].w"
+		1 8 0.57529654200000002
+		4 2 0.17038193099999999 6 0.000214241 8 0.79981977900000001 
+		10 0.0046541029999999997
+		2 6 0.046330231999999999 8 0.95366976800000003
+		4 2 0.050682131999999998 6 0.000858397 8 0.40756545500000002 
+		10 0.16665566300000001
+		4 2 0.013340898 6 2.1195999999999998e-05 8 0.041939615999999999 
+		10 0.081914039999999994
+		2 6 0.00057201300000000001 8 0.99942798700000002
 		2 2 0.58218237299999998 8 0.41781762700000002
-		1 2 0.68569197999999998;
-	setAttr ".wl[320:375].w"
-		2 8 0.30858685800000002 10 0.00035348699999999999
-		3 2 0.647754673 8 0.25113087899999997 10 0.075033880999999997
-		3 2 0.53601848600000002 8 0.22331082399999999 10 0.20624625599999999
-		1 10 1
-		4 2 0.185784216 6 0.00029686399999999998 8 0.41177971299999999 
-		10 0.31782147999999999
-		3 2 0.529056466 8 0.34204121799999998 10 0.051067028
-		2 2 0.151146165 8 0.71445498699999999
-		2 2 0.528865472 8 0.42092053600000001
-		2 2 0.81367419600000002 8 0.18632580400000001
-		2 2 0.87498824500000005 8 0.125011755
-		2 2 0.80343084900000006 8 0.196569151
-		2 2 0.79115618500000007 8 0.20884381499999999
-		2 2 0.84026807300000006 8 0.159731927
-		2 2 0.85138340400000001 8 0.14861659599999999
-		2 2 0.86390193300000007 8 0.13609806699999999
+		2 2 0.69187841500000002 8 0.294260625
+		2 2 0.67143973000000001 8 0.25230555500000001
+		3 2 0.56528470099999995 6 1.1657e-05 8 0.345813272
+		3 2 0.20582195 6 6.1457000000000005e-05 8 0.143074013
+		3 2 0.165672495 6 0.00022822399999999999 8 0.41123849299999998
+		3 2 0.53042318700000002 6 1.7686e-05 8 0.40234174
+		4 2 0.17978150300000001 6 0.00039299300000000001 8 0.68193541599999996 
+		10 0.003245183
+		4 2 0.53807638199999996 6 7.8499999999999994e-06 8 0.430309514 
+		10 0.001668203
+		2 2 0.77921823099999998 8 0.20559586199999999
+		2 2 0.76636094300000002 8 0.23363905700000001
+		2 2 0.78493730799999994 8 0.199462903
+		2 2 0.77089165199999998 8 0.222439845
+		2 2 0.75861516500000004 8 0.24138483499999999
+		2 2 0.75380391899999999 8 0.24619608100000001
+		2 2 0.82669765699999997 8 0.17309284599999999
 		2 2 0.56300497599999999 8 0.43699502400000001
 		2 2 0.36597498099999998 8 0.63402501900000008
 		2 2 0.358514208 8 0.641485792
@@ -24388,13 +24944,13 @@ createNode skinCluster -n "skinCluster3";
 		2 2 0.92820252999999997 8 0.071797470000000002
 		2 2 0.92811435799999997 8 0.071885642
 		2 2 0.93377850200000001 8 0.066221498000000004
-		2 2 0.93203507699999999 8 0.067964922999999997
-		2 2 0.93551341200000004 8 0.064486587999999997
-		2 2 0.92822905099999997 8 0.071770949000000001
-		2 2 0.92808720200000006 8 0.071912798
+		2 2 0.88665713300000004 8 0.113342867
+		2 2 0.87833962300000001 8 0.121660377
+		2 2 0.91140639700000003 8 0.088593603000000007
+		2 2 0.916618602 8 0.083381397999999995
 		2 2 0.871164618 8 0.128835382
 		2 2 0.86904615900000004 8 0.13095384099999999
-		2 2 0.93829185299999995 8 0.061708146999999998
+		2 2 0.93221971400000003 8 0.067780285999999995
 		2 2 0.52479843700000006 8 0.47520156299999999
 		2 2 0.50476264800000004 8 0.49523735200000002
 		2 2 0.50275796100000003 8 0.49724203900000002
@@ -24409,9 +24965,9 @@ createNode skinCluster -n "skinCluster3";
 		2 2 0.59522212200000002 8 0.40477787799999998
 		2 2 0.57811303400000003 8 0.42188696599999997
 		2 2 0.72522380600000003 8 0.27477619399999997
-		2 2 0.798402783 8 0.201597217
+		2 2 0.79464978900000005 8 0.205350211
 		2 2 0.83363410999999998 8 0.16636588999999999;
-	setAttr -s 10 ".pm";
+	setAttr -s 12 ".pm";
 	setAttr ".pm[0]" -type "matrix" 1.0000000000000002 -2.2204460492503131e-16 -4.3757128336477964e-31 0
 		 2.2380934834012114e-16 1 1.9706458687096513e-15 0 -4.7902714775919934e-17 -9.4368957093138247e-16 0.99999999999999922 0
 		 12.832445759999938 -299.66412001286739 -38.24721840000057 1;
@@ -24442,9 +24998,14 @@ createNode skinCluster -n "skinCluster3";
 	setAttr ".pm[10]" -type "matrix" -2.1611404064570756e-16 -5.097575906348857e-17 -0.99999999999999845 0
 		 0.9732911129215408 0.22957440952325531 -2.2380934834012074e-16 0 0.22957440952325595 -0.9732911129215388 4.7902714775919866e-17 0
 		 -261.43726322555136 -57.594482422601118 4.1665820462433364e-14 1;
+	setAttr ".pm[11]" -type "matrix" 1.0000000000000002 4.1908235589866235e-31 -4.4408920985006227e-16 0
+		 2.2204460492503131e-16 1 1.9706458687096529e-15 0 -4.7902714775919934e-17 -9.4368957093138266e-16 0.99999999999999922 0
+		 -12.832459449768129 -298.83310677677446 -38.247127532959581 1;
+	setAttr ".pm[12]" -type "matrix" 1.0000000000000002 0 0 0 2.2204460492503131e-16 1 1.9706458687096529e-15 0
+		 -4.7902714775919928e-17 -9.4368957093138266e-16 0.999999999999999 0 12.832445759999942 -298.83321449005552 -38.247218400000584 1;
 	setAttr ".gm" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
-	setAttr -s 9 ".ma";
-	setAttr -s 10 ".dpf";
+	setAttr -s 11 ".ma";
+	setAttr -s 12 ".dpf";
 	setAttr ".dpf[0]" 4;
 	setAttr ".dpf[1]" 4;
 	setAttr ".dpf[2]" 4;
@@ -24455,11 +25016,13 @@ createNode skinCluster -n "skinCluster3";
 	setAttr ".dpf[7]" 4;
 	setAttr ".dpf[8]" 4;
 	setAttr ".dpf[10]" 4;
-	setAttr -s 9 ".lw";
+	setAttr ".dpf[11]" 4;
+	setAttr ".dpf[12]" 4;
+	setAttr -s 11 ".lw";
 	setAttr ".mmi" yes;
 	setAttr ".ucm" yes;
 	setAttr ".nw" 2;
-	setAttr -s 9 ".ifcl";
+	setAttr -s 11 ".ifcl";
 createNode groupId -n "groupId140";
 	rename -uid "2DAD2659-43B1-5C66-FEF8-9FB6BA66FE48";
 	setAttr ".ihi" 0;
@@ -24621,20 +25184,20 @@ createNode skinCluster -n "skinCluster4";
 		1 1 1;
 	setAttr -s 6 ".pm";
 	setAttr ".pm[0]" -type "matrix" -2.2191531956150695e-16 -7.5761151144567929e-18 -1 0
-		 0.99941775048500725 0.034119789206383595 -2.2380934834012114e-16 0 0.034119789206383595 -0.99941775048500725 4.7902714775919947e-17 -0
+		 0.99941775048500725 0.034119789206383595 -2.2380934834012114e-16 0 0.034119789206383595 -0.99941775048500725 4.7902714775919947e-17 0
 		 -140.63315687983837 -4.8011691465753517 3.1493352185326054e-14 1;
-	setAttr ".pm[1]" -type "matrix" 1 -0 0 -0 -0 1 -0 0 0 -0 1 -0 -0 -140.71508817167853 -0 1;
-	setAttr ".pm[2]" -type "matrix" 1.9820058827748514e-15 2.5546235207414669e-16 1 -0
-		 0.99179566167899469 0.12783335040092417 -2.0316791179003797e-15 0 -0.12783335040092417 0.99179566167899469 -1.2992768068763001e-16 -0
+	setAttr ".pm[1]" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 -140.71508817167853 0 1;
+	setAttr ".pm[2]" -type "matrix" 1.9820058827748514e-15 2.5546235207414669e-16 1 0
+		 0.99179566167899469 0.12783335040092417 -2.0316791179003797e-15 0 -0.12783335040092417 0.99179566167899469 -1.2992768068763001e-16 0
 		 -126.62199439675756 -23.912233189280208 41.739007200000252 1;
-	setAttr ".pm[3]" -type "matrix" 1.7050135953389463e-15 6.6752339801587374e-16 0.99999999999999956 -0
-		 -0.99179566167899447 -0.12783335040092353 1.633810424851658e-15 0 0.12783335040092345 -0.99179566167899447 5.1703140605547211e-16 -0
+	setAttr ".pm[3]" -type "matrix" 1.7050135953389463e-15 6.6752339801587374e-16 0.99999999999999956 0
+		 -0.99179566167899447 -0.12783335040092353 1.633810424851658e-15 0 0.12783335040092345 -0.99179566167899447 5.1703140605547211e-16 0
 		 126.62193622794886 23.912222471630294 -41.738869160878892 1;
-	setAttr ".pm[4]" -type "matrix" 1.7050135953389467e-15 6.6752339801587384e-16 0.99999999999999956 -0
-		 -0.99179566167899469 -0.12783335040092353 1.633810424851658e-15 0 0.12783335040092347 -0.99179566167899447 5.1703140605547211e-16 -0
+	setAttr ".pm[4]" -type "matrix" 1.7050135953389467e-15 6.6752339801587384e-16 0.99999999999999956 0
+		 -0.99179566167899469 -0.12783335040092353 1.633810424851658e-15 0 0.12783335040092347 -0.99179566167899447 5.1703140605547211e-16 0
 		 98.966807951706485 23.912222471630276 -41.738869160878842 1;
-	setAttr ".pm[5]" -type "matrix" 1.9820058827748514e-15 2.5546235207414669e-16 1 -0
-		 0.99179566167899469 0.12783335040092417 -2.0316791179003797e-15 0 -0.12783335040092417 0.99179566167899469 -1.2992768068763001e-16 -0
+	setAttr ".pm[5]" -type "matrix" 1.9820058827748514e-15 2.5546235207414669e-16 1 0
+		 0.99179566167899469 0.12783335040092417 -2.0316791179003797e-15 0 -0.12783335040092417 0.99179566167899469 -1.2992768068763001e-16 0
 		 -98.966911275752182 -23.91224463218753 41.73900720000016 1;
 	setAttr ".gm" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
 	setAttr -s 6 ".ma";
@@ -24867,53 +25430,53 @@ createNode skinCluster -n "skinCluster5";
 		5 8 2.7178999999999998e-05 9 0.137763417 10 0.15526487 14 
 		0.70672950600000006 15 0.000215028;
 	setAttr -s 16 ".pm";
-	setAttr ".pm[0]" -type "matrix" 1.7050135953389467e-15 6.6752339801587384e-16 0.99999999999999956 -0
-		 -0.99179566167899469 -0.12783335040092353 1.633810424851658e-15 0 0.12783335040092347 -0.99179566167899447 5.1703140605547211e-16 -0
+	setAttr ".pm[0]" -type "matrix" 1.7050135953389467e-15 6.6752339801587384e-16 0.99999999999999956 0
+		 -0.99179566167899469 -0.12783335040092353 1.633810424851658e-15 0 0.12783335040092347 -0.99179566167899447 5.1703140605547211e-16 0
 		 98.966807951706485 23.912222471630276 -41.738869160878842 1;
-	setAttr ".pm[1]" -type "matrix" 1.8310019893895842e-15 -9.5164090229161088e-18 0.99999999999999911 -0
-		 -0.96886886507025782 0.24757447828375301 1.6338104248516576e-15 0 -0.24757447828375329 -0.96886886507025716 5.1703140605547192e-16 -0
+	setAttr ".pm[1]" -type "matrix" 1.8310019893895842e-15 -9.5164090229161088e-18 0.99999999999999911 0
+		 -0.96886886507025782 0.24757447828375301 1.6338104248516576e-15 0 -0.24757447828375329 -0.96886886507025716 5.1703140605547192e-16 0
 		 45.883346167494047 -4.1213731417757558 -41.738869160878856 1;
-	setAttr ".pm[2]" -type "matrix" 1.4442412609550115e-15 2.3779701963708172e-15 -0.99999999999996869 -0
-		 -8.8817841970015639e-16 0.99999999999999978 2.5205166109193791e-15 0 1.0000000000000309 -2.1649348980190813e-15 1.3712990647495323e-15 -0
+	setAttr ".pm[2]" -type "matrix" 1.4442412609550115e-15 2.3779701963708172e-15 -0.99999999999996869 0
+		 -8.8817841970015639e-16 0.99999999999999978 2.5205166109193791e-15 0 1.0000000000000309 -2.1649348980190813e-15 1.3712990647495323e-15 0
 		 -36.477275169020977 -8.9071106213788482 41.738868914362548 1;
-	setAttr ".pm[3]" -type "matrix" 1.4442412609549827e-15 2.377970196370818e-15 -0.99999999999998834 -0
-		 -8.8817841970013864e-16 1.0000000000000002 2.520516610919428e-15 0 1.0000000000000109 -2.1649348980190825e-15 1.3712990647495591e-15 -0
+	setAttr ".pm[3]" -type "matrix" 1.4442412609549827e-15 2.377970196370818e-15 -0.99999999999998834 0
+		 -8.8817841970013864e-16 1.0000000000000002 2.520516610919428e-15 0 1.0000000000000109 -2.1649348980190825e-15 1.3712990647495591e-15 0
 		 -18.305099169020082 -8.9071106213788678 41.738869160878252 1;
-	setAttr ".pm[4]" -type "matrix" 3.3077776062301767e-16 2.762455637245584e-15 -0.99999999999999534 -0
-		 -0.4138029443011853 0.91036647746260557 2.5205166109194454e-15 0 0.91036647746260835 0.41380294430118325 1.3712990647495688e-15 -0
+	setAttr ".pm[4]" -type "matrix" 3.3077776062301767e-16 2.762455637245584e-15 -0.99999999999999534 0
+		 -0.4138029443011853 0.91036647746260557 2.5205166109194454e-15 0 0.91036647746260835 0.41380294430118325 1.3712990647495688e-15 0
 		 6.9828252273524463 -15.683438852620055 41.73886916087865 1;
-	setAttr ".pm[5]" -type "matrix" 1.8310019893895877e-15 -9.5164090229161103e-18 0.99999999999999767 -0
-		 -0.96886886507025971 0.24757447828375298 1.6338104248516554e-15 0 -0.24757447828375378 -0.96886886507025705 5.1703140605547113e-16 -0
+	setAttr ".pm[5]" -type "matrix" 1.8310019893895877e-15 -9.5164090229161103e-18 0.99999999999999767 0
+		 -0.96886886507025971 0.24757447828375298 1.6338104248516554e-15 0 -0.24757447828375378 -0.96886886507025705 5.1703140605547113e-16 0
 		 16.665664878001881 -4.121373141775778 -41.738869160878785 1;
-	setAttr ".pm[6]" -type "matrix" 1.8310019893895838e-15 -9.5164090229161041e-18 0.99999999999999911 -0
-		 -0.9688688650702576 0.24757447828375295 1.6338104248516576e-15 0 -0.24757447828375323 -0.96886886507025693 5.1703140605547192e-16 -0
+	setAttr ".pm[6]" -type "matrix" 1.8310019893895838e-15 -9.5164090229161041e-18 0.99999999999999911 0
+		 -0.9688688650702576 0.24757447828375295 1.6338104248516576e-15 0 -0.24757447828375323 -0.96886886507025693 5.1703140605547192e-16 0
 		 75.101027456986174 -4.1213731417757451 -41.738869160878828 1;
-	setAttr ".pm[7]" -type "matrix" 1.7050135953389463e-15 6.6752339801587374e-16 0.99999999999999956 -0
-		 -0.99179566167899447 -0.12783335040092353 1.633810424851658e-15 0 0.12783335040092345 -0.99179566167899447 5.1703140605547211e-16 -0
+	setAttr ".pm[7]" -type "matrix" 1.7050135953389463e-15 6.6752339801587374e-16 0.99999999999999956 0
+		 -0.99179566167899447 -0.12783335040092353 1.633810424851658e-15 0 0.12783335040092345 -0.99179566167899447 5.1703140605547211e-16 0
 		 126.62193622794886 23.912222471630294 -41.738869160878892 1;
-	setAttr ".pm[8]" -type "matrix" 1.9820058827748514e-15 2.5546235207414669e-16 1 -0
-		 0.99179566167899469 0.12783335040092417 -2.0316791179003797e-15 0 -0.12783335040092417 0.99179566167899469 -1.2992768068763001e-16 -0
+	setAttr ".pm[8]" -type "matrix" 1.9820058827748514e-15 2.5546235207414669e-16 1 0
+		 0.99179566167899469 0.12783335040092417 -2.0316791179003797e-15 0 -0.12783335040092417 0.99179566167899469 -1.2992768068763001e-16 0
 		 -126.62199439675756 -23.912233189280208 41.739007200000252 1;
-	setAttr ".pm[9]" -type "matrix" 1.9361889393181992e-15 -4.9475319498032938e-16 0.99999999999999933 -0
-		 0.9688688650702576 -0.24757447828375267 -2.0316791179003785e-15 0 0.24757447828375279 0.96886886507025716 -1.2992768068762991e-16 -0
+	setAttr ".pm[9]" -type "matrix" 1.9361889393181992e-15 -4.9475319498032938e-16 0.99999999999999933 0
+		 0.9688688650702576 -0.24757447828375267 -2.0316791179003785e-15 0 0.24757447828375279 0.96886886507025716 -1.2992768068762991e-16 0
 		 -75.101177847596517 4.121396762836862 41.739007200000081 1;
-	setAttr ".pm[10]" -type "matrix" 1.9361889393182031e-15 -4.9475319498032928e-16 0.99999999999999778 -0
-		 0.96886886507025949 -0.24757447828375262 -2.031679117900375e-15 0 0.24757447828375329 0.96886886507025693 -1.2992768068762973e-16 -0
+	setAttr ".pm[10]" -type "matrix" 1.9361889393182031e-15 -4.9475319498032928e-16 0.99999999999999778 0
+		 0.96886886507025949 -0.24757447828375262 -2.031679117900375e-15 0 0.24757447828375329 0.96886886507025693 -1.2992768068762973e-16 0
 		 -16.665663760876694 4.1213727417712702 41.739007199999939 1;
-	setAttr ".pm[11]" -type "matrix" 8.2694440155754342e-16 -1.6968130035118554e-15 -0.99999999999999634 -0
+	setAttr ".pm[11]" -type "matrix" 8.2694440155754342e-16 -1.6968130035118554e-15 -0.99999999999999634 0
 		 0.41380294430118564 -0.91036647746260557 1.9201913786328085e-15 0 -0.91036647746260879 -0.41380294430118308 7.9251435566009838e-17 0
 		 -6.9828246374617748 15.683437823056197 -41.739007199999854 1;
-	setAttr ".pm[12]" -type "matrix" 5.0676245121621992e-17 -1.8869137050577184e-15 -0.9999999999999899 -0
-		 1.1657341758564254e-15 -0.99999999999999933 1.9201913786327967e-15 0 -1.0000000000000102 2.4424906541753677e-15 7.9251435566009407e-17 -0
+	setAttr ".pm[12]" -type "matrix" 5.0676245121621992e-17 -1.8869137050577184e-15 -0.9999999999999899 0
+		 1.1657341758564254e-15 -0.99999999999999933 1.9201913786327967e-15 0 -1.0000000000000102 2.4424906541753677e-15 7.9251435566009407e-17 0
 		 18.305099280000224 8.9071094399999016 -41.739007199999598 1;
-	setAttr ".pm[13]" -type "matrix" 5.0676245121622892e-17 -1.8869137050577184e-15 -0.99999999999997191 -0
-		 1.1657341758564463e-15 -0.99999999999999933 1.920191378632762e-15 0 -1.000000000000028 2.4424906541753677e-15 7.9251435566007977e-17 -0
+	setAttr ".pm[13]" -type "matrix" 5.0676245121622892e-17 -1.8869137050577184e-15 -0.99999999999997191 0
+		 1.1657341758564463e-15 -0.99999999999999933 1.920191378632762e-15 0 -1.000000000000028 2.4424906541753677e-15 7.9251435566007977e-17 0
 		 36.477244800001017 8.9071094399998554 -41.739007199998845 1;
-	setAttr ".pm[14]" -type "matrix" 1.9361889393181996e-15 -4.9475319498032948e-16 0.99999999999999922 -0
-		 0.96886886507025793 -0.24757447828375273 -2.0316791179003781e-15 0 0.24757447828375287 0.96886886507025738 -1.2992768068762993e-16 -0
+	setAttr ".pm[14]" -type "matrix" 1.9361889393181996e-15 -4.9475319498032948e-16 0.99999999999999922 0
+		 0.96886886507025793 -0.24757447828375273 -2.0316791179003781e-15 0 0.24757447828375287 0.96886886507025738 -1.2992768068762993e-16 0
 		 -45.883420804236628 4.1213847523040688 41.739007200000039 1;
-	setAttr ".pm[15]" -type "matrix" 1.9820058827748514e-15 2.5546235207414669e-16 1 -0
-		 0.99179566167899469 0.12783335040092417 -2.0316791179003797e-15 0 -0.12783335040092417 0.99179566167899469 -1.2992768068763001e-16 -0
+	setAttr ".pm[15]" -type "matrix" 1.9820058827748514e-15 2.5546235207414669e-16 1 0
+		 0.99179566167899469 0.12783335040092417 -2.0316791179003797e-15 0 -0.12783335040092417 0.99179566167899469 -1.2992768068763001e-16 0
 		 -98.966911275752182 -23.91224463218753 41.73900720000016 1;
 	setAttr ".gm" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
 	setAttr -s 16 ".ma";
@@ -24978,17 +25541,17 @@ createNode skinCluster -n "skinCluster6";
 		1 1 1
 		1 1 1;
 	setAttr -s 4 ".pm";
-	setAttr ".pm[0]" -type "matrix" 3.3077776062301767e-16 2.762455637245584e-15 -0.99999999999999534 -0
-		 -0.4138029443011853 0.91036647746260557 2.5205166109194454e-15 0 0.91036647746260835 0.41380294430118325 1.3712990647495688e-15 -0
+	setAttr ".pm[0]" -type "matrix" 3.3077776062301767e-16 2.762455637245584e-15 -0.99999999999999534 0
+		 -0.4138029443011853 0.91036647746260557 2.5205166109194454e-15 0 0.91036647746260835 0.41380294430118325 1.3712990647495688e-15 0
 		 6.9828252273524463 -15.683438852620055 41.73886916087865 1;
-	setAttr ".pm[1]" -type "matrix" 1.4442412609549827e-15 2.377970196370818e-15 -0.99999999999998834 -0
-		 -8.8817841970013864e-16 1.0000000000000002 2.520516610919428e-15 0 1.0000000000000109 -2.1649348980190825e-15 1.3712990647495591e-15 -0
+	setAttr ".pm[1]" -type "matrix" 1.4442412609549827e-15 2.377970196370818e-15 -0.99999999999998834 0
+		 -8.8817841970013864e-16 1.0000000000000002 2.520516610919428e-15 0 1.0000000000000109 -2.1649348980190825e-15 1.3712990647495591e-15 0
 		 -18.305099169020082 -8.9071106213788678 41.738869160878252 1;
-	setAttr ".pm[2]" -type "matrix" 8.2694440155754342e-16 -1.6968130035118554e-15 -0.99999999999999634 -0
+	setAttr ".pm[2]" -type "matrix" 8.2694440155754342e-16 -1.6968130035118554e-15 -0.99999999999999634 0
 		 0.41380294430118564 -0.91036647746260557 1.9201913786328085e-15 0 -0.91036647746260879 -0.41380294430118308 7.9251435566009838e-17 0
 		 -6.9828246374617748 15.683437823056197 -41.739007199999854 1;
-	setAttr ".pm[3]" -type "matrix" 5.0676245121621992e-17 -1.8869137050577184e-15 -0.9999999999999899 -0
-		 1.1657341758564254e-15 -0.99999999999999933 1.9201913786327967e-15 0 -1.0000000000000102 2.4424906541753677e-15 7.9251435566009407e-17 -0
+	setAttr ".pm[3]" -type "matrix" 5.0676245121621992e-17 -1.8869137050577184e-15 -0.9999999999999899 0
+		 1.1657341758564254e-15 -0.99999999999999933 1.9201913786327967e-15 0 -1.0000000000000102 2.4424906541753677e-15 7.9251435566009407e-17 0
 		 18.305099280000224 8.9071094399999016 -41.739007199999598 1;
 	setAttr ".gm" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
 	setAttr -s 4 ".ma";
@@ -25001,12 +25564,12 @@ createNode skinCluster -n "skinCluster6";
 	setAttr -s 4 ".ifcl";
 createNode ngst2SkinLayerData -n "ngSkinToolsData_skinCluster3";
 	rename -uid "A15F6AFD-45A6-F3D9-0904-3BB83CA18386";
-	setAttr ".ld" -type "ngst2SkinLayerDataStorage" 16 4349 {
-"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"};
+	setAttr ".ld" -type "ngst2SkinLayerDataStorage" 16 4860 {
+"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"};
 	setAttr ".imo" -type "string" "{}";
 createNode skinCluster -n "skinCluster7";
 	rename -uid "94FAFECD-42FC-0B7B-3AA9-1E95BCAF9896";
@@ -25129,11 +25692,11 @@ createNode skinCluster -n "skinCluster7";
 		2 0 0.99412319500000002 1 0.0058768049999999997
 		2 0 0.99412314599999996 1 0.0058768539999999999;
 	setAttr -s 2 ".pm";
-	setAttr ".pm[0]" -type "matrix" 1.0000000000000002 -2.2204460492503131e-16 -4.3757128336477964e-31 -0
-		 2.2380934834012114e-16 1 1.9706458687096513e-15 0 -4.790271477591994e-17 -9.7144514654701138e-16 0.99999999999999922 -0
+	setAttr ".pm[0]" -type "matrix" 1.0000000000000002 -2.2204460492503131e-16 -4.3757128336477964e-31 0
+		 2.2380934834012114e-16 1 1.9706458687096513e-15 0 -4.790271477591994e-17 -9.7144514654701138e-16 0.99999999999999922 0
 		 -12.832459449768116 -299.22723388671869 -38.247127532959574 1;
-	setAttr ".pm[1]" -type "matrix" 1.0000000000000002 -2.2204460492503131e-16 -4.3757128336477964e-31 -0
-		 2.2380934834012114e-16 1 1.9706458687096513e-15 0 -4.790271477591994e-17 -9.7144514654701138e-16 0.99999999999999922 -0
+	setAttr ".pm[1]" -type "matrix" 1.0000000000000002 -2.2204460492503131e-16 -4.3757128336477964e-31 0
+		 2.2380934834012114e-16 1 1.9706458687096513e-15 0 -4.790271477591994e-17 -9.7144514654701138e-16 0.99999999999999922 0
 		 12.832445759999942 -299.22734159999987 -38.247218400000584 1;
 	setAttr ".gm" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
 	setAttr -s 2 ".ma";
@@ -25234,11 +25797,11 @@ createNode skinCluster -n "skinCluster8";
 		1 0 1
 		1 0 1;
 	setAttr -s 2 ".pm";
-	setAttr ".pm[0]" -type "matrix" 0.99999999999999822 -2.220446049250316e-16 -4.3757128336478016e-31 -0
-		 2.2380934834012069e-16 1.0000000000000013 1.9706458687096536e-15 0 -4.7902714775919842e-17 -9.7144514654701276e-16 1.0000000000000004 -0
+	setAttr ".pm[0]" -type "matrix" 0.99999999999999822 -2.220446049250316e-16 -4.3757128336478016e-31 0
+		 2.2380934834012069e-16 1.0000000000000013 1.9706458687096536e-15 0 -4.7902714775919842e-17 -9.7144514654701276e-16 1.0000000000000004 0
 		 -7.4547427707776238e-14 -335.53043915890612 -11.427770455469853 1;
-	setAttr ".pm[1]" -type "matrix" 0.96608461418161085 -0.25822571181345449 -3.9443045261050573e-31 -0
-		 0.25822571181345522 0.96608461418161362 1.9706458687096521e-15 -0 -2.9713019017737446e-16 -9.2612849697966182e-16 0.99999999999999956 -0
+	setAttr ".pm[1]" -type "matrix" 0.96608461418161085 -0.25822571181345449 -3.9443045261050573e-31 0
+		 0.25822571181345522 0.96608461418161362 1.9706458687096521e-15 0 -2.9713019017737446e-16 -9.2612849697966182e-16 0.99999999999999956 0
 		 -87.113372932079216 -355.66524708909242 -11.42777045546991 1;
 	setAttr ".gm" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
 	setAttr -s 2 ".ma";
@@ -25329,8 +25892,8 @@ createNode skinCluster -n "skinCluster9";
 		1 0 1
 		1 0 1
 		1 0 1;
-	setAttr ".pm[0]" -type "matrix" 0.99999999999999845 -2.220446049250316e-16 -4.3757128336477981e-31 -0
-		 2.2380934834012074e-16 1.0000000000000013 1.9706458687096521e-15 0 -4.7902714775919854e-17 -9.7144514654701276e-16 0.99999999999999956 -0
+	setAttr ".pm[0]" -type "matrix" 0.99999999999999845 -2.220446049250316e-16 -4.3757128336477981e-31 0
+		 2.2380934834012074e-16 1.0000000000000013 1.9706458687096521e-15 0 -4.7902714775919854e-17 -9.7144514654701276e-16 0.99999999999999956 0
 		 -1.1492569325710706e-29 -279.37450557651937 -51.252785955654417 1;
 	setAttr ".gm" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
 	setAttr ".dpf[0]"  4;
@@ -25352,7 +25915,7 @@ createNode dagPose -n "bindPose3";
 	setAttr ".wm[6]" -type "matrix" -2.0244148205952376e-16 0.96255107108242655 0.27110041600497881 0
 		 -1.0678361685612783e-16 0.27110041600497903 -0.96255107108242699 0 -1.0000000000000007 -2.2204460492503146e-16 0 0
 		 -1.1203699190612235e-14 235.11079040517501 -5.209033890874684 1;
-	setAttr ".wm[7]" -type "matrix" -2.068344122689579e-16 0.9732911129215378 0.22957440952325509 0
+	setAttr ".wm[7]" -type "matrix" -2.0683441226895792e-16 0.9732911129215378 0.22957440952325509 0
 		 -9.8004185567186148e-17 0.2295744095232557 -0.9732911129215398 0 -1.0000000000000016 -2.2204460492503165e-16 0 0
 		 -1.8052902565018974e-14 267.67678417792411 3.9631074371482544 1;
 	setAttr ".wm[8]" -type "matrix" 0.99999999999999967 2.2204460492503123e-16 0 0 -2.2380934834012119e-16 1 -1.9706458687096529e-15 0
@@ -25384,8 +25947,8 @@ createNode dagPose -n "bindPose3";
 		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0.021446198456987798 0.99977000383675418 1.0000000000000002
 		 0.99999999999999978 0.99999999999999933 no;
 	setAttr ".xm[8]" -type "matrix" "xform" 0.99999999999999811 1.0000000000000013 1.0000000000000002 0
-		 0 0 0 20.888957463541374 -1.4210854715202004e-14 9.2765606145756e-15 0 0 0 0
-		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0.4388694539600424 0.55443088151798892 -0.4388694539600424 0.55443088151798892 1.0000000000000011
+		 0 0 0 20.888957463541374 -1.4210854715202004e-14 9.2765606145755985e-15 0 0
+		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0.4388694539600424 0.55443088151798892 -0.4388694539600424 0.55443088151798892 1.0000000000000011
 		 0.99999999999999956 0.99999999999999911 no;
 	setAttr ".xm[9]" -type "matrix" "xform" 1 1 1 0 0 0 0 -3.238925984785782e-14
 		 -8.6333152588659914 42.494108443256685 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 1.000000000000002
@@ -25397,21 +25960,159 @@ createNode dagPose -n "bindPose3";
 createNode makeNurbCircle -n "makeNurbCircle5";
 	rename -uid "7F52E7DD-4B98-3EB2-C615-5B8AA5E94AC1";
 	setAttr ".r" 0.3;
-createNode animCurveTA -n "Head_Ctrl_rotateX";
-	rename -uid "FF4E78D2-4CE0-E80D-6729-8485764E891C";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 10 0;
-createNode animCurveTA -n "Head_Ctrl_rotateY";
-	rename -uid "8E77F8AB-422D-E59E-70E3-C4947055F2E9";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 10 0;
-createNode animCurveTA -n "Head_Ctrl_rotateZ";
-	rename -uid "69C2522E-49D7-F9EF-3ADA-91B690775108";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 10 56.140606999449901;
+createNode makeNurbCircle -n "makeNurbCircle6";
+	rename -uid "A0F3D6EA-4080-D318-4287-DCB7076DEA92";
+	setAttr ".r" 0.4;
+createNode transformGeometry -n "transformGeometry5";
+	rename -uid "200F3502-4FF4-3C8C-65BA-61BFDB044FA8";
+	setAttr ".txf" -type "matrix" 1 0 0 0 0 0 1 0 0 -1 0 0 0 0 0 1;
+createNode makeNurbCircle -n "makeNurbCircle7";
+	rename -uid "B4DFE33B-4142-CC37-6A13-DFB16A51608A";
+	setAttr ".r" 0.4;
+createNode transformGeometry -n "transformGeometry6";
+	rename -uid "BAB32A4A-4A8D-D2DF-A86F-6F9F05436B4B";
+	setAttr ".txf" -type "matrix" 1 0 0 0 0 0 1 0 0 -1 0 0 0 0 0 1;
+createNode makeNurbCircle -n "makeNurbCircle8";
+	rename -uid "8276FE32-4D39-A2C1-02D5-2CB13346F3BE";
+	setAttr ".r" 0.3;
+createNode makeNurbCircle -n "makeNurbCircle9";
+	rename -uid "93F9A7B5-4A8B-0FE1-AC29-EB80B34C0DEC";
+	setAttr ".r" 0.3;
+createNode skinCluster -n "skinCluster10";
+	rename -uid "DC2B86B6-4C68-523D-E862-22AE99697C0C";
+	setAttr -s 48 ".wl";
+	setAttr ".wl[0:47].w"
+		2 0 7.373006142556086e-05 1 0.99992626993857447
+		2 0 0.00015090961789461884 1 0.99984909038210534
+		2 0 0.00035094678629299825 1 0.9996490532137069
+		2 0 8.7492476412644152e-05 1 0.9999125075235874
+		2 0 0.00075381401748926698 1 0.9992461859825108
+		2 0 0.00077089676062296183 1 0.99922910323937708
+		2 0 0.0032711334003782812 1 0.99672886659962168
+		2 0 0.0071931920301626564 1 0.99280680796983733
+		2 0 0.003664512769942509 1 0.99633548723005749
+		2 0 0.0048966171822857688 1 0.99510338281771427
+		2 0 0.090317552885652366 1 0.90968244711434765
+		2 0 0.027410533972301334 1 0.97258946602769869
+		2 0 0.99992619150811823 1 7.3808491881763858e-05
+		2 0 0.99984901035531393 1 0.00015098964468613236
+		2 0 0.99964931527830703 1 0.000350684721693024
+		2 0 0.99991258247932635 1 8.7417520673723815e-05
+		2 0 0.99924608203213894 1 0.00075391796786109292
+		2 0 0.99922869318604635 1 0.00077130681395366166
+		2 0 0.99672796038864542 1 0.0032720396113546566
+		2 0 0.99277098402286179 1 0.0072290159771382012
+		2 0 0.99633482412558616 1 0.0036651758744137846
+		2 0 0.99510363614303032 1 0.0048963638569697069
+		2 0 0.90964031405505819 1 0.090359685944941856
+		2 0 0.9725857086956734 1 0.027414291304326623
+		2 0 4.0545243034564986e-05 1 0.99995945475696535
+		2 0 8.5755975442153301e-05 1 0.99991424402455786
+		2 0 0.00026732173150937775 1 0.99973267826849066
+		2 0 5.3546178449761267e-05 1 0.99994645382155034
+		2 0 0.00066523830251644252 1 0.99933476169748359
+		2 0 0.00067733585961391493 1 0.99932266414038617
+		2 0 0.0031503726414841933 1 0.9968496273585159
+		2 0 0.0073264402883265389 1 0.99267355971167348
+		2 0 0.0026549289016382523 1 0.99734507109836179
+		2 0 0.0045227425264769061 1 0.99547725747352311
+		2 0 0.027615857878844009 1 0.97238414212115598
+		2 0 0.096079635236137925 1 0.90392036476386206
+		2 0 0.99994651275216995 1 5.3487247830143341e-05
+		2 0 0.99995939203920403 1 4.0607960795973373e-05
+		2 0 0.99973291478666126 1 0.00026708521333875868
+		2 0 0.9999141800363921 1 8.5819963607951515e-05
+		2 0 0.9993225612346025 1 0.00067743876539753283
+		2 0 0.99933443277769074 1 0.00066556722230926403
+		2 0 0.99263597100159995 1 0.007364028998400076
+		2 0 0.9968489740187928 1 0.0031510259812071511
+		2 0 0.99547799651299507 1 0.0045220034870049218
+		2 0 0.99734458353842914 1 0.0026554164615708387
+		2 0 0.90388823538038721 1 0.096111764619612697
+		2 0 0.97238155257407266 1 0.027618447425927443;
+	setAttr -s 2 ".pm";
+	setAttr ".pm[0]" -type "matrix" 0.86370813379611411 -2.2204460492503155e-16 0.5039923209875633 -0
+		 -7.9988443063456265e-16 1.0000000000000013 1.8148610585648883e-15 0 -0.50399232098756441 -9.7144514654701276e-16 0.86370813379611433 -0
+		 7.5485663583923861 -314.35976261829308 -46.304865300169766 1;
+	setAttr ".pm[1]" -type "matrix" 0.86370813379611422 -2.6015648262139227e-08 0.50399232098756186 -0
+		 1.1864963463657674e-15 -1 -5.1619138232471268e-08 0 0.50399232098756364 4.4583869149715752e-08 -0.86370813379611333 -0
+		 -7.5485169892192641 314.35852560978549 46.304826657276649 1;
+	setAttr ".gm" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+	setAttr -s 2 ".ma";
+	setAttr -s 2 ".dpf[0:1]"  4 4;
+	setAttr -s 2 ".lw";
+	setAttr -s 2 ".lw";
+	setAttr ".mmi" yes;
+	setAttr ".ucm" yes;
+	setAttr -s 2 ".ifcl";
+	setAttr -s 2 ".ifcl";
+createNode dagPose -n "bindPose4";
+	rename -uid "92257E06-4188-5594-8DE7-EF94CAF41555";
+	setAttr -s 11 ".wm";
+	setAttr ".wm[0]" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+	setAttr ".wm[1]" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+	setAttr ".wm[2]" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+	setAttr ".wm[3]" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 140.71508817167853 0 1;
+	setAttr ".wm[4]" -type "matrix" -2.2204460492503131e-16 0.99941775048500703 0.034119789206383588 0
+		 -5.5511151231257827e-17 0.034119789206383588 -0.99941775048500703 0 -1 -2.2204460492503131e-16 0 0
+		 0 140.7150881716785 0 1;
+	setAttr ".wm[5]" -type "matrix" -2.2827830584868086e-16 0.99043439961177693 -0.13798441964822894 0
+		 -1.6562293506302536e-17 -0.13798441964822894 -0.99043439961177693 0 -1 -2.2204460492503131e-16 0 0
+		 1.8932661725304283e-29 186.50113807736875 1.5631204975266666 1;
+	setAttr ".wm[6]" -type "matrix" -2.0244148205952376e-16 0.96255107108242655 0.27110041600497881 0
+		 -1.0678361685612783e-16 0.27110041600497903 -0.96255107108242699 0 -1.0000000000000007 -2.2204460492503146e-16 0 0
+		 -1.1203699190612235e-14 235.11079040517501 -5.209033890874684 1;
+	setAttr ".wm[7]" -type "matrix" -2.068344122689579e-16 0.9732911129215378 0.22957440952325509 0
+		 -9.8004185567186148e-17 0.2295744095232557 -0.9732911129215398 0 -1.0000000000000016 -2.2204460492503165e-16 0 0
+		 -1.8052902565018974e-14 267.67678417792411 3.9631074371482544 1;
+	setAttr ".wm[8]" -type "matrix" 0.99999999999999967 2.2204460492503123e-16 0 0 -2.2380934834012119e-16 1 -1.9706458687096529e-15 0
+		 4.7902714775919743e-17 9.7144514654701197e-16 1.0000000000000007 0 -3.165001841947743e-14 288.00782083538496 8.7586775123971705 1;
+	setAttr ".wm[9]" -type "matrix" 0.86370813379611622 -2.9781916278103814e-16 -0.50399232098756441 0
+		 -2.2380934834012089e-16 0.99999999999999867 -1.9706458687096501e-15 0 0.50399232098756552 9.5095385040834704e-16 0.863708133796116 0
+		 16.817538373405842 314.35976261829268 43.798308273184361 1;
+	setAttr ".wm[10]" -type "matrix" 0.86370813379611666 6.8138262380526588e-16 0.50399232098756375 0
+		 -2.6015648260374563e-08 -0.99999999999999734 4.4583870148916514e-08 0 0.50399232098756419 -5.161913737034283e-08 -0.86370813379611522 0
+		 -16.817553360000009 314.35852799999992 43.79823600000001 1;
+	setAttr -s 11 ".xm";
+	setAttr ".xm[0]" -type "matrix" "xform" 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+		 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 1 1 1 yes;
+	setAttr ".xm[1]" -type "matrix" "xform" 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+		 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 1 1 1 yes;
+	setAttr ".xm[2]" -type "matrix" "xform" 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+		 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 1 1 1 yes;
+	setAttr ".xm[3]" -type "matrix" "xform" 1 1 1 0 0 0 0 0 140.71508817167853 0 0
+		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 1 1 1 no;
+	setAttr ".xm[4]" -type "matrix" "xform" 1 1 1 0 0 0 0 0 -2.8421709430404007e-14
+		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 -0.49139602430056761 -0.5084584027249387 0.49139602430056772 0.50845840272493859 1
+		 1 1 no;
+	setAttr ".xm[5]" -type "matrix" "xform" 0.99999999999999989 0.99999999999999989 1 0
+		 0 0 0 45.812724342219013 4.4408920985006262e-15 -1.0172468277107405e-14 0 0
+		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0.086169251038847469 0.9962805127951686 1 1
+		 1 no;
+	setAttr ".xm[6]" -type "matrix" "xform" 0.99999999999999978 1.0000000000000002 1.0000000000000007 0
+		 0 0 0 49.07912361167979 2.4868995751603507e-14 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+		 0 0 0 0 1 0 0 -0.20501700098484993 0.9787584121258821 1.0000000000000002 1.0000000000000002
+		 1 no;
+	setAttr ".xm[7]" -type "matrix" "xform" 0.99999999999999889 1.0000000000000004 1.0000000000000009 0
+		 0 6.9388939039072284e-18 0 33.833003516506778 -4.2632564145606011e-14 3.1554436208840472e-29 0
+		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0.021446198456987798 0.99977000383675418 1.0000000000000002
+		 0.99999999999999978 0.99999999999999933 no;
+	setAttr ".xm[8]" -type "matrix" "xform" 0.99999999999999811 1.0000000000000013 1.0000000000000002 0
+		 0 0 0 20.888957463541374 -1.4210854715202004e-14 9.2765606145756e-15 0 0 0 0
+		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0.4388694539600424 0.55443088151798892 -0.4388694539600424 0.55443088151798892 1.0000000000000011
+		 0.99999999999999956 0.99999999999999911 no;
+	setAttr ".xm[9]" -type "matrix" "xform" 0.99999999999999956 1 1.0000000000000007 0
+		 -3.3306690738754696e-16 0 0 16.817538373405888 26.351941782907659 35.039630760787219 0
+		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0.26104776019330728 0 0.96532588637105221 1.000000000000002
+		 0.99999999999999867 0.99999999999999978 yes;
+	setAttr ".xm[10]" -type "matrix" "xform" 0.99999999999999967 1 1.0000000000000007 2.2204460475959519e-15
+		 -5.5511151231257827e-16 -2.8124141443100523e-23 0 -16.817553359999977 26.350707164614903
+		 35.039558487602868 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0.96532588637105199 -6.7375300019106652e-09 0.26104776019330678 2.4914644416905928e-08 1.000000000000002
+		 0.99999999999999867 0.99999999999999978 yes;
+	setAttr -s 11 ".m";
+	setAttr -s 11 ".p";
+	setAttr -s 11 ".g[0:10]" yes yes yes yes yes yes yes yes yes no no;
+	setAttr ".bp" yes;
 select -ne :time1;
 	setAttr ".o" 0;
 select -ne :hardwareRenderingGlobals;
@@ -25470,6 +26171,7 @@ connectAttr "skinCluster7.og[0]" "eyesShape.i";
 connectAttr "groupId139.id" "torsoShape.iog.og[1].gid";
 connectAttr "set1.mwc" "torsoShape.iog.og[1].gco";
 connectAttr "groupParts4.og" "torsoShape.i";
+connectAttr "skinCluster10.og[0]" "eyebrowsShape.i";
 connectAttr "skinCluster9.og[0]" "mustacheShape.i";
 connectAttr "skinCluster8.og[0]" "hatShape.i";
 connectAttr "skinCluster6.og[0]" "flip_flopsShape.i";
@@ -29618,6 +30320,178 @@ connectAttr "Mustache_Jnt.pim" "Mustache_Jnt_scaleConstraint1.cpim";
 connectAttr "Mustache_Jnt_Ctrl.s" "Mustache_Jnt_scaleConstraint1.tg[0].ts";
 connectAttr "Mustache_Jnt_Ctrl.pm" "Mustache_Jnt_scaleConstraint1.tg[0].tpm";
 connectAttr "Mustache_Jnt_scaleConstraint1.w0" "Mustache_Jnt_scaleConstraint1.tg[0].tw"
+		;
+connectAttr "Head_Skin_Jnt.s" "R_EyeLid_Lower_Skin_Jnt.is";
+connectAttr "R_EyeLid_Lower_Skin_Jnt_parentConstraint1.crx" "R_EyeLid_Lower_Skin_Jnt.rx"
+		;
+connectAttr "R_EyeLid_Lower_Skin_Jnt_parentConstraint1.cry" "R_EyeLid_Lower_Skin_Jnt.ry"
+		;
+connectAttr "R_EyeLid_Lower_Skin_Jnt_parentConstraint1.crz" "R_EyeLid_Lower_Skin_Jnt.rz"
+		;
+connectAttr "R_EyeLid_Lower_Skin_Jnt_scaleConstraint1.csx" "R_EyeLid_Lower_Skin_Jnt.sx"
+		;
+connectAttr "R_EyeLid_Lower_Skin_Jnt_scaleConstraint1.csy" "R_EyeLid_Lower_Skin_Jnt.sy"
+		;
+connectAttr "R_EyeLid_Lower_Skin_Jnt_scaleConstraint1.csz" "R_EyeLid_Lower_Skin_Jnt.sz"
+		;
+connectAttr "R_EyeLid_Lower_Skin_Jnt_parentConstraint1.ctx" "R_EyeLid_Lower_Skin_Jnt.tx"
+		;
+connectAttr "R_EyeLid_Lower_Skin_Jnt_parentConstraint1.cty" "R_EyeLid_Lower_Skin_Jnt.ty"
+		;
+connectAttr "R_EyeLid_Lower_Skin_Jnt_parentConstraint1.ctz" "R_EyeLid_Lower_Skin_Jnt.tz"
+		;
+connectAttr "R_EyeLid_Lower_Skin_Jnt.ro" "R_EyeLid_Lower_Skin_Jnt_parentConstraint1.cro"
+		;
+connectAttr "R_EyeLid_Lower_Skin_Jnt.pim" "R_EyeLid_Lower_Skin_Jnt_parentConstraint1.cpim"
+		;
+connectAttr "R_EyeLid_Lower_Skin_Jnt.rp" "R_EyeLid_Lower_Skin_Jnt_parentConstraint1.crp"
+		;
+connectAttr "R_EyeLid_Lower_Skin_Jnt.rpt" "R_EyeLid_Lower_Skin_Jnt_parentConstraint1.crt"
+		;
+connectAttr "R_EyeLid_Lower_Skin_Jnt.jo" "R_EyeLid_Lower_Skin_Jnt_parentConstraint1.cjo"
+		;
+connectAttr "R_EyeLid_Lower_Skin_Jnt_Ctrl.t" "R_EyeLid_Lower_Skin_Jnt_parentConstraint1.tg[0].tt"
+		;
+connectAttr "R_EyeLid_Lower_Skin_Jnt_Ctrl.rp" "R_EyeLid_Lower_Skin_Jnt_parentConstraint1.tg[0].trp"
+		;
+connectAttr "R_EyeLid_Lower_Skin_Jnt_Ctrl.rpt" "R_EyeLid_Lower_Skin_Jnt_parentConstraint1.tg[0].trt"
+		;
+connectAttr "R_EyeLid_Lower_Skin_Jnt_Ctrl.r" "R_EyeLid_Lower_Skin_Jnt_parentConstraint1.tg[0].tr"
+		;
+connectAttr "R_EyeLid_Lower_Skin_Jnt_Ctrl.ro" "R_EyeLid_Lower_Skin_Jnt_parentConstraint1.tg[0].tro"
+		;
+connectAttr "R_EyeLid_Lower_Skin_Jnt_Ctrl.s" "R_EyeLid_Lower_Skin_Jnt_parentConstraint1.tg[0].ts"
+		;
+connectAttr "R_EyeLid_Lower_Skin_Jnt_Ctrl.pm" "R_EyeLid_Lower_Skin_Jnt_parentConstraint1.tg[0].tpm"
+		;
+connectAttr "R_EyeLid_Lower_Skin_Jnt_parentConstraint1.w0" "R_EyeLid_Lower_Skin_Jnt_parentConstraint1.tg[0].tw"
+		;
+connectAttr "R_EyeLid_Lower_Skin_Jnt.ssc" "R_EyeLid_Lower_Skin_Jnt_scaleConstraint1.tsc"
+		;
+connectAttr "R_EyeLid_Lower_Skin_Jnt.pim" "R_EyeLid_Lower_Skin_Jnt_scaleConstraint1.cpim"
+		;
+connectAttr "R_EyeLid_Lower_Skin_Jnt_Ctrl.s" "R_EyeLid_Lower_Skin_Jnt_scaleConstraint1.tg[0].ts"
+		;
+connectAttr "R_EyeLid_Lower_Skin_Jnt_Ctrl.pm" "R_EyeLid_Lower_Skin_Jnt_scaleConstraint1.tg[0].tpm"
+		;
+connectAttr "R_EyeLid_Lower_Skin_Jnt_scaleConstraint1.w0" "R_EyeLid_Lower_Skin_Jnt_scaleConstraint1.tg[0].tw"
+		;
+connectAttr "Head_Skin_Jnt.s" "L_EyeLid_Lower_Skin_Jnt.is";
+connectAttr "L_EyeLid_Lower_Skin_Jnt_parentConstraint1.crx" "L_EyeLid_Lower_Skin_Jnt.rx"
+		;
+connectAttr "L_EyeLid_Lower_Skin_Jnt_parentConstraint1.cry" "L_EyeLid_Lower_Skin_Jnt.ry"
+		;
+connectAttr "L_EyeLid_Lower_Skin_Jnt_parentConstraint1.crz" "L_EyeLid_Lower_Skin_Jnt.rz"
+		;
+connectAttr "L_EyeLid_Lower_Skin_Jnt_scaleConstraint1.csx" "L_EyeLid_Lower_Skin_Jnt.sx"
+		;
+connectAttr "L_EyeLid_Lower_Skin_Jnt_scaleConstraint1.csy" "L_EyeLid_Lower_Skin_Jnt.sy"
+		;
+connectAttr "L_EyeLid_Lower_Skin_Jnt_scaleConstraint1.csz" "L_EyeLid_Lower_Skin_Jnt.sz"
+		;
+connectAttr "L_EyeLid_Lower_Skin_Jnt_parentConstraint1.ctx" "L_EyeLid_Lower_Skin_Jnt.tx"
+		;
+connectAttr "L_EyeLid_Lower_Skin_Jnt_parentConstraint1.cty" "L_EyeLid_Lower_Skin_Jnt.ty"
+		;
+connectAttr "L_EyeLid_Lower_Skin_Jnt_parentConstraint1.ctz" "L_EyeLid_Lower_Skin_Jnt.tz"
+		;
+connectAttr "L_EyeLid_Lower_Skin_Jnt.ro" "L_EyeLid_Lower_Skin_Jnt_parentConstraint1.cro"
+		;
+connectAttr "L_EyeLid_Lower_Skin_Jnt.pim" "L_EyeLid_Lower_Skin_Jnt_parentConstraint1.cpim"
+		;
+connectAttr "L_EyeLid_Lower_Skin_Jnt.rp" "L_EyeLid_Lower_Skin_Jnt_parentConstraint1.crp"
+		;
+connectAttr "L_EyeLid_Lower_Skin_Jnt.rpt" "L_EyeLid_Lower_Skin_Jnt_parentConstraint1.crt"
+		;
+connectAttr "L_EyeLid_Lower_Skin_Jnt.jo" "L_EyeLid_Lower_Skin_Jnt_parentConstraint1.cjo"
+		;
+connectAttr "L_EyeLid_Lower_Skin_Jnt_Ctrl.t" "L_EyeLid_Lower_Skin_Jnt_parentConstraint1.tg[0].tt"
+		;
+connectAttr "L_EyeLid_Lower_Skin_Jnt_Ctrl.rp" "L_EyeLid_Lower_Skin_Jnt_parentConstraint1.tg[0].trp"
+		;
+connectAttr "L_EyeLid_Lower_Skin_Jnt_Ctrl.rpt" "L_EyeLid_Lower_Skin_Jnt_parentConstraint1.tg[0].trt"
+		;
+connectAttr "L_EyeLid_Lower_Skin_Jnt_Ctrl.r" "L_EyeLid_Lower_Skin_Jnt_parentConstraint1.tg[0].tr"
+		;
+connectAttr "L_EyeLid_Lower_Skin_Jnt_Ctrl.ro" "L_EyeLid_Lower_Skin_Jnt_parentConstraint1.tg[0].tro"
+		;
+connectAttr "L_EyeLid_Lower_Skin_Jnt_Ctrl.s" "L_EyeLid_Lower_Skin_Jnt_parentConstraint1.tg[0].ts"
+		;
+connectAttr "L_EyeLid_Lower_Skin_Jnt_Ctrl.pm" "L_EyeLid_Lower_Skin_Jnt_parentConstraint1.tg[0].tpm"
+		;
+connectAttr "L_EyeLid_Lower_Skin_Jnt_parentConstraint1.w0" "L_EyeLid_Lower_Skin_Jnt_parentConstraint1.tg[0].tw"
+		;
+connectAttr "L_EyeLid_Lower_Skin_Jnt.ssc" "L_EyeLid_Lower_Skin_Jnt_scaleConstraint1.tsc"
+		;
+connectAttr "L_EyeLid_Lower_Skin_Jnt.pim" "L_EyeLid_Lower_Skin_Jnt_scaleConstraint1.cpim"
+		;
+connectAttr "L_EyeLid_Lower_Skin_Jnt_Ctrl.s" "L_EyeLid_Lower_Skin_Jnt_scaleConstraint1.tg[0].ts"
+		;
+connectAttr "L_EyeLid_Lower_Skin_Jnt_Ctrl.pm" "L_EyeLid_Lower_Skin_Jnt_scaleConstraint1.tg[0].tpm"
+		;
+connectAttr "L_EyeLid_Lower_Skin_Jnt_scaleConstraint1.w0" "L_EyeLid_Lower_Skin_Jnt_scaleConstraint1.tg[0].tw"
+		;
+connectAttr "Head_Skin_Jnt.s" "L_Eyebrow_Jnt.is";
+connectAttr "L_Eyebrow_Jnt_parentConstraint1.ctx" "L_Eyebrow_Jnt.tx";
+connectAttr "L_Eyebrow_Jnt_parentConstraint1.cty" "L_Eyebrow_Jnt.ty";
+connectAttr "L_Eyebrow_Jnt_parentConstraint1.ctz" "L_Eyebrow_Jnt.tz";
+connectAttr "L_Eyebrow_Jnt_parentConstraint1.crx" "L_Eyebrow_Jnt.rx";
+connectAttr "L_Eyebrow_Jnt_parentConstraint1.cry" "L_Eyebrow_Jnt.ry";
+connectAttr "L_Eyebrow_Jnt_parentConstraint1.crz" "L_Eyebrow_Jnt.rz";
+connectAttr "L_Eyebrow_Jnt_scaleConstraint1.csx" "L_Eyebrow_Jnt.sx";
+connectAttr "L_Eyebrow_Jnt_scaleConstraint1.csy" "L_Eyebrow_Jnt.sy";
+connectAttr "L_Eyebrow_Jnt_scaleConstraint1.csz" "L_Eyebrow_Jnt.sz";
+connectAttr "L_Eyebrow_Jnt.ro" "L_Eyebrow_Jnt_parentConstraint1.cro";
+connectAttr "L_Eyebrow_Jnt.pim" "L_Eyebrow_Jnt_parentConstraint1.cpim";
+connectAttr "L_Eyebrow_Jnt.rp" "L_Eyebrow_Jnt_parentConstraint1.crp";
+connectAttr "L_Eyebrow_Jnt.rpt" "L_Eyebrow_Jnt_parentConstraint1.crt";
+connectAttr "L_Eyebrow_Jnt.jo" "L_Eyebrow_Jnt_parentConstraint1.cjo";
+connectAttr "L_Eyebrow_Jnt_Ctrl.t" "L_Eyebrow_Jnt_parentConstraint1.tg[0].tt";
+connectAttr "L_Eyebrow_Jnt_Ctrl.rp" "L_Eyebrow_Jnt_parentConstraint1.tg[0].trp";
+connectAttr "L_Eyebrow_Jnt_Ctrl.rpt" "L_Eyebrow_Jnt_parentConstraint1.tg[0].trt"
+		;
+connectAttr "L_Eyebrow_Jnt_Ctrl.r" "L_Eyebrow_Jnt_parentConstraint1.tg[0].tr";
+connectAttr "L_Eyebrow_Jnt_Ctrl.ro" "L_Eyebrow_Jnt_parentConstraint1.tg[0].tro";
+connectAttr "L_Eyebrow_Jnt_Ctrl.s" "L_Eyebrow_Jnt_parentConstraint1.tg[0].ts";
+connectAttr "L_Eyebrow_Jnt_Ctrl.pm" "L_Eyebrow_Jnt_parentConstraint1.tg[0].tpm";
+connectAttr "L_Eyebrow_Jnt_parentConstraint1.w0" "L_Eyebrow_Jnt_parentConstraint1.tg[0].tw"
+		;
+connectAttr "L_Eyebrow_Jnt.ssc" "L_Eyebrow_Jnt_scaleConstraint1.tsc";
+connectAttr "L_Eyebrow_Jnt.pim" "L_Eyebrow_Jnt_scaleConstraint1.cpim";
+connectAttr "L_Eyebrow_Jnt_Ctrl.s" "L_Eyebrow_Jnt_scaleConstraint1.tg[0].ts";
+connectAttr "L_Eyebrow_Jnt_Ctrl.pm" "L_Eyebrow_Jnt_scaleConstraint1.tg[0].tpm";
+connectAttr "L_Eyebrow_Jnt_scaleConstraint1.w0" "L_Eyebrow_Jnt_scaleConstraint1.tg[0].tw"
+		;
+connectAttr "Head_Skin_Jnt.s" "R_Eyebrow_Jnt.is";
+connectAttr "R_Eyebrow_Jnt_parentConstraint1.ctx" "R_Eyebrow_Jnt.tx";
+connectAttr "R_Eyebrow_Jnt_parentConstraint1.cty" "R_Eyebrow_Jnt.ty";
+connectAttr "R_Eyebrow_Jnt_parentConstraint1.ctz" "R_Eyebrow_Jnt.tz";
+connectAttr "R_Eyebrow_Jnt_parentConstraint1.crx" "R_Eyebrow_Jnt.rx";
+connectAttr "R_Eyebrow_Jnt_parentConstraint1.cry" "R_Eyebrow_Jnt.ry";
+connectAttr "R_Eyebrow_Jnt_parentConstraint1.crz" "R_Eyebrow_Jnt.rz";
+connectAttr "R_Eyebrow_Jnt_scaleConstraint1.csx" "R_Eyebrow_Jnt.sx";
+connectAttr "R_Eyebrow_Jnt_scaleConstraint1.csy" "R_Eyebrow_Jnt.sy";
+connectAttr "R_Eyebrow_Jnt_scaleConstraint1.csz" "R_Eyebrow_Jnt.sz";
+connectAttr "R_Eyebrow_Jnt.ro" "R_Eyebrow_Jnt_parentConstraint1.cro";
+connectAttr "R_Eyebrow_Jnt.pim" "R_Eyebrow_Jnt_parentConstraint1.cpim";
+connectAttr "R_Eyebrow_Jnt.rp" "R_Eyebrow_Jnt_parentConstraint1.crp";
+connectAttr "R_Eyebrow_Jnt.rpt" "R_Eyebrow_Jnt_parentConstraint1.crt";
+connectAttr "R_Eyebrow_Jnt.jo" "R_Eyebrow_Jnt_parentConstraint1.cjo";
+connectAttr "R_Eyebrow_Jnt_Ctrl.t" "R_Eyebrow_Jnt_parentConstraint1.tg[0].tt";
+connectAttr "R_Eyebrow_Jnt_Ctrl.rp" "R_Eyebrow_Jnt_parentConstraint1.tg[0].trp";
+connectAttr "R_Eyebrow_Jnt_Ctrl.rpt" "R_Eyebrow_Jnt_parentConstraint1.tg[0].trt"
+		;
+connectAttr "R_Eyebrow_Jnt_Ctrl.r" "R_Eyebrow_Jnt_parentConstraint1.tg[0].tr";
+connectAttr "R_Eyebrow_Jnt_Ctrl.ro" "R_Eyebrow_Jnt_parentConstraint1.tg[0].tro";
+connectAttr "R_Eyebrow_Jnt_Ctrl.s" "R_Eyebrow_Jnt_parentConstraint1.tg[0].ts";
+connectAttr "R_Eyebrow_Jnt_Ctrl.pm" "R_Eyebrow_Jnt_parentConstraint1.tg[0].tpm";
+connectAttr "R_Eyebrow_Jnt_parentConstraint1.w0" "R_Eyebrow_Jnt_parentConstraint1.tg[0].tw"
+		;
+connectAttr "R_Eyebrow_Jnt.ssc" "R_Eyebrow_Jnt_scaleConstraint1.tsc";
+connectAttr "R_Eyebrow_Jnt.pim" "R_Eyebrow_Jnt_scaleConstraint1.cpim";
+connectAttr "R_Eyebrow_Jnt_Ctrl.s" "R_Eyebrow_Jnt_scaleConstraint1.tg[0].ts";
+connectAttr "R_Eyebrow_Jnt_Ctrl.pm" "R_Eyebrow_Jnt_scaleConstraint1.tg[0].tpm";
+connectAttr "R_Eyebrow_Jnt_scaleConstraint1.w0" "R_Eyebrow_Jnt_scaleConstraint1.tg[0].tw"
 		;
 connectAttr "Neck_Skin_Jnt.ro" "Neck_Skin_Jnt_parentConstraint1.cro";
 connectAttr "Neck_Skin_Jnt.pim" "Neck_Skin_Jnt_parentConstraint1.cpim";
@@ -38133,9 +39007,6 @@ connectAttr "Head_Ctrl_Grp_parentConstraint2.crz" "Head_Ctrl_Grp.rz";
 connectAttr "Head_Ctrl_Grp_scaleConstraint1.csx" "Head_Ctrl_Grp.sx";
 connectAttr "Head_Ctrl_Grp_scaleConstraint1.csy" "Head_Ctrl_Grp.sy";
 connectAttr "Head_Ctrl_Grp_scaleConstraint1.csz" "Head_Ctrl_Grp.sz";
-connectAttr "Head_Ctrl_rotateX.o" "Head_Ctrl.rx";
-connectAttr "Head_Ctrl_rotateY.o" "Head_Ctrl.ry";
-connectAttr "Head_Ctrl_rotateZ.o" "Head_Ctrl.rz";
 connectAttr "Head_Ctrl_Grp.ro" "Head_Ctrl_Grp_parentConstraint1.cro";
 connectAttr "Head_Ctrl_Grp.pim" "Head_Ctrl_Grp_parentConstraint1.cpim";
 connectAttr "Head_Ctrl_Grp.rp" "Head_Ctrl_Grp_parentConstraint1.crp";
@@ -38807,6 +39678,294 @@ connectAttr "Mustache_Jnt_Ctrl_Grp.pim" "Mustache_Jnt_Ctrl_Grp_scaleConstraint1.
 connectAttr "Head_Ctrl.s" "Mustache_Jnt_Ctrl_Grp_scaleConstraint1.tg[0].ts";
 connectAttr "Head_Ctrl.pm" "Mustache_Jnt_Ctrl_Grp_scaleConstraint1.tg[0].tpm";
 connectAttr "Mustache_Jnt_Ctrl_Grp_scaleConstraint1.w0" "Mustache_Jnt_Ctrl_Grp_scaleConstraint1.tg[0].tw"
+		;
+connectAttr "L_Eyebrow_Jnt_Ctrl_Grp_parentConstraint1.ctx" "L_Eyebrow_Jnt_Ctrl_Grp.tx"
+		;
+connectAttr "L_Eyebrow_Jnt_Ctrl_Grp_parentConstraint1.cty" "L_Eyebrow_Jnt_Ctrl_Grp.ty"
+		;
+connectAttr "L_Eyebrow_Jnt_Ctrl_Grp_parentConstraint1.ctz" "L_Eyebrow_Jnt_Ctrl_Grp.tz"
+		;
+connectAttr "L_Eyebrow_Jnt_Ctrl_Grp_parentConstraint2.crx" "L_Eyebrow_Jnt_Ctrl_Grp.rx"
+		;
+connectAttr "L_Eyebrow_Jnt_Ctrl_Grp_parentConstraint2.cry" "L_Eyebrow_Jnt_Ctrl_Grp.ry"
+		;
+connectAttr "L_Eyebrow_Jnt_Ctrl_Grp_parentConstraint2.crz" "L_Eyebrow_Jnt_Ctrl_Grp.rz"
+		;
+connectAttr "L_Eyebrow_Jnt_Ctrl_Grp_scaleConstraint1.csx" "L_Eyebrow_Jnt_Ctrl_Grp.sx"
+		;
+connectAttr "L_Eyebrow_Jnt_Ctrl_Grp_scaleConstraint1.csy" "L_Eyebrow_Jnt_Ctrl_Grp.sy"
+		;
+connectAttr "L_Eyebrow_Jnt_Ctrl_Grp_scaleConstraint1.csz" "L_Eyebrow_Jnt_Ctrl_Grp.sz"
+		;
+connectAttr "makeNurbCircle9.oc" "L_Eyebrow_Jnt_CtrlShape.cr";
+connectAttr "L_Eyebrow_Jnt_Ctrl_Grp.ro" "L_Eyebrow_Jnt_Ctrl_Grp_parentConstraint1.cro"
+		;
+connectAttr "L_Eyebrow_Jnt_Ctrl_Grp.pim" "L_Eyebrow_Jnt_Ctrl_Grp_parentConstraint1.cpim"
+		;
+connectAttr "L_Eyebrow_Jnt_Ctrl_Grp.rp" "L_Eyebrow_Jnt_Ctrl_Grp_parentConstraint1.crp"
+		;
+connectAttr "L_Eyebrow_Jnt_Ctrl_Grp.rpt" "L_Eyebrow_Jnt_Ctrl_Grp_parentConstraint1.crt"
+		;
+connectAttr "Head_Ctrl.t" "L_Eyebrow_Jnt_Ctrl_Grp_parentConstraint1.tg[0].tt";
+connectAttr "Head_Ctrl.rp" "L_Eyebrow_Jnt_Ctrl_Grp_parentConstraint1.tg[0].trp";
+connectAttr "Head_Ctrl.rpt" "L_Eyebrow_Jnt_Ctrl_Grp_parentConstraint1.tg[0].trt"
+		;
+connectAttr "Head_Ctrl.r" "L_Eyebrow_Jnt_Ctrl_Grp_parentConstraint1.tg[0].tr";
+connectAttr "Head_Ctrl.ro" "L_Eyebrow_Jnt_Ctrl_Grp_parentConstraint1.tg[0].tro";
+connectAttr "Head_Ctrl.s" "L_Eyebrow_Jnt_Ctrl_Grp_parentConstraint1.tg[0].ts";
+connectAttr "Head_Ctrl.pm" "L_Eyebrow_Jnt_Ctrl_Grp_parentConstraint1.tg[0].tpm";
+connectAttr "L_Eyebrow_Jnt_Ctrl_Grp_parentConstraint1.w0" "L_Eyebrow_Jnt_Ctrl_Grp_parentConstraint1.tg[0].tw"
+		;
+connectAttr "L_Eyebrow_Jnt_Ctrl.FollowTranslate" "L_Eyebrow_Jnt_Ctrl_Grp_parentConstraint1.w0"
+		;
+connectAttr "L_Eyebrow_Jnt_Ctrl_Grp.ro" "L_Eyebrow_Jnt_Ctrl_Grp_parentConstraint2.cro"
+		;
+connectAttr "L_Eyebrow_Jnt_Ctrl_Grp.pim" "L_Eyebrow_Jnt_Ctrl_Grp_parentConstraint2.cpim"
+		;
+connectAttr "L_Eyebrow_Jnt_Ctrl_Grp.rp" "L_Eyebrow_Jnt_Ctrl_Grp_parentConstraint2.crp"
+		;
+connectAttr "L_Eyebrow_Jnt_Ctrl_Grp.rpt" "L_Eyebrow_Jnt_Ctrl_Grp_parentConstraint2.crt"
+		;
+connectAttr "Head_Ctrl.t" "L_Eyebrow_Jnt_Ctrl_Grp_parentConstraint2.tg[0].tt";
+connectAttr "Head_Ctrl.rp" "L_Eyebrow_Jnt_Ctrl_Grp_parentConstraint2.tg[0].trp";
+connectAttr "Head_Ctrl.rpt" "L_Eyebrow_Jnt_Ctrl_Grp_parentConstraint2.tg[0].trt"
+		;
+connectAttr "Head_Ctrl.r" "L_Eyebrow_Jnt_Ctrl_Grp_parentConstraint2.tg[0].tr";
+connectAttr "Head_Ctrl.ro" "L_Eyebrow_Jnt_Ctrl_Grp_parentConstraint2.tg[0].tro";
+connectAttr "Head_Ctrl.s" "L_Eyebrow_Jnt_Ctrl_Grp_parentConstraint2.tg[0].ts";
+connectAttr "Head_Ctrl.pm" "L_Eyebrow_Jnt_Ctrl_Grp_parentConstraint2.tg[0].tpm";
+connectAttr "L_Eyebrow_Jnt_Ctrl_Grp_parentConstraint2.w0" "L_Eyebrow_Jnt_Ctrl_Grp_parentConstraint2.tg[0].tw"
+		;
+connectAttr "L_Eyebrow_Jnt_Ctrl.FollowRotate" "L_Eyebrow_Jnt_Ctrl_Grp_parentConstraint2.w0"
+		;
+connectAttr "L_Eyebrow_Jnt_Ctrl_Grp.pim" "L_Eyebrow_Jnt_Ctrl_Grp_scaleConstraint1.cpim"
+		;
+connectAttr "Head_Ctrl.s" "L_Eyebrow_Jnt_Ctrl_Grp_scaleConstraint1.tg[0].ts";
+connectAttr "Head_Ctrl.pm" "L_Eyebrow_Jnt_Ctrl_Grp_scaleConstraint1.tg[0].tpm";
+connectAttr "L_Eyebrow_Jnt_Ctrl_Grp_scaleConstraint1.w0" "L_Eyebrow_Jnt_Ctrl_Grp_scaleConstraint1.tg[0].tw"
+		;
+connectAttr "R_Eyebrow_Jnt_Ctrl_Grp_parentConstraint1.ctx" "R_Eyebrow_Jnt_Ctrl_Grp.tx"
+		;
+connectAttr "R_Eyebrow_Jnt_Ctrl_Grp_parentConstraint1.cty" "R_Eyebrow_Jnt_Ctrl_Grp.ty"
+		;
+connectAttr "R_Eyebrow_Jnt_Ctrl_Grp_parentConstraint1.ctz" "R_Eyebrow_Jnt_Ctrl_Grp.tz"
+		;
+connectAttr "R_Eyebrow_Jnt_Ctrl_Grp_parentConstraint2.crx" "R_Eyebrow_Jnt_Ctrl_Grp.rx"
+		;
+connectAttr "R_Eyebrow_Jnt_Ctrl_Grp_parentConstraint2.cry" "R_Eyebrow_Jnt_Ctrl_Grp.ry"
+		;
+connectAttr "R_Eyebrow_Jnt_Ctrl_Grp_parentConstraint2.crz" "R_Eyebrow_Jnt_Ctrl_Grp.rz"
+		;
+connectAttr "R_Eyebrow_Jnt_Ctrl_Grp_scaleConstraint1.csx" "R_Eyebrow_Jnt_Ctrl_Grp.sx"
+		;
+connectAttr "R_Eyebrow_Jnt_Ctrl_Grp_scaleConstraint1.csy" "R_Eyebrow_Jnt_Ctrl_Grp.sy"
+		;
+connectAttr "R_Eyebrow_Jnt_Ctrl_Grp_scaleConstraint1.csz" "R_Eyebrow_Jnt_Ctrl_Grp.sz"
+		;
+connectAttr "makeNurbCircle8.oc" "R_Eyebrow_Jnt_CtrlShape.cr";
+connectAttr "R_Eyebrow_Jnt_Ctrl_Grp.ro" "R_Eyebrow_Jnt_Ctrl_Grp_parentConstraint1.cro"
+		;
+connectAttr "R_Eyebrow_Jnt_Ctrl_Grp.pim" "R_Eyebrow_Jnt_Ctrl_Grp_parentConstraint1.cpim"
+		;
+connectAttr "R_Eyebrow_Jnt_Ctrl_Grp.rp" "R_Eyebrow_Jnt_Ctrl_Grp_parentConstraint1.crp"
+		;
+connectAttr "R_Eyebrow_Jnt_Ctrl_Grp.rpt" "R_Eyebrow_Jnt_Ctrl_Grp_parentConstraint1.crt"
+		;
+connectAttr "Head_Ctrl.t" "R_Eyebrow_Jnt_Ctrl_Grp_parentConstraint1.tg[0].tt";
+connectAttr "Head_Ctrl.rp" "R_Eyebrow_Jnt_Ctrl_Grp_parentConstraint1.tg[0].trp";
+connectAttr "Head_Ctrl.rpt" "R_Eyebrow_Jnt_Ctrl_Grp_parentConstraint1.tg[0].trt"
+		;
+connectAttr "Head_Ctrl.r" "R_Eyebrow_Jnt_Ctrl_Grp_parentConstraint1.tg[0].tr";
+connectAttr "Head_Ctrl.ro" "R_Eyebrow_Jnt_Ctrl_Grp_parentConstraint1.tg[0].tro";
+connectAttr "Head_Ctrl.s" "R_Eyebrow_Jnt_Ctrl_Grp_parentConstraint1.tg[0].ts";
+connectAttr "Head_Ctrl.pm" "R_Eyebrow_Jnt_Ctrl_Grp_parentConstraint1.tg[0].tpm";
+connectAttr "R_Eyebrow_Jnt_Ctrl_Grp_parentConstraint1.w0" "R_Eyebrow_Jnt_Ctrl_Grp_parentConstraint1.tg[0].tw"
+		;
+connectAttr "R_Eyebrow_Jnt_Ctrl.FollowTranslate" "R_Eyebrow_Jnt_Ctrl_Grp_parentConstraint1.w0"
+		;
+connectAttr "R_Eyebrow_Jnt_Ctrl_Grp.ro" "R_Eyebrow_Jnt_Ctrl_Grp_parentConstraint2.cro"
+		;
+connectAttr "R_Eyebrow_Jnt_Ctrl_Grp.pim" "R_Eyebrow_Jnt_Ctrl_Grp_parentConstraint2.cpim"
+		;
+connectAttr "R_Eyebrow_Jnt_Ctrl_Grp.rp" "R_Eyebrow_Jnt_Ctrl_Grp_parentConstraint2.crp"
+		;
+connectAttr "R_Eyebrow_Jnt_Ctrl_Grp.rpt" "R_Eyebrow_Jnt_Ctrl_Grp_parentConstraint2.crt"
+		;
+connectAttr "Head_Ctrl.t" "R_Eyebrow_Jnt_Ctrl_Grp_parentConstraint2.tg[0].tt";
+connectAttr "Head_Ctrl.rp" "R_Eyebrow_Jnt_Ctrl_Grp_parentConstraint2.tg[0].trp";
+connectAttr "Head_Ctrl.rpt" "R_Eyebrow_Jnt_Ctrl_Grp_parentConstraint2.tg[0].trt"
+		;
+connectAttr "Head_Ctrl.r" "R_Eyebrow_Jnt_Ctrl_Grp_parentConstraint2.tg[0].tr";
+connectAttr "Head_Ctrl.ro" "R_Eyebrow_Jnt_Ctrl_Grp_parentConstraint2.tg[0].tro";
+connectAttr "Head_Ctrl.s" "R_Eyebrow_Jnt_Ctrl_Grp_parentConstraint2.tg[0].ts";
+connectAttr "Head_Ctrl.pm" "R_Eyebrow_Jnt_Ctrl_Grp_parentConstraint2.tg[0].tpm";
+connectAttr "R_Eyebrow_Jnt_Ctrl_Grp_parentConstraint2.w0" "R_Eyebrow_Jnt_Ctrl_Grp_parentConstraint2.tg[0].tw"
+		;
+connectAttr "R_Eyebrow_Jnt_Ctrl.FollowRotate" "R_Eyebrow_Jnt_Ctrl_Grp_parentConstraint2.w0"
+		;
+connectAttr "R_Eyebrow_Jnt_Ctrl_Grp.pim" "R_Eyebrow_Jnt_Ctrl_Grp_scaleConstraint1.cpim"
+		;
+connectAttr "Head_Ctrl.s" "R_Eyebrow_Jnt_Ctrl_Grp_scaleConstraint1.tg[0].ts";
+connectAttr "Head_Ctrl.pm" "R_Eyebrow_Jnt_Ctrl_Grp_scaleConstraint1.tg[0].tpm";
+connectAttr "R_Eyebrow_Jnt_Ctrl_Grp_scaleConstraint1.w0" "R_Eyebrow_Jnt_Ctrl_Grp_scaleConstraint1.tg[0].tw"
+		;
+connectAttr "L_EyeLid_Lower_Skin_Jnt_Ctrl_Grp_parentConstraint1.ctx" "L_EyeLid_Lower_Skin_Jnt_Ctrl_Grp.tx"
+		;
+connectAttr "L_EyeLid_Lower_Skin_Jnt_Ctrl_Grp_parentConstraint1.cty" "L_EyeLid_Lower_Skin_Jnt_Ctrl_Grp.ty"
+		;
+connectAttr "L_EyeLid_Lower_Skin_Jnt_Ctrl_Grp_parentConstraint1.ctz" "L_EyeLid_Lower_Skin_Jnt_Ctrl_Grp.tz"
+		;
+connectAttr "L_EyeLid_Lower_Skin_Jnt_Ctrl_Grp_parentConstraint2.crx" "L_EyeLid_Lower_Skin_Jnt_Ctrl_Grp.rx"
+		;
+connectAttr "L_EyeLid_Lower_Skin_Jnt_Ctrl_Grp_parentConstraint2.cry" "L_EyeLid_Lower_Skin_Jnt_Ctrl_Grp.ry"
+		;
+connectAttr "L_EyeLid_Lower_Skin_Jnt_Ctrl_Grp_parentConstraint2.crz" "L_EyeLid_Lower_Skin_Jnt_Ctrl_Grp.rz"
+		;
+connectAttr "L_EyeLid_Lower_Skin_Jnt_Ctrl_Grp_scaleConstraint1.csx" "L_EyeLid_Lower_Skin_Jnt_Ctrl_Grp.sx"
+		;
+connectAttr "L_EyeLid_Lower_Skin_Jnt_Ctrl_Grp_scaleConstraint1.csy" "L_EyeLid_Lower_Skin_Jnt_Ctrl_Grp.sy"
+		;
+connectAttr "L_EyeLid_Lower_Skin_Jnt_Ctrl_Grp_scaleConstraint1.csz" "L_EyeLid_Lower_Skin_Jnt_Ctrl_Grp.sz"
+		;
+connectAttr "transformGeometry6.og" "L_EyeLid_Lower_Skin_Jnt_CtrlShape.cr";
+connectAttr "L_EyeLid_Lower_Skin_Jnt_Ctrl_Grp.ro" "L_EyeLid_Lower_Skin_Jnt_Ctrl_Grp_parentConstraint1.cro"
+		;
+connectAttr "L_EyeLid_Lower_Skin_Jnt_Ctrl_Grp.pim" "L_EyeLid_Lower_Skin_Jnt_Ctrl_Grp_parentConstraint1.cpim"
+		;
+connectAttr "L_EyeLid_Lower_Skin_Jnt_Ctrl_Grp.rp" "L_EyeLid_Lower_Skin_Jnt_Ctrl_Grp_parentConstraint1.crp"
+		;
+connectAttr "L_EyeLid_Lower_Skin_Jnt_Ctrl_Grp.rpt" "L_EyeLid_Lower_Skin_Jnt_Ctrl_Grp_parentConstraint1.crt"
+		;
+connectAttr "Head_Ctrl.t" "L_EyeLid_Lower_Skin_Jnt_Ctrl_Grp_parentConstraint1.tg[0].tt"
+		;
+connectAttr "Head_Ctrl.rp" "L_EyeLid_Lower_Skin_Jnt_Ctrl_Grp_parentConstraint1.tg[0].trp"
+		;
+connectAttr "Head_Ctrl.rpt" "L_EyeLid_Lower_Skin_Jnt_Ctrl_Grp_parentConstraint1.tg[0].trt"
+		;
+connectAttr "Head_Ctrl.r" "L_EyeLid_Lower_Skin_Jnt_Ctrl_Grp_parentConstraint1.tg[0].tr"
+		;
+connectAttr "Head_Ctrl.ro" "L_EyeLid_Lower_Skin_Jnt_Ctrl_Grp_parentConstraint1.tg[0].tro"
+		;
+connectAttr "Head_Ctrl.s" "L_EyeLid_Lower_Skin_Jnt_Ctrl_Grp_parentConstraint1.tg[0].ts"
+		;
+connectAttr "Head_Ctrl.pm" "L_EyeLid_Lower_Skin_Jnt_Ctrl_Grp_parentConstraint1.tg[0].tpm"
+		;
+connectAttr "L_EyeLid_Lower_Skin_Jnt_Ctrl_Grp_parentConstraint1.w0" "L_EyeLid_Lower_Skin_Jnt_Ctrl_Grp_parentConstraint1.tg[0].tw"
+		;
+connectAttr "L_EyeLid_Lower_Skin_Jnt_Ctrl.FollowTranslate" "L_EyeLid_Lower_Skin_Jnt_Ctrl_Grp_parentConstraint1.w0"
+		;
+connectAttr "L_EyeLid_Lower_Skin_Jnt_Ctrl_Grp.ro" "L_EyeLid_Lower_Skin_Jnt_Ctrl_Grp_parentConstraint2.cro"
+		;
+connectAttr "L_EyeLid_Lower_Skin_Jnt_Ctrl_Grp.pim" "L_EyeLid_Lower_Skin_Jnt_Ctrl_Grp_parentConstraint2.cpim"
+		;
+connectAttr "L_EyeLid_Lower_Skin_Jnt_Ctrl_Grp.rp" "L_EyeLid_Lower_Skin_Jnt_Ctrl_Grp_parentConstraint2.crp"
+		;
+connectAttr "L_EyeLid_Lower_Skin_Jnt_Ctrl_Grp.rpt" "L_EyeLid_Lower_Skin_Jnt_Ctrl_Grp_parentConstraint2.crt"
+		;
+connectAttr "Head_Ctrl.t" "L_EyeLid_Lower_Skin_Jnt_Ctrl_Grp_parentConstraint2.tg[0].tt"
+		;
+connectAttr "Head_Ctrl.rp" "L_EyeLid_Lower_Skin_Jnt_Ctrl_Grp_parentConstraint2.tg[0].trp"
+		;
+connectAttr "Head_Ctrl.rpt" "L_EyeLid_Lower_Skin_Jnt_Ctrl_Grp_parentConstraint2.tg[0].trt"
+		;
+connectAttr "Head_Ctrl.r" "L_EyeLid_Lower_Skin_Jnt_Ctrl_Grp_parentConstraint2.tg[0].tr"
+		;
+connectAttr "Head_Ctrl.ro" "L_EyeLid_Lower_Skin_Jnt_Ctrl_Grp_parentConstraint2.tg[0].tro"
+		;
+connectAttr "Head_Ctrl.s" "L_EyeLid_Lower_Skin_Jnt_Ctrl_Grp_parentConstraint2.tg[0].ts"
+		;
+connectAttr "Head_Ctrl.pm" "L_EyeLid_Lower_Skin_Jnt_Ctrl_Grp_parentConstraint2.tg[0].tpm"
+		;
+connectAttr "L_EyeLid_Lower_Skin_Jnt_Ctrl_Grp_parentConstraint2.w0" "L_EyeLid_Lower_Skin_Jnt_Ctrl_Grp_parentConstraint2.tg[0].tw"
+		;
+connectAttr "L_EyeLid_Lower_Skin_Jnt_Ctrl.FollowRotate" "L_EyeLid_Lower_Skin_Jnt_Ctrl_Grp_parentConstraint2.w0"
+		;
+connectAttr "L_EyeLid_Lower_Skin_Jnt_Ctrl_Grp.pim" "L_EyeLid_Lower_Skin_Jnt_Ctrl_Grp_scaleConstraint1.cpim"
+		;
+connectAttr "Head_Ctrl.s" "L_EyeLid_Lower_Skin_Jnt_Ctrl_Grp_scaleConstraint1.tg[0].ts"
+		;
+connectAttr "Head_Ctrl.pm" "L_EyeLid_Lower_Skin_Jnt_Ctrl_Grp_scaleConstraint1.tg[0].tpm"
+		;
+connectAttr "L_EyeLid_Lower_Skin_Jnt_Ctrl_Grp_scaleConstraint1.w0" "L_EyeLid_Lower_Skin_Jnt_Ctrl_Grp_scaleConstraint1.tg[0].tw"
+		;
+connectAttr "R_EyeLid_Lower_Skin_Jnt_Ctrl_Grp_parentConstraint1.ctx" "R_EyeLid_Lower_Skin_Jnt_Ctrl_Grp.tx"
+		;
+connectAttr "R_EyeLid_Lower_Skin_Jnt_Ctrl_Grp_parentConstraint1.cty" "R_EyeLid_Lower_Skin_Jnt_Ctrl_Grp.ty"
+		;
+connectAttr "R_EyeLid_Lower_Skin_Jnt_Ctrl_Grp_parentConstraint1.ctz" "R_EyeLid_Lower_Skin_Jnt_Ctrl_Grp.tz"
+		;
+connectAttr "R_EyeLid_Lower_Skin_Jnt_Ctrl_Grp_parentConstraint2.crx" "R_EyeLid_Lower_Skin_Jnt_Ctrl_Grp.rx"
+		;
+connectAttr "R_EyeLid_Lower_Skin_Jnt_Ctrl_Grp_parentConstraint2.cry" "R_EyeLid_Lower_Skin_Jnt_Ctrl_Grp.ry"
+		;
+connectAttr "R_EyeLid_Lower_Skin_Jnt_Ctrl_Grp_parentConstraint2.crz" "R_EyeLid_Lower_Skin_Jnt_Ctrl_Grp.rz"
+		;
+connectAttr "R_EyeLid_Lower_Skin_Jnt_Ctrl_Grp_scaleConstraint1.csx" "R_EyeLid_Lower_Skin_Jnt_Ctrl_Grp.sx"
+		;
+connectAttr "R_EyeLid_Lower_Skin_Jnt_Ctrl_Grp_scaleConstraint1.csy" "R_EyeLid_Lower_Skin_Jnt_Ctrl_Grp.sy"
+		;
+connectAttr "R_EyeLid_Lower_Skin_Jnt_Ctrl_Grp_scaleConstraint1.csz" "R_EyeLid_Lower_Skin_Jnt_Ctrl_Grp.sz"
+		;
+connectAttr "transformGeometry5.og" "R_EyeLid_Lower_Skin_Jnt_CtrlShape.cr";
+connectAttr "R_EyeLid_Lower_Skin_Jnt_Ctrl_Grp.ro" "R_EyeLid_Lower_Skin_Jnt_Ctrl_Grp_parentConstraint1.cro"
+		;
+connectAttr "R_EyeLid_Lower_Skin_Jnt_Ctrl_Grp.pim" "R_EyeLid_Lower_Skin_Jnt_Ctrl_Grp_parentConstraint1.cpim"
+		;
+connectAttr "R_EyeLid_Lower_Skin_Jnt_Ctrl_Grp.rp" "R_EyeLid_Lower_Skin_Jnt_Ctrl_Grp_parentConstraint1.crp"
+		;
+connectAttr "R_EyeLid_Lower_Skin_Jnt_Ctrl_Grp.rpt" "R_EyeLid_Lower_Skin_Jnt_Ctrl_Grp_parentConstraint1.crt"
+		;
+connectAttr "Head_Ctrl.t" "R_EyeLid_Lower_Skin_Jnt_Ctrl_Grp_parentConstraint1.tg[0].tt"
+		;
+connectAttr "Head_Ctrl.rp" "R_EyeLid_Lower_Skin_Jnt_Ctrl_Grp_parentConstraint1.tg[0].trp"
+		;
+connectAttr "Head_Ctrl.rpt" "R_EyeLid_Lower_Skin_Jnt_Ctrl_Grp_parentConstraint1.tg[0].trt"
+		;
+connectAttr "Head_Ctrl.r" "R_EyeLid_Lower_Skin_Jnt_Ctrl_Grp_parentConstraint1.tg[0].tr"
+		;
+connectAttr "Head_Ctrl.ro" "R_EyeLid_Lower_Skin_Jnt_Ctrl_Grp_parentConstraint1.tg[0].tro"
+		;
+connectAttr "Head_Ctrl.s" "R_EyeLid_Lower_Skin_Jnt_Ctrl_Grp_parentConstraint1.tg[0].ts"
+		;
+connectAttr "Head_Ctrl.pm" "R_EyeLid_Lower_Skin_Jnt_Ctrl_Grp_parentConstraint1.tg[0].tpm"
+		;
+connectAttr "R_EyeLid_Lower_Skin_Jnt_Ctrl_Grp_parentConstraint1.w0" "R_EyeLid_Lower_Skin_Jnt_Ctrl_Grp_parentConstraint1.tg[0].tw"
+		;
+connectAttr "R_EyeLid_Lower_Skin_Jnt_Ctrl.FollowTranslate" "R_EyeLid_Lower_Skin_Jnt_Ctrl_Grp_parentConstraint1.w0"
+		;
+connectAttr "R_EyeLid_Lower_Skin_Jnt_Ctrl_Grp.ro" "R_EyeLid_Lower_Skin_Jnt_Ctrl_Grp_parentConstraint2.cro"
+		;
+connectAttr "R_EyeLid_Lower_Skin_Jnt_Ctrl_Grp.pim" "R_EyeLid_Lower_Skin_Jnt_Ctrl_Grp_parentConstraint2.cpim"
+		;
+connectAttr "R_EyeLid_Lower_Skin_Jnt_Ctrl_Grp.rp" "R_EyeLid_Lower_Skin_Jnt_Ctrl_Grp_parentConstraint2.crp"
+		;
+connectAttr "R_EyeLid_Lower_Skin_Jnt_Ctrl_Grp.rpt" "R_EyeLid_Lower_Skin_Jnt_Ctrl_Grp_parentConstraint2.crt"
+		;
+connectAttr "Head_Ctrl.t" "R_EyeLid_Lower_Skin_Jnt_Ctrl_Grp_parentConstraint2.tg[0].tt"
+		;
+connectAttr "Head_Ctrl.rp" "R_EyeLid_Lower_Skin_Jnt_Ctrl_Grp_parentConstraint2.tg[0].trp"
+		;
+connectAttr "Head_Ctrl.rpt" "R_EyeLid_Lower_Skin_Jnt_Ctrl_Grp_parentConstraint2.tg[0].trt"
+		;
+connectAttr "Head_Ctrl.r" "R_EyeLid_Lower_Skin_Jnt_Ctrl_Grp_parentConstraint2.tg[0].tr"
+		;
+connectAttr "Head_Ctrl.ro" "R_EyeLid_Lower_Skin_Jnt_Ctrl_Grp_parentConstraint2.tg[0].tro"
+		;
+connectAttr "Head_Ctrl.s" "R_EyeLid_Lower_Skin_Jnt_Ctrl_Grp_parentConstraint2.tg[0].ts"
+		;
+connectAttr "Head_Ctrl.pm" "R_EyeLid_Lower_Skin_Jnt_Ctrl_Grp_parentConstraint2.tg[0].tpm"
+		;
+connectAttr "R_EyeLid_Lower_Skin_Jnt_Ctrl_Grp_parentConstraint2.w0" "R_EyeLid_Lower_Skin_Jnt_Ctrl_Grp_parentConstraint2.tg[0].tw"
+		;
+connectAttr "R_EyeLid_Lower_Skin_Jnt_Ctrl.FollowRotate" "R_EyeLid_Lower_Skin_Jnt_Ctrl_Grp_parentConstraint2.w0"
+		;
+connectAttr "R_EyeLid_Lower_Skin_Jnt_Ctrl_Grp.pim" "R_EyeLid_Lower_Skin_Jnt_Ctrl_Grp_scaleConstraint1.cpim"
+		;
+connectAttr "Head_Ctrl.s" "R_EyeLid_Lower_Skin_Jnt_Ctrl_Grp_scaleConstraint1.tg[0].ts"
+		;
+connectAttr "Head_Ctrl.pm" "R_EyeLid_Lower_Skin_Jnt_Ctrl_Grp_scaleConstraint1.tg[0].tpm"
+		;
+connectAttr "R_EyeLid_Lower_Skin_Jnt_Ctrl_Grp_scaleConstraint1.w0" "R_EyeLid_Lower_Skin_Jnt_Ctrl_Grp_scaleConstraint1.tg[0].tw"
 		;
 connectAttr "Spine_IKFK_Switch_Ctrl_Grp_parentConstraint1.ctx" "Spine_IKFK_Switch_Ctrl_Grp.tx"
 		;
@@ -40234,6 +41393,8 @@ connectAttr "R_Leg_Mid_Twist_Skin_Jnt.iog" "Skin_Export_Jnts.dsm" -na;
 connectAttr "R_Hip_Mid_Twist_Skin_Jnt.iog" "Skin_Export_Jnts.dsm" -na;
 connectAttr "L_Eyelid_Upper_Skin_Jnt.iog" "Skin_Export_Jnts.dsm" -na;
 connectAttr "R_Eyelid_Upper_Skin_Jnt.iog" "Skin_Export_Jnts.dsm" -na;
+connectAttr "R_EyeLid_Lower_Skin_Jnt.iog" "Skin_Export_Jnts.dsm" -na;
+connectAttr "L_EyeLid_Lower_Skin_Jnt.iog" "Skin_Export_Jnts.dsm" -na;
 connectAttr "torsoShapeOrig.w" "skinCluster2.ip[0].ig";
 connectAttr "torsoShapeOrig.o" "skinCluster2.orggeom[0]";
 connectAttr "bindPose2.msg" "skinCluster2.bp";
@@ -40429,6 +41590,8 @@ connectAttr "L_Foot_03_Skin_Jnt.msg" "bindPose2.m[77]";
 connectAttr "R_Foot_03_Skin_Jnt.msg" "bindPose2.m[78]";
 connectAttr "R_Leg_Mid_Twist_Skin_Jnt.msg" "bindPose2.m[79]";
 connectAttr "Hat_2_Skin_Jnt.msg" "bindPose2.m[80]";
+connectAttr "L_EyeLid_Lower_Skin_Jnt.msg" "bindPose2.m[81]";
+connectAttr "R_EyeLid_Lower_Skin_Jnt.msg" "bindPose2.m[82]";
 connectAttr "bindPose2.w" "bindPose2.p[0]";
 connectAttr "bindPose2.m[0]" "bindPose2.p[1]";
 connectAttr "bindPose2.m[1]" "bindPose2.p[2]";
@@ -40495,6 +41658,8 @@ connectAttr "bindPose2.m[54]" "bindPose2.p[77]";
 connectAttr "bindPose2.m[62]" "bindPose2.p[78]";
 connectAttr "bindPose2.m[59]" "bindPose2.p[79]";
 connectAttr "bindPose2.m[11]" "bindPose2.p[80]";
+connectAttr "bindPose2.m[10]" "bindPose2.p[81]";
+connectAttr "bindPose2.m[10]" "bindPose2.p[82]";
 connectAttr "R_Eyelid_Upper_Skin_Jnt.bps" "bindPose2.wm[66]";
 connectAttr "L_Eyelid_Upper_Skin_Jnt.bps" "bindPose2.wm[67]";
 connectAttr "R_Eye_Skin_Jnt.bps" "bindPose2.wm[69]";
@@ -40507,6 +41672,8 @@ connectAttr "L_Foot_03_Skin_Jnt.bps" "bindPose2.wm[77]";
 connectAttr "R_Foot_03_Skin_Jnt.bps" "bindPose2.wm[78]";
 connectAttr "R_Leg_Mid_Twist_Skin_Jnt.bps" "bindPose2.wm[79]";
 connectAttr "Hat_2_Skin_Jnt.bps" "bindPose2.wm[80]";
+connectAttr "L_EyeLid_Lower_Skin_Jnt.bps" "bindPose2.wm[81]";
+connectAttr "R_EyeLid_Lower_Skin_Jnt.bps" "bindPose2.wm[82]";
 connectAttr "skinCluster2.msg" "ngSkinToolsData_skinCluster2.sc";
 connectAttr "skinCluster2.og[0]" "groupParts4.ig";
 connectAttr "groupId139.id" "groupParts4.gi";
@@ -40521,6 +41688,8 @@ connectAttr "Jaw_Skin_Jnt.wm" "skinCluster3.ma[6]";
 connectAttr "L_Eye_Skin_Jnt.wm" "skinCluster3.ma[7]";
 connectAttr "Head_Skin_Jnt.wm" "skinCluster3.ma[8]";
 connectAttr "Neck_Skin_Jnt.wm" "skinCluster3.ma[10]";
+connectAttr "L_EyeLid_Lower_Skin_Jnt.wm" "skinCluster3.ma[11]";
+connectAttr "R_EyeLid_Lower_Skin_Jnt.wm" "skinCluster3.ma[12]";
 connectAttr "R_Eyelid_Upper_Skin_Jnt.liw" "skinCluster3.lw[0]";
 connectAttr "L_Eyelid_Upper_Skin_Jnt.liw" "skinCluster3.lw[1]";
 connectAttr "Hair_Skin_Jnt.liw" "skinCluster3.lw[2]";
@@ -40530,6 +41699,8 @@ connectAttr "Jaw_Skin_Jnt.liw" "skinCluster3.lw[6]";
 connectAttr "L_Eye_Skin_Jnt.liw" "skinCluster3.lw[7]";
 connectAttr "Head_Skin_Jnt.liw" "skinCluster3.lw[8]";
 connectAttr "Neck_Skin_Jnt.liw" "skinCluster3.lw[10]";
+connectAttr "L_EyeLid_Lower_Skin_Jnt.liw" "skinCluster3.lw[11]";
+connectAttr "R_EyeLid_Lower_Skin_Jnt.liw" "skinCluster3.lw[12]";
 connectAttr "R_Eyelid_Upper_Skin_Jnt.obcc" "skinCluster3.ifcl[0]";
 connectAttr "L_Eyelid_Upper_Skin_Jnt.obcc" "skinCluster3.ifcl[1]";
 connectAttr "Hair_Skin_Jnt.obcc" "skinCluster3.ifcl[2]";
@@ -40539,6 +41710,8 @@ connectAttr "Jaw_Skin_Jnt.obcc" "skinCluster3.ifcl[6]";
 connectAttr "L_Eye_Skin_Jnt.obcc" "skinCluster3.ifcl[7]";
 connectAttr "Head_Skin_Jnt.obcc" "skinCluster3.ifcl[8]";
 connectAttr "Neck_Skin_Jnt.obcc" "skinCluster3.ifcl[10]";
+connectAttr "L_EyeLid_Lower_Skin_Jnt.obcc" "skinCluster3.ifcl[11]";
+connectAttr "R_EyeLid_Lower_Skin_Jnt.obcc" "skinCluster3.ifcl[12]";
 connectAttr "bindPose2.msg" "skinCluster3.bp";
 connectAttr "headShapeOrig.w" "groupParts5.ig";
 connectAttr "groupId140.id" "groupParts5.gi";
@@ -40712,6 +41885,39 @@ connectAttr "bindPose3.m[5]" "bindPose3.p[6]";
 connectAttr "bindPose3.m[6]" "bindPose3.p[7]";
 connectAttr "bindPose3.m[7]" "bindPose3.p[8]";
 connectAttr "bindPose3.m[8]" "bindPose3.p[9]";
+connectAttr "makeNurbCircle6.oc" "transformGeometry5.ig";
+connectAttr "makeNurbCircle7.oc" "transformGeometry6.ig";
+connectAttr "eyebrowsShapeOrig.w" "skinCluster10.ip[0].ig";
+connectAttr "eyebrowsShapeOrig.o" "skinCluster10.orggeom[0]";
+connectAttr "bindPose4.msg" "skinCluster10.bp";
+connectAttr "L_Eyebrow_Jnt.wm" "skinCluster10.ma[0]";
+connectAttr "R_Eyebrow_Jnt.wm" "skinCluster10.ma[1]";
+connectAttr "L_Eyebrow_Jnt.liw" "skinCluster10.lw[0]";
+connectAttr "R_Eyebrow_Jnt.liw" "skinCluster10.lw[1]";
+connectAttr "L_Eyebrow_Jnt.obcc" "skinCluster10.ifcl[0]";
+connectAttr "R_Eyebrow_Jnt.obcc" "skinCluster10.ifcl[1]";
+connectAttr "TESTRIG.msg" "bindPose4.m[0]";
+connectAttr "Skeleton.msg" "bindPose4.m[1]";
+connectAttr "ROOT_SKIN_JNT.msg" "bindPose4.m[2]";
+connectAttr "CoG_Skin_Jnt.msg" "bindPose4.m[3]";
+connectAttr "Spine_01_Skin_Jnt.msg" "bindPose4.m[4]";
+connectAttr "Spine_02_Skin_Jnt.msg" "bindPose4.m[5]";
+connectAttr "Spine_03_Skin_Jnt.msg" "bindPose4.m[6]";
+connectAttr "Neck_Skin_Jnt.msg" "bindPose4.m[7]";
+connectAttr "Head_Skin_Jnt.msg" "bindPose4.m[8]";
+connectAttr "L_Eyebrow_Jnt.msg" "bindPose4.m[9]";
+connectAttr "R_Eyebrow_Jnt.msg" "bindPose4.m[10]";
+connectAttr "bindPose4.w" "bindPose4.p[0]";
+connectAttr "bindPose4.m[0]" "bindPose4.p[1]";
+connectAttr "bindPose4.m[1]" "bindPose4.p[2]";
+connectAttr "bindPose4.m[2]" "bindPose4.p[3]";
+connectAttr "bindPose4.m[3]" "bindPose4.p[4]";
+connectAttr "bindPose4.m[4]" "bindPose4.p[5]";
+connectAttr "bindPose4.m[5]" "bindPose4.p[6]";
+connectAttr "bindPose4.m[6]" "bindPose4.p[7]";
+connectAttr "bindPose4.m[7]" "bindPose4.p[8]";
+connectAttr "bindPose4.m[8]" "bindPose4.p[9]";
+connectAttr "bindPose4.m[8]" "bindPose4.p[10]";
 connectAttr "lambert2SG.pa" ":renderPartition.st" -na;
 connectAttr "CalebSIZEREFERENCE1:Pine_GeneratorSG.pa" ":renderPartition.st" -na;
 connectAttr "CalebSIZEREFERENCE1:Caleb_Geometry:lambert1SG.pa" ":renderPartition.st"
