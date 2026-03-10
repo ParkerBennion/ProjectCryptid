@@ -8,6 +8,7 @@ public class QuestItemBehavior : MonoBehaviour
     [SerializeField] private int questStepRequired;
     [SerializeField] private QuestIntData questReference;
     [SerializeField] private UnityEvent activateEvent, deactivateEvent;
+    [SerializeField] private bool useOnlyOnThisQuestStep;
 
     private void Awake()
     {
@@ -22,14 +23,15 @@ public class QuestItemBehavior : MonoBehaviour
     private void CheckQuestStep()
     {
         print("Checking quest step");
-        if (questReference.value >= questStepRequired)
-        {
-            activateEvent.Invoke();
-        }
-        else
+        if (questReference.value < questStepRequired ||
+            (useOnlyOnThisQuestStep && questReference.value != questStepRequired))
         {
             deactivateEvent.Invoke();
+            return;
         }
+
+        activateEvent.Invoke();
+        
     }
 
     private void Start()

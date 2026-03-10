@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5322151403632514510}
   - component: {fileID: 1913295502544700344}
   - component: {fileID: 6197135706057531752}
+  - component: {fileID: 1993483194891758488}
   m_Layer: 0
   m_Name: cryptid SpawnEncounter
   m_TagString: Untagged
@@ -63,6 +64,21 @@ MonoBehaviour:
   - {fileID: 8378682375668936758}
   - {fileID: 6156580305551071411}
   spawnedCryptids: []
+  mobDefeatedEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: dcb1cf6f5925f51429c80e0996656528, type: 2}
+        m_TargetAssemblyTypeName: QuestIntData, Assembly-CSharp
+        m_MethodName: ChangeValue
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &6197135706057531752
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -80,10 +96,51 @@ MonoBehaviour:
   questReference: {fileID: 11400000, guid: dcb1cf6f5925f51429c80e0996656528, type: 2}
   activateEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1913295502544700344}
+        m_TargetAssemblyTypeName: CryptidMobSpawn, Assembly-CSharp
+        m_MethodName: SpawnRandomCryptids
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   deactivateEvent:
     m_PersistentCalls:
       m_Calls: []
+  useOnlyOnThisQuestStep: 1
+--- !u!114 &1993483194891758488
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1742208143438739401}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90d357a6c2f980243ac392158b0e62fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deathGameAction: {fileID: 11400000, guid: 775e1f38c2b7d3d4c885ce7f1510a4bd, type: 2}
+  executeEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1913295502544700344}
+        m_TargetAssemblyTypeName: CryptidMobSpawn, Assembly-CSharp
+        m_MethodName: CheckRemainingCryptids
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2971292699516510696
 GameObject:
   m_ObjectHideFlags: 0
