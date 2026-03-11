@@ -4837,6 +4837,7 @@ GameObject:
   - component: {fileID: 506286644073979220}
   - component: {fileID: 3189350350101051135}
   - component: {fileID: 7509323715940281613}
+  - component: {fileID: 5684275832862670857}
   m_Layer: 3
   m_Name: TORCHLIGHT close
   m_TagString: Untagged
@@ -5003,6 +5004,19 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   callerAction: {fileID: 11400000, guid: 64bc3cda7612a4c4693ae692ff3273e4, type: 2}
+--- !u!114 &5684275832862670857
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 771223992967805526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 221bf4b7e7b15cc4eb331e0520fa3398, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pointLight: {fileID: 5470246187122093261}
 --- !u!1 &1102599369354472857
 GameObject:
   m_ObjectHideFlags: 0
