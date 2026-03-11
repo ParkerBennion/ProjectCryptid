@@ -4,6 +4,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "RangerQuestDialogue", menuName = "Scriptable Objects/RangerQuestDialogue")]
 public class RangerQuestDialogueSO : QuestDialogueKeeperSO
 {
+
     public override string[][] BigfootQuestDialogues { get; protected set; } = 
         {
             new string[] {//phase 1- nothing
@@ -11,7 +12,8 @@ public class RangerQuestDialogueSO : QuestDialogueKeeperSO
                 "Caleb, isn't it? I saw you with the visiting scout group",
                 "/something about being in the dark alone", 
                 "Have you met Crazy Dan?",
-                "/go find his camper"},
+                "/go find his camper"
+            },
             new string[] {//phase 2- spotted crazy dan's camper
                 "Howdy-do!",
                 "You found crazy Dan's camper?", 
@@ -28,7 +30,8 @@ public class RangerQuestDialogueSO : QuestDialogueKeeperSO
                 "*the ranger rubs her temples*",
                 "Last time he did this he tried to bag a tourist with a rather long beard so he could 'run tests'",
                 "Come to think of it, I did see a rather hairy man wandering around the old abandoned cabin doing some birdwatching, I hope dan hasn't found him",
-                "Go check on him and make sure Dan hasn't been bothering the poor guy or getting into his stuff"
+                "Go check on him at the abandoned cabin and make sure Dan hasn't been bothering the poor guy or getting into his stuff",
+                "ProgressQuest"
             },
             new string[]//phase 5 Searching for abandoned cabin
             {
@@ -41,6 +44,8 @@ public class RangerQuestDialogueSO : QuestDialogueKeeperSO
                 "You probably better not let Dan see you in that thing."
             }
         };
+
+    
     
 
     

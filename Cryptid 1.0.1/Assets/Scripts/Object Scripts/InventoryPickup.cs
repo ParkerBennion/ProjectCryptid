@@ -3,88 +3,83 @@ using UnityEngine;
 [DisallowMultipleComponent]
 public class InventoryPickup : MonoBehaviour
 {
-    //item options
+    //settings on conditions to allow this to be put into inventory
     [Header("Inventory")]
-    [Tooltip("Reference to the Boolean Inventory ScriptableObject.")]
     [SerializeField] private InventorySO inventory;
 
-    [Header("Item")]
-    [Tooltip("The exact itemName key to store in the inventory.")]
-    [SerializeField] private string itemName = "ItemName";
+    [Header("Item (UI Button Prefab)")]
+    [Tooltip("The UI Button prefab that represents this item in the inventory UI.")]
+    [SerializeField] private GameObject uiButtonPrefab;
 
-    [Tooltip("Value to set when picked up. Usually true.")]
-    [SerializeField] private bool setOwnedTo = true;
+    [Tooltip("How many of this item to add when picked up.")]
+    [SerializeField] private int amountToAdd = 1;
 
-    [Header("Pickup Behavior")]
-    [Tooltip("If true, will not run pickup again if inventory already has this item owned=true.")]
-    [SerializeField] private bool onlyIfNotOwned = true;
-    
+    [Tooltip("If true, only allows pickup if the player currently has 0 of this item.")]
+    [SerializeField] private bool onlyIfNotOwned = false;
+
     [Header("Pickup Trigger")]
-    [Tooltip("If you are using this item as a trigger to pick itself up or are using another method like the totem object.")]
-    [SerializeField] private bool triggerCollider = false;
+    [SerializeField] private bool triggerCollider = true;
 
-    [Tooltip("If true, destroys this GameObject after successful pickup.")]
+    [Tooltip("Tag required on the pickup trigger target.")]
+    [SerializeField] private string playerTag = "PlayerCharacter";
+
+    [Header("After Pickup")]
     [SerializeField] private bool destroyOnPickup = true;
 
-    [Tooltip("Optional: disable collider/renderer before destroy (useful if destroy is delayed).")]
-    [SerializeField] private bool disableVisualsOnPickup = true;
-
-    [Header("Debug")]
     [SerializeField] private bool logToConsole = false;
 
-    // Call this from trigger/click/interaction code
+    // Item ID is based on the UI prefab name (not this pickup object's name)
+    private string ItemID => uiButtonPrefab != null ? uiButtonPrefab.name : string.Empty;
+
     public void Pickup()
     {
-        //no inventory failsafe
         if (inventory == null)
         {
-            Debug.LogWarning($"{name}: No inventory assigned.", this);
+            Debug.LogWarning($"{name}: Inventory reference missing.", this);
             return;
         }
-        
-        //bad string failsafe
-        if (string.IsNullOrWhiteSpace(itemName))
-        {
-            Debug.LogWarning($"{name}: itemName is empty.", this);
-            return;
-        }
-        
-        //unique item only failsafe
-        if (onlyIfNotOwned && inventory.HasItem(itemName))
-        {
-            if (logToConsole) Debug.Log($"{name}: '{itemName}' already owned; pickup ignored.", this);
-            return;
-        }
-        
-        //sucsessfull pickup
-        inventory.SetItem(itemName, setOwnedTo);
-        if (logToConsole) Debug.Log($"{name}: Picked up '{itemName}', setOwnedTo={setOwnedTo}", this);
 
-        //destroy or disable on pickup option
+        if (uiButtonPrefab == null)
+        {
+            Debug.LogWarning($"{name}: UI Button Prefab not assigned.", this);
+            return;
+        }
+
+        if (string.IsNullOrWhiteSpace(ItemID))
+        {
+            Debug.LogWarning($"{name}: UI Button Prefab has no valid name for ItemID.", this);
+            return;
+        }
+
+        if (amountToAdd <= 0)
+        {
+            Debug.LogWarning($"{name}: amountToAdd must be > 0.", this);
+            return;
+        }
+
+        if (onlyIfNotOwned && inventory.GetAmount(ItemID) > 0)
+        {
+            if (logToConsole) Debug.Log($"{name}: '{ItemID}' already owned; pickup ignored.", this);
+            return;
+        }
+
+        inventory.AddItem(ItemID, amountToAdd);
+
+        if (logToConsole)
+            Debug.Log($"{name}: Picked up '{ItemID}' (+{amountToAdd}). New amount={inventory.GetAmount(ItemID)}", this);
+
         if (destroyOnPickup)
-        {
-            if (disableVisualsOnPickup)
-            {
-                // Disable common visuals/colliders immediately
-                var col = GetComponent<Collider>();
-                if (col) col.enabled = false;
-
-                var col2D = GetComponent<Collider2D>();
-                if (col2D) col2D.enabled = false;
-
-                foreach (var r in GetComponentsInChildren<Renderer>())
-                    r.enabled = false;
-            }
-
             Destroy(gameObject);
-        }
     }
 
-    // Simple default: auto-pickup on trigger
     private void OnTriggerEnter(Collider other)
     {
-        if (!other.CompareTag("PlayerCharacter") || triggerCollider == false) return;
+        if (!triggerCollider) return;
+        if (!other.CompareTag(playerTag)) return;
 
         Pickup();
     }
+
+    // Optional: expose the prefab (useful if you want to preview or debug)
+    public GameObject GetUIPrefab() => uiButtonPrefab;
 }

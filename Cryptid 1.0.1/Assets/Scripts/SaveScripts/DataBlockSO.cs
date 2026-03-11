@@ -9,10 +9,16 @@ public class DataBlockSO : ScriptableObject
     public string playerName;
     public bool hasCompletedTutorial;
     public bool initialBoot = false;
+    
 
     [Header("Stats")]
     public int logs = 0;
     //logs is tied to other scripts and for simplicity must stay logs
+
+    [Header("Display Info")] 
+    public int screenWidth;
+
+    public int screenHeight;
     
     
     public int coins = 0;

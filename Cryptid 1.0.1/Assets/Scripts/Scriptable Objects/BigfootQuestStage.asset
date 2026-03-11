@@ -9,7 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea6227c4a1cb0a54d857bd1afdadfd67, type: 3}
+  m_Script: {fileID: 11500000, guid: 30a5fe0fa4deac246ba7ee75ba004578, type: 3}
   m_Name: BigfootQuestStage
   m_EditorClassIdentifier: 
-  value: 2
+  value: 0
+  updateItemsAction: {fileID: 11400000, guid: 634ed8c8c16f20845ababdc5b021cab2, type: 2}
