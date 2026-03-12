@@ -1,21 +1,67 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class BlackLightData : MonoBehaviour
 {
-    [SerializeField] private Light pointLight;
+    private static readonly int TorchSwitch = Shader.PropertyToID("_TorchSwitch");
+    private static readonly int PointLightPosition = Shader.PropertyToID("_PointLightPosition");
+    private bool running, torchOn = false;
+    [SerializeField] private List<GameObject> blackLightObjects = new List<GameObject>();
+    private Coroutine _currentRoutine;
+    [SerializeField] private TorchSO torch;
+    [SerializeField]private float torchValue;
 
-    void Update()
+
+    private void Awake()
     {
-        // if (pointLight == null)
-        // {
-        //     return;
-        // }
-        //null check if you find its needed
+        torch.torchChange += RespondToTorch;
+    }
 
-        Shader.SetGlobalVector("_PointLightPosition", pointLight.transform.position);
-        
-        
-        //Shader.SetGlobalFloat("_LightRange", pointLight.range);
-        //if you find you need to change _lightRange variable found in the shader this is how its accessed.
+    private IEnumerator RunBlacklight()
+    {
+        WaitForEndOfFrame wff= new WaitForEndOfFrame();
+        while (running)
+        {
+            yield return wff;
+            Shader.SetGlobalVector(PointLightPosition, transform.position);
+            Shader.SetGlobalFloat(TorchSwitch, torchValue);
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("HighlightObject"))
+        {
+            if (blackLightObjects.Count <= 0)
+            {
+                running = true;
+                StartCoroutine(RunBlacklight());
+            }
+            blackLightObjects.Add(other.gameObject);
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.CompareTag("HighlightObject"))
+        {
+            blackLightObjects.Remove(other.gameObject);
+            if (blackLightObjects.Count == 0)
+            {
+                running = false;
+            }
+        }
+    }
+
+    private void RespondToTorch(bool isOn)
+    {
+        torchValue = isOn ? 1 : 0;
+    }
+
+    private void OnDestroy()
+    {
+        torch.torchChange -= RespondToTorch;
     }
 }
