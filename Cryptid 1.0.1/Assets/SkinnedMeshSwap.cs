@@ -11,9 +11,11 @@ public class SkinnedMeshSwap : MonoBehaviour
     private bool isSwapped;
     private void Awake()
     {
+        
         mRenderer = GetComponent<SkinnedMeshRenderer>();
         defaultMesh = mRenderer.sharedMesh;
         defaultMaterial = mRenderer.sharedMaterial;
+        print(alternateMesh+"Is the renderer");
     }
 
     private void Start()
@@ -30,6 +32,7 @@ public class SkinnedMeshSwap : MonoBehaviour
 
     public void SwapAlternateSkin()
     {
+        Debug.Log($"mRenderer={mRenderer}, alternateMesh={alternateMesh}, alternateMaterial={alternateMaterial}");
         mRenderer.sharedMesh = alternateMesh;
         mRenderer.sharedMaterial = alternateMaterial;
         isSwapped=true;
