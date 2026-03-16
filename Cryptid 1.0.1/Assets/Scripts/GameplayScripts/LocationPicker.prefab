@@ -48,7 +48,7 @@ MonoBehaviour:
   spawnList:
   - {fileID: 2991476186398601165, guid: 9d9546a018104954481ea27b5f25f00a, type: 3}
   - {fileID: 1576348882820557418, guid: 1cb28a530fbadef45865903f339588e9, type: 3}
-  - {fileID: 7293230813119628184, guid: e513935aa9dee364b8c84424b3478611, type: 3}
+  - {fileID: 2991476186398601165, guid: a2bae66c33598294e916736e996df8e8, type: 3}
   signPosts: []
   signPostMaterials:
   - {fileID: 2100000, guid: 9ef832fa6572cda4593e92d376bbf342, type: 2}

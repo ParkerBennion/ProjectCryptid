@@ -35,6 +35,7 @@ public class DanQuestDialogueSO : QuestDialogueKeeperSO
         new string[]
         {
             //phase 4 defended the firetower
+            "Chris!",
             "You defended the firetower?",
             "I bet Ellie appreciated that.",
             "Have you checked on her?"

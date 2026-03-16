@@ -11,7 +11,6 @@ public class SpawnRandomItem : MonoBehaviour
     private void Start()
     {
         SpawnItemFromList();
-        print("SpawnRandomItem");
     }
 
     public virtual void SpawnItemFromList()

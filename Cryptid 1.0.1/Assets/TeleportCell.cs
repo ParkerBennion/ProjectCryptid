@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class FireTower : MonoBehaviour
+public class TeleportCell : MonoBehaviour
 {
     [SerializeField]private Transform insideSpawn, outsideSpawn;
     [SerializeField] private GameObject playerCharacter;
