@@ -166,4 +166,5 @@ public class PlayerDataManager : MonoBehaviour
 
         public System.Collections.Generic.List<ItemEntry> items = new();
     }
+    
 }
