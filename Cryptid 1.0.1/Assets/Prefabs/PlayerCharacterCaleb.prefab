@@ -295,6 +295,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   visualizeHitbox: {fileID: 2825763773684102947}
   lightAttackFX: {fileID: 9085155475553888556}
+  audioManager: {fileID: 11400000, guid: 57492b9912b58194283468dc23b6ce4f, type: 2}
+  lightAttackSound:
+    Guid:
+      Data1: 1050600341
+      Data2: 1178005988
+      Data3: -1233085004
+      Data4: 1861520923
+    Path: event:/Swoosh
   damageMultiplier: 0
   lightDamage: 4
   heavyDamage: 10

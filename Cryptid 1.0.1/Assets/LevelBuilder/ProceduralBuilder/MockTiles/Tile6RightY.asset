@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Tile6RightY
   m_EditorClassIdentifier: 
   variations:
-  - {fileID: 5650620722496709884, guid: c6ab204d462a06b4e9a92f287cbeeb16, type: 3}
+  - {fileID: 496388384535851658, guid: 34c62d8ec742165479f7a1fd61303821, type: 3}

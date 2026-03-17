@@ -9,9 +9,18 @@ public class Tile : MonoBehaviour
     public int[] borderCode;// start at top move clockwise
     public NavMeshData tileNavMeshData;
     public NavMeshSurface navMesh;
+    [SerializeField] private GameObject assetsPrefab;
     private void Awake()
     {
         tileNavMeshData = navMesh.navMeshData;
+    }
+
+    public void SpawnAssets()
+    {
+        assetsPrefab = Instantiate(assetsPrefab, 
+            gameObject.transform.position, 
+            transform.rotation, 
+            transform);
     }
 
     private void Start()

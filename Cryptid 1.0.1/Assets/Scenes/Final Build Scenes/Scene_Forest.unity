@@ -616,63 +616,6 @@ MonoBehaviour:
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
   m_SoftShadowQuality: 0
---- !u!1001 &82921712
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1576348882820557418, guid: 1cb28a530fbadef45865903f339588e9, type: 3}
-      propertyPath: m_Name
-      value: CamperTrailer
-      objectReference: {fileID: 0}
-    - target: {fileID: 7853084015044439146, guid: 1cb28a530fbadef45865903f339588e9, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 21.454325
-      objectReference: {fileID: 0}
-    - target: {fileID: 7853084015044439146, guid: 1cb28a530fbadef45865903f339588e9, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.0000009536743
-      objectReference: {fileID: 0}
-    - target: {fileID: 7853084015044439146, guid: 1cb28a530fbadef45865903f339588e9, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -16.065289
-      objectReference: {fileID: 0}
-    - target: {fileID: 7853084015044439146, guid: 1cb28a530fbadef45865903f339588e9, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7853084015044439146, guid: 1cb28a530fbadef45865903f339588e9, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7853084015044439146, guid: 1cb28a530fbadef45865903f339588e9, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7853084015044439146, guid: 1cb28a530fbadef45865903f339588e9, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7853084015044439146, guid: 1cb28a530fbadef45865903f339588e9, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7853084015044439146, guid: 1cb28a530fbadef45865903f339588e9, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7853084015044439146, guid: 1cb28a530fbadef45865903f339588e9, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 1cb28a530fbadef45865903f339588e9, type: 3}
 --- !u!95 &93635067 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 6228810832932100831, guid: 61e698375a157dd4bb5195a0371f7855, type: 3}
@@ -694,7 +637,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &140217391
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1682,10 +1625,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1098766434}
   - component: {fileID: 1098766433}
-  - component: {fileID: 1098766432}
   - component: {fileID: 1098766435}
   - component: {fileID: 1098766436}
   - component: {fileID: 1098766437}
+  - component: {fileID: 1098766438}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1693,14 +1636,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &1098766432
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1098766431}
-  m_Enabled: 1
 --- !u!20 &1098766433
 Camera:
   m_ObjectHideFlags: 0
@@ -1872,6 +1807,20 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   callerAction: {fileID: 11400000, guid: e7541975146870c408c725e65db9f5d8, type: 2}
+--- !u!114 &1098766438
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1098766431}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nonRigidbodyVelocity: 0
+  attenuationObject: {fileID: 0}
 --- !u!1001 &1100078371
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3552,5 +3501,4 @@ SceneRoots:
   - {fileID: 1969074130}
   - {fileID: 1708245546}
   - {fileID: 1088480736}
-  - {fileID: 82921712}
   - {fileID: 1638919571}
