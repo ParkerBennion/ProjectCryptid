@@ -1934,17 +1934,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b9be03c6825b51944b38135995a76acc, type: 3}
---- !u!114 &1186353374 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 222381996225232229, guid: 822471273de72e84f851d2676261c548, type: 3}
-  m_PrefabInstance: {fileID: 1969074130}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 56966d224e0562a4fb7ed1cfcdc355c9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!43 &1333294011
 Mesh:
   m_ObjectHideFlags: 0
@@ -3536,46 +3525,6 @@ PrefabInstance:
     - target: {fileID: 7835740818892888821, guid: 822471273de72e84f851d2676261c548, type: 3}
       propertyPath: m_Name
       value: WispPickup
-      objectReference: {fileID: 0}
-    - target: {fileID: 8525139497039914582, guid: 822471273de72e84f851d2676261c548, type: 3}
-      propertyPath: detectEvent.m_PersistentCalls.m_Calls.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 8525139497039914582, guid: 822471273de72e84f851d2676261c548, type: 3}
-      propertyPath: detectEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8525139497039914582, guid: 822471273de72e84f851d2676261c548, type: 3}
-      propertyPath: detectEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Target
-      value: 
-      objectReference: {fileID: 1186353374}
-    - target: {fileID: 8525139497039914582, guid: 822471273de72e84f851d2676261c548, type: 3}
-      propertyPath: detectEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Target
-      value: 
-      objectReference: {fileID: 1186353374}
-    - target: {fileID: 8525139497039914582, guid: 822471273de72e84f851d2676261c548, type: 3}
-      propertyPath: detectEvent.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8525139497039914582, guid: 822471273de72e84f851d2676261c548, type: 3}
-      propertyPath: detectEvent.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: StartCountdown
-      objectReference: {fileID: 0}
-    - target: {fileID: 8525139497039914582, guid: 822471273de72e84f851d2676261c548, type: 3}
-      propertyPath: detectEvent.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
-      value: StartCountdown
-      objectReference: {fileID: 0}
-    - target: {fileID: 8525139497039914582, guid: 822471273de72e84f851d2676261c548, type: 3}
-      propertyPath: detectEvent.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
-      value: DelayedEventBehavior, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 8525139497039914582, guid: 822471273de72e84f851d2676261c548, type: 3}
-      propertyPath: detectEvent.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
-      value: DelayedEventBehavior, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 8525139497039914582, guid: 822471273de72e84f851d2676261c548, type: 3}
-      propertyPath: detectEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
