@@ -9,7 +9,7 @@ public class Tile : MonoBehaviour
     public int[] borderCode;// start at top move clockwise
     public NavMeshData tileNavMeshData;
     public NavMeshSurface navMesh;
-    [SerializeField] private GameObject assetsPrefab;
+    [SerializeField] private GameObject assetsPrefab, assetsObj;
     private void Awake()
     {
         tileNavMeshData = navMesh.navMeshData;
@@ -17,16 +17,25 @@ public class Tile : MonoBehaviour
 
     public void SpawnAssets()
     {
-        assetsPrefab = Instantiate(assetsPrefab, 
-            gameObject.transform.position, 
-            transform.rotation, 
+        if(assetsObj != null)
+        {
+            assetsObj.SetActive(true);
+            return;
+        }
+        assetsObj = Instantiate(assetsPrefab,
+            gameObject.transform.position,
+            transform.rotation,
             transform);
     }
 
-    private void Start()
+    public void DespawnAssets()
     {
-        
+        if (assetsObj != null)
+        {
+            assetsObj.SetActive(false);
+        }
     }
+
 
     private void RotateBorderCode(int numRotate)
     {

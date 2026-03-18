@@ -27,8 +27,6 @@ public class SpawnRandomLocation : SpawnRandomItem
                 projector.material = signPostMaterials[itemIndex];
             }
         }
-
         forceSpawnSO.SetValue(0);
-
     }
 }

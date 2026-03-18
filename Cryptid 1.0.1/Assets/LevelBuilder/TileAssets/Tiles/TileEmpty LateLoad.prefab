@@ -81,10 +81,13 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 7824857449280336981}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+  unDetectEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8335425067657842057}
+        m_TargetAssemblyTypeName: Tile, Assembly-CSharp
+        m_MethodName: DespawnAssets
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -93,9 +96,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  unDetectEvent:
-    m_PersistentCalls:
-      m_Calls: []
   playerParameterEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -206,6 +206,7 @@ MonoBehaviour:
   tileNavMeshData: {fileID: 0}
   navMesh: {fileID: 1721792267630145328}
   assetsPrefab: {fileID: 6039386445356745190, guid: 5855982340b4b9745a06e7b1343086ad, type: 3}
+  assetsObj: {fileID: 0}
 --- !u!114 &1721792267630145328
 MonoBehaviour:
   m_ObjectHideFlags: 0

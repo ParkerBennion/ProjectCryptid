@@ -5,12 +5,14 @@ using Random = UnityEngine.Random;
 public class SpawnRandomItem : MonoBehaviour
 {
     [SerializeField] protected GameObject[] spawnList;
+    [SerializeField] private bool SpawnOnCreation;
 /// <summary>
 /// Spawns a random object from spawn list as a child of this object
 /// </summary>
     private void Start()
     {
-        SpawnItemFromList();
+        if(SpawnOnCreation)
+            SpawnItemFromList();
     }
 
     public virtual void SpawnItemFromList()
