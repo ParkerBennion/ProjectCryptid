@@ -1,92 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &504762059032307580
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4074879055685962032}
-  - component: {fileID: 8957792547659701924}
-  - component: {fileID: 248033655785373889}
-  m_Layer: 11
-  m_Name: LoadTrigger
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4074879055685962032
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 504762059032307580}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 5663962165267839324}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!135 &8957792547659701924
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 504762059032307580}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 25
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &248033655785373889
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 504762059032307580}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b8e655aa11ba504aa5cc810e57194f9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  detectEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1421311363033618688}
-        m_TargetAssemblyTypeName: SpawnRandomLocation, Assembly-CSharp
-        m_MethodName: SpawnItemFromList
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  unDetectEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  playerParameterEvent:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!1 &3476620454529278428
 GameObject:
   m_ObjectHideFlags: 0
@@ -97,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5663962165267839324}
   - component: {fileID: 1421311363033618688}
+  - component: {fileID: 2597834805287052485}
   m_Layer: 11
   m_Name: LocationPicker
   m_TagString: Untagged
@@ -118,7 +32,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6047622512910508888}
-  - {fileID: 4074879055685962032}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1421311363033618688
@@ -144,6 +57,35 @@ MonoBehaviour:
   - {fileID: 2100000, guid: 6a359894f47712e4ca0b790e440fc580, type: 2}
   - {fileID: 2100000, guid: 6a66f61312518db4aaeda37fa71c146d, type: 2}
   forceSpawnSO: {fileID: 11400000, guid: 35129030a446a504d843866b8c1075f7, type: 2}
+--- !u!114 &2597834805287052485
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3476620454529278428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56966d224e0562a4fb7ed1cfcdc355c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thisEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1421311363033618688}
+        m_TargetAssemblyTypeName: SpawnRandomLocation, Assembly-CSharp
+        m_MethodName: SpawnItemFromList
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  delay: 0.5
+  startOnStart: 1
 --- !u!1 &9002180725118067643
 GameObject:
   m_ObjectHideFlags: 0

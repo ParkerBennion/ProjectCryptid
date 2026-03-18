@@ -18,7 +18,7 @@ public class SpawnRandomLocation : SpawnRandomItem
             itemIndex = Random.Range(0, spawnList.Length);
         }
 
-        Instantiate(spawnList[itemIndex], transform.position, Quaternion.identity, this.transform);
+        Instantiate(spawnList[itemIndex], transform.position, Quaternion.identity, this.transform.parent.parent);
         foreach (GameObject signPost in signPosts)
         {
             DecalProjector[] projectors = signPost.GetComponentsInChildren<DecalProjector>();
