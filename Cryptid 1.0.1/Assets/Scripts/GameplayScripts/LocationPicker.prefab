@@ -54,6 +54,7 @@ MonoBehaviour:
   - {fileID: 2100000, guid: 9ef832fa6572cda4593e92d376bbf342, type: 2}
   - {fileID: 2100000, guid: 6a359894f47712e4ca0b790e440fc580, type: 2}
   - {fileID: 2100000, guid: 6a66f61312518db4aaeda37fa71c146d, type: 2}
+  forceSpawnSO: {fileID: 11400000, guid: 35129030a446a504d843866b8c1075f7, type: 2}
 --- !u!1 &9002180725118067643
 GameObject:
   m_ObjectHideFlags: 0

@@ -5,9 +5,19 @@ public class SpawnRandomLocation : SpawnRandomItem
 {
     [SerializeField] private GameObject[] signPosts;
     [SerializeField] private Material[] signPostMaterials;
+    [SerializeField] private IntData forceSpawnSO;
     public override void SpawnItemFromList()
     {
-        int itemIndex = Random.Range(0, spawnList.Length);
+        int itemIndex;
+        if (forceSpawnSO.GetValue() != 0)
+        {
+            itemIndex = forceSpawnSO.GetValue()-1;
+        }
+        else
+        {
+            itemIndex = Random.Range(0, spawnList.Length);
+        }
+
         Instantiate(spawnList[itemIndex], transform.position, Quaternion.identity, this.transform);
         foreach (GameObject signPost in signPosts)
         {
@@ -17,6 +27,8 @@ public class SpawnRandomLocation : SpawnRandomItem
                 projector.material = signPostMaterials[itemIndex];
             }
         }
-        
+
+        forceSpawnSO.SetValue(0);
+
     }
 }
