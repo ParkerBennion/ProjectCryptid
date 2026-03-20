@@ -35,6 +35,7 @@ Transform:
   - {fileID: 4150431493315233166}
   - {fileID: 1590000854300656069}
   - {fileID: 3686995091515886236}
+  - {fileID: 3980258672163935614}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &3026320366572034741
@@ -51,6 +52,128 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minYAngle: 200
   maxYAngle: 300
+--- !u!1 &4256433836690003880
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3980258672163935614}
+  - component: {fileID: 7657741016506612101}
+  - component: {fileID: 3533064745607981944}
+  - component: {fileID: 4967857111638869424}
+  m_Layer: 0
+  m_Name: Bigfoot initial Quest Progression Trigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3980258672163935614
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4256433836690003880}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7853084015044439146}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &7657741016506612101
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4256433836690003880}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 10
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &3533064745607981944
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4256433836690003880}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1b2d1645894d264bbb016179f2fd89d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  refreshCall: {fileID: 11400000, guid: 634ed8c8c16f20845ababdc5b021cab2, type: 2}
+  questStepRequired: 1
+  questReference: {fileID: 11400000, guid: dcb1cf6f5925f51429c80e0996656528, type: 2}
+  activateEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  deactivateEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4256433836690003880}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  useOnlyOnThisQuestStep: 1
+--- !u!114 &4967857111638869424
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4256433836690003880}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b8e655aa11ba504aa5cc810e57194f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  detectEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: dcb1cf6f5925f51429c80e0996656528, type: 2}
+        m_TargetAssemblyTypeName: QuestIntData, Assembly-CSharp
+        m_MethodName: ChangeValue
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  unDetectEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  playerParameterEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &6312398580928800412
 GameObject:
   m_ObjectHideFlags: 0

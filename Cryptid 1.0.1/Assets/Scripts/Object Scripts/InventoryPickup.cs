@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 [DisallowMultipleComponent]
 public class InventoryPickup : MonoBehaviour
@@ -23,7 +24,8 @@ public class InventoryPickup : MonoBehaviour
     [Tooltip("Tag required on the pickup trigger target.")]
     [SerializeField] private string playerTag = "PlayerCharacter";
 
-    [Header("After Pickup")]
+    [Header("After Pickup")] 
+    [SerializeField] private UnityEvent pickupEvent;//I've just added this event for when the item is picked up - Nate
     [SerializeField] private bool destroyOnPickup = true;
 
     [SerializeField] private bool logToConsole = false;
@@ -62,7 +64,7 @@ public class InventoryPickup : MonoBehaviour
             if (logToConsole) Debug.Log($"{name}: '{ItemID}' already owned; pickup ignored.", this);
             return;
         }
-
+        pickupEvent?.Invoke();// event implementation - Nate
         inventory.AddItem(ItemID, amountToAdd);
 
         if (logToConsole)
