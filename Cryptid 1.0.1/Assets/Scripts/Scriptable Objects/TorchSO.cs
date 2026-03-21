@@ -7,6 +7,7 @@ public class TorchSO : ScriptableObject
     [SerializeField] private GameAction torchOnAction, torchOffAction;
     [SerializeField] private bool torchIsActive;
     public UnityAction<bool> torchChange;
+    public bool isDisguised;
 
     public void ToggleTorch()
     {

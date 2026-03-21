@@ -9,6 +9,7 @@ public class SkinnedMeshSwap : MonoBehaviour
     [SerializeField] private Material alternateMaterial;
     private Material defaultMaterial;
     private bool isSwapped;
+    [SerializeField] private TorchSO calebInfo;
     private void Awake()
     {
         
@@ -21,6 +22,7 @@ public class SkinnedMeshSwap : MonoBehaviour
     private void Start()
     {
         isSwapped = false;
+        calebInfo.isDisguised = false;
     }
 
     public void SwapSkin(Mesh mesh, Material material)
@@ -47,6 +49,7 @@ public class SkinnedMeshSwap : MonoBehaviour
 
     public void ToggleSkin()
     {
+        calebInfo.isDisguised=!calebInfo.isDisguised;
         if(!isSwapped)
         {
             SwapAlternateSkin();

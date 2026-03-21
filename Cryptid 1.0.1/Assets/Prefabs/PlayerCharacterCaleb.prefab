@@ -217,7 +217,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
@@ -32272,6 +32272,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   alternateMesh: {fileID: 4173320732811623066, guid: ce0ed509576383447a6ad30585349d97, type: 3}
   alternateMaterial: {fileID: 2100000, guid: 8925b98f0236b2140884925365380cab, type: 2}
+  calebInfo: {fileID: 11400000, guid: 5d112b78f37dda646a93d2fd7ed1babe, type: 2}
 --- !u!114 &8248975939401063010
 MonoBehaviour:
   m_ObjectHideFlags: 0
