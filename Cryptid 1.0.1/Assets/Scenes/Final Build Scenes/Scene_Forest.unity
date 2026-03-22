@@ -1303,60 +1303,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &404493045
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 404493043}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b8e655aa11ba504aa5cc810e57194f9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  detectEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 404493048}
-        m_TargetAssemblyTypeName: DanFreakoutCheck, Assembly-CSharp
-        m_MethodName: TriggerCheck
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: DanFreakout
-          m_BoolArgument: 0
-        m_CallState: 2
-  unDetectEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  playerParameterEvent:
-    m_PersistentCalls:
-      m_Calls: []
---- !u!135 &404493046
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 404493043}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 6
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!4 &404493047 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 03a90479ef7ae4a409fb4e7781895f78, type: 3}
@@ -1375,6 +1321,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   calebInfo: {fileID: 11400000, guid: 5d112b78f37dda646a93d2fd7ed1babe, type: 2}
+  detectRange: 6
 --- !u!1001 &535277660
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1432,12 +1379,6 @@ PrefabInstance:
     - {fileID: 5177392578346165731, guid: 03a90479ef7ae4a409fb4e7781895f78, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 03a90479ef7ae4a409fb4e7781895f78, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 404493046}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 03a90479ef7ae4a409fb4e7781895f78, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 404493045}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 03a90479ef7ae4a409fb4e7781895f78, type: 3}
       insertIndex: -1
       addedObject: {fileID: 404493044}

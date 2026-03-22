@@ -6,8 +6,9 @@ public class TorchSO : ScriptableObject
 {
     [SerializeField] private GameAction torchOnAction, torchOffAction;
     [SerializeField] private bool torchIsActive;
+    [SerializeField]private bool isDisguised;
     public UnityAction<bool> torchChange;
-    public bool isDisguised;
+    public UnityAction<bool> suitChange;
 
     public void ToggleTorch()
     {
@@ -24,11 +25,28 @@ public class TorchSO : ScriptableObject
         torchChange.Invoke(torchIsActive);
     }
 
+    public bool GetDisguised()
+    {
+        return isDisguised;
+    }
+
+    public void SetDisguised(bool value)
+    {
+        isDisguised = value;
+    }
+    public void ToggleSuit()
+    {
+        isDisguised=!isDisguised;
+        suitChange.Invoke(isDisguised);
+    }
+
     public bool GetTorchStatus()
     {
         return torchIsActive;
     }
-
+    
+    
+    
     public void SetTorchStatus(bool status)
     {
         if(status)torchOnAction.RaiseAction();
