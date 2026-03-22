@@ -5,6 +5,7 @@ using UnityEngine;
 public class InventoryDataBaseSO : ScriptableObject
 {
     public List<GameObject> itemPrefabs;
+    
 
     public GameObject Get(string id)
     {

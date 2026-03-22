@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Tile8EqualSplit
   m_EditorClassIdentifier: 
   variations:
-  - {fileID: 5650620722496709884, guid: 8d25c405e1905c34cbae51bae47d508c, type: 3}
+  - {fileID: 5225483443880286461, guid: 31308522c0ee4fd41856bf3dc0bb0a07, type: 3}

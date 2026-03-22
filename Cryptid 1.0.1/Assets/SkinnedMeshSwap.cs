@@ -9,8 +9,10 @@ public class SkinnedMeshSwap : MonoBehaviour
     [SerializeField] private Material alternateMaterial;
     private Material defaultMaterial;
     private bool isSwapped;
+    [SerializeField] private TorchSO calebInfo;
     private void Awake()
     {
+        calebInfo.suitChange += ReadSuitStatus;
         mRenderer = GetComponent<SkinnedMeshRenderer>();
         defaultMesh = mRenderer.sharedMesh;
         defaultMaterial = mRenderer.sharedMaterial;
@@ -19,6 +21,7 @@ public class SkinnedMeshSwap : MonoBehaviour
     private void Start()
     {
         isSwapped = false;
+        calebInfo.SetDisguised(false);
     }
 
     public void SwapSkin(Mesh mesh, Material material)
@@ -30,6 +33,7 @@ public class SkinnedMeshSwap : MonoBehaviour
 
     public void SwapAlternateSkin()
     {
+        //Debug.Log($"mRenderer={mRenderer}, alternateMesh={alternateMesh}, alternateMaterial={alternateMaterial}");
         mRenderer.sharedMesh = alternateMesh;
         mRenderer.sharedMaterial = alternateMaterial;
         isSwapped=true;
@@ -41,14 +45,20 @@ public class SkinnedMeshSwap : MonoBehaviour
         mRenderer.sharedMaterial = defaultMaterial;
         isSwapped = false;
     }
+    
 
-    public void ToggleSkin()
+    public void ReadSuitStatus(bool isDisguised)
     {
-        if(!isSwapped)
+        if (isDisguised)
         {
             SwapAlternateSkin();
             return;
         }
         SwapDefaultSkin();
+    }
+
+    private void OnDestroy()
+    {
+        calebInfo.suitChange -= ReadSuitStatus;
     }
 }

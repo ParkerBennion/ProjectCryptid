@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Tile1Empty
   m_EditorClassIdentifier: 
   variations:
-  - {fileID: 5650620722496709884, guid: 086573c159c6f9e419bf5b6f524e0d87, type: 3}
+  - {fileID: 8734592373889062366, guid: bfc6d45d6e87edb47a24a6270cf641c1, type: 3}
