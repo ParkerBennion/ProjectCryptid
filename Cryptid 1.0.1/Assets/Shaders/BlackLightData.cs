@@ -10,13 +10,13 @@ public class BlackLightData : MonoBehaviour
     private bool running, torchOn = false;
     [SerializeField] private List<GameObject> blackLightObjects = new List<GameObject>();
     private Coroutine _currentRoutine;
-    [SerializeField] private TorchSO torch;
+    [SerializeField] private PlayerInfoSO playerInfo;
     [SerializeField]private float torchValue;
 
 
     private void Awake()
     {
-        torch.torchChange += RespondToTorch;
+        playerInfo.torchChange += RespondToTorch;
     }
 
     private IEnumerator RunBlacklight()
@@ -62,6 +62,6 @@ public class BlackLightData : MonoBehaviour
 
     private void OnDestroy()
     {
-        torch.torchChange -= RespondToTorch;
+        playerInfo.torchChange -= RespondToTorch;
     }
 }

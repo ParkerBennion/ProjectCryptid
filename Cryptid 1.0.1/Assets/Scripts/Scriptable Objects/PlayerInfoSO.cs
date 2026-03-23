@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.Events;
 
 [CreateAssetMenu]
-public class TorchSO : ScriptableObject
+public class PlayerInfoSO : ScriptableObject
 {
     [SerializeField] private GameAction torchOnAction, torchOffAction;
     [SerializeField] private bool torchIsActive;

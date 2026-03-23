@@ -23,4 +23,4 @@ MonoBehaviour:
   jackalopeInstance: {fileID: 0}
   detectionRange: 8.5
   despawnRange: 20
-  TorchSo: {fileID: 11400000, guid: 5d112b78f37dda646a93d2fd7ed1babe, type: 2}
+  playerInfoSo: {fileID: 11400000, guid: 5d112b78f37dda646a93d2fd7ed1babe, type: 2}

@@ -3,7 +3,7 @@ using System.Collections;
 using UnityEngine;
 public class DanFreakoutCheck : MonoBehaviour
 {
-    [SerializeField] private TorchSO calebInfo;
+    [SerializeField] private PlayerInfoSO calebInfo;
     [SerializeField] private float detectRange;
     private LayerMask layerMask;
 

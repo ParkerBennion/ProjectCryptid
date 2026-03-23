@@ -47,7 +47,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blackLightObjects: []
-  torch: {fileID: 11400000, guid: 5d112b78f37dda646a93d2fd7ed1babe, type: 2}
+  playerInfo: {fileID: 11400000, guid: 5d112b78f37dda646a93d2fd7ed1babe, type: 2}
   torchValue: 0
 --- !u!135 &7097494681924058401
 SphereCollider:
@@ -170,7 +170,7 @@ MonoBehaviour:
   canAttack: 0
   activeTotem: {fileID: 0}
   animator: {fileID: 7149663152967449402}
-  torchSO: {fileID: 11400000, guid: 5d112b78f37dda646a93d2fd7ed1babe, type: 2}
+  playerInfoSo: {fileID: 11400000, guid: 5d112b78f37dda646a93d2fd7ed1babe, type: 2}
 --- !u!136 &7911208322135297466
 CapsuleCollider:
   m_ObjectHideFlags: 0

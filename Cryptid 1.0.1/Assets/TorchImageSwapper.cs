@@ -4,14 +4,14 @@ using UnityEngine.UI;
 
 public class TorchImageSwapper : MonoBehaviour
 {
-    [SerializeField] private TorchSO torchSO;
+    [SerializeField] private PlayerInfoSO playerInfoSo;
     [SerializeField] private Sprite torchOnImage, torchOffImage;
     private Image image;
 
     private void Awake()
     {
         image=gameObject.GetComponent<Image>();
-        torchSO.torchChange+=UpdateImage;
+        playerInfoSo.torchChange+=UpdateImage;
     }
 
     private void UpdateImage(bool status)
@@ -28,6 +28,6 @@ public class TorchImageSwapper : MonoBehaviour
 
     private void OnDestroy()
     {
-        torchSO.torchChange -= UpdateImage;
+        playerInfoSo.torchChange -= UpdateImage;
     }
 }

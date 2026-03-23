@@ -9,7 +9,7 @@ public class SkinnedMeshSwap : MonoBehaviour
     [SerializeField] private Material alternateMaterial;
     private Material defaultMaterial;
     private bool isSwapped;
-    [SerializeField] private TorchSO calebInfo;
+    [SerializeField] private PlayerInfoSO calebInfo;
     private void Awake()
     {
         calebInfo.suitChange += ReadSuitStatus;
