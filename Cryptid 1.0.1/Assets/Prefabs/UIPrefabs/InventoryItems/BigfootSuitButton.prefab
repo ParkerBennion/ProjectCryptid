@@ -122,9 +122,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11400000, guid: e98382bd4388d894294a8d04c14d32c6, type: 2}
-        m_TargetAssemblyTypeName: GameAction, Assembly-CSharp
-        m_MethodName: RaiseAction
+      - m_Target: {fileID: 11400000, guid: 5d112b78f37dda646a93d2fd7ed1babe, type: 2}
+        m_TargetAssemblyTypeName: TorchSO, Assembly-CSharp
+        m_MethodName: ToggleSuit
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

@@ -1,10 +1,12 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 [CreateAssetMenu(fileName = "BigfootEncounter", menuName = "Encounters/BigfootEncounter")]
 public class BigfootEncounter : Encounter
 {
+    [SerializeField] private PlayerInfoSO calebInfo;
     [SerializeField] private GameObject bigfootPrefab, bigfootInstance;
     private GameObject player;
     [SerializeField] private float detectionRange, despawnRange;
@@ -35,6 +37,14 @@ public class BigfootEncounter : Encounter
             if (distanceFromPlayer < detectionRange)
             {
                 detected = true;
+                //decide if caleb is disguised or not 
+                if (calebInfo.GetDisguised())
+                {
+                    bigfootInstance.GetComponent<BigfootAIController>().TurnToPlayer(player);
+                    yield return new WaitForSeconds(2);
+                    AdoptTheKid();
+                    yield break;
+                }
                 bigfootInstance.GetComponent<Animator>().SetTrigger("Alerted");
                 yield return WFS;
                 bigfootInstance.GetComponent<BigfootAIController>().TurnToPlayer(player);
@@ -71,5 +81,11 @@ public class BigfootEncounter : Encounter
         Vector3 worldDirection = player.transform.TransformDirection(localDirection);
 
         return player.transform.position + worldDirection * spawnDistance;
+    }
+
+    private void AdoptTheKid()
+    {
+        Debug.Log("Bigfoot Loves You");
+        SceneManager.LoadScene(2);
     }
 }

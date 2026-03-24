@@ -7,11 +7,11 @@ public class DelayedEventBehavior : MonoBehaviour
 {
     public UnityEvent thisEvent;
     public float delay;
-    public bool startOnAwake;
+    public bool startOnStart;
 
     private void Start()
     {
-        if (startOnAwake)
+        if (startOnStart)
         {
             StartCountdown();
         }

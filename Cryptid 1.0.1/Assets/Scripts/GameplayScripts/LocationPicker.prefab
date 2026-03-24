@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5663962165267839324}
   - component: {fileID: 1421311363033618688}
+  - component: {fileID: 2597834805287052485}
   m_Layer: 11
   m_Name: LocationPicker
   m_TagString: Untagged
@@ -48,12 +49,43 @@ MonoBehaviour:
   spawnList:
   - {fileID: 2991476186398601165, guid: 9d9546a018104954481ea27b5f25f00a, type: 3}
   - {fileID: 1576348882820557418, guid: 1cb28a530fbadef45865903f339588e9, type: 3}
-  - {fileID: 7293230813119628184, guid: e513935aa9dee364b8c84424b3478611, type: 3}
+  - {fileID: 2991476186398601165, guid: a2bae66c33598294e916736e996df8e8, type: 3}
+  SpawnOnCreation: 0
   signPosts: []
   signPostMaterials:
   - {fileID: 2100000, guid: 9ef832fa6572cda4593e92d376bbf342, type: 2}
   - {fileID: 2100000, guid: 6a359894f47712e4ca0b790e440fc580, type: 2}
   - {fileID: 2100000, guid: 6a66f61312518db4aaeda37fa71c146d, type: 2}
+  forceSpawnSO: {fileID: 11400000, guid: 35129030a446a504d843866b8c1075f7, type: 2}
+--- !u!114 &2597834805287052485
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3476620454529278428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56966d224e0562a4fb7ed1cfcdc355c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thisEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1421311363033618688}
+        m_TargetAssemblyTypeName: SpawnRandomLocation, Assembly-CSharp
+        m_MethodName: SpawnItemFromList
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  delay: 0.5
+  startOnStart: 1
 --- !u!1 &9002180725118067643
 GameObject:
   m_ObjectHideFlags: 0
@@ -72,7 +104,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6047622512910508888
 Transform:
   m_ObjectHideFlags: 0

@@ -4,7 +4,7 @@ using UnityEngine;
 public class WendigoEngage : State
 {
     private GameObject playerTarget;
-    [SerializeField] private TorchSO torchStatus;
+    [SerializeField] private PlayerInfoSO playerInfoStatus;
     [SerializeField] private float rangeDistance, rangeFleeDistance, meleeDistance, currentEngageDistance;
     public State meleeAttackState, rangeAttackState;
     private WendigoManager manager;
@@ -56,7 +56,7 @@ public class WendigoEngage : State
 
     public override void OnEnterState()
     {
-        ReEvaluateMelee(!torchStatus.GetTorchStatus());
+        ReEvaluateMelee(!playerInfoStatus.GetTorchStatus());
         playerTarget = manager.playerTarget;
         navAgent.enabled = true;
         navAgent.isStopped = false;
