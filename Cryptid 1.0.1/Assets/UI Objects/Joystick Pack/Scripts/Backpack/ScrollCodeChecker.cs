@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 public class ScrollCodeChecker : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class ScrollCodeChecker : MonoBehaviour
     [SerializeField] private int[] correctValues;
     //don't change the size of this
 
+    [SerializeField] private UnityEvent activateEvent;
     private void OnValidate()
     {
         if (scrolls != null && correctValues != null && correctValues.Length != scrolls.Length)
@@ -62,5 +64,9 @@ public class ScrollCodeChecker : MonoBehaviour
         }
 
         Debug.Log($"Entered: {enteredCode}  Result: {(pass ? "PASS" : "FAIL")}");
+        if(pass)
+        {
+            activateEvent.Invoke();
+        }
     }
 }

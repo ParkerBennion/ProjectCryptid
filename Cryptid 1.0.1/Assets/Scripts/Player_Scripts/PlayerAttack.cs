@@ -1,12 +1,15 @@
 using System;
 using UnityEngine;
 using UnityEngine.VFX;
+using FMODUnity;
 
 public class PlayerAttack : MonoBehaviour
 {
     [SerializeField] private VisualEffect visualizeHitbox;
     [SerializeField] private ParticleSystem lightAttackFX;
     private Collider[] cols;
+    [SerializeField] private FMODAudioManager audioManager;
+    [SerializeField] private EventReference lightAttackSound;
     public float damageMultiplier;
     [SerializeField] private float lightDamage, heavyDamage, attackRadius, heavySwingRange;
     private Vector3 attackCenter, attackOffset;
@@ -24,6 +27,7 @@ public class PlayerAttack : MonoBehaviour
 /// </summary>
     public void LightAttack()
     { 
+        audioManager.PlayOneShot(lightAttackSound, transform.position);
         //print("lightAttack");
         lightAttackFX.Play();
         DisplayHitBox(attackRadius, attackOffset);//Debugging

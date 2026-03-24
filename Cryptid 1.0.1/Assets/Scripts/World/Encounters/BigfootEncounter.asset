@@ -19,6 +19,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   encounterManager: {fileID: 0}
+  calebInfo: {fileID: 11400000, guid: 5d112b78f37dda646a93d2fd7ed1babe, type: 2}
   bigfootPrefab: {fileID: 8606908327453654627, guid: 35e327d1be696144dba7eb958433746a, type: 3}
   bigfootInstance: {fileID: 0}
   detectionRange: 5

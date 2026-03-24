@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Inventory
   m_EditorClassIdentifier: 
   items:
-  - itemName: InventoryButton
-    amount: 3
+  - itemName: BigfootSuitButton
+    amount: 1

@@ -26,7 +26,7 @@ public abstract class QuestDialogueKeeperSO : ScriptableObject
                 if(bigfootQuestStage.value>=BigfootQuestDialogues.Length)
                 {
                     Debug.LogError(
-                        "Out of bounds error for getting stage dialogue out of bigfoot quest");
+                        "Out of bounds error for getting stage "+bigfootQuestStage.value+" dialogue out of bigfoot quest");
                     return null;
                 }
                 return BigfootQuestDialogues[bigfootQuestStage.value-1];

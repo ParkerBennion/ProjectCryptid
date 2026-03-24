@@ -36,7 +36,7 @@ public class CharacterInputController : MonoBehaviour
     public TotemBase activeTotem;
 
     public Animator animator;
-    [SerializeField] private TorchSO torchSO;
+    [SerializeField] private PlayerInfoSO playerInfoSo;
     private static readonly int animSpeed = Animator.StringToHash("Speed");
     
     private WaitForSeconds chargeStartDelayWFS, chargeTimeWFS, frameWFS, waitForTotemWFS;
@@ -126,7 +126,7 @@ public class CharacterInputController : MonoBehaviour
     public void ReleaseTorch()
     {
         Debug.Log("ReleaseTorch");
-        torchSO.ToggleTorch();
+        playerInfoSo.ToggleTorch();
     }
 
     private void StartTotemCallback(InputAction.CallbackContext ctx)

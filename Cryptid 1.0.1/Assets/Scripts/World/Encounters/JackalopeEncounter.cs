@@ -9,16 +9,16 @@ public class JackalopeEncounter : Encounter
     private GameObject player;
     private bool detected;
     [SerializeField] private float detectionRange, despawnRange;
-    [SerializeField] private TorchSO TorchSo;
+    [SerializeField] private PlayerInfoSO playerInfoSo;
     public override void OnExitEncounter()
     {
-        TorchSo.torchChange -= UpdateDetectionRange;
+        playerInfoSo.torchChange -= UpdateDetectionRange;
         if(jackalopeInstance!=null)
             Destroy(jackalopeInstance);
     }
     public override IEnumerator EncounterRoutine()
     {
-        TorchSo.torchChange += UpdateDetectionRange;
+        playerInfoSo.torchChange += UpdateDetectionRange;
         detected = false;
         float tickTime = .25f;
         player = encounterManager.player;

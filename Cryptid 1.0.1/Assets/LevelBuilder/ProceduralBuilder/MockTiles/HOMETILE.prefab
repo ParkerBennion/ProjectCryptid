@@ -137,6 +137,8 @@ MonoBehaviour:
   borderCode: 010000000100000001000000010000000100000001000000
   tileNavMeshData: {fileID: 0}
   navMesh: {fileID: -5312986275006407769}
+  assetsPrefab: {fileID: 0}
+  assetsObj: {fileID: 0}
 --- !u!64 &3750810787237639891
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -274,7 +276,7 @@ Transform:
   m_GameObject: {fileID: 8176389075977809657}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.81915206, z: 0, w: 0.57357645}
-  m_LocalPosition: {x: -8.17, y: 0, z: 0.46}
+  m_LocalPosition: {x: -8.17, y: -0.12, z: 0.46}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

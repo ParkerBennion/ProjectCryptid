@@ -10,7 +10,7 @@ public class MothmanEncounter : Encounter
     [SerializeField] private GameActionFloat updateAggressionStatus;
     [SerializeField] private float tickFrequency, tickAmount;
     private WaitForSeconds wfs;
-    [SerializeField] private TorchSO torchData;
+    [SerializeField] private PlayerInfoSO playerInfoData;
     [SerializeField] private float aggressionRatingMaximum, startingAgressionRating, currentAggressionRating;
     public UnityEvent summonMothmanEvent;
     [SerializeField] private GameObject mothManPrefab;
@@ -30,7 +30,7 @@ public class MothmanEncounter : Encounter
         Debug.Log("Starting slider Fresh");
         while (mothManIsPatrolling)
         {
-            if (torchData.GetTorchStatus())
+            if (playerInfoData.GetTorchStatus())
             {
                 currentAggressionRating += tickAmount;
             }

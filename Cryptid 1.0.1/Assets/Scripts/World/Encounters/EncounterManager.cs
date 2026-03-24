@@ -48,7 +48,7 @@ public class EncounterManager : MonoBehaviour
         {
             currentEncounter = encounterList[Random.Range(0, encounterList.Length)];
         }
-        print("picking a random encounter-"+currentEncounter.name);
+        //print("picking a random encounter-"+currentEncounter.name);
         StartCoroutine(currentEncounter.EncounterRoutine());
     }
 

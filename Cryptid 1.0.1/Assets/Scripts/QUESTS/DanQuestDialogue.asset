@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba857b4908e71474891a38a1d688b51f, type: 3}
+  m_Name: DanQuestDialogue
+  m_EditorClassIdentifier: 
+  bigfootQuestStage: {fileID: 11400000, guid: dcb1cf6f5925f51429c80e0996656528, type: 2}
+  nessieQuestStage: {fileID: 0}
+  thunderbirdQuestStage: {fileID: 0}

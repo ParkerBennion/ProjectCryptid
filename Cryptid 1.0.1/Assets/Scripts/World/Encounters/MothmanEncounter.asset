@@ -23,10 +23,10 @@ MonoBehaviour:
   updateAggressionStatus: {fileID: 11400000, guid: a48d5bfc580bcdf489c07c81d939abcd, type: 2}
   tickFrequency: 0.1
   tickAmount: 0.25
-  torchData: {fileID: 11400000, guid: 5d112b78f37dda646a93d2fd7ed1babe, type: 2}
+  playerInfoData: {fileID: 11400000, guid: 5d112b78f37dda646a93d2fd7ed1babe, type: 2}
   aggressionRatingMaximum: 10
   startingAgressionRating: 5
-  currentAggressionRating: 2
+  currentAggressionRating: 0
   summonMothmanEvent:
     m_PersistentCalls:
       m_Calls: []
