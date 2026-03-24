@@ -75,7 +75,7 @@ public class BigfootEncounter : Encounter
     {
         float coneRadians = Random.Range(22.5f*-.5f, 22.5f*.5f)*Mathf.Deg2Rad;
 
-        float spawnDistance = Random.Range(8, 10);
+        float spawnDistance = Random.Range(10, 12);
         Vector3 localDirection = new Vector3(Mathf.Sin(coneRadians), 0 ,Mathf.Cos(coneRadians));
 
         Vector3 worldDirection = player.transform.TransformDirection(localDirection);
