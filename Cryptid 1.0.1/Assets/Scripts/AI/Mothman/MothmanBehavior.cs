@@ -12,7 +12,8 @@ public class MothmanBehavior : MonoBehaviour
     private Vector3 playerLocation;
     private WaitForEndOfFrame wff;
     private Coroutine swoopRoutine;
-    [SerializeField] private UnityEvent snatchEvent;
+    [SerializeField] private UnityEvent snatchEvent; 
+    public MothmanManager manager;
 
     private void Start()
     {
@@ -41,7 +42,7 @@ public class MothmanBehavior : MonoBehaviour
         elapsedTime = 0;
         while (elapsedTime<swoopTime)
         {
-            gameObject.transform.position = Vector3.Lerp(playerLocation, endOffsetFromPlayer, elapsedTime / swoopTime);
+            gameObject.transform.position = Vector3.Lerp(playerLocation, endOffsetFromPlayer+playerLocation, elapsedTime / swoopTime);
             elapsedTime += Time.deltaTime;
             yield return wff;
         }
@@ -66,6 +67,11 @@ public class MothmanBehavior : MonoBehaviour
     public void ReturnToOffscreen()
     {
         gameObject.transform.position = Vector3.up*15f;
+    }
+
+    public void SnatchImmediate()
+    {
+        manager.FillBarImmediate();
     }
     
     

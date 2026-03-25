@@ -17,7 +17,8 @@ public class MothmanManager : MonoBehaviour
     [SerializeField] private GameObject mothManPrefab;
     [SerializeField] private GameActionFloat updateAggressionStatus;
     [SerializeField] private GameAction huntStart, huntEnd;
-    [SerializeField] private float maximumSearchProgress, currentSearchProgress;
+    [SerializeField] private float maximumSearchProgress;
+    public float currentSearchProgress;
     private MothmanBehavior mothmanBehavior;
     private bool isLanded;
     private GameObject mothManInstance;
@@ -38,6 +39,7 @@ public class MothmanManager : MonoBehaviour
             new Vector3(0, 15, 0) + player.transform.position, Quaternion.identity);
         mothmanBehavior =  mothManInstance.GetComponent<MothmanBehavior>();
         mothmanBehavior.playerTarget = player;
+        mothmanBehavior.manager = this;
         mothManInstance.SetActive(false);
     }
 
@@ -54,7 +56,6 @@ public class MothmanManager : MonoBehaviour
             return;
         }
         _depletionRoutine = StartCoroutine(DepleteAggro());
-        print("Stopping Drain");
     }
 
 
@@ -180,6 +181,11 @@ public class MothmanManager : MonoBehaviour
         mothManInstance.transform.position=player.transform.position+new Vector3(-6, 6, 0);
         mothmanBehavior.BeginAttack();
         huntEnd.RaiseAction();
+    }
+
+    public void FillBarImmediate()
+    {
+        currentSearchProgress = maximumSearchProgress + 1;
     }
     
     public Vector3 FindSpawnInFrontOfPlayer()
