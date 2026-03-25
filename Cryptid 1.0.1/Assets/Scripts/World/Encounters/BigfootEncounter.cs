@@ -25,7 +25,7 @@ public class BigfootEncounter : Encounter
         float distanceFromPlayer;
         WaitForSeconds WFS = new WaitForSeconds(tickTime);
         player = encounterManager.player;
-        bigfootInstance = Instantiate(bigfootPrefab, FindSpawnInFrontOfPlayer(), Quaternion.identity,null).gameObject;
+        bigfootInstance = Instantiate(bigfootPrefab, encounterManager.FindSpawnInFrontOfPlayer(), Quaternion.identity,null).gameObject;
         while (!detected)
         {
             distanceFromPlayer = Vector3.Distance(player.transform.position, bigfootInstance.transform.position);
@@ -71,17 +71,7 @@ public class BigfootEncounter : Encounter
 
     }
     
-    private Vector3 FindSpawnInFrontOfPlayer()
-    {
-        float coneRadians = Random.Range(22.5f*-.5f, 22.5f*.5f)*Mathf.Deg2Rad;
-
-        float spawnDistance = Random.Range(10, 12);
-        Vector3 localDirection = new Vector3(Mathf.Sin(coneRadians), 0 ,Mathf.Cos(coneRadians));
-
-        Vector3 worldDirection = player.transform.TransformDirection(localDirection);
-
-        return player.transform.position + worldDirection * spawnDistance;
-    }
+    
 
     private void AdoptTheKid()
     {
