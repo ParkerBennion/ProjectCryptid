@@ -12,6 +12,6 @@ public class ItemAmountUI : MonoBehaviour
         // does not show if you have 1
         //is set by inventory grid UI script
         amountText.text = amount > 1 ? amount.ToString() : "";
-        Debug.LogWarning("Set " + amount + " to " + amountText);
+        Debug.Log("Set " + amount + " to " + amountText);
     }
 }

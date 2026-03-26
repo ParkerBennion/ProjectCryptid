@@ -15,7 +15,6 @@ public class MothmanEncounter : Encounter
     [SerializeField] private GameObject mothManPrefab;
     private GameObject mothManInstance;
     private MothmanBehavior mothmanBehavior;
-    private bool islanded;
 
     public override void OnExitEncounter()
     {
@@ -35,8 +34,6 @@ public class MothmanEncounter : Encounter
             new Vector3(0, 15, 0) + encounterManager.player.transform.position, Quaternion.identity);
         mothmanBehavior =  mothManInstance.GetComponent<MothmanBehavior>();
         mothmanBehavior.playerTarget = encounterManager.player;
-
-        islanded = false;
         
         
         currentAggressionRating = startingAgressionRating;
@@ -72,12 +69,10 @@ public class MothmanEncounter : Encounter
 
     public IEnumerator LandAndSearch(float duration)
     {
-        islanded = true;
         mothManInstance.transform.position = encounterManager.FindSpawnInFrontOfPlayer();
         mothmanBehavior.Land();
         yield return new WaitForSeconds(duration);
         mothmanBehavior.TakeOff();
-        islanded = false;
     }
 
     private void SwoopAndKill()

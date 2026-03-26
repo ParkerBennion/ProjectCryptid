@@ -8,7 +8,6 @@ public class SkinnedMeshSwap : MonoBehaviour
     private Mesh defaultMesh;
     [SerializeField] private Material alternateMaterial;
     private Material defaultMaterial;
-    private bool isSwapped;
     [SerializeField] private PlayerInfoSO calebInfo;
     private void Awake()
     {
@@ -20,7 +19,6 @@ public class SkinnedMeshSwap : MonoBehaviour
 
     private void Start()
     {
-        isSwapped = false;
         calebInfo.SetDisguised(false);
     }
 
@@ -28,7 +26,6 @@ public class SkinnedMeshSwap : MonoBehaviour
     {
         mRenderer.sharedMesh = mesh;
         mRenderer.sharedMaterial = material;
-        isSwapped=true;
     }
 
     public void SwapAlternateSkin()
@@ -36,14 +33,12 @@ public class SkinnedMeshSwap : MonoBehaviour
         //Debug.Log($"mRenderer={mRenderer}, alternateMesh={alternateMesh}, alternateMaterial={alternateMaterial}");
         mRenderer.sharedMesh = alternateMesh;
         mRenderer.sharedMaterial = alternateMaterial;
-        isSwapped=true;
     }
 
     public void SwapDefaultSkin()
     {
         mRenderer.sharedMesh = defaultMesh;
         mRenderer.sharedMaterial = defaultMaterial;
-        isSwapped = false;
     }
     
 

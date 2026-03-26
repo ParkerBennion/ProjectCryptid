@@ -7,7 +7,7 @@ public class BlackLightData : MonoBehaviour
 {
     private static readonly int TorchSwitch = Shader.PropertyToID("_TorchSwitch");
     private static readonly int PointLightPosition = Shader.PropertyToID("_PointLightPosition");
-    private bool running, torchOn = false;
+    private bool running;
     [SerializeField] private List<GameObject> blackLightObjects = new List<GameObject>();
     private Coroutine _currentRoutine;
     [SerializeField] private PlayerInfoSO playerInfo;

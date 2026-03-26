@@ -20,7 +20,6 @@ public class MothmanManager : MonoBehaviour
     [SerializeField] private float maximumSearchProgress;
     public float currentSearchProgress;
     private MothmanBehavior mothmanBehavior;
-    private bool isLanded;
     private GameObject mothManInstance;
     
 
@@ -111,8 +110,6 @@ public class MothmanManager : MonoBehaviour
         mothManIsPatrolling=true;
         mothManInstance.SetActive(true);
         mothManInstance.transform.position = new Vector3(0, 15, 0);
-
-        isLanded = false;
         
         
         currentSearchProgress = maximumSearchProgress*.5f;
@@ -170,10 +167,8 @@ public class MothmanManager : MonoBehaviour
     {
         mothManInstance.transform.position = FindSpawnInFrontOfPlayer();
         mothmanBehavior.Land();
-        isLanded = true;
         yield return new WaitForSeconds(duration);
         mothmanBehavior.TakeOff();
-        isLanded = false;
     }
     
     private void SwoopAndKill()

@@ -17,7 +17,7 @@ public class CollectibleWisp : MonoBehaviour
         if (PlayerDataManager.Instance != null && PlayerDataManager.Instance.playerData != null)
         {
             PlayerDataManager.Instance.playerData.logs += logValue;
-            Debug.Log($"Collected wood chunk. Added {logValue} logs. Total: {PlayerDataManager.Instance.playerData.logs}");
+            //Debug.Log($"Collected wood chunk. Added {logValue} logs. Total: {PlayerDataManager.Instance.playerData.logs}");
 
             if (updateDisplayAction != null)
             {
