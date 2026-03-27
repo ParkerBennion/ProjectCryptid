@@ -18,7 +18,7 @@ public class PlayerAttack : MonoBehaviour
 
     private void Awake()
     {
-        attackOffset = new Vector3(0, 0, 1.5f);
+        attackOffset = new Vector3(0, 0, 0.5f);
         validLayerList = LayerMask.GetMask(validLayers);
         damageMultiplier = 1;
     }

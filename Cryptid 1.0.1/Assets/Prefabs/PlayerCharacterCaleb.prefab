@@ -306,7 +306,7 @@ MonoBehaviour:
   damageMultiplier: 0
   lightDamage: 4
   heavyDamage: 10
-  attackRadius: 1.5
+  attackRadius: 2
   heavySwingRange: 3
   validLayers:
   - Enemy
