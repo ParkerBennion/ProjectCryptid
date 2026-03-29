@@ -181,6 +181,7 @@ public class MothmanManager : MonoBehaviour
     public void FillBarImmediate()
     {
         currentSearchProgress = maximumSearchProgress + 1;
+        player.GetComponent<Rigidbody>().useGravity = false;//this is to keep caleb from dropping back onto the ground after he is grabbed
     }
     
     public Vector3 FindSpawnInFrontOfPlayer()

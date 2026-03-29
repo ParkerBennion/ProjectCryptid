@@ -5016,7 +5016,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 221bf4b7e7b15cc4eb331e0520fa3398, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pointLight: {fileID: 5470246187122093261}
+  blackLightObjects: []
+  playerInfo: {fileID: 0}
+  torchValue: 0
 --- !u!1 &1102599369354472857
 GameObject:
   m_ObjectHideFlags: 0
@@ -5088,7 +5090,7 @@ MonoBehaviour:
   canAttack: 0
   activeTotem: {fileID: 0}
   animator: {fileID: 8063892309578278695}
-  torchSO: {fileID: 11400000, guid: 5d112b78f37dda646a93d2fd7ed1babe, type: 2}
+  playerInfoSo: {fileID: 0}
 --- !u!136 &7815587946520828593
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -5213,6 +5215,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   visualizeHitbox: {fileID: 6246669221546711009}
   lightAttackFX: {fileID: 6057916102787040697}
+  audioManager: {fileID: 0}
+  lightAttackSound:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
   damageMultiplier: 0
   lightDamage: 4
   heavyDamage: 10
@@ -25631,6 +25641,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0.00000007283361
       objectReference: {fileID: 0}
+    - target: {fileID: -4982323132782366547, guid: ece4eccb5c1a32144934f4dbef3b1526, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 59e4faf24927edf4a82f463ad16f1c37, type: 2}
     - target: {fileID: -4965272819923517568, guid: ece4eccb5c1a32144934f4dbef3b1526, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 24.500853
@@ -26374,6 +26388,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   alternateMesh: {fileID: -1149407437223632126, guid: ece4eccb5c1a32144934f4dbef3b1526, type: 3}
   alternateMaterial: {fileID: 2100000, guid: c82524ba269ae574b916d4356200d76e, type: 2}
+  calebInfo: {fileID: 0}
 --- !u!114 &4445750996558121389
 MonoBehaviour:
   m_ObjectHideFlags: 0
