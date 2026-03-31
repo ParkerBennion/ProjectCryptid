@@ -871,7 +871,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   delay: 1.5
-  startOnAwake: 0
+  startOnStart: 0
 --- !u!1001 &271097955367022316
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -924,11 +924,71 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6197135706057531752, guid: 2e1ecb7412c3f644789aa2fd9e68a009, type: 3}
+      propertyPath: activateEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1726252062181657021}
+    - target: {fileID: 6197135706057531752, guid: 2e1ecb7412c3f644789aa2fd9e68a009, type: 3}
+      propertyPath: activateEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: StartCountdown
+      objectReference: {fileID: 0}
+    - target: {fileID: 6197135706057531752, guid: 2e1ecb7412c3f644789aa2fd9e68a009, type: 3}
+      propertyPath: activateEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: DelayedEventBehavior, Assembly-CSharp
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1742208143438739401, guid: 2e1ecb7412c3f644789aa2fd9e68a009, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1726252062181657021}
   m_SourcePrefab: {fileID: 100100000, guid: 2e1ecb7412c3f644789aa2fd9e68a009, type: 3}
+--- !u!114 &1823472106193284436 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1913295502544700344, guid: 2e1ecb7412c3f644789aa2fd9e68a009, type: 3}
+  m_PrefabInstance: {fileID: 271097955367022316}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2012743119846054181}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 566cf81aa07ca874492ebda5f704a574, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &2012743119846054181 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1742208143438739401, guid: 2e1ecb7412c3f644789aa2fd9e68a009, type: 3}
+  m_PrefabInstance: {fileID: 271097955367022316}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1726252062181657021
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2012743119846054181}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56966d224e0562a4fb7ed1cfcdc355c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thisEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1823472106193284436}
+        m_TargetAssemblyTypeName: CryptidMobSpawn, Assembly-CSharp
+        m_MethodName: SpawnRandomCryptids
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  delay: 1
+  startOnStart: 0
 --- !u!4 &5341047776633469730 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5322151403632514510, guid: 2e1ecb7412c3f644789aa2fd9e68a009, type: 3}
@@ -1375,7 +1435,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   delay: 1.5
-  startOnAwake: 0
+  startOnStart: 0
 --- !u!1001 &4060716019973698784
 PrefabInstance:
   m_ObjectHideFlags: 0

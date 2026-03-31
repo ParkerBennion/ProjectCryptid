@@ -40,7 +40,7 @@ public class PlayerAttack : MonoBehaviour
            if (thisCol.TryGetComponent(out IDamageable target))
            {
                target.DealDamage(lightDamage * damageMultiplier);
-               aggroGenerator.RaiseAction(5);
+               aggroGenerator.RaiseAction(4);
            }
         }
     }
@@ -60,7 +60,7 @@ public class PlayerAttack : MonoBehaviour
                 if (isPerfectAttack)
                     target.DealDamage(heavyDamage * 1.5f * damageMultiplier);
                 else target.DealDamage(heavyDamage * damageMultiplier);
-                aggroGenerator.RaiseAction(20);
+                aggroGenerator.RaiseAction(15);
             }
         }
     }

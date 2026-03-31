@@ -53,7 +53,7 @@ public class MothmanManager : MonoBehaviour
         {
             if (_depletionRoutine != null)
                 StopCoroutine(_depletionRoutine);
-            ChangeAggro(10);
+            ChangeAggro(15);
             return;
         }
         _depletionRoutine = StartCoroutine(DepleteAggro());
