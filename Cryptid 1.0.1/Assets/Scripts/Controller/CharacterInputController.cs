@@ -125,7 +125,6 @@ public class CharacterInputController : MonoBehaviour
     }
     public void ReleaseTorch()
     {
-        Debug.Log("ReleaseTorch");
         playerInfoSo.ToggleTorch();
     }
 

@@ -14,6 +14,7 @@ public class MothmanBehavior : MonoBehaviour
     private Coroutine swoopRoutine;
     [SerializeField] private UnityEvent snatchEvent; 
     public MothmanManager manager;
+    public bool isLanded;
 
     private void Start()
     {
@@ -51,12 +52,14 @@ public class MothmanBehavior : MonoBehaviour
     public void TakeOff()
     {
         animator.SetBool("Landed", false);
+        isLanded = false;
     }
 
     public void Land()
     {
         animator.SetTrigger("Land");
         animator.SetBool("Landed", true);
+        isLanded = true;
     }
     
     public void ImpactBarrier()
@@ -67,6 +70,7 @@ public class MothmanBehavior : MonoBehaviour
     public void ReturnToOffscreen()
     {
         gameObject.transform.position = Vector3.up*15f;
+        isLanded = false;
     }
 
     public void SnatchImmediate()

@@ -19981,13 +19981,14 @@ GameObject:
   - component: {fileID: 7615682411906403635}
   - component: {fileID: 1730218310809362602}
   - component: {fileID: 3949510294978647098}
+  - component: {fileID: 1389893852688677173}
   m_Layer: 0
   m_Name: CalebRing
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2478986394799821341
 Transform:
   m_ObjectHideFlags: 0
@@ -20133,6 +20134,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &1389893852688677173
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4567817860392989575}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffc6e3d4ab6072940b222e13e0199340, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  markedGameAction: {fileID: 11400000, guid: 8eca903f880aff24abca835d6c4940ec, type: 2}
 --- !u!1 &5215836903618256082
 GameObject:
   m_ObjectHideFlags: 0

@@ -1471,16 +1471,20 @@ MonoBehaviour:
   aggroMax: 30
   aggroCurrent: 0
   depletionFrequency: 1
-  depletionAmt: 2.5
+  depletionAmt: 1
+  idleTimeBeforeSnatch: 2
   playerInfo: {fileID: 11400000, guid: 5d112b78f37dda646a93d2fd7ed1babe, type: 2}
   player: {fileID: 1102599369749899774}
   aggroCall: {fileID: 11400000, guid: b5cacba1a5b1a2e45abf5121d49f7f50, type: 2}
   mothManPrefab: {fileID: 4155475361554094443, guid: f8d684a2d829e734a89d3b37d20a334b, type: 3}
+  calebIdleTargetObj: {fileID: 0}
   updateAggressionStatus: {fileID: 11400000, guid: a48d5bfc580bcdf489c07c81d939abcd, type: 2}
   huntStart: {fileID: 11400000, guid: 070c63458b3672549b10502fbe57c8ff, type: 2}
   huntEnd: {fileID: 11400000, guid: 34088195f9fc7eb429471a203d974631, type: 2}
+  markPlayerAction: {fileID: 11400000, guid: 8eca903f880aff24abca835d6c4940ec, type: 2}
   maximumSearchProgress: 100
   currentSearchProgress: 0
+  markerDeployed: 0
 --- !u!4 &588481354
 Transform:
   m_ObjectHideFlags: 0
@@ -1490,7 +1494,7 @@ Transform:
   m_GameObject: {fileID: 588481352}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.4, y: -1.1070657, z: -0.348567}
+  m_LocalPosition: {x: 0, y: 15, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3024,6 +3028,10 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: -0.40412372
       objectReference: {fileID: 0}
+    - target: {fileID: 1389893852688677173, guid: 6edcafb7e6b859c42bf46e27c3b47828, type: 3}
+      propertyPath: markedGameAction
+      value: 
+      objectReference: {fileID: 11400000, guid: a48d5bfc580bcdf489c07c81d939abcd, type: 2}
     - target: {fileID: 1748102798466452513, guid: 6edcafb7e6b859c42bf46e27c3b47828, type: 3}
       propertyPath: m_LocalRotation.w
       value: 0.96872014
@@ -3515,6 +3523,10 @@ PrefabInstance:
     - target: {fileID: 4472838330387468065, guid: 6edcafb7e6b859c42bf46e27c3b47828, type: 3}
       propertyPath: m_LocalPosition.z
       value: -4.1143755e-14
+      objectReference: {fileID: 0}
+    - target: {fileID: 4567817860392989575, guid: 6edcafb7e6b859c42bf46e27c3b47828, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4678348195036012356, guid: 6edcafb7e6b859c42bf46e27c3b47828, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4129,63 +4141,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6edcafb7e6b859c42bf46e27c3b47828, type: 3}
---- !u!1001 &8184128207296045113
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 122822195103489429, guid: 3041c7a1eee7ba84ba694d7db53390e1, type: 3}
-      propertyPath: m_Name
-      value: Cryptid Damage VFX
-      objectReference: {fileID: 0}
-    - target: {fileID: 5924517414809000997, guid: 3041c7a1eee7ba84ba694d7db53390e1, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 2.9201207
-      objectReference: {fileID: 0}
-    - target: {fileID: 5924517414809000997, guid: 3041c7a1eee7ba84ba694d7db53390e1, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.25500023
-      objectReference: {fileID: 0}
-    - target: {fileID: 5924517414809000997, guid: 3041c7a1eee7ba84ba694d7db53390e1, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -16.44
-      objectReference: {fileID: 0}
-    - target: {fileID: 5924517414809000997, guid: 3041c7a1eee7ba84ba694d7db53390e1, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5924517414809000997, guid: 3041c7a1eee7ba84ba694d7db53390e1, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5924517414809000997, guid: 3041c7a1eee7ba84ba694d7db53390e1, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5924517414809000997, guid: 3041c7a1eee7ba84ba694d7db53390e1, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5924517414809000997, guid: 3041c7a1eee7ba84ba694d7db53390e1, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5924517414809000997, guid: 3041c7a1eee7ba84ba694d7db53390e1, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5924517414809000997, guid: 3041c7a1eee7ba84ba694d7db53390e1, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 3041c7a1eee7ba84ba694d7db53390e1, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -4203,5 +4158,4 @@ SceneRoots:
   - {fileID: 1855542037}
   - {fileID: 140217392}
   - {fileID: 1100078371}
-  - {fileID: 8184128207296045113}
   - {fileID: 1088480736}
