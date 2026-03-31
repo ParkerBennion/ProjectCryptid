@@ -1468,7 +1468,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1cd53c516b88d794381d6f87b2313323, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  aggroMax: 30
+  aggroMax: 100
   aggroCurrent: 0
   depletionFrequency: 1
   depletionAmt: 1
