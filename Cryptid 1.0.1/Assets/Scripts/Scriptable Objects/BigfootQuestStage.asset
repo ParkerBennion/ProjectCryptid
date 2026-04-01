@@ -14,3 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   value: 6
   updateItemsAction: {fileID: 11400000, guid: 634ed8c8c16f20845ababdc5b021cab2, type: 2}
+  journalHints:
+  - Quest hasnt started
+  - Go find Dan's Camper
+  - Go talk to dan
+  - Go check out the fire tower
+  - Go talk to the ranger
+  - Go investigate the abandonded cabin
+  - Go find bigfoot while wearing the gorilla suit

@@ -53,6 +53,14 @@ public class DanQuestDialogueSO : QuestDialogueKeeperSO
             //phase 6 found the gorilla suit
             "I've Seen the darndest thing",
             "There's a bigfoot kid runnin around! Keep yer eyes out."
+        },
+        new string[]
+        {
+            //phase 7 been to bigfoot's cave
+            "You've been WHERE????",
+            "How in whe who-what and why???",
+            "Next time you find your way in, do yer friend dan a solid...",
+            "Get me some pictures!"
         }
     };
 };

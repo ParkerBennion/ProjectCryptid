@@ -11,7 +11,7 @@ public class BigfootEncounter : Encounter
     private GameObject player;
     [SerializeField] private float detectionRange, despawnRange;
     private bool detected;
-    public UnityEvent detectedEvent;
+    public UnityEvent detectedEvent, foundFriendEvent;
     public override void OnExitEncounter()
     {
         if(bigfootInstance is not null)
@@ -76,6 +76,7 @@ public class BigfootEncounter : Encounter
     private void AdoptTheKid()
     {
         Debug.Log("Bigfoot Loves You");
+        foundFriendEvent.Invoke();
         SceneManager.LoadScene(2);
     }
 }

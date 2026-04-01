@@ -4,6 +4,7 @@ using UnityEngine;
 public class QuestIntData : IntData
 {
     [SerializeField] private GameAction updateItemsAction;
+    [SerializeField] private string[] journalHints;
     
     public override void ChangeValue(int val)
     {
@@ -15,5 +16,10 @@ public class QuestIntData : IntData
     {
         base.SetValue(val);
         updateItemsAction.RaiseAction();
+    }
+
+    public string GetJournalHint()
+    {
+        return journalHints[value];
     }
 }
