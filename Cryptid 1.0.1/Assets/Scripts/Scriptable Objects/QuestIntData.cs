@@ -9,6 +9,7 @@ public class QuestIntData : IntData
     public override void ChangeValue(int val)
     {
         base.ChangeValue(val);
+        value = Mathf.Clamp(value, 0, 10);
         updateItemsAction.RaiseAction();
     }
     
