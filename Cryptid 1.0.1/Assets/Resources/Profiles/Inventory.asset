@@ -15,3 +15,5 @@ MonoBehaviour:
   items:
   - itemName: BigfootSuitButton
     amount: 1
+  - itemName: BlackLight
+    amount: 1
