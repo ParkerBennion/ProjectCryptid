@@ -129,7 +129,7 @@ public class MothmanManager : MonoBehaviour
             else if (playerInfo.GetTorchStatus()||isIdle)
                 currentSearchProgress += depletionAmt;
             else
-                currentSearchProgress -= depletionAmt*.5f;
+                currentSearchProgress -= depletionAmt;
             updateAggressionStatus.RaiseAction(currentSearchProgress/maximumSearchProgress);//tells the UI how close mothman is to finding Caleb
             if (currentSearchProgress >= maximumSearchProgress)//if Mothman has found Caleb
             {
@@ -199,7 +199,7 @@ public class MothmanManager : MonoBehaviour
     {
         float coneRadians = Random.Range(22.5f*-.5f, 22.5f*.5f)*Mathf.Deg2Rad;
 
-        float spawnDistance = Random.Range(6, 8);
+        float spawnDistance = Random.Range(7, 9);
         Vector3 localDirection = new Vector3(Mathf.Sin(coneRadians), 0 ,Mathf.Cos(coneRadians));
 
         Vector3 worldDirection = player.transform.TransformDirection(localDirection);

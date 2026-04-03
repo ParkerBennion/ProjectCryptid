@@ -2,7 +2,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "E:/CryptidMobile/ProjectCryptid/Cryptid 1.0.1/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/Debug/3d2rq102/obj/arm64-v8a/libgame.so"
+			"path" : "E:/CryptidMobile/ProjectCryptid/Cryptid 1.0.1/Library/PramData/AndroidApplicationController/Cache/com.UnityTechnologies.Mobile3DTemplate/gradle-project/unityLibrary/build/intermediates/cxx/Debug/3d2rq102/obj/arm64-v8a/libgame.so"
 		}
 	],
 	"backtrace" : 1,
@@ -73,7 +73,7 @@
 			[
 				{
 					"backtrace" : 4,
-					"path" : "E:/CryptidMobile/ProjectCryptid/Cryptid 1.0.1/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/src/main/cpp/GameActivity"
+					"path" : "E:/CryptidMobile/ProjectCryptid/Cryptid 1.0.1/Library/PramData/AndroidApplicationController/Cache/com.UnityTechnologies.Mobile3DTemplate/gradle-project/unityLibrary/src/main/cpp/GameActivity"
 				},
 				{
 					"backtrace" : 2,

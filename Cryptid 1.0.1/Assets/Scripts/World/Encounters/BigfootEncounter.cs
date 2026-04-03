@@ -20,6 +20,7 @@ public class BigfootEncounter : Encounter
 
     public override IEnumerator EncounterRoutine()
     {
+        
         float tickTime = .25f;
         detected = false;
         float distanceFromPlayer;

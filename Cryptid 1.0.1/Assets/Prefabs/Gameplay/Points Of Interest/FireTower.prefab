@@ -884,6 +884,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: cryptid SpawnEncounter
       objectReference: {fileID: 0}
+    - target: {fileID: 1913295502544700344, guid: 2e1ecb7412c3f644789aa2fd9e68a009, type: 3}
+      propertyPath: mobDefeatedEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetValue
+      objectReference: {fileID: 0}
+    - target: {fileID: 1913295502544700344, guid: 2e1ecb7412c3f644789aa2fd9e68a009, type: 3}
+      propertyPath: mobDefeatedEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 5322151403632514510, guid: 2e1ecb7412c3f644789aa2fd9e68a009, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

@@ -1745,6 +1745,63 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f4d98c96c6bfc4041a617bf0a4c893cd, type: 3}
+--- !u!1001 &350606862
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7799504477770432252, guid: f2738f66d01d294439ecf6d0a1c2c7ee, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 6.9546175
+      objectReference: {fileID: 0}
+    - target: {fileID: 7799504477770432252, guid: f2738f66d01d294439ecf6d0a1c2c7ee, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7799504477770432252, guid: f2738f66d01d294439ecf6d0a1c2c7ee, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2.752946
+      objectReference: {fileID: 0}
+    - target: {fileID: 7799504477770432252, guid: f2738f66d01d294439ecf6d0a1c2c7ee, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7799504477770432252, guid: f2738f66d01d294439ecf6d0a1c2c7ee, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7799504477770432252, guid: f2738f66d01d294439ecf6d0a1c2c7ee, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7799504477770432252, guid: f2738f66d01d294439ecf6d0a1c2c7ee, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7799504477770432252, guid: f2738f66d01d294439ecf6d0a1c2c7ee, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7799504477770432252, guid: f2738f66d01d294439ecf6d0a1c2c7ee, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7799504477770432252, guid: f2738f66d01d294439ecf6d0a1c2c7ee, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8386669101683562587, guid: f2738f66d01d294439ecf6d0a1c2c7ee, type: 3}
+      propertyPath: m_Name
+      value: PickupBigfootSuit
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f2738f66d01d294439ecf6d0a1c2c7ee, type: 3}
 --- !u!4 &393015193 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: ece4eccb5c1a32144934f4dbef3b1526, type: 3}
@@ -4673,3 +4730,4 @@ SceneRoots:
   - {fileID: 1100078371}
   - {fileID: 1088480736}
   - {fileID: 536109002}
+  - {fileID: 350606862}

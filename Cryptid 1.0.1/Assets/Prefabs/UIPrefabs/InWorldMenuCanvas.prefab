@@ -7788,6 +7788,7 @@ GameObject:
   - component: {fileID: 3694108406190950763}
   - component: {fileID: 3633566260319337163}
   - component: {fileID: 823083821899318300}
+  - component: {fileID: 2552928462991841926}
   m_Layer: 5
   m_Name: MothmanUI
   m_TagString: Untagged
@@ -7871,10 +7872,38 @@ MonoBehaviour:
   responseEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3694108406190950763}
-        m_TargetAssemblyTypeName: MothManUIScript, Assembly-CSharp
-        m_MethodName: ToggleUI
-        m_Mode: 1
+      - m_Target: {fileID: 1555518879442849595}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+  callerAction: {fileID: 11400000, guid: 070c63458b3672549b10502fbe57c8ff, type: 2}
+--- !u!114 &2552928462991841926
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5815784871370629689}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9a87ea4ad0c7714ea2a0adcde2d77a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  responseEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1555518879442849595}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -7883,7 +7912,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  callerAction: {fileID: 11400000, guid: 070c63458b3672549b10502fbe57c8ff, type: 2}
+  callerAction: {fileID: 11400000, guid: 34088195f9fc7eb429471a203d974631, type: 2}
 --- !u!1 &5870092858410427487
 GameObject:
   m_ObjectHideFlags: 0

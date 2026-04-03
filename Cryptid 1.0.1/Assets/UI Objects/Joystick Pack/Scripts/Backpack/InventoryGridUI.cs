@@ -16,7 +16,7 @@ public class InventoryGridUI : MonoBehaviour
 
         if (inventory != null)
             inventory.Changed += HandleInventoryChanged;
-        //Debug.LogWarning("InventoryGridUI enabled");
+        Debug.LogWarning("InventoryGridUI enabled");
         Rebuild();
     }
     
@@ -52,6 +52,7 @@ public class InventoryGridUI : MonoBehaviour
 
         foreach (var entry in inventory.items)
         {
+            Debug.LogError(entry.itemName);
             if (entry == null) continue;
             if (entry.amount <= 0) continue;
 
