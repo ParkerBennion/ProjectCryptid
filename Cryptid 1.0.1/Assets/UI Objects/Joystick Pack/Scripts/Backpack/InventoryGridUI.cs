@@ -16,7 +16,7 @@ public class InventoryGridUI : MonoBehaviour
 
         if (inventory != null)
             inventory.Changed += HandleInventoryChanged;
-        Debug.LogWarning("InventoryGridUI enabled");
+        //Debug.LogWarning("InventoryGridUI enabled");
         Rebuild();
     }
     
