@@ -54,8 +54,8 @@ public class Leshy_Manager : CryptidManager
     
     private IEnumerator SplitCDRoutine()
     {
-        canCast = false;
+        canSplit = false;
         yield return castCDWfs;
-        canCast = true;
+        canSplit = true;
     }
 }

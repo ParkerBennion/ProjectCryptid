@@ -42,7 +42,6 @@ public class LeshyDecisionState : State
     public override void OnEnterState()
     {
         if (player == null) player = manager.playerTarget;
-        navAgent.SetDestination(manager.transform.position);
     }
 
     public override void OnExitState()
