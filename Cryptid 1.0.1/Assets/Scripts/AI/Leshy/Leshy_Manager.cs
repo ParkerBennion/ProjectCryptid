@@ -3,10 +3,10 @@ using System.Collections;
 public class Leshy_Manager : CryptidManager
 {
     public State fleeState;
-    public bool canCast;
+    public bool canCast, canSplit;
     public GameObject playerTarget;
     private WaitForSeconds castCDWfs;
-    [SerializeField] private float castCooldown;
+    [SerializeField] private float castCooldown, splitCooldown;
 
     protected override void Awake()
     {
@@ -41,6 +41,18 @@ public class Leshy_Manager : CryptidManager
     }
     
     private IEnumerator CastCDRoutine()
+    {
+        canCast = false;
+        yield return castCDWfs;
+        canCast = true;
+    }
+    
+    public void StartSplitCD()
+    {
+        StartCoroutine(SplitCDRoutine());
+    }
+    
+    private IEnumerator SplitCDRoutine()
     {
         canCast = false;
         yield return castCDWfs;

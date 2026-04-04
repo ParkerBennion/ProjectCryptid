@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class LeshyHiddenState : State
 {
+    [SerializeField] private State decisionState;
     public override void LogicUpdate()
     {
         
@@ -26,5 +27,6 @@ public class LeshyHiddenState : State
     {
         base.OnAnimationFinish();
         navAgent.isStopped = false;
+        stateMachine.SwitchToNextState(decisionState);
     }
 }
