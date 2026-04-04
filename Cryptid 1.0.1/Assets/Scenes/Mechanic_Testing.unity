@@ -1521,6 +1521,55 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 25, y: 10, z: 1}
   m_Center: {x: 0, y: 5, z: 0}
+--- !u!1 &813215667
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 813215668}
+  - component: {fileID: 813215669}
+  m_Layer: 7
+  m_Name: SplitState
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &813215668
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 813215667}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1445255950}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &813215669
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 813215667}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a1396f4cd3882d41be66b7d6f2ce158, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stateMachine: {fileID: 1881980867}
+  clonePrefab: {fileID: 0}
+  decideState: {fileID: 1082442031}
+  manager: {fileID: 1881980868}
+  maxRunTime: 2
 --- !u!1 &973500951 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1197397854413071719, guid: f4d98c96c6bfc4041a617bf0a4c893cd, type: 3}
@@ -1573,7 +1622,7 @@ MonoBehaviour:
   stateMachine: {fileID: 1881980867}
   manager: {fileID: 1881980868}
   decisionState: {fileID: 1082442031}
-  targetCatchupDistance: 6
+  targetCatchupDistance: 8
 --- !u!1 &1081164783
 GameObject:
   m_ObjectHideFlags: 0
@@ -1668,7 +1717,7 @@ Transform:
   m_GameObject: {fileID: 1082442029}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 8.42}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1688,9 +1737,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stateMachine: {fileID: 1881980867}
   tooCloseDistance: 2
-  tooFarDistance: 8.5
+  tooFarDistance: 12
   manager: {fileID: 1881980868}
-  splitState: {fileID: 0}
+  splitState: {fileID: 813215669}
   castState: {fileID: 543629022}
   chaseState: {fileID: 978666757}
   playerDistance: 0
@@ -1860,7 +1909,7 @@ Transform:
   m_GameObject: {fileID: 1110826047}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.5, z: 0}
   m_LocalScale: {x: 60, y: 1, z: 60}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1957,6 +2006,7 @@ Transform:
   - {fileID: 1082442030}
   - {fileID: 543629021}
   - {fileID: 978666756}
+  - {fileID: 813215668}
   m_Father: {fileID: 1881980871}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1556085808
@@ -2078,7 +2128,7 @@ Transform:
   m_GameObject: {fileID: 1556085808}
   serializedVersion: 2
   m_LocalRotation: {x: 0.4772468, y: -0.0000000116402505, z: 0.0000000063216503, w: 0.87876934}
-  m_LocalPosition: {x: 0.4919448, y: 7.34, z: -7.9696913}
+  m_LocalPosition: {x: 0.4919448, y: 6.84, z: -7.9696913}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2282,6 +2332,7 @@ GameObject:
   - component: {fileID: 1881980865}
   - component: {fileID: 1881980864}
   - component: {fileID: 1881980863}
+  - component: {fileID: 1881980872}
   m_Layer: 7
   m_Name: Cryptid_Leshy
   m_TagString: Untagged
@@ -2451,10 +2502,10 @@ MonoBehaviour:
   canStun: 1
   fleeState: {fileID: 0}
   canCast: 1
-  canSplit: 0
+  canSplit: 1
   playerTarget: {fileID: 0}
   castCooldown: 12
-  splitCooldown: 0
+  splitCooldown: 5
 --- !u!95 &1881980869
 Animator:
   serializedVersion: 7
@@ -2487,7 +2538,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3.5
+  m_Speed: 7
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -2508,7 +2559,7 @@ Transform:
   m_GameObject: {fileID: 1881980862}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.05, y: 0.5, z: -10.25}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2517,6 +2568,29 @@ Transform:
   - {fileID: 1445255950}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!136 &1881980872
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1881980862}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &1924027436 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1635902670480751782, guid: d68cb708b6679c24e881a84aaeffdbe7, type: 3}
@@ -3045,7 +3119,7 @@ Transform:
   m_GameObject: {fileID: 2121939563}
   serializedVersion: 2
   m_LocalRotation: {x: 0.4772468, y: -0.0000000116402505, z: 0.0000000063216503, w: 0.87876934}
-  m_LocalPosition: {x: 0.4919448, y: 7.34, z: -7.9696913}
+  m_LocalPosition: {x: 0.4919448, y: 6.84, z: -7.9696913}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -8864,7 +8938,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2105984214961995838, guid: 6edcafb7e6b859c42bf46e27c3b47828, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2105984214961995838, guid: 6edcafb7e6b859c42bf46e27c3b47828, type: 3}
       propertyPath: m_LocalPosition.z
