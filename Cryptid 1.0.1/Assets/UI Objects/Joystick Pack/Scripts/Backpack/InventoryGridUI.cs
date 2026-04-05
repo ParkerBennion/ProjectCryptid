@@ -52,7 +52,6 @@ public class InventoryGridUI : MonoBehaviour
 
         foreach (var entry in inventory.items)
         {
-            Debug.LogError(entry.itemName);
             if (entry == null) continue;
             if (entry.amount <= 0) continue;
 
