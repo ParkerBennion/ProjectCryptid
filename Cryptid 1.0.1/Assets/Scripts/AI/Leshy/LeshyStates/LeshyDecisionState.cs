@@ -37,11 +37,14 @@ public class LeshyDecisionState : State
                 stateMachine.SwitchToNextState(castState);
             }
         }
+        transform.LookAt(player.transform);
+        print("Looking at player");
     }
 
     public override void OnEnterState()
     {
         if (player == null) player = manager.playerTarget;
+        navAgent.isStopped = true;
     }
 
     public override void OnExitState()

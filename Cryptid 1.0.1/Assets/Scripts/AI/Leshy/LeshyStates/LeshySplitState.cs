@@ -1,20 +1,22 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class LeshySplitState : State
 {
-    [SerializeField] private GameObject clonePrefab;
+    [SerializeField] private LeshyCloneBehavior[] clonePrefabs;
     [SerializeField] private State decideState;
     [SerializeField] private Leshy_Manager manager;
     [SerializeField] private float maxRunTime;
     private GameObject player;
     private WaitForSeconds wfs;
-    private Vector3[] spawnLocations = new Vector3[3];
+    private List<Vector3> spawnLocations;
 
     protected override void Awake()
     {
         base.Awake();
         wfs = new WaitForSeconds(0.2f);
+        spawnLocations = new List<Vector3>();
     }
 
     public override void LogicUpdate()
@@ -24,12 +26,15 @@ public class LeshySplitState : State
 
     public override void OnEnterState()
     {
+        spawnLocations.Clear();
         if (!player) player = manager.playerTarget;
-        for (int i = 0; i < spawnLocations.Length; i++)
+        for (int i = 0; i < clonePrefabs.Length+1; i++)
         {
-            spawnLocations[i] = FindSpawnInFrontOfPlayer();
+            spawnLocations.Add(FindSpawnInFrontOfPlayer()); 
         }
+        navAgent.isStopped = false;
         StartCoroutine(SpawnAndFlee());
+        
     }
 
     public override void OnExitState()
@@ -40,27 +45,29 @@ public class LeshySplitState : State
     private IEnumerator SpawnAndFlee()
     {
         Vector3 targetLocation = new Vector3();
-        int mainLeshyIndex = Random.Range(0, 3);
-        for (int i = 0; i < spawnLocations.Length; i++)
+        int mainLeshyIndex = Random.Range(0, spawnLocations.Count);
+        int j = 0;//j is the index for the clones
+        for (int i = 0; i < spawnLocations.Count; i++)
         {
             if (i == mainLeshyIndex)
             {
                 targetLocation = spawnLocations[i];
-                navAgent.isStopped = false;
                 navAgent.SetDestination(spawnLocations[i]);
             }
             else
             {
-               // spawn clones and send them on thier way
+               clonePrefabs[j].Release(spawnLocations[i], player);
+               j++;
             }
         }
-
         float elapsedTime = 0;
         while (Vector3.Distance(transform.position, targetLocation) > .7f && elapsedTime < maxRunTime)//
         {
-            elapsedTime += Time.deltaTime;
             yield return wfs;
+            elapsedTime += .2f;
         }
+        navAgent.isStopped = true;
+        transform.LookAt(player.transform);
         stateMachine.SwitchToNextState(decideState);
     }
     
@@ -80,8 +87,9 @@ public class LeshySplitState : State
     {
         Vector3 directionFromPlayer = transform.position - player.transform.position;
         
-        Vector3 offsetLocation = Quaternion.Euler(0,Random.Range(90f*-.5f, 90*.5f),0) * directionFromPlayer;
-        float spawnDistance = Random.Range(10, 12);
+        Vector3 offsetLocation = Quaternion.Euler(0,Random.Range(120f*-.5f, 120*.5f),0) * directionFromPlayer;
+        offsetLocation.y = 0;
+        float spawnDistance = Random.Range(10,12);
         return player.transform.position + offsetLocation * spawnDistance;
     }
 }
