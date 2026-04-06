@@ -33,6 +33,7 @@ public class PlayerInfoSO : ScriptableObject
     public void SetDisguised(bool value)
     {
         isDisguised = value;
+        suitChange.Invoke(isDisguised);
     }
     public void ToggleSuit()
     {

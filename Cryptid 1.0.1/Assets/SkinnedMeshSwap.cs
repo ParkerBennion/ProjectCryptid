@@ -19,7 +19,7 @@ public class SkinnedMeshSwap : MonoBehaviour
 
     private void Start()
     {
-        calebInfo.SetDisguised(false);
+        ReadSuitStatus(calebInfo.GetDisguised());
     }
 
     public void SwapSkin(Mesh mesh, Material material)
