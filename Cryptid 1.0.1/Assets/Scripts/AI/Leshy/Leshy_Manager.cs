@@ -58,4 +58,9 @@ public class Leshy_Manager : CryptidManager
         yield return castCDWfs;
         canSplit = true;
     }
+
+    public void LookAtPlayer()
+    {
+        gameObject.transform.LookAt(playerTarget.transform);
+    }
 }
