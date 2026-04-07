@@ -41,7 +41,6 @@ public class BigfootAIController : MonoBehaviour
         {
             yield return wff;
             transform.rotation = Quaternion.Slerp(startRotation, endRotation, elapsedTime / turnTime);
-            print(elapsedTime);
             elapsedTime += Time.deltaTime;
         }
     }

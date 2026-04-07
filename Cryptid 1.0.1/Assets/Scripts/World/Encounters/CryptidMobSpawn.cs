@@ -8,9 +8,10 @@ public class CryptidMobSpawn : MonoBehaviour
 
     [SerializeField] private GameObject[] cryptidRandomList, cryptidSetList, spawnPoints;
     [SerializeField] private List<GameObject> spawnedCryptids;
-    [SerializeField] private UnityEvent mobDefeatedEvent;
+    [SerializeField] private UnityEvent mobSpawnEvent, mobDefeatedEvent;
     public void SpawnRandomCryptids()
     {
+        mobSpawnEvent.Invoke();
         foreach (GameObject spawnPoint in spawnPoints)
         {
             GameObject thisCryptid = Instantiate(cryptidRandomList[Random.Range(0, cryptidRandomList.Length)], spawnPoint.transform.position, Quaternion.identity);

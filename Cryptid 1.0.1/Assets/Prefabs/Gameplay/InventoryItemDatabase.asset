@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: InventoryItemDatabase
   m_EditorClassIdentifier: 
   itemPrefabs:
-  - {fileID: 2697879771539688577, guid: cd080d30231861c47816605ddb4cf688, type: 3}
   - {fileID: 2697879771539688577, guid: 84be3c19769a50e4595356c23adcf414, type: 3}
   - {fileID: 2697879771539688577, guid: 1ea0cd6329cd4734bac27c86df6f48c0, type: 3}
   - {fileID: 2697879771539688577, guid: 38f8f1e70f8990f4c84cd4c2df3edadc, type: 3}
+  - {fileID: 2697879771539688577, guid: 8cf64ebe0591a814d925989a64da411c, type: 3}

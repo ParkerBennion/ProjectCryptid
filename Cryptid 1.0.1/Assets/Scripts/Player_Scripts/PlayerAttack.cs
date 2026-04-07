@@ -2,6 +2,7 @@ using System;
 using UnityEngine;
 using UnityEngine.VFX;
 using FMODUnity;
+using UnityEngine.Events;
 
 public class PlayerAttack : MonoBehaviour
 {
@@ -15,10 +16,11 @@ public class PlayerAttack : MonoBehaviour
     private Vector3 attackCenter, attackOffset;
     public string[] validLayers;
     private LayerMask validLayerList;
+    [SerializeField] private GameActionFloat aggroGenerator;
 
     private void Awake()
     {
-        attackOffset = new Vector3(0, 0, 1.5f);
+        attackOffset = new Vector3(0, 0, 0.5f);
         validLayerList = LayerMask.GetMask(validLayers);
         damageMultiplier = 1;
     }
@@ -36,7 +38,10 @@ public class PlayerAttack : MonoBehaviour
         foreach (Collider thisCol in cols)
         {
            if (thisCol.TryGetComponent(out IDamageable target))
-               target.DealDamage(lightDamage*damageMultiplier);
+           {
+               target.DealDamage(lightDamage * damageMultiplier);
+               aggroGenerator.RaiseAction(4);
+           }
         }
     }
 /// <summary>
@@ -51,9 +56,12 @@ public class PlayerAttack : MonoBehaviour
         foreach (Collider thisCol in cols)
         {
             if (thisCol.TryGetComponent(out IDamageable target))
+            {
                 if (isPerfectAttack)
-                    target.DealDamage(heavyDamage*1.5f*damageMultiplier);
-                else target.DealDamage(heavyDamage*damageMultiplier);
+                    target.DealDamage(heavyDamage * 1.5f * damageMultiplier);
+                else target.DealDamage(heavyDamage * damageMultiplier);
+                aggroGenerator.RaiseAction(15);
+            }
         }
     }
 /// <summary>

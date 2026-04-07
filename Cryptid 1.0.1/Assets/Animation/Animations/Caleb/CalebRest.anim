@@ -855,40 +855,6 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: {x: 0.17069495, y: 0.06694033, z: 0.7147635, w: 0.6749039}
-        inSlope: {x: 0.0077955686, y: 0.008256014, z: -0.00077390636, w: -0.0019726744}
-        outSlope: {x: 0.0077955686, y: 0.008256014, z: -0.00077390636, w: -0.0019726744}
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334, w: 0.33333334}
-        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334, w: 0.33333334}
-      - serializedVersion: 3
-        time: 0.9583334
-        value: {x: 0.20528735, y: 0.10372734, z: 0.7103581, w: 0.6651987}
-        inSlope: {x: -0.06046688, y: -0.06456843, z: 0.0094063375, w: 0.018638868}
-        outSlope: {x: -0.06046688, y: -0.06456843, z: 0.0094063375, w: 0.018638868}
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334, w: 0.33333334}
-        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334, w: 0.33333334}
-      - serializedVersion: 3
-        time: 1.4583335
-        value: {x: 0.17109892, y: 0.06736818, z: 0.71472335, w: 0.67480165}
-        inSlope: {x: -0.027495451, y: -0.029125694, z: 0.0027708954, w: 0.006996618}
-        outSlope: {x: -0.027495451, y: -0.029125694, z: 0.0027708954, w: 0.006996618}
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334, w: 0.33333334}
-        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334, w: 0.33333334}
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    path: Skeleton/ROOT_SKIN_JNT/CoG_Skin_Jnt/Spine_1_Skin_Jnt/Spine_2_Skin_Jnt/Spine_3_Skin_Jnt/Neck_Skin_Jnt
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
         value: {x: -0.20341618, y: -0.41370684, z: -0.6355144, w: 0.6193465}
         inSlope: {x: -0.00059723825, y: -0.022818793, z: -0.037296277, w: -0.053871606}
         outSlope: {x: -0.00059723825, y: -0.022818793, z: -0.037296277, w: -0.053871606}
@@ -2435,6 +2401,58 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     path: Skeleton/ROOT_SKIN_JNT/CoG_Skin_Jnt/Spine_1_Skin_Jnt/Spine_2_Skin_Jnt/Spine_3_Skin_Jnt/Neck_Skin_Jnt/Head_Skin_Jnt/R_Eye_Skin_Jnt
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: {x: 0.24462771, y: -0.016817346, z: 0.6913076, w: 0.6796825}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0.0075412835, y: 0.008373157, z: -0.0015549038, w: -0.00093294226}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+      - serializedVersion: 3
+        time: 0.9583333
+        value: {x: 0.2774651, y: 0.019872129, z: 0.68352383, w: 0.67484325}
+        inSlope: {x: -0.057313755, y: -0.06413978, z: 0.015175861, w: 0.010262365}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+      - serializedVersion: 3
+        time: 0.9583334
+        value: {x: 0.2774651, y: 0.019872129, z: 0.68352383, w: 0.67484325}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: -0.057578087, y: -0.06452203, z: 0.015258789, w: 0.01001358}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+      - serializedVersion: 3
+        time: 1.4583334
+        value: {x: 0.24501193, y: -0.016392447, z: 0.6912272, w: 0.67963636}
+        inSlope: {x: -0.026226044, y: -0.028982759, z: 0.005722046, w: 0.00333786}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+      - serializedVersion: 3
+        time: 1.4583335
+        value: {x: 0.24501193, y: -0.016392455, z: 0.6912272, w: 0.67963636}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Skeleton/ROOT_SKIN_JNT/CoG_Skin_Jnt/Spine_1_Skin_Jnt/Spine_2_Skin_Jnt/Spine_3_Skin_Jnt/Neck_Skin_Jnt
   m_CompressedRotationCurves: []
   m_EulerCurves: []
   m_PositionCurves:
@@ -7131,15 +7149,6 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     - serializedVersion: 2
-      path: 3281461046
-      attribute: 2
-      script: {fileID: 0}
-      typeID: 4
-      customType: 0
-      isPPtrCurve: 0
-      isIntCurve: 0
-      isSerializeReferenceCurve: 0
-    - serializedVersion: 2
       path: 7490823
       attribute: 2
       script: {fileID: 0}
@@ -7303,6 +7312,15 @@ AnimationClip:
       isSerializeReferenceCurve: 0
     - serializedVersion: 2
       path: 4210368640
+      attribute: 2
+      script: {fileID: 0}
+      typeID: 4
+      customType: 0
+      isPPtrCurve: 0
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
+    - serializedVersion: 2
+      path: 3281461046
       attribute: 2
       script: {fileID: 0}
       typeID: 4
@@ -12669,162 +12687,6 @@ AnimationClip:
       m_RotationOrder: 4
     attribute: m_LocalRotation.w
     path: Skeleton/ROOT_SKIN_JNT/CoG_Skin_Jnt/Spine_1_Skin_Jnt/Spine_2_Skin_Jnt/Spine_3_Skin_Jnt
-    classID: 4
-    script: {fileID: 0}
-    flags: 0
-  - serializedVersion: 2
-    curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 0.17069495
-        inSlope: 0.0077955686
-        outSlope: 0.0077955686
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      - serializedVersion: 3
-        time: 0.9583334
-        value: 0.20528735
-        inSlope: -0.06046688
-        outSlope: -0.06046688
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      - serializedVersion: 3
-        time: 1.4583335
-        value: 0.17109892
-        inSlope: -0.027495451
-        outSlope: -0.027495451
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalRotation.x
-    path: Skeleton/ROOT_SKIN_JNT/CoG_Skin_Jnt/Spine_1_Skin_Jnt/Spine_2_Skin_Jnt/Spine_3_Skin_Jnt/Neck_Skin_Jnt
-    classID: 4
-    script: {fileID: 0}
-    flags: 0
-  - serializedVersion: 2
-    curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 0.06694033
-        inSlope: 0.008256014
-        outSlope: 0.008256014
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      - serializedVersion: 3
-        time: 0.9583334
-        value: 0.10372734
-        inSlope: -0.06456843
-        outSlope: -0.06456843
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      - serializedVersion: 3
-        time: 1.4583335
-        value: 0.06736818
-        inSlope: -0.029125694
-        outSlope: -0.029125694
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalRotation.y
-    path: Skeleton/ROOT_SKIN_JNT/CoG_Skin_Jnt/Spine_1_Skin_Jnt/Spine_2_Skin_Jnt/Spine_3_Skin_Jnt/Neck_Skin_Jnt
-    classID: 4
-    script: {fileID: 0}
-    flags: 0
-  - serializedVersion: 2
-    curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 0.7147635
-        inSlope: -0.00077390636
-        outSlope: -0.00077390636
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      - serializedVersion: 3
-        time: 0.9583334
-        value: 0.7103581
-        inSlope: 0.0094063375
-        outSlope: 0.0094063375
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      - serializedVersion: 3
-        time: 1.4583335
-        value: 0.71472335
-        inSlope: 0.0027708954
-        outSlope: 0.0027708954
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalRotation.z
-    path: Skeleton/ROOT_SKIN_JNT/CoG_Skin_Jnt/Spine_1_Skin_Jnt/Spine_2_Skin_Jnt/Spine_3_Skin_Jnt/Neck_Skin_Jnt
-    classID: 4
-    script: {fileID: 0}
-    flags: 0
-  - serializedVersion: 2
-    curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 0.6749039
-        inSlope: -0.0019726744
-        outSlope: -0.0019726744
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      - serializedVersion: 3
-        time: 0.9583334
-        value: 0.6651987
-        inSlope: 0.018638868
-        outSlope: 0.018638868
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      - serializedVersion: 3
-        time: 1.4583335
-        value: 0.67480165
-        inSlope: 0.006996618
-        outSlope: 0.006996618
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalRotation.w
-    path: Skeleton/ROOT_SKIN_JNT/CoG_Skin_Jnt/Spine_1_Skin_Jnt/Spine_2_Skin_Jnt/Spine_3_Skin_Jnt/Neck_Skin_Jnt
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -35589,6 +35451,234 @@ AnimationClip:
     classID: 4
     script: {fileID: 0}
     flags: 0
+  - serializedVersion: 2
+    curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0.24462771
+        inSlope: 0
+        outSlope: 0.0075412835
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.9583333
+        value: 0.2774651
+        inSlope: -0.057313755
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.9583334
+        value: 0.2774651
+        inSlope: 0
+        outSlope: -0.057578087
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.4583334
+        value: 0.24501193
+        inSlope: -0.026226044
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.4583335
+        value: 0.24501193
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalRotation.x
+    path: Skeleton/ROOT_SKIN_JNT/CoG_Skin_Jnt/Spine_1_Skin_Jnt/Spine_2_Skin_Jnt/Spine_3_Skin_Jnt/Neck_Skin_Jnt
+    classID: 4
+    script: {fileID: 0}
+    flags: 0
+  - serializedVersion: 2
+    curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: -0.016817346
+        inSlope: 0
+        outSlope: 0.008373157
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.9583333
+        value: 0.019872129
+        inSlope: -0.06413978
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.9583334
+        value: 0.019872129
+        inSlope: 0
+        outSlope: -0.06452203
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.4583334
+        value: -0.016392447
+        inSlope: -0.028982759
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.4583335
+        value: -0.016392455
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalRotation.y
+    path: Skeleton/ROOT_SKIN_JNT/CoG_Skin_Jnt/Spine_1_Skin_Jnt/Spine_2_Skin_Jnt/Spine_3_Skin_Jnt/Neck_Skin_Jnt
+    classID: 4
+    script: {fileID: 0}
+    flags: 0
+  - serializedVersion: 2
+    curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0.6913076
+        inSlope: 0
+        outSlope: -0.0015549038
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.9583333
+        value: 0.68352383
+        inSlope: 0.015175861
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.9583334
+        value: 0.68352383
+        inSlope: 0
+        outSlope: 0.015258789
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.4583334
+        value: 0.6912272
+        inSlope: 0.005722046
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.4583335
+        value: 0.6912272
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalRotation.z
+    path: Skeleton/ROOT_SKIN_JNT/CoG_Skin_Jnt/Spine_1_Skin_Jnt/Spine_2_Skin_Jnt/Spine_3_Skin_Jnt/Neck_Skin_Jnt
+    classID: 4
+    script: {fileID: 0}
+    flags: 0
+  - serializedVersion: 2
+    curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0.6796825
+        inSlope: 0
+        outSlope: -0.00093294226
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.9583333
+        value: 0.67484325
+        inSlope: 0.010262365
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.9583334
+        value: 0.67484325
+        inSlope: 0
+        outSlope: 0.01001358
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.4583334
+        value: 0.67963636
+        inSlope: 0.00333786
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1.4583335
+        value: 0.67963636
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalRotation.w
+    path: Skeleton/ROOT_SKIN_JNT/CoG_Skin_Jnt/Spine_1_Skin_Jnt/Spine_2_Skin_Jnt/Spine_3_Skin_Jnt/Neck_Skin_Jnt
+    classID: 4
+    script: {fileID: 0}
+    flags: 0
   m_EulerEditorCurves:
   - serializedVersion: 2
     curve:
@@ -38440,7 +38530,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 7.741987
+        value: 20.841883
         inSlope: -0.10756451
         outSlope: -0.10756451
         tangentMode: 0
@@ -38448,17 +38538,17 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.9583334
-        value: 7.223874
+        time: 0.9583333
+        value: 20.32377
         inSlope: 0.9428747
-        outSlope: 0.9615953
+        outSlope: 0.9428747
         tangentMode: 0
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 1.4583335
-        value: 7.7364407
+        time: 1.4583334
+        value: 20.836336
         inSlope: 0.37368384
         outSlope: 0.37368384
         tangentMode: 0

@@ -12,13 +12,21 @@ public class SpawnRandomLocation : SpawnRandomItem
         if (forceSpawnSO.GetValue() != 0)
         {
             itemIndex = forceSpawnSO.GetValue()-1;
+            forceSpawnSO.SetValue(0);
         }
         else
         {
             itemIndex = Random.Range(0, spawnList.Length);
         }
-
         Instantiate(spawnList[itemIndex], transform.position, Quaternion.identity, this.transform.parent.parent);
+        if(itemIndex >=3)
+        {
+            foreach (GameObject signPost in signPosts)
+            {
+                signPost.SetActive(false);
+            }
+            return;
+        }
         foreach (GameObject signPost in signPosts)
         {
             DecalProjector[] projectors = signPost.GetComponentsInChildren<DecalProjector>();
@@ -27,6 +35,5 @@ public class SpawnRandomLocation : SpawnRandomItem
                 projector.material = signPostMaterials[itemIndex];
             }
         }
-        forceSpawnSO.SetValue(0);
     }
 }

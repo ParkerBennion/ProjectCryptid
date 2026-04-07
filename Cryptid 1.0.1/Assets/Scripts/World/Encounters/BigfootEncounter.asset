@@ -27,3 +27,18 @@ MonoBehaviour:
   detectedEvent:
     m_PersistentCalls:
       m_Calls: []
+  foundFriendEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: dcb1cf6f5925f51429c80e0996656528, type: 2}
+        m_TargetAssemblyTypeName: QuestIntData, Assembly-CSharp
+        m_MethodName: SetValue
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 7
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2

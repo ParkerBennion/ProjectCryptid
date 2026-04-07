@@ -42,7 +42,12 @@ public class RangerQuestDialogueSO : QuestDialogueKeeperSO
             new string[]{//phase 6 found the gorilla suit
                 "That's a neat suit you got there",
                 "You probably better not let Dan see you in that thing."
+            },
+            new string[]{//phase 7 has been to bigfoot's lair
+                "You're friends with bigfoot now huh?",
+                "Don't go making Dan jealous now"
             }
+            
         };
 
     

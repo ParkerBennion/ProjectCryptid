@@ -50,6 +50,7 @@ MonoBehaviour:
   - {fileID: 2991476186398601165, guid: 9d9546a018104954481ea27b5f25f00a, type: 3}
   - {fileID: 1576348882820557418, guid: 1cb28a530fbadef45865903f339588e9, type: 3}
   - {fileID: 2991476186398601165, guid: a2bae66c33598294e916736e996df8e8, type: 3}
+  - {fileID: 712677608725286110, guid: 9325b7e7ff39cc2409d49831580406b0, type: 3}
   SpawnOnCreation: 0
   signPosts: []
   signPostMaterials:

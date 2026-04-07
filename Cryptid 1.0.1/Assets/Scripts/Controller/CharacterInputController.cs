@@ -40,11 +40,13 @@ public class CharacterInputController : MonoBehaviour
     private static readonly int animSpeed = Animator.StringToHash("Speed");
     
     private WaitForSeconds chargeStartDelayWFS, chargeTimeWFS, frameWFS, waitForTotemWFS;
+
+    [SerializeField] private bool enableControlsOnStart;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     
     private void OnEnable() // Enables controls when the object is enabled
     {
-        EnableControls();
+        if(enableControlsOnStart) EnableControls();
     }
     private void Awake()
     {
@@ -125,7 +127,6 @@ public class CharacterInputController : MonoBehaviour
     }
     public void ReleaseTorch()
     {
-        Debug.Log("ReleaseTorch");
         playerInfoSo.ToggleTorch();
     }
 
