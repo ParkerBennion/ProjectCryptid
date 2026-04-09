@@ -15,6 +15,7 @@ public class CryptidPopulator : MonoBehaviour
     private Vector3 randomSpawnLocationOffset;
     private Vector2 spawnLocationCached;
     private Coroutine currentRoutine;
+    [SerializeField] private int maximumCryptids;
 
     [SerializeField][Range(10,180)] private float frontalConeSize;
     //cachedValues for spawning
@@ -28,7 +29,7 @@ public class CryptidPopulator : MonoBehaviour
 
     public void SpawnInitialCryptids()
     {
-        SpawnRandomCryptids(10);
+        SpawnRandomCryptids(maximumCryptids);
     }
     
     /// <summary>
@@ -85,6 +86,7 @@ public class CryptidPopulator : MonoBehaviour
             //print("Wrangling cryptids");
             foreach (CryptidManager cryptid in activeCryptids)
             {
+                if(!cryptid) continue;
                 if (Vector3.Distance(playerCharacter.transform.position, cryptid.transform.position) > maxSpawnRange)
                 {
                     cryptid.MoveToLocation(FindSpawnInFrontOfPlayer());

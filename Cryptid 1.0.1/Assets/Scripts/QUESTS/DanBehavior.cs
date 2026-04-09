@@ -1,18 +1,27 @@
 using System;
 using System.Collections;
 using UnityEngine;
-public class DanFreakoutCheck : MonoBehaviour
+using UnityEngine.Events;
+
+public class DanBehavior : MonoBehaviour
 {
     [SerializeField] private PlayerInfoSO calebInfo;
     [SerializeField] private float detectRange;
+    [SerializeField] private UnityEvent freakoutEvent;
+    private Animator animator; 
     private LayerMask layerMask;
 
     private void Awake()
     {
         layerMask=LayerMask.GetMask("PlayerLayer");
         calebInfo.suitChange += SuitChangeResponse;
+        animator = GetComponent<Animator>();
     }
 
+    private void Start()
+    {
+        SuitChangeResponse(calebInfo.GetDisguised());
+    }
 
     public void SuitChangeResponse(bool shouldCheck)
     {
@@ -40,11 +49,17 @@ public class DanFreakoutCheck : MonoBehaviour
             {
                 if (thisCol.TryGetComponent(out CharacterInputController target))
                 {
-                    GetComponent<Animator>().Play("DanFreakout");
+                    animator.SetTrigger("Freakout");
+                    freakoutEvent.Invoke();
                     running = false;
                 }
             }
         }
+    }
+
+    public void GreetPlayer()
+    {
+        animator.SetTrigger("Greet");
     }
 
     private void OnDestroy()
