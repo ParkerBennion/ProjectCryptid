@@ -10,6 +10,7 @@ using UnityEngine.VFX;
 
 public class CharacterInputController : MonoBehaviour
 {
+    
     public static GameObject characterObject; //declares this instance in the scene, used for efficent method of getting this reference in other scripts. (interactionItemTotemEquip)
     private PlayerInputs inputs;
     private Rigidbody rb;
@@ -20,7 +21,7 @@ public class CharacterInputController : MonoBehaviour
     private Vector3 moveVector, lookVector;
     
     public bool attackCharged, activelyCharging;
-    [SerializeField] public float playerSpeed,  heavyWindupStartDelay, heavyWindupChargeTime, perfectHeavyFrameTime;
+    [SerializeField] public float  heavyWindupStartDelay, heavyWindupChargeTime, perfectHeavyFrameTime;
 
     [Range(0, 1)] 
     public float chargeMovementMultiplier;
@@ -36,7 +37,7 @@ public class CharacterInputController : MonoBehaviour
     public TotemBase activeTotem;
 
     public Animator animator;
-    [SerializeField] private PlayerInfoSO playerInfoSo;
+    [SerializeField] private PlayerInfoSO playerInfo;
     private static readonly int animSpeed = Animator.StringToHash("Speed");
     
     private WaitForSeconds chargeStartDelayWFS, chargeTimeWFS, frameWFS, waitForTotemWFS;
@@ -50,6 +51,7 @@ public class CharacterInputController : MonoBehaviour
     }
     private void Awake()
     {
+        playerInfo.speedChange += UpdateSpeed;
         characterObject = gameObject;
         canAttack = true;
         chargeStartDelayWFS = new WaitForSeconds(heavyWindupStartDelay);
@@ -58,7 +60,6 @@ public class CharacterInputController : MonoBehaviour
         waitForTotemWFS = new WaitForSeconds(.05f);
         attackCharged = false;
         activelyCharging = false;
-        activePlayerRunSpeed = playerSpeed;
         inputs = new PlayerInputs();
         perfectAttack = false;
         attack = GetComponent<PlayerAttack>();
@@ -81,6 +82,8 @@ public class CharacterInputController : MonoBehaviour
 
         totemRunSpeedBonus = 0;
         
+        playerInfo.ResetSpeed();
+        
         //getTotem
         if (TryGetComponent<TotemBase>(out TotemBase totem))
         {
@@ -89,6 +92,11 @@ public class CharacterInputController : MonoBehaviour
             //totem.Initialize();
         }
     }
+
+    private void Start()
+    {
+    }
+
     /// <summary>
     /// UPDATE contains/handles the player movement and rotation
     /// </summary>
@@ -127,7 +135,7 @@ public class CharacterInputController : MonoBehaviour
     }
     public void ReleaseTorch()
     {
-        playerInfoSo.ToggleTorch();
+        playerInfo.ToggleTorch();
     }
 
     private void StartTotemCallback(InputAction.CallbackContext ctx)
@@ -197,7 +205,7 @@ public void DisableControls()
         activelyCharging = false;
         heavyChargingFX.Stop();
         heavyChargedFX.Stop();
-        activePlayerRunSpeed = playerSpeed;
+        playerInfo.ResetSpeed();
     }
     
 /// <summary>
@@ -212,7 +220,7 @@ public void DisableControls()
         activelyCharging = true;
         heavyChargingFX.Play();
         animator.SetBool("HeavyCharging", true);
-        activePlayerRunSpeed *= chargeMovementMultiplier;
+        playerInfo.SetSpeed(activePlayerRunSpeed *= chargeMovementMultiplier);
         yield return chargeTimeWFS;
         //print("Heavy attack is Charged");
         StartCoroutine(PerfectHeavyAttackFrame());
@@ -244,6 +252,7 @@ public void DisableControls()
         inputs.PlayerMobile.Torch.performed -= ReleaseTorchCallback;
         inputs.PlayerMobile.Totem.started -= StartTotemCallback;
         inputs.PlayerMobile.Totem.canceled -= ReleaseTotemCallback;
+        playerInfo.speedChange -= UpdateSpeed;
     }
     //for animation
     public void SetCanAttack()
@@ -283,6 +292,11 @@ public void DisableControls()
     {
         animator.SetBool("Paused", false);
         animator.updateMode = AnimatorUpdateMode.Normal;
+    }
+
+    private void UpdateSpeed(float speedVar)
+    {
+        activePlayerRunSpeed = speedVar;
     }
 
 }
