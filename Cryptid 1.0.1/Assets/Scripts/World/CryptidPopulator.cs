@@ -74,8 +74,10 @@ public class CryptidPopulator : MonoBehaviour
 
     public void RemoveActiveCryptidFromList(CryptidManager cryptid)
     {
-        activeCryptids.Remove(cryptid);
-        SpawnRandomCryptids(1);
+        if(activeCryptids.Contains(cryptid))
+            activeCryptids.Remove(cryptid);
+        if(activeCryptids.Count<maximumCryptids)
+            FillCryptidPopulation();
     }
 
     private IEnumerator WrangleCryptidsRoutine()
@@ -93,6 +95,24 @@ public class CryptidPopulator : MonoBehaviour
                 }
             }
             yield return new WaitForSeconds(3);
+        }
+    }
+
+    public void FillCryptidPopulation()
+    {
+        if (activeCryptids.Count < maximumCryptids)//if there are less cryptids than should be
+        {
+            SpawnRandomCryptids(maximumCryptids-activeCryptids.Count);
+        }
+    }
+
+    public void SetCryptidPopulation(int newNumCryptids)
+    {
+        int prevNumCryptids = maximumCryptids;
+        maximumCryptids=newNumCryptids;
+        if (maximumCryptids>prevNumCryptids)
+        {
+            FillCryptidPopulation();
         }
     }
     // create a system that checks periodically if cryptids are out of range and relocate them
