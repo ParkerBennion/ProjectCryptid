@@ -8,7 +8,6 @@ public class HealthUI : MonoBehaviour
 
     public void ChangeDisplay(float percentage)
     {
-        print(percentage);
         healthImageDisplay.fillAmount = percentage;
     }
 }

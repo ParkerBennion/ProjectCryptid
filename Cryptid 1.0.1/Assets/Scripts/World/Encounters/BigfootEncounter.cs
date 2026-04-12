@@ -27,6 +27,7 @@ public class BigfootEncounter : Encounter
         WaitForSeconds WFS = new WaitForSeconds(tickTime);
         player = encounterManager.player;
         bigfootInstance = Instantiate(bigfootPrefab, encounterManager.FindSpawnInFrontOfPlayer(), Quaternion.identity,null).gameObject;
+        bigfootInstance.transform.Rotate(Vector3.up*Random.Range(0f,359f));
         while (!detected)
         {
             distanceFromPlayer = Vector3.Distance(player.transform.position, bigfootInstance.transform.position);
