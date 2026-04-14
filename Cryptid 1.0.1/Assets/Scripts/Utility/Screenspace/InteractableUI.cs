@@ -11,14 +11,14 @@ public class InteractableUI : MonoBehaviour
     private RectTransform buttonTransform;
     public bool tracking;
     public GameObject targetObjectTest;
-    public GameObject mainCam;
+    public Camera mainCam;
 
     private void Awake()
     {
         thisPopupButton = GetComponent<Button>();
         buttonTransform = thisPopupButton.GetComponent<RectTransform>();
         tracking = false;
-        if (Camera.main != null) mainCam = Camera.main.gameObject;
+        if (Camera.main) mainCam = Camera.main;
     }
 
     private void OnEnable()
@@ -53,7 +53,7 @@ public class InteractableUI : MonoBehaviour
         tracking = true;
         while (tracking)
         {
-            buttonTransform.anchoredPosition = Camera.main.WorldToScreenPoint(targetObj.transform.position);
+            buttonTransform.anchoredPosition = mainCam.WorldToScreenPoint(targetObj.transform.position);
             yield return waitForFrame;
         }
     }
