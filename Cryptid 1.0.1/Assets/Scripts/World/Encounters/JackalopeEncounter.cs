@@ -9,22 +9,22 @@ public class JackalopeEncounter : Encounter
     private GameObject player;
     private bool detected;
     [SerializeField] private float detectionRange, despawnRange;
-    [SerializeField] private TorchSO TorchSo;
+    [SerializeField] private PlayerInfoSO playerInfoSo;
     public override void OnExitEncounter()
     {
-        TorchSo.torchChange -= UpdateDetectionRange;
+        playerInfoSo.torchChange -= UpdateDetectionRange;
         if(jackalopeInstance!=null)
             Destroy(jackalopeInstance);
     }
     public override IEnumerator EncounterRoutine()
     {
-        TorchSo.torchChange += UpdateDetectionRange;
+        playerInfoSo.torchChange += UpdateDetectionRange;
         detected = false;
         float tickTime = .25f;
         player = encounterManager.player;
         WaitForSeconds WFS = new WaitForSeconds(tickTime);
         float distanceFromPlayer = 100;
-        jackalopeInstance = Instantiate(jackalopePrefab, FindSpawnInFrontOfPlayer(), Quaternion.identity, null);
+        jackalopeInstance = Instantiate(jackalopePrefab, encounterManager.FindSpawnInFrontOfPlayer(), Quaternion.identity, null);
         while (!detected)
         {
             distanceFromPlayer = Vector3.Distance(player.transform.position, jackalopeInstance.transform.position);
@@ -48,21 +48,6 @@ public class JackalopeEncounter : Encounter
             distanceFromPlayer = Vector3.Distance(player.transform.position, jackalopeInstance.transform.position);
         }
         encounterManager.CloseCurrentEncounter();
-    }
-    
-    
-    
-    
-    private Vector3 FindSpawnInFrontOfPlayer()
-    {
-        float coneRadians = Random.Range(22.5f*-.5f, 22.5f*.5f)*Mathf.Deg2Rad;
-
-        float spawnDistance = Random.Range(12, 15);
-        Vector3 localDirection = new Vector3(Mathf.Sin(coneRadians), 0 ,Mathf.Cos(coneRadians));
-
-        Vector3 worldDirection = player.transform.TransformDirection(localDirection);
-
-        return player.transform.position + worldDirection * spawnDistance;
     }
 
     public void UpdateDetectionRange(bool val)

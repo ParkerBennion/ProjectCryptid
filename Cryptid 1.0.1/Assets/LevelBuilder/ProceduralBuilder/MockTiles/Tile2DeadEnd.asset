@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Tile2DeadEnd
   m_EditorClassIdentifier: 
   variations:
-  - {fileID: 5650620722496709884, guid: 09218c582c3b80048aaf7cbddd55e83d, type: 3}
+  - {fileID: 6783151553655464871, guid: 8b11e1a67aac62549949cc66f1364694, type: 3}

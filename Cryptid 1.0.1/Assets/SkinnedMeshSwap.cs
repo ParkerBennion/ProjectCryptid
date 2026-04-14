@@ -8,50 +8,52 @@ public class SkinnedMeshSwap : MonoBehaviour
     private Mesh defaultMesh;
     [SerializeField] private Material alternateMaterial;
     private Material defaultMaterial;
-    private bool isSwapped;
+    [SerializeField] private PlayerInfoSO calebInfo;
     private void Awake()
     {
-        
+        calebInfo.suitChange += ReadSuitStatus;
         mRenderer = GetComponent<SkinnedMeshRenderer>();
         defaultMesh = mRenderer.sharedMesh;
         defaultMaterial = mRenderer.sharedMaterial;
-        print(alternateMesh+"Is the renderer");
     }
 
     private void Start()
     {
-        isSwapped = false;
+        ReadSuitStatus(calebInfo.GetDisguised());
     }
 
     public void SwapSkin(Mesh mesh, Material material)
     {
         mRenderer.sharedMesh = mesh;
         mRenderer.sharedMaterial = material;
-        isSwapped=true;
     }
 
     public void SwapAlternateSkin()
     {
-        Debug.Log($"mRenderer={mRenderer}, alternateMesh={alternateMesh}, alternateMaterial={alternateMaterial}");
+        //Debug.Log($"mRenderer={mRenderer}, alternateMesh={alternateMesh}, alternateMaterial={alternateMaterial}");
         mRenderer.sharedMesh = alternateMesh;
         mRenderer.sharedMaterial = alternateMaterial;
-        isSwapped=true;
     }
 
     public void SwapDefaultSkin()
     {
         mRenderer.sharedMesh = defaultMesh;
         mRenderer.sharedMaterial = defaultMaterial;
-        isSwapped = false;
     }
+    
 
-    public void ToggleSkin()
+    public void ReadSuitStatus(bool isDisguised)
     {
-        if(!isSwapped)
+        if (isDisguised)
         {
             SwapAlternateSkin();
             return;
         }
         SwapDefaultSkin();
+    }
+
+    private void OnDestroy()
+    {
+        calebInfo.suitChange -= ReadSuitStatus;
     }
 }

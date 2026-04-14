@@ -7,10 +7,9 @@ public class CacheScript : MonoBehaviour, IDamageable
 {
     [SerializeField] private GameObject[] lootPool;
     private Animator animator;
-    private Vector3 lootSpawnOffset;
-    private bool hasOpened;
-    public UnityEvent openEvent;
-    [SerializeField] private Vector3 lootTrajectoryForce;
+    protected Vector3 lootSpawnOffset;
+    protected bool hasOpened;
+    [SerializeField] protected Vector3 lootTrajectoryForce;
 
     private void Awake()
     {
@@ -19,7 +18,7 @@ public class CacheScript : MonoBehaviour, IDamageable
         hasOpened = false;
     }
 
-    public void GenerateLoot()
+    public virtual void GenerateLoot()
     {
         GameObject lootInstance = Instantiate(lootPool[Random.Range(0, lootPool.Length)],
             lootSpawnOffset + gameObject.transform.position, transform.rotation);
@@ -31,12 +30,11 @@ public class CacheScript : MonoBehaviour, IDamageable
 
     public void DealDamage(float damage)
     {
-        print("Cache hit");
         if(!hasOpened)
         {
-            openEvent.Invoke();
             GenerateLoot();
-            //hasOpened = true;
+            hasOpened = true;
+            animator.SetTrigger("Open");
         }
     }
 }

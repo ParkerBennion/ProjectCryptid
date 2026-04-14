@@ -9,15 +9,33 @@ public class Tile : MonoBehaviour
     public int[] borderCode;// start at top move clockwise
     public NavMeshData tileNavMeshData;
     public NavMeshSurface navMesh;
+    [SerializeField] private GameObject assetsPrefab, assetsObj;
     private void Awake()
     {
         tileNavMeshData = navMesh.navMeshData;
     }
 
-    private void Start()
+    public void SpawnAssets()
     {
-        
+        if(assetsObj != null)
+        {
+            assetsObj.SetActive(true);
+            return;
+        }
+        assetsObj = Instantiate(assetsPrefab,
+            gameObject.transform.position,
+            transform.rotation,
+            transform);
     }
+
+    public void DespawnAssets()
+    {
+        if (assetsObj != null)
+        {
+            assetsObj.SetActive(false);
+        }
+    }
+
 
     private void RotateBorderCode(int numRotate)
     {

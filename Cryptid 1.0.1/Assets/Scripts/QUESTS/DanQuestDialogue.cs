@@ -35,6 +35,7 @@ public class DanQuestDialogueSO : QuestDialogueKeeperSO
         new string[]
         {
             //phase 4 defended the firetower
+            "Chris!",
             "You defended the firetower?",
             "I bet Ellie appreciated that.",
             "Have you checked on her?"
@@ -52,6 +53,14 @@ public class DanQuestDialogueSO : QuestDialogueKeeperSO
             //phase 6 found the gorilla suit
             "I've Seen the darndest thing",
             "There's a bigfoot kid runnin around! Keep yer eyes out."
+        },
+        new string[]
+        {
+            //phase 7 been to bigfoot's cave
+            "You've been WHERE????",
+            "How in whe who-what and why???",
+            "Next time you find your way in, do yer friend dan a solid...",
+            "Get me some pictures!"
         }
     };
 };

@@ -5,9 +5,11 @@ public class CollectibleWisp : MonoBehaviour
     [Tooltip("How many coins this chunk gives")]
     public int logValue = 1;
 
-    [Tooltip("GameAction to trigger when logs are updated")]
-    public GameAction updateDisplayAction; // Reference to the GameAction
+    /*[Tooltip("GameAction to trigger when logs are updated")]
+    public GameAction updateDisplayAction; // Reference to the GameAction*/
 
+    //[SerializeField] private GameActionOBJ sendThisObjectAction;//this code has been ripped out for now and needs to be called again for sprite travel code
+    [SerializeField] private GameAction callAction;
     [SerializeField] private Rigidbody rb;
     [SerializeField] private GameObject collectionBurst;
     
@@ -17,12 +19,9 @@ public class CollectibleWisp : MonoBehaviour
         if (PlayerDataManager.Instance != null && PlayerDataManager.Instance.playerData != null)
         {
             PlayerDataManager.Instance.playerData.logs += logValue;
-            Debug.Log($"Collected wood chunk. Added {logValue} logs. Total: {PlayerDataManager.Instance.playerData.logs}");
-
-            if (updateDisplayAction != null)
-            {
-                updateDisplayAction.RaiseAction(); // Trigger the GameAction
-            }
+            //Debug.Log($"Collected wood chunk. Added {logValue} logs. Total: {PlayerDataManager.Instance.playerData.logs}");
+            if(callAction)
+                callAction.RaiseAction();
             else
             {
                 Debug.LogWarning("No GameAction assigned to updateDisplayAction!");

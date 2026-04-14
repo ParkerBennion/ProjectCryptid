@@ -8,7 +8,6 @@ public class TileLibrary: MonoBehaviour
 {
     public TileVariation[] tileLists;
     public GameObject roadTile;
-    private int spawnCount;
 
     private Dictionary<int, int[]> codeN0N;
     private Dictionary<int, int[]> codeN1N;
@@ -32,7 +31,6 @@ public class TileLibrary: MonoBehaviour
     private void Awake()
     {
         Initialize();
-        spawnCount = 0;
     }
 
     public void Initialize()

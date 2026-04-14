@@ -10,14 +10,18 @@ public class MothmanEncounter : Encounter
     [SerializeField] private GameActionFloat updateAggressionStatus;
     [SerializeField] private float tickFrequency, tickAmount;
     private WaitForSeconds wfs;
-    [SerializeField] private TorchSO torchData;
+    [SerializeField] private PlayerInfoSO playerInfoData;
     [SerializeField] private float aggressionRatingMaximum, startingAgressionRating, currentAggressionRating;
-    public UnityEvent summonMothmanEvent;
     [SerializeField] private GameObject mothManPrefab;
     private GameObject mothManInstance;
+    private MothmanBehavior mothmanBehavior;
 
     public override void OnExitEncounter()
     {
+        if (mothManInstance)
+        {
+            Destroy(mothManInstance);
+        };
        uiToggleEvent.RaiseAction();
     }
 
@@ -25,30 +29,30 @@ public class MothmanEncounter : Encounter
     {
         wfs = new WaitForSeconds(tickFrequency);
         bool mothManIsPatrolling=true;
+        
+        mothManInstance = Instantiate(mothManPrefab,//create a mothman copy
+            new Vector3(0, 15, 0) + encounterManager.player.transform.position, Quaternion.identity);
+        mothmanBehavior =  mothManInstance.GetComponent<MothmanBehavior>();
+        mothmanBehavior.playerTarget = encounterManager.player;
+        
+        
         currentAggressionRating = startingAgressionRating;
         uiToggleEvent.RaiseAction();
-        Debug.Log("Starting slider Fresh");
-        while (mothManIsPatrolling)
+        while (mothManIsPatrolling)//while mothman is hunting Caleb
         {
-            if (torchData.GetTorchStatus())
+            if (playerInfoData.GetTorchStatus())
             {
-                currentAggressionRating += tickAmount;
+                currentAggressionRating += tickAmount*2;
             }
             else
             {
-                currentAggressionRating -= tickAmount;
+                currentAggressionRating -= tickAmount/2;
             }
-            updateAggressionStatus.RaiseAction(currentAggressionRating/aggressionRatingMaximum);
-            if (currentAggressionRating >= aggressionRatingMaximum)//if the player has pissed off mothman enough to summon
+            updateAggressionStatus.RaiseAction(currentAggressionRating/aggressionRatingMaximum);//tells the UI how close mothman is to finding Caleb
+            if (currentAggressionRating >= aggressionRatingMaximum)//if Mothman has found Caleb
             {
                 mothManIsPatrolling = false;
-                mothManInstance = Instantiate(mothManPrefab,
-                    new Vector3(-6, 6, 0) + encounterManager.player.transform.position, Quaternion.identity);
-                mothManInstance.GetComponent<MothmanBehavior>().playerTarget = encounterManager.player;
-                mothManInstance.GetComponent<MothmanBehavior>().BeginAttack();
-                Debug.Log("Mothman is SUMMONED");
-                summonMothmanEvent.Invoke();
-                uiToggleEvent.RaiseAction();
+                SwoopAndKill();
             }
             else if (currentAggressionRating <= 0)//if mothman loses interest, close the encounter
             {
@@ -59,5 +63,22 @@ public class MothmanEncounter : Encounter
             else
                 yield return wfs;
         }
+    }
+
+    
+
+    public IEnumerator LandAndSearch(float duration)
+    {
+        mothManInstance.transform.position = encounterManager.FindSpawnInFrontOfPlayer();
+        mothmanBehavior.Land();
+        yield return new WaitForSeconds(duration);
+        mothmanBehavior.TakeOff();
+    }
+
+    private void SwoopAndKill()
+    {
+        mothManInstance.transform.position=encounterManager.player.transform.position+new Vector3(-6, 6, 0);
+        mothmanBehavior.BeginAttack();
+        uiToggleEvent.RaiseAction();
     }
 }

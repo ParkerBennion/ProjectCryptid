@@ -15,6 +15,7 @@ public class CryptidPopulator : MonoBehaviour
     private Vector3 randomSpawnLocationOffset;
     private Vector2 spawnLocationCached;
     private Coroutine currentRoutine;
+    [SerializeField] private int maximumCryptids;
 
     [SerializeField][Range(10,180)] private float frontalConeSize;
     //cachedValues for spawning
@@ -28,7 +29,7 @@ public class CryptidPopulator : MonoBehaviour
 
     public void SpawnInitialCryptids()
     {
-        SpawnRandomCryptids(10);
+        SpawnRandomCryptids(maximumCryptids);
     }
     
     /// <summary>
@@ -73,8 +74,10 @@ public class CryptidPopulator : MonoBehaviour
 
     public void RemoveActiveCryptidFromList(CryptidManager cryptid)
     {
-        activeCryptids.Remove(cryptid);
-        SpawnRandomCryptids(1);
+        if(activeCryptids.Contains(cryptid))
+            activeCryptids.Remove(cryptid);
+        if(activeCryptids.Count<maximumCryptids)
+            FillCryptidPopulation();
     }
 
     private IEnumerator WrangleCryptidsRoutine()
@@ -85,12 +88,31 @@ public class CryptidPopulator : MonoBehaviour
             //print("Wrangling cryptids");
             foreach (CryptidManager cryptid in activeCryptids)
             {
+                if(!cryptid) continue;
                 if (Vector3.Distance(playerCharacter.transform.position, cryptid.transform.position) > maxSpawnRange)
                 {
                     cryptid.MoveToLocation(FindSpawnInFrontOfPlayer());
                 }
             }
             yield return new WaitForSeconds(3);
+        }
+    }
+
+    public void FillCryptidPopulation()
+    {
+        if (activeCryptids.Count < maximumCryptids)//if there are less cryptids than should be
+        {
+            SpawnRandomCryptids(maximumCryptids-activeCryptids.Count);
+        }
+    }
+
+    public void SetCryptidPopulation(int newNumCryptids)
+    {
+        int prevNumCryptids = maximumCryptids;
+        maximumCryptids=newNumCryptids;
+        if (maximumCryptids>prevNumCryptids)
+        {
+            FillCryptidPopulation();
         }
     }
     // create a system that checks periodically if cryptids are out of range and relocate them

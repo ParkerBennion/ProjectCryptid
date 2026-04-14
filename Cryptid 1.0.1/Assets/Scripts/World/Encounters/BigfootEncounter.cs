@@ -1,15 +1,17 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 [CreateAssetMenu(fileName = "BigfootEncounter", menuName = "Encounters/BigfootEncounter")]
 public class BigfootEncounter : Encounter
 {
+    [SerializeField] private PlayerInfoSO calebInfo;
     [SerializeField] private GameObject bigfootPrefab, bigfootInstance;
     private GameObject player;
     [SerializeField] private float detectionRange, despawnRange;
     private bool detected;
-    public UnityEvent detectedEvent;
+    public UnityEvent detectedEvent, foundFriendEvent;
     public override void OnExitEncounter()
     {
         if(bigfootInstance is not null)
@@ -18,12 +20,14 @@ public class BigfootEncounter : Encounter
 
     public override IEnumerator EncounterRoutine()
     {
+        
         float tickTime = .25f;
         detected = false;
         float distanceFromPlayer;
         WaitForSeconds WFS = new WaitForSeconds(tickTime);
         player = encounterManager.player;
-        bigfootInstance = Instantiate(bigfootPrefab, FindSpawnInFrontOfPlayer(), Quaternion.identity,null).gameObject;
+        bigfootInstance = Instantiate(bigfootPrefab, encounterManager.FindSpawnInFrontOfPlayer(), Quaternion.identity,null).gameObject;
+        bigfootInstance.transform.Rotate(Vector3.up*Random.Range(0f,359f));
         while (!detected)
         {
             distanceFromPlayer = Vector3.Distance(player.transform.position, bigfootInstance.transform.position);
@@ -35,6 +39,14 @@ public class BigfootEncounter : Encounter
             if (distanceFromPlayer < detectionRange)
             {
                 detected = true;
+                //decide if caleb is disguised or not 
+                if (calebInfo.GetDisguised())
+                {
+                    bigfootInstance.GetComponent<BigfootAIController>().TurnToPlayer(player);
+                    yield return new WaitForSeconds(2);
+                    AdoptTheKid();
+                    yield break;
+                }
                 bigfootInstance.GetComponent<Animator>().SetTrigger("Alerted");
                 yield return WFS;
                 bigfootInstance.GetComponent<BigfootAIController>().TurnToPlayer(player);
@@ -61,15 +73,12 @@ public class BigfootEncounter : Encounter
 
     }
     
-    private Vector3 FindSpawnInFrontOfPlayer()
+    
+
+    private void AdoptTheKid()
     {
-        float coneRadians = Random.Range(22.5f*-.5f, 22.5f*.5f)*Mathf.Deg2Rad;
-
-        float spawnDistance = Random.Range(8, 10);
-        Vector3 localDirection = new Vector3(Mathf.Sin(coneRadians), 0 ,Mathf.Cos(coneRadians));
-
-        Vector3 worldDirection = player.transform.TransformDirection(localDirection);
-
-        return player.transform.position + worldDirection * spawnDistance;
+        Debug.Log("Bigfoot Loves You");
+        foundFriendEvent.Invoke();
+        SceneManager.LoadScene(2);
     }
 }

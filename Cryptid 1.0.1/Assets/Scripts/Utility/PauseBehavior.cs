@@ -17,7 +17,6 @@ public class PauseBehavior : MonoBehaviour
         Time.timeScale = setBool ? 0 : 1;
         (setBool ?   disableCall : enableCall)?.RaiseAction();
         isPaused = setBool;
-        print(isPaused);
     }
     
     public void TogglePause()

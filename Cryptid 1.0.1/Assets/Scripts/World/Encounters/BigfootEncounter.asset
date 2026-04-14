@@ -19,6 +19,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   encounterManager: {fileID: 0}
+  calebInfo: {fileID: 11400000, guid: 5d112b78f37dda646a93d2fd7ed1babe, type: 2}
   bigfootPrefab: {fileID: 8606908327453654627, guid: 35e327d1be696144dba7eb958433746a, type: 3}
   bigfootInstance: {fileID: 0}
   detectionRange: 5
@@ -26,3 +27,18 @@ MonoBehaviour:
   detectedEvent:
     m_PersistentCalls:
       m_Calls: []
+  foundFriendEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: dcb1cf6f5925f51429c80e0996656528, type: 2}
+        m_TargetAssemblyTypeName: QuestIntData, Assembly-CSharp
+        m_MethodName: SetValue
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 7
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2

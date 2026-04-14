@@ -12,6 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb693dac057870a41a24f551e59f14b6, type: 3}
   m_Name: Inventory
   m_EditorClassIdentifier: 
-  items:
-  - itemName: BigfootSuitButton
-    amount: 1
+  items: []

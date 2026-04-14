@@ -148,12 +148,12 @@ public class Cell : MonoBehaviour
     {
         string borderCode = "";
         string registeredCells = "";
-        if(Vector3.Distance(cellManager.transform.position, gameObject.transform.position)>cellManager.roadSpawnDistance)
+        /*if(Vector3.Distance(cellManager.transform.position, gameObject.transform.position)>cellManager.roadSpawnDistance)
         {
             print("ROAD TILE ");
             tileBrain = Instantiate(tileLibrary.roadTile, gameObject.transform.position, quaternion.identity, gameObject.transform).GetComponent<Tile>();
             return;
-        }
+        }*/
         for (int i = 1; i < 7; i++)//get indexes of existing neighbor cells
         {
             if (adjacentCells[i] != null)
