@@ -7,6 +7,7 @@ public class WendigoRanged : State
     private WaitForSeconds WFSInduction;
     private WendigoManager manager;
     private SimpleAttack attackModule;
+    [SerializeField] private float chargeUpTime;
     [SerializeField] private State decisionState;
     [SerializeField] private GameObject telegraphObj;
     [SerializeField] private GameObject lightningFX;
@@ -17,7 +18,7 @@ public class WendigoRanged : State
     {
         base.Awake();
         manager = stateMachine.GetComponent<WendigoManager>();
-        WFSInduction = new WaitForSeconds(2.25f);
+        WFSInduction = new WaitForSeconds(chargeUpTime);
         attackModule = manager.GetComponent<SimpleAttack>();
     }
 
