@@ -61,17 +61,16 @@ public class WendigoRanged : State
         stateMachine.SwitchToNextState(decisionState);
     }
 
-    private void ReclaimTelegraph()
+    public void ReclaimTelegraph()
     {
         telegraphObj.transform.position = manager.transform.position;
         telegraphObj.transform.parent = manager.gameObject.transform;
         telegraphObj.SetActive(false);
     }
 
-    public void LightningStrike()
+    public void LightningStrike()//called from manager
     {
         Instantiate(lightningFX,telegraphObj.transform.position,Quaternion.identity);
-        ReclaimTelegraph();
     }
 
     

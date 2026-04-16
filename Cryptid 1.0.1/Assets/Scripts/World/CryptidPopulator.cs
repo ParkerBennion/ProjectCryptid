@@ -18,6 +18,8 @@ public class CryptidPopulator : MonoBehaviour
     [SerializeField] private int maximumCryptids;
 
     [SerializeField][Range(10,180)] private float frontalConeSize;
+
+    [SerializeField] private bool autoIncreaseDifficulty;
     //cachedValues for spawning
     private float xCoord, zCoord, coneAngle, coneRadians, spawnDistance, spawnAngle;
     private Vector3 worldDirection, localDirection;
@@ -113,6 +115,19 @@ public class CryptidPopulator : MonoBehaviour
         if (maximumCryptids>prevNumCryptids)
         {
             FillCryptidPopulation();
+        }
+    }
+
+    private IEnumerator DifficultyIncreaseRoutine()//increases cryptid population over time
+    {
+        difficultyLevel = 0;
+        WaitForSeconds wfs = new WaitForSeconds(30);
+
+        while (true)
+        {
+            yield return wfs;
+            difficultyLevel++;
+            SetCryptidPopulation(maximumCryptids+2);
         }
     }
     // create a system that checks periodically if cryptids are out of range and relocate them

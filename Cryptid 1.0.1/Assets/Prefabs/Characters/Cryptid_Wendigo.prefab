@@ -1759,6 +1759,30 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 8117461116776752731}
+        m_TargetAssemblyTypeName: SimpleAttack, Assembly-CSharp
+        m_MethodName: AttackTargetPoint
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 45
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 5143462260293273120}
+        m_TargetAssemblyTypeName: WendigoRanged, Assembly-CSharp
+        m_MethodName: ReclaimTelegraph
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 50
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &8601654369842533651
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1808,7 +1832,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCurrentHealth: 0
-  maxHealth: 10
+  maxHealth: 20
   damageEvent:
     m_PersistentCalls:
       m_Calls:
@@ -1866,7 +1890,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layerList:
   - PlayerLayer
-  damageAmt: 12
+  damageAmt: 20
   damageRadius: 2.25
   AttackOrigin: {x: 0, y: 0, z: 0.15}
   AttackTarget: {fileID: 2709245381973799983}

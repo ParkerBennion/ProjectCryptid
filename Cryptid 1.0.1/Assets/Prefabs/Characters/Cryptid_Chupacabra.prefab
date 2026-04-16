@@ -1646,7 +1646,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layerList:
   - PlayerLayer
-  damageAmt: 15
+  damageAmt: 25
   damageRadius: 2.25
   AttackOrigin: {x: 0, y: 1.25, z: 1.5}
   AttackTarget: {fileID: 0}
@@ -1702,7 +1702,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCurrentHealth: 0
-  maxHealth: 10
+  maxHealth: 25
   damageEvent:
     m_PersistentCalls:
       m_Calls:
