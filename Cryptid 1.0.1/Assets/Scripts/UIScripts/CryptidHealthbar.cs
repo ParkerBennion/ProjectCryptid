@@ -12,7 +12,6 @@ public class CryptidHealthbar : MonoBehaviour
 
     public void UpdateHealthBar()
     {
-        print(healthScript.entityCurrentHealth / healthScript.maxHealth);
         healthBar.rectTransform.localScale = Vector3.one * 
                                              (1 - (healthScript.entityCurrentHealth / healthScript.maxHealth));
         animator.SetTrigger("UpdateHealth");
@@ -22,6 +21,7 @@ public class CryptidHealthbar : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         mainCam = Camera.main;
+        gameObject.GetComponent<Canvas>().worldCamera = mainCam;
     }
 
     private void Update()
