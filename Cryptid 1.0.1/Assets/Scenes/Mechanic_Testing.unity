@@ -2278,6 +2278,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stateMachine: {fileID: 1881980867}
   decisionState: {fileID: 1082442031}
+  manager: {fileID: 0}
 --- !u!1 &327084062
 GameObject:
   m_ObjectHideFlags: 0
@@ -5219,17 +5220,6 @@ Transform:
   - {fileID: 698524404}
   m_Father: {fileID: 1040959463}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &674125240 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7137530123845818741, guid: f4d98c96c6bfc4041a617bf0a4c893cd, type: 3}
-  m_PrefabInstance: {fileID: 2110662419}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ae7d0fa6ff4c7b448afd2474185d33b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &681178518
 GameObject:
   m_ObjectHideFlags: 0
@@ -12798,7 +12788,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!54 &1881980863
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -15011,7 +15001,7 @@ PrefabInstance:
     - target: {fileID: 3772671660499437144, guid: f4d98c96c6bfc4041a617bf0a4c893cd, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 674125240}
+      objectReference: {fileID: 0}
     - target: {fileID: 3772671660499437144, guid: f4d98c96c6bfc4041a617bf0a4c893cd, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 

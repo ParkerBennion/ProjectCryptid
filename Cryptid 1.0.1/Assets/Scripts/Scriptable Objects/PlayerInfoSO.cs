@@ -69,6 +69,5 @@ public class PlayerInfoSO : ScriptableObject
     public void ResetSpeed()
     {
         SetSpeed(playerSpeedDefault);
-        Debug.Log("resetSpeed");
     }
 }
