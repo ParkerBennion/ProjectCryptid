@@ -15,14 +15,23 @@ public class CryptidPopulator : MonoBehaviour
     private Vector3 randomSpawnLocationOffset;
     private Vector2 spawnLocationCached;
     private Coroutine currentRoutine;
+    private bool wranglePaused;
     [SerializeField] private int maximumCryptids;
-
+    private WaitForSeconds wfs;
+    private WaitUntil _waitIfPaused;
     [SerializeField][Range(10,180)] private float frontalConeSize;
 
     [SerializeField] private bool autoIncreaseDifficulty;
     //cachedValues for spawning
     private float xCoord, zCoord, coneAngle, coneRadians, spawnDistance, spawnAngle;
     private Vector3 worldDirection, localDirection;
+
+
+    private void Awake()
+    {
+        wfs = new WaitForSeconds(wrangleFrequency);
+        _waitIfPaused = new WaitUntil(()=>!wranglePaused);
+    }
 
     private void Start()
     {
@@ -84,6 +93,7 @@ public class CryptidPopulator : MonoBehaviour
 
     private IEnumerator WrangleCryptidsRoutine()
     {
+        wranglePaused = false;
         bool isRunning = true;
         while (isRunning) 
         {
@@ -96,7 +106,9 @@ public class CryptidPopulator : MonoBehaviour
                     cryptid.MoveToLocation(FindSpawnInFrontOfPlayer());
                 }
             }
-            yield return new WaitForSeconds(3);
+            print("WRANGLED");
+            yield return wfs;
+            yield return _waitIfPaused;
         }
     }
 
@@ -131,4 +143,8 @@ public class CryptidPopulator : MonoBehaviour
         }
     }
     // create a system that checks periodically if cryptids are out of range and relocate them
+    public void SetWranglePaused(bool isPaused)
+    {
+        wranglePaused = isPaused;
+    }
 }
