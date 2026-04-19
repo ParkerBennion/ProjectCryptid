@@ -63,4 +63,11 @@ public class Leshy_Manager : CryptidManager
     {
         gameObject.transform.LookAt(playerTarget.transform);
     }
+    
+    public override void Die()
+    {
+        base.Die();
+        //gameObject.SetActive(false);
+        Destroy(gameObject);
+    }
 }

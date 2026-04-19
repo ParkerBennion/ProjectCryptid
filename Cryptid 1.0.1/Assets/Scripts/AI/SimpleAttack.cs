@@ -86,7 +86,6 @@ public class SimpleAttack : MonoBehaviour
             return;
         }
         AttackWorldPoint(damage, damageRadius, AttackTarget.transform.position);
-        print(AttackTarget.transform.position);
     }
     
 }

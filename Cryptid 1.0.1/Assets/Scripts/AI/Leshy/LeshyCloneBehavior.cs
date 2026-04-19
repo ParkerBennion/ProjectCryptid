@@ -21,12 +21,15 @@ public class LeshyCloneBehavior : MonoBehaviour, IDamageable
         rig.SetActive(true);
         if(particlePrefab) particlePrefab.Play();
         thisCollider.enabled = true;
-        _stowParent = transform.parent;
         transform.parent = null;
         _runningRoutine = StartCoroutine(MoveToLocation(destination));
         _lifeSpanRoutine = StartCoroutine(LifeSpan());
     }
 
+    private void Awake()
+    {
+        _stowParent = transform.parent;
+    }
 
     private IEnumerator MoveToLocation(Vector3 destination)
     {
@@ -53,6 +56,11 @@ public class LeshyCloneBehavior : MonoBehaviour, IDamageable
         if(particlePrefab)
             particlePrefab.Play();
         navMeshAgent.isStopped = true;
+        if(!_stowParent)
+        {
+            DestroyClone();
+            return;
+        }
         navMeshAgent.Warp(_stowParent.transform.position);
         transform.parent = _stowParent;
         rig.SetActive(false);
@@ -62,6 +70,11 @@ public class LeshyCloneBehavior : MonoBehaviour, IDamageable
     public void DealDamage(float damage)
     {
         ReturnToParent();
+    }
+
+    public void DestroyClone()
+    {
+        Destroy(gameObject);
     }
     
     

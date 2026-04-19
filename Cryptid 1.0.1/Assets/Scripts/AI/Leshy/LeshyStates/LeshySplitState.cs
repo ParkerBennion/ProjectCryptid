@@ -44,6 +44,7 @@ public class LeshySplitState : State
 
     private IEnumerator SpawnAndFlee()
     {
+        yield return new WaitForSeconds(0.1f);//buffer fallback for attacking off the bat
         Vector3 targetLocation = new Vector3();
         int mainLeshyIndex = Random.Range(0, spawnLocations.Count);
         int j = 0;//j is the index for the clones
