@@ -6,12 +6,13 @@ using UnityEngine.UI;
 [RequireComponent(typeof(Image))]
 public class InteractableUI : MonoBehaviour
 {
-    private WaitForEndOfFrame waitForFrame;
     private Button thisPopupButton;
     private RectTransform buttonTransform;
     public bool tracking;
     public GameObject targetObjectTest;
     public Camera mainCam;
+    [SerializeField] private GameAction hideAction, showAction;
+    [SerializeField] private Behaviour[] hideComponents;
 
     private void Awake()
     {
@@ -19,6 +20,8 @@ public class InteractableUI : MonoBehaviour
         buttonTransform = thisPopupButton.GetComponent<RectTransform>();
         tracking = false;
         if (Camera.main) mainCam = Camera.main;
+        hideAction.raise += HideMinorComponents;
+        showAction.raise += ShowMinorComponents;
     }
 
     private void OnEnable()
@@ -54,8 +57,26 @@ public class InteractableUI : MonoBehaviour
         while (tracking)
         {
             buttonTransform.anchoredPosition = mainCam.WorldToScreenPoint(targetObj.transform.position);
-            yield return waitForFrame;
+            yield return null;
         }
     }
+
+
+    private void HideMinorComponents()
+    {
+        foreach (Behaviour component in hideComponents)
+            component.enabled = false;
+    }
     
+    private void ShowMinorComponents()
+    {
+        foreach (Behaviour component in hideComponents)
+            component.enabled = true;
+    }
+    
+    private void OnDestroy()
+    {
+        hideAction.raise-= HideMinorComponents;
+        showAction.raise-= ShowMinorComponents; 
+    }
 }

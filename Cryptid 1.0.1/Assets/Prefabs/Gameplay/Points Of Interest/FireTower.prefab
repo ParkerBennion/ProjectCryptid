@@ -6109,7 +6109,7 @@ GameObject:
   - component: {fileID: 2744338044862102984}
   - component: {fileID: 6169099606565436586}
   m_Layer: 0
-  m_Name: Temp Geo
+  m_Name: Firetower Geo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
