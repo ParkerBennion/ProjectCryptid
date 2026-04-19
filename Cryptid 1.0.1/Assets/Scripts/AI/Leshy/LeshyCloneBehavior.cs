@@ -12,10 +12,12 @@ public class LeshyCloneBehavior : MonoBehaviour, IDamageable
     [SerializeField] private ParticleSystem particlePrefab;
     [SerializeField] private GameObject rig;
     [SerializeField] private Collider thisCollider;
+    private bool invulnerable;
     private GameObject player;
 
     public void Release(Vector3 destination, GameObject playerChar)
     {
+        invulnerable = true;
         if(!player)
             player = playerChar;
         rig.SetActive(true);
@@ -36,6 +38,7 @@ public class LeshyCloneBehavior : MonoBehaviour, IDamageable
         navMeshAgent.isStopped = false;
         navMeshAgent.SetDestination(destination);
         yield return new WaitWhile(() => Vector3.Distance(transform.position, destination) > 0.7f);
+        invulnerable = false;
         navMeshAgent.isStopped = true;
         while (true)
         {
@@ -69,7 +72,8 @@ public class LeshyCloneBehavior : MonoBehaviour, IDamageable
 
     public void DealDamage(float damage)
     {
-        ReturnToParent();
+        if(!invulnerable)
+            ReturnToParent();
     }
 
     public void DestroyClone()

@@ -6,6 +6,7 @@ public class Leshy_Manager : CryptidManager
     public bool canCast, canSplit;
     public GameObject playerTarget;
     private WaitForSeconds castCDWfs;
+    [SerializeField] private SeekerProjectile leshyProjectilePrefab;
     [SerializeField] private float castCooldown, splitCooldown;
 
     protected override void Awake()
@@ -69,5 +70,12 @@ public class Leshy_Manager : CryptidManager
         base.Die();
         //gameObject.SetActive(false);
         Destroy(gameObject);
+    }
+
+    public void SpawnProjectile()
+    {
+        leshyProjectilePrefab.gameObject.SetActive(true);
+        leshyProjectilePrefab.target=playerTarget;
+        leshyProjectilePrefab.StartTracking();
     }
 }

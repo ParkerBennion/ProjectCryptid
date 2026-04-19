@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class LeshySplitState : State
 {
@@ -11,6 +12,8 @@ public class LeshySplitState : State
     private GameObject player;
     private WaitForSeconds wfs;
     private List<Vector3> spawnLocations;
+    [SerializeField] private UnityEvent runStartEvent, runEndEvent;
+    [SerializeField] private EntityHealth entityHealth;
 
     protected override void Awake()
     {
@@ -44,6 +47,7 @@ public class LeshySplitState : State
 
     private IEnumerator SpawnAndFlee()
     {
+        entityHealth.invulnerable = true;
         yield return new WaitForSeconds(0.1f);//buffer fallback for attacking off the bat
         Vector3 targetLocation = new Vector3();
         int mainLeshyIndex = Random.Range(0, spawnLocations.Count);
@@ -69,6 +73,7 @@ public class LeshySplitState : State
         }
         navAgent.isStopped = true;
         transform.LookAt(player.transform);
+        entityHealth.invulnerable = false;
         stateMachine.SwitchToNextState(decideState);
     }
     
