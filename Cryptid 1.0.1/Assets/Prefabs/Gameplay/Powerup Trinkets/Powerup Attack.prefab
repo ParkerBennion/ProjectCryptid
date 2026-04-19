@@ -447,6 +447,9 @@ MonoBehaviour:
   tracking: 0
   targetObjectTest: {fileID: 8527232963266207746}
   mainCam: {fileID: 0}
+  hideAction: {fileID: 11400000, guid: 247071a38d268fc48941d068652ac4db, type: 2}
+  showAction: {fileID: 11400000, guid: d6aa5e856a70e3644bf6b0407861a6c7, type: 2}
+  hideComponents: []
 --- !u!1 &8527232963266207746
 GameObject:
   m_ObjectHideFlags: 0
