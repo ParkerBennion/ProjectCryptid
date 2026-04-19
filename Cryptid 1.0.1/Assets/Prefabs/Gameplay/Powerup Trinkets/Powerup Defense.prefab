@@ -669,18 +669,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UnityEngine.VFX.VisualEffect, UnityEngine
-        m_MethodName: SendEvent
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: Collect
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 2007587016864901106}
         m_TargetAssemblyTypeName: DestroyBehavior, Assembly-CSharp
         m_MethodName: DestroyAfterSeconds
@@ -722,7 +710,10 @@ MonoBehaviour:
   mainCam: {fileID: 0}
   hideAction: {fileID: 11400000, guid: 247071a38d268fc48941d068652ac4db, type: 2}
   showAction: {fileID: 11400000, guid: d6aa5e856a70e3644bf6b0407861a6c7, type: 2}
-  hideComponents: []
+  hideComponents:
+  - {fileID: 3625356699740645413}
+  - {fileID: 7741630718483803935}
+  - {fileID: 6640864670122577984}
 --- !u!114 &6446236910724574263
 MonoBehaviour:
   m_ObjectHideFlags: 0
