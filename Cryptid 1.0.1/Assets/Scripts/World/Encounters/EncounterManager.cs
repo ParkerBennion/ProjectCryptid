@@ -9,10 +9,14 @@ public class EncounterManager : MonoBehaviour
     [SerializeField] private Encounter[] encounterList, rareEncounterList;
     [SerializeField] private float rareEncounterChance;
     private Encounter currentEncounter;
+    private bool isPaused;
     public GameObject player;
+    private WaitUntil waitWhilePaused;
+    private WaitForSeconds bufferWait;
 
     private void Awake()
     {
+        bufferWait = new WaitForSeconds(2);
         if (intermissionMax < intermissionMin)
         {
             intermissionMin = intermissionMax;
@@ -27,6 +31,8 @@ public class EncounterManager : MonoBehaviour
         {
             encounter.encounterManager = this;
         }
+
+        waitWhilePaused = new WaitUntil(() => !isPaused);
     }
 
     private void Start()
@@ -37,6 +43,8 @@ public class EncounterManager : MonoBehaviour
     private IEnumerator Intermission()
     {
         yield return new WaitForSeconds(Random.Range(intermissionMin, intermissionMax));
+        yield return waitWhilePaused;
+        yield return bufferWait;
         StartNewRandomEncounter();
     }
 
@@ -75,6 +83,11 @@ public class EncounterManager : MonoBehaviour
         Vector3 worldDirection = player.transform.TransformDirection(localDirection);
 
         return player.transform.position + worldDirection * spawnDistance;
+    }
+
+    public void SetIsPaused(bool val)
+    {
+        isPaused = val;
     }
     
 }

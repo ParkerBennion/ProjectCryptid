@@ -12,7 +12,7 @@ public class ChupacabraLeechState : State
     private Coroutine damageRoutine;
     [SerializeField]private GameObject playerTarget;
     [SerializeField]private Canvas tappableButton;
-    private InteractableUI tapUI;
+    [SerializeField]private InteractableUI tapUI;
     private WaitForSeconds wfs;
     private EntityHealth chupaHealth;
     private bool isLeeching;
@@ -22,7 +22,6 @@ public class ChupacabraLeechState : State
     {
         base.Awake();
         manager = stateMachine.GetComponent<ChupacabraManager>();
-        tapUI = tappableButton.gameObject.GetComponentInChildren<InteractableUI>();
         wfs = new WaitForSeconds(damageIntervalTime);
         chupaHealth = manager.GetComponent<EntityHealth>();
         isLeeching = false;

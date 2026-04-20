@@ -17,7 +17,7 @@ public class CryptidPopulator : MonoBehaviour
     private Coroutine currentRoutine;
     private bool wranglePaused;
     [SerializeField] private int maximumCryptids;
-    private WaitForSeconds wfs;
+    private WaitForSeconds wfs, teleportBuffer;
     private WaitUntil _waitIfPaused;
     [SerializeField][Range(10,180)] private float frontalConeSize;
 
@@ -31,6 +31,7 @@ public class CryptidPopulator : MonoBehaviour
     {
         wfs = new WaitForSeconds(wrangleFrequency);
         _waitIfPaused = new WaitUntil(()=>!wranglePaused);
+        teleportBuffer = new WaitForSeconds(2);
     }
 
     private void Start()
@@ -106,9 +107,9 @@ public class CryptidPopulator : MonoBehaviour
                     cryptid.MoveToLocation(FindSpawnInFrontOfPlayer());
                 }
             }
-            print("WRANGLED");
             yield return wfs;
             yield return _waitIfPaused;
+            yield return teleportBuffer;
         }
     }
 

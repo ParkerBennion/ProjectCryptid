@@ -377,6 +377,7 @@ MonoBehaviour:
   chaseState: {fileID: 2047149379273544929}
   playerTarget: {fileID: 0}
   tappableButton: {fileID: 8609040895842431942}
+  tapUI: {fileID: 2550326470736688873}
   requiredTaps: 3
   currentTaps: 0
   damageIntervalTime: 1
@@ -868,10 +869,10 @@ GameObject:
   - component: {fileID: 5332066025037572147}
   - component: {fileID: 1952124098418722231}
   - component: {fileID: 6924551752907113889}
-  - component: {fileID: 384095536623578683}
   - component: {fileID: 2550326470736688873}
+  - component: {fileID: 5666400674126227143}
   m_Layer: 0
-  m_Name: Button
+  m_Name: ButtonOffset
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -935,7 +936,29 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &384095536623578683
+--- !u!114 &2550326470736688873
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2099644084691719478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09ff8a78e6137254b8b80b4202dd9172, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tracking: 0
+  targetObjectTest: {fileID: 3520540915994562969}
+  mainCam: {fileID: 0}
+  hideAction: {fileID: 11400000, guid: 247071a38d268fc48941d068652ac4db, type: 2}
+  showAction: {fileID: 11400000, guid: d6aa5e856a70e3644bf6b0407861a6c7, type: 2}
+  hideComponents:
+  - {fileID: 6924551752907113889}
+  - {fileID: 6428303430972198480}
+  - {fileID: 5517131765189702426}
+  - {fileID: 5236525824918063676}
+--- !u!114 &5666400674126227143
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -957,7 +980,7 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.579394, g: 1, b: 0, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
@@ -974,26 +997,11 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 6924551752907113889}
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &2550326470736688873
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2099644084691719478}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 09ff8a78e6137254b8b80b4202dd9172, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tracking: 0
-  targetObjectTest: {fileID: 3520540915994562969}
-  mainCam: {fileID: 0}
 --- !u!1 &2128351835860781155
 GameObject:
   m_ObjectHideFlags: 0
