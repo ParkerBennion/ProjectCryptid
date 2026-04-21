@@ -7,10 +7,11 @@ public class WendigoRanged : State
     private WaitForSeconds WFSInduction;
     private WendigoManager manager;
     private SimpleAttack attackModule;
-    [SerializeField] private float chargeUpTime;
+    [SerializeField] private float chargeUpTime, lightningDamage, lightningRadius;
     [SerializeField] private State decisionState;
     [SerializeField] private GameObject telegraphObj;
     [SerializeField] private GameObject lightningFX;
+    [SerializeField] private LayerMask layerMask;
     
     
     //attack is inducted and executed through the coroutine, and the execute animation tells the state to finish and transition
@@ -71,7 +72,17 @@ public class WendigoRanged : State
     public void LightningStrike()//called from manager
     {
         Instantiate(lightningFX,telegraphObj.transform.position,Quaternion.identity);
+        Collider[] cols = Physics.OverlapSphere(telegraphObj.transform.position, lightningRadius, layerMask);
+        foreach (Collider thisCol in cols)
+        {
+            if (thisCol.TryGetComponent(out IDamageable target))
+            {
+                target.DealDamage(lightningDamage);
+            }
+        }
     }
 
+    
+    
     
 }
