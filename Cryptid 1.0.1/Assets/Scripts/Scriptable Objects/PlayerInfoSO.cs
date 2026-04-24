@@ -10,7 +10,9 @@ public class PlayerInfoSO : ScriptableObject
     [SerializeField] private float playerSpeedCurrent, playerSpeedDefault;
     public UnityAction<bool> torchChange;
     public UnityAction<bool> suitChange;
-    public UnityAction<float> speedChange;
+    public UnityAction<float, float> speedChange;
+    [SerializeField] private float[] speedModifiers;
+    public float direction;
 
     public void ToggleTorch()
     {
@@ -56,8 +58,9 @@ public class PlayerInfoSO : ScriptableObject
     public void SetSpeed(float speed)
     {
         playerSpeedCurrent = speed;
-        speedChange?.Invoke(playerSpeedCurrent);
+        speedChange?.Invoke(playerSpeedCurrent,direction);
     }
+    
     
     public void SetTorchStatus(bool status)
     {
@@ -66,8 +69,15 @@ public class PlayerInfoSO : ScriptableObject
         torchIsActive = status;
     }
 
+    public void SetRunDirection(float input)
+    {
+        direction=input;
+        speedChange?.Invoke(playerSpeedCurrent, direction);
+    }
+
     public void ResetSpeed()
     {
         SetSpeed(playerSpeedDefault);
     }
+    
 }

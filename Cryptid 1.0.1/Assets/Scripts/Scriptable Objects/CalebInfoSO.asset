@@ -18,3 +18,5 @@ MonoBehaviour:
   isDisguised: 0
   playerSpeedCurrent: 6
   playerSpeedDefault: 6
+  speedModifiers: []
+  direction: 1
