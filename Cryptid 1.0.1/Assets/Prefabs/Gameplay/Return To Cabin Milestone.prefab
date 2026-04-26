@@ -325,6 +325,12 @@ MonoBehaviour:
   tracking: 0
   targetObjectTest: {fileID: 712677608725286110}
   mainCam: {fileID: 0}
+  hideAction: {fileID: 11400000, guid: 247071a38d268fc48941d068652ac4db, type: 2}
+  showAction: {fileID: 11400000, guid: d6aa5e856a70e3644bf6b0407861a6c7, type: 2}
+  hideComponents:
+  - {fileID: 3587016162168536707}
+  - {fileID: 5815421412458305678}
+  - {fileID: 164477606461698692}
 --- !u!114 &2794446172677776067
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -14,14 +14,14 @@ public class CollectibleVisualTransfer : MonoBehaviour//this script goes on the 
     [SerializeField] private RectTransform targetTransform, mainCanvas;
     [SerializeField] private GameActionOBJ callObj;
     [SerializeField] private GameAction uiUpdateCall;
-    private int thisPrefabIndex;
+    //private int thisPrefabIndex;
 
 
     private void Awake()
     {
         if(Camera.main) mainCamera = Camera.main;
         callObj.raise += SpawnAndTravel;
-        thisPrefabIndex = 0;
+        //thisPrefabIndex = 0;
     }
 
     public void SpawnAndTravel(GameObject obj)

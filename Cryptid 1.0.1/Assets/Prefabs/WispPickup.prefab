@@ -50,7 +50,7 @@ SphereCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Radius: 1
   m_Center: {x: 0, y: 0, z: 0}
@@ -231,7 +231,7 @@ MonoBehaviour:
           m_BoolArgument: 1
         m_CallState: 2
   delay: 1
-  startOnStart: 0
+  startOnStart: 1
 --- !u!135 &6033128461660470950
 SphereCollider:
   m_ObjectHideFlags: 0

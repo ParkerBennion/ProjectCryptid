@@ -23,10 +23,10 @@ public class CharacterInputController : MonoBehaviour
     public bool attackCharged, activelyCharging;
     [SerializeField] public float  heavyWindupStartDelay, heavyWindupChargeTime, perfectHeavyFrameTime;
 
-    [Range(0, 1)] 
-    public float chargeMovementMultiplier;
+    [Range(0, 1)] [SerializeField]
+    private float chargeMovementMultiplier;
 
-    public float activePlayerRunSpeed;
+    public float activePlayerRunSpeed, runDirection; // 1 for forward, -1 for reverse
     [FormerlySerializedAs("totemRunSpeed")] public float totemRunSpeedBonus;
 
     private Coroutine chargingAttack;
@@ -102,9 +102,9 @@ public class CharacterInputController : MonoBehaviour
     /// </summary>
     private void Update()
     {
-        moveVector.x = moveAxis.x; //Assigns the input values to a Vector3D
+        moveVector.x = moveAxis.x*runDirection; //Assigns the input values to a Vector3D
         moveVector.y = 0;
-        moveVector.z = moveAxis.y;
+        moveVector.z = moveAxis.y*runDirection;
         transform.Translate(moveVector * ((totemRunSpeedBonus+activePlayerRunSpeed) * Time.deltaTime), Space.World);
         if (moveAxis!=Vector2.zero)//Updates the players rotation if they are moving, and does nothing if the player is not moving
             transform.rotation = Quaternion.LookRotation(moveVector);
@@ -294,9 +294,10 @@ public void DisableControls()
         animator.updateMode = AnimatorUpdateMode.Normal;
     }
 
-    private void UpdateSpeed(float speedVar)
+    private void UpdateSpeed(float speedVar, float directionVar)
     {
         activePlayerRunSpeed = speedVar;
+        runDirection = directionVar;
     }
 
 }
