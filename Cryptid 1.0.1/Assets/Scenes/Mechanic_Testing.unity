@@ -1458,6 +1458,82 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1995240655}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &213539511
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 213539514}
+  - component: {fileID: 213539513}
+  - component: {fileID: 213539512}
+  m_Layer: 0
+  m_Name: SaveManagerObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &213539512
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 213539511}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9a87ea4ad0c7714ea2a0adcde2d77a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  responseEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: e9765e09cbdd3b548a26aed1ad1730e0, type: 2}
+        m_TargetAssemblyTypeName: GameAction, Assembly-CSharp
+        m_MethodName: RaiseAction
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  callerAction: {fileID: 11400000, guid: fefb72baf1298104eb4caf69df21ea1f, type: 2}
+--- !u!114 &213539513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 213539511}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45f9f5c21b7590e48be5fa808582b433, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerData: {fileID: 11400000, guid: e75ed5b836ce2994c92bec0aae2b57ce, type: 2}
+  inventoryData: {fileID: 11400000, guid: 06c2e9a1cc8dc6c4bb2b0c27c4ef9411, type: 2}
+  saveGameAction: {fileID: 11400000, guid: e9765e09cbdd3b548a26aed1ad1730e0, type: 2}
+--- !u!4 &213539514
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 213539511}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 656.33496, y: 615.689, z: -23.150236}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &216565788
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4432,6 +4508,7 @@ GameObject:
   - component: {fileID: 595543256}
   - component: {fileID: 595543258}
   - component: {fileID: 595543257}
+  - component: {fileID: 595543259}
   m_Layer: 7
   m_Name: DetectSensor
   m_TagString: Untagged
@@ -4499,6 +4576,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1881980873}
+        m_TargetAssemblyTypeName: DropWisps, Assembly-CSharp
+        m_MethodName: AssignPlayer
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!135 &595543258
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -4520,6 +4609,35 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 6
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &595543259
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 595543255}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56966d224e0562a4fb7ed1cfcdc355c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thisEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1881980873}
+        m_TargetAssemblyTypeName: DropWisps, Assembly-CSharp
+        m_MethodName: SpawnItems
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  delay: 2
+  startOnStart: 1
 --- !u!1 &597878096
 GameObject:
   m_ObjectHideFlags: 0
@@ -12116,67 +12234,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1036106855}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1652332791
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1652332793}
-  - component: {fileID: 1652332792}
-  m_Layer: 0
-  m_Name: GameObject
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1652332792
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1652332791}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 56966d224e0562a4fb7ed1cfcdc355c9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  thisEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1617908830}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-  delay: 2
-  startOnStart: 1
---- !u!4 &1652332793
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1652332791}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1480, y: 719.65, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1656553622
 GameObject:
   m_ObjectHideFlags: 0
@@ -13967,6 +14024,7 @@ GameObject:
   - component: {fileID: 1881980864}
   - component: {fileID: 1881980863}
   - component: {fileID: 1881980872}
+  - component: {fileID: 1881980873}
   m_Layer: 7
   m_Name: Cryptid_Leshy
   m_TagString: Untagged
@@ -14254,6 +14312,27 @@ CapsuleCollider:
   m_Height: 1
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1881980873
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1881980862}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39c329b8139f26e4f8524b05a9ce7e13, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wispPrefab: {fileID: 7835740818892888821, guid: 822471273de72e84f851d2676261c548, type: 3}
+  airTime: 1
+  launchHeight: 2
+  spawnFrequency: 0.05
+  range: 2.5
+  minSpawn: 15
+  maxSpawn: 20
+  playerTransform: {fileID: 0}
+  UICall: {fileID: 11400000, guid: a7489fb67a5207048a90be0ecce927ec, type: 2}
 --- !u!1 &1889070261
 GameObject:
   m_ObjectHideFlags: 0
@@ -23953,4 +24032,4 @@ SceneRoots:
   - {fileID: 508905819}
   - {fileID: 842349319}
   - {fileID: 1617908834}
-  - {fileID: 1652332793}
+  - {fileID: 213539514}
