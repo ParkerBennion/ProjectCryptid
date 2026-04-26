@@ -2,6 +2,8 @@ using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.Events;
+using Random = UnityEngine.Random;
 
 public class SeekerProjectile : MonoBehaviour
 {
@@ -10,6 +12,7 @@ public class SeekerProjectile : MonoBehaviour
     [SerializeField] private float lifeSpan;
     [SerializeField] private Transform parentTransform;
     private Coroutine lifeSpanRoutine;
+    [SerializeField] private UnityEvent[] possibleHitEvents;
     
 
     public void StartTracking()
@@ -49,5 +52,10 @@ public class SeekerProjectile : MonoBehaviour
     private void OnDestroy()
     {
         StopAllCoroutines();
+    }
+
+    public void InvokeRandomEvent()
+    {
+        possibleHitEvents[Random.Range(0, possibleHitEvents.Length)]?.Invoke();
     }
 }
