@@ -10,6 +10,7 @@ public class Tile : MonoBehaviour
     public NavMeshData tileNavMeshData;
     public NavMeshSurface navMesh;
     [SerializeField] private GameObject assetsPrefab, assetsObj;
+    [SerializeField] private bool overrideRotation;
     private void Awake()
     {
         tileNavMeshData = navMesh.navMeshData;
@@ -49,6 +50,8 @@ public class Tile : MonoBehaviour
 
     public void RotateTile(int numUnits)
     {
+        if(overrideRotation)
+            return;
         RotateBorderCode(numUnits);
         gameObject.transform.Rotate(new Vector3(0, (numUnits * 60)%360, 0));
     }

@@ -61,7 +61,8 @@ public class TileLibrary: MonoBehaviour
              {6, new[]{0,2,3}},
              {7, new[]{0,3,4}},
              {8, new[]{0,2,4}},
-             {9, new[]{0,1,5}}
+             {9, new[]{0,1,5}},
+             {10, new[]{0}}
          };
          //00N
          code00N = new Dictionary<int, int[]>
@@ -105,7 +106,8 @@ public class TileLibrary: MonoBehaviour
              {5, new[]{0}},
              {6, new[]{2}},
              {7, new[]{3}},
-             {9, new[]{0,5}}
+             {9, new[]{0,5}},
+             {10, new[]{0}}
          };
          //N00
          codeN00 = new Dictionary<int, int[]>
@@ -149,7 +151,8 @@ public class TileLibrary: MonoBehaviour
              {5, new[]{1}},
              {6, new[]{3}},
              {7, new[]{4}},
-             {9, new[]{0,1}}
+             {9, new[]{0,1}}/*,
+             {10, new[]{0}}*/
          };
          //000
          code000 = new Dictionary<int, int[]>
@@ -218,7 +221,8 @@ public class TileLibrary: MonoBehaviour
          //111
          code111 = new Dictionary<int, int[]>
          {
-             {9, new[]{0}}
+             {9, new[]{0}},
+             {10, new[]{0}}
          };
     }//end of initialize
 

@@ -10,8 +10,7 @@ MonoBehaviour:
   m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ac0399d9fcab59f46bb2601452bba079, type: 3}
-  m_Name: Tile1Empty
+  m_Name: Tile10 AllTrails
   m_EditorClassIdentifier: 
   variations:
-  - {fileID: 8734592373889062366, guid: 05433c0994da2ca4c8e3ccb6bc84e31c, type: 3}
-  - {fileID: 8734592373889062366, guid: bfc6d45d6e87edb47a24a6270cf641c1, type: 3}
+  - {fileID: 296336942388415952, guid: fec082ae615b55c4996afdd7742e2279, type: 3}

@@ -139,6 +139,7 @@ MonoBehaviour:
   navMesh: {fileID: -5312986275006407769}
   assetsPrefab: {fileID: 0}
   assetsObj: {fileID: 0}
+  overrideRotation: 0
 --- !u!64 &3750810787237639891
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -206,7 +207,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_PolyMesh:
-    name: PolybrushMesh61654
+    name: PolybrushMesh623978
     vertices:
     - {x: -34.656666, y: 0, z: 0.0000073242186}
     - {x: 17.32833, y: 0, z: -30.013556}
