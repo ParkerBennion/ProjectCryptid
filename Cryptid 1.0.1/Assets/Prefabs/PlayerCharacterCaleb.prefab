@@ -162,7 +162,6 @@ MonoBehaviour:
   heavyChargedFX: {fileID: 7244056756377459401}
   attackCharged: 0
   activelyCharging: 0
-  playerSpeed: 6
   heavyWindupStartDelay: 0.3
   heavyWindupChargeTime: 1.5
   perfectHeavyFrameTime: 0.5
@@ -172,7 +171,7 @@ MonoBehaviour:
   canAttack: 0
   activeTotem: {fileID: 0}
   animator: {fileID: 7149663152967449402}
-  playerInfoSo: {fileID: 11400000, guid: 5d112b78f37dda646a93d2fd7ed1babe, type: 2}
+  playerInfo: {fileID: 11400000, guid: 5d112b78f37dda646a93d2fd7ed1babe, type: 2}
   enableControlsOnStart: 1
 --- !u!136 &7911208322135297466
 CapsuleCollider:
@@ -256,6 +255,30 @@ MonoBehaviour:
           m_StringArgument: Death
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 7149663152967449402}
+        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+        m_MethodName: SetTrigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Death
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 11400000, guid: 1825430537b0688438cef09be48562ed, type: 2}
+        m_TargetAssemblyTypeName: GameAction, Assembly-CSharp
+        m_MethodName: RaiseAction
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Death
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1817105923459175045}
         m_TargetAssemblyTypeName: CharacterInputController, Assembly-CSharp
         m_MethodName: DisableControls
@@ -284,7 +307,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4da55950bd9b1a848909f2ae459136c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  visualizeHitbox: {fileID: 2825763773684102947}
   lightAttackFX: {fileID: 9085155475553888556}
   audioManager: {fileID: 11400000, guid: 57492b9912b58194283468dc23b6ce4f, type: 2}
   lightAttackSound:

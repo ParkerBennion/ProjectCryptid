@@ -11,6 +11,7 @@ public class MothmanManager : MonoBehaviour
     private Coroutine _depletionRoutine;
     private WaitForSeconds _wfs;
     [SerializeField] private GameActionFloat aggroCall;
+    [SerializeField]private Material aggroMaterial;
     private bool _mothmanSummoned, _mothManIsPatrolling;
     private Coroutine _huntingRoutine, _landedRoutine, _landTakeoffManagerRoutine;
     [Header("HUNTING ")] 
@@ -29,6 +30,7 @@ public class MothmanManager : MonoBehaviour
     {
         _wfs = new WaitForSeconds(depletionFrequency);
         aggroCall.raise += ChangeAggro;
+        aggroMaterial.SetFloat("_Alpha", 0f);
     }
 
     private void Start()
@@ -80,6 +82,8 @@ public class MothmanManager : MonoBehaviour
             return;
         }
         aggroCurrent = Mathf.Clamp(aggroCurrent, 0, aggroMax);
+        aggroMaterial.SetFloat("_Alpha",aggroCurrent / aggroMax);
+
     }
 
     private void ResetAggro()

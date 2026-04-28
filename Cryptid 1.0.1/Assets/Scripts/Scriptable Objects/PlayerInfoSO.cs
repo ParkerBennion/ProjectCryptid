@@ -7,8 +7,12 @@ public class PlayerInfoSO : ScriptableObject
     [SerializeField] private GameAction torchOnAction, torchOffAction;
     [SerializeField] private bool torchIsActive;
     [SerializeField]private bool isDisguised;
+    [SerializeField] private float playerSpeedCurrent, playerSpeedDefault;
     public UnityAction<bool> torchChange;
     public UnityAction<bool> suitChange;
+    public UnityAction<float, float> speedChange;
+    [SerializeField] private float[] speedModifiers;
+    public float direction;
 
     public void ToggleTorch()
     {
@@ -38,14 +42,24 @@ public class PlayerInfoSO : ScriptableObject
     public void ToggleSuit()
     {
         isDisguised=!isDisguised;
-        suitChange.Invoke(isDisguised);
+        suitChange?.Invoke(isDisguised);
     }
 
     public bool GetTorchStatus()
     {
         return torchIsActive;
     }
-    
+
+    public float GetSpeed()
+    {
+        return playerSpeedCurrent;
+    }
+
+    public void SetSpeed(float speed)
+    {
+        playerSpeedCurrent = speed;
+        speedChange?.Invoke(playerSpeedCurrent,direction);
+    }
     
     
     public void SetTorchStatus(bool status)
@@ -54,4 +68,16 @@ public class PlayerInfoSO : ScriptableObject
         else torchOffAction.RaiseAction();
         torchIsActive = status;
     }
+
+    public void SetRunDirection(float input)
+    {
+        direction=input;
+        speedChange?.Invoke(playerSpeedCurrent, direction);
+    }
+
+    public void ResetSpeed()
+    {
+        SetSpeed(playerSpeedDefault);
+    }
+    
 }

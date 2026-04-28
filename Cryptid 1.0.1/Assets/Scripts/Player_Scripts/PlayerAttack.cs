@@ -6,7 +6,7 @@ using UnityEngine.Events;
 
 public class PlayerAttack : MonoBehaviour
 {
-    [SerializeField] private VisualEffect visualizeHitbox;
+    //[SerializeField] private VisualEffect visualizeHitbox;
     [SerializeField] private ParticleSystem lightAttackFX;
     private Collider[] cols;
     [SerializeField] private FMODAudioManager audioManager;
@@ -32,7 +32,7 @@ public class PlayerAttack : MonoBehaviour
         audioManager.PlayOneShot(lightAttackSound, transform.position);
         //print("lightAttack");
         lightAttackFX.Play();
-        DisplayHitBox(attackRadius, attackOffset);//Debugging
+        //DisplayHitBox(attackRadius, attackOffset);//Debugging
         attackCenter = gameObject.transform.TransformPoint(attackOffset);
         cols= Physics.OverlapSphere(attackCenter, attackRadius, validLayerList);
         foreach (Collider thisCol in cols)
@@ -51,7 +51,7 @@ public class PlayerAttack : MonoBehaviour
     public void HeavyAttack(bool isPerfectAttack)
     {
         //print("heavyAttack "+isPerfectAttack);
-        DisplayHitBox(heavySwingRange, Vector3.zero);//Debugging
+       // DisplayHitBox(heavySwingRange, Vector3.zero);//Debugging
         cols= Physics.OverlapSphere(transform.position, heavySwingRange, validLayerList);
         foreach (Collider thisCol in cols)
         {
@@ -69,10 +69,10 @@ public class PlayerAttack : MonoBehaviour
 /// </summary>
 /// <param name="radius"></param>
 /// <param name="center"></param>
-    private void DisplayHitBox(float radius, Vector3 center)
+   /* private void DisplayHitBox(float radius, Vector3 center)
     {
         visualizeHitbox.SetVector3("SpawnPosition", center);
         visualizeHitbox.SetFloat("Radius", radius);
         visualizeHitbox.Play();
-    }
+    }*/
 }

@@ -3,6 +3,7 @@ using UnityEngine;
 public class LeshyHiddenState : State
 {
     [SerializeField] private State decisionState;
+    [SerializeField] private Leshy_Manager manager;
     public override void LogicUpdate()
     {
         
@@ -11,6 +12,7 @@ public class LeshyHiddenState : State
     public override void OnEnterState()
     {
         navAgent.isStopped = true;
+        navAgent.updateRotation = true;
     }
 
     public override void OnExitState()

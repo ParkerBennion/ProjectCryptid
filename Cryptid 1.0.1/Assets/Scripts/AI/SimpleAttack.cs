@@ -78,5 +78,14 @@ public class SimpleAttack : MonoBehaviour
         }
         AttackWorldPoint(damageAmt, damageRadius, AttackTarget.transform.position);
     }
+    public void AttackTargetPoint(float damage)
+    {
+        if (!AttackTarget)
+        {
+            Debug.Log("There was no object set as attack target for "+gameObject.name);
+            return;
+        }
+        AttackWorldPoint(damage, damageRadius, AttackTarget.transform.position);
+    }
     
 }

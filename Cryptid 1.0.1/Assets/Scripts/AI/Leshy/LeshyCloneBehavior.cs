@@ -12,27 +12,33 @@ public class LeshyCloneBehavior : MonoBehaviour, IDamageable
     [SerializeField] private ParticleSystem particlePrefab;
     [SerializeField] private GameObject rig;
     [SerializeField] private Collider thisCollider;
+    private bool invulnerable;
     private GameObject player;
 
     public void Release(Vector3 destination, GameObject playerChar)
     {
+        invulnerable = true;
         if(!player)
             player = playerChar;
         rig.SetActive(true);
         if(particlePrefab) particlePrefab.Play();
         thisCollider.enabled = true;
-        _stowParent = transform.parent;
         transform.parent = null;
         _runningRoutine = StartCoroutine(MoveToLocation(destination));
         _lifeSpanRoutine = StartCoroutine(LifeSpan());
     }
 
+    private void Awake()
+    {
+        _stowParent = transform.parent;
+    }
 
     private IEnumerator MoveToLocation(Vector3 destination)
     {
         navMeshAgent.isStopped = false;
         navMeshAgent.SetDestination(destination);
         yield return new WaitWhile(() => Vector3.Distance(transform.position, destination) > 0.7f);
+        invulnerable = false;
         navMeshAgent.isStopped = true;
         while (true)
         {
@@ -53,6 +59,11 @@ public class LeshyCloneBehavior : MonoBehaviour, IDamageable
         if(particlePrefab)
             particlePrefab.Play();
         navMeshAgent.isStopped = true;
+        if(!_stowParent)
+        {
+            DestroyClone();
+            return;
+        }
         navMeshAgent.Warp(_stowParent.transform.position);
         transform.parent = _stowParent;
         rig.SetActive(false);
@@ -61,7 +72,13 @@ public class LeshyCloneBehavior : MonoBehaviour, IDamageable
 
     public void DealDamage(float damage)
     {
-        ReturnToParent();
+        if(!invulnerable)
+            ReturnToParent();
+    }
+
+    public void DestroyClone()
+    {
+        Destroy(gameObject);
     }
     
     

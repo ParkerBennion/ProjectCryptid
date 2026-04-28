@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 09ff8a78e6137254b8b80b4202dd9172
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - targetObjectTest: {instanceID: 0}
+  - mainCam: {instanceID: 0}
+  - hideAction: {fileID: 11400000, guid: 247071a38d268fc48941d068652ac4db, type: 2}
+  - showAction: {fileID: 11400000, guid: d6aa5e856a70e3644bf6b0407861a6c7, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

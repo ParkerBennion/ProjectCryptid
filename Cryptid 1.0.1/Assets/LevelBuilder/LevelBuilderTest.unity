@@ -645,13 +645,13 @@ MonoBehaviour:
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
   m_SoftShadowQuality: 0
---- !u!43 &998841473
+--- !u!43 &1009122529
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: PolybrushMesh61654
+  m_Name: PolybrushMesh623978
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2

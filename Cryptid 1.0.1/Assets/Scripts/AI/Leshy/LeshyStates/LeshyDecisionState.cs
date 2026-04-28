@@ -37,8 +37,7 @@ public class LeshyDecisionState : State
                 stateMachine.SwitchToNextState(castState);
             }
         }
-        transform.LookAt(player.transform);
-        print("Looking at player");
+        manager.transform.LookAt(player.transform);
     }
 
     public override void OnEnterState()
