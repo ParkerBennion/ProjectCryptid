@@ -5,7 +5,7 @@ using UnityEngine;
 public class AssignTileMapMask : MonoBehaviour
 {
     [SerializeField] private MeshRenderer tileFloorRenderer;
-    [SerializeField] private Texture2D pathMask;
+    public Texture2D pathMask;
     private Material InstancedGroundMaterial;
 
     private void Awake()
@@ -17,8 +17,13 @@ public class AssignTileMapMask : MonoBehaviour
     private void Start()
     {
         // assign the pathMask to the material
-        if(InstancedGroundMaterial.GetTexture("_PathMask")!=null)
-            InstancedGroundMaterial.SetTexture("_PathMask", pathMask);
-        else Debug.LogWarning("Material of "+gameObject.name+" has no attribute named 'PathMask'");
+        AssignPathMask(pathMask);
+    }
+
+    public void AssignPathMask(Texture2D image)
+    {
+        if (InstancedGroundMaterial.GetTexture("_PathMask"))
+            InstancedGroundMaterial.SetTexture("_PathMask", image);
+        else Debug.LogWarning("Material of " + gameObject.name + " has no attribute named 'PathMask'");
     }
 }

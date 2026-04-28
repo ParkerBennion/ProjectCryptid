@@ -207,6 +207,12 @@ MonoBehaviour:
   navMesh: {fileID: 1207015723832064981}
   assetsPrefab: {fileID: 6083330353641013317, guid: 743162072a8d49345b8b28579c5d1351, type: 3}
   assetsObj: {fileID: 0}
+  overrideRotation: 0
+  WaystoneData: {fileID: 11400000, guid: 35129030a446a504d843866b8c1075f7, type: 2}
+  overrideTexture: {fileID: 2800000, guid: 57e381cb999743d47b7603ed0bcb7706, type: 3}
+  overrideAssets:
+  - {fileID: 454012728277493350, guid: 896906d2636c99a45b7c30885cd10db2, type: 3}
+  maskAssigner: {fileID: 4170998230654163407}
 --- !u!64 &8499879805206986212
 MeshCollider:
   m_ObjectHideFlags: 0
