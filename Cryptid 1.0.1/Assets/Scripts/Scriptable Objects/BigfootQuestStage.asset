@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30a5fe0fa4deac246ba7ee75ba004578, type: 3}
   m_Name: BigfootQuestStage
   m_EditorClassIdentifier: 
-  value: 1
+  value: 5
   updateItemsAction: {fileID: 11400000, guid: 634ed8c8c16f20845ababdc5b021cab2, type: 2}
   journalHints:
   - Quest hasnt started

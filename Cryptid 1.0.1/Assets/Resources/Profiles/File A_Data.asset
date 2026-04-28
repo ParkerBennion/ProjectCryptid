@@ -12,12 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f112b36ccc12e3944a84db7aba19a54e, type: 3}
   m_Name: File A_Data
   m_EditorClassIdentifier: 
+  onValueChanged: {fileID: 0}
   playerName: File A
-  playerLevel: 404
-  playerHealth: 0
   hasCompletedTutorial: 0
+  initialBoot: 0
+  logs: 20
+  screenWidth: 0
+  screenHeight: 0
   coins: 0
-  speedMultiplier: 0
-  musicOn: 0
-  musicVolume: 0
-  language: 
