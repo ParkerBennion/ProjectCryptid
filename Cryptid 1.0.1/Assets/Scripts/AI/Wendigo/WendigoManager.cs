@@ -75,7 +75,7 @@ public class WendigoManager : CryptidManager
         canMelee = true;
     }
 
-    public void StrikeLightning()
+    public void StrikeLightning()//called from wendigo release animation
     {
         strikeLightningEvent?.Invoke();
     }

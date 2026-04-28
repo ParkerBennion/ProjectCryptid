@@ -15,6 +15,7 @@ public class MothmanBehavior : MonoBehaviour
     [SerializeField] private UnityEvent snatchEvent; 
     public MothmanManager manager;
     public bool isLanded;
+    [SerializeField] private GameObject anchorBone;
 
     private void Start()
     {
@@ -23,9 +24,17 @@ public class MothmanBehavior : MonoBehaviour
 
     public void BeginAttack()
     {
-        swoopRoutine=StartCoroutine(SwoopAndGrab());
+        animator.Play("Swoop");
+        gameObject.transform.position = playerTarget.transform.position;
     }
 
+
+    public void SnatchPlayer()
+    {
+        playerTarget.GetComponent<PlayerHealth>().canLatch = false;
+        playerTarget.transform.SetParent(anchorBone.transform);
+        snatchEvent.Invoke();
+    }
     private IEnumerator SwoopAndGrab()
     {
         playerTarget.GetComponent<PlayerHealth>().canLatch = false;

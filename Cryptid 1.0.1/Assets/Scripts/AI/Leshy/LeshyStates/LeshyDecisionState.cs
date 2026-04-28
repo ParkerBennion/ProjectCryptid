@@ -38,7 +38,6 @@ public class LeshyDecisionState : State
             }
         }
         manager.transform.LookAt(player.transform);
-        print("Looking at player");
     }
 
     public override void OnEnterState()

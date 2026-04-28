@@ -66,7 +66,7 @@ public class NPC_DialogueModule : MonoBehaviour
     {
         conversationStartEvent.Invoke();//disables hud and controls
         currentLineIndex = 0;
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(.5f);
         textDisplay.updateText(activeConversationList[currentLineIndex]);
     }
 

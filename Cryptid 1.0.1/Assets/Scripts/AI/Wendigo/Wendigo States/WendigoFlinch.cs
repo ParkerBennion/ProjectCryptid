@@ -11,7 +11,6 @@ public class WendigoFlinch : State
     public override void OnEnterState()
     {
         animator.SetTrigger("Flinch");
-        print("Entered WendigoFlinch");
     }
 
     public override void OnExitState()
