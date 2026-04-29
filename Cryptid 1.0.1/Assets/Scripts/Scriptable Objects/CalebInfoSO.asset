@@ -18,11 +18,5 @@ MonoBehaviour:
   isDisguised: 0
   playerSpeedCurrent: 6
   playerSpeedDefault: 6
-  speedModifiers:
-  - 5
-  - 5
-  - 5
-  - 5
-  attackModifiers: []
-  defenceModifiers: []
+  speedModifiers: []
   direction: 1

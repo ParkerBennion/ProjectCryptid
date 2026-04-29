@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -12,13 +11,7 @@ public class PlayerInfoSO : ScriptableObject
     public UnityAction<bool> torchChange;
     public UnityAction<bool> suitChange;
     public UnityAction<float, float> speedChange;
-    public UnityAction<float, float> attackChange;
-    public UnityAction<float, float> defenceChange;
-    public UnityAction<float, float> allChange;
     [SerializeField] private float[] speedModifiers;
-    [SerializeField] private float[] attackModifiers;
-    [SerializeField] private float[] defenceModifiers;
-    
     public float direction;
 
     public void ToggleTorch()
@@ -68,26 +61,6 @@ public class PlayerInfoSO : ScriptableObject
         speedChange?.Invoke(playerSpeedCurrent,direction);
     }
     
-    public float GetTotalSpeedModifier()
-    {
-        if (speedModifiers == null || speedModifiers.Length == 0)
-            return 0f;
-
-        float total = 0f;
-        for (int i = 0; i < speedModifiers.Length; i++)
-        {
-            total += speedModifiers[i];
-        }
-
-        return total;
-    }
-    
-    public void ApplyFinalSpeed()
-    {
-        playerSpeedCurrent = playerSpeedDefault + GetTotalSpeedModifier();
-        speedChange?.Invoke(playerSpeedCurrent, direction);
-    }
-    
     
     public void SetTorchStatus(bool status)
     {
@@ -105,59 +78,6 @@ public class PlayerInfoSO : ScriptableObject
     public void ResetSpeed()
     {
         SetSpeed(playerSpeedDefault);
-    }
-    
-    public enum PlayerModifierType
-    {
-        Speed,
-        Attack,
-        Defence
-    }
-
-    public void AddModifier(PlayerModifierType type, float value)
-    {
-        switch (type)
-        {
-            case PlayerModifierType.Speed:
-                AddToArray(ref speedModifiers, value);
-                speedChange?.Invoke(playerSpeedCurrent, direction);
-                break;
-
-            case PlayerModifierType.Attack:
-                AddToArray(ref attackModifiers, value);
-                attackChange?.Invoke(value, direction);
-                break;
-
-            case PlayerModifierType.Defence:
-                AddToArray(ref defenceModifiers, value);
-                defenceChange?.Invoke(value, direction);
-                break;
-        }
-
-        allChange?.Invoke(value, direction);
-    }
-
-    private void AddToArray(ref float[] array, float value)
-    {
-        if (array == null)
-            array = new float[0];
-
-        System.Array.Resize(ref array, array.Length + 1);
-        array[array.Length - 1] = value;
-    }
-    public void ClearAllModifiers()
-    {
-        speedModifiers = new float[0];
-        attackModifiers = new float[0];
-        defenceModifiers = new float[0];
-
-        // Recalculate stats after clearing
-        ApplyFinalSpeed();
-
-        // notify other systems
-        attackChange?.Invoke(0f, direction);
-        defenceChange?.Invoke(0f, direction);
-        allChange?.Invoke(0f, direction);
     }
     
 }
