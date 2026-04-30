@@ -50,6 +50,7 @@ public class UITreeBranch : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
     {
         branchVisual.gameObject.SetActive(true);
         StartCoroutine(SpawnFromOffScreen());
+        xForm.anchoredPosition = homeVector;
     }
 
     public void OnBeginDrag(PointerEventData eventData) //get the touch location in the canvas
