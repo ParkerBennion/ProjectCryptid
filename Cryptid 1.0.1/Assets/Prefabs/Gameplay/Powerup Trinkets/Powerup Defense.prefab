@@ -379,8 +379,9 @@ MonoBehaviour:
   abilityCooldown: 0
   canUseAbility: 0
   chargeUsesTotal: 5
-  chargeUsesRemaining: 0
-  invulnerabilityDuration: 0
+  chargeUsesRemaining: 2
+  playerInfo: {fileID: 11400000, guid: 5d112b78f37dda646a93d2fd7ed1babe, type: 2}
+  invulnerabilityDuration: 3
 --- !u!54 &-4558894100003310642
 Rigidbody:
   m_ObjectHideFlags: 0

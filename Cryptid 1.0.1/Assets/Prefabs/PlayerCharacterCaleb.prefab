@@ -167,7 +167,7 @@ MonoBehaviour:
   perfectHeavyFrameTime: 0.5
   chargeMovementMultiplier: 0.5
   activePlayerRunSpeed: 0
-  totemRunSpeedBonus: 0
+  runDirection: 0
   canAttack: 0
   activeTotem: {fileID: 0}
   animator: {fileID: 7149663152967449402}
@@ -294,6 +294,7 @@ MonoBehaviour:
   invulnerable: 0
   canLatch: 1
   damageTakenModifier: 1
+  playerInfo: {fileID: 11400000, guid: 5d112b78f37dda646a93d2fd7ed1babe, type: 2}
   healthUpdate: {fileID: 11400000, guid: 35e8ac248f044074ba344cc927b9f6ea, type: 2}
 --- !u!114 &9030145949819159294
 MonoBehaviour:
@@ -325,6 +326,7 @@ MonoBehaviour:
   - Enemy
   - Destructible
   aggroGenerator: {fileID: 11400000, guid: b5cacba1a5b1a2e45abf5121d49f7f50, type: 2}
+  playerInfo: {fileID: 11400000, guid: 5d112b78f37dda646a93d2fd7ed1babe, type: 2}
 --- !u!114 &7876827434842387372
 MonoBehaviour:
   m_ObjectHideFlags: 0
