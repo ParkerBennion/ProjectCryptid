@@ -4295,7 +4295,6 @@ GameObject:
   - component: {fileID: 5884425465153838936}
   - component: {fileID: 7743702705337375711}
   - component: {fileID: 8090489577158827987}
-  - component: {fileID: 2963045947034633583}
   m_Layer: 5
   m_Name: SpawningPanel
   m_TagString: Untagged
@@ -4386,57 +4385,6 @@ MonoBehaviour:
   m_Spacing: {x: 50, y: 50}
   m_Constraint: 0
   m_ConstraintCount: 2
---- !u!114 &2963045947034633583
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3744230533564681441}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b0c08fae9cc335642afdb04d329a69a5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  awakeEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  startEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  enableEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 11400000, guid: a7489fb67a5207048a90be0ecce927ec, type: 2}
-        m_TargetAssemblyTypeName: GameAction, Assembly-CSharp
-        m_MethodName: RaiseAction
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  collisionEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  triggerEnterEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  tapEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  destroyEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  disableEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  quitEvent:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!1 &3995053582685223947
 GameObject:
   m_ObjectHideFlags: 0
@@ -13428,6 +13376,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textMP: {fileID: 6661275670816726286}
   spawnerInfo: {fileID: 11400000, guid: ebd6a4e314dfff44ba1d110e8602b429, type: 2}
+  loadIndex: 2
 --- !u!114 &4934311403678902431 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7985537778254505972, guid: ae462ae13d30d3442a2677e3d5dd1c47, type: 3}
@@ -13486,6 +13435,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textMP: {fileID: 4934311403678902431}
   spawnerInfo: {fileID: 11400000, guid: ebd6a4e314dfff44ba1d110e8602b429, type: 2}
+  loadIndex: 3
 --- !u!114 &6661275670816726286 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8564154021610869349, guid: ae462ae13d30d3442a2677e3d5dd1c47, type: 3}
@@ -13527,6 +13477,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textMP: {fileID: 8174120960290720653}
   spawnerInfo: {fileID: 11400000, guid: ebd6a4e314dfff44ba1d110e8602b429, type: 2}
+  loadIndex: 1
 --- !u!114 &6360257264542223454
 MonoBehaviour:
   m_ObjectHideFlags: 0
