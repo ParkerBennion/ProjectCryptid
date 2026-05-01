@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90f8c23ff4c129344aec484f3ffb4805, type: 3}
+  m_Name: CryptidSpawnerInfo
+  m_EditorClassIdentifier: 
+  updateUIAction: {fileID: 11400000, guid: a7489fb67a5207048a90be0ecce927ec, type: 2}
+  populationIncreaseIntervalSeconds: 30
+  startingPopulation: 1
+  populationIncreaseAmount: 1
