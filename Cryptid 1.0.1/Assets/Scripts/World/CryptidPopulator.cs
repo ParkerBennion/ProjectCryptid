@@ -17,7 +17,7 @@ public class CryptidPopulator : MonoBehaviour
     private Coroutine currentRoutine;
     private bool wranglePaused;
     [SerializeField] private int maximumCryptids, startingCryptids, cryptidPeriodicIncreaseAmount;
-    private WaitForSeconds wfs, teleportBuffer;
+    private WaitForSeconds wfsWrangle, teleportBuffer;
     private WaitUntil _waitIfPaused;
     [SerializeField][Range(10,180)] private float frontalConeSize;
 
@@ -29,7 +29,7 @@ public class CryptidPopulator : MonoBehaviour
 
     private void Awake()
     {
-        wfs = new WaitForSeconds(cryptidSpawnerData.populationIncreaseIntervalSeconds);
+        wfsWrangle = new WaitForSeconds(wrangleFrequency);
         _waitIfPaused = new WaitUntil(()=>!wranglePaused);
         teleportBuffer = new WaitForSeconds(2);
     }
@@ -118,7 +118,7 @@ public class CryptidPopulator : MonoBehaviour
                     cryptid.MoveToLocation(FindSpawnInFrontOfPlayer());
                 }
             }
-            yield return wfs;
+            yield return wfsWrangle;
             yield return _waitIfPaused;
             yield return teleportBuffer;
         }

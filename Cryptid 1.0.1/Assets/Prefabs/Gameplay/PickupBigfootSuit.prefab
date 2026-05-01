@@ -124,6 +124,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 11400000, guid: 2c16fbca6344cc04a8a6fcc9fd41f034, type: 2}
+        m_TargetAssemblyTypeName: GameActionString, Assembly-CSharp
+        m_MethodName: RaiseAction
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 6
+          m_FloatArgument: 0
+          m_StringArgument: A Gorilla suit? Hmm. I wonder what Bigfoot will think
+            of this...
+          m_BoolArgument: 0
+        m_CallState: 2
   destroyOnPickup: 1
   logToConsole: 1
 --- !u!54 &5990757822288128438

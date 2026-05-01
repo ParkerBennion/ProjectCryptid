@@ -179,12 +179,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "Game Goal: Investigate the rumours of local folklore legends living in
-    the forest\n\nIntro: While on your scout trip, you encounter a strange creature
+    the forest\n\n(This information will be covered in a short tutorial in polish
+    phase) \n\nIntro: While on your scout trip, you encounter a strange creature
     you cannot explain. While it may have been fleeting, you still find yourself
     intrigued. The night before you return home, under your bed you have found a
     journal from a man named Dan- a self proclaimed expert on the local mythology.
     You decide to sneakily remain behind to investigate. There is a note on the back
-    of the book - \n\n\nIf you find this journal, pleas return it to me at my camper,
+    of the book - \n\n\nIf you find this journal, please return it to me at my camper,
     thanx - Dan\n\n\n(This information will be covered in a short tutorial in polish
     phase) \n\n"
   m_isRightToLeft: 0
@@ -7421,6 +7422,18 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 11400000, guid: dcb1cf6f5925f51429c80e0996656528, type: 2}
         m_TargetAssemblyTypeName: QuestIntData, Assembly-CSharp
+        m_MethodName: SetValue
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 11400000, guid: 35129030a446a504d843866b8c1075f7, type: 2}
+        m_TargetAssemblyTypeName: IntData, Assembly-CSharp
         m_MethodName: SetValue
         m_Mode: 3
         m_Arguments:

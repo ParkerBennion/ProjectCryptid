@@ -1638,12 +1638,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2418428573956813885}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.41, y: 0, z: 4.78}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.4555554, y: 0, z: 5.3111115}
+  m_LocalScale: {x: 1.1111112, y: 1.1111112, z: 1.1111112}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 3709798645046417292}
+  m_Father: {fileID: 41183469265401754}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2449712328441514570
 GameObject:
@@ -2178,13 +2178,11 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 4369099897062187751}
   - {fileID: 534452244324551212}
   - {fileID: 3803443358336407114}
   - {fileID: 285036359211982267}
   - {fileID: 1743036533801375156}
   - {fileID: 8218316359717260313}
-  - {fileID: 6911569238789373068}
   - {fileID: 41183469265401754}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2336,7 +2334,7 @@ GameObject:
   - component: {fileID: 4300258297039831194}
   - component: {fileID: 954383055306547670}
   m_Layer: 0
-  m_Name: FireTowerCell
+  m_Name: CabinCell
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3666,6 +3664,8 @@ Transform:
   m_Children:
   - {fileID: 7737948169608752281}
   - {fileID: 919412770113552884}
+  - {fileID: 6911569238789373068}
+  - {fileID: 4369099897062187751}
   m_Father: {fileID: 3709798645046417292}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &5482013488714223338
@@ -4763,12 +4763,12 @@ Transform:
   m_GameObject: {fileID: 5782783865010422751}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.7080677, z: -0, w: 0.7061446}
-  m_LocalPosition: {x: 1.09, y: 0, z: 7.67}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 1.2111113, y: 0, z: 8.5222225}
+  m_LocalScale: {x: 1.1111112, y: 1.1111112, z: 1.1111112}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8173247951750215727}
-  m_Father: {fileID: 3709798645046417292}
+  m_Father: {fileID: 41183469265401754}
   m_LocalEulerAnglesHint: {x: 0, y: -90.156, z: 0}
 --- !u!114 &380673761096751898
 MonoBehaviour:

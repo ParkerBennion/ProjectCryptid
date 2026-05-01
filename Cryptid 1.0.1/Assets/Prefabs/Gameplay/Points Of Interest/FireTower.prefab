@@ -7083,7 +7083,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7874000401692529561, guid: 9c629258a50d2c743a6afd873540a906, type: 3}
       propertyPath: m_Name
-      value: Ladder
+      value: Enter Ladder
       objectReference: {fileID: 0}
     - target: {fileID: 9221032543761177429, guid: 9c629258a50d2c743a6afd873540a906, type: 3}
       propertyPath: m_Radius

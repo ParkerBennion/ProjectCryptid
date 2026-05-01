@@ -53,7 +53,12 @@ public class ChupacabraPatrolState : State
         {
             startTime = Time.time;
             destinationPoint = FindNearbyPatrolPoint(startPoint);
-            navAgent.SetDestination(destinationPoint);
+            if(navAgent.isOnNavMesh)
+                navAgent.SetDestination(destinationPoint);
+            else
+            {
+                Debug.LogWarning("NavAgent is not on a navmesh for chupacabra to patrol on");
+            }
             while (Vector3.Distance(manager.transform.position, destinationPoint) >= 1f && (Time.time - startTime)<maxPatrolTime)//while the object has not reached it's destination and less time has passed than the maximum patrol time
             {
                 yield return WFF;
