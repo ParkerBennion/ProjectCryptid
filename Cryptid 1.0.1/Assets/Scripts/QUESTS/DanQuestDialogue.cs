@@ -82,6 +82,10 @@ public class DanQuestDialogueSO : QuestDialogueKeeperSO
             "Second thing, there's some straaaaaange people out here. I seen this one guy who the creatures out here just... leave alone",
             "Tried talkin to him, but he didn't have much to say. But I bet he knows somethin",
             "He wears these great big sunglasses, even at night, says he can see just fine. He's a strange one, but he might be able to help ye"
+        },
+        new string[]//padding for testing
+        {
+        "This quest step does not exist"
         }
     };
 };

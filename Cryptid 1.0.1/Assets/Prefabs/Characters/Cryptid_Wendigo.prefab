@@ -3656,7 +3656,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stateMachine: {fileID: 8601654369842533651}
   chargeUpTime: 0.75
-  lightningDamage: 40
+  lightningDamage: 30
   lightningRadius: 2.25
   decisionState: {fileID: 8177417844601150827}
   telegraphObj: {fileID: 2709245381973799983}

@@ -23,7 +23,7 @@ public abstract class QuestDialogueKeeperSO : ScriptableObject
         switch (questNumber)
         {
             case 1:
-                if(bigfootQuestStage.value>=BigfootQuestDialogues.Length)
+                if(bigfootQuestStage.value>BigfootQuestDialogues.Length)
                 {
                     Debug.LogError(
                         "Out of bounds error for getting stage "+bigfootQuestStage.value+" dialogue out of bigfoot quest");
@@ -31,7 +31,7 @@ public abstract class QuestDialogueKeeperSO : ScriptableObject
                 }
                 return BigfootQuestDialogues[bigfootQuestStage.value-1];
             case 2:
-                if(nessieQuestStage.value>=NessieQuestDialogues.Length)
+                if(nessieQuestStage.value>NessieQuestDialogues.Length)
                 {
                     Debug.LogError(
                         "Out of bounds error for getting stage dialogue out of nessie quest");
@@ -39,7 +39,7 @@ public abstract class QuestDialogueKeeperSO : ScriptableObject
                 }
                 return NessieQuestDialogues[nessieQuestStage.value-1];
             case 3:
-                if(thunderbirdQuestStage.value>=ThunderbirdQuestDialogues.Length)
+                if(thunderbirdQuestStage.value>ThunderbirdQuestDialogues.Length)
                 {
                     Debug.LogError(
                         "Out of bounds error for getting stage dialogue out of thunderbird quest");

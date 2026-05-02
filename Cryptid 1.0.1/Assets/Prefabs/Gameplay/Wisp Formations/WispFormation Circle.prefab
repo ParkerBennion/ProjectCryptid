@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 770793821132792773}
   m_Layer: 0
-  m_Name: Circle Wisp Formation
+  m_Name: WispFormation Circle
   m_TagString: Untagged
   m_Icon: {fileID: -1412012063857583412, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0

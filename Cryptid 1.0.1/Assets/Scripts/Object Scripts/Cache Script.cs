@@ -37,4 +37,10 @@ public class CacheScript : MonoBehaviour, IDamageable
             animator.SetTrigger("Open");
         }
     }
+
+    public void ResetCache()
+    {
+        hasOpened = false;
+        animator.SetTrigger("Reset");
+    }
 }

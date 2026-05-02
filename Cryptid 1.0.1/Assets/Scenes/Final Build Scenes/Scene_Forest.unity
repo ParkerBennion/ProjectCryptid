@@ -1580,7 +1580,7 @@ MonoBehaviour:
   aggroMax: 100
   aggroCurrent: 0
   depletionFrequency: 1
-  depletionAmt: 1
+  depletionAmt: 5
   idleTimeBeforeSnatch: 2
   playerInfo: {fileID: 11400000, guid: 5d112b78f37dda646a93d2fd7ed1babe, type: 2}
   player: {fileID: 1102599369749899774}
@@ -1740,7 +1740,7 @@ Transform:
   m_GameObject: {fileID: 804016350}
   serializedVersion: 2
   m_LocalRotation: {x: 0.53028923, y: 0, z: 0, w: 0.8478168}
-  m_LocalPosition: {x: 3.17, y: 9, z: -7.45}
+  m_LocalPosition: {x: -0.96, y: 9, z: -6.06}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2003,7 +2003,7 @@ Transform:
   m_GameObject: {fileID: 1098766431}
   serializedVersion: 2
   m_LocalRotation: {x: 0.53028923, y: 0, z: 0, w: 0.8478168}
-  m_LocalPosition: {x: 3.17, y: 9, z: -7.45}
+  m_LocalPosition: {x: -0.96, y: 9, z: -6.06}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2613,7 +2613,7 @@ MonoBehaviour:
   maximumCryptids: 4
   startingCryptids: 0
   cryptidPeriodicIncreaseAmount: 0
-  frontalConeSize: 10
+  frontalConeSize: 90
   autoIncreaseDifficulty: 0
 --- !u!4 &1855542037
 Transform:
@@ -3447,7 +3447,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2105984214961995838, guid: 6edcafb7e6b859c42bf46e27c3b47828, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.17
+      value: -0.96
       objectReference: {fileID: 0}
     - target: {fileID: 2105984214961995838, guid: 6edcafb7e6b859c42bf46e27c3b47828, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3455,7 +3455,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2105984214961995838, guid: 6edcafb7e6b859c42bf46e27c3b47828, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -3.45
+      value: -2.06
       objectReference: {fileID: 0}
     - target: {fileID: 2105984214961995838, guid: 6edcafb7e6b859c42bf46e27c3b47828, type: 3}
       propertyPath: m_LocalRotation.w
