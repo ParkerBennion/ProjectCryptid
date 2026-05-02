@@ -109,6 +109,7 @@ public class CryptidPopulator : MonoBehaviour
         bool isRunning = true;
         while (isRunning) 
         {
+            yield return _waitIfPaused;
             //print("Wrangling cryptids");
             foreach (CryptidManager cryptid in activeCryptids)
             {
@@ -148,6 +149,8 @@ public class CryptidPopulator : MonoBehaviour
         while (true)
         {
             yield return wfsSpawner;
+            yield return _waitIfPaused;
+            yield return teleportBuffer;
             SetCryptidPopulation(maximumCryptids+cryptidPeriodicIncreaseAmount);
         }
     }
@@ -155,5 +158,10 @@ public class CryptidPopulator : MonoBehaviour
     public void SetWranglePaused(bool isPaused)
     {
         wranglePaused = isPaused;
+    }
+
+    public void PauseSystems()
+    {
+        
     }
 }

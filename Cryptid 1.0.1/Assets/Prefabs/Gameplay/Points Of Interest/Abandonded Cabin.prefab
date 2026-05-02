@@ -2202,6 +2202,7 @@ MonoBehaviour:
   insideSpawn: {fileID: 534452244324551212}
   outsideSpawn: {fileID: 4369099897062187751}
   playerCharacter: {fileID: 0}
+  exitCellCall: {fileID: 11400000, guid: a3f9d6b72c611ad4ea8274e1a8c171dc, type: 2}
 --- !u!95 &1175633952361198428
 Animator:
   serializedVersion: 7
@@ -8184,7 +8185,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 145672384815396124, guid: 6af3a5ad392143042bd5afeefbdf3885, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 145672384815396124, guid: 6af3a5ad392143042bd5afeefbdf3885, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode

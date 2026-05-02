@@ -184,10 +184,9 @@ MonoBehaviour:
     you cannot explain. While it may have been fleeting, you still find yourself
     intrigued. The night before you return home, under your bed you have found a
     journal from a man named Dan- a self proclaimed expert on the local mythology.
-    You decide to sneakily remain behind to investigate. There is a note on the back
-    of the book - \n\n\n\"If you find this journal, please return it to me at my
-    camper, thanx - Dan\"\n\n\n(This information will be covered in a short tutorial
-    in polish phase) \n\n"
+    You decide to sneakily remain behind at camp to investigate. There is a note
+    on the back of the book - \n\n\"If you find this journal, please return it to
+    me at my camper, thanx - Dan\"\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9204cda6325bcc14d8bc469ce8275971, type: 2}
   m_sharedMaterial: {fileID: 4767068557814494699, guid: 9204cda6325bcc14d8bc469ce8275971, type: 2}

@@ -41,6 +41,7 @@ public abstract class CryptidManager : MonoBehaviour
 
     public void MoveToLocation(Vector3 newLocation)
     {
+        if (!navAgent.isOnNavMesh) return;
         navAgent.isStopped = true;
         if (NavMesh.SamplePosition(newLocation, out NavMeshHit hit, 20f, NavMesh.AllAreas))
         {
