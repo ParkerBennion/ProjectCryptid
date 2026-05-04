@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: CryptidSpawnerInfo
   m_EditorClassIdentifier: 
   updateUIAction: {fileID: 11400000, guid: a7489fb67a5207048a90be0ecce927ec, type: 2}
-  populationIncreaseIntervalSeconds: 30
-  startingPopulation: 1
+  populationIncreaseIntervalSeconds: 60
+  startingPopulation: 2
   populationIncreaseAmount: 1

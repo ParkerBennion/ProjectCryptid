@@ -1,4 +1,4 @@
-# Install script for directory: E:/CryptidMobile/ProjectCryptid/Cryptid 1.0.1/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/src/main/cpp/GameActivity
+# Install script for directory: E:/CryptidMobile/ProjectCryptid/Cryptid 1.0.1/Library/PramData/AndroidApplicationController/Cache/com.UnityTechnologies.Mobile3DTemplate/gradle-project/unityLibrary/src/main/cpp/GameActivity
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
