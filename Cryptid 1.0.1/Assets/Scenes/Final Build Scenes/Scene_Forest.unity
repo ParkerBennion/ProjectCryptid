@@ -1581,6 +1581,7 @@ MonoBehaviour:
   aggroCurrent: 0
   depletionFrequency: 1
   depletionAmt: 5
+  huntingDepletion: 0.65
   idleTimeBeforeSnatch: 2
   playerInfo: {fileID: 11400000, guid: 5d112b78f37dda646a93d2fd7ed1babe, type: 2}
   player: {fileID: 1102599369749899774}
