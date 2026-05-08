@@ -27,7 +27,10 @@ public class CharacterInputController : MonoBehaviour
     private float chargeMovementMultiplier;
 
     public float activePlayerRunSpeed, runDirection; // 1 for forward, -1 for reverse
+    private float playerVelocity;
 
+    [SerializeField] private GameObject sprintCamera;
+    [SerializeField] private bool isSprinting;
     private Coroutine chargingAttack;
     private bool perfectAttack;
     public bool canAttack;
@@ -94,6 +97,7 @@ public class CharacterInputController : MonoBehaviour
     private void Start()
     {
         playerInfo.ResetStats();
+        isSprinting = false;
     }
 
     /// <summary>
@@ -107,7 +111,18 @@ public class CharacterInputController : MonoBehaviour
         transform.Translate(moveVector * (activePlayerRunSpeed * Time.deltaTime), Space.World);
         if (moveAxis!=Vector2.zero)//Updates the players rotation if they are moving, and does nothing if the player is not moving
             transform.rotation = Quaternion.LookRotation(moveVector);
-        animator.SetFloat(animSpeed, moveVector.magnitude*activePlayerRunSpeed);
+        playerVelocity = moveVector.magnitude * activePlayerRunSpeed;
+        animator.SetFloat(animSpeed, playerVelocity);
+        if (playerVelocity >= 5.5 && !isSprinting)
+        {
+            sprintCamera.SetActive(true);
+            isSprinting = true;
+        }
+        else if (playerVelocity < 5.5 && isSprinting)
+        {
+            sprintCamera.SetActive(false);
+            isSprinting = false;
+        }
     }
     
     private void StartAttackCallback(InputAction.CallbackContext ctx)
