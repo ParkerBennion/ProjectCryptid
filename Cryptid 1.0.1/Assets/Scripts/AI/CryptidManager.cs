@@ -3,6 +3,8 @@ using System.Collections;
 using UnityEngine;
 
 using UnityEngine.AI;
+using Random = UnityEngine.Random;
+
 public abstract class CryptidManager : MonoBehaviour
 {
     private static readonly int Alpha = Shader.PropertyToID("_Alpha");
@@ -27,6 +29,10 @@ public abstract class CryptidManager : MonoBehaviour
         disengageAction.raise += Disengage;
     }
 
+    protected virtual void Start()
+    {
+        gameObject.transform.eulerAngles = Vector3.up * Random.Range(0, 359);
+    }
     public abstract void Disengage();
 
     public abstract void Despawn();

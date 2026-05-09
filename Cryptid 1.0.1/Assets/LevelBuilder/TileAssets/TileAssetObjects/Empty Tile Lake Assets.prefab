@@ -1406,10 +1406,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9181206081448791193}
-  - component: {fileID: 5581959884215728359}
-  - component: {fileID: 2305329475607311891}
   - component: {fileID: 6240467362169093556}
-  - component: {fileID: 5509825051124800514}
+  - component: {fileID: 1634966573805730007}
   m_Layer: 0
   m_Name: LakeRockObstacle
   m_TagString: Untagged
@@ -1432,58 +1430,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 665267095055079573}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &5581959884215728359
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7389199560610316465}
-  m_Mesh: {fileID: -5594994563554096419, guid: 1de084fabbc55894da42201cb175c15e, type: 3}
---- !u!23 &2305329475607311891
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7389199560610316465}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials: []
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!208 &6240467362169093556
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -1494,14 +1440,14 @@ NavMeshObstacle:
   m_Enabled: 1
   serializedVersion: 3
   m_Shape: 0
-  m_Extents: {x: 16.7, y: 2, z: 16.7}
+  m_Extents: {x: 18, y: 2, z: 18}
   m_MoveThreshold: 0.1
-  m_Carve: 0
+  m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: 0, y: 2, z: 0}
   m_TimeToStationary: 0.5
---- !u!64 &5509825051124800514
-MeshCollider:
+--- !u!135 &1634966573805730007
+SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1518,10 +1464,9 @@ MeshCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -5594994563554096419, guid: 1de084fabbc55894da42201cb175c15e, type: 3}
+  serializedVersion: 3
+  m_Radius: 18
+  m_Center: {x: 0, y: 2.0000002, z: 0}
 --- !u!1 &9118823103642349682
 GameObject:
   m_ObjectHideFlags: 0

@@ -20,8 +20,9 @@ public class WendigoManager : CryptidManager
         rangedWFS = new WaitForSeconds(rangeCD);
     }
 
-    private void Start()
+    protected override void Start()
     {
+        base.Start();
         canMelee = true;
         canRangeAttack = true;
     }
