@@ -2070,6 +2070,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bd3ec16154e00a4ca7dc2d0996324b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerTarget: {fileID: 0}
   deathCall: {fileID: 11400000, guid: 775e1f38c2b7d3d4c885ce7f1510a4bd, type: 2}
   disengageAction: {fileID: 11400000, guid: 1825430537b0688438cef09be48562ed, type: 2}
   animator: {fileID: 3806275233138044880}
@@ -2079,7 +2080,6 @@ MonoBehaviour:
   mRenderer: {fileID: 4181809573326108634}
   splatterFX: {fileID: 472526503852951626, guid: a1fa0cfc504c03949a631a1d626da7bb, type: 3}
   canStun: 0
-  playerTarget: {fileID: 0}
   canMelee: 0
   canRangeAttack: 0
   disengageState: {fileID: 6287626199538539225}
@@ -2176,6 +2176,18 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 5607830380607762379}
+        m_TargetAssemblyTypeName: CryptidManager, Assembly-CSharp
+        m_MethodName: KnockBack
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
         m_CallState: 2
       - m_Target: {fileID: 6928099762148716633}
         m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
@@ -2280,7 +2292,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
-  m_IsKinematic: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0

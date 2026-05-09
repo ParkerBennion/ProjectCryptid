@@ -113,15 +113,18 @@ public class CharacterInputController : MonoBehaviour
             transform.rotation = Quaternion.LookRotation(moveVector);
         playerVelocity = moveVector.magnitude * activePlayerRunSpeed;
         animator.SetFloat(animSpeed, playerVelocity);
-        if (playerVelocity >= 5.5 && !isSprinting)
+        if(sprintCamera)
         {
-            sprintCamera.SetActive(true);
-            isSprinting = true;
-        }
-        else if (playerVelocity < 5.5 && isSprinting)
-        {
-            sprintCamera.SetActive(false);
-            isSprinting = false;
+            if (playerVelocity >= 5.5 && !isSprinting)
+            {
+                sprintCamera.SetActive(true);
+                isSprinting = true;
+            }
+            else if (playerVelocity < 5.5 && isSprinting)
+            {
+                sprintCamera.SetActive(false);
+                isSprinting = false;
+            }
         }
     }
     

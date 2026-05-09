@@ -7,6 +7,7 @@ using Random = UnityEngine.Random;
 
 public abstract class CryptidManager : MonoBehaviour
 {
+    public GameObject playerTarget;
     private static readonly int Alpha = Shader.PropertyToID("_Alpha");
     [SerializeField] private CryptidDeathCall deathCall;
     [SerializeField] private GameAction disengageAction;
@@ -95,5 +96,26 @@ public abstract class CryptidManager : MonoBehaviour
     private void OnDestroy()
     {
         disengageAction.raise -= Disengage;
+    }
+
+    public void KnockBack()
+    {
+        if (playerTarget)
+        {
+            StartCoroutine(KnockBackRoutine(transform.position+
+                                            ((transform.position - playerTarget.transform.position).normalized*.75f)));
+        }
+    }
+
+    private IEnumerator KnockBackRoutine(Vector3 destination)
+    {
+        Vector3 startPosition = transform.position;
+        float elapsedTime = 0;
+        while (elapsedTime < .2f)
+        {
+            transform.position = Vector3.Lerp(startPosition,destination,elapsedTime/.2f);
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
     }
 }

@@ -6,7 +6,6 @@ using UnityEngine.Events;
 
 public class WendigoManager : CryptidManager
 {
-    public GameObject playerTarget;
     private WaitForSeconds meleeWFS, rangedWFS;
     public bool canMelee, canRangeAttack;
     [SerializeField] private State disengageState;

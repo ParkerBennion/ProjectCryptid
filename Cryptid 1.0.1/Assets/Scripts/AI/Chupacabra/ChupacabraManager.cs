@@ -10,7 +10,6 @@ public class ChupacabraManager : CryptidManager
 {
     public State fleeState;
     public bool canPounce;
-    public GameObject playerTarget;
     private WaitForSeconds skillCDWFS;
     [SerializeField] private float pounceCooldown;
 
