@@ -15,10 +15,6 @@ public class Leshy_Manager : CryptidManager
         castCDWfs = new WaitForSeconds(castCooldown);
     }
 
-    public void SetTarget(GameObject obj)
-    {
-        playerTarget = obj.gameObject;
-    }
     
     public override void Disengage()
     {

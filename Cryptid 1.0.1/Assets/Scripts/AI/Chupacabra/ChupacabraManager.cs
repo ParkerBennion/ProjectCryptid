@@ -20,10 +20,7 @@ public class ChupacabraManager : CryptidManager
         skillCDWFS = new WaitForSeconds(pounceCooldown);
     }
 
-    public void SetTarget(GameObject obj)
-    {
-        playerTarget = obj.gameObject;
-    }
+    
 
     public override void Disengage()
     {

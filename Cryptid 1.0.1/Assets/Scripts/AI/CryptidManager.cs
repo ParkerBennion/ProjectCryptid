@@ -73,7 +73,10 @@ public abstract class CryptidManager : MonoBehaviour
             StartCoroutine(StunCooldown());
         }
     }
-    
+    public void SetTarget(GameObject obj)
+    {
+        playerTarget = obj.gameObject;
+    }
     private IEnumerator DamageFlashRoutine()
     {
         float elapsedTime = 0;

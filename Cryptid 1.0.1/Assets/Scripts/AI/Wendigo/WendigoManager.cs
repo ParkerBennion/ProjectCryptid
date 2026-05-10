@@ -25,10 +25,6 @@ public class WendigoManager : CryptidManager
         canMelee = true;
         canRangeAttack = true;
     }
-    public void SetTarget(GameObject obj)
-    {
-        playerTarget = obj.gameObject;
-    }
     public override void Disengage()
     {
         stateMachine.SwitchToNextState(disengageState);
