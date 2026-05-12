@@ -19,6 +19,7 @@ public class PlayerAttack : MonoBehaviour
     [SerializeField] private GameActionFloat aggroGenerator;
 
     [SerializeField] private PlayerInfoSO  playerInfo;
+    [SerializeField] private float knockBack;
 
     private void Awake()
     {
