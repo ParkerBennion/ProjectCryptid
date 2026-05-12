@@ -15,7 +15,7 @@ public class DefenseTotem : TotemBase
         chargeUsesRemaining =chargeUsesTotal;
         canUseAbility = true;//end here
         playerHealth = GetComponent<PlayerHealth>();
-        playerHealth.damageTakenModifier = .6f;
+        playerInfo.ChangeDefenseModifier("TotemDefenseBonus", .6f);
         invulnerabilityDuration = 5;
         abilityCooldown = 5.1f;
         
@@ -28,7 +28,6 @@ public class DefenseTotem : TotemBase
         if(currentRoutine!=null)
         {
             StopCoroutine(currentRoutine);
-            GetComponent<CharacterInputController>().totemRunSpeedBonus =0;
         }
         StartCoroutine(ActivateCooldown());
         currentRoutine = StartCoroutine(InvulnerabilityRoutine());
@@ -37,7 +36,7 @@ public class DefenseTotem : TotemBase
 
     public override void SelfDestruct()
     {
-        playerHealth.damageTakenModifier = 1f;
+        playerInfo.ChangeDefenseModifier("TotemDefenseBonus", 1);
         if(currentRoutine!=null)
         {
             StopCoroutine(currentRoutine);

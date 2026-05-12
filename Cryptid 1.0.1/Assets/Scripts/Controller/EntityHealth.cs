@@ -9,7 +9,7 @@ public class EntityHealth : MonoBehaviour, IDamageable
     public UnityEvent damageEvent, deathEvent;
     public bool invulnerable;
 
-    private void Awake()
+    protected virtual void Awake()
     {
         entityCurrentHealth = maxHealth;
         invulnerable = false;

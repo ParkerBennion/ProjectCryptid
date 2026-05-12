@@ -26,11 +26,13 @@ public class AttackTotem :TotemBase
         chargeUsesRemaining = 3;
         canUseAbility = true;//end here
         animator = playerCharacter.GetComponent<CharacterInputController>().animator;
+        playerInfo.ChangeAttackModifier("TotemAttackBonus", multiplier);// this replaces the code below, but needs testing
+        /*
         if (TryGetComponent(out PlayerAttack atk))
         {
             placeholderFloat = atk.damageMultiplier;
             atk.damageMultiplier *= multiplier;
-        }
+        }*/
         abilityCooldown = 1.5f;
         
     }

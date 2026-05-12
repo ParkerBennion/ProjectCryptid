@@ -5,7 +5,7 @@ using Random = UnityEngine.Random;
 
 public class MothmanManager : MonoBehaviour
 {
-    [SerializeField] private float aggroMax, aggroCurrent, depletionFrequency, depletionAmt, idleTimeBeforeSnatch;
+    [SerializeField] private float aggroMax, aggroCurrent, depletionFrequency, depletionAmt, huntingDepletion, idleTimeBeforeSnatch;
     [SerializeField] private PlayerInfoSO playerInfo;
     [SerializeField] private GameObject player;
     private Coroutine _depletionRoutine;
@@ -129,11 +129,11 @@ public class MothmanManager : MonoBehaviour
             playerCurrentLocation = player.transform.position;
             isIdle = Vector3.Distance(playerPastLocation, playerCurrentLocation) < .1f;
             if (playerInfo.GetTorchStatus()&&isIdle)
-                currentSearchProgress += depletionAmt*2;
+                currentSearchProgress += huntingDepletion*2;
             else if (playerInfo.GetTorchStatus()||isIdle)
-                currentSearchProgress += depletionAmt;
+                currentSearchProgress += huntingDepletion;
             else
-                currentSearchProgress -= depletionAmt;
+                currentSearchProgress -= huntingDepletion;
             updateAggressionStatus.RaiseAction(currentSearchProgress/maximumSearchProgress);//tells the UI how close mothman is to finding Caleb
             if (currentSearchProgress >= maximumSearchProgress)//if Mothman has found Caleb
             {

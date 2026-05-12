@@ -7,7 +7,7 @@ using Random = UnityEngine.Random;
 
 public class CryptidPopulator : MonoBehaviour
 {
-    public int difficultyLevel;
+    [SerializeField] private CryptidSpawnerData cryptidSpawnerData;
     [SerializeField] private GameObject[] cryptidList;
     [SerializeField] private List<CryptidManager> activeCryptids;
     [SerializeField] private GameObject playerCharacter;
@@ -16,8 +16,8 @@ public class CryptidPopulator : MonoBehaviour
     private Vector2 spawnLocationCached;
     private Coroutine currentRoutine;
     private bool wranglePaused;
-    [SerializeField] private int maximumCryptids;
-    private WaitForSeconds wfs, teleportBuffer;
+    [SerializeField] private int maximumCryptids, startingCryptids, cryptidPeriodicIncreaseAmount;
+    private WaitForSeconds wfsWrangle, teleportBuffer;
     private WaitUntil _waitIfPaused;
     [SerializeField][Range(10,180)] private float frontalConeSize;
 
@@ -29,19 +29,28 @@ public class CryptidPopulator : MonoBehaviour
 
     private void Awake()
     {
-        wfs = new WaitForSeconds(wrangleFrequency);
+        wfsWrangle = new WaitForSeconds(wrangleFrequency);
         _waitIfPaused = new WaitUntil(()=>!wranglePaused);
         teleportBuffer = new WaitForSeconds(2);
     }
 
+    private void Initialize()
+    {
+        startingCryptids = cryptidSpawnerData.startingPopulation;
+        maximumCryptids = startingCryptids;
+        cryptidPeriodicIncreaseAmount = cryptidSpawnerData.populationIncreaseAmount;
+    }
+
     private void Start()
     {
+        Initialize();
         currentRoutine = StartCoroutine(WrangleCryptidsRoutine());
+        StartCoroutine(DifficultyIncreaseRoutine());
     }
 
     public void SpawnInitialCryptids()
     {
-        SpawnRandomCryptids(maximumCryptids);
+        SpawnRandomCryptids(startingCryptids);
     }
     
     /// <summary>
@@ -94,10 +103,13 @@ public class CryptidPopulator : MonoBehaviour
 
     private IEnumerator WrangleCryptidsRoutine()
     {
+        SpawnInitialCryptids();
+        yield return new WaitForSeconds(1);// buffer to let cryptids spawn
         wranglePaused = false;
         bool isRunning = true;
         while (isRunning) 
         {
+            yield return _waitIfPaused;
             //print("Wrangling cryptids");
             foreach (CryptidManager cryptid in activeCryptids)
             {
@@ -107,7 +119,7 @@ public class CryptidPopulator : MonoBehaviour
                     cryptid.MoveToLocation(FindSpawnInFrontOfPlayer());
                 }
             }
-            yield return wfs;
+            yield return wfsWrangle;
             yield return _waitIfPaused;
             yield return teleportBuffer;
         }
@@ -133,19 +145,23 @@ public class CryptidPopulator : MonoBehaviour
 
     private IEnumerator DifficultyIncreaseRoutine()//increases cryptid population over time
     {
-        difficultyLevel = 0;
-        WaitForSeconds wfs = new WaitForSeconds(30);
-
+        WaitForSeconds wfsSpawner = new WaitForSeconds(cryptidSpawnerData.populationIncreaseIntervalSeconds);
         while (true)
         {
-            yield return wfs;
-            difficultyLevel++;
-            SetCryptidPopulation(maximumCryptids+2);
+            yield return wfsSpawner;
+            yield return _waitIfPaused;
+            yield return teleportBuffer;
+            SetCryptidPopulation(maximumCryptids+cryptidPeriodicIncreaseAmount);
         }
     }
     // create a system that checks periodically if cryptids are out of range and relocate them
     public void SetWranglePaused(bool isPaused)
     {
         wranglePaused = isPaused;
+    }
+
+    public void PauseSystems()
+    {
+        
     }
 }

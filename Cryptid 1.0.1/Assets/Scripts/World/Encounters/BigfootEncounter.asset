@@ -23,7 +23,7 @@ MonoBehaviour:
   bigfootPrefab: {fileID: 8606908327453654627, guid: 35e327d1be696144dba7eb958433746a, type: 3}
   bigfootInstance: {fileID: 0}
   detectionRange: 7
-  despawnRange: 12
+  despawnRange: 20
   detectedEvent:
     m_PersistentCalls:
       m_Calls: []

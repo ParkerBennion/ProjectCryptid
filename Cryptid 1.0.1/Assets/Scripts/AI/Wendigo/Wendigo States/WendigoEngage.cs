@@ -21,7 +21,7 @@ public class WendigoEngage : State
         manager = stateMachine.GetComponent<WendigoManager>();
     }
     public override void LogicUpdate()
-    {
+    {print(navAgent.isStopped);
         distanceFromTarget = Vector3.Distance(manager.transform.position, playerTarget.transform.position);
         if (distanceFromTarget <= currentEngageDistance)//if close enough to attack
         {

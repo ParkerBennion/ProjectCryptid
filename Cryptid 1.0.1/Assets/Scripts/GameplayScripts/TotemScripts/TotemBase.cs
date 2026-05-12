@@ -9,6 +9,7 @@ public abstract class TotemBase : MonoBehaviour
     [SerializeField] protected float abilityCooldown;
     [SerializeField] protected bool canUseAbility;
     [SerializeField] protected int chargeUsesTotal, chargeUsesRemaining;
+    [SerializeField] protected PlayerInfoSO playerInfo;
     //[SerializeField] public CharacterController characterAnimator;
 
     protected virtual void Awake()

@@ -30,7 +30,6 @@ public class LevelBuilderManager : MonoBehaviour
     {
         activeCells.Add(startingCell);
         startingCell.PopulateEmptyCells();
-        cryptidPopulator.SpawnInitialCryptids();
         //RebuildNavmesh();
     }
 

@@ -18,11 +18,15 @@ public class PlayerAttack : MonoBehaviour
     private LayerMask validLayerList;
     [SerializeField] private GameActionFloat aggroGenerator;
 
+    [SerializeField] private PlayerInfoSO  playerInfo;
+    [SerializeField] private float knockBack;
+
     private void Awake()
     {
         attackOffset = new Vector3(0, 0, 0.5f);
         validLayerList = LayerMask.GetMask(validLayers);
         damageMultiplier = 1;
+        playerInfo.attackChange += UpdateDamageModifier;
     }
 /// <summary>
 /// perform a light attack in front of the player in a sphere area
@@ -40,7 +44,7 @@ public class PlayerAttack : MonoBehaviour
            if (thisCol.TryGetComponent(out IDamageable target))
            {
                target.DealDamage(lightDamage * damageMultiplier);
-               aggroGenerator.RaiseAction(4);
+               aggroGenerator.RaiseAction(2);
            }
         }
     }
@@ -60,19 +64,31 @@ public class PlayerAttack : MonoBehaviour
                 if (isPerfectAttack)
                     target.DealDamage(heavyDamage * 1.5f * damageMultiplier);
                 else target.DealDamage(heavyDamage * damageMultiplier);
-                aggroGenerator.RaiseAction(15);
+                aggroGenerator.RaiseAction(10);
             }
         }
     }
-/// <summary>
-/// Trigger the vfx to display the hitbox areas of an attack
-/// </summary>
-/// <param name="radius"></param>
-/// <param name="center"></param>
-   /* private void DisplayHitBox(float radius, Vector3 center)
+
+    /// <summary>
+    /// Trigger the vfx to display the hitbox areas of an attack
+    /// </summary>
+    /// <param name="radius"></param>
+    /// <param name="center"></param>
+    /// <param name="val"></param>
+    /* private void DisplayHitBox(float radius, Vector3 center)
+     {
+         visualizeHitbox.SetVector3("SpawnPosition", center);
+         visualizeHitbox.SetFloat("Radius", radius);
+         visualizeHitbox.Play();
+     }*/
+
+    public void UpdateDamageModifier(float val)
     {
-        visualizeHitbox.SetVector3("SpawnPosition", center);
-        visualizeHitbox.SetFloat("Radius", radius);
-        visualizeHitbox.Play();
-    }*/
+        damageMultiplier = val;
+    }
+
+    private void OnDestroy()
+    {
+        playerInfo.attackChange-= UpdateDamageModifier;
+    }
 }

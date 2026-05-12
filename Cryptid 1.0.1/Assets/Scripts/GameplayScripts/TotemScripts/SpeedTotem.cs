@@ -8,6 +8,7 @@ public class SpeedTotem : TotemBase
     private Animator characterAnimator;
     private WaitForSeconds totemDuration;
     private Coroutine abilityRoutine;
+    private CharacterInputController charController;
     public override void Initialize()
     {
         base.Initialize();
@@ -15,6 +16,7 @@ public class SpeedTotem : TotemBase
         chargeUsesRemaining = chargeUsesTotal;
         canUseAbility = true;//end here
         totemDuration = new WaitForSeconds(totemActiveDuration);
+        charController = GetComponent<CharacterInputController>();
         characterAnimator = GetComponent<CharacterInputController>().animator;
         characterAnimator.SetFloat("AttackSpeed", 2f);
         abilityCooldown = 3.1f;
@@ -28,7 +30,7 @@ public class SpeedTotem : TotemBase
         if(abilityRoutine!=null)
         {
             StopCoroutine(abilityRoutine);
-            GetComponent<CharacterInputController>().totemRunSpeedBonus =0;
+            playerInfo.ChangeSpeedModifier("TotemSpeedBonus", 1);
         }
         StartCoroutine(ActivateCooldown());
         abilityRoutine = StartCoroutine(ActiveBonusRoutine());
@@ -37,9 +39,9 @@ public class SpeedTotem : TotemBase
     
     private IEnumerator ActiveBonusRoutine()
     {
-        GetComponent<CharacterInputController>().totemRunSpeedBonus = runSpeedBonus;
+        playerInfo.ChangeSpeedModifier("TotemSpeedBonus", runSpeedBonus);
         yield return totemDuration;
-        GetComponent<CharacterInputController>().totemRunSpeedBonus =0;
+        playerInfo.ChangeSpeedModifier("TotemSpeedBonus", 1);
         if(chargeUsesRemaining<=0)
             SelfDestruct();
     }
@@ -49,7 +51,7 @@ public class SpeedTotem : TotemBase
         if(abilityRoutine!=null)
         {
             StopCoroutine(abilityRoutine);
-            GetComponent<CharacterInputController>().totemRunSpeedBonus =0;
+            playerInfo.ChangeSpeedModifier("TotemSpeedBonus", 1);;
         }
         characterAnimator.SetFloat("AttackSpeed",1f);
         base.SelfDestruct();

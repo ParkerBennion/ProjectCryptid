@@ -13,7 +13,6 @@ public class SimpleTextUpdater : MonoBehaviour
 
     public void updateText(string text)
     {
-        print("Text has been updated");
         textMP.text = text;
     }
 }

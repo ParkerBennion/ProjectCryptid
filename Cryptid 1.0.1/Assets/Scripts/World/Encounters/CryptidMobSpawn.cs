@@ -21,7 +21,8 @@ public class CryptidMobSpawn : MonoBehaviour
 
     public void CheckRemainingCryptids()
     {
-        StartCoroutine(delayedCheckRemainingCryptids());
+        if(gameObject.activeSelf)
+            StartCoroutine(delayedCheckRemainingCryptids());
     }
 
     private IEnumerator delayedCheckRemainingCryptids()

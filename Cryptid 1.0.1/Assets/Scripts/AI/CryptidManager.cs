@@ -3,8 +3,11 @@ using System.Collections;
 using UnityEngine;
 
 using UnityEngine.AI;
+using Random = UnityEngine.Random;
+
 public abstract class CryptidManager : MonoBehaviour
 {
+    public GameObject playerTarget;
     private static readonly int Alpha = Shader.PropertyToID("_Alpha");
     [SerializeField] private CryptidDeathCall deathCall;
     [SerializeField] private GameAction disengageAction;
@@ -27,6 +30,10 @@ public abstract class CryptidManager : MonoBehaviour
         disengageAction.raise += Disengage;
     }
 
+    protected virtual void Start()
+    {
+        gameObject.transform.eulerAngles = Vector3.up * Random.Range(0, 359);
+    }
     public abstract void Disengage();
 
     public abstract void Despawn();
@@ -41,6 +48,7 @@ public abstract class CryptidManager : MonoBehaviour
 
     public void MoveToLocation(Vector3 newLocation)
     {
+        if (!navAgent.isOnNavMesh) return;
         navAgent.isStopped = true;
         if (NavMesh.SamplePosition(newLocation, out NavMeshHit hit, 20f, NavMesh.AllAreas))
         {
@@ -65,7 +73,10 @@ public abstract class CryptidManager : MonoBehaviour
             StartCoroutine(StunCooldown());
         }
     }
-    
+    public void SetTarget(GameObject obj)
+    {
+        playerTarget = obj.gameObject;
+    }
     private IEnumerator DamageFlashRoutine()
     {
         float elapsedTime = 0;
@@ -88,5 +99,26 @@ public abstract class CryptidManager : MonoBehaviour
     private void OnDestroy()
     {
         disengageAction.raise -= Disengage;
+    }
+
+    public void KnockBack()
+    {
+        if (playerTarget)
+        {
+            StartCoroutine(KnockBackRoutine(transform.position+
+                                            ((transform.position - playerTarget.transform.position).normalized*.75f)));
+        }
+    }
+
+    private IEnumerator KnockBackRoutine(Vector3 destination)
+    {
+        Vector3 startPosition = transform.position;
+        float elapsedTime = 0;
+        while (elapsedTime < .2f)
+        {
+            transform.position = Vector3.Lerp(startPosition,destination,elapsedTime/.2f);
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
     }
 }

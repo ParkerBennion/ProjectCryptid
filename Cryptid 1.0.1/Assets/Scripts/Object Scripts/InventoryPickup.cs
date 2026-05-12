@@ -33,7 +33,7 @@ public class InventoryPickup : MonoBehaviour
     // Item ID is based on the UI prefab name (not this pickup object's name)
     private string ItemID => uiButtonPrefab != null ? uiButtonPrefab.name : string.Empty;
 
-    public virtual void Pickup()
+    public void Pickup()
     {
         if (inventory == null)
         {
@@ -66,17 +66,13 @@ public class InventoryPickup : MonoBehaviour
         }
         pickupEvent?.Invoke();// event implementation - Nate
         inventory.AddItem(ItemID, amountToAdd);
-        OnPickupSuccess();
 
         if (logToConsole)
             Debug.Log($"{name}: Picked up '{ItemID}' (+{amountToAdd}). New amount={inventory.GetAmount(ItemID)}", this);
 
         if (destroyOnPickup)
             Destroy(gameObject);
-        
     }
-    
-    protected virtual void OnPickupSuccess() { }
 
     private void OnTriggerEnter(Collider other)
     {

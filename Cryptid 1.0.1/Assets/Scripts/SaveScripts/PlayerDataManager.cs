@@ -66,7 +66,11 @@ public class PlayerDataManager : MonoBehaviour
 
     public void LoadData()
     {
-        if (playerData == null) return;
+        if (playerData == null)
+        {
+            Debug.LogError("No Player Data Found");
+            return;
+        }
         if (File.Exists(playerFilePath))
         {
             string json = File.ReadAllText(playerFilePath);

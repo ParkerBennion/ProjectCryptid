@@ -27,8 +27,10 @@ public class CharacterInputController : MonoBehaviour
     private float chargeMovementMultiplier;
 
     public float activePlayerRunSpeed, runDirection; // 1 for forward, -1 for reverse
-    [FormerlySerializedAs("totemRunSpeed")] public float totemRunSpeedBonus;
+    private float playerVelocity;
 
+    [SerializeField] private GameObject sprintCamera;
+    [SerializeField] private bool isSprinting;
     private Coroutine chargingAttack;
     private bool perfectAttack;
     public bool canAttack;
@@ -49,6 +51,8 @@ public class CharacterInputController : MonoBehaviour
     {
         if(enableControlsOnStart) EnableControls();
     }
+
+
     private void Awake()
     {
         playerInfo.speedChange += UpdateSpeed;
@@ -79,10 +83,7 @@ public class CharacterInputController : MonoBehaviour
         
         inputs.PlayerMobile.Move.performed += ctx => moveAxis = ctx.ReadValue<Vector2>();
         inputs.PlayerMobile.Move.canceled += ctx => moveAxis = Vector2.zero;
-
-        totemRunSpeedBonus = 0;
         
-        playerInfo.ResetSpeed();
         
         //getTotem
         if (TryGetComponent<TotemBase>(out TotemBase totem))
@@ -95,6 +96,8 @@ public class CharacterInputController : MonoBehaviour
 
     private void Start()
     {
+        playerInfo.ResetStats();
+        isSprinting = false;
     }
 
     /// <summary>
@@ -105,10 +108,24 @@ public class CharacterInputController : MonoBehaviour
         moveVector.x = moveAxis.x*runDirection; //Assigns the input values to a Vector3D
         moveVector.y = 0;
         moveVector.z = moveAxis.y*runDirection;
-        transform.Translate(moveVector * ((totemRunSpeedBonus+activePlayerRunSpeed) * Time.deltaTime), Space.World);
+        transform.Translate(moveVector * (activePlayerRunSpeed * Time.deltaTime), Space.World);
         if (moveAxis!=Vector2.zero)//Updates the players rotation if they are moving, and does nothing if the player is not moving
             transform.rotation = Quaternion.LookRotation(moveVector);
-        animator.SetFloat(animSpeed, moveVector.magnitude*activePlayerRunSpeed);
+        playerVelocity = moveVector.magnitude * activePlayerRunSpeed;
+        animator.SetFloat(animSpeed, playerVelocity);
+        if(sprintCamera)
+        {
+            if (playerVelocity >= 5.5 && !isSprinting)
+            {
+                sprintCamera.SetActive(true);
+                isSprinting = true;
+            }
+            else if (playerVelocity < 5.5 && isSprinting)
+            {
+                sprintCamera.SetActive(false);
+                isSprinting = false;
+            }
+        }
     }
     
     private void StartAttackCallback(InputAction.CallbackContext ctx)
@@ -205,7 +222,7 @@ public void DisableControls()
         activelyCharging = false;
         heavyChargingFX.Stop();
         heavyChargedFX.Stop();
-        playerInfo.ResetSpeed();
+        playerInfo.ChangeSpeedModifier("HeavyChargeSpeedPenalty", 1);
     }
     
 /// <summary>
@@ -220,7 +237,7 @@ public void DisableControls()
         activelyCharging = true;
         heavyChargingFX.Play();
         animator.SetBool("HeavyCharging", true);
-        playerInfo.SetSpeed(activePlayerRunSpeed *= chargeMovementMultiplier);
+        playerInfo.ChangeSpeedModifier("HeavyChargeSpeedPenalty", .5f);
         yield return chargeTimeWFS;
         //print("Heavy attack is Charged");
         StartCoroutine(PerfectHeavyAttackFrame());
@@ -298,6 +315,9 @@ public void DisableControls()
     {
         activePlayerRunSpeed = speedVar;
         runDirection = directionVar;
+        if(activePlayerRunSpeed>=playerInfo.playerSpeedDefault)
+            animator.SetFloat("RunSpeed", activePlayerRunSpeed/playerInfo.playerSpeedDefault);
+        else animator.SetFloat("RunSpeed", 1);
     }
 
 }

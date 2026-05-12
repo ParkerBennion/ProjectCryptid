@@ -12,7 +12,7 @@ public class Tile : MonoBehaviour
     public NavMeshSurface navMesh;
     [SerializeField] private GameObject assetsPrefab, assetsObj;
     [SerializeField] private bool overrideRotation;
-    [SerializeField] private IntData WaystoneData;
+    [SerializeField] private CompassWayfinderManagerSO WaystoneData;
     [SerializeField] private Texture2D overrideTexture;
     [SerializeField] private GameObject[] overrideAssets;
     [SerializeField] private AssignTileMapMask maskAssigner;
@@ -23,22 +23,30 @@ public class Tile : MonoBehaviour
 
     public void SpawnAssets()
     {
-        if (WaystoneData.value >= 10) //if a tile is a forced Spawn
-        {
-            assetsPrefab = overrideAssets[10 - WaystoneData.value];
-            maskAssigner.AssignPathMask(overrideTexture);
-            WaystoneData.value = 0;
-            transform.Rotate(transform.eulerAngles*-1);
-        }
         if(assetsObj != null)
         {
             assetsObj.SetActive(true);
             return;
         }
-        assetsObj = Instantiate(assetsPrefab,
-            gameObject.transform.position,
-            transform.rotation,
-            transform);
+        if (WaystoneData.value >= 10&&!WaystoneData.objectIsSpawned) //if a tile is a forced Spawn
+        {
+            assetsPrefab = overrideAssets[10 - WaystoneData.value];
+            maskAssigner.AssignPathMask(overrideTexture);
+            transform.Rotate(transform.eulerAngles*-1);
+            assetsObj = Instantiate(assetsPrefab,
+                gameObject.transform.position,
+                transform.rotation,
+                transform);
+            WaystoneData.AssignNewTarget(assetsObj); 
+            WaystoneData.objectIsSpawned = true;
+        }
+        else
+        {
+            assetsObj = Instantiate(assetsPrefab,
+                gameObject.transform.position,
+                transform.rotation,
+                transform);
+        }
     }
 
     public void DespawnAssets()
