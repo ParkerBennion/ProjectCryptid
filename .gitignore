@@ -91,3 +91,5 @@ Cryptid 1.0.1/Assets/Houdini Starter/HDA/backup.meta
 # If the source bank files are kept outside of the StreamingAssets folder then these can be ignored.
 # Log files can be ignored.
 fmod_editor.log
+Cryptid 1.0.1/Assets/Scenes/Tool Scenes/SlidePuzzle/GarbagTile.png
+Cryptid 1.0.1/Assets/Scenes/Tool Scenes/SlidePuzzle/DumpsterFront.png
