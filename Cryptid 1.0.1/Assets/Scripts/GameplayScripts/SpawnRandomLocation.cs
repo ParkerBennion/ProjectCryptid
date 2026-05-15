@@ -9,7 +9,7 @@ public class SpawnRandomLocation : SpawnRandomItem
     public override void SpawnItemFromList()
     {
         int itemIndex;
-        if (forceSpawnSO.GetValue() != 0 && !forceSpawnSO.objectIsSpawned)
+        if (forceSpawnSO.GetValue() != 0 && forceSpawnSO.GetValue()<10 && !forceSpawnSO.objectIsSpawned)
         {
             itemIndex = forceSpawnSO.GetValue()-1;
             forceSpawnSO.AssignNewTarget(Instantiate(spawnList[itemIndex], transform.position, Quaternion.identity,
