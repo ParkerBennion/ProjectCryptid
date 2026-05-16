@@ -57,7 +57,17 @@ public class RangerQuestDialogueSO : QuestDialogueKeeperSO
             }
             
         };
-
+    public override string[][] NessieQuestDialogues { get; protected set; } =
+    {
+        new string[] {"NessieDialogueStep 1"},
+        new string[] {"NessieDialogueStep 2"},
+        new string[] {"NessieDialogueStep 3"},
+        new string[] {"NessieDialogueStep 4"},
+        new string[] {"NessieDialogueStep 5"},
+        new string[] {"NessieDialogueStep 6"},
+        new string[] {"NessieDialogueStep 7"},
+        new string[] {"NessieDialogueStep 8"}
+    };
     
     
 
