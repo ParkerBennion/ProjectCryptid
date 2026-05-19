@@ -4,10 +4,10 @@ using UnityEngine;
 public abstract class QuestDialogueKeeperSO : ScriptableObject
 {
     
-    [SerializeField] protected IntData bigfootQuestStage, nessieQuestStage, thunderbirdQuestStage;
+    [SerializeField] protected IntData bigfootQuestStage, nessieQuestStage, skinwalkerQuestStage;
     public virtual string[][] BigfootQuestDialogues { get; protected set; }
     public virtual string[][] NessieQuestDialogues { get; protected set; }
-    public virtual string[][] ThunderbirdQuestDialogues { get; protected set; }
+    public virtual string[][] SkinwalkerQuestDialogues { get; protected set; }
     private void LoadQuestData()
     {
         //update this SO with data from the save file, set the active quest stage
@@ -39,13 +39,13 @@ public abstract class QuestDialogueKeeperSO : ScriptableObject
                 }
                 return NessieQuestDialogues[nessieQuestStage.value-1];
             case 3:
-                if(thunderbirdQuestStage.value>ThunderbirdQuestDialogues.Length)
+                if(skinwalkerQuestStage.value>SkinwalkerQuestDialogues.Length)
                 {
                     Debug.LogError(
                         "Out of bounds error for getting stage dialogue out of thunderbird quest");
                     return null;
                 }
-                return ThunderbirdQuestDialogues[thunderbirdQuestStage.value-1];
+                return SkinwalkerQuestDialogues[skinwalkerQuestStage.value-1];
             default:
                 Debug.LogError("Dialogue SO Was given quest number " + questNumber + "which does not exist");
                 return null;
@@ -72,7 +72,7 @@ public abstract class QuestDialogueKeeperSO : ScriptableObject
             }
             case 3:
             {
-                thunderbirdQuestStage.ChangeValue(1);
+                skinwalkerQuestStage.ChangeValue(1);
                 break;
             }
             default:

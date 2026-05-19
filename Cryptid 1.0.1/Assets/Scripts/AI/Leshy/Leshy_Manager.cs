@@ -4,7 +4,6 @@ public class Leshy_Manager : CryptidManager
 {
     public State fleeState;
     public bool canCast, canSplit;
-    public GameObject playerTarget;
     private WaitForSeconds castCDWfs;
     [SerializeField] private SeekerProjectile leshyProjectilePrefab;
     [SerializeField] private float castCooldown, splitCooldown;
@@ -16,10 +15,6 @@ public class Leshy_Manager : CryptidManager
         castCDWfs = new WaitForSeconds(castCooldown);
     }
 
-    public void SetTarget(GameObject obj)
-    {
-        playerTarget = obj.gameObject;
-    }
     
     public override void Disengage()
     {

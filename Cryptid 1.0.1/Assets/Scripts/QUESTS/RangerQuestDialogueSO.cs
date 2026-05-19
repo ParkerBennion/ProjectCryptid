@@ -27,7 +27,7 @@ public class RangerQuestDialogueSO : QuestDialogueKeeperSO
             new string[] {//phase 4 defended the firetower
                 "Thanks for helping out with the local wildlife kid! Impressive for someone your size. They can be real nasty sometimes",
                 "Dan asked you to do WHAT now?",
-                "*Ellie rubs her temples*",
+                " ... ",
                 "Last time Dan was on his bigfoot pursuit he tried to hog tie a tourist with a rather long beard and drag him back to town!",
                 "Sometimes that man ain't got a lick of good common sense!!!",
                 "Tell you what darling, out of gratitude for helping me with those varmin, I'll help you out",
@@ -57,7 +57,17 @@ public class RangerQuestDialogueSO : QuestDialogueKeeperSO
             }
             
         };
-
+    public override string[][] NessieQuestDialogues { get; protected set; } =
+    {
+        new string[] {"NessieDialogueStep 1"},
+        new string[] {"NessieDialogueStep 2"},
+        new string[] {"NessieDialogueStep 3"},
+        new string[] {"NessieDialogueStep 4"},
+        new string[] {"NessieDialogueStep 5"},
+        new string[] {"NessieDialogueStep 6"},
+        new string[] {"NessieDialogueStep 7"},
+        new string[] {"NessieDialogueStep 8"}
+    };
     
     
 

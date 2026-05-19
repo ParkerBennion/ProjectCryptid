@@ -31,7 +31,6 @@ public class WendigoIdle : State
     {
         if(!canSeePlayer)
         {
-            navAgent.isStopped = true;
             animator.SetTrigger("Alerted");
         }
     }

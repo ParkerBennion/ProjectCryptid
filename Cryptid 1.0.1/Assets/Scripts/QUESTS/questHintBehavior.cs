@@ -14,6 +14,6 @@ public class QuestHintBehavior : MonoBehaviour
 
     private void OnEnable()
     {
-        textMP.text = "-"+questData.GetJournalHint();
+        textMP.text = questData.value>0 ? "-"+questData.GetJournalHint():"";
     }
 }

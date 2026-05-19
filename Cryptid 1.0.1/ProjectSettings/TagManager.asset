@@ -7,6 +7,7 @@ TagManager:
   - PlayerCharacter
   - DitherObject
   - HighlightObject
+  - Cryptid
   layers:
   - Default
   - TransparentFX

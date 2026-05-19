@@ -5,20 +5,22 @@ public class SpawnRandomLocation : SpawnRandomItem
 {
     [SerializeField] private GameObject[] signPosts;
     [SerializeField] private Material[] signPostMaterials;
-    [SerializeField] private IntData forceSpawnSO;
+    [SerializeField] private CompassWayfinderManagerSO forceSpawnSO;
     public override void SpawnItemFromList()
     {
         int itemIndex;
-        if (forceSpawnSO.GetValue() != 0)
+        if (forceSpawnSO.GetValue() != 0 && forceSpawnSO.GetValue()<10 && !forceSpawnSO.objectIsSpawned)
         {
             itemIndex = forceSpawnSO.GetValue()-1;
-            forceSpawnSO.SetValue(0);
+            forceSpawnSO.AssignNewTarget(Instantiate(spawnList[itemIndex], transform.position, Quaternion.identity,
+                this.transform.parent.parent));
         }
         else
         {
             itemIndex = Random.Range(0, spawnList.Length);
+            Instantiate(spawnList[itemIndex], transform.position, Quaternion.identity, this.transform.parent.parent);
         }
-        Instantiate(spawnList[itemIndex], transform.position, Quaternion.identity, this.transform.parent.parent);
+        
         if(itemIndex >=3)
         {
             foreach (GameObject signPost in signPosts)

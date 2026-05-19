@@ -208,11 +208,12 @@ MonoBehaviour:
   assetsPrefab: {fileID: 454012728277493350, guid: 896906d2636c99a45b7c30885cd10db2, type: 3}
   assetsObj: {fileID: 0}
   overrideRotation: 1
-  WaystoneData: {fileID: 11400000, guid: 35129030a446a504d843866b8c1075f7, type: 2}
+  WaystoneData: {fileID: 11400000, guid: 7e281d8fd230f704dafd056a0a7e9a10, type: 2}
   overrideTexture: {fileID: 2800000, guid: 57e381cb999743d47b7603ed0bcb7706, type: 3}
   overrideAssets:
   - {fileID: 454012728277493350, guid: 896906d2636c99a45b7c30885cd10db2, type: 3}
   maskAssigner: {fileID: 7049892042054446608}
+  compassCall: {fileID: 11400000, guid: 61d2919322a2cee4cb02cdca4f37697c, type: 2}
 --- !u!114 &1721792267630145328
 MonoBehaviour:
   m_ObjectHideFlags: 0

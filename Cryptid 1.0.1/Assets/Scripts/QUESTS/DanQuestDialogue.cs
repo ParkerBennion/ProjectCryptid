@@ -19,9 +19,7 @@ public class DanQuestDialogueSO : QuestDialogueKeeperSO
             "Howdy kid! M'name's Dan. Who might you be?",
             "Caleb eh? I'll remember that. I'm real good with names!",
             "So what brings you to this-here forest this time of night? Ye hunt'n the squatch as well?",
-            "My Journal! I haven't seen this thing in weeks!",
             "The look in yer eye tells me you want some answers... Tell ye what, I'll make ye a deal...",
-            "Ye can keep my journal, I've already made myself another one. However, I could use yer help",
             "Ye see, I'm on the hunt for ol' sasquatch himself! I know he's out here but nobody believes me... they call me crazy...",
             "My sister Ellie is a ranger in these-here woods, and I KNOW she's seen the squatch, but she won't help-tell me or nothin.",
             "Says I get dangerous ideas...but she hasn't met YOU yet! HA!",
@@ -87,5 +85,17 @@ public class DanQuestDialogueSO : QuestDialogueKeeperSO
         {
         "This quest step does not exist"
         }
+    };
+
+    public override string[][] NessieQuestDialogues { get; protected set; } =
+    {
+        new string[] {"NessieDialogueStep 1"},
+        new string[] {"NessieDialogueStep 2"},
+        new string[] {"NessieDialogueStep 3"},
+        new string[] {"NessieDialogueStep 4"},
+        new string[] {"NessieDialogueStep 5"},
+        new string[] {"NessieDialogueStep 6"},
+        new string[] {"NessieDialogueStep 7"},
+        new string[] {"NessieDialogueStep 8"}
     };
 };

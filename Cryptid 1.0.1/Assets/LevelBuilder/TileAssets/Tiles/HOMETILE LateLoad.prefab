@@ -109,7 +109,7 @@ MonoBehaviour:
   assetsPrefab: {fileID: 6180550436856700436, guid: b5c47efc7365e2f40a6e424f62a75883, type: 3}
   assetsObj: {fileID: 0}
   overrideRotation: 1
-  WaystoneData: {fileID: 11400000, guid: 35129030a446a504d843866b8c1075f7, type: 2}
+  WaystoneData: {fileID: 11400000, guid: 7e281d8fd230f704dafd056a0a7e9a10, type: 2}
   overrideTexture: {fileID: 0}
   overrideAssets: []
   maskAssigner: {fileID: 1067429991955628414}

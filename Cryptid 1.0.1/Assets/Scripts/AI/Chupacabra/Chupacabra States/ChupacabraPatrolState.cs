@@ -79,7 +79,7 @@ public class ChupacabraPatrolState : State
     {
         if(!canSeePlayer)
         {
-            navAgent.isStopped = true;
+            //navAgent.isStopped = true;
             animator.SetTrigger("Alerted");
         }
     }

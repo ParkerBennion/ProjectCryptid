@@ -10148,15 +10148,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: x25
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: d1be645135545894592129837cf2832d, type: 2}
-  m_sharedMaterial: {fileID: -7253066958536163819, guid: d1be645135545894592129837cf2832d, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 36f6699960e06164db4e78a52c35d8fa, type: 2}
+  m_sharedMaterial: {fileID: 3700202652204697479, guid: 36f6699960e06164db4e78a52c35d8fa, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4294948565
+  m_fontColor: {r: 0.83685076, g: 0.7122642, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -16350,6 +16350,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 5015129207292169225}
+        m_TargetAssemblyTypeName: PauseBehavior, Assembly-CSharp
+        m_MethodName: SetPause
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 4638963531036103192}
         m_TargetAssemblyTypeName: SceneManagement, Assembly-CSharp
         m_MethodName: LoadScene

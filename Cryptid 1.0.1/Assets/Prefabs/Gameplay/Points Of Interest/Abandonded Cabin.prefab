@@ -2185,6 +2185,7 @@ Transform:
   - {fileID: 1743036533801375156}
   - {fileID: 8218316359717260313}
   - {fileID: 41183469265401754}
+  - {fileID: 1398626579513757314}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &8857260855785270277
@@ -2365,6 +2366,7 @@ Transform:
   - {fileID: 7847220900594571846}
   - {fileID: 5641943862894544664}
   - {fileID: 6483339567015836440}
+  - {fileID: 7082656524948926169}
   m_Father: {fileID: 3709798645046417292}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &7541569366635657468
@@ -3816,6 +3818,37 @@ Transform:
   m_Children:
   - {fileID: 5187409795832980872}
   m_Father: {fileID: 3389516860411138453}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4892264896632646991
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1398626579513757314}
+  m_Layer: 0
+  m_Name: Code Projector
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1398626579513757314
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4892264896632646991}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -8.422764, y: -26.919346, z: -24.94895}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3709798645046417292}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4942489724012645031
 GameObject:
@@ -7213,6 +7246,80 @@ Transform:
   - {fileID: 96590600912505236}
   m_Father: {fileID: 873919979323169209}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &656963610413029277
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 3803443358336407114}
+    m_Modifications:
+    - target: {fileID: 3704155173443001123, guid: 26132d1fe017cab479fc5845f8457e40, type: 3}
+      propertyPath: m_Name
+      value: Blacklight Decal Projector
+      objectReference: {fileID: 0}
+    - target: {fileID: 7733989499774449988, guid: 26132d1fe017cab479fc5845f8457e40, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.5051177
+      objectReference: {fileID: 0}
+    - target: {fileID: 7733989499774449988, guid: 26132d1fe017cab479fc5845f8457e40, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.7774609
+      objectReference: {fileID: 0}
+    - target: {fileID: 7733989499774449988, guid: 26132d1fe017cab479fc5845f8457e40, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.977995
+      objectReference: {fileID: 0}
+    - target: {fileID: 7733989499774449988, guid: 26132d1fe017cab479fc5845f8457e40, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.2600001
+      objectReference: {fileID: 0}
+    - target: {fileID: 7733989499774449988, guid: 26132d1fe017cab479fc5845f8457e40, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.3599908
+      objectReference: {fileID: 0}
+    - target: {fileID: 7733989499774449988, guid: 26132d1fe017cab479fc5845f8457e40, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 2.8599997
+      objectReference: {fileID: 0}
+    - target: {fileID: 7733989499774449988, guid: 26132d1fe017cab479fc5845f8457e40, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.69511837
+      objectReference: {fileID: 0}
+    - target: {fileID: 7733989499774449988, guid: 26132d1fe017cab479fc5845f8457e40, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.69511837
+      objectReference: {fileID: 0}
+    - target: {fileID: 7733989499774449988, guid: 26132d1fe017cab479fc5845f8457e40, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.12965517
+      objectReference: {fileID: 0}
+    - target: {fileID: 7733989499774449988, guid: 26132d1fe017cab479fc5845f8457e40, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.12965517
+      objectReference: {fileID: 0}
+    - target: {fileID: 7733989499774449988, guid: 26132d1fe017cab479fc5845f8457e40, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 7733989499774449988, guid: 26132d1fe017cab479fc5845f8457e40, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7733989499774449988, guid: 26132d1fe017cab479fc5845f8457e40, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 21.131
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 26132d1fe017cab479fc5845f8457e40, type: 3}
+--- !u!4 &7082656524948926169 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7733989499774449988, guid: 26132d1fe017cab479fc5845f8457e40, type: 3}
+  m_PrefabInstance: {fileID: 656963610413029277}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &963864913503430716
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7377,6 +7484,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3709798645046417292}
     m_Modifications:
+    - target: {fileID: 5831335025533821109, guid: 56370d83821c0f7499597ee3924cf296, type: 3}
+      propertyPath: 'correctValues.Array.data[0]'
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5831335025533821109, guid: 56370d83821c0f7499597ee3924cf296, type: 3}
+      propertyPath: 'correctValues.Array.data[1]'
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5831335025533821109, guid: 56370d83821c0f7499597ee3924cf296, type: 3}
+      propertyPath: 'correctValues.Array.data[3]'
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 6068878121761427885, guid: 56370d83821c0f7499597ee3924cf296, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.6106057

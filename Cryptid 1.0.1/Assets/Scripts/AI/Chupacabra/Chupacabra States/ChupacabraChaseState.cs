@@ -39,6 +39,7 @@ public class ChupacabraChaseState : State
         navAgent.enabled = true;
         navAgent.isStopped = false;
         navAgent.speed = 6;
+        animator.Play("ChupaIdleChase");
     }
 
     public override void OnExitState()
