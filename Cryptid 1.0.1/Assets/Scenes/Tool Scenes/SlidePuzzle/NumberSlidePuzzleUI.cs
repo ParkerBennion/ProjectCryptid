@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
@@ -25,9 +26,23 @@ public class NumberSlidePuzzleUI : MonoBehaviour
 
     [Header("Events")]
     [SerializeField] private UnityEvent onPuzzleSolved;
+    
+    [Header("Animation")]
+    [SerializeField] private bool animateTiles = true;
+    [SerializeField] private float slideDuration = 0.15f;
+    
+    [Header("Move Hint")]
+    [SerializeField] private bool highlightMovableTiles = true;
+    [SerializeField] private float movableTileScale = 1.08f;
+    [SerializeField] private float normalTileScale = 1f;
+    
+    private readonly List<GameObject> usedHiddenButtonPrefabs = new();
+    
+    [SerializeField] private RectTransform animationLayer;
 
     private int emptyIndex;
     private bool isSolved;
+    private bool isAnimating;
 
     private readonly List<Transform> slots = new();
     private readonly List<TileData> tiles = new();
@@ -109,11 +124,12 @@ public class NumberSlidePuzzleUI : MonoBehaviour
 
             tiles.Add(tile);
         }
+        UpdateMovableTileHighlights();
     }
 
     private void TryMoveTile(TileData tile)
     {
-        if (isSolved)
+        if (isSolved || isAnimating)
             return;
 
         if (!IsAdjacent(tile.slotIndex, emptyIndex))
@@ -128,20 +144,7 @@ public class NumberSlidePuzzleUI : MonoBehaviour
             onPuzzleSolved?.Invoke();
         }
     }
-
-    private void MoveTileToEmptySlot(TileData tile)
-    {
-        int oldSlot = tile.slotIndex;
-
-        tile.slotIndex = emptyIndex;
-        emptyIndex = oldSlot;
-
-        tile.obj.transform.SetParent(slots[tile.slotIndex]);
-        tile.obj.transform.SetAsLastSibling();
-
-        StretchToParent(tile.obj.GetComponent<RectTransform>());
-    }
-
+    
     private bool IsAdjacent(int a, int b)
     {
         int ax = a % gridSize;
@@ -151,6 +154,61 @@ public class NumberSlidePuzzleUI : MonoBehaviour
         int by = b / gridSize;
 
         return Mathf.Abs(ax - bx) + Mathf.Abs(ay - by) == 1;
+    }
+
+    private void MoveTileToEmptySlot(TileData tile)
+    {
+        int oldSlot = tile.slotIndex;
+        int newSlot = emptyIndex;
+
+        tile.slotIndex = newSlot;
+        emptyIndex = oldSlot;
+
+        if (animateTiles)
+        {
+            StartCoroutine(AnimateTileMove(tile, newSlot));
+        }
+        else
+        {
+            tile.obj.transform.SetParent(slots[newSlot]);
+            tile.obj.transform.SetAsLastSibling();
+            StretchToParent(tile.obj.GetComponent<RectTransform>());
+        }
+    }
+    
+    private IEnumerator AnimateTileMove(TileData tile, int newSlot)
+    {
+        isAnimating = true;
+
+        RectTransform tileRect = tile.obj.GetComponent<RectTransform>();
+
+        Vector3 startWorldPos = tileRect.position;
+        Vector3 endWorldPos = slots[newSlot].position;
+
+        tile.obj.transform.SetParent(animationLayer, true);
+        tile.obj.transform.SetAsLastSibling();
+
+        float timer = 0f;
+
+        while (timer < slideDuration)
+        {
+            timer += Time.unscaledDeltaTime;
+
+            float t = timer / slideDuration;
+            t = Mathf.SmoothStep(0f, 1f, t);
+
+            tileRect.position = Vector3.Lerp(startWorldPos, endWorldPos, t);
+
+            yield return null;
+        }
+
+        tile.obj.transform.SetParent(slots[newSlot], false);
+        tile.obj.transform.SetAsLastSibling();
+
+        StretchToParent(tileRect);
+
+        isAnimating = false;
+        UpdateMovableTileHighlights();
     }
 
     private bool IsSolved()
@@ -223,12 +281,43 @@ public class NumberSlidePuzzleUI : MonoBehaviour
         if (hiddenButtonPrefabs == null || hiddenButtonPrefabs.Length == 0)
             return;
 
-        GameObject prefab = hiddenButtonPrefabs[Random.Range(0, hiddenButtonPrefabs.Length)];
+        List<GameObject> availablePrefabs = new();
 
-        GameObject hiddenButton = Instantiate(prefab, slot);
+        foreach (GameObject prefab in hiddenButtonPrefabs)
+        {
+            if (!usedHiddenButtonPrefabs.Contains(prefab))
+                availablePrefabs.Add(prefab);
+        }
+
+        if (availablePrefabs.Count == 0)
+            return;
+
+        GameObject prefabToSpawn = availablePrefabs[Random.Range(0, availablePrefabs.Count)];
+
+        usedHiddenButtonPrefabs.Add(prefabToSpawn);
+
+        GameObject hiddenButton = Instantiate(prefabToSpawn, slot);
         hiddenButton.transform.SetAsFirstSibling();
 
         StretchToParent(hiddenButton.GetComponent<RectTransform>());
+    }
+    private void UpdateMovableTileHighlights()
+    {
+        if (!highlightMovableTiles)
+            return;
+
+        foreach (TileData tile in tiles)
+        {
+            bool canMove = IsAdjacent(tile.slotIndex, emptyIndex);
+
+            RectTransform rect = tile.obj.GetComponent<RectTransform>();
+
+            if (rect != null)
+            {
+                float targetScale = canMove ? movableTileScale : normalTileScale;
+                rect.localScale = Vector3.one * targetScale;
+            }
+        }
     }
 
     private void StretchToParent(RectTransform rect)
@@ -240,6 +329,7 @@ public class NumberSlidePuzzleUI : MonoBehaviour
         rect.anchorMax = Vector2.one;
         rect.offsetMin = Vector2.zero;
         rect.offsetMax = Vector2.zero;
+        rect.localScale = Vector3.one;
     }
 
     public void ResetPuzzle()

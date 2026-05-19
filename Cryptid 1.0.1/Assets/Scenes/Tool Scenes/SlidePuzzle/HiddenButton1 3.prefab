@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2660738553697531758}
   - component: {fileID: 3726527656773741865}
   m_Layer: 5
-  m_Name: HiddenButton1
+  m_Name: HiddenButton1 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -67,7 +67,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: b5257d98883d44c4d8d76a152d88010f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2ac30d9074d46ba4c867bfb2a12808ba, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
