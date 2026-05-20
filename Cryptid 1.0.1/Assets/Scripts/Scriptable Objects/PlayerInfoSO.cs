@@ -22,6 +22,7 @@ public class PlayerInfoSO : ScriptableObject
     {
         {"BeadSpeedBonus", 1},
         {"HeavyChargeSpeedPenalty", 1},
+        {"SlowDebuff", 1},
         {"TotemSpeedBonus",1}
     };
     private Dictionary<string, float> _attackModifiers = new Dictionary<string, float>()
