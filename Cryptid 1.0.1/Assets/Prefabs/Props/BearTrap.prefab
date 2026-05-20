@@ -10427,6 +10427,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6751349ce6df1514a981fc2922a99ba2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  slowCall: {fileID: 11400000, guid: 846037c667c75e748a62ed8c14db6cce, type: 2}
   playerInfo: {fileID: 11400000, guid: 5d112b78f37dda646a93d2fd7ed1babe, type: 2}
   slowDuration: 3
   slowMultiplier: 0.5

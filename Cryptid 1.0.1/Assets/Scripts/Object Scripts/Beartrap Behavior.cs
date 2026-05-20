@@ -1,8 +1,10 @@
+using System;
 using System.Collections;
 using UnityEngine;
 
 public class BeartrapBehavior : MonoBehaviour
 {
+    [SerializeField] private GameActionBool slowCall;
     [SerializeField] private PlayerInfoSO playerInfo;
     [SerializeField] private float slowDuration, slowMultiplier;
     private Coroutine slowRoutine;
@@ -12,12 +14,12 @@ public class BeartrapBehavior : MonoBehaviour
         if (slowRoutine == null)
         {
             playerInfo.ChangeSpeedModifier("SlowDebuff", slowMultiplier);
+            slowCall.RaiseAction(true);
         }
         else
         {
             StopCoroutine(slowRoutine);
         }
-
         slowRoutine = StartCoroutine(SlowRoutine());
     }
 
@@ -25,5 +27,13 @@ public class BeartrapBehavior : MonoBehaviour
     {
         yield return new WaitForSeconds(slowDuration);
         playerInfo.ChangeSpeedModifier("SlowDebuff", 1);
+        slowCall.RaiseAction(false);
+    }
+
+    private void OnDestroy()
+    {
+        if (slowRoutine == null) return;
+        playerInfo.ChangeSpeedModifier("SlowDebuff", 1);
+        slowCall.RaiseAction(false);
     }
 }

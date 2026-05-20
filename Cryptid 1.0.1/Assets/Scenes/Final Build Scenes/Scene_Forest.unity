@@ -1949,6 +1949,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3610550373412233040, guid: d18d54bb3a9780a45999efa9a743e3da, type: 3}
+      propertyPath: unDetectEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3610550373412233040, guid: d18d54bb3a9780a45999efa9a743e3da, type: 3}
+      propertyPath: unDetectEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 11400000, guid: cc76be68eec906247b73f4c7edbd7dc5, type: 2}
+    - target: {fileID: 3610550373412233040, guid: d18d54bb3a9780a45999efa9a743e3da, type: 3}
+      propertyPath: unDetectEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RaiseAction
+      objectReference: {fileID: 0}
+    - target: {fileID: 3610550373412233040, guid: d18d54bb3a9780a45999efa9a743e3da, type: 3}
+      propertyPath: unDetectEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameAction, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3610550373412233040, guid: d18d54bb3a9780a45999efa9a743e3da, type: 3}
+      propertyPath: unDetectEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 3788230248666350780, guid: d18d54bb3a9780a45999efa9a743e3da, type: 3}
+      propertyPath: detectEvent.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_BoolArgument
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6631278285862504160, guid: d18d54bb3a9780a45999efa9a743e3da, type: 3}
       propertyPath: m_Name
       value: BearTrap
