@@ -8,6 +8,9 @@ public class MothManLightBehavior : MonoBehaviour
     [SerializeField] private float fadeTime;
     private Light _mainLight;
     private float _lightIntensity;
+
+    [SerializeField]
+    private float lightDimIntensity;
     private void Awake()
     {
         wff = new WaitForEndOfFrame();
@@ -25,7 +28,7 @@ public class MothManLightBehavior : MonoBehaviour
         float elapsedTime = 0;
         while (elapsedTime <= fadeTime)
         {
-            _mainLight.intensity = Mathf.Lerp(_lightIntensity, 0.1f, elapsedTime / fadeTime);
+            _mainLight.intensity = Mathf.Lerp(_lightIntensity, lightDimIntensity, elapsedTime / fadeTime);
             elapsedTime += Time.deltaTime;
             yield return wff;
         }
@@ -39,7 +42,7 @@ public class MothManLightBehavior : MonoBehaviour
         float elapsedTime = 0;
         while (elapsedTime <= fadeTime)
         {
-            _mainLight.intensity = Mathf.Lerp(0.1f, _lightIntensity, elapsedTime / fadeTime);
+            _mainLight.intensity = Mathf.Lerp(lightDimIntensity, _lightIntensity, elapsedTime / fadeTime);
             elapsedTime += Time.deltaTime;
             yield return wff;
         }

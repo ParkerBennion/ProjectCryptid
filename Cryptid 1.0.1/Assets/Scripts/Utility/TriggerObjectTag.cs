@@ -6,18 +6,20 @@ using UnityEngine.Events;
 public class TriggerObjectTag : MonoBehaviour
 {
     public UnityEvent detectEvent, unDetectEvent;
-    public string tagName;
+    public string[] tagNames;
     /// <summary>
 /// When an object marked as player enters the trigger area, invoke an event
 /// </summary>
 /// <param name="other"></param>
     private void OnTriggerEnter(Collider other)
     {
-        print("Collided");
-        if (other.gameObject.CompareTag(tagName))
+        foreach (string tagName in tagNames)
         {
-            print("Player entered area");
-            detectEvent.Invoke();
+            if (other.gameObject.CompareTag(tagName))
+            {
+                //print("Player entered area");
+                detectEvent.Invoke();
+            }
         }
     }
 /// <summary>
@@ -26,10 +28,13 @@ public class TriggerObjectTag : MonoBehaviour
 /// <param name="other"></param>
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.CompareTag(tagName))
+        foreach (string tagName in tagNames)
         {
-            print("Player left area");
-            unDetectEvent.Invoke();
+            if (other.gameObject.CompareTag(tagName))
+            {
+                //print("Player left area");
+                unDetectEvent.Invoke();
+            }
         }
     }
 }
