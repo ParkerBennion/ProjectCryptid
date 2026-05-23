@@ -5,17 +5,29 @@ using Random = UnityEngine.Random;
 
 public class NessieStealthGameManager : MonoBehaviour
 {
+    [SerializeField] private GameObject NessieActor;
     [SerializeField] private GameObject[] lights;
-    [SerializeField] private Transform[] spawnPoints;
+    [SerializeField] private Transform[] spawnPoints, nessieStopPoints;
     [SerializeField] private int numPasses, numRounds;
     [SerializeField] private Vector3 destinationOffset;
-    public AnimationCurve animationCurve;
+    [SerializeField] private AnimationCurve animationCurve;
+    private bool nessieIsMoving;
+    private WaitUntil waitForNessie;
+
+    private void Awake()
+    {
+        waitForNessie= new WaitUntil(() => !nessieIsMoving);
+    }
 
     private void Start()
     {
         StartGame();
     }
 
+    private void Initialize()
+    {
+        
+    }
     public void StartGame()
     {
         StartCoroutine(LightRoutine());
@@ -24,12 +36,14 @@ public class NessieStealthGameManager : MonoBehaviour
     private IEnumerator LightRoutine()
     {
         WaitForSeconds wfTravel = new WaitForSeconds(2f); 
-        WaitForSeconds wfSpawn = new WaitForSeconds(2f);
         int emptySlot;
         int j;
         int r = 0;
-        while (r < numRounds)//first spawn
+        while (r < nessieStopPoints.Length)//first spawn
         {
+            nessieIsMoving = true;
+            StartCoroutine(MoveNessie(nessieStopPoints[r].position));
+            yield return waitForNessie;
             j = 0;
             emptySlot = Random.Range(0,3);
             for (int i = 0; i < 3; i++)
@@ -51,9 +65,9 @@ public class NessieStealthGameManager : MonoBehaviour
             }
             yield return new WaitForSeconds(3f);
             ReclaimLights();
-            yield return wfSpawn;
-            r++;
+            r++;//move nessie
         }
+        // at this point nessie has reached the dock
     }
 
     private void ReclaimLights()
@@ -92,5 +106,19 @@ public class NessieStealthGameManager : MonoBehaviour
 
         yield return new WaitForSeconds(.25f);// this is the delay after switching to start moving back
         StartCoroutine(LightTravel(lightObj, destination, true));
+    }
+
+    private IEnumerator MoveNessie(Vector3 destination)
+    {
+        float elapsedTime = 0f;
+        Vector3 startPos = NessieActor.transform.position;
+        while (elapsedTime<1f)
+        {
+            NessieActor.transform.position = Vector3.Lerp(startPos, destination, elapsedTime / 1f);
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+
+        nessieIsMoving = false;
     }
 }
