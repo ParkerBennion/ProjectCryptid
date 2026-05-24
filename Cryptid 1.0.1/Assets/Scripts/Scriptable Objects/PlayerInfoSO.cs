@@ -15,12 +15,14 @@ public class PlayerInfoSO : ScriptableObject
     public UnityAction<bool> suitChange;
     public UnityAction<float> attackChange, defenseChange;
     public UnityAction<float, float> speedChange;
+    public UnityAction<int, int, int> beadChange;
     public float direction;
     
     private Dictionary<string, float> _speedModifiers = new Dictionary<string, float>()
     {
         {"BeadSpeedBonus", 1},
         {"HeavyChargeSpeedPenalty", 1},
+        {"SlowDebuff", 1},
         {"TotemSpeedBonus",1}
     };
     private Dictionary<string, float> _attackModifiers = new Dictionary<string, float>()
@@ -141,6 +143,7 @@ public class PlayerInfoSO : ScriptableObject
     {
         numSpeedBeads = Mathf.Clamp(numSpeedBeads + numBeads, 0, 5);
         ChangeSpeedModifier("BeadSpeedBonus", 1+ (numSpeedBeads*.05f));
+        RaiseBeads();
     }
     
     
@@ -164,6 +167,7 @@ public class PlayerInfoSO : ScriptableObject
     {
         numAttackBeads = Mathf.Clamp(numAttackBeads + numBeads, 0, 5);
         ChangeAttackModifier("BeadAttackBonus", 1+ (numAttackBeads*.2f));
+        RaiseBeads();
     }
     
     
@@ -187,6 +191,15 @@ public class PlayerInfoSO : ScriptableObject
     {
         numDefenseBeads = Mathf.Clamp(numDefenseBeads + numBeads, 0, 5);
         ChangeDefenseModifier("BeadDefenseBonus", 1- (numDefenseBeads*.1f));
+        RaiseBeads();
+    }
+
+
+
+
+    private void RaiseBeads()
+    {
+        beadChange.Invoke(numSpeedBeads, numAttackBeads, numDefenseBeads);
     }
 
 }

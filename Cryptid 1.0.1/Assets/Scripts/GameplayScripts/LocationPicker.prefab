@@ -51,14 +51,18 @@ MonoBehaviour:
   - {fileID: 1576348882820557418, guid: 1cb28a530fbadef45865903f339588e9, type: 3}
   - {fileID: 2991476186398601165, guid: a2bae66c33598294e916736e996df8e8, type: 3}
   - {fileID: 712677608725286110, guid: 9325b7e7ff39cc2409d49831580406b0, type: 3}
+  - {fileID: 1576348882820557418, guid: 7ee77a89064a28f4a921f32430986858, type: 3}
+  - {fileID: 1576348882820557418, guid: 2b819e8fc3985a74eace51e284eba200, type: 3}
   SpawnOnCreation: 0
   signPosts: []
   signPostMaterials:
   - {fileID: 2100000, guid: 9ef832fa6572cda4593e92d376bbf342, type: 2}
   - {fileID: 2100000, guid: 6a359894f47712e4ca0b790e440fc580, type: 2}
   - {fileID: 2100000, guid: 6a66f61312518db4aaeda37fa71c146d, type: 2}
+  - {fileID: 2100000, guid: 6a66f61312518db4aaeda37fa71c146d, type: 2}
+  - {fileID: 2100000, guid: 6a66f61312518db4aaeda37fa71c146d, type: 2}
+  - {fileID: 2100000, guid: 6a66f61312518db4aaeda37fa71c146d, type: 2}
   forceSpawnSO: {fileID: 11400000, guid: 7e281d8fd230f704dafd056a0a7e9a10, type: 2}
-  compassCall: {fileID: 11400000, guid: 61d2919322a2cee4cb02cdca4f37697c, type: 2}
 --- !u!114 &2597834805287052485
 MonoBehaviour:
   m_ObjectHideFlags: 0

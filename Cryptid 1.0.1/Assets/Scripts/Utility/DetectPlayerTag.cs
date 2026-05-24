@@ -30,5 +30,10 @@ public class DetectPlayerTag : MonoBehaviour
             unDetectEvent.Invoke();
         }
     }
+
+    private void OnDisable()
+    {
+        unDetectEvent.Invoke();
+    }
 }
 

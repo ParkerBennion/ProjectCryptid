@@ -27,7 +27,7 @@ public class RangerQuestDialogueSO : QuestDialogueKeeperSO
             new string[] {//phase 4 defended the firetower
                 "Thanks for helping out with the local wildlife kid! Impressive for someone your size. They can be real nasty sometimes",
                 "Dan asked you to do WHAT now?",
-                "*Ellie rubs her temples*",
+                " ... ",
                 "Last time Dan was on his bigfoot pursuit he tried to hog tie a tourist with a rather long beard and drag him back to town!",
                 "Sometimes that man ain't got a lick of good common sense!!!",
                 "Tell you what darling, out of gratitude for helping me with those varmin, I'll help you out",
@@ -57,7 +57,42 @@ public class RangerQuestDialogueSO : QuestDialogueKeeperSO
             }
             
         };
-
+    public override string[][] NessieQuestDialogues { get; protected set; } =
+    {
+        new string[]//step 1 Know about the lake, but haven't found it
+        {
+            "NessieDialogueStep 1"
+        },
+        new string[]//Step 2 Seen signs of nessie in the lake
+        {
+            "NessieDialogueStep 2",
+            "ProgressQuest"
+        },
+        new string[]//Step 3 Talked to the ranger about the lake
+        {
+            "NessieDialogueStep 3"
+        },
+        new string[]//Step 4 Found the floaty
+        {
+            "NessieDialogueStep 4"
+        },
+        new string[]//Step 5 Bought the pump from dan
+        {
+            "NessieDialogueStep 5"
+        },
+        new string[]//Step 6 Nabbed the camera
+        {
+            "NessieDialogueStep 6"
+        },
+        new string[]// Step 7 successfully got a photo of nessie after playing stealth game
+        {
+            "NessieDialogueStep 7"
+        },
+        new string[]// Step 8 either destroyed the nessie evidence or shown it to dan
+        {
+            "NessieDialogueStep 8"
+        }
+    };
     
     
 
