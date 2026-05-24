@@ -13,6 +13,7 @@ public class SeekerProjectile : MonoBehaviour
     [SerializeField] private Transform parentTransform;
     private Coroutine lifeSpanRoutine;
     [SerializeField] private UnityEvent[] possibleHitEvents;
+    [SerializeField] private UnityEvent stopTrackingEvent;
     
 
     public void StartTracking()
@@ -36,6 +37,7 @@ public class SeekerProjectile : MonoBehaviour
     private IEnumerator StopTracking()
     {
         agent.isStopped = true;
+        stopTrackingEvent?.Invoke();
         yield return new WaitForSeconds(2f);
         gameObject.transform.parent = parentTransform;
         gameObject.transform.localPosition = Vector3.zero;
