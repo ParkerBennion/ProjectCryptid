@@ -136,7 +136,7 @@ public class PlayerInfoSO : ScriptableObject
         }
 
         playerSpeedCurrent = tempFloat;
-        speedChange.Invoke(playerSpeedCurrent, direction);
+        speedChange?.Invoke(playerSpeedCurrent, direction);
     }
 
     public void AddSpeedBead(int numBeads)

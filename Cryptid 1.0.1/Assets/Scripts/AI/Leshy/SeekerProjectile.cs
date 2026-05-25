@@ -40,7 +40,7 @@ public class SeekerProjectile : MonoBehaviour
         stopTrackingEvent?.Invoke();
         yield return new WaitForSeconds(2f);
         gameObject.transform.parent = parentTransform;
-        gameObject.transform.localPosition = Vector3.zero;
+        gameObject.transform.localPosition = Vector3.up;
         gameObject.SetActive(false);
     }
 
