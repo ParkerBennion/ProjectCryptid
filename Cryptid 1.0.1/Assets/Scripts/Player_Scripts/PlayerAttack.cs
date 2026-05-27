@@ -2,12 +2,14 @@ using System;
 using UnityEngine;
 using UnityEngine.VFX;
 using FMODUnity;
+using UnityEditor;
 using UnityEngine.Events;
 
 public class PlayerAttack : MonoBehaviour
 {
     //[SerializeField] private VisualEffect visualizeHitbox;
     [SerializeField] private ParticleSystem lightAttackFX;
+    [SerializeField] private GameObject hitCenterFX;
     private Collider[] cols;
     [SerializeField] private FMODAudioManager audioManager;
     [SerializeField] private EventReference lightAttackSound;
@@ -44,6 +46,7 @@ public class PlayerAttack : MonoBehaviour
            if (thisCol.TryGetComponent(out IDamageable target))
            {
                target.DealDamage(lightDamage * damageMultiplier);
+               Instantiate(hitCenterFX, Vector3.Lerp(gameObject.transform.position, thisCol.transform.position, 0.5f)+(Vector3.up*.5f), Quaternion.identity);
                aggroGenerator.RaiseAction(2);
            }
         }

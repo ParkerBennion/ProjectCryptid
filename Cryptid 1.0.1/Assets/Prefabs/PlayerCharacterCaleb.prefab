@@ -312,6 +312,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lightAttackFX: {fileID: 9085155475553888556}
+  hitCenterFX: {fileID: 723650922184828620, guid: 816142c243210c74eacac642c596624d, type: 3}
   audioManager: {fileID: 11400000, guid: 57492b9912b58194283468dc23b6ce4f, type: 2}
   lightAttackSound:
     Guid:
@@ -330,6 +331,7 @@ MonoBehaviour:
   - Destructible
   aggroGenerator: {fileID: 11400000, guid: b5cacba1a5b1a2e45abf5121d49f7f50, type: 2}
   playerInfo: {fileID: 11400000, guid: 5d112b78f37dda646a93d2fd7ed1babe, type: 2}
+  knockBack: 0
 --- !u!114 &7876827434842387372
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5463,6 +5465,7 @@ MonoBehaviour:
   targetObj: {fileID: 412896853949698788}
   distanceToFindTargetShort: 7
   distanceToFindTargetLong: 25
+  distanceToCurrentTarget: 0
   compassManager: {fileID: 11400000, guid: 7e281d8fd230f704dafd056a0a7e9a10, type: 2}
 --- !u!1 &2275457969476082400
 GameObject:

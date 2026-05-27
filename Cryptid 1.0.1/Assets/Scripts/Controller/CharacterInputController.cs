@@ -179,6 +179,7 @@ public class CharacterInputController : MonoBehaviour
 public void DisableControls()
     {
         inputs.PlayerMobile.Disable();
+        moveVector = Vector3.zero;
     }
 
 /// <summary>
