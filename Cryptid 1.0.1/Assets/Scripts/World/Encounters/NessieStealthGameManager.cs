@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Events;
 using Random = UnityEngine.Random;
 
 public class NessieStealthGameManager : MonoBehaviour
@@ -11,7 +12,8 @@ public class NessieStealthGameManager : MonoBehaviour
     [SerializeField] private int numPasses, numRounds;
     [SerializeField] private Vector3 destinationOffset;
     [SerializeField] private AnimationCurve animationCurve;
-    private bool nessieIsMoving;
+    [SerializeField] private UnityEvent playerFailEvent, playerWinEvent;
+    private bool nessieIsMoving, gameActive;
     private WaitUntil waitForNessie;
 
     private void Awake()
@@ -21,12 +23,29 @@ public class NessieStealthGameManager : MonoBehaviour
 
     private void Start()
     {
-        StartGame();
+        gameActive = false;
     }
 
     private void Initialize()
     {
         
+    }
+
+    public void PlayerEnterArea()
+    {
+        gameActive = true;
+        StartGame();
+    }
+
+    public void PlayerFail()
+    {
+        if(!gameActive)return;
+        StopAllCoroutines();
+        ReclaimLights();
+        //nessie retreat
+        playerFailEvent?.Invoke();
+        print("Player Failed");
+        gameActive = false;
     }
     public void StartGame()
     {
@@ -38,36 +57,47 @@ public class NessieStealthGameManager : MonoBehaviour
         WaitForSeconds wfTravel = new WaitForSeconds(2f); 
         int emptySlot;
         int j;
+        int p = 0;
         int r = 0;
         while (r < nessieStopPoints.Length)//first spawn
         {
             nessieIsMoving = true;
             StartCoroutine(MoveNessie(nessieStopPoints[r].position));
             yield return waitForNessie;
-            j = 0;
-            emptySlot = Random.Range(0,3);
-            for (int i = 0; i < 3; i++)
+            while(p<numPasses)
             {
-                if(i==emptySlot)
-                    continue;
-                StartCoroutine(LightTravel(lights[j], spawnPoints[i].position, false));
-                j++;
+                yield return new WaitForSeconds(1f);
+                j = 0;
+                emptySlot = Random.Range(0, 3);
+                for (int i = 0; i < 3; i++)
+                {
+                    if (i == emptySlot)
+                        continue;
+                    StartCoroutine(LightTravel(lights[j], spawnPoints[i].position, false));
+                    j++;
+                }
+
+                yield return wfTravel;
+                emptySlot = Random.Range(0, 3);
+                j = 0;
+                for (int i = 0; i < 3; i++)
+                {
+                    if (i == emptySlot)
+                        continue;
+                    StartCoroutine(LightChangeLane(lights[j], spawnPoints[i].position + destinationOffset));
+                    j++;
+                }
+                yield return new WaitForSeconds(3f);
+                ReclaimLights();
+                p++;
             }
-            yield return wfTravel;
-            emptySlot = Random.Range(0,3);
-            j = 0;
-            for (int i = 0; i < 3; i++)
-            {
-                if(i==emptySlot)
-                    continue;
-                StartCoroutine(LightChangeLane(lights[j], spawnPoints[i].position+destinationOffset));
-                j++;
-            }
-            yield return new WaitForSeconds(3f);
             ReclaimLights();
+            p = 0;
             r++;//move nessie
         }
         // at this point nessie has reached the dock
+        gameActive = false;
+        playerWinEvent?.Invoke();
     }
 
     private void ReclaimLights()
@@ -104,7 +134,7 @@ public class NessieStealthGameManager : MonoBehaviour
             yield return null;
         }
 
-        yield return new WaitForSeconds(.25f);// this is the delay after switching to start moving back
+        yield return new WaitForSeconds(.1f);// this is the delay after switching to start moving back
         StartCoroutine(LightTravel(lightObj, destination, true));
     }
 
@@ -118,7 +148,6 @@ public class NessieStealthGameManager : MonoBehaviour
             elapsedTime += Time.deltaTime;
             yield return null;
         }
-
         nessieIsMoving = false;
     }
 }

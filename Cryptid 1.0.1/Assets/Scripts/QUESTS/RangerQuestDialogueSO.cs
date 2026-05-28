@@ -88,9 +88,13 @@ public class RangerQuestDialogueSO : QuestDialogueKeeperSO
         {
             "NessieDialogueStep 7"
         },
-        new string[]// Step 8 either destroyed the nessie evidence or shown it to dan
+        new string[]// Step 8 destroyed the nessie 
         {
             "NessieDialogueStep 8"
+        },
+        new string[]// Step 9 Showed the photo to dan
+        {
+        "NessieDialogueStep 9"
         }
     };
     
