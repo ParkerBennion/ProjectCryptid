@@ -33,7 +33,6 @@ public class NessieStealthGameManager : MonoBehaviour
 
     public void PlayerEnterArea()
     {
-        gameActive = true;
         StartGame();
     }
 
@@ -49,7 +48,9 @@ public class NessieStealthGameManager : MonoBehaviour
     }
     public void StartGame()
     {
+        if(gameActive) return;
         StartCoroutine(LightRoutine());
+        gameActive = true;
     }
 
     private IEnumerator LightRoutine()
