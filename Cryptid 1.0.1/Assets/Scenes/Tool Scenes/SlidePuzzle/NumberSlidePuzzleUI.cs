@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class NumberSlidePuzzleUI : MonoBehaviour
 {
     [Header("Puzzle Settings")]
-    [SerializeField] private int gridSize = 6;
+    [SerializeField] private int gridSize;
     [SerializeField] private GameObject tileButtonPrefab;
     [SerializeField] private GameObject slotPrefab;
 
