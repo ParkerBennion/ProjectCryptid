@@ -11,12 +11,22 @@ public class BlackLightData : MonoBehaviour
     [SerializeField] private List<GameObject> blackLightObjects = new List<GameObject>();
     private Coroutine _currentRoutine;
     [SerializeField] private PlayerInfoSO playerInfo;
-    [SerializeField] private float torchValue;
+    [SerializeField] private float torchValue, abilityValue, abilityDuration;
+    private WaitForSeconds wfs = new WaitForSeconds(1f);
+    private Coroutine thisRoutine;
+    [SerializeField] private GameAction activationCall;
+    
 
 
     private void Awake()
     {
         playerInfo.torchChange += RespondToTorch;
+        activationCall.raise += ActivateAbility;
+    }
+
+    private void Start()
+    {
+        abilityValue = 0;
     }
 
     private void OnEnable()
@@ -36,13 +46,8 @@ public class BlackLightData : MonoBehaviour
         {
             yield return null;
             Shader.SetGlobalVector(PointLightPosition, transform.position);
-            Shader.SetGlobalFloat(TorchSwitch, torchValue);
+            Shader.SetGlobalFloat(TorchSwitch, torchValue*abilityValue);
         }
-    }
-
-    public void HideShaders()
-    {
-        Shader.SetGlobalFloat(TorchSwitch, 0);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -78,5 +83,39 @@ public class BlackLightData : MonoBehaviour
     private void OnDestroy()
     {
         playerInfo.torchChange -= RespondToTorch;
+        activationCall.raise -= ActivateAbility;
+    }
+    
+    
+    // THESE METHODS ARE FOR MANAGING THE ABILITY BEING ACTIVE
+    private void ActivateAbility()
+    {
+        if (thisRoutine != null)
+        {
+            StopCoroutine(thisRoutine);
+        }
+        thisRoutine = StartCoroutine(ActiveDetector());
+    }
+    
+    private IEnumerator ActiveDetector()
+    {
+        abilityValue = 1;
+        float elapsedTime = 0;
+        while (elapsedTime < abilityDuration)
+        {
+            yield return wfs;
+            elapsedTime += 1f;
+        }
+        //fade shaders out
+        
+        elapsedTime =  2f;
+        while (elapsedTime >0)
+        {
+            abilityValue =elapsedTime / 2f;
+            elapsedTime -= Time.deltaTime;
+            yield return null;
+        }
+        Shader.SetGlobalFloat(TorchSwitch, 0);
+        thisRoutine = null;
     }
 }
