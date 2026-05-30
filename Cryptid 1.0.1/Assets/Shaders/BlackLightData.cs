@@ -11,7 +11,7 @@ public class BlackLightData : MonoBehaviour
     [SerializeField] private List<GameObject> blackLightObjects = new List<GameObject>();
     private Coroutine _currentRoutine;
     [SerializeField] private PlayerInfoSO playerInfo;
-    [SerializeField]private float torchValue;
+    [SerializeField] private float torchValue;
 
 
     private void Awake()
@@ -19,15 +19,30 @@ public class BlackLightData : MonoBehaviour
         playerInfo.torchChange += RespondToTorch;
     }
 
+    private void OnEnable()
+    {
+        blackLightObjects.Clear();
+        RespondToTorch(playerInfo.GetTorchStatus());
+    }
+
+    private void OnDisable()
+    {
+        RespondToTorch(false);
+    }
+
     private IEnumerator RunBlacklight()
     {
-        WaitForEndOfFrame wff= new WaitForEndOfFrame();
         while (running)
         {
-            yield return wff;
+            yield return null;
             Shader.SetGlobalVector(PointLightPosition, transform.position);
             Shader.SetGlobalFloat(TorchSwitch, torchValue);
         }
+    }
+
+    public void HideShaders()
+    {
+        Shader.SetGlobalFloat(TorchSwitch, 0);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -59,7 +74,7 @@ public class BlackLightData : MonoBehaviour
     {
         torchValue = isOn ? 1 : 0;
     }
-
+    
     private void OnDestroy()
     {
         playerInfo.torchChange -= RespondToTorch;
