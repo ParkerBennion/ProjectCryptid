@@ -115,7 +115,7 @@ public class BlackLightData : MonoBehaviour
             elapsedTime -= Time.deltaTime;
             yield return null;
         }
-        Shader.SetGlobalFloat(TorchSwitch, 0);
+        abilityValue = 0;
         thisRoutine = null;
     }
 }

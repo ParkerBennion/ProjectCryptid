@@ -17,5 +17,3 @@ MonoBehaviour:
     amount: 1
   - itemName: BigfootSuitButton
     amount: 1
-  - itemName: PumpButton
-    amount: 1
