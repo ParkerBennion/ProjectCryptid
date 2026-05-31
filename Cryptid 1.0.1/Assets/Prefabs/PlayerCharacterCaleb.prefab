@@ -51,6 +51,7 @@ MonoBehaviour:
   torchValue: 0
   abilityValue: 0
   activationCall: {fileID: 11400000, guid: eccbdd7cde1cc2544a75326e09451fce, type: 2}
+  UICall: {fileID: 11400000, guid: bdff4ef5064518748b629c421e08e0a3, type: 2}
 --- !u!135 &7097494681924058401
 SphereCollider:
   m_ObjectHideFlags: 0
