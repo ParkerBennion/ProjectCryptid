@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class BlackLightData : MonoBehaviour
 {
@@ -11,10 +12,11 @@ public class BlackLightData : MonoBehaviour
     [SerializeField] private List<GameObject> blackLightObjects = new List<GameObject>();
     private Coroutine _currentRoutine;
     [SerializeField] private PlayerInfoSO playerInfo;
-    [SerializeField] private float torchValue, abilityValue, abilityDuration;
+    [SerializeField] private float torchValue, abilityValue;
     private WaitForSeconds wfs = new WaitForSeconds(1f);
     private Coroutine thisRoutine;
-    [SerializeField] private GameAction activationCall;
+    [SerializeField] private GameActionFloat activationCall;
+    
     
 
 
@@ -88,20 +90,21 @@ public class BlackLightData : MonoBehaviour
     
     
     // THESE METHODS ARE FOR MANAGING THE ABILITY BEING ACTIVE
-    private void ActivateAbility()
+    private void ActivateAbility(float duration)
     {
         if (thisRoutine != null)
         {
             StopCoroutine(thisRoutine);
         }
-        thisRoutine = StartCoroutine(ActiveDetector());
+        thisRoutine = StartCoroutine(ActiveDetector(duration));
     }
     
-    private IEnumerator ActiveDetector()
+    private IEnumerator ActiveDetector(float duration)
     {
         abilityValue = 1;
+        //tell UI to turn on?
         float elapsedTime = 0;
-        while (elapsedTime < abilityDuration)
+        while (elapsedTime < duration)
         {
             yield return wfs;
             elapsedTime += 1f;
@@ -116,6 +119,7 @@ public class BlackLightData : MonoBehaviour
             yield return null;
         }
         abilityValue = 0;
+        //tell UI to turn off?
         thisRoutine = null;
     }
 }

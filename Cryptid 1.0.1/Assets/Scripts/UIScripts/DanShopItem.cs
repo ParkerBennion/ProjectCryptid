@@ -13,6 +13,9 @@ public class DanShopItem : MonoBehaviour
     [SerializeField] private bool isUniqueItem;
     [SerializeField] private GameAction updateUICall;
     private string ItemID => inventoryItemPrefab != null ? inventoryItemPrefab.name : string.Empty;
+    [SerializeField] private Sprite itemImage;
+    [SerializeField] private string description;
+    [SerializeField] private UpdateDescription descriptionUpdater;
 
     private void Start()
     {
@@ -41,4 +44,10 @@ public class DanShopItem : MonoBehaviour
         updateUICall.RaiseAction();
         purchaseEvent.Invoke();
     }
+
+    public void ShowDescription()
+    {
+        descriptionUpdater.OpenDescription(itemImage, description);
+    }
+    
 }
