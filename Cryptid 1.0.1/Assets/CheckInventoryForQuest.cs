@@ -1,14 +1,14 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-public class CheckForPump : MonoBehaviour
+public class CheckInventoryForQuest : MonoBehaviour
 {
-    [SerializeField] private GameObject pumpInvPrefab;
+    [SerializeField] private GameObject itemInvPrefab;
     [SerializeField] private InventorySO inventory;
     [SerializeField] private UnityEvent progressEvent;
-    public void CheckForPumpInInventory()
+    public void CheckForItemInInventory()
     {
-        if (inventory.HasItem(pumpInvPrefab.name))
+        if (inventory.HasItem(itemInvPrefab.name))
         {
             progressEvent?.Invoke();
         }

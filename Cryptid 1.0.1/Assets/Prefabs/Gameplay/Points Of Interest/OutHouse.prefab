@@ -280,7 +280,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3c38aee4d6fda34d8d2ace7cc5b47e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pumpInvPrefab: {fileID: 2697879771539688577, guid: ea71e5a2fc132df44a40e7597cad89e4, type: 3}
+  itemInvPrefab: {fileID: 2697879771539688577, guid: ea71e5a2fc132df44a40e7597cad89e4, type: 3}
   inventory: {fileID: 11400000, guid: 06c2e9a1cc8dc6c4bb2b0c27c4ef9411, type: 2}
   progressEvent:
     m_PersistentCalls:
@@ -330,7 +330,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 838233368950967452}
         m_TargetAssemblyTypeName: CheckForPump, Assembly-CSharp
-        m_MethodName: CheckForPumpInInventory
+        m_MethodName: CheckForItemInInventory
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -590,6 +590,10 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 791824776313681778, guid: 394781af29781e5489947b4d49f30158, type: 3}
+      propertyPath: m_ConstraintCount
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 2321543299301220739, guid: 394781af29781e5489947b4d49f30158, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -669,6 +673,10 @@ PrefabInstance:
     - target: {fileID: 2321543299301220739, guid: 394781af29781e5489947b4d49f30158, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2946326342908593739, guid: 394781af29781e5489947b4d49f30158, type: 3}
+      propertyPath: gridSize
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6590757823429346153, guid: 394781af29781e5489947b4d49f30158, type: 3}
       propertyPath: m_IsActive
