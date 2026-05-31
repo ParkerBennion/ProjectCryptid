@@ -170,6 +170,8 @@ GameObject:
   - component: {fileID: 1921453487463987055}
   - component: {fileID: 5632663772701559383}
   - component: {fileID: 7460973707406292255}
+  - component: {fileID: 838233368950967452}
+  - component: {fileID: 2813070894410311227}
   m_Layer: 0
   m_Name: OuthouseStandin
   m_TagString: Untagged
@@ -266,6 +268,82 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &838233368950967452
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8609960202139242224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3c38aee4d6fda34d8d2ace7cc5b47e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pumpInvPrefab: {fileID: 2697879771539688577, guid: ea71e5a2fc132df44a40e7597cad89e4, type: 3}
+  inventory: {fileID: 11400000, guid: 06c2e9a1cc8dc6c4bb2b0c27c4ef9411, type: 2}
+  progressEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: b096b8c626a69b94fa1e198060802741, type: 2}
+        m_TargetAssemblyTypeName: QuestIntData, Assembly-CSharp
+        m_MethodName: SetValue
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 5
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 11400000, guid: 2c16fbca6344cc04a8a6fcc9fd41f034, type: 2}
+        m_TargetAssemblyTypeName: GameActionString, Assembly-CSharp
+        m_MethodName: RaiseAction
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 5
+          m_FloatArgument: 0
+          m_StringArgument: I bet I could use the pump I bought from Dan to inflate
+            this!
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &2813070894410311227
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8609960202139242224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1b2d1645894d264bbb016179f2fd89d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  refreshCall: {fileID: 11400000, guid: 634ed8c8c16f20845ababdc5b021cab2, type: 2}
+  questStepRequired: 4
+  questReference: {fileID: 11400000, guid: b096b8c626a69b94fa1e198060802741, type: 2}
+  activateEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 838233368950967452}
+        m_TargetAssemblyTypeName: CheckForPump, Assembly-CSharp
+        m_MethodName: CheckForPumpInInventory
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  deactivateEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  useOnlyOnThisQuestStep: 1
 --- !u!1001 &1534407483128698809
 PrefabInstance:
   m_ObjectHideFlags: 0
