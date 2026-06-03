@@ -6,13 +6,13 @@ public class SetAnimToSpeed : MonoBehaviour
 {
     // This script is for constantly updating the an animation blend tree with the speed of the gameobject
     private Animator animator;
-    private NavMeshAgent agent;
+    [SerializeField] private NavMeshAgent agent;
     private static readonly int Speed = Animator.StringToHash("Speed");
 
     private void Awake()
     {
         animator = GetComponent<Animator>();
-        agent = GetComponent<NavMeshAgent>();
+        if(!agent) agent = GetComponent<NavMeshAgent>();
     }
 
     private void Update()

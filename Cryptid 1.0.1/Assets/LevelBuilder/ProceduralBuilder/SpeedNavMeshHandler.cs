@@ -7,7 +7,7 @@ public class SpeedNavMeshHandler : MonoBehaviour
 {
     public NavMeshAgent agent;
     private bool isTraversing;
-    private Animator animator;
+    [SerializeField]private Animator animator;
     private Coroutine traverseRoutine;
     private float traverseDuration, elapsed;
     private Vector3 startPosition, endPosition;
@@ -17,7 +17,7 @@ public class SpeedNavMeshHandler : MonoBehaviour
     private void Awake()
     {
         isTraversing = false;
-        animator = GetComponent<Animator>();
+        if(!animator)animator = GetComponent<Animator>();
     }
 
     void Update()

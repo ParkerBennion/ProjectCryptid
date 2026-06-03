@@ -17524,6 +17524,18 @@ PrefabInstance:
       propertyPath: m_DynamicOriginRange
       value: 800
       objectReference: {fileID: 0}
+    - target: {fileID: 8044810911474543636, guid: f4d98c96c6bfc4041a617bf0a4c893cd, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -25
+      objectReference: {fileID: 0}
+    - target: {fileID: 8427569150261685606, guid: f4d98c96c6bfc4041a617bf0a4c893cd, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 675
+      objectReference: {fileID: 0}
+    - target: {fileID: 8427569150261685606, guid: f4d98c96c6bfc4041a617bf0a4c893cd, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -81.75342
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 604273182467780515, guid: f4d98c96c6bfc4041a617bf0a4c893cd, type: 3}
     m_RemovedGameObjects: []
