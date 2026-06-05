@@ -1,13 +1,19 @@
+using System;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class TeleportCell : MonoBehaviour
 {
     [SerializeField]private Transform insideSpawn, outsideSpawn;
     [SerializeField] private GameObject playerCharacter;
+    [SerializeField] private UnityEvent teleportInEvent;
+    [SerializeField] private GameAction exitCellCall;
+    private bool roomHasSpawned;
 
-    [SerializeField]
-    private GameAction exitCellCall;
-
+    private void Awake()
+    {
+        roomHasSpawned = false;
+    }
 
     public void TeleportPlayerOut()
     {
@@ -16,6 +22,11 @@ public class TeleportCell : MonoBehaviour
 
     public void TeleportPlayerIn()
     {
+        if(!roomHasSpawned)
+        {
+            teleportInEvent?.Invoke();
+            roomHasSpawned = true;
+        }
         playerCharacter.transform.position = insideSpawn.position;
     }
 

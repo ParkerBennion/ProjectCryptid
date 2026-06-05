@@ -24,6 +24,6 @@ public class SpawnItemBehavior : MonoBehaviour
 
     private void SpawnPrefab()
     {
-        Instantiate(prefab, transform);
+        Instantiate(prefab, transform.position, transform.rotation, transform);
     }
 }

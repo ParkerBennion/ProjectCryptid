@@ -41,4 +41,5 @@ public class CollectibleWisp : MonoBehaviour
         rb.angularVelocity = Vector3.zero;
     }
 
+
 }

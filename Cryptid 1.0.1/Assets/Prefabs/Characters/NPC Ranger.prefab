@@ -2966,6 +2966,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Dialogue Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 4871477848922690175, guid: fea90b3a181138c4ba14f2606c902193, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5871587667875518706, guid: fea90b3a181138c4ba14f2606c902193, type: 3}
       propertyPath: npcDialogueSO
       value: 

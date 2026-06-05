@@ -17,3 +17,9 @@ MonoBehaviour:
     amount: 1
   - itemName: BigfootSuitButton
     amount: 1
+  - itemName: BlacklightButton
+    amount: 3
+  - itemName: PumpButton
+    amount: 1
+  - itemName: NessiePhotoItem
+    amount: 1
