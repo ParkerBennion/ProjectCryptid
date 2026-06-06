@@ -2330,6 +2330,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   agent: {fileID: 4467649302048103906}
+  animator: {fileID: 0}
 --- !u!114 &7639394811957496548
 MonoBehaviour:
   m_ObjectHideFlags: 0
