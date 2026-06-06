@@ -9,6 +9,7 @@ public class SeekerProjectile : MonoBehaviour
 {
     [SerializeField] private NavMeshAgent agent;
     public GameObject target;
+    [SerializeField] private GameObject dizzyInstance;
     [SerializeField] private float lifeSpan;
     [SerializeField] private Transform parentTransform;
     private Coroutine lifeSpanRoutine;
@@ -39,6 +40,11 @@ public class SeekerProjectile : MonoBehaviour
         agent.isStopped = true;
         stopTrackingEvent?.Invoke();
         yield return new WaitForSeconds(2f);
+        if (!parentTransform)
+        {
+            Destroy(gameObject);
+            yield break;
+        }
         gameObject.transform.parent = parentTransform;
         gameObject.transform.localPosition = Vector3.up;
         gameObject.SetActive(false);
@@ -51,6 +57,7 @@ public class SeekerProjectile : MonoBehaviour
         StartCoroutine(StopTracking());
     }
 
+    
     private void OnDestroy()
     {
         StopAllCoroutines();

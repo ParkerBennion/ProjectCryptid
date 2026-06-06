@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,6 +9,8 @@ public class LeshyCastState : State
     [SerializeField] private Leshy_Manager manager;
     [SerializeField] private State decideState;
     [SerializeField] private float windupTime;
+    [SerializeField] private PlayerInfoSO playerInfo;
+    [SerializeField] private GameObject dizzyInstance;
     private float elapsedTime;
 
     public override void LogicUpdate()
@@ -46,5 +49,30 @@ public class LeshyCastState : State
     public override void OnAnimationFinish()
     {
         stateMachine.SwitchToNextState(decideState);
+    }
+
+    private void OnDestroy()
+    {
+        playerInfo.SetRunDirection(1);
+    }
+    
+    public void MakePlayerDizzy()
+    {
+        StartCoroutine(CastDizzyInstance());
+    }
+    private IEnumerator CastDizzyInstance()
+    {
+        playerInfo.SetRunDirection(-1);
+        dizzyInstance.SetActive(true);
+        float elapsedTime = 0;
+        while (elapsedTime < 4f)
+        {
+            dizzyInstance.transform.position = player.transform.position+Vector3.up*2.5f;
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+        dizzyInstance.transform.localPosition = Vector3.zero;
+        dizzyInstance.SetActive(false);
+        playerInfo.SetRunDirection(1);
     }
 }

@@ -112,10 +112,10 @@ public class BlackLightData : MonoBehaviour
         }
         //fade shaders out
         UICall.RaiseAction(false);
-        elapsedTime =  2f;
+        elapsedTime =  4f;
         while (elapsedTime >0)
         {
-            abilityValue =elapsedTime / 2f;
+            abilityValue =elapsedTime / 4f;
             elapsedTime -= Time.deltaTime;
             yield return null;
         }
