@@ -7,6 +7,7 @@ public class CryptidLootDrop : MonoBehaviour
     [SerializeField] private GameObject wispPrefabSmall, wispPrefabBig;
     public GameObject[] extraLootItems;
     [SerializeField] private float extraLootChance;
+    [SerializeField] private int extraLootRolls;
     [SerializeField] private float airTime, launchHeight, range;
 
     public void SpawnLoot()
@@ -32,13 +33,17 @@ public class CryptidLootDrop : MonoBehaviour
                 Random.Range(-range, range)),Random.Range(airTime*.5f, airTime)));
         }
 
-        if (Random.Range(0f, 1f) < extraLootChance)
+        for (int i = 0; i < extraLootRolls; i++)
         {
-            thisWisp = Instantiate(extraLootItems[Random.Range(0, extraLootItems.Length)], transform.position, Quaternion.identity, null);
-            StartCoroutine(EjectItemRoutine(thisWisp, transform.position+new Vector3(
-                Random.Range(-range, range),
-                0,
-                Random.Range(-range, range)), Random.Range(airTime*.5f, airTime)));
+            if (Random.Range(0f, 1f) < extraLootChance)
+            {
+                thisWisp = Instantiate(extraLootItems[Random.Range(0, extraLootItems.Length)], transform.position,
+                    Quaternion.identity, null);
+                StartCoroutine(EjectItemRoutine(thisWisp, transform.position + new Vector3(
+                    Random.Range(-range, range),
+                    0,
+                    Random.Range(-range, range)), Random.Range(airTime * .5f, airTime)));
+            }
         }
     }
     

@@ -124,10 +124,9 @@ GameObject:
   - component: {fileID: 8740754908376494084}
   - component: {fileID: 222381996225232229}
   - component: {fileID: 6033128461660470950}
-  - component: {fileID: 6218143474486683404}
   - component: {fileID: 7907160870528717822}
   m_Layer: 6
-  m_Name: WIspDroppedPickup
+  m_Name: WIspBasicDroppedPickup
   m_TagString: Untagged
   m_Icon: {fileID: -5938655980376293919, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -189,7 +188,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c23e99d87e9a8945968984d19272094, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  logValue: 1
+  wispValue: 1
   callAction: {fileID: 11400000, guid: a7489fb67a5207048a90be0ecce927ec, type: 2}
   rb: {fileID: 3026072289952355850}
   collectionBurst: {fileID: 628544306005140027, guid: 1cf6003e23a480048a330e90b0f6c5ea, type: 3}
@@ -232,6 +231,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 7907160870528717822}
+        m_TargetAssemblyTypeName: DestroyBehavior, Assembly-CSharp
+        m_MethodName: DestroyAfterSeconds
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 5
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
   delay: 1.25
   startOnStart: 1
 --- !u!135 &6033128461660470950
@@ -255,35 +266,6 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.25
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &6218143474486683404
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7835740818892888821}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 56966d224e0562a4fb7ed1cfcdc355c9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  thisEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 7907160870528717822}
-        m_TargetAssemblyTypeName: DestroyBehavior, Assembly-CSharp
-        m_MethodName: DestroyObject
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  delay: 6
-  startOnStart: 1
 --- !u!114 &7907160870528717822
 MonoBehaviour:
   m_ObjectHideFlags: 0

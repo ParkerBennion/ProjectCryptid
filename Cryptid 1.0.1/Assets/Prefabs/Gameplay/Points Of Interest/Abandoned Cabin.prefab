@@ -2159,7 +2159,7 @@ GameObject:
   - component: {fileID: 8857260855785270277}
   - component: {fileID: 1175633952361198428}
   m_Layer: 0
-  m_Name: Abandonded Cabin
+  m_Name: Abandoned Cabin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
