@@ -6725,6 +6725,7 @@ MonoBehaviour:
   displayText: {fileID: 5637705300556654858}
   fieldName: logs
   updateDisplayAction: {fileID: 11400000, guid: a7489fb67a5207048a90be0ecce927ec, type: 2}
+  insufficientAction: {fileID: 11400000, guid: a924f443916663b48911c061295541d3, type: 2}
 --- !u!95 &6305126052682359102
 Animator:
   serializedVersion: 7
@@ -8054,6 +8055,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1501075802360509916, guid: d4385c567219d27419609c8d60ac997d, type: 3}
+      propertyPath: insufficientCall
+      value: 
+      objectReference: {fileID: 11400000, guid: a924f443916663b48911c061295541d3, type: 2}
+    - target: {fileID: 1501075802360509916, guid: d4385c567219d27419609c8d60ac997d, type: 3}
       propertyPath: descriptionUpdater
       value: 
       objectReference: {fileID: 8185426790522944177}
@@ -8628,6 +8633,10 @@ PrefabInstance:
       propertyPath: description
       value: This Powder can be burned in your torch to reveal hidden secrets
       objectReference: {fileID: 0}
+    - target: {fileID: 1501075802360509916, guid: d4385c567219d27419609c8d60ac997d, type: 3}
+      propertyPath: insufficientCall
+      value: 
+      objectReference: {fileID: 11400000, guid: a924f443916663b48911c061295541d3, type: 2}
     - target: {fileID: 1501075802360509916, guid: d4385c567219d27419609c8d60ac997d, type: 3}
       propertyPath: descriptionUpdater
       value: 

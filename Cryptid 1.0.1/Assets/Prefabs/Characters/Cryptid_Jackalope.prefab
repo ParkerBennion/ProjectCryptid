@@ -851,7 +851,7 @@ GameObject:
   - component: {fileID: 2888442055640910633}
   m_Layer: 7
   m_Name: Cryptid_Jackalope
-  m_TagString: Untagged
+  m_TagString: Cryptid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
