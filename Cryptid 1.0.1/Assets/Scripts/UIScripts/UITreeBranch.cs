@@ -43,7 +43,6 @@ public class UITreeBranch : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
         }
 
         rotationVector = Vector3.zero;
-        print(homeVector);
     }
 
     private void OnEnable()
@@ -85,7 +84,6 @@ public class UITreeBranch : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        print((xForm.localPosition.x - homeVector.x) / swipeSuccessTarget); // use to lerp
         if (Mathf.Abs(xForm.localPosition.x - homeVector.x) > swipeSuccessTarget)
         {
             successEvent?.Invoke();
@@ -101,7 +99,6 @@ public class UITreeBranch : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
         Vector2 startVector = xForm.localPosition;
         float elapsedTime = 0;
         float startingRotation = Mathf.DeltaAngle(0f, branchVisual.eulerAngles.z);
-        print(startingRotation);
         while (elapsedTime < returnTime)
         {
             xForm.localPosition = Vector2.Lerp(startVector, homeVector, elapsedTime / returnTime);

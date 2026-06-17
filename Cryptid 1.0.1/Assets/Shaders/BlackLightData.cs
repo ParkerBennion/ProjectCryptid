@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class BlackLightData : MonoBehaviour
 {
@@ -11,22 +12,43 @@ public class BlackLightData : MonoBehaviour
     [SerializeField] private List<GameObject> blackLightObjects = new List<GameObject>();
     private Coroutine _currentRoutine;
     [SerializeField] private PlayerInfoSO playerInfo;
-    [SerializeField]private float torchValue;
+    [SerializeField] private float torchValue, abilityValue;
+    private WaitForSeconds wfs = new WaitForSeconds(1f);
+    private Coroutine thisRoutine;
+    [SerializeField] private GameActionFloat activationCall;
+    
+    
 
 
     private void Awake()
     {
         playerInfo.torchChange += RespondToTorch;
+        activationCall.raise += ActivateAbility;
+    }
+
+    private void Start()
+    {
+        abilityValue = 0;
+    }
+
+    private void OnEnable()
+    {
+        blackLightObjects.Clear();
+        RespondToTorch(playerInfo.GetTorchStatus());
+    }
+
+    private void OnDisable()
+    {
+        RespondToTorch(false);
     }
 
     private IEnumerator RunBlacklight()
     {
-        WaitForEndOfFrame wff= new WaitForEndOfFrame();
         while (running)
         {
-            yield return wff;
+            yield return null;
             Shader.SetGlobalVector(PointLightPosition, transform.position);
-            Shader.SetGlobalFloat(TorchSwitch, torchValue);
+            Shader.SetGlobalFloat(TorchSwitch, torchValue*abilityValue);
         }
     }
 
@@ -59,9 +81,45 @@ public class BlackLightData : MonoBehaviour
     {
         torchValue = isOn ? 1 : 0;
     }
-
+    
     private void OnDestroy()
     {
         playerInfo.torchChange -= RespondToTorch;
+        activationCall.raise -= ActivateAbility;
+    }
+    
+    
+    // THESE METHODS ARE FOR MANAGING THE ABILITY BEING ACTIVE
+    private void ActivateAbility(float duration)
+    {
+        if (thisRoutine != null)
+        {
+            StopCoroutine(thisRoutine);
+        }
+        thisRoutine = StartCoroutine(ActiveDetector(duration));
+    }
+    
+    private IEnumerator ActiveDetector(float duration)
+    {
+        abilityValue = 1;
+        //tell UI to turn on?
+        float elapsedTime = 0;
+        while (elapsedTime < duration)
+        {
+            yield return wfs;
+            elapsedTime += 1f;
+        }
+        //fade shaders out
+        
+        elapsedTime =  2f;
+        while (elapsedTime >0)
+        {
+            abilityValue =elapsedTime / 2f;
+            elapsedTime -= Time.deltaTime;
+            yield return null;
+        }
+        abilityValue = 0;
+        //tell UI to turn off?
+        thisRoutine = null;
     }
 }

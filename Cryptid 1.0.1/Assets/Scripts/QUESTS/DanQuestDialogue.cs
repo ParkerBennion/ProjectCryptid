@@ -96,6 +96,7 @@ public class DanQuestDialogueSO : QuestDialogueKeeperSO
         new string[] {"NessieDialogueStep 5"},
         new string[] {"NessieDialogueStep 6"},
         new string[] {"NessieDialogueStep 7"},
-        new string[] {"NessieDialogueStep 8"}
+        new string[] {"NessieDialogueStep 8"},
+        new string[] {"NessieDialogueStep 9"}
     };
 };

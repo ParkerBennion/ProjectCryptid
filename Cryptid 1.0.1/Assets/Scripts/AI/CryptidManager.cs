@@ -48,7 +48,7 @@ public abstract class CryptidManager : MonoBehaviour
 
     public void MoveToLocation(Vector3 newLocation)
     {
-        if (!navAgent.isOnNavMesh) return;
+        if (!navAgent.isOnNavMesh) return; 
         navAgent.isStopped = true;
         if (NavMesh.SamplePosition(newLocation, out NavMeshHit hit, 20f, NavMesh.AllAreas))
         {
@@ -58,6 +58,8 @@ public abstract class CryptidManager : MonoBehaviour
             ResetAI();
         }
         else Debug.LogWarning("NO NAVMESH FOUND, ABORTING TELEPORT");
+
+        navAgent.isStopped = false;
     }
 
     public void FlashHurt()

@@ -2031,7 +2031,7 @@ GameObject:
   - component: {fileID: 7639394811957496548}
   m_Layer: 7
   m_Name: Cryptid_Wendigo
-  m_TagString: Untagged
+  m_TagString: Cryptid
   m_Icon: {fileID: 419385456094870383, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2291,8 +2291,8 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
+  m_UseGravity: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
@@ -2607,7 +2607,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7957611997051687216}
   - component: {fileID: 8523849356474182477}
-  - component: {fileID: 361392193483395912}
+  - component: {fileID: 362708125528485390}
   m_Layer: 7
   m_Name: DetectSensor
   m_TagString: Untagged
@@ -2651,7 +2651,7 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 6
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &361392193483395912
+--- !u!114 &362708125528485390
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2660,7 +2660,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5932241325496247380}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b8e655aa11ba504aa5cc810e57194f9, type: 3}
+  m_Script: {fileID: 11500000, guid: cd1921ea2cb3c0844a114dd0b5f7c9dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   detectEvent:
@@ -2685,7 +2685,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 5607830380607762379}
-        m_TargetAssemblyTypeName: WendigoManager, Assembly-CSharp
+        m_TargetAssemblyTypeName: CryptidManager, Assembly-CSharp
         m_MethodName: SetTarget
         m_Mode: 0
         m_Arguments:
@@ -2696,6 +2696,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  thisCollider: {fileID: 8523849356474182477}
+  playerInfo: {fileID: 11400000, guid: 5d112b78f37dda646a93d2fd7ed1babe, type: 2}
 --- !u!1 &6397181654282609114
 GameObject:
   m_ObjectHideFlags: 0

@@ -59,14 +59,43 @@ public class RangerQuestDialogueSO : QuestDialogueKeeperSO
         };
     public override string[][] NessieQuestDialogues { get; protected set; } =
     {
-        new string[] {"NessieDialogueStep 1"},
-        new string[] {"NessieDialogueStep 2"},
-        new string[] {"NessieDialogueStep 3"},
-        new string[] {"NessieDialogueStep 4"},
-        new string[] {"NessieDialogueStep 5"},
-        new string[] {"NessieDialogueStep 6"},
-        new string[] {"NessieDialogueStep 7"},
-        new string[] {"NessieDialogueStep 8"}
+        new string[]//step 1 Know about the lake, but haven't found it
+        {
+            "NessieDialogueStep 1"
+        },
+        new string[]//Step 2 Seen signs of nessie in the lake
+        {
+            "NessieDialogueStep 2",
+            "ProgressQuest"
+        },
+        new string[]//Step 3 Talked to the ranger about the lake
+        {
+            "NessieDialogueStep 3"
+        },
+        new string[]//Step 4 Found the floaty
+        {
+            "NessieDialogueStep 4"
+        },
+        new string[]//Step 5 Bought the pump from dan
+        {
+            "NessieDialogueStep 5"
+        },
+        new string[]//Step 6 Nabbed the camera
+        {
+            "NessieDialogueStep 6"
+        },
+        new string[]// Step 7 successfully got a photo of nessie after playing stealth game
+        {
+            "NessieDialogueStep 7"
+        },
+        new string[]// Step 8 destroyed the nessie 
+        {
+            "NessieDialogueStep 8"
+        },
+        new string[]// Step 9 Showed the photo to dan
+        {
+        "NessieDialogueStep 9"
+        }
     };
     
     

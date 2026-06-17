@@ -5348,6 +5348,7 @@ GameObject:
   - component: {fileID: 2455107177263849715}
   - component: {fileID: 3788230248666350780}
   - component: {fileID: 5227759962305718631}
+  - component: {fileID: 6393423982902870136}
   m_Layer: 0
   m_Name: BearTrap
   m_TagString: Untagged
@@ -10382,6 +10383,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 6393423982902870136}
+        m_TargetAssemblyTypeName: BeartrapBehavior, Assembly-CSharp
+        m_MethodName: AddSlow
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   unDetectEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -10402,6 +10415,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minYAngle: 0
   maxYAngle: 179
+--- !u!114 &6393423982902870136
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6631278285862504160}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6751349ce6df1514a981fc2922a99ba2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slowCall: {fileID: 11400000, guid: 846037c667c75e748a62ed8c14db6cce, type: 2}
+  playerInfo: {fileID: 11400000, guid: 5d112b78f37dda646a93d2fd7ed1babe, type: 2}
+  slowDuration: 3
+  slowMultiplier: 0.5
 --- !u!1 &7195296878022559630
 GameObject:
   m_ObjectHideFlags: 0

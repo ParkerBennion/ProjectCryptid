@@ -183,12 +183,21 @@ MonoBehaviour:
   shuffleMoves: 100
   hiddenButtonPrefabs:
   - {fileID: 2266261338750783559, guid: 361fd47a19f954d40800b87776d0109d, type: 3}
-  - {fileID: 2266261338750783559, guid: 0a493d0d5466c8f45acbc60ad6285d83, type: 3}
-  numberOfHiddenButtons: 3
+  - {fileID: 1658097615611799154, guid: c1c07a3010b85e348a5dd500b015fcdc, type: 3}
+  - {fileID: 2266261338750783559, guid: ee3659335ee4d7647b1fe1fac4e64f2d, type: 3}
+  - {fileID: 2266261338750783559, guid: 411fbfc22b27f7c4684c8cc4032e43a5, type: 3}
+  - {fileID: 2266261338750783559, guid: d0de9d9e407ae354b94504ed28090f39, type: 3}
+  numberOfHiddenButtons: 10
   allowHiddenButtonOnEmptySlot: 1
   onPuzzleSolved:
     m_PersistentCalls:
       m_Calls: []
+  animateTiles: 1
+  slideDuration: 0.15
+  highlightMovableTiles: 1
+  movableTileScale: 1.12
+  normalTileScale: 1
+  animationLayer: {fileID: 0}
 --- !u!114 &4291142302199254181
 MonoBehaviour:
   m_ObjectHideFlags: 0
