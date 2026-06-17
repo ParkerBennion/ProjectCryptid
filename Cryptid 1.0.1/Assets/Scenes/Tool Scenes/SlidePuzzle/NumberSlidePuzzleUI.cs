@@ -1,19 +1,35 @@
-using System.Collections.Generic;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class NumberSlidePuzzleUI : MonoBehaviour
 {
-    [Header("Puzzle Settings")]
-    [SerializeField] private int gridSize;
-    [SerializeField] private GameObject tileButtonPrefab;
-    [SerializeField] private GameObject slotPrefab;
-
     [Header("Puzzle Images")]
     [SerializeField] private Sprite[] puzzleSprites;
     [SerializeField] private bool repeatSprites = true;
+    [SerializeField] private string tileImageChildName = "TileImage";
+    
+    [Header("Animation")]
+    [SerializeField] private bool animateTiles = true;
+    [SerializeField] private float slideDuration = 0.15f;
+    [SerializeField] private RectTransform animationLayer;
+
+    [Header("Move Hint")]
+    [SerializeField] private bool highlightMovableTiles = true;
+    [SerializeField] private float normalTileScale = 1f;
+    [SerializeField] private float movableTileScale = 1.08f;
+    [SerializeField] private bool showMovableTileBorders = true;
+    [SerializeField] private bool useOutlineBorder = true;
+    [SerializeField] private Color movableBorderColor = Color.yellow;
+    [SerializeField] private Vector2 movableBorderSize = new Vector2(4f, 4f);
+    [SerializeField] private string borderChildName = "Border";
+    
+    [Header("Puzzle Settings")]
+    [SerializeField] private int gridSize = 6;
+    [SerializeField] private GameObject tileButtonPrefab;
+    [SerializeField] private GameObject slotPrefab;
 
     [Header("Shuffle")]
     [SerializeField] private bool shuffleOnStart = true;
@@ -26,19 +42,10 @@ public class NumberSlidePuzzleUI : MonoBehaviour
 
     [Header("Events")]
     [SerializeField] private UnityEvent onPuzzleSolved;
+
     
-    [Header("Animation")]
-    [SerializeField] private bool animateTiles = true;
-    [SerializeField] private float slideDuration = 0.15f;
-    
-    [Header("Move Hint")]
-    [SerializeField] private bool highlightMovableTiles = true;
-    [SerializeField] private float movableTileScale = 1.08f;
-    [SerializeField] private float normalTileScale = 1f;
-    
+
     private readonly List<GameObject> usedHiddenButtonPrefabs = new();
-    
-    [SerializeField] private RectTransform animationLayer;
 
     private int emptyIndex;
     private bool isSolved;
@@ -61,6 +68,8 @@ public class NumberSlidePuzzleUI : MonoBehaviour
 
         if (shuffleOnStart)
             ShufflePuzzle();
+
+        UpdateMovableTileHighlights();
     }
 
     private void GeneratePuzzle()
@@ -96,12 +105,11 @@ public class NumberSlidePuzzleUI : MonoBehaviour
 
             Button button = tileObj.GetComponent<Button>();
 
-            Image image = tileObj.GetComponent<Image>();
+            Image image = GetTileImage(tileObj);
+
             if (image != null && puzzleSprites != null && puzzleSprites.Length > 0)
             {
-                int spriteIndex = repeatSprites
-                    ? i % puzzleSprites.Length
-                    : i;
+                int spriteIndex = repeatSprites ? i % puzzleSprites.Length : i;
 
                 if (spriteIndex < puzzleSprites.Length)
                 {
@@ -124,7 +132,18 @@ public class NumberSlidePuzzleUI : MonoBehaviour
 
             tiles.Add(tile);
         }
+
         UpdateMovableTileHighlights();
+    }
+
+    private Image GetTileImage(GameObject tileObj)
+    {
+        Transform tileImageChild = tileObj.transform.Find(tileImageChildName);
+
+        if (tileImageChild != null)
+            return tileImageChild.GetComponent<Image>();
+
+        return tileObj.GetComponent<Image>();
     }
 
     private void TryMoveTile(TileData tile)
@@ -144,7 +163,7 @@ public class NumberSlidePuzzleUI : MonoBehaviour
             onPuzzleSolved?.Invoke();
         }
     }
-    
+
     private bool IsAdjacent(int a, int b)
     {
         int ax = a % gridSize;
@@ -164,6 +183,8 @@ public class NumberSlidePuzzleUI : MonoBehaviour
         tile.slotIndex = newSlot;
         emptyIndex = oldSlot;
 
+        ClearMovableTileHighlights();
+
         if (animateTiles)
         {
             StartCoroutine(AnimateTileMove(tile, newSlot));
@@ -172,10 +193,12 @@ public class NumberSlidePuzzleUI : MonoBehaviour
         {
             tile.obj.transform.SetParent(slots[newSlot]);
             tile.obj.transform.SetAsLastSibling();
+
             StretchToParent(tile.obj.GetComponent<RectTransform>());
+            UpdateMovableTileHighlights();
         }
     }
-    
+
     private IEnumerator AnimateTileMove(TileData tile, int newSlot)
     {
         isAnimating = true;
@@ -232,8 +255,24 @@ public class NumberSlidePuzzleUI : MonoBehaviour
                 return;
 
             TileData randomTile = movableTiles[Random.Range(0, movableTiles.Count)];
-            MoveTileToEmptySlot(randomTile);
+            MoveTileToEmptySlotInstant(tile: randomTile);
         }
+
+        UpdateMovableTileHighlights();
+    }
+
+    private void MoveTileToEmptySlotInstant(TileData tile)
+    {
+        int oldSlot = tile.slotIndex;
+        int newSlot = emptyIndex;
+
+        tile.slotIndex = newSlot;
+        emptyIndex = oldSlot;
+
+        tile.obj.transform.SetParent(slots[newSlot], false);
+        tile.obj.transform.SetAsLastSibling();
+
+        StretchToParent(tile.obj.GetComponent<RectTransform>());
     }
 
     private List<TileData> GetMovableTiles()
@@ -301,22 +340,88 @@ public class NumberSlidePuzzleUI : MonoBehaviour
 
         StretchToParent(hiddenButton.GetComponent<RectTransform>());
     }
+
     private void UpdateMovableTileHighlights()
     {
-        if (!highlightMovableTiles)
-            return;
-
         foreach (TileData tile in tiles)
         {
             bool canMove = IsAdjacent(tile.slotIndex, emptyIndex);
 
             RectTransform rect = tile.obj.GetComponent<RectTransform>();
 
-            if (rect != null)
+            if (rect != null && highlightMovableTiles)
             {
                 float targetScale = canMove ? movableTileScale : normalTileScale;
                 rect.localScale = Vector3.one * targetScale;
             }
+
+            UpdateTileBorder(tile, canMove);
+        }
+    }
+
+    private void ClearMovableTileHighlights()
+    {
+        foreach (TileData tile in tiles)
+        {
+            RectTransform rect = tile.obj.GetComponent<RectTransform>();
+
+            if (rect != null)
+                rect.localScale = Vector3.one * normalTileScale;
+
+            UpdateTileBorder(tile, false);
+        }
+    }
+
+    private void UpdateTileBorder(TileData tile, bool canMove)
+    {
+        Image tileImage = GetTileImage(tile.obj);
+        Transform borderChild = tile.obj.transform.Find(borderChildName);
+
+        if (!showMovableTileBorders)
+        {
+            if (tileImage != null)
+            {
+                Outline outline = tileImage.GetComponent<Outline>();
+
+                if (outline != null)
+                    outline.enabled = false;
+            }
+
+            if (borderChild != null)
+                borderChild.gameObject.SetActive(false);
+
+            return;
+        }
+
+        if (useOutlineBorder)
+        {
+            if (tileImage != null)
+            {
+                Outline outline = tileImage.GetComponent<Outline>();
+
+                if (outline == null)
+                    outline = tileImage.gameObject.AddComponent<Outline>();
+
+                outline.effectColor = movableBorderColor;
+                outline.effectDistance = movableBorderSize;
+                outline.enabled = canMove;
+            }
+
+            if (borderChild != null)
+                borderChild.gameObject.SetActive(false);
+        }
+        else
+        {
+            if (tileImage != null)
+            {
+                Outline outline = tileImage.GetComponent<Outline>();
+
+                if (outline != null)
+                    outline.enabled = false;
+            }
+
+            if (borderChild != null)
+                borderChild.gameObject.SetActive(canMove);
         }
     }
 
@@ -338,5 +443,7 @@ public class NumberSlidePuzzleUI : MonoBehaviour
 
         if (shuffleOnStart)
             ShufflePuzzle();
+
+        UpdateMovableTileHighlights();
     }
 }
