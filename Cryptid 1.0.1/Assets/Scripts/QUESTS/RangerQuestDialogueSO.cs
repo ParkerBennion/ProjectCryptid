@@ -61,40 +61,68 @@ public class RangerQuestDialogueSO : QuestDialogueKeeperSO
     {
         new string[]//step 1 Know about the lake, but haven't found it
         {
-            "NessieDialogueStep 1"
+            "The old stillwater lake? Yea, I know about it. I've heard rumors about it, but never done much investigating myself",
+            "I know roughly how to find it, here, let me see that compass of yours",
+            "There you are hun, I've marked it down for you. Not sure how that compass works, but hopefully those directions help"
         },
         new string[]//Step 2 Seen signs of nessie in the lake
         {
-            "NessieDialogueStep 2",
+            "Howdy Caleb!, ever find that lake?",
+            "...Well shoot dang, ripples that big?",
+            "I might have an inkling on what might be in that lake, but you must keep it between the two of us...",
+            "The old stories go, there's a monster of sorts in a lake 'round these parts, but nothin concrete ever came of it",
+            "Been hearing bout these sightings since I was a young girl, but never heard anything about anyone getting hurt",
+            "How about you and I take a proper look into it, what do you say?",
+            "I'll need you to gather some things first. We'll need an old floaty, and a camera of some sort.",
+            "The last group of boys to camp here had a floaty they threw away that would do nicely",
+            "I haven't emptied the dumpster yet, it's probably still in there. I'm sure dan has his old bike pump you could use to reinflate it",
+            "As for a camera, I'll look around at what's in this-here tower, but you'll probably have to go find one yourself.",
+            "Maybe Dan has one of those as well!",
+            "When you've gathered this up, meet me at the lake. We'll find out what's really in there!",
             "ProgressQuest"
         },
         new string[]//Step 3 Talked to the ranger about the lake
         {
-            "NessieDialogueStep 3"
+            "The ole dumpster by the outhouse has a floaty we can use, and Dan's got a pump you can use to inflate it",
+            "You'll have to find a camera somewhere though"
         },
         new string[]//Step 4 Found the floaty
         {
-            "NessieDialogueStep 4"
+            "Found the floaty?",
+            "Thats the one! Excellent, now we just need to get the pump from Dan to inflate it"
         },
         new string[]//Step 5 Bought the pump from dan
         {
-            "NessieDialogueStep 5"
+            "You paid how much for the pump?",
+            "Dan, that old cheapskate!",
+            "Never mind that, we need a camera!",
+            "I think Dan might have some for his sasquatch hunting, but he won't take kindly to them going missing",
+            "Perhaps you can 'borrow' one, I've seen one of his traps around skull rock.",
+            "Careful though, don't get caught, his traps aren't the safest... or the cleanest"
         },
         new string[]//Step 6 Nabbed the camera
         {
-            "NessieDialogueStep 6"
+            "Excellent work kid!",
+            "Now, meet me by the lake here soon, we'll see if my inkling turns out true!"
         },
         new string[]// Step 7 successfully got a photo of nessie after playing stealth game
         {
-            "NessieDialogueStep 7"
+            "...",
+            "Well color me stupid and send me back to school!",
+            "Mama always told me stories about the lake monster, but now I know they ain't no stories!!!",
+            "She's a real sweetheart too, that 'monster'",
+            "Question now is, what are you gonna do with that photo?",
+            "You put in the work here, I'll let you decide, but whatever you do, do NOT show it to Dan",
+            "One can only imagine what that man would do if he knew about our friend here..."
         },
-        new string[]// Step 8 destroyed the nessie 
+        new string[]// Step 8 destroyed the nessie photo
         {
-            "NessieDialogueStep 8"
+            "Sad we can't share our friend here with the world, but it's probably for the better",
+            "I'll bet she'd be real grateful if she knew what you'd done for her!"
         },
         new string[]// Step 9 Showed the photo to dan
         {
-        "NessieDialogueStep 9"
+        "Remember, don't share that photo with Dan. Lord knows what he'd do with that information"
         }
     };
     
