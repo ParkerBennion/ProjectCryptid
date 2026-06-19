@@ -2149,7 +2149,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCurrentHealth: 0
-  maxHealth: 20
+  maxHealth: 18
   damageEvent:
     m_PersistentCalls:
       m_Calls:
