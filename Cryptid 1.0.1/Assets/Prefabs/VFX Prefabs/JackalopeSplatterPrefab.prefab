@@ -111,7 +111,7 @@ MonoBehaviour:
   - {fileID: 7835740818892888821, guid: ea737792e50af644a96377696353215e, type: 3}
   - {fileID: 7835740818892888821, guid: a3aa93279fabb3340a5db37cc255ce06, type: 3}
   - {fileID: 7835740818892888821, guid: 3ae8330cc75fe2447ae6106a2721989b, type: 3}
-  extraLootChance: 1
+  extraLootChance: 75
   extraLootRolls: 2
   airTime: 1
   launchHeight: 3

@@ -97,10 +97,11 @@ GameObject:
   - component: {fileID: 5271275774393914263}
   - component: {fileID: 2085680125968848189}
   - component: {fileID: 6631781337099280960}
-  - component: {fileID: 6567833332848826682}
   - component: {fileID: 6228810832932100831}
   - component: {fileID: 6245232261620927265}
   - component: {fileID: 414927858814153505}
+  - component: {fileID: 7358252165511152373}
+  - component: {fileID: 8172443662443952325}
   m_Layer: 8
   m_Name: Cache
   m_TagString: Untagged
@@ -177,39 +178,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2578964689760540885}
   m_Mesh: {fileID: -2256149073134819162, guid: 43d6d633d99bb334cb38e6e257be1ad9, type: 3}
---- !u!114 &6567833332848826682
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2578964689760540885}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84b01c381caa53d4c936bc92b4901444, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lootPool:
-  - {fileID: 4007342267130033609, guid: 045fc9a70811ea345b15a53a68986bfa, type: 3}
-  - {fileID: 8527232963266207746, guid: 341d98b01c84f6947a7795c4b60fb150, type: 3}
-  - {fileID: 5632847012983937674, guid: ff90e4bd98c4b2441b074f76447758ba, type: 3}
-  - {fileID: 6005470697690076103, guid: 5cce1f5bf0b2cfe459046642b1c3f06b, type: 3}
-  openEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 6228810832932100831}
-        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
-        m_MethodName: SetTrigger
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: Open
-          m_BoolArgument: 0
-        m_CallState: 2
-  lootTrajectoryForce: {x: 0, y: 0, z: 500}
 --- !u!95 &6228810832932100831
 Animator:
   serializedVersion: 7
@@ -280,6 +248,79 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!114 &7358252165511152373
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2578964689760540885}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79538a858e148724ea951899940cc380, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  entityCurrentHealth: 0
+  maxHealth: 1
+  damageEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  deathEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8172443662443952325}
+        m_TargetAssemblyTypeName: CryptidLootDrop, Assembly-CSharp
+        m_MethodName: SpawnLoot
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 6228810832932100831}
+        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+        m_MethodName: SetTrigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Open
+          m_BoolArgument: 0
+        m_CallState: 2
+  invulnerable: 0
+--- !u!114 &8172443662443952325
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2578964689760540885}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52c0c662eea611b45b57631a36481d66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numWispsMin: 25
+  numWispsMax: 40
+  wispPrefabSmall: {fileID: 7835740818892888821, guid: 13e7dfc61d15784438923f605eb80cef, type: 3}
+  wispPrefabBig: {fileID: 7835740818892888821, guid: 12bafe103266b3f4eb74422c26c278eb, type: 3}
+  extraLootItems:
+  - {fileID: 7835740818892888821, guid: ea737792e50af644a96377696353215e, type: 3}
+  - {fileID: 7835740818892888821, guid: a3aa93279fabb3340a5db37cc255ce06, type: 3}
+  - {fileID: 7835740818892888821, guid: 3ae8330cc75fe2447ae6106a2721989b, type: 3}
+  - {fileID: 8527232963266207746, guid: 341d98b01c84f6947a7795c4b60fb150, type: 3}
+  - {fileID: 5632847012983937674, guid: ff90e4bd98c4b2441b074f76447758ba, type: 3}
+  - {fileID: 6005470697690076103, guid: 5cce1f5bf0b2cfe459046642b1c3f06b, type: 3}
+  extraLootChance: 1
+  extraLootRolls: 1
+  airTime: 1
+  launchHeight: 3
+  range: 3
 --- !u!1 &7538947307565041901
 GameObject:
   m_ObjectHideFlags: 0
@@ -291,7 +332,7 @@ GameObject:
   - component: {fileID: 6068878121761427885}
   - component: {fileID: 5581412052536302547}
   m_Layer: 0
-  m_Name: SupplyCacheTransformShell
+  m_Name: SupplyCacheNew
   m_TagString: Untagged
   m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0

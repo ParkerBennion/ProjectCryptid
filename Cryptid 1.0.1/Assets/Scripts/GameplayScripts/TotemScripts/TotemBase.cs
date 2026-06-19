@@ -90,6 +90,7 @@ public abstract class TotemBase : MonoBehaviour
 
             // Add the new totem to the character
             TotemBase newTotem = (TotemBase)character.AddComponent(newTotemType);
+            newTotem.playerInfo = playerInfo;
             newTotem.Initialize();
             print("SHOWUP");
             newTotem.typeAction = typeAction;
@@ -103,6 +104,7 @@ public abstract class TotemBase : MonoBehaviour
             Type newTotemType = this.GetType();
             //character.AddComponent(newTotemType);
             TotemBase newTotem = (TotemBase)character.AddComponent(newTotemType);
+            newTotem.playerInfo = playerInfo;
             newTotem.Initialize();
             print("SHOWUP");
             newTotem.typeAction = typeAction;

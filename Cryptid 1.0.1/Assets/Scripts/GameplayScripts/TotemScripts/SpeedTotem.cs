@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class SpeedTotem : TotemBase
 {
-    private float runSpeedBonus = 5f;
+    private float runSpeedBonus = 1.5f;
     [SerializeField]private float totemActiveDuration = 3;
     private Animator characterAnimator;
     private WaitForSeconds totemDuration;
