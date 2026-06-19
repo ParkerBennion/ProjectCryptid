@@ -414,7 +414,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 066ddfbb1df887e4fa2c3a6c65cbddc0, type: 2}
   rareEncounterList:
   - {fileID: 11400000, guid: e0e617b398f08ea44bd3cafa3fa5ec3f, type: 2}
-  - {fileID: 11400000, guid: e5e0afc4309a5874a8d3c0723b716af6, type: 2}
   rareEncounterChance: 100
   player: {fileID: 1102599369749899774}
 --- !u!4 &140217392
