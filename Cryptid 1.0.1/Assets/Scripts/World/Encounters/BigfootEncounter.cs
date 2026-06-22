@@ -43,7 +43,8 @@ public class BigfootEncounter : Encounter
                 if (calebInfo.GetDisguised())
                 {
                     bigfootInstance.GetComponent<BigfootAIController>().TurnToPlayer(player);
-                    yield return new WaitForSeconds(2);
+                    bigfootInstance.GetComponent<Animator>().SetTrigger("Love");
+                    yield return new WaitForSeconds(3);
                     AdoptTheKid();
                     yield break;
                 }

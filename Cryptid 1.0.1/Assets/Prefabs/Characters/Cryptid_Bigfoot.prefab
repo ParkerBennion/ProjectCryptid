@@ -2579,7 +2579,7 @@ GameObject:
   - component: {fileID: 2263070751858239963}
   m_Layer: 0
   m_Name: Cryptid_Bigfoot
-  m_TagString: Untagged
+  m_TagString: Cryptid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

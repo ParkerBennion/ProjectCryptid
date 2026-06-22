@@ -11,7 +11,7 @@ public class DanShopItem : MonoBehaviour
     [SerializeField] private UnityEvent purchaseEvent;
     [SerializeField] private GameObject inventoryItemPrefab;
     [SerializeField] private bool isUniqueItem;
-    [SerializeField] private GameAction updateUICall;
+    [SerializeField] private GameAction updateUICall, insufficientCall;
     private string ItemID => inventoryItemPrefab != null ? inventoryItemPrefab.name : string.Empty;
     [SerializeField] private Sprite itemImage;
     [SerializeField] private string description;
@@ -36,6 +36,7 @@ public class DanShopItem : MonoBehaviour
         if (PlayerDataManager.Instance.playerData.logs < price)
         {
             print("Not enough wisps, go get some more");
+            insufficientCall.RaiseAction();
             return;
         }
         inventory.AddItem(ItemID, 1);

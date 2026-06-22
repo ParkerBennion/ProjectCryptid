@@ -6,6 +6,7 @@ MonoImporter:
   defaultReferences:
   - typeAction: {fileID: 11400000, guid: 715d75003b19216498b698474ea45c55, type: 2}
   - playerCharacter: {instanceID: 0}
+  - playerInfo: {fileID: 11400000, guid: 5d112b78f37dda646a93d2fd7ed1babe, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

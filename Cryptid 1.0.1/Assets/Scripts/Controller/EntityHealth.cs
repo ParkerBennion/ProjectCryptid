@@ -49,5 +49,10 @@ public class EntityHealth : MonoBehaviour, IDamageable
         invulnerable = true;
         deathEvent?.Invoke();
     }
+
+    public void SetInvulnerable(bool val)
+    {
+        invulnerable = val;
+    }
     
 }

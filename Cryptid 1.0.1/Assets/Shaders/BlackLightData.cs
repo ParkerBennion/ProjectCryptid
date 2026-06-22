@@ -103,6 +103,7 @@ public class BlackLightData : MonoBehaviour
     private IEnumerator ActiveDetector(float duration)
     {
         abilityValue = 1;
+        playerInfo.SetBlacklight(true);
         UICall.RaiseAction(true);
         float elapsedTime = 0;
         while (elapsedTime < duration)
@@ -120,6 +121,7 @@ public class BlackLightData : MonoBehaviour
             yield return null;
         }
         abilityValue = 0;
+        playerInfo.SetBlacklight(false);
         thisRoutine = null;
     }
 }

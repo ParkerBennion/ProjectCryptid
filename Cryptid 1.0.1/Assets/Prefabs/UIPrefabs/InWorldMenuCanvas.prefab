@@ -11180,6 +11180,7 @@ MonoBehaviour:
   displayText: {fileID: 1083090635566165265}
   fieldName: logs
   updateDisplayAction: {fileID: 11400000, guid: a7489fb67a5207048a90be0ecce927ec, type: 2}
+  insufficientAction: {fileID: 11400000, guid: a924f443916663b48911c061295541d3, type: 2}
 --- !u!95 &8480979620838044031
 Animator:
   serializedVersion: 7

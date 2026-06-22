@@ -6725,6 +6725,7 @@ MonoBehaviour:
   displayText: {fileID: 5637705300556654858}
   fieldName: logs
   updateDisplayAction: {fileID: 11400000, guid: a7489fb67a5207048a90be0ecce927ec, type: 2}
+  insufficientAction: {fileID: 11400000, guid: a924f443916663b48911c061295541d3, type: 2}
 --- !u!95 &6305126052682359102
 Animator:
   serializedVersion: 7
@@ -8054,6 +8055,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1501075802360509916, guid: d4385c567219d27419609c8d60ac997d, type: 3}
+      propertyPath: insufficientCall
+      value: 
+      objectReference: {fileID: 11400000, guid: a924f443916663b48911c061295541d3, type: 2}
+    - target: {fileID: 1501075802360509916, guid: d4385c567219d27419609c8d60ac997d, type: 3}
       propertyPath: descriptionUpdater
       value: 
       objectReference: {fileID: 8185426790522944177}
@@ -8061,6 +8066,34 @@ PrefabInstance:
       propertyPath: inventoryItemPrefab
       value: 
       objectReference: {fileID: 2697879771539688577, guid: ea71e5a2fc132df44a40e7597cad89e4, type: 3}
+    - target: {fileID: 1501075802360509916, guid: d4385c567219d27419609c8d60ac997d, type: 3}
+      propertyPath: purchaseEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1501075802360509916, guid: d4385c567219d27419609c8d60ac997d, type: 3}
+      propertyPath: purchaseEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1501075802360509916, guid: d4385c567219d27419609c8d60ac997d, type: 3}
+      propertyPath: purchaseEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1034188841491608246}
+    - target: {fileID: 1501075802360509916, guid: d4385c567219d27419609c8d60ac997d, type: 3}
+      propertyPath: purchaseEvent.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1501075802360509916, guid: d4385c567219d27419609c8d60ac997d, type: 3}
+      propertyPath: purchaseEvent.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: CheckForAdvanceQuest
+      objectReference: {fileID: 0}
+    - target: {fileID: 1501075802360509916, guid: d4385c567219d27419609c8d60ac997d, type: 3}
+      propertyPath: purchaseEvent.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: PumpPurchaseQuestCheck, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1501075802360509916, guid: d4385c567219d27419609c8d60ac997d, type: 3}
+      propertyPath: purchaseEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 6408834245911336187, guid: d4385c567219d27419609c8d60ac997d, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -8160,8 +8193,30 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 612920865561924596, guid: d4385c567219d27419609c8d60ac997d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1034188841491608246}
   m_SourcePrefab: {fileID: 100100000, guid: d4385c567219d27419609c8d60ac997d, type: 3}
+--- !u!1 &818374072479691078 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 612920865561924596, guid: d4385c567219d27419609c8d60ac997d, type: 3}
+  m_PrefabInstance: {fileID: 277809916443681458}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1034188841491608246
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 818374072479691078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ffae856a98e91844bcd191dc9adb18b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NessieQuestData: {fileID: 11400000, guid: b096b8c626a69b94fa1e198060802741, type: 2}
+  activeStep: 4
 --- !u!224 &7458382783224129085 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7231519885883491471, guid: d4385c567219d27419609c8d60ac997d, type: 3}
@@ -8628,6 +8683,10 @@ PrefabInstance:
       propertyPath: description
       value: This Powder can be burned in your torch to reveal hidden secrets
       objectReference: {fileID: 0}
+    - target: {fileID: 1501075802360509916, guid: d4385c567219d27419609c8d60ac997d, type: 3}
+      propertyPath: insufficientCall
+      value: 
+      objectReference: {fileID: 11400000, guid: a924f443916663b48911c061295541d3, type: 2}
     - target: {fileID: 1501075802360509916, guid: d4385c567219d27419609c8d60ac997d, type: 3}
       propertyPath: descriptionUpdater
       value: 

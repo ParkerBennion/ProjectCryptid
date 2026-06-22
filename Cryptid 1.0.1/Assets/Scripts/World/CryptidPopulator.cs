@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.Mathematics;
 using UnityEngine;
+using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
 public class CryptidPopulator : MonoBehaviour
@@ -16,7 +17,7 @@ public class CryptidPopulator : MonoBehaviour
     private Vector2 spawnLocationCached;
     private Coroutine currentRoutine;
     private bool wranglePaused;
-    [SerializeField] private int maximumCryptids, startingCryptids, cryptidPeriodicIncreaseAmount;
+    [SerializeField] private int maximumCryptids, startingCryptids, cryptidPeriodicIncreaseAmount, spawnPool;
     private WaitForSeconds wfsWrangle, teleportBuffer;
     private WaitUntil _waitIfPaused;
     [SerializeField][Range(10,180)] private float frontalConeSize;
@@ -32,6 +33,7 @@ public class CryptidPopulator : MonoBehaviour
         wfsWrangle = new WaitForSeconds(wrangleFrequency);
         _waitIfPaused = new WaitUntil(()=>!wranglePaused);
         teleportBuffer = new WaitForSeconds(2);
+        spawnPool = 0;
     }
 
     private void Initialize()
@@ -87,7 +89,7 @@ public class CryptidPopulator : MonoBehaviour
         CryptidManager cryptid;
         for (int i = 0; i < numCryptids; i++)
         {
-            cryptid = Instantiate(cryptidList[Random.Range(0, cryptidList.Length)],
+            cryptid = Instantiate(cryptidList[Random.Range(0, spawnPool)],
                     FindSpawnWithinFullRangeOfPlayer() + playerCharacter.transform.position, quaternion.identity).GetComponent<CryptidManager>();
             activeCryptids.Add(cryptid);
         }
@@ -145,13 +147,19 @@ public class CryptidPopulator : MonoBehaviour
 
     private IEnumerator DifficultyIncreaseRoutine()//increases cryptid population over time
     {
+        float spawnIndexRange = 1;
+        //int rounds = 0;
         WaitForSeconds wfsSpawner = new WaitForSeconds(cryptidSpawnerData.populationIncreaseIntervalSeconds);
         while (true)
         {
             yield return wfsSpawner;
             yield return _waitIfPaused;
             yield return teleportBuffer;
+            spawnIndexRange += .4f;
+            spawnPool = Mathf.Clamp((int)spawnIndexRange, 0, 3);
             SetCryptidPopulation(maximumCryptids+cryptidPeriodicIncreaseAmount);
+            //rounds++;
+            //print(rounds+" "+spawnIndexRange);
         }
     }
     // create a system that checks periodically if cryptids are out of range and relocate them
