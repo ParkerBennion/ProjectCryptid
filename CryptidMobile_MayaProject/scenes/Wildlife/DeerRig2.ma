@@ -1,6 +1,6 @@
 //Maya ASCII 2025ff03 scene
 //Name: DeerRig2.ma
-//Last modified: Sun, Jun 21, 2026 06:16:39 PM
+//Last modified: Sun, Jun 21, 2026 06:18:22 PM
 //Codeset: 1252
 requires maya "2025ff03";
 requires -nodeType "ikSpringSolver" "ikSpringSolver" "1.0";
@@ -14,12 +14,12 @@ fileInfo "product" "Maya 2025";
 fileInfo "version" "2025";
 fileInfo "cutIdentifier" "202409190603-cbdc5a7e54";
 fileInfo "osv" "Windows 10 Home v2009 (Build: 19045)";
-fileInfo "UUID" "CC95F8D0-409F-31FF-7813-D09A6F69B6FC";
+fileInfo "UUID" "E0CD57A3-425B-5875-87FA-6C9F7FE34078";
 createNode transform -s -n "persp";
 	rename -uid "FFBA4609-4447-5AA2-557D-8C96D4CD28B7";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -14.992789133612598 -2.0447509018057803 0.36861842739579287 ;
-	setAttr ".r" -type "double3" 12.261647414890229 629.79999999994561 -6.869998111961196e-13 ;
+	setAttr ".t" -type "double3" 10.1001966040771 3.013107413418223 7.3673190761356278 ;
+	setAttr ".r" -type "double3" -4.538352584945244 777.39999999997963 -7.3791925294845777e-16 ;
 	setAttr ".rp" -type "double3" 3.552713678800501e-17 1.4210854715202004e-16 2.8421709430404008e-16 ;
 	setAttr ".rpt" -type "double3" 1.4239736901731e-13 -2.2442692412755839e-13 1.9170493174885065e-13 ;
 createNode camera -s -n "perspShape" -p "persp";
@@ -28,7 +28,7 @@ createNode camera -s -n "perspShape" -p "persp";
 	setAttr ".fl" 34.999999999999979;
 	setAttr ".ncp" 0.001;
 	setAttr ".fcp" 100;
-	setAttr ".coi" 15.916424213794375;
+	setAttr ".coi" 12.258236983554312;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -1533,6 +1533,15 @@ createNode mesh -n "DEER_BODY_MESHShapeOrig" -p "DEER_BODY_MESH";
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode transform -n "DEER_ANTLERS_MESH" -p "Geo";
 	rename -uid "18F65AEE-4376-4149-F49C-F9AA68567302";
+	setAttr -l on ".tx";
+	setAttr -l on ".ty";
+	setAttr -l on ".tz";
+	setAttr -l on ".rx";
+	setAttr -l on ".ry";
+	setAttr -l on ".rz";
+	setAttr -l on ".sx";
+	setAttr -l on ".sy";
+	setAttr -l on ".sz";
 	setAttr ".rp" -type "double3" 0 0 0.49848944798694145 ;
 	setAttr ".sp" -type "double3" 0 0 0.49848944798694145 ;
 createNode mesh -n "DEER_ANTLERS_MESHShape" -p "DEER_ANTLERS_MESH";
@@ -1541,6 +1550,18 @@ createNode mesh -n "DEER_ANTLERS_MESHShape" -p "DEER_ANTLERS_MESH";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
 	setAttr ".pv" -type "double2" 0.78057950735092163 0.70843720436096191 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr ".vcs" 2;
+createNode mesh -n "DEER_ANTLERS_MESHShapeOrig" -p "DEER_ANTLERS_MESH";
+	rename -uid "5B866823-45B9-9DED-098E-82A6B17F36F6";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr -s 226 ".uvst[0].uvsp[0:225]" -type "float2" 0.80239844 0.70895374
 		 0.80437732 0.68881643 0.82664943 0.71727562 0.81228828 0.733091 0.79686093 0.73362291
@@ -5107,7 +5128,7 @@ createNode joint -n "Neck_2_Jnt" -p "Neck_1_Jnt";
 createNode joint -n "Head_Jnt" -p "Neck_2_Jnt";
 	rename -uid "66428CE8-406C-B4D0-BEBA-C8B988656492";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
-	setAttr ".oc" 7;
+	setAttr ".uoc" 1;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jot" -type "string" "none";
@@ -5118,6 +5139,8 @@ createNode joint -n "Head_Jnt" -p "Neck_2_Jnt";
 createNode joint -n "L_Ear_Jnt" -p "Head_Jnt";
 	rename -uid "3354A8E2-4C7E-C1FE-F551-B0AEC5FAC250";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
+	setAttr ".uoc" 1;
+	setAttr ".oc" 1;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".bps" -type "matrix" 0.99999999999999956 0 0 0 0 0.99999999999999978 -5.5511151231257827e-17 0
@@ -5159,6 +5182,8 @@ createNode scaleConstraint -n "L_Ear_Jnt_scaleConstraint1" -p "L_Ear_Jnt";
 createNode joint -n "R_Ear_Jnt" -p "Head_Jnt";
 	rename -uid "7BA9780D-4B93-EB9C-87B7-B8A4D8BA44F4";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
+	setAttr ".uoc" 1;
+	setAttr ".oc" 1;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" -180 0 0 ;
@@ -8858,6 +8883,7 @@ createNode displayLayer -n "GEOMETRYLAYER";
 	setAttr ".do" 1;
 createNode displayLayer -n "Skeleton_Layer";
 	rename -uid "F5DCFC9F-4217-2EF0-3C26-FF900EB6FB5A";
+	setAttr ".v" no;
 	setAttr ".ufem" -type "stringArray" 0  ;
 	setAttr ".do" 2;
 createNode displayLayer -n "Controls_Layer";
@@ -10624,6 +10650,183 @@ createNode unitConversion -n "unitConversion33";
 createNode unitConversion -n "unitConversion34";
 	rename -uid "76F82168-4DFA-1193-0A72-50A530CD8099";
 	setAttr ".cf" 0.01;
+createNode skinCluster -n "skinCluster4";
+	rename -uid "0177C603-4E63-8954-3521-588856F30A71";
+	setAttr -s 167 ".wl";
+	setAttr ".wl[0:166].w"
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1
+		1 0 1;
+	setAttr ".pm[0]" -type "matrix" 1.0000000000000004 -0 0 -0 -0 1.0000000000000002 5.5511151231257839e-17 0
+		 0 2.2204460492503136e-16 1 -0 0 -251.20460510253926 -147.16757202148435 1;
+	setAttr ".gm" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+	setAttr ".dpf[0]"  4;
+	setAttr ".mmi" yes;
+	setAttr ".ucm" yes;
 select -ne :time1;
 	setAttr ".o" 10;
 	setAttr ".unw" 10;
@@ -10677,6 +10880,7 @@ select -ne :ikSystem;
 connectAttr "GEOMETRYLAYER.di" "DEER_BODY_MESH.do";
 connectAttr "skinCluster3.og[0]" "DEER_BODY_MESHShape.i";
 connectAttr "tweak1.vl[0].vt[1]" "DEER_BODY_MESHShape.twl";
+connectAttr "skinCluster4.og[0]" "DEER_ANTLERS_MESHShape.i";
 connectAttr "GEOMETRYLAYER.di" "DEER_BODY_MESH_PAINTHOLD.do";
 connectAttr "skinCluster2.og[0]" "DEER_BODY_MESH_PAINTHOLDShape.i";
 connectAttr "Skeleton_Layer.di" "Skeleton.do";
@@ -14039,6 +14243,12 @@ connectAttr "ikHandle1_poleVectorConstraint1.ctz" "unitConversion31.i";
 connectAttr "ikHandle2_poleVectorConstraint1.ctx" "unitConversion32.i";
 connectAttr "ikHandle2_poleVectorConstraint1.cty" "unitConversion33.i";
 connectAttr "ikHandle2_poleVectorConstraint1.ctz" "unitConversion34.i";
+connectAttr "DEER_ANTLERS_MESHShapeOrig.w" "skinCluster4.ip[0].ig";
+connectAttr "DEER_ANTLERS_MESHShapeOrig.o" "skinCluster4.orggeom[0]";
+connectAttr "Head_Jnt.wm" "skinCluster4.ma[0]";
+connectAttr "Head_Jnt.liw" "skinCluster4.lw[0]";
+connectAttr "Head_Jnt.obcc" "skinCluster4.ifcl[0]";
+connectAttr "bindPose1.msg" "skinCluster4.bp";
 connectAttr "CalebSIZEREFERENCE:Pine_GeneratorSG.pa" ":renderPartition.st" -na;
 connectAttr "CalebSIZEREFERENCE:Caleb_Geometry:lambert1SG.pa" ":renderPartition.st"
 		 -na;
