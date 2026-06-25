@@ -8,6 +8,7 @@ public class BigfootEncounter : Encounter
 {
     [SerializeField] private PlayerInfoSO calebInfo;
     [SerializeField] private GameObject bigfootPrefab, bigfootInstance;
+    [SerializeField] private BigfootAIController bigfootController;
     private GameObject player;
     [SerializeField] private float detectionRange, despawnRange;
     private bool detected;
@@ -20,7 +21,7 @@ public class BigfootEncounter : Encounter
 
     public override IEnumerator EncounterRoutine()
     {
-        
+        bigfootController = bigfootInstance.GetComponent<BigfootAIController>();
         float tickTime = .25f;
         detected = false;
         float distanceFromPlayer;
@@ -42,15 +43,16 @@ public class BigfootEncounter : Encounter
                 //decide if caleb is disguised or not 
                 if (calebInfo.GetDisguised())
                 {
-                    bigfootInstance.GetComponent<BigfootAIController>().TurnToPlayer(player);
+                    bigfootController.TurnToPlayer(player);
                     bigfootInstance.GetComponent<Animator>().SetTrigger("Love");
+                    bigfootController.FocusBigfoot();
                     yield return new WaitForSeconds(3);
                     AdoptTheKid();
                     yield break;
                 }
                 bigfootInstance.GetComponent<Animator>().SetTrigger("Alerted");
                 yield return WFS;
-                bigfootInstance.GetComponent<BigfootAIController>().TurnToPlayer(player);
+                bigfootController.TurnToPlayer(player);
                 detectedEvent.Invoke();
             }
             yield return WFS;

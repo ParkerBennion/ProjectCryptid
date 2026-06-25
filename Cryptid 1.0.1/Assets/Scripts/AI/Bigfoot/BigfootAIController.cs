@@ -2,13 +2,15 @@ using System.Collections;
 using Unity.AI.Navigation;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.Events;
 
 public class BigfootAIController : MonoBehaviour
 {
     [SerializeField] private NavMeshAgent agent;
     [SerializeField] private Animator animator;
     private GameObject playerCharacter;
-    [SerializeField] private GameObject binoculars;
+    [SerializeField] private GameObject binoculars, virtualCam;
+    [SerializeField] private GameAction hideUIAction, cryptidCalloffAction;
 
 
     public void Flee()
@@ -43,6 +45,13 @@ public class BigfootAIController : MonoBehaviour
             transform.rotation = Quaternion.Slerp(startRotation, endRotation, elapsedTime / turnTime);
             elapsedTime += Time.deltaTime;
         }
+    }
+
+    public void FocusBigfoot()
+    {
+        cryptidCalloffAction.RaiseAction();
+        hideUIAction.RaiseAction();
+        virtualCam.SetActive(true);
     }
 
     private IEnumerator FleeRoutine()
