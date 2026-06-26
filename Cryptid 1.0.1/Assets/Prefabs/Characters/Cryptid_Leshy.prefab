@@ -13498,6 +13498,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TestLeshyProjectile
       objectReference: {fileID: 0}
+    - target: {fileID: 6584580215262681606, guid: 06f707ebe90c79f4bae5e95889a83334, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
