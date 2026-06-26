@@ -109,6 +109,13 @@ MonoBehaviour:
   borderCode: 010000000000000000000000010000000000000000000000
   tileNavMeshData: {fileID: 0}
   navMesh: {fileID: -7057526927656438233}
+  assetsPrefab: {fileID: 0}
+  assetsObj: {fileID: 0}
+  overrideRotation: 0
+  WaystoneData: {fileID: 0}
+  overrideTexture: {fileID: 0}
+  overrideAssets: []
+  maskAssigner: {fileID: 0}
 --- !u!64 &3238660502408694174
 MeshCollider:
   m_ObjectHideFlags: 0

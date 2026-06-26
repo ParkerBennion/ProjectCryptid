@@ -3,9 +3,10 @@ using UnityEngine;
 
 public class AttackTotem :TotemBase
 {
-    private float multiplier = 2f;
+    private float multiplier = 1.5f;
     private float placeholderFloat;
     private Animator animator;
+    private PlayerAttack attackScript;
     public override void Activate()
     {
         if(!canUseAbility)
@@ -13,6 +14,7 @@ public class AttackTotem :TotemBase
         base.Activate();
         StartCoroutine(ActivateCooldown());
         print("Crazy flame ability");
+        attackScript.HeavyAttack(true);
         animator.Play("Heavy Release");
         animator.Play("LurchForward");
         if (chargeUsesRemaining <= 0)
@@ -26,6 +28,7 @@ public class AttackTotem :TotemBase
         chargeUsesRemaining = 3;
         canUseAbility = true;//end here
         animator = playerCharacter.GetComponent<CharacterInputController>().animator;
+        attackScript = playerCharacter.GetComponent<PlayerAttack>();
         playerInfo.ChangeAttackModifier("TotemAttackBonus", multiplier);// this replaces the code below, but needs testing
         /*
         if (TryGetComponent(out PlayerAttack atk))
@@ -40,7 +43,7 @@ public class AttackTotem :TotemBase
 
     public override void SelfDestruct()
     {
-        GetComponent<PlayerAttack>().damageMultiplier = placeholderFloat;
+        playerInfo.ChangeAttackModifier("TotemAttackBonus", 1f);
         base.SelfDestruct();
     }
 }

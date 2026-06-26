@@ -8,13 +8,14 @@ public class DataDisplayUpdater : MonoBehaviour
     private static readonly int Pulse = Animator.StringToHash("Pulse");
     public TMP_Text displayText;
     public string fieldName = "logs";
-    [SerializeField] private GameAction updateDisplayAction; // Reference to the GameAction
+    [SerializeField] private GameAction updateDisplayAction, insufficientAction; // Reference to the GameAction
     private DataBlockSO data;
     private Animator animator;
 
     private void Awake()
     {
         animator = GetComponent<Animator>();
+        insufficientAction.raise += FlashDisplay;
     }
 
     private void Start()
@@ -42,6 +43,7 @@ public class DataDisplayUpdater : MonoBehaviour
         {
             updateDisplayAction.raise -= UpdateDisplay; // Unsubscribe to avoid memory leaks
         }
+        insufficientAction.raise -= FlashDisplay;
     }
 
     public void UpdateDisplay()
@@ -59,5 +61,10 @@ public class DataDisplayUpdater : MonoBehaviour
             Debug.LogWarning($"Field '{fieldName}' not found in DataBlockSO.");
         }
         animator.SetTrigger(Pulse);
+    }
+
+    public void FlashDisplay()
+    {
+        animator.SetTrigger("Flash");
     }
 }

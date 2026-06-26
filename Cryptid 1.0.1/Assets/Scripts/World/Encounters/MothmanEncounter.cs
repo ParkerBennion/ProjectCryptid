@@ -21,8 +21,8 @@ public class MothmanEncounter : Encounter
         if (mothManInstance)
         {
             Destroy(mothManInstance);
-        };
-       uiToggleEvent.RaiseAction();
+        }
+        uiToggleEvent.RaiseAction();
     }
 
     public override IEnumerator EncounterRoutine()

@@ -16,6 +16,7 @@ public class BlackLightData : MonoBehaviour
     private WaitForSeconds wfs = new WaitForSeconds(1f);
     private Coroutine thisRoutine;
     [SerializeField] private GameActionFloat activationCall;
+    [SerializeField] private GameActionBool UICall;
     
     
 
@@ -102,7 +103,8 @@ public class BlackLightData : MonoBehaviour
     private IEnumerator ActiveDetector(float duration)
     {
         abilityValue = 1;
-        //tell UI to turn on?
+        playerInfo.SetBlacklight(true);
+        UICall.RaiseAction(true);
         float elapsedTime = 0;
         while (elapsedTime < duration)
         {
@@ -110,16 +112,16 @@ public class BlackLightData : MonoBehaviour
             elapsedTime += 1f;
         }
         //fade shaders out
-        
-        elapsedTime =  2f;
+        UICall.RaiseAction(false);
+        elapsedTime =  4f;
         while (elapsedTime >0)
         {
-            abilityValue =elapsedTime / 2f;
+            abilityValue =elapsedTime / 4f;
             elapsedTime -= Time.deltaTime;
             yield return null;
         }
         abilityValue = 0;
-        //tell UI to turn off?
+        playerInfo.SetBlacklight(false);
         thisRoutine = null;
     }
 }

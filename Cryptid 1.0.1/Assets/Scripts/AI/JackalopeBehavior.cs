@@ -9,6 +9,7 @@ public class JackalopeBehavior : MonoBehaviour, IDamageable
    [SerializeField] private Animator animator;
    public bool running, dead;
    [SerializeField] private UnityEvent deathEvent;
+   [SerializeField] private GameObject lootDropPrefab;
    
    
 
@@ -36,6 +37,12 @@ public class JackalopeBehavior : MonoBehaviour, IDamageable
    {
       running = false;
       dead = true;
+      DropLoot();
       deathEvent.Invoke();
+   }
+
+   public void DropLoot()
+   {
+      Instantiate(lootDropPrefab, gameObject.transform.position, Quaternion.identity, null);
    }
 }

@@ -89,6 +89,7 @@ public class MothmanManager : MonoBehaviour
     private void ResetAggro()
     {
         aggroCurrent = 0;
+        aggroMaterial.SetFloat("_Alpha",aggroCurrent / aggroMax);
         _mothmanSummoned = false;
     }
 

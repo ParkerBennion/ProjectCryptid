@@ -7,7 +7,7 @@ using UnityEngine.Events;
 public class PlayerInfoSO : ScriptableObject
 {
     [SerializeField] private GameAction torchOnAction, torchOffAction;
-    [SerializeField] private bool torchIsActive;
+    [SerializeField] private bool torchIsActive, blackLightOn;
     [SerializeField]private bool isDisguised;
     [SerializeField] private float playerSpeedCurrent;
     public float playerSpeedDefault;
@@ -64,6 +64,16 @@ public class PlayerInfoSO : ScriptableObject
     {
         isDisguised = value;
         suitChange.Invoke(isDisguised);
+    }
+
+    public void SetBlacklight(bool val)
+    {
+        blackLightOn = val;
+    }
+
+    public bool GetBlacklight()
+    {
+        return blackLightOn;
     }
     public void ToggleSuit()
     {

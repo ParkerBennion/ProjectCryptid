@@ -3,7 +3,7 @@ using UnityEngine;
 public class CollectibleWisp : MonoBehaviour
 {
     [Tooltip("How many coins this chunk gives")]
-    public int logValue = 1;
+    public int wispValue = 1;
 
     /*[Tooltip("GameAction to trigger when logs are updated")]
     public GameAction updateDisplayAction; // Reference to the GameAction*/
@@ -18,7 +18,7 @@ public class CollectibleWisp : MonoBehaviour
         // Get the current player data
         if (PlayerDataManager.Instance != null && PlayerDataManager.Instance.playerData != null)
         {
-            PlayerDataManager.Instance.playerData.logs += logValue;
+            PlayerDataManager.Instance.playerData.logs += wispValue;
             //Debug.Log($"Collected wood chunk. Added {logValue} logs. Total: {PlayerDataManager.Instance.playerData.logs}");
             if(callAction)
                 callAction.RaiseAction();
@@ -40,5 +40,6 @@ public class CollectibleWisp : MonoBehaviour
         rb.linearVelocity=Vector3.zero;
         rb.angularVelocity = Vector3.zero;
     }
+
 
 }

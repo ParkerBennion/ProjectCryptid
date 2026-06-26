@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class CryptidRelocator : MonoBehaviour
 {
@@ -12,6 +13,10 @@ public class CryptidRelocator : MonoBehaviour
             if (other.TryGetComponent(out CryptidManager managerScript))
             {
                 managerScript.MoveToLocation(teleportLocation.position);
+            }
+            else if (other.TryGetComponent(out NavMeshAgent agent))
+            {
+                agent.Warp(teleportLocation.position);
             }
         }
     }

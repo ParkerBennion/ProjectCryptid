@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4579782319458491518}
   - component: {fileID: 12245001966117875}
   - component: {fileID: 8830690887540673104}
+  - component: {fileID: 6178719385847771252}
   m_Layer: 5
   m_Name: FloatieTrashGameButton
   m_TagString: Untagged
@@ -153,6 +154,52 @@ MonoBehaviour:
   playerTag: 
   pickupEvent:
     m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: b096b8c626a69b94fa1e198060802741, type: 2}
+        m_TargetAssemblyTypeName: QuestIntData, Assembly-CSharp
+        m_MethodName: SetValue
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 4
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  destroyOnPickup: 0
+  logToConsole: 0
+--- !u!114 &6178719385847771252
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1658097615611799154}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1b2d1645894d264bbb016179f2fd89d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  refreshCall: {fileID: 11400000, guid: 634ed8c8c16f20845ababdc5b021cab2, type: 2}
+  questStepRequired: 3
+  questReference: {fileID: 11400000, guid: b096b8c626a69b94fa1e198060802741, type: 2}
+  activateEvent:
+    m_PersistentCalls:
       m_Calls: []
-  destroyOnPickup: 1
-  logToConsole: 1
+  deactivateEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1658097615611799154}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  useOnlyOnThisQuestStep: 1

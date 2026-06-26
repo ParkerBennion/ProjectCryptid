@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3150804804597684123}
   - component: {fileID: 3182124727693230727}
   - component: {fileID: 3436915522076670668}
+  - component: {fileID: 5785190380207908749}
   m_Layer: 0
   m_Name: SplatterPrefab
   m_TagString: Untagged
@@ -66,18 +67,55 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 3182124727693230727}
         m_TargetAssemblyTypeName: DestroyBehavior, Assembly-CSharp
-        m_MethodName: DestroyObject
+        m_MethodName: DestroyAfterSeconds
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 7
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 5785190380207908749}
+        m_TargetAssemblyTypeName: CryptidLootDrop, Assembly-CSharp
+        m_MethodName: SpawnLoot
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
-          m_FloatArgument: 0
+          m_FloatArgument: 7
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  delay: 7
+  delay: 0
   startOnStart: 1
+--- !u!114 &5785190380207908749
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 472526503852951626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52c0c662eea611b45b57631a36481d66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numWispsMin: 7
+  numWispsMax: 15
+  wispPrefabSmall: {fileID: 7835740818892888821, guid: 13e7dfc61d15784438923f605eb80cef, type: 3}
+  wispPrefabBig: {fileID: 7835740818892888821, guid: 12bafe103266b3f4eb74422c26c278eb, type: 3}
+  extraLootItems:
+  - {fileID: 7835740818892888821, guid: ea737792e50af644a96377696353215e, type: 3}
+  - {fileID: 7835740818892888821, guid: a3aa93279fabb3340a5db37cc255ce06, type: 3}
+  - {fileID: 7835740818892888821, guid: 3ae8330cc75fe2447ae6106a2721989b, type: 3}
+  extraLootChance: 0.25
+  extraLootRolls: 1
+  airTime: 1
+  launchHeight: 3
+  range: 3.5
 --- !u!1 &2184993336052639982
 GameObject:
   m_ObjectHideFlags: 0

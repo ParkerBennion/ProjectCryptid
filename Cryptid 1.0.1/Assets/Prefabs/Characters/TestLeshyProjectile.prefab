@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 2347759550364359420}
   - component: {fileID: 4480841089840715585}
   - component: {fileID: 696868619438392802}
-  - component: {fileID: 8358672881337875858}
   - component: {fileID: 2156978336501612396}
   - component: {fileID: 3549150447906722517}
   m_Layer: 0
@@ -180,10 +179,10 @@ MonoBehaviour:
   detectEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8358672881337875858}
-        m_TargetAssemblyTypeName: PrintBehavior, Assembly-CSharp
-        m_MethodName: PrintString
-        m_Mode: 5
+      - m_Target: {fileID: 3193693717913105445}
+        m_TargetAssemblyTypeName: SeekerProjectile, Assembly-CSharp
+        m_MethodName: InvokeRandomEvent
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -210,18 +209,6 @@ MonoBehaviour:
   playerParameterEvent:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &8358672881337875858
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2856676630208480975}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 89b305ddd29baaa459d8b714c3cb4a3e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!199 &2156978336501612396
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -5033,13 +5020,14 @@ GameObject:
   - component: {fileID: 4297346935496873766}
   - component: {fileID: 3193693717913105445}
   - component: {fileID: 6622583161311512240}
+  - component: {fileID: 8565243434216962501}
   m_Layer: 0
   m_Name: TestLeshyProjectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4297346935496873766
 Transform:
   m_ObjectHideFlags: 0
@@ -5050,7 +5038,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 2.63, y: 0.66, z: 6.76}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.25, y: 1.25, z: 1.25}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2300240381680426107}
@@ -5070,9 +5058,100 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   agent: {fileID: 6622583161311512240}
   target: {fileID: 0}
+  dizzyPrefab: {fileID: 0}
   lifeSpan: 3
   parentTransform: {fileID: 0}
-  possibleHitEvents: []
+  possibleHitEvents:
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8565243434216962501}
+        m_TargetAssemblyTypeName: PrintBehavior, Assembly-CSharp
+        m_MethodName: PrintString
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: ReverseDirection
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 11400000, guid: 5d112b78f37dda646a93d2fd7ed1babe, type: 2}
+        m_TargetAssemblyTypeName: PlayerInfoSO, Assembly-CSharp
+        m_MethodName: SetRunDirection
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: -1
+          m_StringArgument: ReverseDirection
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: DelayedEventBehavior, Assembly-CSharp
+        m_MethodName: StartCountdown
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: -1
+          m_StringArgument: ReverseDirection
+          m_BoolArgument: 0
+        m_CallState: 2
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8565243434216962501}
+        m_TargetAssemblyTypeName: PrintBehavior, Assembly-CSharp
+        m_MethodName: PrintString
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: SpawnLeaves
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: SpawnLeaves
+          m_BoolArgument: 1
+        m_CallState: 2
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8565243434216962501}
+        m_TargetAssemblyTypeName: PrintBehavior, Assembly-CSharp
+        m_MethodName: PrintString
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: DropWisps
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: DropWisps, Assembly-CSharp
+        m_MethodName: SpawnItems
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: DropWisps
+          m_BoolArgument: 0
+        m_CallState: 2
   stopTrackingEvent:
     m_PersistentCalls:
       m_Calls:
@@ -5113,7 +5192,7 @@ NavMeshAgent:
   m_Speed: 20
   m_Acceleration: 20
   avoidancePriority: 50
-  m_AngularSpeed: 0.5
+  m_AngularSpeed: 0.1
   m_StoppingDistance: 0
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 0
@@ -5122,3 +5201,15 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &8565243434216962501
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6584580215262681606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89b305ddd29baaa459d8b714c3cb4a3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

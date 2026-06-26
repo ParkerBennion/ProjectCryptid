@@ -89,14 +89,65 @@ public class DanQuestDialogueSO : QuestDialogueKeeperSO
 
     public override string[][] NessieQuestDialogues { get; protected set; } =
     {
-        new string[] {"NessieDialogueStep 1"},
-        new string[] {"NessieDialogueStep 2"},
-        new string[] {"NessieDialogueStep 3"},
-        new string[] {"NessieDialogueStep 4"},
-        new string[] {"NessieDialogueStep 5"},
-        new string[] {"NessieDialogueStep 6"},
-        new string[] {"NessieDialogueStep 7"},
-        new string[] {"NessieDialogueStep 8"},
-        new string[] {"NessieDialogueStep 9"}
+        new string[] //step 1, looking for the lake
+            {"Have ye seen that creepy lookin' lake? Here, I'll mark it on your fancy lil compass ye got there"},
+        new string[]//step 2, found the lake and something in it
+        {
+            "Howdy Christopher!",
+            "You found the ole lake!",
+            "Something big in there? How big!?!?",
+            "Hermph. I've heard stories of all kinds of things in that there lake... prize fish, big ole snappin turts...",
+            "I sure would like to see what something that big tastes-",
+            "erm... LOOKS like",
+            "I'm sure Ellie might know sumthin bout catchin a big ole sumthin in the lake, but again, she won't tell me nothin"
+        },
+        new string[]//step 3, talked to ranger and searching for the floaty
+        {
+            "I knew that woman knew somethin!",
+            "She wants my bike pump?",
+            "Hmph. I'll let you have it, I guess...",
+            "But it's gunna cost ya somethin!",
+            "Check out my shop! I've got all sorts of thinger-ma-bobs that might interest ya!"
+        },
+        new string[] //step 4, has floaty but needs to buy pump from dan
+        {
+            "I knew that woman knew somethin!",
+            "She wants my bike pump? For that little floaty thing?",
+            "Hmph. I'll let you have it, should do the trick, I guess...",
+            "But it's gunna cost ya somethin!",
+            "Check out my shop! I've got all sorts of thinger-ma-bobs that might interest ya!"
+                
+        },
+        new string[] //step 5, looking for the camera
+        {
+            "Hope you like that pump! I use it to blow bubbles in my chocolate milk! You should try it!",
+            "I'd sell you one of my cameras, but they're all out watchin my traps I've left for them creatures we have in the woods",
+            "One of these days I tell ye! Squatch is gonna be mine!",
+            "Don't you go stealin' my cameras though, go find yer own!"
+        },
+        new string[]//step 6, stolen dan's camera
+        {
+            "Is that my camera!?",
+            "Thanks fer finding it!",
+            ">>>DEVELOPER NOTE, DAN NEEDS TO STEAL BACK THE CAMERA AT THIS PHASE"
+        },
+        new string[]//step 7, have the photo of nessie
+        {
+            "The camp cryptid monster! Wow! Look at the size of it!",
+            "I'll have to go meet yer friend! She looks real sweet-like, I could just eat'er up!",
+            "ProgressQuest"
+        },
+        new string[] //step 8, revealed nessie to dan
+        {
+            "Hey Cleo!",
+            "I went to catch...er...MEET that fishy friend of yers!",
+            "On a COMPLETELY separate note, you should try these grilled fish tacos! Cooked'em meself!"
+        },
+        new string[]//step 9, destroyed the evidence
+        {
+            "Never found what it was in that lake did ya?",
+            "That there's too bad, never managed to find anything interesting there meself, haven't bothered to ever go back",
+            "Guess I was right!"
+        }
     };
 };
