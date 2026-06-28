@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 24704a09cf855c249a7e560950a8fe82
+guid: dfa74c7891af29c47af3c2475fbbb710
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -7,18 +7,8 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Stump_1_StumpsMat
-    second: {fileID: 2100000, guid: 244a0a6a65fce6543b524d4e6f258360, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Stumps_Stump_2Mat
-    second: {fileID: 2100000, guid: 244a0a6a65fce6543b524d4e6f258360, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Stumps_Stump_3Mat
-    second: {fileID: 2100000, guid: 244a0a6a65fce6543b524d4e6f258360, type: 2}
+      name: standardSurface1
+    second: {fileID: 2100000, guid: f55685c6ccb9a8c489c21d9d998dab7e, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -48,7 +38,7 @@ ModelImporter:
     isReadable: 0
   meshes:
     lODScreenPercentages: []
-    globalScale: 0.01
+    globalScale: 1
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
@@ -103,7 +93,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 0.01
+    globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0

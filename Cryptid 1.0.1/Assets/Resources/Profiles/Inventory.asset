@@ -13,13 +13,11 @@ MonoBehaviour:
   m_Name: Inventory
   m_EditorClassIdentifier: 
   items:
-  - itemName: CompassButton
-    amount: 1
   - itemName: BigfootSuitButton
     amount: 1
+  - itemName: BlacklightButton
+    amount: 20
   - itemName: PumpButton
     amount: 1
   - itemName: NessiePhotoItem
     amount: 1
-  - itemName: BlacklightButton
-    amount: 9
