@@ -18,7 +18,6 @@ public class SpawnWispsAtCoordinates : MonoBehaviour
 
     private IEnumerator SpawnWisps()
     {
-        GameObject wispInstance;
         yield return new WaitForSeconds(spawnDelay);
         foreach (Vector3 location in SpawnLocations)
         {

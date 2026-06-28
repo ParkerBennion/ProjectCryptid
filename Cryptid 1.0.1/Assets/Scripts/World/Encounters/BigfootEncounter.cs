@@ -21,13 +21,13 @@ public class BigfootEncounter : Encounter
 
     public override IEnumerator EncounterRoutine()
     {
-        bigfootController = bigfootInstance.GetComponent<BigfootAIController>();
         float tickTime = .25f;
         detected = false;
         float distanceFromPlayer;
         WaitForSeconds WFS = new WaitForSeconds(tickTime);
         player = encounterManager.player;
         bigfootInstance = Instantiate(bigfootPrefab, encounterManager.FindSpawnInFrontOfPlayer(), Quaternion.identity,null).gameObject;
+        bigfootController = bigfootInstance.GetComponent<BigfootAIController>();
         bigfootInstance.transform.Rotate(Vector3.up*Random.Range(0f,359f));
         while (!detected)
         {
