@@ -1,6 +1,7 @@
 using UnityEngine;
-[CreateAssetMenu(fileName = "NewPlayerData", menuName = "Save System/Player Data")]
+using System.Collections.Generic;
 
+[CreateAssetMenu(fileName = "NewPlayerData", menuName = "Save System/Player Data")]
 public class DataBlockSO : ScriptableObject
 {
     public GameAction onValueChanged;
@@ -9,27 +10,19 @@ public class DataBlockSO : ScriptableObject
     public string playerName;
     public bool hasCompletedTutorial;
     public bool initialBoot = false;
-    
 
     [Header("Stats")]
     public int logs = 0;
-    //logs is tied to other scripts and for simplicity must stay logs
+    // logs is tied to other scripts and for simplicity must stay logs
 
-    [Header("Display Info")] 
-    public int screenWidth;
-
-    public int screenHeight;
-    
-    
     public int coins = 0;
 
-    //[Header("Settings")]
-    //public bool musicOn;
-    //public bool soundOn;
-    //public float musicVolume;
-    //public string language = "English";
+    [Header("Quest Data")]
+    public List<QuestIntSaveEntry> questInts = new List<QuestIntSaveEntry>();
 
-    // You can add/remove any fields above.
+    [Header("Display Info")]
+    public int screenWidth;
+    public int screenHeight;
 
     public void NotifyChanged()
     {
@@ -47,4 +40,11 @@ public class DataBlockSO : ScriptableObject
         coins += amount;
         NotifyChanged();
     }
+}
+
+[System.Serializable]
+public class QuestIntSaveEntry
+{
+    public string id;
+    public int value;
 }
