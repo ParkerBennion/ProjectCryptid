@@ -11,6 +11,12 @@ public abstract class TotemBase : MonoBehaviour
     [SerializeField] protected int chargeUsesTotal, chargeUsesRemaining;
     [SerializeField] protected PlayerInfoSO playerInfo;
     //[SerializeField] public CharacterController characterAnimator;
+    
+    public static event Action<TotemBase> OnTotemChargesChanged;
+    public static event Action<TotemBase> OnTotemRemoved;
+
+    public int ChargeUsesTotal => chargeUsesTotal;
+    public int ChargeUsesRemaining => chargeUsesRemaining;
 
     protected virtual void Awake()
     {
@@ -52,15 +58,19 @@ public abstract class TotemBase : MonoBehaviour
         {
             controller.activeTotem = this;
         }
-        
+        OnTotemChargesChanged?.Invoke(this);
     }
 
 
     public virtual void Activate()
     {
-        //Debug.Log("Default Totem does nothing");
         chargeUsesRemaining--;
-        print(chargeUsesRemaining+" out of "+chargeUsesTotal+" remaining");
+        chargeUsesRemaining = Mathf.Clamp(chargeUsesRemaining, 0, chargeUsesTotal);
+
+        print(chargeUsesRemaining + " out of " + chargeUsesTotal + " remaining");
+
+        RefreshAbilityUI();
+        //OnTotemChargesChanged?.Invoke(this);
     }
     
     public virtual void ReplaceCurrentTotemOnCharacter()
@@ -115,6 +125,8 @@ public abstract class TotemBase : MonoBehaviour
 
     public virtual void SelfDestruct()
     {
+        OnTotemRemoved?.Invoke(this);
+
         playerCharacter.GetComponent<CharacterInputController>().activeTotem = null;
         typeAction.RaiseAction(TotemType.Empty);
         Destroy(this);
@@ -126,6 +138,11 @@ public abstract class TotemBase : MonoBehaviour
             yield break;
         yield return new WaitForSeconds(abilityCooldown);//here is the cooldown for the ability
         canUseAbility = true;
+    }
+    
+    protected void RefreshAbilityUI()
+    {
+        OnTotemChargesChanged?.Invoke(this);
     }
 
     
