@@ -7,6 +7,7 @@ public class GeoCache : MonoBehaviour, IDamageable
     private bool hasOpened;
     [SerializeField] private UnityEvent lootEvent;
     [SerializeField] private PlayerInfoSO playerInfo;
+    public GeoCacheSpawner spawner;
 
     private void Awake()
     {
@@ -21,6 +22,14 @@ public class GeoCache : MonoBehaviour, IDamageable
         {
             lootEvent?.Invoke();
             hasOpened = true;
+        }
+    }
+
+    private void OnDestroy()
+    {
+        if (spawner != null)
+        {
+            spawner.cacheDestroyedEvent?.Invoke();
         }
     }
 }

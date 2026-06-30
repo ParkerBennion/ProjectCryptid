@@ -1,25 +1,24 @@
-//Maya ASCII 2025ff03 scene
+//Maya ASCII 2026 scene
 //Name: Deer Rig.ma
-//Last modified: Sat, Jan 24, 2026 04:52:11 PM
+//Last modified: Sun, Jun 21, 2026 04:00:33 AM
 //Codeset: 1252
-requires maya "2025ff03";
+requires maya "2026";
 requires -nodeType "ikSpringSolver" "ikSpringSolver" "1.0";
+requires "stereoCamera" "10.0";
+requires -nodeType "aiOptions" -nodeType "aiImagerDenoiserOidn" "mtoa" "5.5.4.2";
 requires -nodeType "ngst2SkinLayerData" -dataType "ngst2SkinLayerDataStorage" "ngSkinTools2" "2.4.0";
-requires "stereoCamera" "10.0";
-requires -nodeType "aiOptions" -nodeType "aiImagerDenoiserOidn" "mtoa" "5.4.5";
-requires "stereoCamera" "10.0";
 currentUnit -l meter -a degree -t film;
 fileInfo "application" "maya";
-fileInfo "product" "Maya 2025";
-fileInfo "version" "2025";
-fileInfo "cutIdentifier" "202409190603-cbdc5a7e54";
-fileInfo "osv" "Windows 10 Home v2009 (Build: 19045)";
-fileInfo "UUID" "A422601A-4664-8356-2FAB-468107CE391F";
+fileInfo "product" "Maya 2026";
+fileInfo "version" "2026";
+fileInfo "cutIdentifier" "202510291147-60ec9eda33";
+fileInfo "osv" "Windows 10 Pro for Workstations v2009 (Build: 19045)";
+fileInfo "UUID" "DBB23C45-42BB-B1F6-6278-3DBDD4B4A86A";
 createNode transform -s -n "persp";
 	rename -uid "FFBA4609-4447-5AA2-557D-8C96D4CD28B7";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 10.592111672112978 3.7811018275671007 5.438332320280356 ;
-	setAttr ".r" -type "double3" -11.138352586909598 -292.19999999991796 0 ;
+	setAttr ".t" -type "double3" 5.8547352754389905 2.7418232589344029 1.3848007901643216 ;
+	setAttr ".r" -type "double3" -2.1383525869176232 -270.19999999989091 0 ;
 	setAttr ".rp" -type "double3" 3.552713678800501e-17 1.4210854715202004e-16 2.8421709430404008e-16 ;
 	setAttr ".rpt" -type "double3" 1.4239736901731e-13 -2.2442692412755839e-13 1.9170493174885065e-13 ;
 createNode camera -s -n "perspShape" -p "persp";
@@ -28,7 +27,7 @@ createNode camera -s -n "perspShape" -p "persp";
 	setAttr ".fl" 34.999999999999979;
 	setAttr ".ncp" 0.001;
 	setAttr ".fcp" 100;
-	setAttr ".coi" 12.033776934127346;
+	setAttr ".coi" 5.8742944912778183;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -145,6 +144,24 @@ createNode mesh -n "DEER_ANTLERS_MESHShape" -p "DEER_ANTLERS_MESH";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
+createNode parentConstraint -n "DEER_ANTLERS_MESH_parentConstraint1" -p "DEER_ANTLERS_MESH";
+	rename -uid "91F1BE69-477B-C445-57B6-A0A7A605B92E";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "Head_Jnt_CtrlW0" -dv 1 -min 0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr ".tg[0].tot" -type "double3" 0 -2.512046051025393 -0.97318627222790244 ;
+	setAttr ".rst" -type "double3" 0 -2.8421709430404008e-16 -7.105427357601002e-17 ;
+	setAttr -k on ".w0";
 createNode transform -n "Skeleton" -p "DEER";
 	rename -uid "9660DEC3-498E-167F-4578-6C8501F17092";
 createNode joint -n "ROOT_JNT" -p "Skeleton";
@@ -752,11 +769,11 @@ createNode joint -n "R_Front_Leg_2_Jnt" -p "R_Front_Leg_1_Jnt";
 	setAttr ".uoc" 1;
 	setAttr ".oc" 6;
 	setAttr ".t" -type "double3" -0.46500128507614136 -1.4994920292110692e-06 -1.4210854715202004e-16 ;
-	setAttr ".r" -type "double3" -1.6594759991420011e-06 0 0 ;
+	setAttr ".r" -type "double3" -1.6594759991420013e-06 0 0 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" 0 0 -38.564931479321679 ;
-	setAttr ".pa" -type "double3" -1.6594759991420011e-06 -4.0231475787823659e-07 5.8261856505470562e-15 ;
+	setAttr ".pa" -type "double3" -1.6594759991420013e-06 -4.0231475787823659e-07 5.826185650547057e-15 ;
 	setAttr ".bps" -type "matrix" 1.3137196737464127e-08 0.94018435781128562 0.34066607304951957 0
 		 -1.6477356333199346e-08 0.34066607304951968 -0.94018435781128551 0 -0.99999999999999978 6.7381106017845696e-09 1.9967149905987609e-08 0
 		 -33.175799999996833 133.6339987228387 91.285000430990721 1;
@@ -2042,7 +2059,7 @@ createNode parentConstraint -n "R_Front_Leg_2_Jnt_Ctrl_Grp_parentConstraint1" -p
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" -0.46500128507614108 -1.4994920300914991e-06 
 		-3.1761260289061868e-14 ;
-	setAttr ".tg[0].tor" -type "double3" 9.4408298379355212e-07 7.5270593619407001e-07 
+	setAttr ".tg[0].tor" -type "double3" 9.4408298379355212e-07 7.5270593619407012e-07 
 		-38.564931479321658 ;
 	setAttr ".lr" -type "double3" -90 -19.917460025891668 90 ;
 	setAttr ".rst" -type "double3" -0.33175799999996824 1.3363399872283872 0.91285000430990748 ;
@@ -2066,7 +2083,7 @@ createNode parentConstraint -n "R_Front_Leg_2_Jnt_Ctrl_Grp_parentConstraint2" -p
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" -0.46500128507614108 -1.4994920300914991e-06 
 		-3.1832314562637883e-14 ;
-	setAttr ".tg[0].tor" -type "double3" 9.4408298379355212e-07 7.5270593619407001e-07 
+	setAttr ".tg[0].tor" -type "double3" 9.4408298379355212e-07 7.5270593619407012e-07 
 		-38.564931479321658 ;
 	setAttr ".lr" -type "double3" -90 -19.917460025891668 90 ;
 	setAttr ".rst" -type "double3" -0.33175799999996819 1.3363399872283872 0.91285000430990748 ;
@@ -2133,9 +2150,9 @@ createNode parentConstraint -n "L_Front_Leg_2_Jnt_Ctrl_Grp_parentConstraint1" -p
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" 0.4650074243545535 1.1090896315667453e-15 -1.4210854715202004e-16 ;
 	setAttr ".tg[0].tor" -type "double3" 0 0 -38.564931479321686 ;
-	setAttr ".lr" -type "double3" 90 19.917460025891707 -90 ;
+	setAttr ".lr" -type "double3" 90 19.91746002589171 -90 ;
 	setAttr ".rst" -type "double3" 0.33175765991210943 1.3363374371222878 0.91285041665291855 ;
-	setAttr ".rsrr" -type "double3" 90 19.917460025891707 -90 ;
+	setAttr ".rsrr" -type "double3" 90 19.91746002589171 -90 ;
 	setAttr -k on ".w0";
 createNode parentConstraint -n "L_Front_Leg_2_Jnt_Ctrl_Grp_parentConstraint2" -p "L_Front_Leg_2_Jnt_Ctrl_Grp";
 	rename -uid "0DEFB2A7-4704-EF0E-EE15-40BB62F9FE3C";
@@ -2155,9 +2172,9 @@ createNode parentConstraint -n "L_Front_Leg_2_Jnt_Ctrl_Grp_parentConstraint2" -p
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" 0.4650074243545535 1.1090896315667453e-15 -1.4210854715202004e-16 ;
 	setAttr ".tg[0].tor" -type "double3" 0 0 -38.564931479321686 ;
-	setAttr ".lr" -type "double3" 90 19.917460025891707 -90 ;
+	setAttr ".lr" -type "double3" 90 19.91746002589171 -90 ;
 	setAttr ".rst" -type "double3" 0.33175765991210943 1.3363374371222878 0.91285041665291855 ;
-	setAttr ".rsrr" -type "double3" 90 19.917460025891707 -90 ;
+	setAttr ".rsrr" -type "double3" 90 19.91746002589171 -90 ;
 	setAttr -k on ".w0";
 createNode scaleConstraint -n "L_Front_Leg_2_Jnt_Ctrl_Grp_scaleConstraint1" -p "L_Front_Leg_2_Jnt_Ctrl_Grp";
 	rename -uid "3BAD52F3-4656-F405-81CE-B3A09ED7ED5A";
@@ -3125,15 +3142,15 @@ createNode parentConstraint -n "R_Rear_Leg_1_Jnt_baseStretch_Loc_parentConstrain
 	setAttr ".rsrr" -type "double3" -89.999999999999957 8.4774463851661821 90.000000000000014 ;
 	setAttr -k on ".w0";
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "4EBDCBC7-4940-C982-1256-23B290A3EACE";
+	rename -uid "8BE50F8E-4784-F591-7D89-6BA5FDC5FC14";
 	setAttr -s 41 ".lnk";
 	setAttr -s 41 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "195D1632-45C5-BB66-4351-23BD9F5E9EE2";
+	rename -uid "CFC2F0C5-4055-D68C-41E3-67BECF6D0A85";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "30F58035-4409-D9F8-2361-6F851C246933";
+	rename -uid "5755E9FB-43D2-BA41-53A8-73A5A9A57FD7";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "FB621035-40B3-729C-6034-31A93D1D7A2E";
+	rename -uid "2099EA40-4B33-8E93-B294-7685D3D3C46E";
 	setAttr ".cdl" 3;
 	setAttr -s 4 ".dli[1:3]"  4 1 3;
 	setAttr -s 4 ".dli";
@@ -3141,7 +3158,7 @@ createNode displayLayer -n "defaultLayer";
 	rename -uid "72097A15-4A50-FABE-2BD4-028C0A57BC57";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "29F9F037-4F9A-9122-D46D-4AA17A7EE12F";
+	rename -uid "78798332-4005-BA0E-BE74-B3B30A2D58BC";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "B717C7C2-4CBD-4911-F104-D28F939ECA9D";
 	setAttr ".g" yes;
@@ -3180,7 +3197,7 @@ createNode script -n "CalebSIZEREFERENCE:Caleb_Geometry:uiConfigurationScriptNod
 		+ "            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n"
 		+ "            -camera \"|persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 1\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n"
 		+ "            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n"
-		+ "            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 2592\n            -height 1162\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n"
+		+ "            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1004\n            -height 657\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n"
 		+ "\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 0\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n"
 		+ "            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -isSet 0\n            -isSetMember 0\n            -showUfeItems 1\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n"
 		+ "            -longNames 0\n            -niceNames 1\n            -selectCommand \"print(\\\"\\\")\" \n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -renderFilterIndex 0\n            -selectionOrder \"chronological\" \n            -expandAttribute 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n            -showAttributes 0\n            -showConnected 0\n"
@@ -3202,13 +3219,14 @@ createNode script -n "CalebSIZEREFERENCE:Caleb_Geometry:uiConfigurationScriptNod
 		+ "\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"UV Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"renderWindowPanel\" (localizedPanelLabel(\"Render View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Render View\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"shapePanel\" (localizedPanelLabel(\"Shape Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tshapePanel -edit -l (localizedPanelLabel(\"Shape Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"posePanel\" (localizedPanelLabel(\"Pose Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n"
 		+ "\t\tposePanel -edit -l (localizedPanelLabel(\"Pose Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynRelEdPanel\" (localizedPanelLabel(\"Dynamic Relationships\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dynamic Relationships\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"relationshipPanel\" (localizedPanelLabel(\"Relationship Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"referenceEditorPanel\" (localizedPanelLabel(\"Reference Editor\")) `;\n\tif (\"\" != $panelName) {\n"
 		+ "\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynPaintScriptedPanelType\" (localizedPanelLabel(\"Paint Effects\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"scriptEditorPanel\" (localizedPanelLabel(\"Script Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"profilerPanel\" (localizedPanelLabel(\"Profiler Tool\")) `;\n"
-		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Profiler Tool\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"contentBrowserPanel\" (localizedPanelLabel(\"Content Browser\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Content Browser\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"Stereo\" (localizedPanelLabel(\"Stereo\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Stereo\")) -mbv $menusOkayInPanels  $panelName;\n{ string $editorName = ($panelName+\"Editor\");\n            stereoCameraView -e \n                -camera \"|persp\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n"
-		+ "                -displayAppearance \"wireframe\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -holdOuts 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 1\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 32768\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -depthOfFieldPreview 1\n"
-		+ "                -maxConstantTransparency 1\n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 4 4 \n                -bumpResolution 4 4 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -controllers 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n"
-		+ "                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -bluePencil 1\n                -greasePencils 0\n                -shadows 0\n                -captureSequenceNumber -1\n                -width 0\n                -height 0\n                -sceneRenderFilter 0\n                -displayMode \"centerEye\" \n"
-		+ "                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n            stereoCameraView -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName; };\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
-		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 1\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 2592\\n    -height 1162\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
-		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 1\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 2592\\n    -height 1162\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Profiler Tool\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"motionMakerEditorPanel\" (localizedPanelLabel(\"MotionMaker Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"MotionMaker Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"contentBrowserPanel\" (localizedPanelLabel(\"Content Browser\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Content Browser\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"Stereo\" (localizedPanelLabel(\"Stereo\")) `;\n"
+		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Stereo\")) -mbv $menusOkayInPanels  $panelName;\n{ string $editorName = ($panelName+\"Editor\");\n            stereoCameraView -e \n                -camera \"|persp\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"wireframe\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -holdOuts 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 1\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n"
+		+ "                -textureDisplay \"modulate\" \n                -textureMaxSize 32768\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -depthOfFieldPreview 1\n                -maxConstantTransparency 1\n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 4 4 \n                -bumpResolution 4 4 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n"
+		+ "                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -controllers 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n"
+		+ "                -clipGhosts 1\n                -bluePencil 1\n                -greasePencils 0\n                -excludeObjectPreset \"All\" \n                -shadows 0\n                -captureSequenceNumber -1\n                -width 0\n                -height 0\n                -sceneRenderFilter 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n            stereoCameraView -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName; };\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n"
+		+ "\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
+		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 1\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1004\\n    -height 657\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 1\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1004\\n    -height 657\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
 		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 5 -size 12 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
 	setAttr ".st" 3;
 createNode script -n "CalebSIZEREFERENCE:Caleb_Geometry:sceneConfigurationScriptNode";
@@ -3768,6 +3786,7 @@ createNode polyExtrudeEdge -n "polyExtrudeEdge19";
 	setAttr ".c[0]"  0 1 1;
 	setAttr ".cbn" -type "double3" -0.22750209808349608 1.90441781919848 -0.83137637215009264 ;
 	setAttr ".cbx" -type "double3" 0.22750209808349608 1.9756142887556387 -0.46173999446863456 ;
+	setAttr ".uv26" no;
 createNode polyTweak -n "polyTweak62";
 	rename -uid "B6FE2BD6-4D8D-2F44-6E18-FCA9111F61F3";
 	setAttr ".uopa" yes;
@@ -3785,6 +3804,7 @@ createNode polyExtrudeEdge -n "polyExtrudeEdge20";
 	setAttr ".c[0]"  0 1 1;
 	setAttr ".cbn" -type "double3" -0.31736162185668948 1.1504219536250655 -0.81047728345692971 ;
 	setAttr ".cbx" -type "double3" 0.31736162185668948 1.3634543808349093 -0.43650006400428842 ;
+	setAttr ".uv26" no;
 createNode polyTweak -n "polyTweak63";
 	rename -uid "AA17C333-4FE0-DB61-9C1B-1D9746073EA8";
 	setAttr ".uopa" yes;
@@ -3847,6 +3867,7 @@ createNode polyExtrudeEdge -n "polyExtrudeEdge21";
 	setAttr ".c[0]"  0 1 1;
 	setAttr ".cbn" -type "double3" -0.44563705444335938 0.886408740953611 -1.4279723646284901 ;
 	setAttr ".cbx" -type "double3" 0.44563705444335938 1.216391138462922 -1.1443793261869732 ;
+	setAttr ".uv26" no;
 createNode polyTweak -n "polyTweak66";
 	rename -uid "A16A2CDD-47FD-3A72-89E4-B4B7EE932AAB";
 	setAttr ".uopa" yes;
@@ -3866,6 +3887,7 @@ createNode polyExtrudeEdge -n "polyExtrudeEdge22";
 	setAttr ".c[0]"  0 1 1;
 	setAttr ".cbn" -type "double3" -0.39510818481445314 0.87293982085620747 -1.255675305506146 ;
 	setAttr ".cbx" -type "double3" 0.39510818481445314 1.1973209476474995 -0.94737973673451825 ;
+	setAttr ".uv26" no;
 createNode polyTweak -n "polyTweak67";
 	rename -uid "55CC9670-4910-B67B-D7CF-8798339CF3B8";
 	setAttr ".uopa" yes;
@@ -3928,6 +3950,7 @@ createNode polyExtrudeEdge -n "polyExtrudeEdge23";
 	setAttr ".c[0]"  0 1 1;
 	setAttr ".cbn" -type "double3" -0.28887220382690432 1.12685223038464 -0.77273497229940591 ;
 	setAttr ".cbx" -type "double3" 0.28887220382690432 1.3424311292898432 -0.51376313137765617 ;
+	setAttr ".uv26" no;
 createNode polyTweak -n "polyTweak69";
 	rename -uid "B7E5F452-4777-D1A3-8083-0BA0971105C2";
 	setAttr ".uopa" yes;
@@ -4193,6 +4216,7 @@ createNode polyExtrudeEdge -n "polyExtrudeEdge24";
 	setAttr ".c[0]"  0 1 1;
 	setAttr ".cbn" -type "double3" -0.45131092071533202 1.275267534923981 -1.5319693010753179 ;
 	setAttr ".cbx" -type "double3" 0.45131092071533202 1.5386096608364381 -1.4438091859786977 ;
+	setAttr ".uv26" no;
 createNode polyMergeVert -n "polyMergeVert15";
 	rename -uid "6C316D34-4FCD-7F0A-7673-068CFFA2AAB1";
 	setAttr ".ics" -type "componentList" 3 "vtx[30]" "vtx[33]" "vtx[59:60]";
@@ -4375,6 +4399,7 @@ createNode polyExtrudeEdge -n "polyExtrudeEdge25";
 	setAttr ".c[0]"  0 1 1;
 	setAttr ".cbn" -type "double3" -0.35980255126953126 0.7505620386655939 -1.4575519775380819 ;
 	setAttr ".cbx" -type "double3" 0.35980255126953126 0.78770749055146694 -1.3231076998313342 ;
+	setAttr ".uv26" no;
 createNode polyTweak -n "polyTweak85";
 	rename -uid "02E71A87-4EB1-0043-F775-F29E36DF6158";
 	setAttr ".uopa" yes;
@@ -4475,6 +4500,7 @@ createNode polyExtrudeEdge -n "polyExtrudeEdge26";
 	setAttr ".c[0]"  0 1 1;
 	setAttr ".cbn" -type "double3" -0.27859392166137698 0.23712322309930658 -1.319594020027741 ;
 	setAttr ".cbx" -type "double3" 0.27859392166137698 0.24132701924703007 -1.3164284313314567 ;
+	setAttr ".uv26" no;
 createNode polyTweak -n "polyTweak88";
 	rename -uid "901E1DFC-4B6C-6FDD-DB2E-288A3D41D5C6";
 	setAttr ".uopa" yes;
@@ -4564,6 +4590,7 @@ createNode polyExtrudeEdge -n "polyExtrudeEdge27";
 	setAttr ".c[0]"  0 1 1;
 	setAttr ".cbn" -type "double3" -0.29706922531127933 0.024451445556940947 -1.4971675510173734 ;
 	setAttr ".cbx" -type "double3" 0.29706922531127933 0.025356175393296626 -1.4909415073845065 ;
+	setAttr ".uv26" no;
 createNode polyTweak -n "polyTweak90";
 	rename -uid "905E701E-4980-E18B-B809-B5B7E3C67D58";
 	setAttr ".uopa" yes;
@@ -4607,6 +4634,7 @@ createNode polyExtrudeEdge -n "polyExtrudeEdge28";
 	setAttr ".c[0]"  0 1 1;
 	setAttr ".cbn" -type "double3" -0.35995132446289063 0.01154280724533964 -1.3497067651306887 ;
 	setAttr ".cbx" -type "double3" 0.35995132446289063 0.020864802927857452 -1.1798748413960025 ;
+	setAttr ".uv26" no;
 createNode polyMergeVert -n "polyMergeVert20";
 	rename -uid "F967831F-4B50-71AA-6654-4298B4F61A3B";
 	setAttr ".ics" -type "componentList" 4 "vtx[85]" "vtx[88]" "vtx[97]" "vtx[100]";
@@ -5135,6 +5163,7 @@ createNode polyExtrudeEdge -n "polyExtrudeEdge29";
 	setAttr ".c[0]"  0 1 1;
 	setAttr ".cbn" -type "double3" -0.59735164642333982 1.4329988518221688 0.16537290951729489 ;
 	setAttr ".cbx" -type "double3" 0.59735164642333982 1.4651638966482161 0.49325001384388228 ;
+	setAttr ".uv26" no;
 createNode polyTweak -n "polyTweak110";
 	rename -uid "46ABEC50-4FEE-9B56-0414-32BE06BE9DB6";
 	setAttr ".uopa" yes;
@@ -5365,6 +5394,7 @@ createNode polyExtrudeEdge -n "polyExtrudeEdge30";
 	setAttr ".c[0]"  0 1 1;
 	setAttr ".cbn" -type "double3" -0.26956136703491212 1.0092216931425242 0.51699717473014284 ;
 	setAttr ".cbx" -type "double3" 0.26956136703491212 1.1428025492937397 0.51927574163894674 ;
+	setAttr ".uv26" no;
 createNode polyAppendVertex -n "polyAppendVertex294";
 	rename -uid "EF7A2836-4A65-2C34-820C-07B4C33F5987";
 	setAttr ".uopa" yes;
@@ -5444,6 +5474,7 @@ createNode polyExtrudeEdge -n "polyExtrudeEdge31";
 	setAttr ".c[0]"  0 1 1;
 	setAttr ".cbn" -type "double3" -0.29724506378173826 1.8703289549073199 -0.42095756779553728 ;
 	setAttr ".cbx" -type "double3" 0.29724506378173826 2.0535377232311105 -0.38879557428836803 ;
+	setAttr ".uv26" no;
 createNode polyAppendVertex -n "polyAppendVertex302";
 	rename -uid "49E8BC76-4465-E89F-7442-E4984A59BCCE";
 	setAttr ".uopa" yes;
@@ -5519,6 +5550,7 @@ createNode polyExtrudeEdge -n "polyExtrudeEdge32";
 	setAttr ".c[0]"  0 1 1;
 	setAttr ".cbn" -type "double3" -0.31706850051879881 2.1390625514255017 0.38310995333688252 ;
 	setAttr ".cbx" -type "double3" 0.31706850051879881 2.2425227692880783 0.61799235403121255 ;
+	setAttr ".uv26" no;
 createNode polyTweak -n "polyTweak121";
 	rename -uid "4E914170-4FF4-16C0-3033-E39F1835FFE9";
 	setAttr ".uopa" yes;
@@ -5540,6 +5572,7 @@ createNode polyExtrudeEdge -n "polyExtrudeEdge33";
 	setAttr ".c[0]"  0 1 1;
 	setAttr ".cbn" -type "double3" -0.21224092483520507 2.2425227692880783 0.37751184387233577 ;
 	setAttr ".cbx" -type "double3" 0.21224092483520507 2.2833221768244174 0.38310995333688252 ;
+	setAttr ".uv26" no;
 createNode polyTweak -n "polyTweak122";
 	rename -uid "1D19157F-4D5A-9D88-C6F4-89B8C824DB98";
 	setAttr ".uopa" yes;
@@ -5679,6 +5712,7 @@ createNode polyExtrudeEdge -n "polyExtrudeEdge34";
 	setAttr ".c[0]"  0 1 1;
 	setAttr ".cbn" -type "double3" -0.47053401947021484 1.2675655088903108 -1.4393916133757267 ;
 	setAttr ".cbx" -type "double3" 0.47053401947021484 1.292065043395777 -1.1375723860994125 ;
+	setAttr ".uv26" no;
 createNode polyAppendVertex -n "polyAppendVertex316";
 	rename -uid "DDB71047-40B5-CCD3-51FF-489445181F18";
 	setAttr ".uopa" yes;
@@ -5887,6 +5921,7 @@ createNode polyExtrudeEdge -n "polyExtrudeEdge35";
 	setAttr ".c[0]"  0 1 1;
 	setAttr ".cbn" -type "double3" -0.40615745544433596 0.65011438077481432 0.15076466416705131 ;
 	setAttr ".cbx" -type "double3" 0.40615745544433596 0.65539225192619144 0.26470888907986273 ;
+	setAttr ".uv26" no;
 createNode polyTweak -n "polyTweak132";
 	rename -uid "3400CCE4-413F-E025-42FC-5DA02FDE31C9";
 	setAttr ".uopa" yes;
@@ -6389,6 +6424,7 @@ createNode polyExtrudeEdge -n "polyExtrudeEdge36";
 	setAttr ".c[0]"  0 1 1;
 	setAttr ".cbn" -type "double3" -0.36887966156005858 0.0085004776225457088 0.20614744098445265 ;
 	setAttr ".cbx" -type "double3" 0.36887966156005858 0.011146346397135652 0.21251153877942502 ;
+	setAttr ".uv26" no;
 createNode polyTweak -n "polyTweak139";
 	rename -uid "A5A22191-4C4B-13E6-4F0C-34BDB427FADF";
 	setAttr ".uopa" yes;
@@ -6433,6 +6469,7 @@ createNode polyExtrudeEdge -n "polyExtrudeEdge37";
 	setAttr ".c[0]"  0 1 1;
 	setAttr ".cbn" -type "double3" -0.42733234405517578 0.009119965165404996 0.53779598144304885 ;
 	setAttr ".cbx" -type "double3" 0.42733234405517578 0.011652729582569538 0.55697746204198217 ;
+	setAttr ".uv26" no;
 createNode polyMergeVert -n "polyMergeVert29";
 	rename -uid "8620518C-4978-EE94-A64C-B6B4B423C1E9";
 	setAttr ".ics" -type "componentList" 3 "vtx[289:290]" "vtx[295]" "vtx[298]";
@@ -6592,6 +6629,7 @@ createNode polyExtrudeEdge -n "polyExtrudeEdge38";
 	setAttr ".c[0]"  0 1 1;
 	setAttr ".cbn" -type "double3" -0.18165081024169921 2.1746653078198581 1.0611049888138262 ;
 	setAttr ".cbx" -type "double3" 0.18165081024169921 2.2132135858561353 1.0713346364995306 ;
+	setAttr ".uv26" no;
 createNode polyTweak -n "polyTweak148";
 	rename -uid "2B089B92-4673-FE77-8139-6C93872DCDE2";
 	setAttr ".uopa" yes;
@@ -6610,6 +6648,7 @@ createNode polyExtrudeEdge -n "polyExtrudeEdge39";
 	setAttr ".c[0]"  0 1 1;
 	setAttr ".cbn" -type "double3" -0.14925182342529297 2.6656317906203273 0.9292860270207034 ;
 	setAttr ".cbx" -type "double3" 0.14925182342529297 2.7144583879158013 0.95346709149802433 ;
+	setAttr ".uv26" no;
 createNode polyTweak -n "polyTweak149";
 	rename -uid "BD8493A7-43F6-5A4F-16F3-0A95BF4A58FD";
 	setAttr ".uopa" yes;
@@ -6674,6 +6713,7 @@ createNode polyExtrudeEdge -n "polyExtrudeEdge40";
 	setAttr ".c[0]"  0 1 1;
 	setAttr ".cbn" -type "double3" -0.14925182342529297 2.6656317906203273 0.9292860270207034 ;
 	setAttr ".cbx" -type "double3" 0.14925182342529297 2.7144583879158013 0.95346709149802433 ;
+	setAttr ".uv26" no;
 createNode polyAppendVertex -n "polyAppendVertex372";
 	rename -uid "E317E42B-43A6-5ACE-5A01-50B28BAC7B5F";
 	setAttr ".uopa" yes;
@@ -6967,6 +7007,7 @@ createNode polyExtrudeEdge -n "polyExtrudeEdge41";
 	setAttr ".c[0]"  0 1 1;
 	setAttr ".cbn" -type "double3" -0.43562942504882812 1.85008283506194 -0.33022177362652771 ;
 	setAttr ".cbx" -type "double3" 0.43562942504882812 2.0304152062881404 0.13072377130673293 ;
+	setAttr ".uv26" no;
 createNode polyExtrudeEdge -n "polyExtrudeEdge42";
 	rename -uid "ADC442D5-476B-1620-5B6B-DCADD1FA2484";
 	setAttr ".uopa" yes;
@@ -6979,6 +7020,7 @@ createNode polyExtrudeEdge -n "polyExtrudeEdge42";
 	setAttr ".c[0]"  0 1 1;
 	setAttr ".cbn" -type "double3" -0.43562942504882812 1.8937010675548354 0.13072377130673293 ;
 	setAttr ".cbx" -type "double3" 0.43562942504882812 2.0304152062881404 0.5761663532683784 ;
+	setAttr ".uv26" no;
 createNode polyTweak -n "polyTweak160";
 	rename -uid "A936E8E5-4DAA-8C8B-E492-5FAFB406754F";
 	setAttr ".uopa" yes;
@@ -7143,6 +7185,7 @@ createNode polyExtrudeEdge -n "polyExtrudeEdge43";
 	setAttr ".c[0]"  0 1 1;
 	setAttr ".cbn" -type "double3" -0.26468713760375978 1.959485992644737 -1.357101782634095 ;
 	setAttr ".cbx" -type "double3" 0.26468713760375978 2.0057712340971627 -1.2729893828994219 ;
+	setAttr ".uv26" no;
 createNode polyAppendVertex -n "polyAppendVertex410";
 	rename -uid "5012FF96-48B9-5B0B-B3E3-B49CD52A9378";
 	setAttr ".uopa" yes;
@@ -7337,6 +7380,7 @@ createNode polyExtrudeEdge -n "polyExtrudeEdge44";
 	setAttr ".c[0]"  0 1 1;
 	setAttr ".cbn" -type "double3" -0.2274205780029297 2.6620167827234282 0.99745177251432549 ;
 	setAttr ".cbx" -type "double3" 0.2274205780029297 2.7813212861667758 1.0100505821807442 ;
+	setAttr ".uv26" no;
 createNode polyTweak -n "polyTweak174";
 	rename -uid "4C9C4583-4D67-B611-B629-48A7E34E6B8F";
 	setAttr ".uopa" yes;
@@ -7355,6 +7399,7 @@ createNode polyExtrudeEdge -n "polyExtrudeEdge45";
 	setAttr ".c[0]"  0 1 1;
 	setAttr ".cbn" -type "double3" -0.37319324493408201 2.5852742357668026 1.0613290378927347 ;
 	setAttr ".cbx" -type "double3" 0.37319324493408201 2.6875752582745309 1.0995141652451528 ;
+	setAttr ".uv26" no;
 createNode polyTweak -n "polyTweak175";
 	rename -uid "442EBAD9-400F-2D21-80FF-46BE0DC8A034";
 	setAttr ".uopa" yes;
@@ -7442,6 +7487,7 @@ createNode polyExtrudeEdge -n "polyExtrudeEdge46";
 	setAttr ".c[0]"  0 1 1;
 	setAttr ".cbn" -type "double3" -0.65878738403320314 2.7041444620704982 0.86584701118357732 ;
 	setAttr ".cbx" -type "double3" 0.65878738403320314 2.7082734857035495 0.92793166725702858 ;
+	setAttr ".uv26" no;
 createNode polyMergeVert -n "polyMergeVert40";
 	rename -uid "0D4C9E8A-4750-4FEE-77A9-E6AE56C6A7A4";
 	setAttr ".ics" -type "componentList" 3 "vtx[29:30]" "vtx[32]" "vtx[35]";
@@ -7533,6 +7579,7 @@ createNode polyExtrudeEdge -n "polyExtrudeEdge47";
 	setAttr ".c[0]"  0 1 1;
 	setAttr ".cbn" -type "double3" -0.86763732910156255 3.0912199403408596 0.63364635971333183 ;
 	setAttr ".cbx" -type "double3" 0.86763732910156255 3.098192906486728 0.69616581414294243 ;
+	setAttr ".uv26" no;
 createNode polyMergeVert -n "polyMergeVert42";
 	rename -uid "15586BBC-4F8A-D6DC-60D8-2EA8E458545E";
 	setAttr ".ics" -type "componentList" 3 "vtx[34]" "vtx[37]" "vtx[49:50]";
@@ -7568,6 +7615,7 @@ createNode polyExtrudeEdge -n "polyExtrudeEdge48";
 	setAttr ".c[0]"  0 1 1;
 	setAttr ".cbn" -type "double3" -0.82649787902832028 3.1949556003916366 0.67752170283365654 ;
 	setAttr ".cbx" -type "double3" 0.82649787902832028 3.2013197406663356 0.73755664498013063 ;
+	setAttr ".uv26" no;
 createNode polyTweak -n "polyTweak185";
 	rename -uid "D411EA82-4C5B-7FE8-167C-D995331E09EB";
 	setAttr ".uopa" yes;
@@ -7586,6 +7634,7 @@ createNode polyExtrudeEdge -n "polyExtrudeEdge49";
 	setAttr ".c[0]"  0 1 1;
 	setAttr ".cbn" -type "double3" -0.79571105957031252 3.2601332147572353 0.70481929007596988 ;
 	setAttr ".cbx" -type "double3" 0.79571105957031252 3.2663847451544545 0.76466616765575057 ;
+	setAttr ".uv26" no;
 createNode polyTweak -n "polyTweak186";
 	rename -uid "E9ECB9CF-4337-8C3F-E20A-CF9E2DA8C7A6";
 	setAttr ".uopa" yes;
@@ -7638,6 +7687,7 @@ createNode polyExtrudeEdge -n "polyExtrudeEdge50";
 	setAttr ".c[0]"  0 1 1;
 	setAttr ".cbn" -type "double3" -0.78581230163574223 3.3349174657883554 0.8043506809461346 ;
 	setAttr ".cbx" -type "double3" 0.78581230163574223 3.4153392159239893 0.84135904883421375 ;
+	setAttr ".uv26" no;
 createNode polyTweak -n "polyTweak188";
 	rename -uid "690B54AC-4273-2B84-9114-66A8D9FB2146";
 	setAttr ".uopa" yes;
@@ -7757,6 +7807,7 @@ createNode polyExtrudeEdge -n "polyExtrudeEdge51";
 	setAttr ".c[0]"  0 1 1;
 	setAttr ".cbn" -type "double3" -0.47726093292236327 3.3130906954238597 0.9978807980868587 ;
 	setAttr ".cbx" -type "double3" 0.47726093292236327 3.4644649019218248 0.99847689411001928 ;
+	setAttr ".uv26" no;
 createNode polyMergeVert -n "polyMergeVert47";
 	rename -uid "4FEF29E1-4B3E-D948-C3E3-51A6FA899BD0";
 	setAttr ".ics" -type "componentList" 3 "vtx[76]" "vtx[79]" "vtx[81:82]";
@@ -7870,6 +7921,7 @@ createNode polyExtrudeEdge -n "polyExtrudeEdge52";
 	setAttr ".c[0]"  0 1 1;
 	setAttr ".cbn" -type "double3" -0.41452720642089846 3.2588936057308762 0.90346163941272239 ;
 	setAttr ".cbx" -type "double3" 0.41452720642089846 3.3638240275390809 0.92844683046530596 ;
+	setAttr ".uv26" no;
 createNode polyMergeVert -n "polyMergeVert49";
 	rename -uid "F42389EA-4C9D-6086-6C63-AE8F56671438";
 	setAttr ".ics" -type "componentList" 3 "vtx[73:74]" "vtx[88:89]" "vtx[92:95]";
@@ -7918,6 +7970,7 @@ createNode polyExtrudeEdge -n "polyExtrudeEdge53";
 	setAttr ".c[0]"  0 1 1;
 	setAttr ".cbn" -type "double3" -0.82316040039062499 3.0613350096685124 0.78123104522396358 ;
 	setAttr ".cbx" -type "double3" 0.82316040039062499 3.1014012258972548 0.87283344998227719 ;
+	setAttr ".uv26" no;
 createNode polyMergeVert -n "polyMergeVert50";
 	rename -uid "DEED0B02-47F7-7F29-6402-1CA9A78A84CC";
 	setAttr ".ics" -type "componentList" 2 "vtx[45:46]" "vtx[97:98]";
@@ -8258,6 +8311,7 @@ createNode polyExtrudeEdge -n "polyExtrudeEdge54";
 	setAttr ".c[0]"  0 1 1;
 	setAttr ".cbn" -type "double3" -0.99435821533203128 2.9850120498816115 0.57116700524401087 ;
 	setAttr ".cbx" -type "double3" 0.99435821533203128 3.0912199403408596 0.63364635971333183 ;
+	setAttr ".uv26" no;
 createNode polyTweak -n "polyTweak202";
 	rename -uid "73785EF4-4FA5-CB72-A9B3-C98A43FD2290";
 	setAttr ".uopa" yes;
@@ -8298,6 +8352,7 @@ createNode polyExtrudeEdge -n "polyExtrudeEdge55";
 	setAttr ".c[0]"  0 1 1;
 	setAttr ".cbn" -type "double3" -1.0493104553222656 3.0212660155831679 0.55019158441609239 ;
 	setAttr ".cbx" -type "double3" 1.0493104553222656 3.0286180079387841 0.58475575469843488 ;
+	setAttr ".uv26" no;
 createNode polyTweak -n "polyTweak205";
 	rename -uid "68A6F083-4E9C-E914-2539-58A1CF58C325";
 	setAttr ".uopa" yes;
@@ -8383,6 +8438,7 @@ createNode polyExtrudeEdge -n "polyExtrudeEdge56";
 	setAttr ".c[0]"  0 1 1;
 	setAttr ".cbn" -type "double3" -0.74528549194335936 2.6313084461720644 0.69794807595423602 ;
 	setAttr ".cbx" -type "double3" 0.74528549194335936 2.702249614915234 0.7858153496510617 ;
+	setAttr ".uv26" no;
 createNode polyMergeVert -n "polyMergeVert56";
 	rename -uid "71475A83-4596-5408-0623-9CB27C53FCF5";
 	setAttr ".ics" -type "componentList" 3 "vtx[16]" "vtx[23]" "vtx[137:138]";
@@ -8451,6 +8507,7 @@ createNode polyExtrudeEdge -n "polyExtrudeEdge57";
 	setAttr ".c[0]"  0 1 1;
 	setAttr ".cbn" -type "double3" -0.83731521606445314 2.7277073723116518 0.70269439130815614 ;
 	setAttr ".cbx" -type "double3" 0.83731521606445314 2.7292952065473766 0.7642309512468719 ;
+	setAttr ".uv26" no;
 createNode polyMergeVert -n "polyMergeVert58";
 	rename -uid "59A9DB05-4E70-8A23-97A5-EF9C039506D7";
 	setAttr ".ics" -type "componentList" 3 "vtx[140]" "vtx[143]" "vtx[145:146]";
@@ -8486,6 +8543,7 @@ createNode polyExtrudeEdge -n "polyExtrudeEdge58";
 	setAttr ".c[0]"  0 1 1;
 	setAttr ".cbn" -type "double3" -0.92686027526855475 2.642035990136185 0.69057487432965148 ;
 	setAttr ".cbx" -type "double3" 0.92686027526855475 2.6599409529396225 0.76287201008085281 ;
+	setAttr ".uv26" no;
 createNode polyMergeVert -n "polyMergeVert60";
 	rename -uid "A2EB33D8-4FB6-F754-37BB-36A4FBA53E01";
 	setAttr ".ics" -type "componentList" 2 "vtx[141:142]" "vtx[145:146]";
@@ -8522,6 +8580,7 @@ createNode polyExtrudeEdge -n "polyExtrudeEdge59";
 	setAttr ".c[0]"  0 1 1;
 	setAttr ".cbn" -type "double3" -0.92686027526855475 2.6394291676069126 0.61709529976740807 ;
 	setAttr ".cbx" -type "double3" 0.92686027526855475 2.6599409529396225 0.69057487432965148 ;
+	setAttr ".uv26" no;
 createNode polyMergeVert -n "polyMergeVert62";
 	rename -uid "B6C3517D-4FAB-453A-6797-F281B497A36D";
 	setAttr ".ics" -type "componentList" 4 "vtx[140]" "vtx[143]" "vtx[145]" "vtx[147]";
@@ -8557,6 +8616,7 @@ createNode polyExtrudeEdge -n "polyExtrudeEdge60";
 	setAttr ".c[0]"  0 1 1;
 	setAttr ".cbn" -type "double3" -0.45347217559814457 3.5595778179928597 0.95168045808066437 ;
 	setAttr ".cbx" -type "double3" 0.45347217559814457 3.5620118955041091 1.0115496904421668 ;
+	setAttr ".uv26" no;
 createNode polyTweak -n "polyTweak218";
 	rename -uid "6B4AE5DC-4FF3-F059-8AF2-C39E56551891";
 	setAttr ".uopa" yes;
@@ -8610,6 +8670,7 @@ createNode polyExtrudeEdge -n "polyExtrudeEdge61";
 	setAttr ".c[0]"  0 1 1;
 	setAttr ".cbn" -type "double3" -0.43915779113769532 3.5627208163331834 0.91842430873515013 ;
 	setAttr ".cbx" -type "double3" 0.43915779113769532 3.6621357982569238 0.97003364571195039 ;
+	setAttr ".uv26" no;
 createNode polyMergeVert -n "polyMergeVert64";
 	rename -uid "8E9E6914-4DA5-F5B4-BBA2-2CB7AAA68117";
 	setAttr ".ics" -type "componentList" 4 "vtx[76]" "vtx[79]" "vtx[152]" "vtx[155]";
@@ -8645,6 +8706,7 @@ createNode polyExtrudeEdge -n "polyExtrudeEdge62";
 	setAttr ".c[0]"  0 1 1;
 	setAttr ".cbn" -type "double3" -0.45347217559814457 3.5595778179928597 1.0115496904421668 ;
 	setAttr ".cbx" -type "double3" 0.45347217559814457 3.6622996822771241 1.0313024903040697 ;
+	setAttr ".uv26" no;
 createNode polyTweak -n "polyTweak222";
 	rename -uid "EB9EE5DD-4243-E840-2861-6A829EEBE8B3";
 	setAttr ".uopa" yes;
@@ -8687,6 +8749,7 @@ createNode polyExtrudeEdge -n "polyExtrudeEdge63";
 	setAttr ".c[0]"  0 1 1;
 	setAttr ".cbn" -type "double3" -0.40493579864501955 3.6622996822771241 0.98459930406694385 ;
 	setAttr ".cbx" -type "double3" 0.40493579864501955 3.6649748496495693 1.0313024903040697 ;
+	setAttr ".uv26" no;
 createNode polyMergeVert -n "polyMergeVert68";
 	rename -uid "E1C22440-4C4E-35D3-EBFF-B591DBA2C797";
 	setAttr ".ics" -type "componentList" 3 "vtx[149:150]" "vtx[152]" "vtx[154]";
@@ -8767,6 +8830,7 @@ createNode polyExtrudeEdge -n "polyExtrudeEdge64";
 	setAttr ".c[0]"  0 1 1;
 	setAttr ".cbn" -type "double3" -0.80036048889160161 3.4367985660611051 0.72683839586491317 ;
 	setAttr ".cbx" -type "double3" 0.80036048889160161 3.4385984874157254 0.79840585510724882 ;
+	setAttr ".uv26" no;
 createNode polyMergeVert -n "polyMergeVert70";
 	rename -uid "22A7253B-4B26-838A-C67C-CD989A77A244";
 	setAttr ".ics" -type "componentList" 4 "vtx[152]" "vtx[155]" "vtx[161]" "vtx[163]";
@@ -8802,6 +8866,7 @@ createNode polyExtrudeEdge -n "polyExtrudeEdge65";
 	setAttr ".c[0]"  0 1 1;
 	setAttr ".cbn" -type "double3" -0.84644767761230466 3.553024140575153 0.64709763405218879 ;
 	setAttr ".cbx" -type "double3" 0.84644767761230466 3.5684071397279782 0.69408379316912516 ;
+	setAttr ".uv26" no;
 createNode polyTweak -n "polyTweak230";
 	rename -uid "3819AB79-4D22-B4D9-091F-F9BF9BD779E7";
 	setAttr ".uopa" yes;
@@ -8849,6 +8914,7 @@ createNode polyExtrudeEdge -n "polyExtrudeEdge66";
 	setAttr ".c[0]"  0 1 1;
 	setAttr ".cbn" -type "double3" -0.84461051940917975 3.5684071397279782 0.69408379316912516 ;
 	setAttr ".cbx" -type "double3" 0.84461051940917975 3.5718266408239034 0.77974205707111666 ;
+	setAttr ".uv26" no;
 createNode polyMergeVert -n "polyMergeVert72";
 	rename -uid "F54CE802-410E-DCCB-94CD-0C82B4D1E1DC";
 	setAttr ".ics" -type "componentList" 4 "vtx[160]" "vtx[163]" "vtx[169]" "vtx[171]";
@@ -8884,6 +8950,7 @@ createNode polyExtrudeEdge -n "polyExtrudeEdge67";
 	setAttr ".c[0]"  0 1 1;
 	setAttr ".cbn" -type "double3" -0.87162109374999996 3.7045539899892739 0.68978377983856687 ;
 	setAttr ".cbx" -type "double3" 0.87162109374999996 3.710993203460069 0.74920821782898261 ;
+	setAttr ".uv26" no;
 createNode polyMergeVert -n "polyMergeVert74";
 	rename -uid "A2D96722-449D-8435-A051-369F3630DF27";
 	setAttr ".ics" -type "componentList" 2 "vtx[166:167]" "vtx[169:170]";
@@ -11153,7 +11220,7 @@ createNode plusMinusAverage -n "R_Rear_Leg_3_Jnt_Length_PMA";
 createNode plusMinusAverage -n "R_Rear_Leg_4_Jnt_Length_PMA";
 	rename -uid "A72BA2D9-4036-1082-BC4F-C8818CD7799F";
 	setAttr ".i1[0]"  -0.56285101;
-createNode distanceBetween -n "R_Rear_Leg_4_Jnt_Stretch_Locator_DistanceBetween";
+createNode distanceBetweenDL -n "R_Rear_Leg_4_Jnt_Stretch_Locator_DistanceBetween";
 	rename -uid "6EBC7828-474C-EAA4-3202-57A0B65E4AE4";
 createNode multiplyDivide -n "R_Rear_Leg_4_Jnt_MasterScalarAdjustMD";
 	rename -uid "484AF458-40E4-5092-FD9C-A2B0F9B89CF5";
@@ -11200,7 +11267,7 @@ createNode plusMinusAverage -n "L_Rear_Leg_3_Jnt_Length_PMA";
 createNode plusMinusAverage -n "L_Rear_Leg_4_Jnt_Length_PMA";
 	rename -uid "3735FE8E-4F4B-F83B-9841-3488A9CAA3D9";
 	setAttr ".i1[0]"  0.5628503;
-createNode distanceBetween -n "L_Rear_Leg_4_Jnt_Stretch_Locator_DistanceBetween";
+createNode distanceBetweenDL -n "L_Rear_Leg_4_Jnt_Stretch_Locator_DistanceBetween";
 	rename -uid "17E47C82-4D51-E552-5AAA-37A6B45DB801";
 createNode multiplyDivide -n "L_Rear_Leg_4_Jnt_MasterScalarAdjustMD";
 	rename -uid "36B9980C-459C-89E5-2C02-3FB756706DFF";
@@ -11490,7 +11557,7 @@ createNode skinCluster -n "skinCluster1";
 		14 0.099238542999999999 15 0.318726758 16 0.51811563199999999
 		6 2 7.8210000000000002e-06 12 2.5517999999999999e-05 13 0.0015193839999999999 
 		14 0.077618698 15 0.35078726999999998 16 0.57004130900000005
-		6 2 2.22e-07 12 7.2399999999999997e-07 13 4.0683000000000003e-05 
+		6 2 2.2200000000000003e-07 12 7.2399999999999997e-07 13 4.0683000000000003e-05 
 		14 0.085512580000000005 15 0.34591340100000001 16 0.56853239
 		1 4 1
 		1 4 1
@@ -12174,19 +12241,7 @@ createNode dagPose -n "bindPose1";
 	setAttr ".bp" yes;
 createNode ngst2SkinLayerData -n "ngSkinToolsData_skinCluster1";
 	rename -uid "C731E556-488E-39D4-ADD5-CCBAC5C52473";
-	setAttr ".ld" -type "ngst2SkinLayerDataStorage" 16 11440 {
-"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"};
+	setAttr ".ld" -type "ngst2SkinLayerDataStorage"   16 11440 {"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"};
 	setAttr ".imo" -type "string" "{}";
 createNode nodeGraphEditorInfo -n "MayaNodeEditorSavedTabsInfo";
 	rename -uid "F594F85C-42F0-6667-892D-1B867FF6E6BF";
@@ -12351,6 +12406,11 @@ createNode transformGeometry -n "transformGeometry20";
 	rename -uid "77593201-426E-A9FC-508D-8CB45911E7DB";
 	setAttr ".txf" -type "matrix" 1 0 0 0 0 0.99999999999999989 0 0 0 0 0.99999999999999989 0
 		 0 0 49.848944798694141 1;
+createNode nodeGraphEditorInfo -n "hyperShadePrimaryNodeEditorSavedTabsInfo";
+	rename -uid "1751CF61-4D60-BBB8-81EB-9CA06E45BAE9";
+	setAttr ".tgi[0].tn" -type "string" "Untitled_1";
+	setAttr ".tgi[0].vl" -type "double2" -210.71427734125265 -88.095234594647991 ;
+	setAttr ".tgi[0].vh" -type "double2" 211.90475348442357 88.095234594647991 ;
 select -ne :time1;
 	setAttr ".o" 10;
 	setAttr ".unw" 10;
@@ -12365,7 +12425,7 @@ select -ne :renderPartition;
 	setAttr -s 41 ".st";
 select -ne :renderGlobalsList1;
 select -ne :defaultShaderList1;
-	setAttr -s 44 ".s";
+	setAttr -s 45 ".s";
 select -ne :postProcessList1;
 	setAttr -s 2 ".p";
 select -ne :defaultRenderUtilityList1;
@@ -12376,8 +12436,11 @@ select -ne :defaultTextureList1;
 select -ne :standardSurface1;
 	setAttr ".bc" -type "float3" 0.40000001 0.40000001 0.40000001 ;
 	setAttr ".sr" 0.5;
+select -ne :openPBR_shader1;
+	setAttr ".bc" -type "float3" 0.40000001 0.40000001 0.40000001 ;
+	setAttr ".sr" 0.5;
 select -ne :initialShadingGroup;
-	setAttr -s 2 ".dsm";
+	setAttr -s 3 ".dsm";
 	setAttr ".ro" yes;
 select -ne :initialParticleSE;
 	setAttr ".ro" yes;
@@ -12406,8 +12469,27 @@ connectAttr "skinCluster1.og[0]" "DEER_BODY_MESHShape.i";
 connectAttr "tweak1.vl[0].vt[0]" "DEER_BODY_MESHShape.twl";
 connectAttr "polyTweakUV11.uvtk[0]" "DEER_BODY_MESHShapeOrig.uvst[0].uvtw";
 connectAttr "polySplitRing9.out" "DEER_BODY_MESHShapeOrig.i";
+connectAttr "DEER_ANTLERS_MESH_parentConstraint1.ctx" "DEER_ANTLERS_MESH.tx";
+connectAttr "DEER_ANTLERS_MESH_parentConstraint1.cty" "DEER_ANTLERS_MESH.ty";
+connectAttr "DEER_ANTLERS_MESH_parentConstraint1.ctz" "DEER_ANTLERS_MESH.tz";
+connectAttr "DEER_ANTLERS_MESH_parentConstraint1.crx" "DEER_ANTLERS_MESH.rx";
+connectAttr "DEER_ANTLERS_MESH_parentConstraint1.cry" "DEER_ANTLERS_MESH.ry";
+connectAttr "DEER_ANTLERS_MESH_parentConstraint1.crz" "DEER_ANTLERS_MESH.rz";
 connectAttr "transformGeometry20.og" "DEER_ANTLERS_MESHShape.i";
 connectAttr "polyTweakUV13.uvtk[0]" "DEER_ANTLERS_MESHShape.uvst[0].uvtw";
+connectAttr "DEER_ANTLERS_MESH.ro" "DEER_ANTLERS_MESH_parentConstraint1.cro";
+connectAttr "DEER_ANTLERS_MESH.pim" "DEER_ANTLERS_MESH_parentConstraint1.cpim";
+connectAttr "DEER_ANTLERS_MESH.rp" "DEER_ANTLERS_MESH_parentConstraint1.crp";
+connectAttr "DEER_ANTLERS_MESH.rpt" "DEER_ANTLERS_MESH_parentConstraint1.crt";
+connectAttr "Head_Jnt_Ctrl.t" "DEER_ANTLERS_MESH_parentConstraint1.tg[0].tt";
+connectAttr "Head_Jnt_Ctrl.rp" "DEER_ANTLERS_MESH_parentConstraint1.tg[0].trp";
+connectAttr "Head_Jnt_Ctrl.rpt" "DEER_ANTLERS_MESH_parentConstraint1.tg[0].trt";
+connectAttr "Head_Jnt_Ctrl.r" "DEER_ANTLERS_MESH_parentConstraint1.tg[0].tr";
+connectAttr "Head_Jnt_Ctrl.ro" "DEER_ANTLERS_MESH_parentConstraint1.tg[0].tro";
+connectAttr "Head_Jnt_Ctrl.s" "DEER_ANTLERS_MESH_parentConstraint1.tg[0].ts";
+connectAttr "Head_Jnt_Ctrl.pm" "DEER_ANTLERS_MESH_parentConstraint1.tg[0].tpm";
+connectAttr "DEER_ANTLERS_MESH_parentConstraint1.w0" "DEER_ANTLERS_MESH_parentConstraint1.tg[0].tw"
+		;
 connectAttr "Skeleton_Layer.di" "Skeleton.do";
 connectAttr "ROOT_JNT_scaleConstraint1.csx" "ROOT_JNT.sx";
 connectAttr "ROOT_JNT_scaleConstraint1.csy" "ROOT_JNT.sy";

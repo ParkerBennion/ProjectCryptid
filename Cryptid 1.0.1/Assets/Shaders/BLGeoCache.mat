@@ -55,13 +55,13 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _FadeEnd: 0.72
-    - _FadeStart: 0.31
+    - _FadeEnd: 0.9
+    - _FadeStart: 0.7
     - _QueueControl: 0
     - _QueueOffset: 0
     - _TorchPower: 10
     m_Colors:
-    - _Color: {r: 0.7773137, g: 0, b: 1, a: 1}
-    - _Glow_ColorOptional: {r: 0.67642117, g: 0, b: 1, a: 1}
+    - _Color: {r: 1, g: 0.18952486, b: 0, a: 1}
+    - _Glow_ColorOptional: {r: 1, g: 0.46787488, b: 0, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
