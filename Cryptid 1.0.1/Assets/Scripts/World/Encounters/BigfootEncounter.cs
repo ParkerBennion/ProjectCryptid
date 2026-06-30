@@ -46,7 +46,7 @@ public class BigfootEncounter : Encounter
                     bigfootController.TurnToPlayer(player);
                     bigfootInstance.GetComponent<Animator>().SetTrigger("Love");
                     bigfootController.FocusBigfoot();
-                    yield return new WaitForSeconds(3);
+                    yield return new WaitForSeconds(4.5f);
                     AdoptTheKid();
                     yield break;
                 }

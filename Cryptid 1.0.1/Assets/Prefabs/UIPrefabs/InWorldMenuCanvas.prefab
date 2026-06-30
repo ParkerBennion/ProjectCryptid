@@ -945,7 +945,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &4928435756025098486
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8465,6 +8465,7 @@ GameObject:
   - component: {fileID: 2106795862459238834}
   - component: {fileID: 6470556820409840335}
   - component: {fileID: 1581025512852504778}
+  - component: {fileID: 342301371599263643}
   m_Layer: 5
   m_Name: FadeToBlackPanel
   m_TagString: Untagged
@@ -8698,6 +8699,34 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   callerAction: {fileID: 11400000, guid: 7cbbf6079e85e9f47bcbd5068be9694b, type: 2}
+--- !u!114 &342301371599263643
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4231080192001694506}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9a87ea4ad0c7714ea2a0adcde2d77a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  responseEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5874114981244988552}
+        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+        m_MethodName: SetTrigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: GameToBlack
+          m_BoolArgument: 0
+        m_CallState: 2
+  callerAction: {fileID: 11400000, guid: 3c9c6d52ff50e2947b9310f23c0cebf9, type: 2}
 --- !u!1 &4268355580733089253
 GameObject:
   m_ObjectHideFlags: 0
