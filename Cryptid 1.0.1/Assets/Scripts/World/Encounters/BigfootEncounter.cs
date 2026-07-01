@@ -8,6 +8,7 @@ public class BigfootEncounter : Encounter
 {
     [SerializeField] private PlayerInfoSO calebInfo;
     [SerializeField] private GameObject bigfootPrefab, bigfootInstance;
+    [SerializeField] private BigfootAIController bigfootController;
     private GameObject player;
     [SerializeField] private float detectionRange, despawnRange;
     private bool detected;
@@ -20,13 +21,13 @@ public class BigfootEncounter : Encounter
 
     public override IEnumerator EncounterRoutine()
     {
-        
         float tickTime = .25f;
         detected = false;
         float distanceFromPlayer;
         WaitForSeconds WFS = new WaitForSeconds(tickTime);
         player = encounterManager.player;
         bigfootInstance = Instantiate(bigfootPrefab, encounterManager.FindSpawnInFrontOfPlayer(), Quaternion.identity,null).gameObject;
+        bigfootController = bigfootInstance.GetComponent<BigfootAIController>();
         bigfootInstance.transform.Rotate(Vector3.up*Random.Range(0f,359f));
         while (!detected)
         {
@@ -42,15 +43,16 @@ public class BigfootEncounter : Encounter
                 //decide if caleb is disguised or not 
                 if (calebInfo.GetDisguised())
                 {
-                    bigfootInstance.GetComponent<BigfootAIController>().TurnToPlayer(player);
+                    bigfootController.TurnToPlayer(player);
                     bigfootInstance.GetComponent<Animator>().SetTrigger("Love");
-                    yield return new WaitForSeconds(3);
+                    bigfootController.FocusBigfoot();
+                    yield return new WaitForSeconds(4.5f);
                     AdoptTheKid();
                     yield break;
                 }
                 bigfootInstance.GetComponent<Animator>().SetTrigger("Alerted");
                 yield return WFS;
-                bigfootInstance.GetComponent<BigfootAIController>().TurnToPlayer(player);
+                bigfootController.TurnToPlayer(player);
                 detectedEvent.Invoke();
             }
             yield return WFS;

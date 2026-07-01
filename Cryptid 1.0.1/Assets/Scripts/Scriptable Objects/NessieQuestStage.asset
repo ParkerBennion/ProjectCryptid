@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: NessieQuestStage
   m_EditorClassIdentifier: 
   value: 0
+  questId: 1
   updateItemsAction: {fileID: 11400000, guid: 634ed8c8c16f20845ababdc5b021cab2, type: 2}
   journalHints:
   - Not Started Yet
