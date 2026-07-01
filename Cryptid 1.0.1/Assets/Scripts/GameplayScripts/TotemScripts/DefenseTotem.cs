@@ -18,6 +18,7 @@ public class DefenseTotem : TotemBase
         playerInfo.ChangeDefenseModifier("TotemDefenseBonus", .6f);
         invulnerabilityDuration = 5;
         abilityCooldown = 5.1f;
+        RefreshAbilityUI();
         
     }
 
